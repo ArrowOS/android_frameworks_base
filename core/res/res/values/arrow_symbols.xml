@@ -50,4 +50,8 @@
 
     <!-- Gesture Sensor -->
     <java-symbol type="bool" name="config_enableGestureService" />
+
+   <!-- Device keyhandler -->
+   <java-symbol type="string" name="config_deviceKeyHandlerLib" />
+   <java-symbol type="string" name="config_deviceKeyHandlerClass" />
 </resources>
