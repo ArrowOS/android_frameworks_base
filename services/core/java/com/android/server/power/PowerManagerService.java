@@ -239,6 +239,12 @@ public final class PowerManagerService extends SystemService
     private static final int HALT_MODE_REBOOT = 1;
     private static final int HALT_MODE_REBOOT_SAFE_MODE = 2;
 
+    // Add button light timeout
+    private static final int BUTTON_ON_DURATION = 5 * 1000;
+
+    // File location for last reboot reason
+    private static final String LAST_REBOOT_LOCATION = "/data/misc/reboot/last_reboot_reason";
+
     private final Context mContext;
     private final ServiceThread mHandlerThread;
     private final Handler mHandler;
@@ -269,7 +275,8 @@ public final class PowerManagerService extends SystemService
 
     private InattentiveSleepWarningController mInattentiveSleepWarningOverlayController;
     private final AmbientDisplaySuppressionController mAmbientDisplaySuppressionController;
-
+    private LogicalLight mButtonsLight;
+	
     private final Object mLock = LockGuard.installNewLock(LockGuard.INDEX_POWER);
 
     // A bitfield that indicates what parts of the power state have
@@ -1075,6 +1082,7 @@ public final class PowerManagerService extends SystemService
 
             mLightsManager = getLocalService(LightsManager.class);
             mAttentionLight = mLightsManager.getLight(LightsManager.LIGHT_ID_ATTENTION);
+            mButtonsLight = mLightsManager.getLight(LightsManager.LIGHT_ID_BUTTONS);
 
             // Initialize display power management.
             mDisplayManagerInternal.initPowerManagement(
@@ -2281,6 +2289,7 @@ public final class PowerManagerService extends SystemService
                         attentiveTimeout);
                 final long screenDimDuration = getScreenDimDurationLocked(screenOffTimeout);
                 final boolean userInactiveOverride = mUserInactiveOverrideFromWindowManager;
+                final float screenBrightness = mScreenBrightnessSettingDefault;
                 final long nextProfileTimeout = getNextProfileTimeoutLocked(now);
 
                 mUserActivitySummary = 0;
@@ -2288,6 +2297,12 @@ public final class PowerManagerService extends SystemService
                     nextTimeout = mLastUserActivityTime
                             + screenOffTimeout - screenDimDuration;
                     if (now < nextTimeout) {
+                        if (now > mLastUserActivityTime + BUTTON_ON_DURATION) {
+                            mButtonsLight.setBrightness(0);
+                        } else {
+                            mButtonsLight.setBrightness(screenBrightness);
+                            nextTimeout = now + BUTTON_ON_DURATION;
+                        }
                         mUserActivitySummary = USER_ACTIVITY_SCREEN_BRIGHT;
                     } else {
                         nextTimeout = mLastUserActivityTime + screenOffTimeout;
