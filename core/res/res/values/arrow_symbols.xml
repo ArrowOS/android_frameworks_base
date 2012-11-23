@@ -39,4 +39,8 @@
 
     <!-- Power menu -->
     <java-symbol type="array" name="config_rebootActionsList" />
+
+    <!-- Button backlight -->
+    <java-symbol type="dimen" name="config_buttonBrightnessSettingDefaultFloat" />
+    <java-symbol type="bool" name="config_deviceHasVariableButtonBrightness" />
 </resources>
