@@ -239,6 +239,9 @@ public final class PowerManagerService extends SystemService
     private static final int HALT_MODE_REBOOT = 1;
     private static final int HALT_MODE_REBOOT_SAFE_MODE = 2;
 
+    // Add button light timeout
+    private static final int BUTTON_ON_DURATION = 5 * 1000;
+
     private final Context mContext;
     private final ServiceThread mHandlerThread;
     private final Handler mHandler;
@@ -269,7 +272,9 @@ public final class PowerManagerService extends SystemService
 
     private InattentiveSleepWarningController mInattentiveSleepWarningOverlayController;
     private final AmbientDisplaySuppressionController mAmbientDisplaySuppressionController;
-
+    private LogicalLight mButtonsLight;
+    private float mButtonBrightnessSettingDefault;
+	
     private final Object mLock = LockGuard.installNewLock(LockGuard.INDEX_POWER);
 
     // A bitfield that indicates what parts of the power state have
@@ -506,6 +511,7 @@ public final class PowerManagerService extends SystemService
     public final float mScreenBrightnessMinimumVr;
     public final float mScreenBrightnessMaximumVr;
     public final float mScreenBrightnessDefaultVr;
+    public final float mScreenBrightnessDefaultButton;
 
     // The screen brightness mode.
     // One of the Settings.System.SCREEN_BRIGHTNESS_MODE_* constants.
@@ -980,6 +986,12 @@ public final class PowerManagerService extends SystemService
             mScreenBrightnessMaximumVr = vrMax;
             mScreenBrightnessDefaultVr = vrDef;
         }
+        
+        mScreenBrightnessDefaultButton = BrightnessSynchronizer.brightnessIntToFloat(
+                mContext.getResources().getInteger(com.android.internal.R.integer
+                        .config_buttonBrightnessSettingDefault),
+                PowerManager.BRIGHTNESS_OFF + 1, PowerManager.BRIGHTNESS_ON,
+                PowerManager.BRIGHTNESS_MIN, PowerManager.BRIGHTNESS_MAX);
 
         synchronized (mLock) {
             mWakeLockSuspendBlocker =
@@ -1051,6 +1063,8 @@ public final class PowerManagerService extends SystemService
             mAttentionDetector.systemReady(mContext);
 
             PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+            mButtonBrightnessSettingDefault = pm.getBrightnessConstraint(
+                    PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_DEFAULT_BUTTON);
             mScreenBrightnessSettingMinimum = pm.getBrightnessConstraint(
                     PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_MINIMUM);
             mScreenBrightnessSettingMaximum = pm.getBrightnessConstraint(
@@ -1075,6 +1089,7 @@ public final class PowerManagerService extends SystemService
 
             mLightsManager = getLocalService(LightsManager.class);
             mAttentionLight = mLightsManager.getLight(LightsManager.LIGHT_ID_ATTENTION);
+            mButtonsLight = mLightsManager.getLight(LightsManager.LIGHT_ID_BUTTONS);
 
             // Initialize display power management.
             mDisplayManagerInternal.initPowerManagement(
@@ -2288,11 +2303,22 @@ public final class PowerManagerService extends SystemService
                     nextTimeout = mLastUserActivityTime
                             + screenOffTimeout - screenDimDuration;
                     if (now < nextTimeout) {
-                        mUserActivitySummary = USER_ACTIVITY_SCREEN_BRIGHT;
-                    } else {
-                        nextTimeout = mLastUserActivityTime + screenOffTimeout;
-                        if (now < nextTimeout) {
-                            mUserActivitySummary = USER_ACTIVITY_SCREEN_DIM;
+                        if (getWakefulnessLocked() == WAKEFULNESS_AWAKE) {
+                            if (now > mLastUserActivityTime + BUTTON_ON_DURATION) {
+                                mButtonsLight.setBrightness(0);
+                            } else {
+                                mButtonsLight.setBrightness((int) mButtonBrightnessSettingDefault);
+                                nextTimeout = now + BUTTON_ON_DURATION;
+                            }
+                            mUserActivitySummary = USER_ACTIVITY_SCREEN_BRIGHT;
+                        } else {
+                            nextTimeout = mLastUserActivityTime + screenOffTimeout;
+                            if (now < nextTimeout) {
+                                mUserActivitySummary = USER_ACTIVITY_SCREEN_DIM;
+                                if (getWakefulnessLocked() == WAKEFULNESS_AWAKE) {
+                                    mButtonsLight.setBrightness(0);
+                                }
+                            }
                         }
                     }
                 }
@@ -4957,6 +4983,8 @@ public final class PowerManagerService extends SystemService
                     return mScreenBrightnessMaximumVr;
                 case PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_DEFAULT_VR:
                     return mScreenBrightnessDefaultVr;
+                case PowerManager.BRIGHTNESS_CONSTRAINT_TYPE_DEFAULT_BUTTON:
+                    return mScreenBrightnessDefaultButton;
                 default:
                     return PowerManager.BRIGHTNESS_INVALID_FLOAT;
             }
