@@ -23,4 +23,6 @@
 
     <!-- In-display Fingerprint -->
     <java-symbol type="bool" name="config_supportsInDisplayFingerprint" />
+
+    <java-symbol type="integer" name="config_buttonBrightnessSettingDefault" />
 </resources>
