@@ -50,4 +50,8 @@
 
     <!-- Shows the required view for in-display fingerprint --> 
     <bool name="config_supportsInDisplayFingerprint">false</bool>
+
+    <!-- Button backlight -->
+    <dimen name="config_buttonBrightnessSettingDefaultFloat">1.0</dimen>
+    <bool name="config_deviceHasVariableButtonBrightness">false</bool>
 </resources>
