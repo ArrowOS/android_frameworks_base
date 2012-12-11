@@ -137,6 +137,10 @@
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
     <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 
+    <!-- Navigation bar dpad -->
+    <string name="accessibility_dpad_left">Cursor left</string>
+    <string name="accessibility_dpad_right">Cursor right</string>
+
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
     <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
