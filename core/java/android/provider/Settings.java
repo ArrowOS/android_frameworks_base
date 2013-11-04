@@ -4802,6 +4802,12 @@ public final class Settings {
          */
         public static final String COLOR_BUCKET_OVERLAY = "color_bucket_overlay";
 
+        /**
+         * Boolean value whether to link ringtone and notification volume
+         * @hide
+         */
+        public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -4932,6 +4938,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
             PRIVATE_SETTINGS.add(COLOR_BUCKET_OVERLAY);
+            PRIVATE_SETTINGS.add(VOLUME_LINK_NOTIFICATION);
         }
 
         /**
