@@ -4674,8 +4674,14 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 PowerManager.WAKE_REASON_POWER_BUTTON, "android.policy:POWER");
     }
 
+
     private boolean wakeUp(long wakeTime, boolean wakeInTheaterMode, @WakeReason int reason,
             String details) {
+        return wakeUp(wakeTime, wakeInTheaterMode, reason, details, false);
+    }
+
+    private boolean wakeUp(long wakeTime, boolean wakeInTheaterMode, @WakeReason int reason,
+            String details, final boolean withProximityCheck) {
         final boolean theaterModeEnabled = isTheaterModeEnabled();
         if (!wakeInTheaterMode && theaterModeEnabled) {
             return false;
@@ -4686,7 +4692,11 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     Settings.Global.THEATER_MODE_ON, 0);
         }
 
-        mPowerManager.wakeUp(wakeTime, reason, details);
+        if (withProximityCheck) {
+            mPowerManager.wakeUpWithProximityCheck(wakeTime, reason);
+        } else {
+            mPowerManager.wakeUp(wakeTime, reason);
+        }
         return true;
     }
 
