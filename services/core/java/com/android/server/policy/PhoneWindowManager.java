@@ -4674,6 +4674,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 PowerManager.WAKE_REASON_POWER_BUTTON, "android.policy:POWER");
     }
 
+
     private boolean wakeUp(long wakeTime, boolean wakeInTheaterMode, @WakeReason int reason,
             String details) {
         final boolean theaterModeEnabled = isTheaterModeEnabled();
