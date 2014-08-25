@@ -23,4 +23,6 @@
 <resources>
     <!-- Time format,default value is 24 : 24 format,other value is 12 format -->
     <string name="def_time_format" translatable="false"></string>
+
+    <string name="def_battery_plugged_sound">/system/media/audio/ui/BatteryPlugged.ogg</string>
 </resources>
