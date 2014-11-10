@@ -191,6 +191,8 @@ public class NotificationPanelView extends PanelView implements
     private boolean mQsExpandImmediate;
     private boolean mTwoFingerQsExpandPossible;
 
+    private boolean mOneFingerQuickSettingsIntercept;
+
     /**
      * If we are in a panel collapsing motion, we reset scrollY of our scroll view but still
      * need to take this into account in our panel height calculation.
@@ -981,7 +983,18 @@ public class NotificationPanelView extends PanelView implements
                 && (event.isButtonPressed(MotionEvent.BUTTON_SECONDARY)
                         || event.isButtonPressed(MotionEvent.BUTTON_TERTIARY));
 
-        return twoFingerDrag || stylusButtonClickDrag || mouseButtonClickDrag;
+
+        final float w = getMeasuredWidth();
+        final float x = event.getX();
+        float region = w * 1.f / 3.f; // TODO overlay region fraction?
+        boolean showQsOverride = false;
+
+        if (mOneFingerQuickSettingsIntercept) {
+                showQsOverride = isLayoutRtl() ? x < region : w - region < x;
+        }
+        showQsOverride &= mStatusBarState == StatusBarState.SHADE;
+
+        return showQsOverride || twoFingerDrag || stylusButtonClickDrag || mouseButtonClickDrag;
     }
 
     private void handleQsDown(MotionEvent event) {
@@ -2859,5 +2872,9 @@ public class NotificationPanelView extends PanelView implements
     public void onBouncerPreHideAnimation() {
         setKeyguardStatusViewVisibility(mStatusBarState, true /* keyguardFadingAway */,
                 false /* goingToFullShade */);
+    }
+
+    public void setQsQuickPulldown(boolean isQsQuickPulldown) {
+        mOneFingerQuickSettingsIntercept = isQsQuickPulldown;
     }
 }
