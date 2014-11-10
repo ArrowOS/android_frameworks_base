@@ -21,8 +21,18 @@ import static android.view.WindowInsets.Type.systemBars;
 import static com.android.systemui.ScreenDecorations.DisplayCutoutView.boundsFromDirection;
 
 import android.content.Context;
+<<<<<<< HEAD   (6d34d0 camera2: Add methods for backward compatibility)
 import android.graphics.Insets;
 import android.graphics.Point;
+=======
+import android.content.ContentResolver;
+import android.content.res.Configuration;
+import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+>>>>>>> CHANGE (d0202a SystemUI: add quick settings pull down with one finger [1/2])
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.util.Pair;
@@ -160,6 +170,199 @@ public class StatusBarWindowView extends FrameLayout {
             return new Pair<>(0, size.x - bounds.left);
         }
 
+<<<<<<< HEAD   (6d34d0 camera2: Add methods for backward compatibility)
         return null;
+=======
+        @Override
+        public void setTitleColor(@ColorInt int textColor) {
+        }
+
+        @Override
+        public void openPanel(int featureId, KeyEvent event) {
+        }
+
+        @Override
+        public void closePanel(int featureId) {
+        }
+
+        @Override
+        public void togglePanel(int featureId, KeyEvent event) {
+        }
+
+        @Override
+        public void invalidatePanelMenu(int featureId) {
+        }
+
+        @Override
+        public boolean performPanelShortcut(int featureId, int keyCode, KeyEvent event, int flags) {
+            return false;
+        }
+
+        @Override
+        public boolean performPanelIdentifierAction(int featureId, int id, int flags) {
+            return false;
+        }
+
+        @Override
+        public void closeAllPanels() {
+        }
+
+        @Override
+        public boolean performContextMenuIdentifierAction(int id, int flags) {
+            return false;
+        }
+
+        @Override
+        public void onConfigurationChanged(Configuration newConfig) {
+        }
+
+        @Override
+        public void setBackgroundDrawable(Drawable drawable) {
+        }
+
+        @Override
+        public void setFeatureDrawableResource(int featureId, @DrawableRes int resId) {
+        }
+
+        @Override
+        public void setFeatureDrawableUri(int featureId, Uri uri) {
+        }
+
+        @Override
+        public void setFeatureDrawable(int featureId, Drawable drawable) {
+        }
+
+        @Override
+        public void setFeatureDrawableAlpha(int featureId, int alpha) {
+        }
+
+        @Override
+        public void setFeatureInt(int featureId, int value) {
+        }
+
+        @Override
+        public void takeKeyEvents(boolean get) {
+        }
+
+        @Override
+        public boolean superDispatchKeyEvent(KeyEvent event) {
+            return false;
+        }
+
+        @Override
+        public boolean superDispatchKeyShortcutEvent(KeyEvent event) {
+            return false;
+        }
+
+        @Override
+        public boolean superDispatchTouchEvent(MotionEvent event) {
+            return false;
+        }
+
+        @Override
+        public boolean superDispatchTrackballEvent(MotionEvent event) {
+            return false;
+        }
+
+        @Override
+        public boolean superDispatchGenericMotionEvent(MotionEvent event) {
+            return false;
+        }
+
+        @Override
+        public View getDecorView() {
+            return StatusBarWindowView.this;
+        }
+
+        @Override
+        public View peekDecorView() {
+            return null;
+        }
+
+        @Override
+        public Bundle saveHierarchyState() {
+            return null;
+        }
+
+        @Override
+        public void restoreHierarchyState(Bundle savedInstanceState) {
+        }
+
+        @Override
+        protected void onActive() {
+        }
+
+        @Override
+        public void setChildDrawable(int featureId, Drawable drawable) {
+        }
+
+        @Override
+        public void setChildInt(int featureId, int value) {
+        }
+
+        @Override
+        public boolean isShortcutKey(int keyCode, KeyEvent event) {
+            return false;
+        }
+
+        @Override
+        public void setVolumeControlStream(int streamType) {
+        }
+
+        @Override
+        public int getVolumeControlStream() {
+            return 0;
+        }
+
+        @Override
+        public int getStatusBarColor() {
+            return 0;
+        }
+
+        @Override
+        public void setStatusBarColor(@ColorInt int color) {
+        }
+
+        @Override
+        public int getNavigationBarColor() {
+            return 0;
+        }
+
+        @Override
+        public void setNavigationBarColor(@ColorInt int color) {
+        }
+
+        @Override
+        public void setDecorCaptionShade(int decorCaptionShade) {
+        }
+
+        @Override
+        public void setResizingCaptionDrawable(Drawable drawable) {
+        }
+
+        @Override
+        public void onMultiWindowModeChanged() {
+        }
+
+        @Override
+        public void onPictureInPictureModeChanged(boolean isInPictureInPictureMode) {
+        }
+
+        @Override
+        public void reportActivityRelaunched() {
+        }
+    };
+
+    public void setStatusBarWindowViewOptions() {
+        ContentResolver resolver = mContext.getContentResolver();
+        boolean isDoubleTapEnabled = Settings.System.getIntForUser(resolver,
+                Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN, 1, UserHandle.USER_CURRENT) == 1;
+        boolean isQsQuickPulldown = Settings.System.getIntForUser(resolver,
+                Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 1, UserHandle.USER_CURRENT) == 1;
+        if (mNotificationPanel != null) {
+            mNotificationPanel.setLockscreenDoubleTapToSleep(isDoubleTapEnabled);
+            mNotificationPanel.setQsQuickPulldown(isQsQuickPulldown);
+        }
+>>>>>>> CHANGE (d0202a SystemUI: add quick settings pull down with one finger [1/2])
     }
 }
