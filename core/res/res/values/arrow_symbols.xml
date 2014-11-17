@@ -66,4 +66,17 @@
     <!-- Button brightness -->
     <java-symbol type="bool" name="config_button_brightness_support" />
     <java-symbol type="integer" name="config_button_brightness_default" />
+
+     <!-- Notification light -->
+    <java-symbol type="bool" name="config_intrusiveNotificationLed" />
+    <java-symbol type="bool" name="config_multiColorNotificationLed" />
+    <java-symbol type="array" name="notification_light_package_mapping" />
+    <java-symbol type="array" name="config_notificationNoAlertsVibePattern" />
+
+    <!-- Battery light light -->
+    <java-symbol type="bool" name="config_intrusiveBatteryLed" />
+    <java-symbol type="bool" name="config_multiColorBatteryLed" />
+
+    <!-- LED pulse -->
+    <java-symbol type="bool" name="config_ledCanPulse" />
 </resources>
