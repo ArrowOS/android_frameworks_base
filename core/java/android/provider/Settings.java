@@ -5701,6 +5701,12 @@ public final class Settings {
          */
         public static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
 
+        /**
+         * Whether to wake the display when plugging or unplugging the charger
+         * @hide
+         */
+        public static final String WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
+
        /**
          * These are all public system settings
          *
