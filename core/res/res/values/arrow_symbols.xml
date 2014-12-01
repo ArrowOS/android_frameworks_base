@@ -33,4 +33,6 @@
     <java-symbol type="style" name="GlobalActionsAnimationTop" />
     <java-symbol type="style" name="GlobalActionsAnimationEnter" />
 
+    <java-symbol type="integer" name="config_deviceHardwareWakeKeys" />
+
 </resources>
