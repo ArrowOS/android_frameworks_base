@@ -2323,10 +2323,10 @@ class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     private void loadDefaultAnimationSettings(SQLiteStatement stmt) {
-        loadFractionSetting(stmt, Settings.System.WINDOW_ANIMATION_SCALE,
-                R.fraction.def_window_animation_scale, 1);
-        loadFractionSetting(stmt, Settings.System.TRANSITION_ANIMATION_SCALE,
-                R.fraction.def_window_transition_scale, 1);
+        loadFloatSetting(stmt, Settings.System.WINDOW_ANIMATION_SCALE,
+                R.dimen.def_window_animation_scale);
+        loadFloatSetting(stmt, Settings.System.TRANSITION_ANIMATION_SCALE,
+                R.dimen.def_window_transition_scale);
     }
 
     private void loadDefaultHapticSettings(SQLiteStatement stmt) {
@@ -2657,6 +2657,11 @@ class DatabaseHelper extends SQLiteOpenHelper {
     private void loadFractionSetting(SQLiteStatement stmt, String key, int resid, int base) {
         loadSetting(stmt, key,
                 Float.toString(mContext.getResources().getFraction(resid, base, base)));
+    }
+
+    private void loadFloatSetting(SQLiteStatement stmt, String key, int resid) {
+        loadSetting(stmt, key,
+                Float.toString(mContext.getResources().getFloat(resid)));
     }
 
     private int getIntValueFromSystem(SQLiteDatabase db, String name, int defaultValue) {
