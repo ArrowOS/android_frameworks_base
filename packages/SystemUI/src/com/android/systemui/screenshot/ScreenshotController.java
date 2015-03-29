@@ -61,6 +61,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.os.UserHandle;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.Settings;
@@ -923,8 +924,11 @@ public class ScreenshotController {
      * failure).
      */
     private void saveScreenshotAndToast(Consumer<Uri> finisher) {
-        // Play the shutter sound to notify that we've taken a screenshot
-        playCameraSound();
+        if (Settings.System.getIntForUser(mContext.getContentResolver(),
+            Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
+            // Play the shutter sound to notify that we've taken a screenshot
+            playCameraSound();
+        }
 
         saveScreenshotInWorkerThread(
                 /* onComplete */ finisher,
@@ -957,8 +961,11 @@ public class ScreenshotController {
         mScreenshotAnimation =
                 mScreenshotView.createScreenshotDropInAnimation(screenRect, showFlash);
 
-        // Play the shutter sound to notify that we've taken a screenshot
-        playCameraSound();
+        if (Settings.System.getIntForUser(mContext.getContentResolver(),
+            Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
+            // Play the shutter sound to notify that we've taken a screenshot
+            playCameraSound();
+        }
 
         if (DEBUG_ANIM) {
             Log.d(TAG, "starting post-screenshot animation");
