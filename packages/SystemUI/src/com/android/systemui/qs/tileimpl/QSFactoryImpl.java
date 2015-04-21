@@ -35,6 +35,7 @@ import com.android.systemui.qs.tiles.ColorInversionTile;
 import com.android.systemui.qs.tiles.DataSaverTile;
 import com.android.systemui.qs.tiles.DndTile;
 import com.android.systemui.qs.tiles.FlashlightTile;
+import com.android.systemui.qs.tiles.HeadsUpTile;
 import com.android.systemui.qs.tiles.HotspotTile;
 import com.android.systemui.qs.tiles.LocationTile;
 import com.android.systemui.qs.tiles.NfcTile;
@@ -67,6 +68,7 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<WorkModeTile> mWorkModeTileProvider;
     private final Provider<RotationLockTile> mRotationLockTileProvider;
     private final Provider<FlashlightTile> mFlashlightTileProvider;
+    private final Provider<HeadsUpTile> mHeadsUpTileProvider;
     private final Provider<LocationTile> mLocationTileProvider;
     private final Provider<CastTile> mCastTileProvider;
     private final Provider<HotspotTile> mHotspotTileProvider;
@@ -92,6 +94,7 @@ public class QSFactoryImpl implements QSFactory {
             Provider<WorkModeTile> workModeTileProvider,
             Provider<RotationLockTile> rotationLockTileProvider,
             Provider<FlashlightTile> flashlightTileProvider,
+            Provider<HeadsUpTile> headsUpTileProvider,
             Provider<LocationTile> locationTileProvider,
             Provider<CastTile> castTileProvider,
             Provider<HotspotTile> hotspotTileProvider,
@@ -113,6 +116,7 @@ public class QSFactoryImpl implements QSFactory {
         mWorkModeTileProvider = workModeTileProvider;
         mRotationLockTileProvider = rotationLockTileProvider;
         mFlashlightTileProvider = flashlightTileProvider;
+        mHeadsUpTileProvider = headsUpTileProvider;
         mLocationTileProvider = locationTileProvider;
         mCastTileProvider = castTileProvider;
         mHotspotTileProvider = hotspotTileProvider;
@@ -175,6 +179,8 @@ public class QSFactoryImpl implements QSFactory {
                 return mUiModeNightTileProvider.get();
             case "screenrecord":
                 return mScreenRecordTileProvider.get();
+            case "heads_up":
+                return mHeadsUpTileProvider.get();
         }
 
         // Custom tiles
