@@ -487,21 +487,6 @@ static void android_hardware_Camera_setLongshot(JNIEnv *env, jobject thiz, jbool
 #endif
 }
 
-static void android_hardware_Camera_stopLongshot(JNIEnv *env, jobject thiz)
-{
-    ALOGV("stopLongshot");
-    JNICameraContext* context;
-    status_t rc;
-    sp<Camera> camera = get_native_camera(env, thiz, &context);
-    if (camera == 0) return;
-
-    rc = camera->sendCommand(CAMERA_CMD_STOP_LONGSHOT, 0, 0);
-
-    if (rc != NO_ERROR) {
-       jniThrowException(env, "java/lang/RuntimeException", "enabling longshot mode failed");
-    }
-}
-
 static void android_hardware_Camera_sendHistogramData(JNIEnv *env, jobject thiz)
  {
    ALOGV("sendHistogramData" );
