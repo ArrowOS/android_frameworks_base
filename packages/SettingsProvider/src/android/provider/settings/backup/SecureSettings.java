@@ -219,5 +219,6 @@ public class SecureSettings {
         Settings.Secure.TETHERING_ALLOW_VPN_UPSTREAMS,
         Settings.Secure.IGNORE_AUTH_CONFIRMATION,
         Settings.Secure.SECURE_LOCKSCREEN_QS_DISABLED,
+        Settings.Secure.POWER_MENU_HIDE_ON_SECURE,
     };
 }
