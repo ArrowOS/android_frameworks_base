@@ -774,8 +774,6 @@ public final class PowerManagerService extends SystemService
                 Process.THREAD_PRIORITY_DISPLAY, false /*allowIo*/);
         mHandlerThread.start();
         mHandler = new PowerManagerHandler(mHandlerThread.getLooper());
-        mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
-        mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         mConstants = new Constants(mHandler);
         mAmbientDisplayConfiguration = mInjector.createAmbientDisplayConfiguration(context);
         mAttentionDetector = new AttentionDetector(this::onUserAttention, mLock);
@@ -875,6 +873,10 @@ public final class PowerManagerService extends SystemService
             // Initialize display power management.
             mDisplayManagerInternal.initPowerManagement(
                     mDisplayPowerCallbacks, mHandler, sensorManager);
+
+            // Initialize proximity sensor
+            mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
+            mProximitySensor = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
 
             try {
                 final ForegroundProfileObserver observer = new ForegroundProfileObserver();
