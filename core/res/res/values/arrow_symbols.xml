@@ -132,4 +132,7 @@
     <!-- Alternative keyhandler -->
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerLib" />
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerClass" />
+
+    <!-- Vendor mismatched fingerprint warning -->
+    <java-symbol type="string" name="system_error_vendorprint" />
 </resources>
