@@ -252,6 +252,8 @@ public class VolumeDialogImpl implements VolumeDialog {
                         R.drawable.ic_volume_ringer, R.drawable.ic_volume_ringer_mute, true, false);
                 addRow(STREAM_ALARM,
                         R.drawable.ic_volume_alarm, R.drawable.ic_volume_alarm_mute, true, false);
+                addRow(AudioManager.STREAM_NOTIFICATION,
+                        R.drawable.ic_volume_notification, R.drawable.ic_volume_notification_mute, true);
                 addRow(AudioManager.STREAM_VOICE_CALL,
                         R.drawable.ic_volume_voice, R.drawable.ic_volume_voice, false, false);
                 addRow(AudioManager.STREAM_BLUETOOTH_SCO,
@@ -401,6 +403,12 @@ public class VolumeDialogImpl implements VolumeDialog {
                             final boolean wasZero = row.ss.level == 0;
                             mController.setStreamVolume(stream,
                                     wasZero ? row.lastAudibleLevel : 0);
+                        }
+                    } else if (row.stream == AudioManager.STREAM_NOTIFICATION) {
+                        // only ringer icon can change silent or vibrate mode
+                        if (mState.ringerModeInternal == AudioManager.RINGER_MODE_NORMAL) {
+                            final boolean vmute = row.ss.level == 0;
+                            mController.setStreamVolume(stream, vmute ? row.lastAudibleLevel : 0);
                         }
                     } else {
                         mController.setRingerMode(AudioManager.RINGER_MODE_NORMAL, false);
@@ -590,6 +598,13 @@ public class VolumeDialogImpl implements VolumeDialog {
 
     private boolean shouldBeVisibleH(VolumeRow row, VolumeRow activeRow) {
         boolean isActive = row.stream == activeRow.stream;
+        final boolean linkNotificationWithVolume = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.VOLUME_LINK_NOTIFICATION, 1) == 1;
+        final boolean isNotificationStream = row.stream == AudioManager.STREAM_NOTIFICATION;
+        if (linkNotificationWithVolume && isNotificationStream) {
+            return false;
+        }
+
         if (row.stream == AudioSystem.STREAM_ACCESSIBILITY) {
             return mShowA11yStream;
         }
@@ -791,10 +806,12 @@ public class VolumeDialogImpl implements VolumeDialog {
         }
         final boolean isA11yStream = row.stream == STREAM_ACCESSIBILITY;
         final boolean isRingStream = row.stream == AudioManager.STREAM_RING;
+        final boolean isNotificationStream = row.stream == AudioManager.STREAM_NOTIFICATION;
+        final boolean isRingOrNotificationStream = isRingStream || isNotificationStream;
         final boolean isSystemStream = row.stream == AudioManager.STREAM_SYSTEM;
         final boolean isAlarmStream = row.stream == STREAM_ALARM;
         final boolean isMusicStream = row.stream == AudioManager.STREAM_MUSIC;
-        final boolean isRingVibrate = isRingStream
+        final boolean isRingVibrate = isRingOrNotificationStream
                 && mState.ringerModeInternal == AudioManager.RINGER_MODE_VIBRATE;
         final boolean isRingSilent = isRingStream
                 && mState.ringerModeInternal == AudioManager.RINGER_MODE_SILENT;
@@ -885,15 +902,17 @@ public class VolumeDialogImpl implements VolumeDialog {
             row.icon.setContentDescription(getStreamLabelH(ss));
         }
 
+
         // ensure tracking is disabled if zenMuted
         if (zenMuted) {
             row.tracking = false;
         }
         enableVolumeRowViewsH(row, !zenMuted);
 
-        // update slider
-        final boolean enableSlider = !zenMuted;
-        final int vlevel = row.ss.muted && (!isRingStream && !zenMuted) ? 0
+        // notification slider is disabled when vibrate or silent - only ringer slider can be used
+        final boolean enableSlider = isNotificationStream ? (!zenMuted && !isRingVibrate && !isRingSilent && !isNotificationSilent) : !zenMuted;
+        // update slider value - 0 if silent or vibrate
+        final int vlevel = row.ss.muted && (isRingSilent || isNotificationSilent || isRingVibrate && !zenMuted) ? 0
                 : row.ss.level;
         updateVolumeRowSliderH(row, enableSlider, vlevel);
     }
