@@ -68,4 +68,8 @@
 
     <!-- Hide FOD while Going to sleep from lockscreen to avoid HBM flicker -->
     <java-symbol type="bool" name="config_inDisplayFingerprintFlickersGoingToSleep" />
+
+    <!-- Rotation sensor -->
+    <java-symbol type="bool" name="config_useSystemClockforRotationSensor" />
+
 </resources>
