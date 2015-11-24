@@ -4193,10 +4193,17 @@
     <permission android:name="android.permission.STATSCOMPANION"
         android:protectionLevel="signature" />
 
+<<<<<<< HEAD   (d5a7b4 Camera: Add feature extensions)
     <!--@SystemApi @hide Allows an application to register stats pull atom callbacks.
     <p>Not for use by third-party applications.-->
     <permission android:name="android.permission.REGISTER_STATS_PULL_ATOM"
                 android:protectionLevel="signature|privileged" />
+=======
+    <!-- @hide Allows an application to reset the device battery statistics -->
+    <permission android:name="android.permission.RESET_BATTERY_STATS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="signature|system|development" />
+>>>>>>> CHANGE (6ffe0a frameworks: Reset battery stats [1/2])
 
     <!-- @SystemApi Allows an application to control the backup and restore process.
     <p>Not for use by third-party applications.
