@@ -1260,7 +1260,8 @@ public class LockPatternUtils {
         return deadline;
     }
 
-    private boolean getBoolean(String secureSettingKey, boolean defaultValue, int userId) {
+    /** @hide */
+    protected boolean getBoolean(String secureSettingKey, boolean defaultValue, int userId) {
         try {
             return getLockSettings().getBoolean(secureSettingKey, defaultValue, userId);
         } catch (RemoteException re) {
@@ -1268,7 +1269,8 @@ public class LockPatternUtils {
         }
     }
 
-    private void setBoolean(String secureSettingKey, boolean enabled, int userId) {
+    /** @hide */
+    protected void setBoolean(String secureSettingKey, boolean enabled, int userId) {
         try {
             getLockSettings().setBoolean(secureSettingKey, enabled, userId);
         } catch (RemoteException re) {
@@ -1277,7 +1279,8 @@ public class LockPatternUtils {
         }
     }
 
-    private long getLong(String secureSettingKey, long defaultValue, int userHandle) {
+    /** @hide */
+    protected long getLong(String secureSettingKey, long defaultValue, int userHandle) {
         try {
             return getLockSettings().getLong(secureSettingKey, defaultValue, userHandle);
         } catch (RemoteException re) {
@@ -1285,8 +1288,9 @@ public class LockPatternUtils {
         }
     }
 
+    /** @hide */
     @UnsupportedAppUsage
-    private void setLong(String secureSettingKey, long value, int userHandle) {
+    protected void setLong(String secureSettingKey, long value, int userHandle) {
         try {
             getLockSettings().setLong(secureSettingKey, value, userHandle);
         } catch (RemoteException re) {
@@ -1295,8 +1299,9 @@ public class LockPatternUtils {
         }
     }
 
+    /** @hide */
     @UnsupportedAppUsage
-    private String getString(String secureSettingKey, int userHandle) {
+    protected String getString(String secureSettingKey, int userHandle) {
         try {
             return getLockSettings().getString(secureSettingKey, null, userHandle);
         } catch (RemoteException re) {
@@ -1304,8 +1309,9 @@ public class LockPatternUtils {
         }
     }
 
+    /** @hide */
     @UnsupportedAppUsage
-    private void setString(String secureSettingKey, String value, int userHandle) {
+    protected void setString(String secureSettingKey, String value, int userHandle) {
         try {
             getLockSettings().setString(secureSettingKey, value, userHandle);
         } catch (RemoteException re) {
