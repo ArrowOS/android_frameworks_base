@@ -5140,10 +5140,10 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     }
 
     private void applyForceImmersiveMode(int pfl, Rect r) {
-        if ((pfl & PRIVATE_FLAG_STATUS_HIDE_FORCED) != 0) {
+        if ((pfl & WindowManager.LayoutParams.PRIVATE_FLAG_STATUS_HIDE_FORCED) != 0) {
             r.top = mForceImmersiveTop;
         }
-        if ((pfl & PRIVATE_FLAG_NAV_HIDE_FORCED) != 0) {
+        if ((pfl & WindowManager.LayoutParams.PRIVATE_FLAG_NAV_HIDE_FORCED) != 0) {
             if (mNavigationBarPosition == NAV_BAR_BOTTOM) {
                 r.bottom = mForceImmersiveBottom;
             } else {
@@ -5413,7 +5413,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     }
 
                     if ((fl & FLAG_FULLSCREEN) == 0
-                            || (pfl & PRIVATE_FLAG_WAS_NOT_FULLSCREEN) != 0) {
+                            || (pfl & WindowManager.LayoutParams.PRIVATE_FLAG_WAS_NOT_FULLSCREEN) != 0) {
                         if (win.isVoiceInteraction()) {
                             cf.left = mVoiceContentLeft;
                             cf.top = mVoiceContentTop;
@@ -5431,7 +5431,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                                 cf.right = mContentRight;
                                 cf.bottom = mContentBottom;
                             }
-
                             applyForceImmersiveMode(pfl, cf);
                         }
                     } else {
@@ -5647,7 +5646,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     } else {
                         vf.set(cf);
                     }
-
                     applyForceImmersiveMode(pfl, vf);
                 }
             }
