@@ -1439,7 +1439,7 @@ public interface WindowManager extends ViewManager {
         public static final int PRIVATE_FLAG_STATUS_HIDE_FORCED = 0x00800000;
 
         /**
-         * @hide
+         * {@hide}
          */
         public static final int PRIVATE_FLAG_NAV_HIDE_FORCED = 0x01000000;
 
