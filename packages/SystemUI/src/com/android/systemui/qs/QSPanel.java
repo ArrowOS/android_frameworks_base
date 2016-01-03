@@ -31,8 +31,10 @@ import android.service.quicksettings.Tile;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-
+import android.os.UserHandle;
+import android.provider.Settings;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.Utils;
@@ -99,6 +101,8 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
 
         mBrightnessView = LayoutInflater.from(mContext).inflate(
             R.layout.quick_settings_brightness_dialog, this, false);
+        ImageView brightnessIcon = (ImageView) findViewById(R.id.brightness_icon);
+        brightnessIcon.setVisibility(View.VISIBLE);
         addView(mBrightnessView);
 
         mTileLayout = (QSTileLayout) LayoutInflater.from(mContext).inflate(
@@ -123,7 +127,7 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         updateResources();
 
         mBrightnessController = new BrightnessController(getContext(),
-                findViewById(R.id.brightness_icon),
+                brightnessIcon,
                 findViewById(R.id.brightness_slider));
     }
 
