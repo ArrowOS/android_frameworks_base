@@ -3823,7 +3823,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 && mGlobalKeyManager.shouldHandleGlobalKey(keyCode, event)) {
             if (isWakeKey) {
                 wakeUp(event.getEventTime(), mAllowTheaterModeWakeFromKey,
-                        PowerManager.WAKE_REASON_WAKE_KEY, "android.policy:KEY");
+                        PowerManager.WAKE_REASON_WAKE_KEY, "android.policy:KEY", true);
             }
             return result;
         }
@@ -4227,7 +4227,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
 
         if (isWakeKey) {
             wakeUp(event.getEventTime(), mAllowTheaterModeWakeFromKey,
-                    PowerManager.WAKE_REASON_WAKE_KEY, "android.policy:KEY");
+                    PowerManager.WAKE_REASON_WAKE_KEY, "android.policy:KEY", true);
         }
 
         return result;
