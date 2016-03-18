@@ -4019,6 +4019,12 @@ public final class Settings {
          */
         public static final String POWERMENU_ADVANCED_REBOOT = "powermenu_advanced_reboot";
 
+        /** Whether to skip music track with volume rocker
+        /**
+         * @hide
+         */
+        public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
+
         /**
          * Whether to display the screenshot option on the power menu
          *
@@ -4398,6 +4404,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_TIMEOUT);
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(VOLUME_KEYS_CONTROL_MEDIA_STREAM);
+            PRIVATE_SETTINGS.add(VOLUME_BUTTON_MUSIC_CONTROL);
         }
 
         /**
