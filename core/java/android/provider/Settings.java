@@ -4169,7 +4169,13 @@ public final class Settings {
         public static final String HOME_WAKE_SCREEN = "home_wake_screen";
 
         /**
-         * Whether to wake the screen with the back key, the value is boolean.
+         * Heads up timeout configuration
+         * @hide
+         */
+        public static final String HEADS_UP_TIMEOUT = "heads_up_timeout";
+
+        /**
+         * Whether to show the notification ticker on the status bar
          * @hide
          */
         public static final String BACK_WAKE_SCREEN = "back_wake_screen";
