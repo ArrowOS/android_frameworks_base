@@ -108,6 +108,7 @@ public class SystemSettings {
         Settings.System.QS_TILE_TITLE_VISIBILITY,
         Settings.System.VOLUME_ROCKER_WAKE,
         Settings.System.VOLUME_BUTTON_MUSIC_CONTROL,
-        Settings.System.EDGE_GESTURE_Y_DEAD_ZONE
+        Settings.System.EDGE_GESTURE_Y_DEAD_ZONE,
+        Settings.System.FP_WAKE_UNLOCK
     };
 }
