@@ -88,5 +88,6 @@ public class SystemSettings {
         Settings.System.QS_FOOTER_DATA_USAGE,
         Settings.System.NETWORK_TRAFFIC_STATE,
         Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD,
+        Settings.System.FP_WAKE_UNLOCK,
     };
 }
