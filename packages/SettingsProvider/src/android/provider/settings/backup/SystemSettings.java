@@ -89,6 +89,7 @@ public class SystemSettings {
         Settings.System.SCREENSHOT_SOUND,
         Settings.System.COLOR_BUCKET_OVERLAY,
         Settings.System.PROXIMITY_ON_WAKE,
-        Settings.System.LOCKSCREEN_MEDIA_METADATA
+        Settings.System.LOCKSCREEN_MEDIA_METADATA,
+        Settings.System.FP_WAKE_UNLOCK
     };
 }
