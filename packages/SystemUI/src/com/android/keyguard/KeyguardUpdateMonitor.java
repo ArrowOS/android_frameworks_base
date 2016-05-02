@@ -89,9 +89,11 @@ import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.widget.LockPatternUtils;
 import com.android.settingslib.WirelessUtils;
 import com.android.settingslib.fuelgauge.BatteryStatus;
+import com.android.systemui.Dependency;
 import com.android.systemui.DejankUtils;
 import com.android.systemui.Dumpable;
 import com.android.systemui.R;
+import com.android.systemui.arrow.ArrowSettingsService;
 import com.android.systemui.broadcast.BroadcastDispatcher;
 import com.android.systemui.dagger.qualifiers.Background;
 import com.android.systemui.dagger.qualifiers.Main;
@@ -133,7 +135,8 @@ import com.android.internal.util.custom.faceunlock.FaceUnlockUtils;
  * to be updated.
  */
 @Singleton
-public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpable {
+public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpable,
+        ArrowSettingsService.ArrowSettingsObserver {
 
     private static final String TAG = "KeyguardUpdateMonitor";
     private static final boolean DEBUG = KeyguardConstants.DEBUG;
@@ -286,6 +289,8 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private boolean mLockIconPressed;
     private int mActiveMobileDataSubscription = SubscriptionManager.INVALID_SUBSCRIPTION_ID;
     private final Executor mBackgroundExecutor;
+
+    private boolean mFingerprintWakeAndUnlock;
 
     private final boolean mFaceAuthOnlyOnSecurityView;
     private boolean mBouncerFullyShown;
@@ -1593,6 +1598,9 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         mStrongAuthTracker = new StrongAuthTracker(context, this::notifyStrongAuthStateChanged);
         mFaceAuthOnlyOnSecurityView = mContext.getResources().getBoolean(
                 com.android.internal.R.bool.config_faceAuthOnlyOnSecurityView);
+        mFingerprintWakeAndUnlock = Settings.System.getIntForUser(
+                mContext.getContentResolver(), Settings.System.FP_WAKE_UNLOCK, 0,
+                UserHandle.USER_CURRENT) == 0;
         mBackgroundExecutor = backgroundExecutor;
         mBroadcastDispatcher = broadcastDispatcher;
         mRingerModeTracker = ringerModeTracker;
@@ -1840,6 +1848,12 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
                 }
             }
         }
+        Dependency.get(ArrowSettingsService.class).addIntObserver(this, Settings.System.FP_WAKE_UNLOCK);
+    }
+
+    @Override
+    public void onIntSettingChanged(String key, Integer newValue) {
+        mFingerprintWakeAndUnlock = (newValue == 0);
     }
 
     private final UserSwitchObserver mUserSwitchObserver = new UserSwitchObserver() {
@@ -1965,13 +1979,20 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
 
         // Only listen if this KeyguardUpdateMonitor belongs to the primary user. There is an
         // instance of KeyguardUpdateMonitor for each user but KeyguardUpdateMonitor is user-aware.
-        final boolean shouldListen = (mKeyguardIsVisible || !mDeviceInteractive ||
+        if (!mFingerprintWakeAndUnlock) {
+            return (mKeyguardIsVisible || mBouncer || shouldListenForFingerprintAssistant() ||
+                (mKeyguardOccluded && mIsDreaming)) && mDeviceInteractive && !mGoingToSleep
+                && !mSwitchingUser && !isFingerprintDisabled(getCurrentUser())
+                && (!mKeyguardGoingAway || !mDeviceInteractive) && mIsPrimaryUser
+                && allowedOnBouncer;
+        } else {
+            return (mKeyguardIsVisible || !mDeviceInteractive ||
                 (mBouncer && !mKeyguardGoingAway) || mGoingToSleep ||
                 shouldListenForFingerprintAssistant() || (mKeyguardOccluded && mIsDreaming))
                 && !mSwitchingUser && !isFingerprintDisabled(getCurrentUser())
                 && (!mKeyguardGoingAway || !mDeviceInteractive) && mIsPrimaryUser
                 && allowedOnBouncer;
-        return shouldListen;
+        }
     }
 
     /**
