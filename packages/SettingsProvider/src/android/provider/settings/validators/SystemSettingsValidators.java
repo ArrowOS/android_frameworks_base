@@ -232,5 +232,6 @@ public class SystemSettingsValidators {
                 });
         VALIDATORS.put(System.PROXIMITY_ON_WAKE, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.LOCKSCREEN_MEDIA_METADATA, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.FP_WAKE_UNLOCK, BOOLEAN_VALIDATOR);
     }
 }
