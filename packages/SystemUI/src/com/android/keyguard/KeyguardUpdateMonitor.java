@@ -306,6 +306,7 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
             mCallbacks = Lists.newArrayList();
     private ContentObserver mDeviceProvisionedObserver;
     private ContentObserver mTimeFormatChangeObserver;
+    private ContentObserver mFpWakeUnlockObserver;
 
     private boolean mSwitchingUser;
 
@@ -338,6 +339,8 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     private final Executor mBackgroundExecutor;
     private SensorPrivacyManager mSensorPrivacyManager;
     private int mFaceAuthUserId;
+
+    private boolean mFingerprintWakeAndUnlock;
 
     /**
      * Short delay before restarting fingerprint authentication after a successful try. This should
@@ -1822,6 +1825,8 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         dumpManager.registerDumpable(getClass().getName(), this);
         mSensorPrivacyManager = context.getSystemService(SensorPrivacyManager.class);
 
+        updateFpWakeUnlockStatus();
+
         mHandler = new Handler(mainLooper) {
             @Override
             public void handleMessage(Message msg) {
@@ -2094,6 +2099,22 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         mContext.getContentResolver().registerContentObserver(
                 Settings.System.getUriFor(Settings.System.TIME_12_24),
                 false, mTimeFormatChangeObserver, UserHandle.USER_ALL);
+
+        mFpWakeUnlockObserver = new ContentObserver(mHandler) {
+            @Override
+            public void onChange(boolean selfChange) {
+                updateFpWakeUnlockStatus();
+            }
+        };
+
+        mContext.getContentResolver().registerContentObserver(
+            Settings.System.getUriFor(Settings.System.FP_WAKE_UNLOCK), false, mFpWakeUnlockObserver);
+    }
+
+    private void updateFpWakeUnlockStatus() {
+        mFingerprintWakeAndUnlock = Settings.System.getIntForUser(
+                mContext.getContentResolver(), Settings.System.FP_WAKE_UNLOCK, 0,
+                UserHandle.USER_CURRENT) == 0;
     }
 
     private void updateUdfpsEnrolled(int userId) {
@@ -2308,8 +2329,14 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
                     && userDoesNotHaveTrust
                     && !mFingerprintLockedOut);
 
+        boolean shouldListenFpWakeUnlockState = true;
+
+        if (!mFingerprintWakeAndUnlock) {
+            shouldListenFpWakeUnlockState = mDeviceInteractive;
+        }
+
         final boolean shouldListen = shouldListenKeyguardState && shouldListenUserState
-                && shouldListenBouncerState && shouldListenUdfpsState;
+                && shouldListenBouncerState && shouldListenUdfpsState && shouldListenFpWakeUnlockState;
 
         if (DEBUG_FINGERPRINT || DEBUG_SPEW) {
             maybeLogListenerModelData(
@@ -3434,6 +3461,10 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
 
         if (mTimeFormatChangeObserver != null) {
             mContext.getContentResolver().unregisterContentObserver(mTimeFormatChangeObserver);
+        }
+
+        if (mFpWakeUnlockObserver != null) {
+            mContext.getContentResolver().unregisterContentObserver(mFpWakeUnlockObserver);
         }
 
         try {
