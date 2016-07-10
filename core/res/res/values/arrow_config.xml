@@ -104,4 +104,7 @@
     <bool name="config_useDarkBgNotificationIconTextTinting">false</bool>
     <bool name="config_useDarkBgNotificationTinting_override">false</bool>
     <bool name="config_notificationTinting_override">false</bool>
+
+    <!-- Whether device has dash charging support -->
+    <bool name="config_hasDashCharger">false</bool>
 </resources>

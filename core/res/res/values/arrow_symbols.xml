@@ -108,4 +108,7 @@
 
     <!-- Fastscroller text color (Launcher3) -->
     <java-symbol type="color" name="fastscroller_thumb_text_color" />
+
+    <!-- Whether device has dash charging support -->
+    <java-symbol type="bool" name="config_hasDashCharger" />
 </resources>
