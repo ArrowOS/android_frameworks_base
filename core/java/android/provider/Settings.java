@@ -8127,6 +8127,12 @@ public final class Settings {
         private static final Validator DOZE_WAKE_SCREEN_GESTURE_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
+         * Disable hw buttons - actions, brightness, haptic feedback, overflow menu
+         * @hide
+         */
+        public static final String HARDWARE_KEYS_DISABLE = "hardware_keys_disable";
+
+        /**
          * Gesture that skips media.
          * @hide
          */
