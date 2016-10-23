@@ -4334,6 +4334,7 @@ public final class Settings {
         /**
          * @hide
          */
+
         public static final String ROAMING_INDICATOR_ICON = "roaming_indicator_icon";
 
         /**
@@ -4469,6 +4470,16 @@ public final class Settings {
         public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
         /**
+         * Use with {@link #getSystemService} to retrieve a
+         * {@link android.os.PocketManager} for accessing and listening to device pocket state.
+         *
+         * @hide
+         * @see #getSystemService
+         * @see android.os.PocketManager
+         */
+        public static final String POCKET_SERVICE = "pocket"; 
+
+       /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
