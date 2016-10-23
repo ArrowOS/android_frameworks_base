@@ -4388,7 +4388,16 @@ public final class Settings {
         public static final String HEADS_UP_TIMEOUT = "heads_up_timeout";
 
         /**
-         * Defines the global heads up notification snooze
+         * Whether allowing pocket service to register sensors and dispatch informations.
+         *   0 = disabled
+         *   1 = enabled
+         * @author Carlo Savignano
+         * @hide
+         */
+        public static final String POCKET_JUDGE = "pocket_judge";
+
+        /**
+	 * Defines the global heads up notification snooze
          * @hide
          */
         public static final String HEADS_UP_NOTIFICATION_SNOOZE = "heads_up_notification_snooze";
@@ -4565,6 +4574,16 @@ public final class Settings {
         public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
 
         /**
+         * Use with {@link #getSystemService} to retrieve a
+         * {@link android.os.PocketManager} for accessing and listening to device pocket state.
+         *
+         * @hide
+         * @see #getSystemService
+         * @see android.os.PocketManager
+         */
+        public static final String POCKET_SERVICE = "pocket"; 
+
+       /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
