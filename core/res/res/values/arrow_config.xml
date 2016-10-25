@@ -34,4 +34,7 @@
          size set. By setting this to false, devices can opt
          out of setting a batch size, which fixes rotation. -->
     <bool name="config_useDefaultBatchingForAccel">true</bool>
+
+    <!-- Whether notify fingerprint client of successful cancelled authentication -->
+    <bool name="config_notifyClientOnFingerprintCancelSuccess">false</bool>
 </resources>
