@@ -136,4 +136,15 @@
 
     <!-- Name of that alternative key handler class -->
     <string name="config_alternativeDeviceKeyHandlerClass" translatable="false"></string>
+
+     <!-- Extended Boosts for QPerformance -->
+
+    <!-- Whether cpu boost is enabled right after boot -->
+    <bool name="config_enableCpuBoostOnBoot">false</bool>
+   
+    <!-- Duration of the boost in seconds, default is 30 -->
+    <integer name="onbootboost_duration">0</integer>
+   
+    <!-- Boost parameters which get passed to QPerformance -->
+    <integer-array name="onbootboost_param_value"/>
 </resources>

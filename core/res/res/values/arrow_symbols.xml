@@ -132,4 +132,10 @@
     <!-- Alternative keyhandler -->
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerLib" />
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerClass" />
+
+    <!-- Extended Boosts for QPerformance -->
+    <!-- cpu boost on boot -->
+    <java-symbol type="bool" name="config_enableCpuBoostOnBoot" />
+    <java-symbol type="integer" name="onbootboost_duration" />
+    <java-symbol type="array" name="onbootboost_param_value" />
 </resources>
