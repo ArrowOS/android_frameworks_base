@@ -86,5 +86,7 @@ public class SystemSettings {
         Settings.System.NOTIFICATION_LIGHT_PULSE,
         Settings.System.ENABLE_RIPPLE_EFFECT,
         Settings.System.QS_FOOTER_DATA_USAGE,
+        Settings.System.NETWORK_TRAFFIC_STATE,
+        Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD,
     };
 }

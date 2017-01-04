@@ -5396,6 +5396,18 @@ public final class Settings {
          */
         public static final String QS_FOOTER_DATA_USAGE = "qs_footer_data_usage";
 
+        /**
+         * Wheter to show network traffic indicator in statusbar
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+
+        /**
+         * Network traffic inactivity threshold
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
+
        /**
          * These are all public system settings
          *
