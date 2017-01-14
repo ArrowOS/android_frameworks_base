@@ -38,4 +38,8 @@
 
     <!-- Show the network traffic monitor on statusbar even if the device has a notch -->
     <bool name="config_forceShowNetworkTrafficOnStatusBar">false</bool>
+
+    <!-- Burn in protection -->
+    <bool name="config_statusBarBurnInProtection">false</bool>
+    <integer name="config_shift_interval">60</integer>
 </resources>
