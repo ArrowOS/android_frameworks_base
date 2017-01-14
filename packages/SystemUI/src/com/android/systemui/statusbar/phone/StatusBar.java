@@ -222,6 +222,7 @@ import com.android.systemui.statusbar.phone.dagger.StatusBarComponent;
 import com.android.systemui.statusbar.phone.dagger.StatusBarPhoneModule;
 import com.android.systemui.statusbar.policy.BatteryController;
 import com.android.systemui.statusbar.policy.BrightnessMirrorController;
+import com.android.systemui.statusbar.policy.BurnInProtectionController;
 import com.android.systemui.statusbar.policy.ConfigurationController;
 import com.android.systemui.statusbar.policy.ConfigurationController.ConfigurationListener;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController;
@@ -354,6 +355,9 @@ public class StatusBar extends SystemUI implements DemoMode,
     @Nullable
     protected LockscreenWallpaper mLockscreenWallpaper;
     private final AutoHideController mAutoHideController;
+
+    private BurnInProtectionController mBurnInProtectionController;
+
     @Nullable
     private final KeyguardLiftController mKeyguardLiftController;
 
@@ -1156,6 +1160,8 @@ public class StatusBar extends SystemUI implements DemoMode,
                             mStatusBarView.findViewById(R.id.notification_lights_out));
                     mNotificationShadeWindowViewController.setStatusBarView(mStatusBarView);
                     checkBarModes();
+                    mBurnInProtectionController =
+                        new BurnInProtectionController(mContext, this, mStatusBarView);
                 }).getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.status_bar_container, new CollapsedStatusBarFragment(),
@@ -3877,6 +3883,9 @@ public class StatusBar extends SystemUI implements DemoMode,
 
             updateNotificationPanelTouchState();
             mNotificationShadeWindowViewController.cancelCurrentTouch();
+            if (mBurnInProtectionController != null) {
+                mBurnInProtectionController.stopShiftTimer();
+            }
             if (mLaunchCameraOnFinishedGoingToSleep) {
                 mLaunchCameraOnFinishedGoingToSleep = false;
 
@@ -3932,6 +3941,9 @@ public class StatusBar extends SystemUI implements DemoMode,
                 mLaunchCameraWhenFinishedWaking = false;
             }
             updateScrimController();
+            if (mBurnInProtectionController != null) {
+                mBurnInProtectionController.startShiftTimer();
+            }
         }
     };
 
