@@ -40,4 +40,7 @@
     <!-- Alternative keyhandler -->
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerLib" />
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerClass" />
+
+    <!-- Component name of the combo network location provider. -->
+    <java-symbol type="string" name="config_comboNetworkLocationProvider" />
 </resources>
