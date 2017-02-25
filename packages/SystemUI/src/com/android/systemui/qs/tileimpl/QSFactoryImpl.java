@@ -11,14 +11,11 @@
  * KIND, either express or implied. See the License for the specific language governing
  * permissions and limitations under the License.
  */
-
 package com.android.systemui.qs.tileimpl;
-
 import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
-
 import com.android.systemui.R;
 import com.android.systemui.plugins.qs.QSFactory;
 import com.android.systemui.plugins.qs.QSIconView;
@@ -49,21 +46,17 @@ import com.android.systemui.qs.tiles.UiModeNightTile;
 import com.android.systemui.qs.tiles.UsbTetherTile;
 import com.android.systemui.qs.tiles.UserTile;
 import com.android.systemui.qs.tiles.SoundTile;
+import com.android.systemui.qs.tiles.WeatherTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.qs.tiles.WorkModeTile;
 import com.android.systemui.util.leak.GarbageMonitor;
-
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.inject.Singleton;
-
 import dagger.Lazy;
-
 @Singleton
 public class QSFactoryImpl implements QSFactory {
-
     private static final String TAG = "QSFactory";
-
     private final Provider<WifiTile> mWifiTileProvider;
     private final Provider<BluetoothTile> mBluetoothTileProvider;
     private final Provider<CellularTile> mCellularTileProvider;
@@ -90,9 +83,8 @@ public class QSFactoryImpl implements QSFactory {
     private final Provider<CaffeineTile> mCaffeineTileProvider;
     private final Provider<DataSwitchTile> mDataSwitchTileProvider;
     private final Provider<SoundTile> mSoundTileProvider;
-
+    private final Provider<WeatherTile> mWeatherTileProvider;
     private final Lazy<QSHost> mQsHostLazy;
-
     @Inject
     public QSFactoryImpl(Lazy<QSHost> qsHostLazy,
             Provider<WifiTile> wifiTileProvider,
@@ -120,7 +112,8 @@ public class QSFactoryImpl implements QSFactory {
             Provider<ScreenshotTile> screenshotTileProvider,
             Provider<CaffeineTile> caffeineTileProvider,
             Provider<DataSwitchTile> dataSwitchTileProvider,
-            Provider<SoundTile> soundTileProvider) {
+            Provider<SoundTile> soundTileProvider,
+            Provider<WeatherTile> weatherTileProvider) {
         mQsHostLazy = qsHostLazy;
         mWifiTileProvider = wifiTileProvider;
         mBluetoothTileProvider = bluetoothTileProvider;
@@ -148,8 +141,8 @@ public class QSFactoryImpl implements QSFactory {
         mCaffeineTileProvider = caffeineTileProvider;
         mDataSwitchTileProvider = dataSwitchTileProvider;
         mSoundTileProvider = soundTileProvider;
+        mWeatherTileProvider = weatherTileProvider;
     }
-
     public QSTile createTile(String tileSpec) {
         QSTileImpl tile = createTileInternal(tileSpec);
         if (tile != null) {
@@ -157,7 +150,6 @@ public class QSFactoryImpl implements QSFactory {
         }
         return tile;
     }
-
     private QSTileImpl createTileInternal(String tileSpec) {
         // Stock tiles.
         switch (tileSpec) {
@@ -211,26 +203,24 @@ public class QSFactoryImpl implements QSFactory {
                 return mDataSwitchTileProvider.get();
             case "sound":
                 return mSoundTileProvider.get();
+            case "weather":
+                return mWeatherTileProvider.get();
         }
-
         // Custom tiles
         if (tileSpec.startsWith(CustomTile.PREFIX)) {
             return CustomTile.create(mQsHostLazy.get(), tileSpec,
                     mQsHostLazy.get().getUserContext());
         }
-
         // Debug tiles.
         /*if (Build.IS_DEBUGGABLE) {
             if (tileSpec.equals(GarbageMonitor.MemoryTile.TILE_SPEC)) {
                 return mMemoryTileProvider.get();
             }
         }*/
-
         // Broken tiles.
         Log.w(TAG, "No stock tile spec: " + tileSpec);
         return null;
     }
-
     @Override
     public QSTileView createTileView(QSTile tile, boolean collapsedView) {
         Context context = new ContextThemeWrapper(mQsHostLazy.get().getContext(), R.style.qs_theme);
