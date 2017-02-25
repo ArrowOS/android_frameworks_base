@@ -38,6 +38,7 @@ import com.android.systemui.qs.tiles.NfcTile;
 import com.android.systemui.qs.tiles.NightDisplayTile;
 import com.android.systemui.qs.tiles.RotationLockTile;
 import com.android.systemui.qs.tiles.UserTile;
+import com.android.systemui.qs.tiles.WeatherTile;
 import com.android.systemui.qs.tiles.WifiTile;
 import com.android.systemui.qs.tiles.WorkModeTile;
 import com.android.systemui.qs.QSTileHost;
@@ -69,6 +70,8 @@ public class QSFactoryImpl implements QSFactory {
         else if (tileSpec.equals("saver")) return new DataSaverTile(mHost);
         else if (tileSpec.equals("night")) return new NightDisplayTile(mHost);
         else if (tileSpec.equals("nfc")) return new NfcTile(mHost);
+        // Custom tiles.
+        else if (tileSpec.equals("weather")) return new WeatherTile(mHost);
         // Intent tiles.
         else if (tileSpec.startsWith(IntentTile.PREFIX)) return IntentTile.create(mHost, tileSpec);
         else if (tileSpec.startsWith(CustomTile.PREFIX)) return CustomTile.create(mHost, tileSpec);
