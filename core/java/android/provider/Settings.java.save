@@ -5185,20 +5185,6 @@ public final class Settings {
         public static final String POINTER_SPEED = "pointer_speed";
 
         /**
-         * GameSpace: List of added games by user
-         * @hide
-         */
-        @Readable
-        public static final String GAMESPACE_GAME_LIST = "gamespace_game_list";
-
-        /**
-         * GameSpace: Whether fullscreen intent will be suppressed while in game session
-         * @hide
-         */
-        @Readable
-        public static final String GAMESPACE_SUPPRESS_FULLSCREEN_INTENT = "gamespace_suppress_fullscreen_intent";
-
-        /**
          * Whether lock-to-app will be triggered by long-press on recents.
          * @hide
          */
@@ -5222,7 +5208,7 @@ public final class Settings {
          * @hide
          */
         @Readable
-        public static final String SHOW_BATTERY_PERCENT = "dummy_show_battery_percent";
+        public static final String SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
         /**
          * Whether or not to enable multiple audio focus.
@@ -5338,42 +5324,6 @@ public final class Settings {
        public static final String BATTERY_LIGHT_REALLYFULL_COLOR = "battery_light_reallyfull_color";
 
         /**
-         * QS battery style
-         * @hide
-         */
-        public static final String QS_BATTERY_STYLE = "qs_battery_style";
-
-        /**
-         * QS battery %
-         * 0: Hide the battery percentage
-         * 1: Display the battery percentage inside the icon
-         * 2: Display the battery percentage next to the icon
-         * @hide
-         */
-        public static final String QS_SHOW_BATTERY_PERCENT = "qs_show_battery_percent";
-
-        /**
-         * Battery style
-         * @hide
-         */
-        public static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
-
-        /**
-          * Statusbar Battery %
-          * 0: Hide the battery percentage
-          * 1: Display the battery percentage inside the icon
-          * 2: Display the battery percentage next to Icon
-          * @hide
-          */
-        public static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
-
-        /**
-         * Show battery percentage when charging
-         * @hide
-         */
-        public static final String STATUS_BAR_BATTERY_TEXT_CHARGING = "status_bar_battery_text_charging";
-
-        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
@@ -5421,6 +5371,7 @@ public final class Settings {
         public static final String VIBRATE_ON_DISCONNECT = "vibrate_on_disconnect";
 
 	/**
+=======
          * Whether to display 4G icon instead LTE
          * @hide
          */
@@ -5433,28 +5384,12 @@ public final class Settings {
          * All settings in {@link LEGACY_RESTORE_SETTINGS} array *must* have a non-null validator,
          * otherwise they won't be restored.
          *
+>>>>>>> e1dbe4a1075b... Allow using 4G icon instead of LTE [1/2]         * @hide
+         */
+		/*
          * Whether to enable the ripple animation on fingerprint unlock
-	 * @hide
-         */
+			*/	
         public static final String ENABLE_RIPPLE_EFFECT = "enable_ripple_effect";
-
-	/**
-         * Whether to show data usage in qs footer
-         * @hide
-         */
-        public static final String QS_FOOTER_DATA_USAGE = "qs_footer_data_usage";
-
-        /**
-         * Wheter to show network traffic indicator in statusbar
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
-
-        /**
-         * Network traffic inactivity threshold
-         * @hide
-         */
-        public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
        /**
          * These are all public system settings
@@ -5561,6 +5496,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(POINTER_SPEED);
             PRIVATE_SETTINGS.add(LOCK_TO_APP_ENABLED);
             PRIVATE_SETTINGS.add(EGG_MODE);
+            PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE_VENDOR_HINT);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
@@ -9955,13 +9891,6 @@ public final class Settings {
                 "lockscreen_use_double_line_clock";
 
         /**
-         * Whether to show the vibrate icon in the Status Bar (default off)
-         *
-         * @hide
-         */
-        public static final String STATUS_BAR_SHOW_VIBRATE_ICON = "status_bar_show_vibrate_icon";
-
-        /**
          * Specifies whether the web action API is enabled.
          *
          * @hide
@@ -10464,19 +10393,6 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
-
-        /**
-         * Disable power menu on secure lock screens
-         *
-         * @hide
-         */
-        public static final String POWER_MENU_HIDE_ON_SECURE = "power_menu_hide_on_secure";
-
-        /**
-         * Whether to turn on black theme
-         * @hide
-         */
-        public static final String SYSTEM_BLACK_THEME = "system_black_theme";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
@@ -14079,16 +13995,6 @@ public final class Settings {
          */
         @Readable
         public static final String EMERGENCY_AFFORDANCE_NEEDED = "emergency_affordance_needed";
-
-        /**
-         * The power button "cooldown" period in milliseconds after the Emergency gesture is
-         * triggered, during which single-key actions on the power button are suppressed. Cooldown
-         * period is disabled if set to zero.
-         *
-         * @hide
-         */
-        public static final String EMERGENCY_GESTURE_POWER_BUTTON_COOLDOWN_PERIOD_MS =
-                "emergency_gesture_power_button_cooldown_period_ms";
 
         /**
          * Whether to enable automatic system server heap dumps. This only works on userdebug or
