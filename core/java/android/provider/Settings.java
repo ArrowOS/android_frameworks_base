@@ -5420,9 +5420,15 @@ public final class Settings {
          */
         public static final String VIBRATE_ON_DISCONNECT = "vibrate_on_disconnect";
 
+	/**
+         * Whether to display 4G icon instead LTE
+         * @hide
+         */
+        public static final String SHOW_FOURG_ICON = "show_fourg_icon";
+
         /**
          * Whether to enable the ripple animation on fingerprint unlock
-         * @hide
+	 * @hide
          */
         public static final String ENABLE_RIPPLE_EFFECT = "enable_ripple_effect";
 
