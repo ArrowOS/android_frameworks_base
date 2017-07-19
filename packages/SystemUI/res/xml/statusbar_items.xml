@@ -43,6 +43,11 @@
             android:title="@*android:string/volume_unknown" />
 
         <com.android.systemui.tuner.StatusBarSwitch
+            android:key="ims"
+            android:title="@string/status_bar_ims"
+            sysui:defValue="true" />
+
+        <com.android.systemui.tuner.StatusBarSwitch
             android:key="wifi"
             android:title="@string/quick_settings_wifi_label" />
 
