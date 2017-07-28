@@ -8735,6 +8735,12 @@ public final class Settings {
         /** @hide */
         private static final Validator VOLUME_LINK_NOTIFICATION_VALIDATOR =
                 BOOLEAN_VALIDATOR;
+        /**
+         * Force authorize Substratum (or equivalent) frontend calling packages by ThemeInterfacer
+         * The value is boolean (1 or 0).
+         * @hide
+         */
+        public static final String FORCE_AUTHORIZE_SUBSTRATUM_PACKAGES = "force_authorize_substratum_packages";
 
         /**
          * This are the settings to be backed up.
