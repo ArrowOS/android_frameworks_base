@@ -315,12 +315,20 @@ public class TileAdapter extends RecyclerView.Adapter<Holder> implements TileSta
         holder.mTileView.handleStateChanged(info.state);
         holder.mTileView.setShowAppLabel(position > mEditIndex && !info.isSystem);
 
-        final boolean selectable = mAccessibilityAction == ACTION_NONE || position < mEditIndex;
-        if (!(mAccessibilityManager.isTouchExplorationEnabled() && selectable)) {
+        if (!mAccessibilityManager.isTouchExplorationEnabled()) {
             holder.mTileView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    move(holder.getAdapterPosition(), mEditIndex, holder.mTileView);
+                    int position = holder.getAdapterPosition();
+                    if (position < mEditIndex) {
+                        if (canRemoveTiles()) {
+                            move(position, mEditIndex, holder.mTileView);
+                        } else {
+                            // TODO
+                        }
+                    } else {
+                        move(position, mEditIndex, holder.mTileView);
+                    }
                 }
             });
         }
