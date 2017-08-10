@@ -613,9 +613,8 @@
     <protected-broadcast android:name="com.android.server.biometrics.fingerprint.ACTION_LOCKOUT_RESET" />
     <protected-broadcast android:name="com.android.server.biometrics.face.ACTION_LOCKOUT_RESET" />
 
-    <!-- For IdleController -->
-    <protected-broadcast android:name="android.intent.action.DOCK_IDLE" />
-    <protected-broadcast android:name="android.intent.action.DOCK_ACTIVE" />
+    <!-- Used for long press power torch feature - automatic turn off on timeout -->
+    <protected-broadcast android:name="com.android.server.policy.PhoneWindowManager.ACTION_TORCH_OFF" />
 
     <!-- Added in Q -->
     <protected-broadcast android:name="android.content.pm.action.SESSION_UPDATED" />
@@ -630,6 +629,10 @@
     <protected-broadcast android:name="android.provider.action.DEFAULT_SMS_PACKAGE_CHANGED_INTERNAL" />
 
     <protected-broadcast android:name="android.intent.action.DEVICE_CUSTOMIZATION_READY" />
+
+    <!-- For IdleController -->
+    <protected-broadcast android:name="android.intent.action.DOCK_IDLE" />
+    <protected-broadcast android:name="android.intent.action.DOCK_ACTIVE" />
 
     <!-- For tether entitlement recheck-->
     <protected-broadcast
@@ -3954,6 +3957,11 @@
          accessible to the system.
          @hide -->
     <permission android:name="android.permission.COPY_PROTECTED_DATA"
+        android:protectionLevel="signature" />
+
+    <!-- Allows applications to control one handed mode.
+         @hide -->
+    <permission android:name="android.permission.ONE_HANDED_MODE"
         android:protectionLevel="signature" />
 
     <!-- @SystemApi Internal permission protecting access to the encryption methods
