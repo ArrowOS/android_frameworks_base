@@ -3846,6 +3846,15 @@
          empty string is passed in -->
     <string name="config_wlan_network_service_package" translatable="false"></string>
 
+    <!-- One-handed mode feature is supported or not. -->
+    <bool name="config_onehanded_mode">true</bool>
+
+    <!-- Protect zone padding to ignore touch for onehand panel. -->
+    <dimen name="config_onehandProtectZonePadding">30dp</dimen>
+
+    <!-- Minimum swipe distance to catch the swipe gestures for onehand trigger. -->
+    <dimen name="config_onehandTriggerMinSwipeDistance">100dp</dimen>
+
     <!-- Telephony qualified networks service package name to bind to by default. -->
     <string name="config_qualified_networks_service_package" translatable="false"></string>
 
