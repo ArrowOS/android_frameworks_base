@@ -1267,18 +1267,11 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener {
     }
 
     private boolean shouldListenForFingerprint() {
-        if (!mFingerprintWakeAndUnlock) {
-            return (mKeyguardIsVisible || mBouncer || shouldListenForFingerprintAssistant() ||
-                    (mKeyguardOccluded && mIsDreaming)) && mDeviceInteractive && !mGoingToSleep
-                    && !mSwitchingUser && !isFingerprintDisabled(getCurrentUser())
-                    && !mKeyguardGoingAway && !mIsDeviceInPocket;
-        } else {
             return (mKeyguardIsVisible || !mDeviceInteractive ||
                     (mBouncer && !mKeyguardGoingAway) || mGoingToSleep ||
                     shouldListenForFingerprintAssistant() || (mKeyguardOccluded && mIsDreaming))
                     && !mSwitchingUser && !isFingerprintDisabled(getCurrentUser())
                     && !mKeyguardGoingAway && !mIsDeviceInPocket;
-        }
     }
 
     private void startListeningForFingerprint() {
