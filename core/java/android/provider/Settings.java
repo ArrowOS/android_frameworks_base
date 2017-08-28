@@ -4826,7 +4826,6 @@ public final class Settings {
          */
         public static final String COLOR_BUCKET_OVERLAY = "color_bucket_overlay";
 
-
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
@@ -4903,6 +4902,81 @@ public final class Settings {
         */
 
        public static final String ANBI_ENABLED_OPTION = "anbi_enabled_option";
+
+        /**
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
+
+        /**
+         * Whether to display sound panel in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_SOUNDPANEL = "global_actions_soundpanel";
+
+        /**
+         * Whether to display screenshot in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_SCREENSHOT = "global_actions_screenshot";
+
+        /**
+         * Whether to display screenrecord in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_SCREENRECORD = "global_actions_screenrecord";
+
+        /**
+         * Whether to display settings in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_SETTINGS = "global_actions_settings";
+
+        /**
+         * Whether to display lock in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_LOCKDOWN = "global_actions_lockdown";
+
+        /**
+         * Whether to display airplane in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_AIRPLANE = "global_actions_airplane";
+
+        /**
+         * Whether to display the users option in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_USERS = "global_actions_users";
+
+        /**
+         * Whether to display the flashlight option in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_FLASHLIGHT = "global_actions_flashlight";
+
+        /**
+         * Whether to display the flashlight option in the power menu
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_EMERGENCY = "global_actions_emergency";
+
+        /**
+         * How many action items before moving to overflow
+         *
+         * @hide
+         */
+       public static final String GLOBAL_ACTIONS_MAX_COLUMNS = "global_actions_max_columns";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
@@ -6019,6 +6093,11 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /**
+         * @hide
+         */
+        public static final String ADVANCED_REBOOT = "advanced_reboot";
 
         /**
          * Control whether to enable adaptive sleep mode.
