@@ -3295,6 +3295,14 @@ public class WindowManagerService extends IWindowManager.Stub
                 confirm);
     }
 
+    // Called by window manager policy.  Not exposed externally.
+    @Override
+    public void reboot(boolean confirm, String reason) {
+        // Pass in the UI context, since ShutdownThread requires it (to show UI).
+        ShutdownThread.rebootCustom(ActivityThread.currentActivityThread().getSystemUiContext(),
+                reason, confirm);
+    }
+
     public void setCurrentProfileIds(final int[] currentProfileIds) {
         synchronized (mGlobalLock) {
             mCurrentProfileIds = currentProfileIds;
