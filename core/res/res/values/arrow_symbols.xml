@@ -38,4 +38,7 @@
 
     <!-- In-display Fingerprint -->
     <java-symbol type="bool" name="config_supportsInDisplayFingerprint" />
+
+    <!-- Power menu -->
+    <java-symbol type="array" name="config_rebootActionsList" />
 </resources>
