@@ -5507,6 +5507,11 @@ public final class Settings {
         public static final String MULTI_AUDIO_FOCUS_ENABLED = "multi_audio_focus_enabled";
 
         /**
+         * @hide
+         */
+        public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
+
+        /**
          * Whether to play notification sound and vibration if screen is ON
          * 0 - never
          * 1 - always
@@ -5531,6 +5536,11 @@ public final class Settings {
          * @hide
          */
         public static final String VIBRATE_ON_DISCONNECT = "vibrate_on_disconnect";
+
+        /**
+         * @hide
+         */
+        public static final String ADVANCED_REBOOT = "advanced_reboot";
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -10246,6 +10256,11 @@ public final class Settings {
          */
         @Readable
         public static final String NOTIFICATION_DISMISS_RTL = "notification_dismiss_rtl";
+
+        /**
+         * @hide
+         */
+        public static final String ADVANCED_REBOOT = "advanced_reboot";
 
         /**
          * Comma separated list of QS tiles that have been auto-added already.
