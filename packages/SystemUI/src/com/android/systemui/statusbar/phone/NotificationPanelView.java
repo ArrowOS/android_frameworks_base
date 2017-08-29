@@ -284,8 +284,10 @@ public class NotificationPanelView extends PanelView implements
             .setAnimationFinishListener(mAnimatorListenerAdapter)
             .setCustomInterpolator(PANEL_ALPHA.getProperty(), Interpolators.ALPHA_IN);
 
-    private GestureDetector mLockscreenDoubleTapToSleep;
+    private GestureDetector mDoubleTapToSleepGesture;
     private boolean mIsLockscreenDoubleTapEnabled;
+
+    private int mStatusBarHeaderHeight;
 
     public NotificationPanelView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -298,7 +300,7 @@ public class NotificationPanelView extends PanelView implements
         mAlphaPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY));
         setPanelAlpha(255, false /* animate */);
 
-        mLockscreenDoubleTapToSleep = new GestureDetector(context,
+        mDoubleTapToSleepGesture = new GestureDetector(context,
                 new GestureDetector.SimpleOnGestureListener() {
             @Override
             public boolean onDoubleTap(MotionEvent e) {
@@ -367,6 +369,8 @@ public class NotificationPanelView extends PanelView implements
                 R.dimen.keyguard_indication_bottom_padding);
         mQsNotificationTopPadding = getResources().getDimensionPixelSize(
                 R.dimen.qs_notification_padding);
+        mStatusBarHeaderHeight = getResources().getDimensionPixelSize(
+                R.dimen.status_bar_height);
     }
 
     public void updateResources() {
@@ -879,9 +883,11 @@ public class NotificationPanelView extends PanelView implements
         if (mBlockTouches || (mQs != null && mQs.isCustomizing())) {
             return false;
         }
-        if (mIsLockscreenDoubleTapEnabled
-                && mStatusBarState == StatusBarState.KEYGUARD) {
-            mLockscreenDoubleTapToSleep.onTouchEvent(event);
+        if ((mIsLockscreenDoubleTapEnabled
+                && mStatusBarState == StatusBarState.KEYGUARD) ||
+                (!mQsExpanded && mDoubleTapToSleepEnabled
+                && event.getY() < mStatusBarHeaderHeight)) {
+            mDoubleTapToSleepGesture.onTouchEvent(event);
         }
         initDownStates(event);
         if (mListenForHeadsUp && !mHeadsUpTouchHelper.isTrackingHeadsUp()
@@ -2876,5 +2882,9 @@ public class NotificationPanelView extends PanelView implements
 
     public void setQsQuickPulldown(boolean isQsQuickPulldown) {
         mOneFingerQuickSettingsIntercept = isQsQuickPulldown;
+    }
+
+    public void updateDoubleTapToSleep(boolean doubleTapToSleepEnabled) {
+        mDoubleTapToSleepEnabled = doubleTapToSleepEnabled;
     }
 }
