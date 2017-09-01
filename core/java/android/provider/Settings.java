@@ -4225,6 +4225,12 @@ public final class Settings {
         public static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
 
         /**
+         * Change volume up and down handlign based on rotation
+         * @hide
+         */
+        public static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4411,6 +4417,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(VOLUME_KEYS_CONTROL_MEDIA_STREAM);
             PRIVATE_SETTINGS.add(VOLUME_BUTTON_MUSIC_CONTROL);
+            PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
         }
 
         /**
