@@ -4558,6 +4558,17 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Double tap on lockscreen to sleep
+         * @hide
+         */
+        public static final String DOUBLE_TAP_SLEEP_LOCKSCREEN =
+                "double_tap_sleep_lockscreen";
+
+        /** @hide */
+        private static final Validator DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4627,6 +4638,7 @@ public final class Settings {
             QS_TILE_TITLE_VISIBILITY,
             QS_QUICKBAR_COLUMNS,
             DOUBLE_TAP_SLEEP_GESTURE,
+            DOUBLE_TAP_SLEEP_LOCKSCREEN,
         };
 
         /**
@@ -4752,6 +4764,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_TILE_TITLE_VISIBILITY);
             PRIVATE_SETTINGS.add(QS_QUICKBAR_COLUMNS);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
+            PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
         }
 
         /**
@@ -4852,6 +4865,8 @@ public final class Settings {
             VALIDATORS.put(QS_QUICKBAR_COLUMNS, QS_QUICKBAR_COLUMNS_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_GESTURE,
                     DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
+            VALIDATORS.put(DOUBLE_TAP_SLEEP_LOCKSCREEN,
+                    DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
         }
 
         /**
