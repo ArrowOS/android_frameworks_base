@@ -6003,16 +6003,24 @@ public class StatusBar extends SystemUI implements DemoMode,
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_COLUMNS_LANDSCAPE),
                     false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-            update();
+	    if (uri.equals(Settings.System.getUriFor(
+                Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN))) {
+                setLockscreenDoubleTapToSleep();
+            }
+	    update();
         }
 
         public void update() {
             updateBatterySettings();
             setQsRowsColumns();
+	    setLockscreenDoubleTapToSleep();
         }
     }
 
@@ -6037,6 +6045,12 @@ public class StatusBar extends SystemUI implements DemoMode,
     private void setQsRowsColumns() {
         if (mQSPanel != null) {
             mQSPanel.updateResources();
+        }
+    }
+
+    private void setLockscreenDoubleTapToSleep() {
+        if (mStatusBarWindow != null) {
+            mStatusBarWindow.setLockscreenDoubleTapToSleep();
         }
     }
 
