@@ -4886,6 +4886,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
             PRIVATE_SETTINGS.add(ONE_HAND_MODE_ENABLED);
+            PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
         }
 
         /**
@@ -13984,6 +13985,12 @@ public final class Settings {
                 "power_button_very_long_press";
         private static final Validator POWER_BUTTON_VERY_LONG_PRESS_VALIDATOR =
                 new SettingsValidators.InclusiveIntegerRangeValidator(0, 1);
+
+        /**
+         * Change volume up and down handlign based on rotation
+         * @hide
+         */
+        public static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
