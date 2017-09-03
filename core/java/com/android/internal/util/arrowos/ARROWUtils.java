@@ -84,6 +84,11 @@ public class ARROWUtils {
         return isPackageInstalled(context, pkg, true);
     }
 
+    // Toggle flashlight
+    public static void toggleFlashLight() {
+        FireActions.toggleFlashLight();
+    }
+
     private static int getScreenType(Context context) {
         if (sDeviceType == -1) {
             WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -240,6 +245,17 @@ public class ARROWUtils {
                             ServiceManager.getService("statusbar"));
                 }
                 return mStatusBarService;
+            }
+        }
+
+        public static void toggleFlashLight() {
+            IStatusBarService service = getStatusBarService();
+            if (service != null) {
+                try {
+                    service.toggleFlashlight();
+                } catch (RemoteException e) {
+                    // do nothing.
+                }
             }
         }
     }
