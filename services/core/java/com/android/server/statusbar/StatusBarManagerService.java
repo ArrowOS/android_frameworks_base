@@ -500,6 +500,17 @@ public class StatusBarManagerService extends IStatusBarService.Stub {
     }
 
     @Override
+    public void toggleFlashlight() {
+        enforceStatusBarService();
+        if (mBar != null) {
+            try {
+                mBar.toggleFlashlight();
+            } catch (RemoteException ex) {
+            }
+        }
+    }
+
+    @Override
     public void toggleRecentApps() {
         enforceStatusBarService();
 

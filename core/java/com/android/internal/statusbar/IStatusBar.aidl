@@ -99,6 +99,11 @@ oneway interface IStatusBar
     void startAssist(in Bundle args);
 
     /**
+     * Toggles the devices flashlight.
+     */
+    void toggleFlashlight();
+
+    /**
      * Notifies the status bar that a camera launch gesture has been detected.
      *
      * @param source the identifier for the gesture, see {@link StatusBarManager}

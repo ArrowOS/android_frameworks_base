@@ -21,12 +21,15 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.input.InputManager;
 import android.os.Looper;
+import android.os.RemoteException;
+import android.os.ServiceManager;
 import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.ServiceManager;
 import android.os.SystemClock;
 import android.view.IWindowManager;
 import android.view.WindowManagerGlobal;
+import android.os.SystemProperties;
 import android.view.InputDevice;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
@@ -80,10 +83,6 @@ public class ArrowUtils {
 
     public static boolean deviceSupportNavigationBar(Context context) {
         return deviceSupportNavigationBarForUser(context, UserHandle.USER_CURRENT);
-    }
-
-    public static void toggleCameraFlash() {
-        FireActions.toggleCameraFlash();
     }
 
     public static void sendKeycode(int keycode) {
@@ -142,6 +141,10 @@ public class ArrowUtils {
         }
     }
 
+    // Toggle flashlight
+    public static void toggleFlashLight() {
+        FireActions.toggleFlashLight();
+    }
     private static final class FireActions {
         private static IStatusBarService mStatusBarService = null;
         private static IStatusBarService getStatusBarService() {
@@ -153,12 +156,11 @@ public class ArrowUtils {
                 return mStatusBarService;
             }
         }
-
-        public static void toggleCameraFlash() {
+         public static void toggleFlashLight() {
             IStatusBarService service = getStatusBarService();
             if (service != null) {
                 try {
-                    service.toggleCameraFlash();
+                    service.toggleFlashlight();
                 } catch (RemoteException e) {
                     // do nothing.
                 }

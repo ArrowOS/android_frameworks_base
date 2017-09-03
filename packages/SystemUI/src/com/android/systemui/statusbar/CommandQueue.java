@@ -182,6 +182,13 @@ public class CommandQueue extends IStatusBar.Stub {
         mCallbacks.remove(callbacks);
     }
 
+    public void toggleFlashlight() {
+        synchronized (mLock) {
+            mHandler.removeMessages(MSG_TOGGLE_FLASHLIGHT);
+            mHandler.sendEmptyMessage(MSG_TOGGLE_FLASHLIGHT);
+        }
+    }
+
     public void setIcon(String slot, StatusBarIcon icon) {
         synchronized (mLock) {
             // don't coalesce these

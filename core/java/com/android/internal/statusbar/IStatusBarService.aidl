@@ -103,8 +103,9 @@ interface IStatusBarService
     void hideFingerprintDialog();
 
     /**
-     * Nitrogen
+     * Custom methods
      */
+    void toggleFlashlight();
     void toggleCameraFlash();
     void toggleRecentApps();
     void toggleSplitScreen();
