@@ -57,4 +57,7 @@
 
     <!-- volte icon switch -->
     <string name="status_bar_volte">VOLTE</string>
+
+    <!-- Empty -->
+    <string name="summary_empty" translatable="false"></string>
 </resources>
