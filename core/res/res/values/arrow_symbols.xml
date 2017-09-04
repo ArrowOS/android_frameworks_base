@@ -60,4 +60,7 @@
     <java-symbol type="string" name="reboot_title" />
     <java-symbol type="string" name="reboot_message" />
 
+    <!-- Battery Leds -->
+    <java-symbol type="bool" name="config_intrusiveBatteryLed" />
+
 </resources>
