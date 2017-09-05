@@ -5220,6 +5220,25 @@ public final class Settings {
          */
         public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
 
+        /**
+         * @hide
+         * Whether the phone vibrates on call connect
+         * @hide
+         */
+        public static final String VIBRATE_ON_CONNECT = "vibrate_on_connect";
+
+         /**
+         * Whether the phone vibrates on call waiting
+         * @hide
+         */
+        public static final String VIBRATE_ON_CALLWAITING = "vibrate_on_callwaiting";
+
+         /**
+         * Whether the phone vibrates on disconnect
+         * @hide
+         */
+        public static final String VIBRATE_ON_DISCONNECT = "vibrate_on_disconnect";
+
        /**
          * These are all public system settings
          *
@@ -5330,6 +5349,9 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE_VENDOR_HINT);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(VOLUME_BUTTON_MUSIC_CONTROL);
+            PRIVATE_SETTINGS.add(VIBRATE_ON_CONNECT);
+            PRIVATE_SETTINGS.add(VIBRATE_ON_CALLWAITING);
+            PRIVATE_SETTINGS.add(VIBRATE_ON_DISCONNECT);
         }
 
         /**
