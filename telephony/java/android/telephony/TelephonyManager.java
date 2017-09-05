@@ -6019,6 +6019,17 @@ public class TelephonyManager {
     }
 
     /**
+     * {@hide}
+     */
+    public void toggleLTE(boolean on) {
+        try {
+            getITelephony().toggleLTE(on);
+        } catch (RemoteException e) {
+            //Silently fail
+        }
+    }
+
+    /**
      * @deprecated Use {@link android.telecom.TelecomManager#acceptRingingCall} instead
      * @hide
      */
