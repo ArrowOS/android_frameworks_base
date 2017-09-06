@@ -5084,6 +5084,9 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
 	    resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.DOUBLE_TAP_SLEEP_GESTURE),
                     false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.QS_FOOTER_WARNINGS),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -5119,6 +5122,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             setHeadsUpStoplist();
             setHeadsUpBlacklist();
             setQsRowsColumns();
+	    setQsPanelOptions();
             updateTheme();
 	    setStatusBarWindowViewOptions();
         }
@@ -5145,6 +5149,12 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
         final String blackString = Settings.System.getString(mContext.getContentResolver(),
                     Settings.System.HEADS_UP_BLACKLIST_VALUES);
         splitAndAddToArrayList(mBlacklist, blackString, "\\|");
+    }
+
+    private void setQsPanelOptions() {
+        if (mQSPanel != null) {
+            mQSPanel.updateSettings();
+        }
     }
 
     public int getWakefulnessState() {
