@@ -61,4 +61,6 @@
     <string name="quick_settings_screenshot_label">Screenshot</string>
     <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
 
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>
