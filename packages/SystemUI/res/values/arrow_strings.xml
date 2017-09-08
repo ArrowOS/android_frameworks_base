@@ -66,4 +66,6 @@
     <string name="usage_data_default_suffix">Data</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
 
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>
