@@ -107,6 +107,7 @@ import static com.android.server.policy.HardkeyActionHandler.KEY_MASK_MENU;
 import static com.android.server.policy.HardkeyActionHandler.KEY_MASK_ASSIST;
 import static com.android.server.policy.HardkeyActionHandler.KEY_MASK_APP_SWITCH;
 
+import android.Manifest;
 import android.annotation.Nullable;
 import android.app.ActivityManager;
 import android.app.ActivityManagerInternal;
@@ -246,6 +247,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import dalvik.system.PathClassLoader;
+import com.android.internal.util.arrow.ArrowUtils;
 
 /**
  * WindowManagerPolicy implementation for the Android phone UI.  This
@@ -5774,6 +5776,26 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     @Override
     public boolean hasNavigationBar() {
         return mDefaultDisplayPolicy.hasNavigationBar();
+    }
+
+    @Override
+    public void sendCustomAction(Intent intent) {
+        String action = intent.getAction();
+        if (action != null) {
+            if (ArrowUtils.INTENT_SCREENSHOT.equals(action)) {
+                mContext.enforceCallingOrSelfPermission(Manifest.permission.ACCESS_SURFACE_FLINGER,
+                        TAG + "sendCustomAction permission denied");
+                mHandler.removeCallbacks(mScreenshotRunnable);
+                mScreenshotRunnable.setScreenshotType(TAKE_SCREENSHOT_FULLSCREEN);
+                mHandler.post(mScreenshotRunnable);
+            } else if (ArrowUtils.INTENT_REGION_SCREENSHOT.equals(action)) {
+                mContext.enforceCallingOrSelfPermission(Manifest.permission.ACCESS_SURFACE_FLINGER,
+                        TAG + "sendCustomAction permission denied");
+                mHandler.removeCallbacks(mScreenshotRunnable);
+                mScreenshotRunnable.setScreenshotType(TAKE_SCREENSHOT_SELECTED_REGION);
+                mHandler.post(mScreenshotRunnable);
+            }
+        }
     }
 
     @Override
