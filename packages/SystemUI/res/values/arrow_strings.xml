@@ -54,4 +54,7 @@
 
     <!-- Statusbar icons -->
     <string name="statusbar_items_title">Statusbar icon</string>
+
+    <!-- volte icon switch -->
+    <string name="status_bar_volte">VOLTE</string>
 </resources>
