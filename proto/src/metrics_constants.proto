@@ -6508,5 +6508,8 @@ message MetricsEvent {
     // Omni Metrics
     OMNI_QS_WEATHER = 1151;
     OMNI_QS_WEATHER_DETAILS = 1152;
+
+    // CustomSettings constant
+    CUSTOM_SETTINGS = 1999;
   }
 }
