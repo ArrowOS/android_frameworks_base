@@ -56,4 +56,9 @@
     <!-- Button brightness -->
     <java-symbol type="bool" name="config_button_brightness_support" />
     <java-symbol type="integer" name="config_button_brightness_default" />
+
+    <!-- Custom Battery light -->
+    <java-symbol type="bool" name="config_intrusiveBatteryLed" />
+    <java-symbol type="bool" name="config_multiColorBatteryLed" />
+    <java-symbol type="bool" name="config_ledCanPulse" />
 </resources>
