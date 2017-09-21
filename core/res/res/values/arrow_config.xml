@@ -39,6 +39,21 @@
     <!-- Name of that alternative key handler class -->
     <string name="config_alternativeDeviceKeyHandlerClass" translatable="false"></string>
 
+
     <!-- Component name of the combo network location provider. -->
     <string name="config_comboNetworkLocationProvider" translatable="false">@null</string>
+
+    <!-- Hardware keys present on the device, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home
+             2 - Back
+             4 - Menu
+             8 - Assistant (search)
+            16 - App switch
+            32 - Camera
+            64 - Volume rocker
+         For example, a device with Home, Back and Menu keys would set this
+         config to 7. -->
+    <integer name="config_deviceHardwareKeys">64</integer>
 </resources>
