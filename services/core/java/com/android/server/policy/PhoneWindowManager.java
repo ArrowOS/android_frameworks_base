@@ -208,6 +208,8 @@ import com.android.internal.policy.IShortcutService;
 import com.android.internal.policy.PhoneWindow;
 import com.android.internal.statusbar.IStatusBarService;
 import com.android.internal.util.ArrayUtils;
+import com.android.internal.util.hwkeys.ActionHandler;
+import com.android.internal.util.hwkeys.ActionUtils;
 import com.android.server.ExtconStateObserver;
 import com.android.server.ExtconUEventObserver;
 import com.android.server.GestureLauncherService;
@@ -498,6 +500,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     boolean mAllowStartActivityForLongPressOnPowerDuringSetup;
     MetricsLogger mLogger;
 
+    private HardkeyActionHandler mKeyHandler;
+
     private boolean mHandleVolumeKeysInWM;
 
     private boolean mPendingKeyguardOccluded;
@@ -743,6 +747,26 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                 case MSG_MOVE_DISPLAY_TO_TOP:
                     mWindowManagerFuncs.moveDisplayToTop(msg.arg1);
                     mMovingDisplayToTopKeyTriggered = false;
+                    break;
+                case MSG_DISPATCH_VOLKEY_WITH_WAKE_LOCK: {
+                    KeyEvent event = (KeyEvent) msg.obj;
+                    dispatchMediaKeyWithWakeLockToAudioService(event);
+                    dispatchMediaKeyWithWakeLockToAudioService(
+                            KeyEvent.changeAction(event, KeyEvent.ACTION_UP));
+                    mVolumeMusicControlActive = true;
+                    break;
+                }
+                case HardkeyActionHandler.MSG_FIRE_HOME:
+                    launchHomeFromHotKey();
+                    break;
+//                case HardkeyActionHandler.MSG_UPDATE_MENU_KEY:
+//                    synchronized (mLock) {
+//                        mHasPermanentMenuKey = msg.arg1 == 1;
+//                    }
+//                    break;
+                case HardkeyActionHandler.MSG_DO_HAPTIC_FB:
+                    performHapticFeedbackLw(null,
+                            HapticFeedbackConstants.LONG_PRESS, false);
                     break;
             }
         }
@@ -1798,6 +1822,12 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     context, minHorizontal, maxHorizontal, minVertical, maxVertical, maxRadius);
         }
 
+        // only for hwkey devices
+        if (!mContext.getResources().getBoolean(
+                com.android.internal.R.bool.config_showNavigationBar)) {
+            mKeyHandler = new HardkeyActionHandler(mContext, mHandler);
+        }
+
         mHandler = new PolicyHandler();
         mWakeGestureListener = new MyWakeGestureListener(mContext, mHandler);
         mSettingsObserver = new SettingsObserver(mHandler);
@@ -2682,11 +2712,28 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         final int flags = event.getFlags();
         final boolean down = event.getAction() == KeyEvent.ACTION_DOWN;
         final boolean canceled = event.isCanceled();
+        final boolean longPress = (flags & KeyEvent.FLAG_LONG_PRESS) != 0;
+        final boolean virtualKey = event.getDeviceId() == KeyCharacterMap.VIRTUAL_KEYBOARD;
         final int displayId = event.getDisplayId();
 
         if (DEBUG_INPUT) {
             Log.d(TAG, "interceptKeyTi keyCode=" + keyCode + " down=" + down + " repeatCount="
                     + repeatCount + " keyguardOn=" + keyguardOn + " canceled=" + canceled);
+        }
+
+        // we only handle events from hardware key devices that originate from
+        // real button
+        // pushes. We ignore virtual key events as well since it didn't come
+        // from a hard key or
+        // it's the key handler synthesizing a back or menu key event for
+        // dispatch
+        // if keyguard is showing and secure, don't intercept and let aosp keycode
+        // implementation handle event
+        if (mKeyHandler != null && !keyguardOn && !virtualKey) {
+            boolean handled = mKeyHandler.handleKeyEvent(win, keyCode, repeatCount, down, canceled,
+                    longPress, keyguardOn);
+            if (handled)
+                return -1;
         }
 
         // If we think we might have a volume down & power key chord on the way
