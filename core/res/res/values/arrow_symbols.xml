@@ -51,7 +51,11 @@
     <!-- Gesture Sensor -->
     <java-symbol type="bool" name="config_enableGestureService" />
 
-   <!-- Device keyhandler -->
-   <java-symbol type="string" name="config_deviceKeyHandlerLib" />
-   <java-symbol type="string" name="config_deviceKeyHandlerClass" />
+    <!-- Device keyhandler -->
+    <java-symbol type="string" name="config_deviceKeyHandlerLib" />
+    <java-symbol type="string" name="config_deviceKeyHandlerClass" />
+
+    <!-- DUI -->
+    <java-symbol type="anim" name="du_app_in" />
+    <java-symbol type="anim" name="du_app_out" />
 </resources>
