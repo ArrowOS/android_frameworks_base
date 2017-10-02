@@ -217,4 +217,7 @@
 
     <!-- Default for Settings.System.VIBRATE_WHEN_RINGING -->
     <bool name="def_vibrate_when_ringing">false</bool>
+
+    <!-- Disable PlayStore OTA Check -->
+    <integer name="def_ota_disable_automatic_update">1</integer>
 </resources>
