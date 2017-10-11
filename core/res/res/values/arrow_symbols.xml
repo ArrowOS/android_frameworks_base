@@ -62,4 +62,8 @@
     <!-- Button brightness -->
     <java-symbol type="bool" name="config_button_brightness_support" />
     <java-symbol type="integer" name="config_button_brightness_default" />
+
+   <!-- keyhandler symbols -->
+   <java-symbol type="string" name="config_deviceKeyHandlerLib" />
+   <java-symbol type="string" name="config_deviceKeyHandlerClass" />
 </resources>
