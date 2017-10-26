@@ -3866,7 +3866,7 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
     private void onTouchDown(MotionEvent ev) {
         mHasPerformedLongPress = false;
         mActivePointerId = ev.getPointerId(0);
-
+        hideSelector();
         if (mTouchMode == TOUCH_MODE_OVERFLING) {
             // Stopped the fling. It is a scroll.
             mFlingRunnable.endFling();
@@ -5228,17 +5228,21 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
         }
 
         mRecycler.fullyDetachScrapViews();
+        boolean selectorOnScreen = false;
         if (!inTouchMode && mSelectedPosition != INVALID_POSITION) {
             final int childIndex = mSelectedPosition - mFirstPosition;
             if (childIndex >= 0 && childIndex < getChildCount()) {
                 positionSelector(mSelectedPosition, getChildAt(childIndex));
+                selectorOnScreen = true;
             }
         } else if (mSelectorPosition != INVALID_POSITION) {
             final int childIndex = mSelectorPosition - mFirstPosition;
             if (childIndex >= 0 && childIndex < getChildCount()) {
-                positionSelector(INVALID_POSITION, getChildAt(childIndex));
+                positionSelector(mSelectorPosition, getChildAt(childIndex));
+                selectorOnScreen = true;
             }
-        } else {
+        }
+        if (!selectorOnScreen) {
             mSelectorRect.setEmpty();
         }
 
