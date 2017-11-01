@@ -73,6 +73,21 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             >
+            <com.android.systemui.arrow.statusbarweather.StatusBarWeather
+                android:id="@+id/weather_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:gravity="right|center_vertical"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp" />
+
+            <com.android.systemui.arrow.statusbarweather.StatusBarWeatherImage
+                android:id="@+id/weather_image"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:paddingStart="2dp"
+                android:paddingEnd="2dp" />
 
             <include layout="@layout/system_icons" />
 
@@ -86,6 +101,7 @@
                 android:paddingEnd="@dimen/status_bar_clock_end_padding"
                 android:gravity="center_vertical|start"
                 />
+
         </com.android.keyguard.AlphaOptimizedLinearLayout>
     </LinearLayout>
 
