@@ -23,6 +23,10 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.SparseArray;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +40,7 @@ import com.android.systemui.SysUiServiceProvider;
 import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.statusbar.CommandQueue;
 import com.android.systemui.statusbar.phone.StatusBarIconController.DarkIconManager;
+import com.android.internal.utils.arrow.UserContentObserver;
 import com.android.systemui.statusbar.policy.EncryptionHelper;
 import com.android.systemui.statusbar.policy.KeyguardMonitor;
 import com.android.systemui.statusbar.policy.NetworkController;
@@ -68,6 +73,14 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private View mOperatorNameFrame;
     private CommandQueue mCommandQueue;
 
+    // Statusbar Weather Image
+    private View mWeatherImageView;
+    private View mWeatherTextView;
+    private int mShowWeather;
+
+    private SettingsObserver mSettingsObserver;
+    private ContentResolver mContentResolver;
+
     private SignalCallback mSignalCallback = new SignalCallback() {
         @Override
         public void setIsAirplaneMode(NetworkController.IconState icon) {
@@ -83,6 +96,30 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mStatusBarStateController = Dependency.get(StatusBarStateController.class);
         mStatusBarComponent = SysUiServiceProvider.getComponent(getContext(), StatusBar.class);
         mCommandQueue = SysUiServiceProvider.getComponent(getContext(), CommandQueue.class);
+        mSettingsObserver = new SettingsObserver(new Handler());
+    }
+
+    class SettingsObserver extends UserContentObserver {
+
+        SettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        protected void unobserve() {
+            super.unobserve();
+            getContext().getContentResolver().unregisterContentObserver(this);
+        }
+
+        protected void observe() {
+            super.observe();
+            mContentResolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP),
+                    false, this, UserHandle.USER_ALL);
+        }
+
+        @Override
+        protected void update() {
+        }
     }
 
     @Override
@@ -104,6 +141,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         Dependency.get(StatusBarIconController.class).addIconGroup(mDarkIconManager);
         mSystemIconArea = mStatusBar.findViewById(R.id.system_icon_area);
         mClockView = mStatusBar.findViewById(R.id.clock);
+        mWeatherTextView = mStatusBar.findViewById(R.id.weather_temp);
+        mWeatherImageView = mStatusBar.findViewById(R.id.weather_image);
+        updateSettings(false);
         showSystemIconArea(false);
         showClock(false);
         initEmergencyCryptkeeperText();
@@ -380,5 +420,11 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     @Override
     public void onDozingChanged(boolean isDozing) {
         disable(getContext().getDisplayId(), mDisabled1, mDisabled1, false /* animate */);
+    }
+
+    public void updateSettings(boolean animate) {
+        mShowWeather = Settings.System.getIntForUser(
+                getContext().getContentResolver(), Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
+                UserHandle.USER_CURRENT);
     }
 }
