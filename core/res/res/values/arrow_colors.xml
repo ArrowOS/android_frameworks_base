@@ -69,4 +69,7 @@
 
     <!-- Fastscroller -->
     <color name="fastscroller_text_color">#FFFFFFFF</color>
+
+    <!-- Ambient Notification icon/text dynamic tint -->
+    <color name="notification_text_default_color">@android:color/notification_text_default_color</color>
 </resources>
