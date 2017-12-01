@@ -4937,6 +4937,12 @@ public final class Settings {
        public static final String GLOBAL_ACTIONS_MAX_COLUMNS = "global_actions_max_columns";
 
         /**
+         * Check the proximity sensor during wakeup
+         * @hide
+         */
+       public static final String PROXIMITY_ON_WAKE = "proximity_on_wake";
+
+        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
@@ -5066,6 +5072,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_MEDIUM_COLOR);
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_FULL_COLOR);
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_REALLYFULL_COLOR);
+            PRIVATE_SETTINGS.add(PROXIMITY_ON_WAKE);
         }
 
         /**
