@@ -4522,6 +4522,16 @@ public final class Settings {
         public static final String BUTTON_BACKLIGHT_ON_TOUCH_ONLY = "button_backlight_on_touch_only";
 
         /**
+         * Check the proximity sensor during wakeup
+         * @hide
+         */
+        public static final String PROXIMITY_ON_WAKE = "proximity_on_wake";
+
+        /** @hide */
+        public static final Validator PROXIMITY_ON_WAKE_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
@@ -5135,6 +5145,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_TIMEOUT);
             PRIVATE_SETTINGS.add(BUTTON_BACKLIGHT_ON_TOUCH_ONLY);
             PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
+            PRIVATE_SETTINGS.add(PROXIMITY_ON_WAKE);
         }
 
         /**
@@ -5249,6 +5260,7 @@ public final class Settings {
             VALIDATORS.put(LOCKSCREEN_WEATHER_SHOW_CITY, LOCKSCREEN_WEATHER_SHOW_CITY_VALIDATOR);
             VALIDATORS.put(VOLUME_ROCKER_WAKE, VOLUME_ROCKER_WAKE_VALIDATOR);
             VALIDATORS.put(VOLUME_BUTTON_MUSIC_CONTROL, VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR);
+            VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
         }
 
         /**
