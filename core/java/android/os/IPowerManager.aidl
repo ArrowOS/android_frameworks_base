@@ -85,4 +85,8 @@ interface IPowerManager
     boolean forceSuspend();
 
     void wakeUpWithProximityCheck(long time, String reason, String opPackageName);
+
+    // temporarily overrides the button brightness settings to allow the user to
+    // see the effect of a settings change without applying it immediately
+    void setTemporaryButtonBrightnessSettingOverride(int brightness);
 }
