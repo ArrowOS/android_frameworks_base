@@ -43,6 +43,11 @@
     <string name="quick_settings_sound_vibrate">Vibrate</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
 
+    <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
+    <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
+    <string name="quick_settings_hwkeys_label">HW keys</string>
+
     <!-- Advanced powermenu -->
     <string name="global_action_restart_system">Reboot</string>
     <string name="global_action_restart_advanced">Advanced reboot</string>
