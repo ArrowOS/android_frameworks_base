@@ -136,4 +136,7 @@
 
     <!-- Name of that alternative key handler class -->
     <string name="config_alternativeDeviceKeyHandlerClass" translatable="false"></string>
+
+    <!-- Ambient display music ticker -->
+    <bool name="config_canForceDozeNotifications">true</bool>
 </resources>
