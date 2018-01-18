@@ -28,6 +28,7 @@ import android.util.Log;
 import com.android.systemui.statusbar.phone.StatusBar;
 import com.android.systemui.Dumpable;
 import com.android.systemui.SysUiServiceProvider;
+import com.android.systemui.statusbar.phone.StatusBar;
 
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
@@ -52,6 +53,11 @@ public class NotificationMediaManager implements Dumpable {
     private MediaController mMediaController;
     private String mMediaNotificationKey;
     private MediaMetadata mMediaMetadata;
+    private MediaUpdateListener mListener;
+
+    public interface MediaUpdateListener {
+        public void onMediaUpdated(boolean playing);
+    }
 
     private final MediaController.Callback mMediaListener = new MediaController.Callback() {
         @Override
@@ -69,6 +75,7 @@ public class NotificationMediaManager implements Dumpable {
                     mStatusBar.getVisualizer().setPlaying(state.getState()
                             == PlaybackState.STATE_PLAYING);
                 }
+                setMediaPlaying();
             }
         }
 
@@ -80,6 +87,13 @@ public class NotificationMediaManager implements Dumpable {
             }
             mMediaMetadata = metadata;
             mPresenter.updateMediaMetaData(true, true);
+            setMediaPlaying();
+        }
+
+        @Override
+        public void onSessionDestroyed() {
+            super.onSessionDestroyed();
+            setMediaPlaying();
         }
     };
 
@@ -192,6 +206,7 @@ public class NotificationMediaManager implements Dumpable {
                 mMediaController = controller;
                 mMediaController.registerCallback(mMediaListener);
                 mMediaMetadata = mMediaController.getMetadata();
+                setMediaPlaying();
                 if (DEBUG_MEDIA) {
                     Log.v(TAG, "DEBUG_MEDIA: insert listener, found new controller: "
                             + mMediaController + ", receive metadata: " + mMediaMetadata);
@@ -281,7 +296,46 @@ public class NotificationMediaManager implements Dumpable {
                         + mMediaController.getPackageName());
             }
             mMediaController.unregisterCallback(mMediaListener);
+            setMediaPlaying();
         }
         mMediaController = null;
     }
+
+  public void setMediaPlaying() {
+        if (PlaybackState.STATE_PLAYING ==
+                getMediaControllerPlaybackState(mMediaController)
+                || PlaybackState.STATE_BUFFERING ==
+                getMediaControllerPlaybackState(mMediaController)) {
+
+            ArrayList<NotificationData.Entry> activeNotifications =
+                    mEntryManager.getNotificationData().getAllNotifications();
+            int N = activeNotifications.size();
+            final String pkg = mMediaController.getPackageName();
+
+            for (int i = 0; i < N; i++) {
+                final NotificationData.Entry entry = activeNotifications.get(i);
+                if (entry.notification.getPackageName().equals(pkg)) {
+                    // NotificationEntryManager onAsyncInflationFinished will get called
+                    // when colors and album are loaded for the notification, then we can send
+                    // those info to Pulse
+                    mEntryManager.setEntryToRefresh(entry);
+                    break;
+                }
+            }
+            if (mListener != null) {
+                mListener.onMediaUpdated(true);
+            }
+        } else {
+            mEntryManager.setEntryToRefresh(null);
+            mPresenter.setAmbientMusicInfo(null, null);
+            if (mListener != null) {
+                mListener.onMediaUpdated(false);
+            }
+        }
+    }
+
+    public void setMediaNotificationText(String notificationText) {
+        mPresenter.setAmbientMusicInfo(mMediaMetadata, notificationText);
+    }
 }
+
