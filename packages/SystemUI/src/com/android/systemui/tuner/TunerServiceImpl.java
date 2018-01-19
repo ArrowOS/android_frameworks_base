@@ -228,7 +228,9 @@ public class TunerServiceImpl extends TunerService {
         }
         String value = Settings.Secure.getStringForUser(mContentResolver, key, mCurrentUser);
         for (Tunable tunable : tunables) {
-            tunable.onTuningChanged(key, value);
+            if (tunable != null) {
+                tunable.onTuningChanged(key, value);
+            }
         }
     }
 
@@ -240,7 +242,9 @@ public class TunerServiceImpl extends TunerService {
             String value = Settings.Secure.getStringForUser(mContentResolver, key,
                     mCurrentUser);
             for (Tunable tunable : mTunableLookup.get(key)) {
-                tunable.onTuningChanged(key, value);
+                if (tunable != null) {
+                    tunable.onTuningChanged(key, value);
+                }
             }
         }
     }
