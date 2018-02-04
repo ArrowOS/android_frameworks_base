@@ -82,6 +82,10 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
 
     private ContentResolver mContentResolver;
 
+    // Arrow Status Logo
+    private View mARROWLogo;
+    private boolean mShowLogo;
+
     private SignalCallback mSignalCallback = new SignalCallback() {
         @Override
         public void setIsAirplaneMode(NetworkController.IconState icon) {
@@ -97,6 +101,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mNetworkController = Dependency.get(NetworkController.class);
         mStatusBarComponent = SysUiServiceProvider.getComponent(getContext(), StatusBar.class);
         mSettingsObserver = new SettingsObserver(new Handler());
+
     }
 
     class SettingsObserver extends UserContentObserver {
@@ -176,6 +181,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         Dependency.get(DarkIconDispatcher.class).addDarkReceiver(mSignalClusterView);
         mWeatherTextView = mStatusBar.findViewById(R.id.weather_temp);
         mWeatherImageView = mStatusBar.findViewById(R.id.weather_image);
+        mARROWLogo = mStatusBar.findViewById(R.id.status_bar_logo);
         updateSettings(false);
         // Default to showing until we know otherwise.
         showSystemIconArea(false);
@@ -278,9 +284,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     }
 
     public void hideSystemIconArea(boolean animate) {
-        animateHide(mSystemIconArea, animate);
+        animateHide(mSystemIconArea, animate, true);
         if (((Clock)mCenterClock).isEnabled()) {
-        animateHide(mCenterClockLayout, animate);
+        animateHide(mCenterClockLayout, animate, false);
         }
     }
 
@@ -292,12 +298,15 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     }
 
     public void hideNotificationIconArea(boolean animate) {
-        animateHide(mNotificationIconAreaInner, animate);
+        animateHide(mNotificationIconAreaInner, animate, true);
         if (((Clock)mCenterClock).isEnabled()) {
-        animateHide(mCenterClockLayout, animate);
+        animateHide(mCenterClockLayout, animate, false);
         }
         if (((Clock)mLeftClock).isEnabled()) {
-            animateHide(mLeftClock, animate);
+            animateHide(mLeftClock, animate, true);
+        }
+        if (mShowLogo) {
+            animateHide(mARROWLogo, animate, true );
         }
     }
 
@@ -309,16 +318,19 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         if (((Clock)mLeftClock).isEnabled()) {
             animateShow(mLeftClock, animate);
         }
+        if (mShowLogo) {
+            animateShow(mARROWLogo, animate);
+        }
     }
 
     /**
      * Hides a view.
      */
-    private void animateHide(final View v, boolean animate) {
+    private void animateHide(final View v, boolean animate, final boolean invisible) {
         v.animate().cancel();
         if (!animate) {
             v.setAlpha(0f);
-            v.setVisibility(View.INVISIBLE);
+            v.setVisibility(invisible ? View.INVISIBLE : View.GONE);
             return;
         }
         v.animate()
@@ -326,7 +338,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
                 .setDuration(160)
                 .setStartDelay(0)
                 .setInterpolator(Interpolators.ALPHA_OUT)
-                .withEndAction(() -> v.setVisibility(View.INVISIBLE));
+                .withEndAction(() -> v.setVisibility(invisible ? View.INVISIBLE : View.GONE));
     }
 
     /**
@@ -377,5 +389,17 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mShowWeather = Settings.System.getIntForUser(
                 getContext().getContentResolver(), Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
                 UserHandle.USER_CURRENT);
+        mShowLogo = Settings.System.getIntForUser(
+                getContext().getContentResolver(), Settings.System.STATUS_BAR_LOGO, 0,
+                UserHandle.USER_CURRENT) == 1;
+        if (mNotificationIconAreaInner != null) {
+            if (mShowLogo) {
+                if (mNotificationIconAreaInner.getVisibility() == View.VISIBLE) {
+                    animateShow(mARROWLogo, animate);
+                }
+            } else {
+                animateHide(mARROWLogo, animate, false);
+            }
+        }
     }
 }
