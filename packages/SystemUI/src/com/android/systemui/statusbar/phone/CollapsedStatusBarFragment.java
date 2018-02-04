@@ -77,6 +77,10 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private SettingsObserver mSettingsObserver;
     private ContentResolver mContentResolver;
 
+    // Arrow Status Logo
+    private View mARROWLogo;
+    private boolean mShowLogo;
+
     private SignalCallback mSignalCallback = new SignalCallback() {
         @Override
         public void setIsAirplaneMode(NetworkController.IconState icon) {
@@ -91,6 +95,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mNetworkController = Dependency.get(NetworkController.class);
         mStatusBarComponent = SysUiServiceProvider.getComponent(getContext(), StatusBar.class);
         mSettingsObserver = new SettingsObserver(new Handler());
+
     }
 
     class SettingsObserver extends UserContentObserver {
@@ -136,6 +141,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mClockView = mStatusBar.findViewById(R.id.clock);
         mWeatherTextView = mStatusBar.findViewById(R.id.weather_temp);
         mWeatherImageView = mStatusBar.findViewById(R.id.weather_image);
+        mARROWLogo = mStatusBar.findViewById(R.id.status_bar_logo);
         updateSettings(false);
         showSystemIconArea(false);
         showClock(false);
@@ -275,10 +281,16 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
 
     public void hideNotificationIconArea(boolean animate) {
         animateHide(mNotificationIconAreaInner, animate);
+        if (mShowLogo) {
+            animateHide(mARROWLogo, animate);
+        }
     }
 
     public void showNotificationIconArea(boolean animate) {
         animateShow(mNotificationIconAreaInner, animate);
+        if (mShowLogo) {
+            animateShow(mARROWLogo, animate);
+        }
     }
 
     public void hideOperatorName(boolean animate) {
@@ -374,5 +386,17 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mShowWeather = Settings.System.getIntForUser(
                 getContext().getContentResolver(), Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
                 UserHandle.USER_CURRENT);
+        mShowLogo = Settings.System.getIntForUser(
+                getContext().getContentResolver(), Settings.System.STATUS_BAR_LOGO, 0,
+                UserHandle.USER_CURRENT) == 1;
+        if (mNotificationIconAreaInner != null) {
+            if (mShowLogo) {
+                if (mNotificationIconAreaInner.getVisibility() == View.VISIBLE) {
+                    animateShow(mARROWLogo, animate);
+                }
+            } else {
+                animateHide(mARROWLogo, animate);
+            }
+        }
     }
 }
