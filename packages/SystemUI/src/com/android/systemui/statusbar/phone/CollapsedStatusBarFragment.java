@@ -32,6 +32,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.android.systemui.Dependency;
@@ -102,7 +104,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private int mShowWeather;
 
     // Arrow Status Logo
-    private View mARROWLogo;
+    private ImageView mARROWLogo;
     private boolean mShowLogo;
 
     private SignalCallback mSignalCallback = new SignalCallback() {
@@ -144,8 +146,8 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mWeatherImageView = mStatusBar.findViewById(R.id.weather_image);
         mCenterClockLayout = (LinearLayout) mStatusBar.findViewById(R.id.center_clock_layout);
         mRightClock = mStatusBar.findViewById(R.id.right_clock);
-        mARROWLogo = mStatusBar.findViewById(R.id.status_bar_logo);
-
+        mARROWLogo = (ImageView) mStatusBar.findViewById(R.id.status_bar_logo);
+        Dependency.get(DarkIconDispatcher.class).addDarkReceiver(mARROWLogo);
         updateSettings(false);
         showSystemIconArea(false);
         initEmergencyCryptkeeperText();
@@ -174,6 +176,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     public void onDestroyView() {
         super.onDestroyView();
         Dependency.get(StatusBarIconController.class).removeIconGroup(mDarkIconManager);
+        Dependency.get(DarkIconDispatcher.class).removeDarkReceiver(mARROWLogo);
         if (mNetworkController.hasEmergencyCryptKeeperText()) {
             mNetworkController.removeCallback(mSignalCallback);
         }
