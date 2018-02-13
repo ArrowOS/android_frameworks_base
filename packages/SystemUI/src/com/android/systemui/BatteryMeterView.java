@@ -265,7 +265,9 @@ public class BatteryMeterView extends LinearLayout implements
 
     private void updatePercentText() {
         if (mBatteryPercentView != null) {
-            mBatteryPercentView.setText(
+            CharSequence mChargeIndicator =
+                    mCharging && mStyle == BatteryMeterDrawableBase.BATTERY_STYLE_TEXT ? "~" : "";
+            mBatteryPercentView.setText(mChargeIndicator +
                     NumberFormat.getPercentInstance().format(mLevel / 100f));
         }
     }
@@ -411,6 +413,7 @@ public class BatteryMeterView extends LinearLayout implements
             mForceShowPercent = false;
         }
         updateShowPercent();
+        updatePercentText();
         onDensityOrFontScaleChanged();
     }
 
