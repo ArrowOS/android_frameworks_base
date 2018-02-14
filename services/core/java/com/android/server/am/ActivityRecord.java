@@ -203,6 +203,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import android.util.BoostFramework;
 
 /**
  * An entry in the history stack, representing an activity.
@@ -359,6 +360,7 @@ final class ActivityRecord extends ConfigurationContainer implements AppWindowCo
 
     private boolean mShowWhenLocked;
     private boolean mTurnScreenOn;
+    public static BoostFramework mPerfFirstDraw = null;
 
     // Full screen aspect ratio
     private final float mFullScreenAspectRatio = Resources.getSystem().getFloat(
