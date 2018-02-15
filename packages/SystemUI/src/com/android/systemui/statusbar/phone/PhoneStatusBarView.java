@@ -290,8 +290,8 @@ public class PhoneStatusBarView extends PanelBar {
                 R.dimen.display_cutout_margin_consumption);
 
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
-        layoutParams.height = getResources().getDimensionPixelSize(
-                R.dimen.status_bar_height);
+        layoutParams.height = mContext.getResources().getDimensionPixelSize(
+                com.android.internal.R.dimen.status_bar_height);
         setLayoutParams(layoutParams);
     }
 
