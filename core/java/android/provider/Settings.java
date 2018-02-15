@@ -4258,6 +4258,7 @@ public final class Settings {
          *
          * @hide
          */
+
         public static final String POWERMENU_AIRPLANE = "powermenu_airplane";
 
          /**
@@ -4355,6 +4356,13 @@ public final class Settings {
  
        private static final Validator OMNI_QS_PANEL_BG_ALPHA_VALIDATOR =
                 ANY_INTEGER_VALIDATOR;
+
+        /**
+         * Select various accents to go along with system themes
+         *
+         * @hide
+         */
+        public static final String ACCENT_PICKER = "accent_picker";
 
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
