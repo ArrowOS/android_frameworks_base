@@ -417,7 +417,6 @@ public class BatteryMeterView extends LinearLayout implements
         }
         updateShowPercent();
         updatePercentText();
-        onDensityOrFontScaleChanged();
     }
 
     public void updateSettings(boolean fromObserver) {
@@ -428,5 +427,6 @@ public class BatteryMeterView extends LinearLayout implements
         if (fromObserver && mAttached) {
             updateBatteryStyle();
         }
+        scaleBatteryMeterViews();
     }
 }
