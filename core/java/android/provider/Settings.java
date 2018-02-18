@@ -8438,7 +8438,17 @@ public final class Settings {
         };
 
         /**
-         * Whether the Lockdown button should be shown in the power menu.
+         * Display style of the status bar battery information
+         * 0: Display the battery an icon in portrait mode
+         * 1: Display the battery an icon in landscape mode
+         * 2: Display the battery as a circle
+         * 3: Display the battery as a dotted circle
+         * 4: Display the battery as a big circle and show level into the icon
+         * 5: Display the battery as a big dotted circle and show level into the icon
+         * 6: Display the battery as a square
+         * 7: Display the battery as text
+         * 8: Do not display the battery
+         * default: 0
          * @hide
          */
         public static final String LOCKDOWN_IN_POWER_MENU = "lockdown_in_power_menu";
