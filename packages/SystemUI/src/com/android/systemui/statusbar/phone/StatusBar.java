@@ -5888,7 +5888,14 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
+    public void updateQsbhClock() {
+        if (mQuickStatusBarHeader != null) {
+            mQuickStatusBarHeader.updateQsbhClock();
+        }
+    }
+
     private RemoteViews.OnClickHandler mOnClickHandler = new RemoteViews.OnClickHandler() {
+
         @Override
         public boolean onClickHandler(
                 final View view, final PendingIntent pendingIntent, final Intent fillInIntent) {
