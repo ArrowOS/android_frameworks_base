@@ -102,4 +102,14 @@
     <java-symbol type="color" name="generic_theme_primary" />
     <java-symbol type="color" name="generic_theme_primary_dark" />
     <java-symbol type="color" name="generic_theme_accent" />
+
+    <!-- Power menu items -->
+    <java-symbol type="color" name="power_menu_power_off" />
+    <java-symbol type="color" name="power_menu_restart" />
+    <java-symbol type="color" name="power_menu_restart_advanced" />
+    <java-symbol type="color" name="power_menu_hot_reboot" />
+    <java-symbol type="color" name="power_menu_advanced_bootloader" />
+    <java-symbol type="color" name="power_menu_advanced_recovery" />
+    <java-symbol type="color" name="power_menu_advanced_system_restart_ui" />
+    <java-symbol type="color" name="power_menu_screenshot" />
 </resources>
