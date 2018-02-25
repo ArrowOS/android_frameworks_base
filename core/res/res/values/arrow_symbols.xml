@@ -71,4 +71,7 @@
 
     <!-- Whether device has turbo power charging support -->
     <java-symbol type="bool" name="config_hasTurboPowerCharger" />
+
+  <!-- Notification info -->
+  <java-symbol type="color" name="notification_info_button_text" />
 </resources>
