@@ -83,4 +83,7 @@
     <java-symbol type="color" name="power_menu_advanced_recovery" />
     <java-symbol type="color" name="power_menu_advanced_system_restart_ui" />
     <java-symbol type="color" name="power_menu_screenshot" />
+
+    <!-- Notification info -->
+    <java-symbol type="color" name="notification_info_button_text" />
 </resources>
