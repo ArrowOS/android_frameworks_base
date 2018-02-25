@@ -74,4 +74,15 @@
     <color name="generic_theme_primary">#4285f4</color>
     <color name="generic_theme_primary_dark">#346AC3</color>
     <color name="generic_theme_accent">#3B77DB</color>
+
+    <!-- Power menu items -->
+    <color name="power_menu_power_off">#ff202020</color>
+    <color name="power_menu_restart">#ff202020</color>
+    <color name="power_menu_restart_advanced">#ff202020</color>
+    <color name="power_menu_hot_reboot">#ff202020</color>
+    <color name="power_menu_advanced_bootloader">#ff202020</color>
+    <color name="power_menu_advanced_recovery">#ff202020</color>
+    <color name="power_menu_advanced_system_restart_ui">#ff202020</color>
+    <color name="power_menu_screenshot">#ff202020</color>
+    <color name="power_menu_airplane">#ff202020</color>
 </resources>
