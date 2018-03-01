@@ -86,4 +86,7 @@
 
     <!-- Notification info -->
     <java-symbol type="color" name="notification_info_button_text" />
+
+    <!-- Updater snackbar text color -->
+    <java-symbol type="color" name="updater_snackbar_text_color" />
 </resources>
