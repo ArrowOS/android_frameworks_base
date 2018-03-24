@@ -21,6 +21,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.PowerManager;
+import android.os.SystemProperties;
 import android.os.Trace;
 import android.provider.Settings;
 import android.util.Slog;
@@ -71,6 +72,7 @@ public class LightsService extends SystemService {
                             ": brightness=0x" + Integer.toHexString(brightness));
                     return;
                 }
+
                 // Ideally, we'd like to set the brightness mode through the SF/HWC as well, but
                 // right now we just fall back to the old path through Lights brightessMode is
                 // anything but USER or the device shouldBeInLowPersistenceMode().
@@ -86,11 +88,18 @@ public class LightsService extends SystemService {
                     }
                     SurfaceControl.setDisplayBrightness(mDisplayToken,
                             (float) brightness / mSurfaceControlMaximumBrightness);
-                } else {
-                    int color = brightness & 0x000000ff;
-                    color = 0xff000000 | (color << 16) | (color << 8) | color;
-                    setLightLocked(color, LIGHT_FLASH_NONE, 0, 0, brightnessMode);
+		    return;
                 }
+
+		String fp = SystemProperties.get("ro.vendor.build.fingerprint", "hello");
+		if(fp.contains("starlte") || fp.contains("star2lte")) {
+			setLightLocked(brightness*100, LIGHT_FLASH_HARDWARE, 0, 0, brightnessMode);
+			return;
+		}
+
+                int color = brightness & 0x000000ff;
+                color = 0xff000000 | (color << 16) | (color << 8) | color;
+                setLightLocked(color, LIGHT_FLASH_NONE, 0, 0, brightnessMode);
             }
         }
 
