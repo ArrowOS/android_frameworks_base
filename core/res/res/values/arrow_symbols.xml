@@ -154,4 +154,8 @@
     <java-symbol type="id" name="pocket_hint_container" />
     <java-symbol type="id" name="pocket_hint_image" />
     <java-symbol type="id" name="pocket_hint_message" />
+
+    <!-- Tooltip text colors -->
+    <java-symbol type="color" name="tooltip_text_light" />
+    <java-symbol type="color" name="tooltip_text_dark" />
 </resources>

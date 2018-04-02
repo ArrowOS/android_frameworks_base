@@ -103,4 +103,10 @@
     <color name="generic_theme_primary">#4285f4</color>
     <color name="generic_theme_primary_dark">#346AC3</color>
     <color name="generic_theme_accent">#3B77DB</color>
+
+    <!-- tooltip light text color -->
+    <color name="tooltip_text_light">@color/foreground_material_light</color>
+
+    <!-- tooltip dark text color -->
+    <color name="tooltip_text_dark">@color/foreground_material_dark</color>
 </resources>
