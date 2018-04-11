@@ -165,6 +165,7 @@ import android.os.SystemClock;
 import android.os.UserHandle;
 import android.os.storage.StorageManager;
 import android.service.voice.IVoiceInteractionSession;
+import android.util.BoostFramework;
 import android.util.EventLog;
 import android.util.Log;
 import android.util.MergedConfiguration;
@@ -262,6 +263,7 @@ final class ActivityRecord extends ConfigurationContainer implements AppWindowCo
     private int theme;              // resource identifier of activity's theme.
     private int realTheme;          // actual theme resource we will use, never 0.
     private int windowFlags;        // custom window flags for preview window.
+    int perfActivityBoostHandler = -1; //perflock handler when activity is created.
     private TaskRecord task;        // the task this is in.
     private long createTime = System.currentTimeMillis();
     long lastVisibleTime;   // last time this activity became visible
@@ -350,6 +352,8 @@ final class ActivityRecord extends ConfigurationContainer implements AppWindowCo
 
     boolean pendingVoiceInteractionStart;   // Waiting for activity-invoked voice session
     IVoiceInteractionSession voiceSession;  // Voice interaction session for this activity
+
+    private BoostFramework mPerf = null;
 
     // A hint to override the window specified rotation animation, or -1
     // to use the window specified value. We use this so that
@@ -983,6 +987,9 @@ final class ActivityRecord extends ConfigurationContainer implements AppWindowCo
                 lockTaskLaunchMode = LOCK_TASK_LAUNCH_MODE_IF_WHITELISTED;
             }
         }
+
+        if (mPerf == null)
+            mPerf = new BoostFramework();
     }
 
     void setProcess(ProcessRecord proc) {
