@@ -4346,6 +4346,17 @@ public final class Settings {
         public static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
         /**
+         * Whether to change the transparency of the qs panel
+         * @hide
+         */
+        public static final String OMNI_QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
+ 
+        /** @hide */
+ 
+       private static final Validator OMNI_QS_PANEL_BG_ALPHA_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4404,7 +4415,8 @@ public final class Settings {
             NOTIFICATION_VIBRATION_INTENSITY,
             HAPTIC_FEEDBACK_INTENSITY,
             DISPLAY_COLOR_MODE,
-            OMNI_NAVIGATION_BAR_SHOW
+            OMNI_NAVIGATION_BAR_SHOW,
+            OMNI_QS_PANEL_BG_ALPHA,
         };
 
         /**
@@ -4531,6 +4543,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_COLUMNS_PORTRAIT);
             PRIVATE_SETTINGS.add(QS_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
+            PRIVATE_SETTINGS.add(OMNI_QS_PANEL_BG_ALPHA);
         }
 
         /**
@@ -4620,6 +4633,7 @@ public final class Settings {
             VALIDATORS.put(WIFI_STATIC_DNS2, WIFI_STATIC_DNS2_VALIDATOR);
             VALIDATORS.put(SHOW_BATTERY_PERCENT, SHOW_BATTERY_PERCENT_VALIDATOR);
             VALIDATORS.put(OMNI_NAVIGATION_BAR_SHOW, OMNI_NAVIGATION_BAR_SHOW_VALIDATOR);
+            VALIDATORS.put(OMNI_QS_PANEL_BG_ALPHA, OMNI_QS_PANEL_BG_ALPHA_VALIDATOR);
         }
 
         /**
