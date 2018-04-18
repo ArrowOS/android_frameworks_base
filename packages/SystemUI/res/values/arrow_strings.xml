@@ -162,5 +162,8 @@
 
     <!-- Ambient Display Pixel-Like string -->
     <string name="ambientmusic_songinfo">%s by %s</string>
+
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Always On Display</string>
 </resources>
 
