@@ -4467,6 +4467,12 @@ public final class Settings {
         private static final Validator SHOW_BATTERY_PERCENT_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
+         * Whether to skip music track with volume rocker
+         * @hide
+         */
+        public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
+
+        /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
          * it to PRIVATE_SETTINGS below. Also add a validator that can validate
