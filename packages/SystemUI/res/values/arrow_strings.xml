@@ -123,4 +123,5 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <string name="status_bar_vpn">VPN</string>
+    <string name="quick_settings_roaming_title">Roaming indicator</string>
 </resources>
