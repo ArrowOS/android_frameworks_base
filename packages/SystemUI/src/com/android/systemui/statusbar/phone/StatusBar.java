@@ -6144,6 +6144,34 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
         Log.d(TAG, "StatusBar API restartUI! Commiting suicide! Goodbye cruel world!");
         Process.killProcess(Process.myPid());
 
+    private AmbientSettingsObserver mAmbientSettingsObserver = new AmbientSettingsObserver(mHandler);
+    private class AmbientSettingsObserver extends ContentObserver {
+        AmbientSettingsObserver(Handler handler) {
+            super(handler);
+        }
+
+        void observe() {
+            ContentResolver resolver = mContext.getContentResolver();
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                    Settings.Secure.AMBIENT_RECOGNITION),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                    Settings.Secure.AMBIENT_RECOGNITION_KEYGUARD),
+                    false, this, UserHandle.USER_ALL);
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            update();
+        }
+
+        public void update() {
+            initAmbientRecognition();
+            updateAmbientIndicationForKeyguard();
+        }
+    }
+>>>>>>> 132f72312df... Introduce Ambient Indication Interface
+
     protected void toggleKeyboardShortcuts(int deviceId) {
         KeyboardShortcuts.toggle(mContext, deviceId);
     }
