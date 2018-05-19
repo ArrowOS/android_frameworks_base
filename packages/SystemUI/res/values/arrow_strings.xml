@@ -143,10 +143,17 @@
 
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
-     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+     
+    <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
     <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
 
-     <string name="quick_settings_screenshot_label">Screenshot</string>
+    <!-- Adds Screenshot option in QS-->
+    <string name="quick_settings_screenshot_label">Screenshot</string>
+
+    <!-- AmbientPlay: The contents of the displayed recognition. -->
+    <string name="ambient_recognition_notification">Now Playing</string>
+    <string name="ambient_recognition_notification_channel">Recognized Music Notifications</string>
+    <string name="ambient_recognition_information">%1$s by %2$s</string>
 
 </resources>
 
