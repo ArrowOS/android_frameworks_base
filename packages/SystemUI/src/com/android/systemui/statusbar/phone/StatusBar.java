@@ -1403,8 +1403,8 @@ public class StatusBar extends SystemUI implements DemoMode,
         reevaluateStyles();
     }
 
-    @Override
-    public void onOverlayChanged() {
+    public void onThemeChanged() {
+        reinflateViews();
         updateNotificationsOnOverlayChanged();
         mStackScroller.onOverlayChanged();
         mNotificationShelf.onOverlayChanged();
@@ -4870,6 +4870,7 @@ public class StatusBar extends SystemUI implements DemoMode,
                 mUiModeManager.setNightMode(useDarkTheme ?
                         UiModeManager.MODE_NIGHT_YES : UiModeManager.MODE_NIGHT_NO);
             }
+            mHandler.postDelayed(() -> onThemeChanged(), 1000);
 
         }
 
