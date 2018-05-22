@@ -4907,6 +4907,11 @@ public class StatusBar extends SystemUI implements DemoMode,
         int accentSetting = Settings.System.getIntForUser(mContext.getContentResolver(),
                 Settings.System.ACCENT_PICKER, 0, mCurrentUserId);
         ThemeAccentUtils.updateAccents(mOverlayManager, mCurrentUserId, accentSetting);
+        mHandler.postDelayed(() -> {
+            if (mStatusBarView != null) {
+                reinflateViews();
+            }
+        }, 1000);
     }
 
     // Unload all the theme accents
