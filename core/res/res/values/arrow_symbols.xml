@@ -97,4 +97,9 @@
     <java-symbol type="bool" name="config_intrusiveBatteryLed" />
     <java-symbol type="bool" name="config_multiColorBatteryLed" />
     <java-symbol type="bool" name="config_ledCanPulse" />
+
+    <!-- Generic colors -->
+    <java-symbol type="color" name="generic_theme_primary" />
+    <java-symbol type="color" name="generic_theme_primary_dark" />
+    <java-symbol type="color" name="generic_theme_accent" />
 </resources>
