@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
     <!-- Settings icon tint color -->
     <color name="settings_icon_tint_color">#737373</color>
 
@@ -96,4 +97,9 @@
 
     <!-- Fastscroller -->
     <color name="fastscroller_text_color">#FFFFFFFF</color>
+
+    <!-- Generic colors -->
+    <color name="generic_theme_primary">#4285f4</color>
+    <color name="generic_theme_primary_dark">#346AC3</color>
+    <color name="generic_theme_accent">#3B77DB</color>
 </resources>
