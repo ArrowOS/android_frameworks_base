@@ -56,6 +56,13 @@ public class ThemeAccentUtils {
         "com.android.gboard.theme.dark", // 3
     };
 
+    private static final String[] BLACK_THEMES = {
+        "com.android.system.theme.black", // 5
+        "com.android.settings.theme.black", // 6
+        "com.android.systemui.theme.black", // 7
+        "com.android.gboard.theme.black", // 8
+    };
+
     private static final String STOCK_DARK_THEME = "com.android.systemui.theme.dark";
 
     // Switches theme accent from to another or back to stock
@@ -71,8 +78,8 @@ public class ThemeAccentUtils {
             }
         } else if (accentSetting == 20) {
             try {
-                // If using a dark theme we use the white accent, otherwise use the black accent
-                if (isUsingDarkTheme(om, userId)) {
+                // If using a dark or black theme we use the white accent, otherwise use the black accent
+                if ((isUsingDarkTheme(om, userId)) || (isUsingBlackTheme(om, userId))) {
                     om.setEnabled(ACCENTS[21],
                             true, userId);
                 } else {
@@ -111,6 +118,33 @@ public class ThemeAccentUtils {
         return themeInfo != null && themeInfo.isEnabled();
     }
 
+    // Check for the black system theme
+    public static boolean isUsingBlackTheme(IOverlayManager om, int userId) {
+        OverlayInfo themeInfo = null;
+        try {
+            themeInfo = om.getOverlayInfo(BLACK_THEMES[0],
+                    userId);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+        return themeInfo != null && themeInfo.isEnabled();
+    }
+
+    public static void setLightBlackTheme(IOverlayManager om, int userId, boolean useDarkTheme) {
+        for (String theme : BLACK_THEMES) {
+            try {
+                om.setEnabled(theme,
+                        useBlackTheme, userId);
+                unfuckBlackWhiteAccent(om, userId);
+                if (useBlackTheme) {
+                    unloadStockDarkTheme(om, userId);
+                }
+            } catch (RemoteException e) {
+                Log.w(TAG, "Can't change theme", e);
+            }
+        }
+    }
+
     public static void setLightDarkTheme(IOverlayManager om, int userId, boolean useDarkTheme) {
         for (String theme : DARK_THEMES) {
             try {
@@ -130,7 +164,7 @@ public class ThemeAccentUtils {
     public static void unfuckBlackWhiteAccent(IOverlayManager om, int userId) {
         OverlayInfo themeInfo = null;
         try {
-            if (isUsingDarkTheme(om, userId)) {
+            if ((isUsingDarkTheme(om, userId)) || (isUsingBlackTheme(om, userId))) {
                 themeInfo = om.getOverlayInfo(ACCENTS[20],
                         userId);
                 if (themeInfo != null && themeInfo.isEnabled()) {
