@@ -3010,6 +3010,11 @@ public class StatusBar extends SystemUI implements DemoMode,
         return ThemeAccentUtils.isUsingDarkTheme(mOverlayManager, mCurrentUserId);
     }
 
+    // Check for the Black system theme
+    public boolean isUsingBlackTheme() {
+        return ThemeAccentUtils.isUsingBlackTheme(mOverlayManager, mCurrentUserId);
+    }
+
     // Unloads the stock dark theme
     public void unloadStockDarkTheme() {
         ThemeAccentUtils.unloadStockDarkTheme(mOverlayManager, mCurrentUserId);
@@ -3734,6 +3739,7 @@ public class StatusBar extends SystemUI implements DemoMode,
             pw.println("    overlay manager not initialized!");
         } else {
             pw.println("    dark overlay on: " + isUsingDarkTheme());
+            pw.println("    dark overlay on: " + isUsingBlackTheme());
         }
         final boolean lightWpTheme = mContext.getThemeResId() == R.style.Theme_SystemUI_Light;
         pw.println("    light wallpaper theme: " + lightWpTheme);
@@ -4860,6 +4866,7 @@ public class StatusBar extends SystemUI implements DemoMode,
     protected void updateTheme() {
         final boolean inflated = mStackScroller != null;
 
+        boolean useBlackTheme = false;
         boolean useDarkTheme = false;
         if (mCurrentTheme == 0) {
             // The system wallpaper defines if QS should be light or dark.
@@ -4869,12 +4876,27 @@ public class StatusBar extends SystemUI implements DemoMode,
                     && (systemColors.getColorHints() & WallpaperColors.HINT_SUPPORTS_DARK_THEME) != 0;
         } else {
             useDarkTheme = mCurrentTheme == 2;
+            useBlackTheme = mCurrentTheme == 3;
         }
         if (isUsingDarkTheme() != useDarkTheme) {
             // Check for black and white accent so we don't end up
             // with white on white or black on black
             unfuckBlackWhiteAccent();
             ThemeAccentUtils.setLightDarkTheme(mOverlayManager, mCurrentUserId, useDarkTheme);
+
+            if (mUiModeManager != null) {
+                mUiModeManager.setNightMode(useDarkTheme ?
+                        UiModeManager.MODE_NIGHT_YES : UiModeManager.MODE_NIGHT_NO);
+            }
+            mHandler.postDelayed(() -> onThemeChanged(), 1000);
+
+        }
+
+        if (isUsingBlackTheme() != useBlackTheme) {
+            // Check for black and white accent so we don't end up
+            // with white on white or black on black
+            unfuckBlackWhiteAccent();
+            ThemeAccentUtils.setLightDarkTheme(mOverlayManager, mCurrentUserId, useBlackTheme);
 
             if (mUiModeManager != null) {
                 mUiModeManager.setNightMode(useDarkTheme ?
