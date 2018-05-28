@@ -48,7 +48,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     trail-drawing \
     rebound
 
-LOCAL_JAVA_LIBRARIES := telephony-common
+LOCAL_JAVA_LIBRARIES := telephony-common telephony-ext
 LOCAL_JAVA_LIBRARIES += android.car
 LOCAL_JAVA_LIBRARIES += org.dirtyunicorns.utils
 
