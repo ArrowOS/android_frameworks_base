@@ -369,8 +369,8 @@ public class KeyguardStatusView extends GridLayout implements
 
             //digital bold
             case 1:
-                mClockView.setFormat12Hour(Html.fromHtml("<strong>h</strong>mm"));
-                mClockView.setFormat24Hour(Html.fromHtml("<strong>kk</strong>mm"));
+                mClockView.setFormat12Hour(Html.fromHtml("<strong>h</strong>:mm"));
+                mClockView.setFormat24Hour(Html.fromHtml("<strong>kk</strong>:mm"));
                 break;
 
             //sammy
