@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright (c) 2018, The Linux Foundation. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *  * Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *  * Redistributions in binary form must reproduce the above
+ *    copyright notice, this list of conditions and the following
+ *    disclaimer in the documentation and/or other materials provided
+ *    with the distribution.
+ *  * Neither the name of The Linux Foundation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<resources>
+    <!-- When true, display 4G/LTE information also if 5G is available. -->
+    <bool name="config_display_4GStateOn5G">true</bool>
+
+    <integer name="config_5g_num_signal_strength_bins">4</integer>
+
+    <!-- mmWave 5G NR Signal Strength Indicator -->
+    <!-- SS-RSRP. -->
+    <!--          rsrp <  -110 : level=0 -->
+    <!-- -110 <= rsrp  <= -90  : level=1 -->
+    <!--  -90 <  rsrp  <= -80  : level=2 -->
+    <!--  -80 <   rsrp <= -30 : level=3 -->
+    <!--  -30 <   rsrp         : level=0 -->
+    <integer-array name="config_5g_signal_rsrp_thresholds">
+        <item>-110</item>
+        <item>-90</item>
+        <item>-80</item>
+        <item>-30</item>
+    </integer-array>
+
+    <!-- SS-SNR -->
+    <!--      snr < -5  :  level=0 -->
+    <!-- -5<= snr <= 10 :  level=1 -->
+    <!-- 20 < snr <= 10 : level=2 -->
+    <!-- 20 < snr <= 40 : level=3 -->
+    <!-- 40 <  snr      : level=0 -->
+    <integer-array name="config_5g_signal_snr_thresholds">
+        <item>-5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>40</item>
+    </integer-array>
+</resources>

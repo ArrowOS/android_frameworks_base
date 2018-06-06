@@ -52,7 +52,8 @@ public interface NetworkController extends CallbackController<SignalCallback>, D
 
         default void setMobileDataIndicators(IconState statusIcon, IconState qsIcon, int statusType,
                 int qsType, boolean activityIn, boolean activityOut, String typeContentDescription,
-                String description, boolean isWide, int subId, boolean roaming) {}
+                String description, boolean isWide, int subId, boolean roaming,
+                boolean fiveGAvailable, int fiveGStrengthId, boolean dataOnFiveG) {
         default void setSubs(List<SubscriptionInfo> subs) {}
         default void setNoSims(boolean show, boolean simDetected) {}
 
