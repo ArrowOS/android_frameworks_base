@@ -185,6 +185,17 @@ public class HotspotControllerImpl implements HotspotController, WifiManager.Sof
 
     @Override
     public void onNumClientsChanged(int numConnectedDevices) {
+        // Do nothing - we don't care about changing anything here.
+    }
+
+    @Override
+    public void onStaConnected(String Macaddr, int numConnectedDevices) {
+        mNumConnectedDevices = numConnectedDevices;
+        fireHotspotChangedCallback(isHotspotEnabled(), numConnectedDevices);
+    }
+
+    @Override
+    public void onStaDisconnected(String Macaddr, int numConnectedDevices) {
         mNumConnectedDevices = numConnectedDevices;
         fireHotspotChangedCallback(isHotspotEnabled(), numConnectedDevices);
     }
