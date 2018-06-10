@@ -15,7 +15,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <!-- Settings icon tint color -->
     <color name="settings_icon_tint_color">#737373</color>
 
@@ -94,4 +93,7 @@
 
     <!-- Two target preference vertical divider color -->
     <color name="list_divider_dark">#64000000</color>
+
+    <!-- Fastscroller -->
+    <color name="fastscroller_text_color">#FFFFFFFF</color>
 </resources>
