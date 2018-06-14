@@ -3265,6 +3265,32 @@ public class AudioService extends IAudioService.Stub
         setBluetoothScoOnInt(on, eventSource);
     }
 
+    private boolean isBluetoothAudioNotConnectedToEarbud() {
+       //default value as true so that
+       //non-twsplus device case returns true
+       boolean ret = true;
+       if (mBluetoothHeadsetDevice != null
+              && mBluetoothHeadsetDevice.isTwsPlusDevice()) {
+           //If It is TWSplus Device, check for TWS pair device
+           //Sco state
+           String pDevAddr = mBluetoothHeadsetDevice.getTwsPlusPeerAddress();
+           if (pDevAddr != null) {
+               BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+               BluetoothDevice peerDev = adapter.getRemoteDevice(pDevAddr);
+               Log.d(TAG, "peer device audio State: " + mBluetoothHeadset.getAudioState(peerDev));
+               if (mBluetoothHeadset.getAudioState(peerDev)
+                     == BluetoothHeadset.STATE_AUDIO_CONNECTED ||
+                     mBluetoothHeadset.getAudioState(mBluetoothHeadsetDevice)
+                       == BluetoothHeadset.STATE_AUDIO_CONNECTED) {
+                           Log.w(TAG, "TwsPLus Case: one of eb SCO is connected");
+                   ret = false;
+               }
+           }
+       }
+       Log.d(TAG, "isBluetoothAudioConnectedToEarbud returns: " + ret);
+       return ret;
+    }
+
     public void setBluetoothScoOnInt(boolean on, String eventSource) {
         Log.i(TAG, "setBluetoothScoOnInt: " + on + " " + eventSource);
         if (on) {
@@ -3273,10 +3299,12 @@ public class AudioService extends IAudioService.Stub
                 if ((mBluetoothHeadset != null)
                         && (mBluetoothHeadset.getAudioState(mBluetoothHeadsetDevice)
                             != BluetoothHeadset.STATE_AUDIO_CONNECTED)) {
-                    mForcedUseForCommExt = AudioSystem.FORCE_BT_SCO;
-                    Log.w(TAG, "setBluetoothScoOnInt(true) failed because "
-                            + mBluetoothHeadsetDevice + " is not in audio connected mode");
-                    return;
+                    if (isBluetoothAudioNotConnectedToEarbud()) {
+                        mForcedUseForCommExt = AudioSystem.FORCE_BT_SCO;
+                        Log.w(TAG, "setBluetoothScoOnInt(true) failed because "
+                                + mBluetoothHeadsetDevice + " is not in audio connected mode");
+                        return;
+                    }
                 }
             }
             mForcedUseForComm = AudioSystem.FORCE_BT_SCO;
@@ -3702,6 +3730,7 @@ public class AudioService extends IAudioService.Stub
             mScoAudioState = SCO_STATE_INACTIVE;
             broadcastScoConnectionState(AudioManager.SCO_AUDIO_STATE_DISCONNECTED);
         }
+        mScoClientDevices.clear();
         AudioSystem.setParameters("A2dpSuspended=false");
         setBluetoothScoOnInt(false, "resetBluetoothSco");
     }
@@ -3766,6 +3795,14 @@ public class AudioService extends IAudioService.Stub
         synchronized (mScoClients) {
             Log.i(TAG, "setBtScoActiveDevice: " + mBluetoothHeadsetDevice + " -> " + btDevice);
             final BluetoothDevice previousActiveDevice = mBluetoothHeadsetDevice;
+            if (mBluetoothHeadsetDevice != null && mBluetoothHeadsetDevice.isTwsPlusDevice()
+               && btDevice != null
+               && Objects.equals(mBluetoothHeadsetDevice.getTwsPlusPeerAddress(), btDevice.getAddress())) {
+                Log.i(TAG, "setBtScoActiveDevice: Active device switch between twsplus devices");
+                //Keep the same mBluetoothHeadsetDevice as current Active so
+                //that It tears down when active becomes null
+                return;
+            }
             if (!Objects.equals(btDevice, previousActiveDevice)) {
                 if (!handleBtScoActiveDeviceChange(previousActiveDevice, false)) {
                     Log.w(TAG, "setBtScoActiveDevice() failed to remove previous device "
@@ -6417,6 +6454,75 @@ public class AudioService extends IAudioService.Stub
             }
         }
     }
+    //SCO device tracking for TWSPLUS device
+    private HashMap<BluetoothDevice, Integer> mScoClientDevices =
+                                          new HashMap<BluetoothDevice, Integer>();
+
+    private void updateTwsPlusScoState(BluetoothDevice device, Integer state) {
+        if (mScoClientDevices.containsKey(device)) {
+            Integer prevState = mScoClientDevices.get(device);
+            Log.i(TAG, "updateTwsPlusScoState: prevState: " + prevState + "state: " + state);
+            if (state != prevState) {
+                mScoClientDevices.remove(device);
+                mScoClientDevices.put(device, state);
+            }
+        } else {
+            mScoClientDevices.put(device, state);
+        }
+    }
+
+    private boolean isAudioPathUp() {
+        boolean ret = false;
+        Iterator it = mScoClientDevices.entrySet().iterator();
+        for (Integer value :  mScoClientDevices.values()) {
+            if (value == BluetoothHeadset.STATE_AUDIO_CONNECTED) {
+                ret = true;
+                break;
+            }
+        }
+        Log.d(TAG, "isAudioPathUp returns" + ret);
+        return ret;
+    }
+
+    private boolean checkAndUpdatTwsPlusScoState(Intent intent, Integer state) {
+        //default ret value is true
+        //so that legacy devices fallsthru
+        boolean ret = true;
+        BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+        Log.i(TAG, "device:" + device);
+
+        if (device == null) {
+           Log.e(TAG, "checkAndUpdatTwsPlusScoState: device is null");
+           //intent cant have device has null
+           //in case it is treat them as non-twsplus case and return true
+           return ret;
+        }
+
+        if (device.isTwsPlusDevice()) {
+            if (state == BluetoothHeadset.STATE_AUDIO_CONNECTED) {
+                //if adding new Device
+                //check if there is no device already connected
+                if (isAudioPathUp()) {
+                    Log.i(TAG, "No need to bringup audio-path");
+                    ret = false;
+                }
+                //Update the States now
+                updateTwsPlusScoState(device, state);
+            } else {
+                //For disconnect cases, update the state first
+                updateTwsPlusScoState(device, state);
+                //if deleting new Device
+                //check if all devices are disconnected
+                if (isAudioPathUp()) {
+                    Log.i(TAG, "not good to tear down audio-path");
+                    ret = false;
+                }
+            }
+        }
+        Log.i(TAG, "checkAndUpdatTwsPlusScoState returns " + ret);
+        return ret;
+    }
+
 
     /* cache of the address of the last dock the device was connected to */
     private String mDockAddress;
@@ -6481,29 +6587,37 @@ public class AudioService extends IAudioService.Stub
                     }
                     switch (btState) {
                         case BluetoothHeadset.STATE_AUDIO_CONNECTED:
-                            scoAudioState = AudioManager.SCO_AUDIO_STATE_CONNECTED;
-                            if (mScoAudioState != SCO_STATE_ACTIVE_INTERNAL &&
-                                mScoAudioState != SCO_STATE_DEACTIVATE_REQ) {
-                                mScoAudioState = SCO_STATE_ACTIVE_EXTERNAL;
+                            if (checkAndUpdatTwsPlusScoState(intent,
+                                    BluetoothHeadset.STATE_AUDIO_CONNECTED)) {
+                                scoAudioState = AudioManager.SCO_AUDIO_STATE_CONNECTED;
+                                if (mScoAudioState != SCO_STATE_ACTIVE_INTERNAL &&
+                                    mScoAudioState != SCO_STATE_DEACTIVATE_REQ) {
+                                    mScoAudioState = SCO_STATE_ACTIVE_EXTERNAL;
+                                }
+                                setBluetoothScoOn(true);
+                                Log.i(TAG, "Audio-path brought-up");
                             }
-                            setBluetoothScoOn(true);
                             break;
                         case BluetoothHeadset.STATE_AUDIO_DISCONNECTED:
-                            setBluetoothScoOn(false);
-                            scoAudioState = AudioManager.SCO_AUDIO_STATE_DISCONNECTED;
-                            // startBluetoothSco called after stopBluetoothSco
-                            if (mScoAudioState == SCO_STATE_ACTIVATE_REQ) {
-                                if (mBluetoothHeadset != null && mBluetoothHeadsetDevice != null
-                                        && connectBluetoothScoAudioHelper(mBluetoothHeadset,
-                                        mBluetoothHeadsetDevice, mScoAudioMode)) {
-                                    mScoAudioState = SCO_STATE_ACTIVE_INTERNAL;
-                                    broadcast = false;
-                                    break;
+                            if (checkAndUpdatTwsPlusScoState(intent,
+                                   BluetoothHeadset.STATE_AUDIO_DISCONNECTED)) {
+                                setBluetoothScoOn(false);
+                                scoAudioState = AudioManager.SCO_AUDIO_STATE_DISCONNECTED;
+                                // startBluetoothSco called after stopBluetoothSco
+                                if (mScoAudioState == SCO_STATE_ACTIVATE_REQ) {
+                                    if (mBluetoothHeadset != null && mBluetoothHeadsetDevice != null
+                                            && connectBluetoothScoAudioHelper(mBluetoothHeadset,
+                                            mBluetoothHeadsetDevice, mScoAudioMode)) {
+                                        mScoAudioState = SCO_STATE_ACTIVE_INTERNAL;
+                                        broadcast = false;
+                                        break;
+                                    }
                                 }
+                                // Tear down SCO if disconnected from external
+                                clearAllScoClients(0, mScoAudioState == SCO_STATE_ACTIVE_INTERNAL);
+                                mScoAudioState = SCO_STATE_INACTIVE;
+                                Log.i(TAG, "Audio-path brought-down");
                             }
-                            // Tear down SCO if disconnected from external
-                            clearAllScoClients(0, mScoAudioState == SCO_STATE_ACTIVE_INTERNAL);
-                            mScoAudioState = SCO_STATE_INACTIVE;
                             break;
                         case BluetoothHeadset.STATE_AUDIO_CONNECTING:
                             if (mScoAudioState != SCO_STATE_ACTIVE_INTERNAL &&
