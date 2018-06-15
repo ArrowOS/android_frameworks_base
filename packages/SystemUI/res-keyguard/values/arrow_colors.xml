@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Sammy accented clock -->
+    <color name="sammy_accent">@*android:color/accent_device_default_light</color>
+
+</resources>
