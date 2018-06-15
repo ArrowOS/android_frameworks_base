@@ -58,6 +58,7 @@ import com.android.systemui.util.wakelock.KeepAwakeAnimationListener;
 
 import com.google.android.collect.Sets;
 
+import java.lang.Math;
 import java.util.Locale;
 
 public class KeyguardStatusView extends GridLayout implements
@@ -370,6 +371,18 @@ public class KeyguardStatusView extends GridLayout implements
                 mClockView.setFormat24Hour(Html.fromHtml("<strong>kk<br>mm</strong>"));
                 break;
 
+            //sammy accent (hour)
+            case 4:
+                mClockView.setFormat12Hour(Html.fromHtml("<strong><font color=" + getResources().getColor(R.color.sammy_accent) + ">hh</font><br>mm</strong>"));
+                mClockView.setFormat24Hour(Html.fromHtml("<strong><font color=" + getResources().getColor(R.color.sammy_accent) + ">kk</font><br>mm</strong>"));
+                break;
+
+            //sammy accent alt (min)
+            case 5:
+                mClockView.setFormat12Hour(Html.fromHtml("<strong>hh<br><font color=" + getResources().getColor(R.color.sammy_accent) + ">mm</font></strong>"));
+                mClockView.setFormat24Hour(Html.fromHtml("<strong>kk<br><font color=" + getResources().getColor(R.color.sammy_accent) + ">mm</font></strong>"));
+                break;
+
             default:
                 mClockView.setFormat12Hour("hh\nmm");
                 mClockView.setFormat24Hour("kk\nmm");
@@ -628,6 +641,28 @@ public class KeyguardStatusView extends GridLayout implements
                 params.addRule(RelativeLayout.BELOW, R.id.clock_view);
                 mClockView.setSingleLine(false);
                 mClockView.setGravity(Gravity.CENTER);
+                break;
+            case 4: // sammy accent
+                mClockView.setVisibility(mDarkAmount != 1 ? (showClock ? View.VISIBLE :
+                       View.GONE) : View.VISIBLE);
+
+                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+
+                mClockView.setSingleLine(false);
+                mClockView.setGravity(Gravity.CENTER);
+
+                mTextClock.setVisibility(View.GONE);
+                break;
+            case 5: // sammy accent
+                mClockView.setVisibility(mDarkAmount != 1 ? (showClock ? View.VISIBLE :
+                       View.GONE) : View.VISIBLE);
+
+                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+
+                mClockView.setSingleLine(false);
+                mClockView.setGravity(Gravity.CENTER);
+
+                mTextClock.setVisibility(View.GONE);
                 break;
         }
     }
