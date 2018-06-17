@@ -111,6 +111,8 @@
          all of the currently visible notifications. [CHAR LIMIT=10]-->
     <string name="clear_recents">Close all recent</string>
     <string name="recents_app_killed">App killed</string>
+    <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
+    <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
 
     <!-- Navigation bar Tile -->
     <string name="quick_settings_navigation_bar">Navigation bar</string>
