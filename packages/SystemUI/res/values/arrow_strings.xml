@@ -137,4 +137,11 @@
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
     <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 
+    <!--Immersive mode tile -->
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+
 </resources>
