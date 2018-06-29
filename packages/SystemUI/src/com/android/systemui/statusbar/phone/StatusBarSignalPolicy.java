@@ -205,6 +205,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
         state.roaming = roaming;
         state.activityIn = activityIn && mActivityEnabled;
         state.activityOut = activityOut && mActivityEnabled;
+        state.volteId = stackedVoiceId;
 
         state.fiveGIconVisible = fiveGAvailable &&(dataOnFiveG || m4GStateEnabledOn5G);
         state.fiveGStrengthId = fiveGStrengthId;
@@ -403,10 +404,12 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
         public boolean roaming;
         public boolean needsLeadingPadding;
         public String typeContentDescription;
+        public int volteId;
         public boolean fiveGIconVisible;
         public int fiveGStrengthId;
         public boolean dataOnFiveG;
         public boolean is4GStateVisible;
+
         private MobileIconState(int subId) {
             super();
             this.subId = subId;
@@ -427,6 +430,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
                     roaming == that.roaming &&
                     needsLeadingPadding == that.needsLeadingPadding &&
                     Objects.equals(typeContentDescription, that.typeContentDescription) &&
+                    volteId == that.volteId &&
                     fiveGIconVisible == that.fiveGIconVisible &&
                     fiveGStrengthId == that.fiveGStrengthId &&
                     dataOnFiveG == that.dataOnFiveG &&
@@ -455,6 +459,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
             other.roaming = roaming;
             other.needsLeadingPadding = needsLeadingPadding;
             other.typeContentDescription = typeContentDescription;
+            other.volteId = volteId;
             other.fiveGIconVisible = fiveGIconVisible;
             other.fiveGStrengthId = fiveGStrengthId;
             other.dataOnFiveG = dataOnFiveG;
@@ -474,7 +479,8 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
 
         @Override public String toString() {
             return "MobileIconState(subId=" + subId + ", strengthId=" + strengthId + ", roaming="
-                    + roaming + ", typeId=" + typeId + ", visible=" + visible + "), "
+                    + roaming + ", typeId=" + typeId + ", volteId=" + volteId
+                    + ", visible=" + visible + "), "
                     + "5GState(fiveGIconVisible=" + fiveGIconVisible + ", fiveGStrengthId="
                     + fiveGStrengthId + ", dataOnFiveG=" + dataOnFiveG
                     + ", is4GStateVisible=" + is4GStateVisible + ")";
