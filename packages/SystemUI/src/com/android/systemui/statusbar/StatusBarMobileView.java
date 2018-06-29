@@ -59,14 +59,7 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
     private ImageView mMobile, mMobileType, mMobileRoaming;
     private View mMobileRoamingSpace;
     private int mVisibleState = -1;
-
-    private LinearLayout mFiveGGroup;
-    private SignalDrawable mFiveGMobileDrawable;
-    private View mFiveGInoutContainer;
-    private ImageView mFiveGIn;
-    private ImageView mFiveGOut;
-    private ImageView mFiveGMobile, mFiveGMobileType, mFiveGMobileRoaming;
-    private View mFiveGMobileRoamingSpace;
+    private ImageView mVolte;
 
     public static StatusBarMobileView fromContext(Context context, String slot) {
         LayoutInflater inflater = LayoutInflater.from(context);
@@ -116,21 +109,10 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         mIn = findViewById(R.id.mobile_in);
         mOut = findViewById(R.id.mobile_out);
         mInoutContainer = findViewById(R.id.inout_container);
+        mVolte = findViewById(R.id.mobile_volte);
 
         mMobileDrawable = new SignalDrawable(getContext());
         mMobile.setImageDrawable(mMobileDrawable);
-
-        mFiveGGroup = findViewById(R.id.five_g_group);
-        mFiveGMobile = findViewById(R.id.five_g_mobile_signal);
-        mFiveGMobileType = findViewById(R.id.five_g_mobile_type);
-        mFiveGMobileRoaming = findViewById(R.id.five_g_mobile_roaming);
-        mFiveGMobileRoamingSpace = findViewById(R.id.five_g_mobile_roaming_space);
-        mFiveGIn = findViewById(R.id.five_g_mobile_in);
-        mFiveGOut = findViewById(R.id.five_g_mobile_out);
-        mFiveGInoutContainer = findViewById(R.id.five_g_inout_container);
-
-        mFiveGMobileDrawable = new SignalDrawable(getContext());
-        mFiveGMobile.setImageDrawable(mFiveGMobileDrawable);
 
         initDotView();
     }
@@ -185,8 +167,12 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         mOut.setVisibility(mState.activityIn ? View.VISIBLE : View.GONE);
         mInoutContainer.setVisibility((mState.activityIn || mState.activityOut)
                 ? View.VISIBLE : View.GONE);
-        mFiveGGroup.setVisibility(View.GONE);
-    }
+        if (mState.volteId > 0 ) {
+            mVolte.setImageResource(mState.volteId);
+            mVolte.setVisibility(View.VISIBLE);
+        }else {
+            mVolte.setVisibility(View.GONE);
+        }
 
     private void updateState(MobileIconState state) {
         setContentDescription(state.contentDescription);
@@ -213,36 +199,15 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         mInoutContainer.setVisibility((state.activityIn || state.activityOut)
                 ? View.VISIBLE : View.GONE);
 
-        updateFiveGState(state);
+        if (mState.volteId != state.volteId) {
+            if (state.volteId != 0) {
+                mVolte.setImageResource(state.volteId);
+                mVolte.setVisibility(View.VISIBLE);
+            } else {
+                mVolte.setVisibility(View.GONE);
+            }
 
         mState = state;
-    }
-
-    private void updateFiveGState(MobileIconState state) {
-        if ( state.fiveGIconVisible ) {
-            mFiveGMobileType.setVisibility(View.VISIBLE);
-            mFiveGGroup.setVisibility(View.VISIBLE);
-        }else {
-            mFiveGGroup.setVisibility(View.GONE);
-        }
-
-        if ( state.dataOnFiveG ) {
-            if (mState.fiveGStrengthId != state.fiveGStrengthId) {
-                mFiveGMobileDrawable.setLevel(state.fiveGStrengthId);
-            }
-            mFiveGIn.setVisibility(state.activityIn ? View.VISIBLE : View.GONE);
-            mFiveGOut.setVisibility(state.activityOut ? View.VISIBLE : View.GONE );
-            mFiveGInoutContainer.setVisibility((state.activityIn || state.activityOut)
-                    ? View.VISIBLE : View.GONE );
-            mFiveGMobile.setVisibility(View.VISIBLE);
-            mInoutContainer.setVisibility(View.GONE);
-            mFiveGMobileRoaming.setVisibility(state.roaming ? View.VISIBLE : View.GONE);
-            mFiveGMobileRoamingSpace.setVisibility(state.roaming ? View.VISIBLE : View.GONE);
-        }else {
-            mFiveGInoutContainer.setVisibility(View.GONE);
-            mFiveGMobile.setVisibility(View.GONE);
-        }
-        mMobileGroup.setVisibility(state.is4GStateVisible ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -259,11 +224,6 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         mDotView.setDecorColor(tint);
         mDotView.setIconColor(tint, false);
 
-        mFiveGMobileDrawable.setDarkIntensity(darkIntensity);
-        mFiveGIn.setImageTintList(color);
-        mFiveGOut.setImageTintList(color);
-        mFiveGMobileType.setImageTintList(color);
-        mFiveGMobileRoaming.setImageTintList(color);
     }
 
     @Override
@@ -286,12 +246,6 @@ public class StatusBarMobileView extends FrameLayout implements DarkReceiver,
         mMobileType.setImageTintList(list);
         mMobileRoaming.setImageTintList(list);
         mDotView.setDecorColor(color);
-
-        mFiveGMobileDrawable.setDarkIntensity(intensity);
-        mFiveGIn.setImageTintList(list);
-        mFiveGOut.setImageTintList(list);
-        mFiveGMobileType.setImageTintList(list);
-        mFiveGMobileRoaming.setImageTintList(list);
     }
 
     @Override

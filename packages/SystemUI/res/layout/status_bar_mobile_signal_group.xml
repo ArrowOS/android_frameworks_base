@@ -34,7 +34,12 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
-
+            <ImageView
+                android:id="@+id/mobile_volte"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:paddingEnd="2dp"/>
             <FrameLayout
                 android:id="@+id/inout_container"
                 android:layout_height="17dp"
@@ -82,68 +87,6 @@
                 />
                 <ImageView
                     android:id="@+id/mobile_roaming"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/stat_sys_roaming"
-                    android:contentDescription="@string/data_connection_roaming"
-                    android:visibility="gone" />
-            </FrameLayout>
-        </com.android.keyguard.AlphaOptimizedLinearLayout>
-        <com.android.keyguard.AlphaOptimizedLinearLayout
-            android:id="@+id/five_g_group"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal" >
-
-            <FrameLayout
-                android:id="@+id/five_g_inout_container"
-                android:layout_height="17dp"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center_vertical">
-                <ImageView
-                    android:id="@+id/five_g_mobile_in"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:src="@drawable/ic_activity_down"
-                    android:visibility="gone"
-                    android:paddingEnd="2dp"
-                    />
-                <ImageView
-                    android:id="@+id/five_g_mobile_out"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:src="@drawable/ic_activity_up"
-                    android:paddingEnd="2dp"
-                    android:visibility="gone"
-                    />
-            </FrameLayout>
-            <ImageView
-                android:id="@+id/five_g_mobile_type"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:paddingEnd="1dp"
-                android:visibility="gone"
-                android:src="@drawable/ic_5g_mobiledata"/>
-            <Space
-                android:id="@+id/five_g_mobile_roaming_space"
-                android:layout_height="match_parent"
-                android:layout_width="@dimen/roaming_icon_start_padding"
-                android:visibility="gone"
-                />
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical">
-                <com.android.systemui.statusbar.AnimatedImageView
-                    android:id="@+id/five_g_mobile_signal"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    systemui:hasOverlappingRendering="false"
-                    />
-                <ImageView
-                    android:id="@+id/five_g_mobile_roaming"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/stat_sys_roaming"

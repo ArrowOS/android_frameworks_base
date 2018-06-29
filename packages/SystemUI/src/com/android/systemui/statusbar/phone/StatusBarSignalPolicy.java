@@ -67,7 +67,6 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
     private boolean mBlockEthernet;
     private boolean mActivityEnabled;
     private boolean mForceBlockWifi;
-    private boolean m4GStateEnabledOn5G;
     // Track as little state as possible, and only for padding purposes
     private boolean mIsAirplaneMode = false;
     private boolean mWifiVisible = false;
@@ -187,8 +186,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
     @Override
     public void setMobileDataIndicators(IconState statusIcon, IconState qsIcon, int statusType,
             int qsType, boolean activityIn, boolean activityOut, String typeContentDescription,
-            String description, boolean isWide, int subId, boolean roaming,
-            boolean fiveGAvailable, int fiveGStrengthId, boolean dataOnFiveG) {
+            String description, boolean isWide, int subId, boolean roaming) {
         MobileIconState state = getState(subId);
         if (state == null) {
             return;
@@ -205,11 +203,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
         state.roaming = roaming;
         state.activityIn = activityIn && mActivityEnabled;
         state.activityOut = activityOut && mActivityEnabled;
-
-        state.fiveGIconVisible = fiveGAvailable &&(dataOnFiveG || m4GStateEnabledOn5G);
-        state.fiveGStrengthId = fiveGStrengthId;
-        state.dataOnFiveG = dataOnFiveG;
-        state.is4GStateVisible = m4GStateEnabledOn5G || !(fiveGAvailable&&dataOnFiveG);
+        state.volteId = stackedVoiceId;
 
         // Always send a copy to maintain value type semantics
         mIconController.setMobileIcons(mSlotMobile, MobileIconState.copyStates(mMobileStates));
@@ -403,10 +397,8 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
         public boolean roaming;
         public boolean needsLeadingPadding;
         public String typeContentDescription;
-        public boolean fiveGIconVisible;
-        public int fiveGStrengthId;
-        public boolean dataOnFiveG;
-        public boolean is4GStateVisible;
+        public int volteId;
+
         private MobileIconState(int subId) {
             super();
             this.subId = subId;
@@ -427,10 +419,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
                     roaming == that.roaming &&
                     needsLeadingPadding == that.needsLeadingPadding &&
                     Objects.equals(typeContentDescription, that.typeContentDescription) &&
-                    fiveGIconVisible == that.fiveGIconVisible &&
-                    fiveGStrengthId == that.fiveGStrengthId &&
-                    dataOnFiveG == that.dataOnFiveG &&
-                    is4GStateVisible == that.is4GStateVisible;
+                    volteId == that.volteId;
         }
 
         @Override
@@ -455,10 +444,7 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
             other.roaming = roaming;
             other.needsLeadingPadding = needsLeadingPadding;
             other.typeContentDescription = typeContentDescription;
-            other.fiveGIconVisible = fiveGIconVisible;
-            other.fiveGStrengthId = fiveGStrengthId;
-            other.dataOnFiveG = dataOnFiveG;
-            other.is4GStateVisible = is4GStateVisible;
+            other.volteId = volteId;
         }
 
         private static List<MobileIconState> copyStates(List<MobileIconState> inStates) {
@@ -474,10 +460,8 @@ public class StatusBarSignalPolicy implements NetworkControllerImpl.SignalCallba
 
         @Override public String toString() {
             return "MobileIconState(subId=" + subId + ", strengthId=" + strengthId + ", roaming="
-                    + roaming + ", typeId=" + typeId + ", visible=" + visible + "), "
-                    + "5GState(fiveGIconVisible=" + fiveGIconVisible + ", fiveGStrengthId="
-                    + fiveGStrengthId + ", dataOnFiveG=" + dataOnFiveG
-                    + ", is4GStateVisible=" + is4GStateVisible + ")";
+                    + roaming + ", typeId=" + typeId + ", volteId=" + volteId
+                    + ", visible=" + visible + ");
         }
     }
 }
