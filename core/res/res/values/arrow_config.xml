@@ -37,5 +37,5 @@
     <string name="config_alternativeDeviceKeyHandlerClass" translatable="false"></string>
 
     <!-- Component name of the combo network location provider. -->
-    <string name="config_comboNetworkLocationProvider" translatable="false">com.qualcomm.location</string>
+    <string name="config_comboNetworkLocationProvider" translatable="false">@null</string>
 </resources>
