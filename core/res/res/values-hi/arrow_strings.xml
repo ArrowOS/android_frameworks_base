@@ -18,10 +18,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Power menu -->
-  <string name="reboot_title">Перезагрузить</string>
-  <string name="reboot_message">Система перезагружается</string>
+  <string name="reboot_title">रीबूट</string>
+  <string name="reboot_message">एंड्राइड वापिस चालू हो रहा है</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">управлять редактором панели навигации</string>
+  <string name="permlab_toggleNavigationEditor">नेविगेशन एडिटर का नियंत्रण</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Позволяет приложению управлять редактотором панели навигации.</string>
+  <string name="permdesc_toggleNavigationEditor">एप्लीकेशन को नेविगेशन बार में बदलाव करने की अनुमति</string>
 </resources>

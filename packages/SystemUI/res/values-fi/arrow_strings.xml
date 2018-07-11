@@ -28,37 +28,37 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
-  <string name="global_action_restart_recovery">Recovery</string>
-  <string name="global_action_restart_bootloader">Bootloader</string>
+  <string name="global_action_restart_system">Uudelleenkäynnistys</string>
+  <string name="global_action_restart_advanced">Edistynyt uudelleenkäynnistys</string>
+  <string name="global_action_restart_recovery">Palautustila</string>
+  <string name="global_action_restart_bootloader">Käynnistyslatain/Bootloader</string>
   <string name="global_action_restart_ui">SystemUI</string>
-  <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_restart_hot">Nopea-uudelleenkäynnistys</string>
+  <string name="global_action_screenshot">Ruudunkaappaus</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Virhe</string>
+  <string name="omnijaws_service_unkown">Säätietoja ei saatavilla</string>
+  <string name="omnijaws_service_error_long">Virhe ladattaessa säätietoja</string>
+  <string name="omnijaws_service_disabled">Palvelu poissa käytöstä</string>
+  <string name="omnijaws_detail_header">Sää</string>
+  <string name="omnijaws_label_default">Sää</string>
+  <string name="omnijaws_current_text">Nyt</string>
+  <string name="omnijaws_package_not_available">Omnijaws ei ole saatavilla</string>
+  <string name="omnijaws_service_last_update">Viimeisin päivitys:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Tilapalkin kuvake</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="status_bar_volte">VoLTE</string>
+  <string name="systemui_tuner_navbar_title">Oletusasetukset</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">ohita virtanäppäin</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">Sallii sovelluksen ohittaa virtapainikkeen käytön.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">hallitse navigointipalkin editointia</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Antaa sovelluksen hallita navigointipalkin muokkausta.</string>
 </resources>
