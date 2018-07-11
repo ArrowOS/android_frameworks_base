@@ -28,37 +28,37 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
+  <string name="global_action_restart_system">Herstarten</string>
+  <string name="global_action_restart_advanced">Geavanceerd herstarten</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
-  <string name="global_action_restart_ui">SystemUI</string>
-  <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_restart_ui">SysteemUI</string>
+  <string name="global_action_restart_hot">Snel</string>
+  <string name="global_action_screenshot">Schermafbeelding</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Fout</string>
+  <string name="omnijaws_service_unkown">Geen weergegevens</string>
+  <string name="omnijaws_service_error_long">Fout bij het laden van weergegevens</string>
+  <string name="omnijaws_service_disabled">Service is uitgeschakeld</string>
+  <string name="omnijaws_detail_header">Weer</string>
+  <string name="omnijaws_label_default">Weer</string>
+  <string name="omnijaws_current_text">Nu</string>
+  <string name="omnijaws_package_not_available">OmniJaws niet beschikbaar</string>
+  <string name="omnijaws_service_last_update">Laatste update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Statusbalk icoon</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="status_bar_volte">VoLTE</string>
+  <string name="systemui_tuner_navbar_title">Standaard instellingen</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">negeer de aan / uit-knop</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">Hiermee kan een app het gedrag van de aan/uit-knop overschrijven.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">navigatie-editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Staat toe dat een applicatie de navigatiebalk-editor beheert.</string>
 </resources>
