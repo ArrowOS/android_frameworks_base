@@ -51,14 +51,17 @@
   <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
   <!-- volte icon switch -->
   <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="systemui_tuner_navbar_title">Cài đặt gốc</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">thay thế phím nguồn</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">Cho phép ứng dụng thay thế phím nguồn.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">trình tùy biến thanh điều hướng</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Cho phép ứng dụng kiểm soát chỉnh sửa thanh điều hướng.</string>
+  <!-- logo -->
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
 </resources>
