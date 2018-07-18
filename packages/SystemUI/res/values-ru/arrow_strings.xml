@@ -43,32 +43,32 @@ Omni Погода</string>
   <string name="omnijaws_service_disabled">Служба отключена</string>
   <string name="omnijaws_detail_header">Погода</string>
   <string name="omnijaws_label_default">Погода</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_current_text">Сейчас</string>
+  <string name="omnijaws_package_not_available">OmniJaws недоступен</string>
+  <string name="omnijaws_service_last_update">Последнее обновление:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Значок в панели уведомления</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="status_bar_volte">VoLTE</string>
+  <string name="systemui_tuner_navbar_title">Настройки по умолчанию</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">переопределение клавиши питания</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">Позволять приложению переопределять кнопку питания.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">управлять редактором панели навигации</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Позволяет приложению управлять редактотором панели навигации.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow swag</string>
-  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
+  <string name="arrow_logo_title">Логотип Arrow</string>
+  <string name="arrow_logo_summary">Это Arrow! (перезапустите интерфейс системы для применения)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Быстрая зарядка (<xliff:g id="charging_time_left" example="4 часа и 2 минуты">%s</xliff:g> до полной зарядки)</string>
+  <string name="keyguard_plugged_in_dash_charging">Быстрая зарядка</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">Быстрая зарядка подключена (<xliff:g id="charging_time_left">%s</xliff:g> до полной зарядки)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">Быстрая зарядка подключена</string>
 </resources>
