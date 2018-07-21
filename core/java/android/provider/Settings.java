@@ -4666,6 +4666,11 @@ public final class Settings {
         public static final String DIALER_OPENCNAM_AUTH_TOKEN = "dialer_opencnam_auth_token";
 
         /**
+         * @hide
+         */
+        public static final String USE_BOTTOM_GESTURE_NAVIGATION = "use_bottom_gesture_navigation";
+
+        /**
          * These are all public system settings
          *
          * @hide
@@ -4814,6 +4819,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(REVERSE_LOOKUP_PROVIDER);
             PRIVATE_SETTINGS.add(DIALER_OPENCNAM_ACCOUNT_SID);
             PRIVATE_SETTINGS.add(DIALER_OPENCNAM_AUTH_TOKEN);
+            PRIVATE_SETTINGS.add(USE_BOTTOM_GESTURE_NAVIGATION);
         }
 
         /**

@@ -4555,6 +4555,11 @@ public class WindowManagerService extends IWindowManager.Stub
 
     private void handleTapOutsideTask(DisplayContent displayContent, int x, int y) {
         int taskId = -1;
+
+        if (mPolicy.isGestureButtonEnabled() && mPolicy.isGestureButtonRegion(x, y)) {
+            return;
+        }
+
         synchronized (mWindowMap) {
             final Task task = displayContent.findTaskForResizePoint(x, y);
             if (task != null) {
@@ -7722,5 +7727,9 @@ public class WindowManagerService extends IWindowManager.Stub
         mRoot.forAllWindows((w) -> {
             w.setForceHideNonSystemOverlayWindowIfNeeded(hideSystemAlertWindows);
         }, false /* traverseTopToBottom */);
+    }
+
+    public boolean isGestureButtonEnabled() {
+        return this.mPolicy.isGestureButtonEnabled();
     }
 }
