@@ -4120,7 +4120,19 @@ public final class Settings {
         public static final String POWERMENU_REBOOT = "powermenu_reboot";
 
         /**
-         * Whether to display the power menu advanced reboot option on a secured lockscreen
+         * Wheter to show network traffic indicator in statusbar
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+
+        /**
+         * Network traffic inactivity threshold (default is 1 kBs)
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
+
+	/**
+	 * Whether to display the power menu advanced reboot option on a secured lockscreen
          *
          * @hide
          */
@@ -4671,6 +4683,8 @@ public final class Settings {
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_MEDIUM_COLOR);
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_FULL_COLOR);
             PRIVATE_SETTINGS.add(BATTERY_LIGHT_REALLY_FULL_COLOR);
+            PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_STATE);
+            PRIVATE_SETTINGS.add(NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD);
         }
 
         /**
