@@ -68,6 +68,20 @@
   <string name="keyguard_indication_dash_charging_time">Dash Laden (<xliff:g id="charging_time_left" voorbeeld="4 uren en 2 minuten">%s</xliff:g> tot volledig vol)</string>
   <string name="keyguard_plugged_in_dash_charging">Dash Opladen</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower aangesloten (<xliff:g id="charging_time_left">%s</xliff:g> tot volledig opgeladen)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower verbonden</string>
+  <!-- Heads up QS tile -->
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <!-- USB tethering QS Tile -->
+  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <!-- Sync QS Tile -->
+  <string name="quick_settings_sync_label">Sync</string>
+  <string name="accessibility_quick_settings_sync_off">Sync off</string>
+  <string name="accessibility_quick_settings_sync_on">Sync on</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
 </resources>

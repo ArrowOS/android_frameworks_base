@@ -28,46 +28,60 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
-  <string name="global_action_restart_recovery">Recovery</string>
-  <string name="global_action_restart_bootloader">Bootloader</string>
-  <string name="global_action_restart_ui">SystemUI</string>
-  <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_restart_system">再起動</string>
+  <string name="global_action_restart_advanced">高度な再起動</string>
+  <string name="global_action_restart_recovery">リカバリー</string>
+  <string name="global_action_restart_bootloader">ブートローダー</string>
+  <string name="global_action_restart_ui">システムUI</string>
+  <string name="global_action_restart_hot">ソフトリブート</string>
+  <string name="global_action_screenshot">スクリーンショット</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">エラー</string>
+  <string name="omnijaws_service_unkown">気象情報がありません</string>
+  <string name="omnijaws_service_error_long">気象データの読み込みエラー</string>
+  <string name="omnijaws_service_disabled">サービスは無効です</string>
+  <string name="omnijaws_detail_header">天気</string>
+  <string name="omnijaws_label_default">天気</string>
+  <string name="omnijaws_current_text">現在</string>
+  <string name="omnijaws_package_not_available">OmniJawsは使用できません</string>
+  <string name="omnijaws_service_last_update">最終更新：</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">ステータスバーアイコン</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="status_bar_volte">VoLTE</string>
+  <string name="systemui_tuner_navbar_title">標準の設定</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">電源ボタンの置き換え</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">アプリが電源ボタンの機能を置き換えることを許可する</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">ナビゲーションエディターの制御</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">アプリのナビゲーションバーエディターの制御を許可する</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow swag</string>
-  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
+  <string name="arrow_logo_title">Arrowロゴ</string>
+  <string name="arrow_logo_summary">これは矢印です！（システムUIを再起動して適用）</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">急速充電中（充電完了まで<xliff:g id="Charging_TIME_LEFT">%s</xliff:g>）</string>
+  <string name="keyguard_plugged_in_dash_charging">急速充電中</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">急速充電中（充電完了まで<xliff:g id="charging_time_left">%s</xliff:g>）</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">急速充電中</string>
+  <!-- Heads up QS tile -->
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <!-- USB tethering QS Tile -->
+  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <!-- Sync QS Tile -->
+  <string name="quick_settings_sync_label">Sync</string>
+  <string name="accessibility_quick_settings_sync_off">Sync off</string>
+  <string name="accessibility_quick_settings_sync_on">Sync on</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
 </resources>

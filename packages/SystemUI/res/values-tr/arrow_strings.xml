@@ -28,46 +28,60 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
-  <string name="global_action_restart_recovery">Recovery</string>
-  <string name="global_action_restart_bootloader">Bootloader</string>
-  <string name="global_action_restart_ui">SystemUI</string>
-  <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_restart_system">Yeniden başlat</string>
+  <string name="global_action_restart_advanced">Gelişmiş yeniden başlatma</string>
+  <string name="global_action_restart_recovery">Kurtarma</string>
+  <string name="global_action_restart_bootloader">Ön yükleyici</string>
+  <string name="global_action_restart_ui">Arayüz</string>
+  <string name="global_action_restart_hot">Hızlı</string>
+  <string name="global_action_screenshot">Ekran görüntüsü</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Hata</string>
+  <string name="omnijaws_service_unkown">Hava durumu verisi yok</string>
+  <string name="omnijaws_service_error_long">Hava durumu verileri yüklenemedi</string>
+  <string name="omnijaws_service_disabled">Servis devre dışı</string>
+  <string name="omnijaws_detail_header">Hava durumu</string>
+  <string name="omnijaws_label_default">Hava durumu</string>
+  <string name="omnijaws_current_text">Şimdi</string>
+  <string name="omnijaws_package_not_available">OmniJaws mevcut değil</string>
+  <string name="omnijaws_service_last_update">Son güncelleme:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Durum çubuğu simgeleri</string>
   <!-- volte icon switch -->
   <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="systemui_tuner_navbar_title">Varsayılan ayarlar</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">güç tuşunu geçersiz kıl</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">Uygulamaya güç tuşunu geçersiz kılma izni verir.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">gezinme çubuğu düzenleyicisini kontrol et</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Bir uygulamanın gezinme çubuğu düzenleyicisini kontrol etmesine izin verir.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow swag</string>
-  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
+  <string name="arrow_logo_title">Arrow logo</string>
+  <string name="arrow_logo_summary">Bu Arrow! (uygulamak için Arayüzü yeniden başlatın)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Hızlı Şarj oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> kaldı)</string>
+  <string name="keyguard_plugged_in_dash_charging">Hızlı Şarj oluyor</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">Turbo şarj bağlandı (tam dolmasına <xliff:g id="charging_time_left">%s</xliff:g> kaldı)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">Turbo şarj bağlandı</string>
+  <!-- Heads up QS tile -->
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <!-- USB tethering QS Tile -->
+  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <!-- Sync QS Tile -->
+  <string name="quick_settings_sync_label">Sync</string>
+  <string name="accessibility_quick_settings_sync_off">Sync off</string>
+  <string name="accessibility_quick_settings_sync_on">Sync on</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
 </resources>
