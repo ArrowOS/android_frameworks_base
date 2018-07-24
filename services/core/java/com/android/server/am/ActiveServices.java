@@ -1873,7 +1873,7 @@ public final class ActiveServices {
         return true;
     }
 
-    private final boolean scheduleServiceRestartLocked(ServiceRecord r, boolean allowCancel) {
+    private final boolean scheduleServiceRestartLocked(ServiceRecord r, boolean allowCancel, boolean isAppDied) {
         boolean canceled = false;
 
         if (mAm.isShuttingDownLocked()) {
@@ -1983,13 +1983,18 @@ public final class ActiveServices {
 
         cancelForegroundNotificationLocked(r);
 
-        mAm.mHandler.removeCallbacks(r.restarter);
-        mAm.mHandler.postAtTime(r.restarter, r.nextRestartTime);
-        r.nextRestartTime = SystemClock.uptimeMillis() + r.restartDelay;
-        Slog.w(TAG, "Scheduling restart of crashed service "
-                + r.shortName + " in " + r.restartDelay + "ms");
-        EventLog.writeEvent(EventLogTags.AM_SCHEDULE_SERVICE_RESTART,
-                r.userId, r.shortName, r.restartDelay);
+        // this will be called again when the
+        // process restarts, after the attachApplication
+        if (!isAppDied) {
+            mAm.mHandler.removeCallbacks(r.restarter);
+            mAm.mHandler.postAtTime(r.restarter, r.nextRestartTime);
+            r.nextRestartTime = SystemClock.uptimeMillis() + r.restartDelay;
+            Slog.w(TAG, "Scheduling restart of crashed service "
+                    + r.shortName + " in " + r.restartDelay + "ms");
+
+            EventLog.writeEvent(EventLogTags.AM_SCHEDULE_SERVICE_RESTART,
+                    r.userId, r.shortName, r.restartDelay);
+        }
 
         return canceled;
     }
@@ -2253,7 +2258,7 @@ public final class ActiveServices {
 
                 // Retry.
                 if (!inDestroying) {
-                    scheduleServiceRestartLocked(r, false);
+                    scheduleServiceRestartLocked(r, false, false);
                 }
             }
         }
@@ -3016,7 +3021,7 @@ public final class ActiveServices {
         }
     }
 
-    final void killServicesLocked(ProcessRecord app, boolean allowRestart) {
+    final void killServicesLocked(ProcessRecord app, boolean allowRestart, boolean isAppDied) {
         // Report disconnected services.
         if (false) {
             // XXX we are letting the client link to the service for
@@ -3153,7 +3158,7 @@ public final class ActiveServices {
                     || !mAm.mUserController.isUserRunningLocked(sr.userId, 0)) {
                 bringDownServiceLocked(sr);
             } else {
-                boolean canceled = scheduleServiceRestartLocked(sr, true);
+                boolean canceled = scheduleServiceRestartLocked(sr, true, isAppDied);
 
                 // Should the service remain running?  Note that in the
                 // extreme case of so many attempts to deliver a command
