@@ -163,6 +163,7 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
     private static final String ATTR_MIN_WIDTH = "min_width";
     private static final String ATTR_MIN_HEIGHT = "min_height";
     private static final String ATTR_PERSIST_TASK_VERSION = "persist_task_version";
+    private static final String ATTR_IS_AVAILABLE = "is_available";
 
     // Current version of the task record we persist. Used to check if we need to run any upgrade
     // code.
@@ -392,7 +393,7 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
             int nextTaskId, int taskAffiliationColor, int callingUid, String callingPackage,
             int resizeMode, boolean supportsPictureInPicture, boolean privileged,
             boolean _realActivitySuspended, boolean userSetupComplete, int minWidth,
-            int minHeight) {
+            int minHeight, boolean _isAvailable) {
         mService = service;
         mFilename = String.valueOf(_taskId) + TASK_THUMBNAIL_SUFFIX +
                 TaskPersister.IMAGE_EXTENSION;
@@ -409,7 +410,7 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
         realActivitySuspended = _realActivitySuspended;
         origActivity = _origActivity;
         rootWasReset = _rootWasReset;
-        isAvailable = true;
+        isAvailable = _isAvailable;
         autoRemoveRecents = _autoRemoveRecents;
         askedCompatMode = _askedCompatMode;
         taskType = _taskType;
@@ -1788,6 +1789,7 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
         out.attribute(null, ATTR_MIN_WIDTH, String.valueOf(mMinWidth));
         out.attribute(null, ATTR_MIN_HEIGHT, String.valueOf(mMinHeight));
         out.attribute(null, ATTR_PERSIST_TASK_VERSION, String.valueOf(PERSIST_TASK_VERSION));
+        out.attribute(null, ATTR_IS_AVAILABLE, String.valueOf(isAvailable));
 
         if (affinityIntent != null) {
             out.startTag(null, TAG_AFFINITYINTENT);
@@ -1856,6 +1858,7 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
         int minWidth = INVALID_MIN_SIZE;
         int minHeight = INVALID_MIN_SIZE;
         int persistTaskVersion = 0;
+        boolean isAvailable = true;
 
         for (int attrNdx = in.getAttributeCount() - 1; attrNdx >= 0; --attrNdx) {
             final String attrName = in.getAttributeName(attrNdx);
@@ -1929,6 +1932,8 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
                 minHeight = Integer.parseInt(attrValue);
             } else if (ATTR_PERSIST_TASK_VERSION.equals(attrName)) {
                 persistTaskVersion = Integer.parseInt(attrValue);
+            } else if (ATTR_IS_AVAILABLE.equals(attrName)) {
+                isAvailable = Boolean.parseBoolean(attrValue);
             } else {
                 Slog.w(TAG, "TaskRecord: Unknown attribute=" + attrName);
             }
@@ -2009,7 +2014,7 @@ final class TaskRecord extends ConfigurationContainer implements TaskWindowConta
                 taskDescription, thumbnailInfo, taskAffiliation, prevTaskId, nextTaskId,
                 taskAffiliationColor, callingUid, callingPackage, resizeMode,
                 supportsPictureInPicture, privileged, realActivitySuspended, userSetupComplete,
-                minWidth, minHeight);
+                minWidth, minHeight, isAvailable);
         task.updateOverrideConfiguration(bounds);
 
         for (int activityNdx = activities.size() - 1; activityNdx >=0; --activityNdx) {
