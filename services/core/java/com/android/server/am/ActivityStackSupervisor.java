@@ -2754,9 +2754,10 @@ public class ActivityStackSupervisor extends ConfigurationContainer implements D
 
                 for (int k = 0; k < proc.activities.size(); k++) {
                     TaskRecord otherTask = proc.activities.get(k).getTask();
-                    if (tr.taskId != otherTask.taskId && otherTask.inRecents) {
-                        // Don't kill process(es) that has an activity in a different task that is
-                        // also in recents.
+                    if (tr.taskId != otherTask.taskId && otherTask.inRecents
+                            && isTaskVisibleInRecents(otherTask)) {
+                        // Don't kill process(es) that has an activity in a different visible task
+                        // that is also in recents.
                         return;
                     }
                 }
@@ -2782,6 +2783,11 @@ public class ActivityStackSupervisor extends ConfigurationContainer implements D
                 pr.waitingToKill = "remove task";
             }
         }
+    }
+
+    boolean isTaskVisibleInRecents(TaskRecord task) {
+        return task.isAvailable && (task.intent == null ||
+                (task.intent.getFlags() & Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS) == 0);
     }
 
     int getNextStackId() {
