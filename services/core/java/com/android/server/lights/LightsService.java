@@ -21,6 +21,7 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemProperties;
 import android.os.Trace;
 import android.provider.Settings;
 import android.util.Slog;
@@ -50,6 +51,30 @@ public class LightsService extends SystemService {
                     Slog.w(TAG, "setBrightness with LOW_PERSISTENCE unexpected #" + mId +
                             ": brightness=0x" + Integer.toHexString(brightness));
                     return;
+                }
+
+                if(mId == 0) {
+                    String fp = SystemProperties.get("ro.vendor.build.fingerprint", "hello");
+                    if(
+                           fp.contains("starlte") || fp.contains("star2lte") ||
+                           fp.contains("starqlte") || fp.contains("star2qlte")) {
+                        setLightLocked(brightness*100, LIGHT_FLASH_HARDWARE, 0, 0, brightnessMode);
+                        return;
+                    }
+
+                    boolean qcomExtendBrightness = SystemProperties.getBoolean("persist.extend.brightness", false);
+                    int scale = SystemProperties.getInt("persist.display.max_brightness", 1023);
+                    //This is set by vndk-detect
+                    int qcomScale = SystemProperties.getInt("persist.sys.qcom-brightness", -1);
+                    if(qcomScale != -1) {
+                        qcomExtendBrightness = true;
+                        scale = qcomScale;
+                    }
+
+                    if(qcomExtendBrightness) {
+                        setLightLocked(brightness * scale / 255, LIGHT_FLASH_NONE, 0, 0, brightnessMode);
+                        return;
+                    }
                 }
 
                 int color = brightness & 0x000000ff;
