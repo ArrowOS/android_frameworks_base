@@ -62,26 +62,33 @@
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_toggleNavigationEditor">Permite a una aplicación controlar el editor de barra de navegación.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow swag</string>
-  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
+  <string name="arrow_logo_title">Arrow Swag</string>
+  <string name="arrow_logo_summary">¡Esto es Arrow! (reiniciar SystemUI para aplicar)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Carga rápida (<xliff:g id=""tiempo_de_carga_restante" ejemplo="4 horas y 2 minutos">%s</xliff:g> hasta completar)</string>
+  <string name="keyguard_plugged_in_dash_charging">Carga Rápida</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower conectado (<xliff:g id="charging_time_left">%s</xliff:g> hasta completar)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">Carga rápida conectada</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Notificaciones flotantes</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Las notificaciones emergentes están desactivadas.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones emergentes han sido activadas.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">Anclaje USB</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Sincronizar</string>
+  <string name="accessibility_quick_settings_sync_off">Sincronizar desactivado</string>
+  <string name="accessibility_quick_settings_sync_on">Sincronización activada</string>
+  <string name="accessibility_quick_settings_sync_changed_off">La sincronización ha sido desactivada</string>
+  <string name="accessibility_quick_settings_sync_changed_on">La sincronización ha sido habilitada</string>
+  <!-- Heads up snooze toast -->
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <!-- Recents Panel -->
+  <!-- The text for the button in the notification window-shade that clears
+         all of the currently visible notifications. [CHAR LIMIT=10]-->
+  <string name="clear_recents">Close all recent</string>
 </resources>

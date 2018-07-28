@@ -71,17 +71,24 @@
   <string name="keyguard_indication_turbo_power_time">Turbo şarj bağlandı (tam dolmasına <xliff:g id="charging_time_left">%s</xliff:g> kaldı)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Turbo şarj bağlandı</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Bildirim pencereleri</string>
+  <string name="accessibility_quick_settings_heads_up_off">Bildirim pencereleri kapalı.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Bildirim pencereleri açık.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Bildirim pencereleri kapatıldı.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Bildirim pencereleri açıldı.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">USB internet paylaşımı</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Eşitleme</string>
+  <string name="accessibility_quick_settings_sync_off">Eşitleme kapalı</string>
+  <string name="accessibility_quick_settings_sync_on">Eşitleme açık</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Eşitleme kapatıldı</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Eşitleme açıldı</string>
+  <!-- Heads up snooze toast -->
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <!-- Recents Panel -->
+  <!-- The text for the button in the notification window-shade that clears
+         all of the currently visible notifications. [CHAR LIMIT=10]-->
+  <string name="clear_recents">Close all recent</string>
 </resources>
