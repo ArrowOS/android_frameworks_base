@@ -4576,6 +4576,15 @@ public final class Settings {
         public static final String COLOR_BUCKET_OVERLAY = "color_bucket_overlay";
 
         /**
+         * @hide
+         */
+        public static final String FORCE_SHOW_NAVBAR = "navigation_bar_show_new$
+
+        /** @hide */
+        private static final Validator FORCE_SHOW_NAVBAR_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * Number of qs columns on landscape orientation
          * @hide
          */
@@ -5041,7 +5050,8 @@ public final class Settings {
             VOLUME_ROCKER_WAKE,
             VOLUME_BUTTON_MUSIC_CONTROL,
             BACK_GESTURE_HEIGHT,
-            GESTURE_PILL_TOGGLE
+            GESTURE_PILL_TOGGLE,
+            FORCE_SHOW_NAVBAR
         };
 
         /**
@@ -5194,6 +5204,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(PROXIMITY_ON_WAKE);
             PRIVATE_SETTINGS.add(BACK_GESTURE_HEIGHT);
             PRIVATE_SETTINGS.add(GESTURE_PILL_TOGGLE);
+            PRIVATE_SETTINGS.add(FORCE_SHOW_NAVBAR);
         }
 
         /**
@@ -5311,6 +5322,7 @@ public final class Settings {
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BACK_GESTURE_HEIGHT, BACK_GESTURE_HEIGHT_VALIDATOR);
             VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
+            VALIDATORS.put(FORCE_SHOW_NAVBAR, FORCE_SHOW_NAVBAR_VALIDATOR);
         }
 
         /**
