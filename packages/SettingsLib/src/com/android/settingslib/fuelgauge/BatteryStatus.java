@@ -23,6 +23,7 @@ import static android.os.BatteryManager.EXTRA_HEALTH;
 import static android.os.BatteryManager.EXTRA_LEVEL;
 import static android.os.BatteryManager.EXTRA_MAX_CHARGING_CURRENT;
 import static android.os.BatteryManager.EXTRA_MAX_CHARGING_VOLTAGE;
+import static android.os.BatteryManager.EXTRA_TEMPERATURE;
 import static android.os.BatteryManager.EXTRA_PLUGGED;
 import static android.os.BatteryManager.EXTRA_STATUS;
 
@@ -48,15 +49,22 @@ public class BatteryStatus {
     public final int level;
     public final int plugged;
     public final int health;
+    public final int maxChargingCurrent;
+    public final int maxChargingVoltage;
     public final int maxChargingWattage;
+    public final int temperature;
 
-    public BatteryStatus(int status, int level, int plugged, int health,
-            int maxChargingWattage) {
+    public BatteryStatus(int status, int level, int plugged, int health, 
+              int maxChargingCurrent, int maxChargingVoltage,
+              int maxChargingWattage, int temperature) {
         this.status = status;
         this.level = level;
         this.plugged = plugged;
         this.health = health;
+        this.maxChargingCurrent = maxChargingCurrent;
+        this.maxChargingVoltage = maxChargingVoltage;
         this.maxChargingWattage = maxChargingWattage;
+        this.temperature = temperature;
     }
 
     public BatteryStatus(Intent batteryChangedIntent) {
@@ -68,7 +76,7 @@ public class BatteryStatus {
         final int maxChargingMicroAmp = batteryChangedIntent.getIntExtra(EXTRA_MAX_CHARGING_CURRENT,
                 -1);
         int maxChargingMicroVolt = batteryChangedIntent.getIntExtra(EXTRA_MAX_CHARGING_VOLTAGE, -1);
-
+        final int temperature = batteryChangedIntent.getIntExtra(EXTRA_TEMPERATURE, -1);
         if (maxChargingMicroVolt <= 0) {
             maxChargingMicroVolt = DEFAULT_CHARGING_VOLTAGE_MICRO_VOLT;
         }
@@ -142,6 +150,9 @@ public class BatteryStatus {
     @Override
     public String toString() {
         return "BatteryStatus{status=" + status + ",level=" + level + ",plugged=" + plugged
-                + ",health=" + health + ",maxChargingWattage=" + maxChargingWattage + "}";
+                + ",health=" + health + ",maxChargingCurrent=" + maxChargingCurrent
+                + ",maxChargingVoltage=" + maxChargingVoltage + ",maxChargingWattage="
+                + maxChargingWattage + ",temperature=" + temperature + "}";
+
     }
 }
