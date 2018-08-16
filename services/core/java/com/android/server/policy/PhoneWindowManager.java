@@ -286,6 +286,7 @@ import com.android.internal.util.hwkeys.ActionHandler;
 import com.android.internal.util.hwkeys.ActionUtils;
 import com.android.internal.util.ScreenshotHelper;
 import com.android.internal.util.ScreenShapeHelper;
+import com.android.internal.util.omni.DeviceUtils;
 import com.android.internal.widget.PointerLocationView;
 import com.android.server.GestureLauncherService;
 import com.android.server.LocalServices;
@@ -1089,6 +1090,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.HOME_WAKE_SCREEN), false, this,
+                    UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.OMNI_NAVIGATION_BAR_SHOW), false, this,
                     UserHandle.USER_ALL);
             updateSettings();
         }
@@ -2485,16 +2489,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         // Allow the navigation bar to move on non-square small devices (phones).
         mNavigationBarCanMove = width != height && shortSizeDp < 600;
 
-        mHasNavigationBar = res.getBoolean(com.android.internal.R.bool.config_showNavigationBar);
-
-        // Allow a system property to override this. Used by the emulator.
-        // See also hasNavigationBar().
-        String navBarOverride = SystemProperties.get("qemu.hw.mainkeys");
-        if ("1".equals(navBarOverride)) {
-            mHasNavigationBar = false;
-        } else if ("0".equals(navBarOverride)) {
-            mHasNavigationBar = true;
-        }
+        mHasNavigationBar = DeviceUtils.deviceSupportNavigationBar(mContext);
 
         // For demo purposes, allow the rotation of the HDMI display to be controlled.
         // By default, HDMI locks rotation to landscape.
@@ -2663,6 +2658,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mVolumeMusicControl = Settings.System.getIntForUser(resolver,
                     Settings.System.VOLUME_BUTTON_MUSIC_CONTROL, 1,
                     UserHandle.USER_CURRENT) != 0;
+            mHasNavigationBar = DeviceUtils.deviceSupportNavigationBar(mContext);
         }
         synchronized (mWindowManagerFuncs.getWindowManagerLock()) {
             PolicyControl.reloadFromSetting(mContext);
