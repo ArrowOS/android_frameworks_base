@@ -4576,6 +4576,15 @@ public final class Settings {
         public static final String COLOR_BUCKET_OVERLAY = "color_bucket_overlay";
 
         /**
+         * @hide
+         */
+        public static final String FORCE_SHOW_NAVBAR = "navigation_bar_show_new";
+
+        /** @hide */
+        private static final Validator FORCE_SHOW_NAVBAR_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * Number of qs columns on landscape orientation
          * @hide
          */
@@ -5064,6 +5073,7 @@ public final class Settings {
             GESTURE_PILL_TOGGLE,
             DISPLAY_CUTOUT_MODE,
             STOCK_STATUSBAR_IN_HIDE,
+            FORCE_SHOW_NAVBAR,
         };
 
         /**
@@ -5218,6 +5228,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(GESTURE_PILL_TOGGLE);
             PRIVATE_SETTINGS.add(DISPLAY_CUTOUT_MODE);
             PRIVATE_SETTINGS.add(STOCK_STATUSBAR_IN_HIDE);
+            PRIVATE_SETTINGS.add(FORCE_SHOW_NAVBAR);
         }
 
         /**
@@ -5337,6 +5348,7 @@ public final class Settings {
             VALIDATORS.put(GESTURE_PILL_TOGGLE, GESTURE_PILL_TOGGLE_VALIDATOR);
             VALIDATORS.put(DISPLAY_CUTOUT_MODE, DISPLAY_CUTOUT_MODE_VALIDATOR);
             VALIDATORS.put(STOCK_STATUSBAR_IN_HIDE, STOCK_STATUSBAR_IN_HIDE_VALIDATOR);
+            VALIDATORS.put(FORCE_SHOW_NAVBAR, FORCE_SHOW_NAVBAR_VALIDATOR);
         }
 
         /**
