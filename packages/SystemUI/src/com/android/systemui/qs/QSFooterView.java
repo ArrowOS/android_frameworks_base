@@ -106,7 +106,6 @@ public class QSFooterView extends FrameLayout {
 
         mActionsContainer = requireViewById(R.id.qs_footer_actions_container);
         mBuildText = findViewById(R.id.build);
-        mTunerIcon = requireViewById(R.id.tuner_icon);
 
         // RenderThread is doing more harm than good when touching the header (to expand quick
         // settings), so disable it for this view
@@ -266,7 +265,6 @@ public class QSFooterView extends FrameLayout {
 
     private void updateVisibilities(boolean isTunerEnabled, boolean multiUserEnabled) {
         mSettingsContainer.setVisibility(mQsDisabled ? View.GONE : View.VISIBLE);
-        mTunerIcon.setVisibility(isTunerEnabled ? View.VISIBLE : View.INVISIBLE);
         final boolean isDemo = UserManager.isDeviceInDemoMode(mContext);
         mMultiUserSwitch.setVisibility(
                 showUserSwitcher(multiUserEnabled) ? View.VISIBLE : View.GONE);
