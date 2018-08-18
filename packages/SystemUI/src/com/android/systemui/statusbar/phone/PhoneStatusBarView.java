@@ -107,12 +107,6 @@ public class PhoneStatusBarView extends PanelBar {
         updateResources();
     }
 
-    public void updateBatterySettings() {
-        if (mBattery != null) {
-            ((BatteryMeterView)mBattery).updateSettings(true);
-        }
-    }
-
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
