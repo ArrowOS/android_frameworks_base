@@ -28,67 +28,84 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
+  <string name="global_action_restart_system">Restart</string>
+  <string name="global_action_restart_advanced">Zaawansowany restart</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
   <string name="global_action_restart_ui">SystemUI</string>
   <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_screenshot">Zrzut ekranu</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Błąd</string>
+  <string name="omnijaws_service_unkown">Brak danych pogodowych</string>
+  <string name="omnijaws_service_error_long">Błąd podczas ładowania danych o pogodzie</string>
+  <string name="omnijaws_service_disabled">Usługa wyłączona</string>
+  <string name="omnijaws_detail_header">Pogoda</string>
+  <string name="omnijaws_label_default">Pogoda</string>
+  <string name="omnijaws_current_text">Teraz</string>
+  <string name="omnijaws_package_not_available">OmniJaws nie jest dostępny</string>
+  <string name="omnijaws_service_last_update">Ostatnia aktualizacja:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Ikona paska stanu</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Stock settings</string>
+  <string name="status_bar_volte">VoLTE</string>
+  <string name="systemui_tuner_navbar_title">Ustawienia domyślne</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">override power key</string>
+  <string name="permlab_preventpower">zastąp klawisz zasilania</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
+  <string name="permdesc_preventpower">Zezwól aplikacji zastąpić przycisk zasilania.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">edytor paska nawigacji</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Pozwala aplikacji na kontrolowanie edycji paska nawigacji.</string>
   <!-- logo -->
   <string name="arrow_logo_title">Arrow swag</string>
-  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
+  <string name="arrow_logo_summary">To jest Arrow! (Zrestartuj SystemUI aby zastosować)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Szybkie ładowanie (<xliff:g id="pozostały_czas" example="4 godziny i 2 minuty">%s</xliff:g> do pełnego naładowania)</string>
+  <string name="keyguard_plugged_in_dash_charging">Szybkie ładowanie</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower podłączony (<xliff:g id="charging_time_left">%s</xliff:g> do pełnego naładowania)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower podłączony</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Powiadomienia \"Heads up\"</string>
+  <string name="accessibility_quick_settings_heads_up_off">Wyskakujące powiadomienia wył.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Wyskakujące powiadomienia wł.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Wyskakujące powiadomienia wyłączone.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Wyskakujące powiadomienia włączone.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">Tethering USB</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Synchronizacja</string>
+  <string name="accessibility_quick_settings_sync_off">Synchronizacja wył</string>
+  <string name="accessibility_quick_settings_sync_on">Synchronizacja wł</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Synchronizacja wyłączona</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Synchronizacja włączona</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s </xliff:g> • Powiadomienia z podglądem są odkładane na 1 minutę.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - Wyskakujące powiadomienia są uśpione na <xliff:g id="number">%d </xliff:g> minut.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Zamknij ostanie aplikacje</string>
+  <string name="recents_app_killed">Aplikacja została zamknięta</string>
+  <string name="recents_locked_app_kill_warning">Aplikacja jest zablokowana. Wymuszenie zatrzymania, ale nie odrzucanie tej aplikacji.</string>
+  <string name="recents_kill_error_warning">Nie można zabić ani wymusić zatrzymania tej aplikacji. Operacja przerwana.</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">Pasek nawigacji</string>
+  <string name="quick_settings_smartbar">SmartBar</string>
+  <string name="quick_settings_fling">Fling</string>
+  <string name="quick_settings_navigation_default">Domyślne</string>
+  <string name="quick_settings_navigation_disabled">Wyłączone</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Przyciski fizyczne włączone</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Przyciski fizyczne wyłączone</string>
+  <string name="quick_settings_hwkeys_label">Przyciski fizyczne</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">Przeciągnij lub dotknij, aby dodać kafelki</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">W pełni naładowana</string>
 </resources>

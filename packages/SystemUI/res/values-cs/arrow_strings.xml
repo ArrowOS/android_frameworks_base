@@ -85,10 +85,27 @@
   <string name="accessibility_quick_settings_sync_changed_off">Synchronizace byla vypnuta</string>
   <string name="accessibility_quick_settings_sync_changed_on">Synchronizace byla zapnuta</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Plovoucí oznámení jsou odložena na dobu 1 minuty.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - Plovoucí oznámení jsou odložena na dobu <xliff:g id="number">%d </xliff:g> minut.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Zavřít všechny nedávné</string>
+  <string name="recents_app_killed">Aplikace ukončena</string>
+  <string name="recents_locked_app_kill_warning">Aplikace je uzamčena. Vynuceně vypnout tuto aplikaci, ale nevyloučit ji.</string>
+  <string name="recents_kill_error_warning">Tuto aplikaci nelze ukončit nebo zastavit. Operace byla zrušena.</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">Navigační panel</string>
+  <string name="quick_settings_smartbar">SmartBar</string>
+  <string name="quick_settings_fling">Fling</string>
+  <string name="quick_settings_navigation_default">Stock</string>
+  <string name="quick_settings_navigation_disabled">Zakázáno</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">HW tlačítka zapnuta</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW tlačítka vypnuta</string>
+  <string name="quick_settings_hwkeys_label">HW tlačítka</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">Tažením nebo klepnutím přidat dlaždice</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">Plně nabito</string>
 </resources>

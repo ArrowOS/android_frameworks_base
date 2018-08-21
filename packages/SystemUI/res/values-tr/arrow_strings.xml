@@ -85,10 +85,27 @@
   <string name="accessibility_quick_settings_sync_changed_off">Eşitleme kapatıldı</string>
   <string name="accessibility_quick_settings_sync_changed_on">Eşitleme açıldı</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Bildirim pencereleri 1 dakika kadar erteleniyor.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Bildirim pencereleri <xliff:g id="number">%d</xliff:g> dakika erteleniyor.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Tüm son uygulamaları kapat</string>
+  <string name="recents_app_killed">Uygulama sonlandırıldı</string>
+  <string name="recents_locked_app_kill_warning">Uygulama kilitlendi. Zorla durdurma reddetildi.</string>
+  <string name="recents_kill_error_warning">Bu uygulama sonlandırılamaz veya zorla durdurulamaz. İşlem iptal edildi.</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">Gezinme çubuğu</string>
+  <string name="quick_settings_smartbar">Akıllı çubuk</string>
+  <string name="quick_settings_fling">Fling</string>
+  <string name="quick_settings_navigation_default">Varsayılan</string>
+  <string name="quick_settings_navigation_disabled">Devre dışı</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Donanım tuşları açık</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Donanım tuşları kapalı</string>
+  <string name="quick_settings_hwkeys_label">Donanım tuşları</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">Kare eklemek için sürükleyin veya dokunun</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">Pil dolu</string>
 </resources>

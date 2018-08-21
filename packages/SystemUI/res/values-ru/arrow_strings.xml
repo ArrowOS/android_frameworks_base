@@ -33,7 +33,7 @@
   <string name="global_action_restart_recovery">Режим восстановления</string>
   <string name="global_action_restart_bootloader">Перезагрузка в Загрузчик</string>
   <string name="global_action_restart_ui">Интерфейс системы</string>
-  <string name="global_action_restart_hot">Полная перезагрузка</string>
+  <string name="global_action_restart_hot">Быстрая перезагрузка</string>
   <string name="global_action_screenshot">Скриншот</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">Ошибка службы omnijaws
@@ -55,7 +55,7 @@ Omni Погода</string>
   <string name="systemui_tuner_navbar_title">Настройки по умолчанию</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">переопределение клавиши питания</string>
+  <string name="permlab_preventpower">Изменить действие кнопки питания</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_preventpower">Позволять приложению переопределять кнопку питания.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
@@ -72,24 +72,41 @@ Omni Погода</string>
   <string name="keyguard_indication_turbo_power_time">Быстрая зарядка подключена (<xliff:g id="charging_time_left">%s</xliff:g> до полной зарядки)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Быстрая зарядка подключена</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Всплывающие уведомления</string>
+  <string name="accessibility_quick_settings_heads_up_off">Всплывающие уведомления выкл.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления вкл.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления выключены.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">USB-модем</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Синхронизация</string>
+  <string name="accessibility_quick_settings_sync_off">Синхронизация выкл</string>
+  <string name="accessibility_quick_settings_sync_on">Синхронизация вкл</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Синхронизация выключена</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Синхронизация включена</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> Всплывающие уведомления выключены на одну минуту.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Всплывающие уведомления выключены на <xliff:g id="number">%d</xliff:g> минут.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Закрыть все недавние</string>
+  <string name="recents_app_killed">Приложение завершено</string>
+  <string name="recents_locked_app_kill_warning">Приложение заблокировано. Принудительная остановка не выгружает это приложение.</string>
+  <string name="recents_kill_error_warning">Не удалось принудительно остановить это приложение. Операция прервана.</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">Панель навигации</string>
+  <string name="quick_settings_smartbar">Умная панель</string>
+  <string name="quick_settings_fling">Жесты</string>
+  <string name="quick_settings_navigation_default">Стандартный</string>
+  <string name="quick_settings_navigation_disabled">Выключено</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Аппаратные кнопки включены</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Аппаратные кнопки выключены</string>
+  <string name="quick_settings_hwkeys_label">Аппаратные кнопки</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">Перетащите или нажмите для добавления плиток</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">Полностью заряжен</string>
 </resources>

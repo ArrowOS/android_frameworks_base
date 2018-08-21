@@ -85,10 +85,27 @@
   <string name="accessibility_quick_settings_sync_changed_off">La sincronización ha sido desactivada</string>
   <string name="accessibility_quick_settings_sync_changed_on">La sincronización ha sido habilitada</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Notificaciones emergentes deshabilitadas por 1 minuto.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Notificaciones emergentes deshabilitadas por %d</xliff:g><xliff:g id="number">minutos.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Cerrar recientes</string>
+  <string name="recents_app_killed">App killed</string>
+  <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
+  <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">Navigation bar</string>
+  <string name="quick_settings_smartbar">SmartBar</string>
+  <string name="quick_settings_fling">Fling</string>
+  <string name="quick_settings_navigation_default">Stock</string>
+  <string name="quick_settings_navigation_disabled">Disabled</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
+  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
 </resources>
