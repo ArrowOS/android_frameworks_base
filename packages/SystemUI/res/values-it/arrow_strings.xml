@@ -28,8 +28,8 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
+  <string name="global_action_restart_system">Riavvia</string>
+  <string name="global_action_restart_advanced">Riavvio avanzato</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
   <string name="global_action_restart_ui">SystemUI</string>
@@ -58,37 +58,54 @@
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_preventpower">Consenti ad un\'applicazione di escludere il tasto di accensione.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
+  <string name="permlab_toggleNavigationEditor">controllo editor della barra di navigazione</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
+  <string name="permdesc_toggleNavigationEditor">Consenti ad un\'applicazione di controllare l\'editor della barra di navigazione.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow swag</string>
-  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
+  <string name="arrow_logo_title">Logo Arrow</string>
+  <string name="arrow_logo_summary">Questo è Arrow! (Riavvia SystemUI per applicare)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Ricarica rapida (<xliff:g id="charging_time_left" example="4 ore e 2 minuti">%s</xliff:g> al termine)</string>
+  <string name="keyguard_plugged_in_dash_charging">Ricarica rapida</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower connesso (<xliff:g id="charging_time_left">%s</xliff:g> al termine)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connesso</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Notifiche fluttuanti</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notifiche fluttuanti disattivate.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Notifiche fluttuanti attivate.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Notifiche fluttuanti disattivate.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Notifiche fluttuanti attivate.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">Tethering USB</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Sincronizzazione</string>
+  <string name="accessibility_quick_settings_sync_off">Sincronizzazione disattivata</string>
+  <string name="accessibility_quick_settings_sync_on">Sincronizzazione attivata</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sincronizzazione disattivata</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sincronizzazione attivata</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - La notificata è stata posticipata per 1 minuto.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Le notifiche saranno posticipate per <xliff:g id="number">%d</xliff:g> minuti.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Chiudi app recenti</string>
+  <string name="recents_app_killed">Applicazione terminata</string>
+  <string name="recents_locked_app_kill_warning">L\'app è bloccata. Forza l\'arresto senza terminare questa app.</string>
+  <string name="recents_kill_error_warning">Impossibile terminare o forzare l\'arresto di questa app. Operazione fallita.</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">Barra di navigazione</string>
+  <string name="quick_settings_smartbar">Barra intelligente</string>
+  <string name="quick_settings_fling">Fling</string>
+  <string name="quick_settings_navigation_default">Predefinito</string>
+  <string name="quick_settings_navigation_disabled">Disabilitato</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Tasti hardware attivati</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Tasti hardware disattivati</string>
+  <string name="quick_settings_hwkeys_label">Tasti hardware</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">Trascina o premi per aggiungere tiles</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">Ricarica completa</string>
 </resources>
