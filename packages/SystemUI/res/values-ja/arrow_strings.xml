@@ -85,10 +85,27 @@
   <string name="accessibility_quick_settings_sync_changed_off">同期をオフにしました</string>
   <string name="accessibility_quick_settings_sync_changed_on">同期をオンにしました</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 通知の表示は1分間一時停止します</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - 通知の表示は<xliff:g id="number">%d</xliff:g>分間停止します</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">最近使った全てのアプリを閉じる</string>
+  <string name="recents_app_killed">アプリを終了しました</string>
+  <string name="recents_locked_app_kill_warning">アプリはロックされています。このアプリを強制停止しても終了しません。</string>
+  <string name="recents_kill_error_warning">このアプリの強制終了や強制停止ができませんでした。 操作が中止されました。</string>
+  <!-- Navigation bar Tile -->
+  <string name="quick_settings_navigation_bar">ナビゲーションバー</string>
+  <string name="quick_settings_smartbar">スマートバー</string>
+  <string name="quick_settings_fling">Fling</string>
+  <string name="quick_settings_navigation_default">標準</string>
+  <string name="quick_settings_navigation_disabled">無効</string>
+  <!-- HW keys QS Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">ハードウェアキー オン</string>
+  <string name="accessibility_quick_settings_hwkeys_off">ハードウェアキー オフ</string>
+  <string name="quick_settings_hwkeys_label">ハードウェアキー</string>
+  <!-- QS customizer -->
+  <string name="drag_or_tap_to_add_tiles">タイルを追加するにはドラックかタップしてください</string>
+  <!-- Battery saver tile -->
+  <string name="battery_saver_qs_tile_fully_charged">充電完了</string>
 </resources>
