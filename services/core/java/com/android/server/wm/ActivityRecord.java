@@ -2835,6 +2835,12 @@ final class ActivityRecord extends ConfigurationContainer {
     // TODO(b/36505427): Consider moving this method and similar ones to ConfigurationContainer.
     private void updateOverrideConfiguration() {
         final Configuration overrideConfig = mTmpConfig;
+        if(info.applicationInfo.targetSdkVersion < O) {
+            try {
+                maxAspectRatio = Float.parseFloat(SystemProperties.get("persist.sys.max_aspect_ratio.pre_o", ""));
+            } catch (Throwable t) {}
+            Log.d("PHH", "Overrode aspect ratio because pre-o to " + maxAspectRatio);
+        }
         if (shouldUseSizeCompatMode()) {
             if (mCompatDisplayInsets != null) {
                 // The override configuration is set only once in size compatibility mode.
@@ -3068,7 +3074,7 @@ final class ActivityRecord extends ConfigurationContainer {
     // TODO(b/36505427): Consider moving this method and similar ones to ConfigurationContainer.
     private void computeBounds(Rect outBounds, Rect containingAppBounds) {
         outBounds.setEmpty();
-        final float maxAspectRatio = info.maxAspectRatio;
+        float maxAspectRatio = info.maxAspectRatio;
         final ActivityStack stack = getActivityStack();
         final float minAspectRatio = info.minAspectRatio;
 
