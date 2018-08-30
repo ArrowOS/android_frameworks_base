@@ -32,6 +32,8 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.database.Cursor;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Handler;
@@ -53,6 +55,8 @@ public class OmniJawsClient {
     private static final String ICON_PACKAGE_DEFAULT = "org.omnirom.omnijaws";
     private static final String ICON_PREFIX_DEFAULT = "weather";
     private static final String EXTRA_ERROR = "error";
+    public static final int EXTRA_ERROR_NETWORK = 0;
+    public static final int EXTRA_ERROR_LOCATION = 1;
     public static final int EXTRA_ERROR_DISABLED = 2;
 
     public static final String[] WEATHER_PROJECTION = new String[]{
@@ -121,9 +125,19 @@ public class OmniJawsClient {
         }
     }
 
+    public static class PackageInfo {
+        public String packageName;
+        public int resourceID;
+
+        public String toString() {
+            return "[" + packageName + ":" + resourceID + "]";
+        }
+    }
+
     public static interface OmniJawsObserver {
         public void weatherUpdated();
         public void weatherError(int errorReason);
+        default public void updateSettings() {};
     }
 
     private class WeatherUpdateReceiver extends BroadcastReceiver {
@@ -170,6 +184,7 @@ public class OmniJawsClient {
 
     private Context mContext;
     private WeatherInfo mCachedInfo;
+    private PackageInfo mImageInfo;
     private Resources mRes;
     private String mPackageName;
     private String mIconPrefix;
@@ -187,14 +202,30 @@ public class OmniJawsClient {
         mSettingsObserver.observe();
     }
 
+    public OmniJawsClient(Context context, boolean settingsObserver) {
+        mContext = context;
+        mObserver = new ArrayList<OmniJawsObserver>();
+        if (settingsObserver) {
+            mSettingsObserver = new OmniJawsSettingsObserver(mHandler);
+            mSettingsObserver.observe();
+        }
+    }
+    public void addSettingsObserver() {
+        if (mSettingsObserver == null) {
+            mSettingsObserver = new OmniJawsSettingsObserver(mHandler);
+            mSettingsObserver.observe();
+        }
+    }
     public void cleanupObserver() {
-        mSettingsObserver.unregister();
         if (mReceiver != null) {
             try {
                 mContext.unregisterReceiver(mReceiver);
             } catch (Exception e) {
             }
             mReceiver = null;
+        }
+        if (mSettingsObserver != null) {
+            mSettingsObserver.unregister();
         }
     }
 
@@ -218,6 +249,10 @@ public class OmniJawsClient {
 
     public WeatherInfo getWeatherInfo() {
         return mCachedInfo;
+    }
+
+    public PackageInfo getPackageInfo() {
+        return mImageInfo;
     }
 
     private static String getFormattedValue(float value) {
@@ -295,6 +330,26 @@ public class OmniJawsClient {
         }
     }
 
+    private Drawable getDefaultConditionImage() {
+        String packageName = ICON_PACKAGE_DEFAULT;
+        String iconPrefix = ICON_PREFIX_DEFAULT;
+        try {
+            PackageManager packageManager = mContext.getPackageManager();
+            Resources res = packageManager.getResourcesForApplication(packageName);
+            if (res != null) {
+                int resId = res.getIdentifier(iconPrefix + "_na", "drawable", packageName);
+                Drawable d = res.getDrawable(resId);
+                if (d != null) {
+                    setWeatherConditionImageResources(resId, packageName);
+                    return d;
+                }
+            }
+        } catch (Exception e) {
+        }
+        // absolute absolute fallback
+        Log.w(TAG, "No default package found");
+        return new ColorDrawable(Color.RED);
+    }
     private void loadCustomIconPackage() {
         int idx = mSettingIconPackage.lastIndexOf(".");
         mPackageName = mSettingIconPackage.substring(0, idx);
@@ -312,6 +367,15 @@ public class OmniJawsClient {
         }
     }
 
+    private void setWeatherConditionImageResources(int resId, String PackageName) {
+        if (DEBUG) {
+            Log.d(TAG, "Setting mImageInfo.resourceID:" + resId);
+            Log.d(TAG, "Setting mImageInfo.packageName:" + PackageName);
+        }
+        mImageInfo.packageName = PackageName;
+        mImageInfo.resourceID = resId;
+    }
+
     public Drawable getWeatherConditionImage(int conditionCode) {
         if (!isOmniJawsEnabled()) {
             Log.w(TAG, "Requesting condition image while disabled");
@@ -326,12 +390,24 @@ public class OmniJawsClient {
             return null;
         }
         try {
+            mImageInfo = new PackageInfo();
             int resId = mRes.getIdentifier(mIconPrefix + "_" + conditionCode, "drawable", mPackageName);
-            return mRes.getDrawable(resId);
+            Drawable d = mRes.getDrawable(resId);
+            if (d != null) {
+                setWeatherConditionImageResources(resId, mPackageName);
+                return d;
+            }
+            Log.w(TAG, "Failed to get condition image for " + conditionCode + " use default");
+            resId = mRes.getIdentifier(mIconPrefix + "_na", "drawable", mPackageName);
+            d = mRes.getDrawable(resId);
+            if (d != null) {
+                setWeatherConditionImageResources(resId, mPackageName);
+                return d;
+            }
         } catch(Exception e) {
-            Log.w(TAG, "Failed to get condition image for " + conditionCode);
-            return null;
         }
+        Log.w(TAG, "Failed to get condition image for " + conditionCode);
+        return getDefaultConditionImage();
     }
 
     public boolean isOmniJawsServiceInstalled() {
@@ -422,6 +498,9 @@ public class OmniJawsClient {
                 mSettingIconPackage = iconPack;
                 loadCustomIconPackage();
             }
+            for (OmniJawsObserver observer : mObserver) {
+                observer.updateSettings();
+            }
         }
     }
 
@@ -465,3 +544,4 @@ public class OmniJawsClient {
         }
     }
 }
+
