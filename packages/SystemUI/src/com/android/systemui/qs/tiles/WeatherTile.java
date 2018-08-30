@@ -72,11 +72,11 @@ public class WeatherTile extends QSTileImpl<BooleanState> implements OmniJawsCli
     private final ActivityStarter mActivityStarter;
     private WeatherDetailAdapter mDetailAdapter;
 
-    @Inject
     private static final String[] ALTERNATIVE_WEATHER_APPS = {
             "cz.martykan.forecastie",
     };
 
+    @Inject
     public WeatherTile(QSHost host) {
         super(host);
         mWeatherClient = new OmniJawsClient(mContext);
