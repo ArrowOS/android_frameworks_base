@@ -19,4 +19,7 @@
     <!-- Largest size an avatar might need to be drawn in the power menu user picker -->
     <dimen name="global_actions_avatar_size">24dp</dimen>
 
+
+    <!-- OmniJaws -->
+    <dimen name="current_weather_image_size">42dp</dimen>
 </resources>
