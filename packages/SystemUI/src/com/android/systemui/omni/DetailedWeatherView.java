@@ -347,3 +347,4 @@ public class DetailedWeatherView extends FrameLayout {
         mProgressContainer.setVisibility(View.GONE);
     }
 }
+
