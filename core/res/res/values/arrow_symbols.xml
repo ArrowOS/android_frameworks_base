@@ -41,4 +41,7 @@
 
     <!-- Power menu -->
     <java-symbol type="array" name="config_rebootActionsList" />
+
+    <!-- Whether to allow process with media UID to access CameraServiceProxy -->
+    <java-symbol type="bool" name="config_allowMediaUidForCameraServiceProxy" />
 </resources>
