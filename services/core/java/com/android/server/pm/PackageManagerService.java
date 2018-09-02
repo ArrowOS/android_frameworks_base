@@ -11359,8 +11359,8 @@ public class PackageManagerService extends IPackageManager.Stub
                     }
 
                     // The only case where we allow installation of a non-system overlay is when
-                    // its signature is signed with the platform certificate.
-                    PackageSetting platformPkgSetting = mSettings.getPackageLPr("android");
+                    // its signature is signed with substratum overlay certificate.
+                    PackageSetting platformPkgSetting = mSettings.getPackageLPr("projekt.substratum.signature");
                     if ((platformPkgSetting.signatures.mSigningDetails
                             != PackageParser.SigningDetails.UNKNOWN)
                             && (compareSignatures(
@@ -11368,7 +11368,7 @@ public class PackageManagerService extends IPackageManager.Stub
                                     pkg.mSigningDetails.signatures)
                                             != PackageManager.SIGNATURE_MATCH)) {
                         throw new PackageManagerException("Overlay " + pkg.packageName +
-                                " must be signed with the platform certificate.");
+                                " must be signed with the substratum overlay certificate.");
                     }
                 }
             }
