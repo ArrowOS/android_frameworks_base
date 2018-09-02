@@ -216,9 +216,7 @@ public class Clock extends TextView implements DemoMode, CommandQueue.Callbacks,
         if (mSettingsObserver == null) {
             mSettingsObserver = new SettingsObserver(new Handler());
         }
-        mSettingsObserver.observe();
-        updateSettings();
-        updateShowSeconds();
+        updateStatus();
     }
 
     @Override
@@ -255,7 +253,7 @@ public class Clock extends TextView implements DemoMode, CommandQueue.Callbacks,
                     if (!newLocale.equals(mLocale)) {
                         mLocale = newLocale;
                     }
-                    updateSettings();
+                    updateStatus();
                     return;
                 });
             }
@@ -501,8 +499,12 @@ public class Clock extends TextView implements DemoMode, CommandQueue.Callbacks,
                 Settings.System.STATUSBAR_CLOCK_DATE_STYLE, CLOCK_DATE_STYLE_REGULAR,
                 UserHandle.USER_CURRENT);
 
+        updateClockVisibility();
+        updateStatus();
+    }
+
+    private void updateStatus() {
         if (mAttached) {
-            updateClockVisibility();
             updateClock();
             updateShowSeconds();
         }
