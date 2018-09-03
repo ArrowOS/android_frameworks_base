@@ -241,7 +241,7 @@ public class BatteryMeterView extends LinearLayout implements
         mUser = ActivityManager.getCurrentUser();
         mSettingObserver.observe();
         mSettingObserver.update();
-        //updateShowPercent();
+        updateShowPercent();
         Dependency.get(ConfigurationController.class).addCallback(this);
         mUserTracker.startTracking();
     }
