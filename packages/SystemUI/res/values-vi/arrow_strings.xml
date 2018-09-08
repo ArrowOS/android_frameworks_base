@@ -85,27 +85,27 @@
   <string name="accessibility_quick_settings_sync_changed_off">Đồng bộ đã tắt</string>
   <string name="accessibility_quick_settings_sync_changed_on">Đồng bộ đã bật</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong 1 phút.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong <xliff:g id="number">%d</xliff:g> phút.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
-  <string name="recents_app_killed">App killed</string>
+  <string name="clear_recents">Đóng tất cả ứng dụng gần đây</string>
+  <string name="recents_app_killed">Đã dừng ứng dụng</string>
   <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
   <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
   <!-- Navigation bar Tile -->
-  <string name="quick_settings_navigation_bar">Navigation bar</string>
-  <string name="quick_settings_smartbar">SmartBar</string>
+  <string name="quick_settings_navigation_bar">Thanh điều hướng</string>
+  <string name="quick_settings_smartbar">Thanh thông minh</string>
   <string name="quick_settings_fling">Fling</string>
-  <string name="quick_settings_navigation_default">Stock</string>
-  <string name="quick_settings_navigation_disabled">Disabled</string>
+  <string name="quick_settings_navigation_default">Gốc</string>
+  <string name="quick_settings_navigation_disabled">Đã tắt</string>
   <!-- HW keys QS Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">Bật phím cứng</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Tắt phím cứng</string>
+  <string name="quick_settings_hwkeys_label">Phím cứng</string>
   <!-- QS customizer -->
-  <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
+  <string name="drag_or_tap_to_add_tiles">Kéo hoặc chạm để thêm ô</string>
   <!-- Battery saver tile -->
-  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
+  <string name="battery_saver_qs_tile_fully_charged">Đã sạc đầy</string>
 </resources>

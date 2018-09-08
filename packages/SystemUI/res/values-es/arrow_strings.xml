@@ -91,15 +91,15 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Cerrar recientes</string>
-  <string name="recents_app_killed">App killed</string>
-  <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
-  <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
+  <string name="recents_app_killed">Aplicación finalizada</string>
+  <string name="recents_locked_app_kill_warning">La aplicación está bloqueada. Forzar el cierre no descarta la aplicación.</string>
+  <string name="recents_kill_error_warning">No se pudo cerrar o detener esta aplicación. Operación abortada.</string>
   <!-- Navigation bar Tile -->
-  <string name="quick_settings_navigation_bar">Navigation bar</string>
+  <string name="quick_settings_navigation_bar">Barra de navegación</string>
   <string name="quick_settings_smartbar">SmartBar</string>
   <string name="quick_settings_fling">Fling</string>
-  <string name="quick_settings_navigation_default">Stock</string>
-  <string name="quick_settings_navigation_disabled">Disabled</string>
+  <string name="quick_settings_navigation_default">Predeterminado</string>
+  <string name="quick_settings_navigation_disabled">Desabilitado</string>
   <!-- HW keys QS Tile -->
   <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
   <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
@@ -107,5 +107,5 @@
   <!-- QS customizer -->
   <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
   <!-- Battery saver tile -->
-  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
+  <string name="battery_saver_qs_tile_fully_charged">Carga completada</string>
 </resources>

@@ -28,16 +28,16 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">اعادة تشغيل</string>
+  <string name="global_action_restart_system">إعادة التشغيل</string>
   <string name="global_action_restart_advanced">إعادة تشغيل متقدمة</string>
   <string name="global_action_restart_recovery">الإسترداد</string>
   <string name="global_action_restart_bootloader">محمل الإقلاع</string>
   <string name="global_action_restart_ui">واجهة النظام</string>
   <string name="global_action_restart_hot">اعادة تشغيل سريع</string>
-  <string name="global_action_screenshot">لقطة للشاشة</string>
+  <string name="global_action_screenshot">لقطة الشاشة</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">خطأ</string>
-  <string name="omnijaws_service_unkown">لا يوجد بيانات للطقس</string>
+  <string name="omnijaws_service_unkown">لا توجد بيانات حول الطقس</string>
   <string name="omnijaws_service_error_long">خطأ في تحميل بيانات الطقس</string>
   <string name="omnijaws_service_disabled">الخدمة معطّلة</string>
   <string name="omnijaws_detail_header">الطقس</string>
@@ -46,66 +46,66 @@
   <string name="omnijaws_package_not_available">OmniJaws غير متاح</string>
   <string name="omnijaws_service_last_update">آخر تحديث:</string>
   <!-- Weather string format in expanded statusbar header -->
-  <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <string name="status_bar_weather_format"><xliff:g id="درجة الحرارة">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
   <string name="statusbar_items_title">ايقونة شريط الحالة</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VOLTE</string>
+  <string name="status_bar_volte">الصوت عبر شبكة الجيل الرابع</string>
   <string name="systemui_tuner_navbar_title">الإعدادات الإفتراضية</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_preventpower">تجاوز زر التشغيل</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">السماح لتطبيق ما بأن يقوم بتجاوز زر التشغيل.</string>
+  <string name="permdesc_preventpower">السماح لتطبيق ما بتجاوز زر التشغيل.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_toggleNavigationEditor">التحكم فى محرر التنقل</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">سماح لتطبيق ما بالتحكم في محرر شريط التنقل.</string>
+  <string name="permdesc_toggleNavigationEditor">السماح لتطبيق ما بالتحكم في محرر شريط التنقل.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_title">غنائم Arrow</string>
   <string name="arrow_logo_summary">هذا هو Arrow! (أعد التشغيل النظام للتطبيق)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+  <string name="keyguard_indication_dash_charging_time">الشحن السريع (<xliff:g id="charging_time_left" example="4 ساعة و 2 دقيقة">%s</xliff:g> حتى الإمتلاء)</string>
   <string name="keyguard_plugged_in_dash_charging">الشحن السريع</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_turbo_power_time">متصل بشاحن سريع (<xliff:g id="charging_time_left">%s</xliff:g> حتى يكتمل)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">متصل بشاحن سريع</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">اﻹشعارات العلوية</string>
+  <string name="accessibility_quick_settings_heads_up_off">الإشعارات العلوية متوقفة.</string>
+  <string name="accessibility_quick_settings_heads_up_on">الإشعارات العلوية تعمل.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">تم تعطيل الإشعارات العلوية.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">تم تفعيل الإشعارات العلوية.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">‏تقييد USB</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">المزامنة</string>
+  <string name="accessibility_quick_settings_sync_off">المزامنة متوقفة</string>
+  <string name="accessibility_quick_settings_sync_on">تشغيل المزامنة</string>
+  <string name="accessibility_quick_settings_sync_changed_off">تم إيقاف المزامنة</string>
+  <string name="accessibility_quick_settings_sync_changed_on">تم تشغيل المزامنة</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="سلسلة">%s</xliff:g> • التنبيهات الخاطفة في وضع الغفوة لدقيقة واحدة.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="سلسلة">%s</xliff:g> • التنبيهات الخاطفة فى وضع الغفوة لمدة <xliff:g id="number">%d</xliff:g> دقائق.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
-  <string name="recents_app_killed">App killed</string>
-  <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
-  <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
+  <string name="clear_recents">إغلاق جميع البرامج المستخدمة</string>
+  <string name="recents_app_killed">تم إنهاء التطبيق</string>
+  <string name="recents_locked_app_kill_warning">التطبيق مقفل. يتم فرض الإيقاف بدون استبعاد التطبيق.</string>
+  <string name="recents_kill_error_warning">لا يمكن إنهاء التطبيق أو اغلاقه. تم إيقاف العملية.</string>
   <!-- Navigation bar Tile -->
-  <string name="quick_settings_navigation_bar">Navigation bar</string>
-  <string name="quick_settings_smartbar">SmartBar</string>
-  <string name="quick_settings_fling">Fling</string>
-  <string name="quick_settings_navigation_default">Stock</string>
-  <string name="quick_settings_navigation_disabled">Disabled</string>
+  <string name="quick_settings_navigation_bar">شريط التنقل</string>
+  <string name="quick_settings_smartbar">الشريط الذكي</string>
+  <string name="quick_settings_fling">السحب</string>
+  <string name="quick_settings_navigation_default">الإفتراضي</string>
+  <string name="quick_settings_navigation_disabled">معطّل</string>
   <!-- HW keys QS Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">أزرار الجهاز مفعلة</string>
+  <string name="accessibility_quick_settings_hwkeys_off">أزرار الجهاز معطلة</string>
+  <string name="quick_settings_hwkeys_label">أزرار الجهاز</string>
   <!-- QS customizer -->
-  <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
+  <string name="drag_or_tap_to_add_tiles">اسحب أو انقر لإضافة مربعات</string>
   <!-- Battery saver tile -->
-  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
+  <string name="battery_saver_qs_tile_fully_charged">مشحونة بالكامل</string>
 </resources>

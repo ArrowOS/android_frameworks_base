@@ -91,21 +91,21 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Sluit alle recente apps</string>
-  <string name="recents_app_killed">App killed</string>
-  <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
-  <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
+  <string name="recents_app_killed">App gestopt</string>
+  <string name="recents_locked_app_kill_warning">App is gesloten. De app wordt geforceerd gestopt maar niet verwijderd.</string>
+  <string name="recents_kill_error_warning">Kan deze app niet stoppen. Bewerking afgebroken.</string>
   <!-- Navigation bar Tile -->
-  <string name="quick_settings_navigation_bar">Navigation bar</string>
+  <string name="quick_settings_navigation_bar">Navigatiebalk</string>
   <string name="quick_settings_smartbar">SmartBar</string>
   <string name="quick_settings_fling">Fling</string>
-  <string name="quick_settings_navigation_default">Stock</string>
-  <string name="quick_settings_navigation_disabled">Disabled</string>
+  <string name="quick_settings_navigation_default">Standaard</string>
+  <string name="quick_settings_navigation_disabled">Uitgeschakeld</string>
   <!-- HW keys QS Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">HW knoppen aan</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW knoppen uit</string>
+  <string name="quick_settings_hwkeys_label">HW knoppen</string>
   <!-- QS customizer -->
-  <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
+  <string name="drag_or_tap_to_add_tiles">Sleep of tik om tegels toe te voegen</string>
   <!-- Battery saver tile -->
-  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
+  <string name="battery_saver_qs_tile_fully_charged">Volledig opgeladen</string>
 </resources>
