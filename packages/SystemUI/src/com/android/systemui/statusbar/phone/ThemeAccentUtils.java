@@ -50,17 +50,17 @@ public class ThemeAccentUtils {
     };
 
     private static final String[] DARK_THEMES = {
-        "com.android.system.theme.dark", // 0
-        "com.android.settings.theme.dark", // 1
-        "com.android.dui.theme.dark", // 2
-        "com.android.gboard.theme.dark", // 3
+        "com.android.system.theme.dark.arrow", // 0
+        "com.android.settings.theme.dark.arrow", // 1
+        "com.android.dui.theme.dark.arrow", // 2
+        "com.android.gboard.theme.dark.arrow", // 3
     };
 
     private static final String[] BLACK_THEMES = {
-        "com.android.system.theme.black", // 5
-        "com.android.settings.theme.black", // 6
-        "com.android.systemui.theme.black", // 7
-        "com.android.gboard.theme.black", // 8
+        "com.android.system.theme.black.arrow", // 5
+        "com.android.settings.theme.black.arrow", // 6
+        "com.android.systemui.theme.black.arrow", // 7
+        "com.android.gboard.theme.dark.arrow", // 8
     };
 
     private static final String STOCK_DARK_THEME = "com.android.systemui.theme.dark";
