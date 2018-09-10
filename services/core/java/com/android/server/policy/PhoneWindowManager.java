@@ -3865,8 +3865,8 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     + " policyFlags=" + Integer.toHexString(policyFlags));
         }
 
-        // Disable hw keys in Ambient
-        if (isDozeMode() && (appSwitchKey || homeKey || menuKey || backKey)) {
+        // Disable hw keys in Ambient and when screen off
+        if ((isDozeMode() || !isScreenOn()) && (appSwitchKey || homeKey || menuKey || backKey)) {
             return 0;
         }
 
