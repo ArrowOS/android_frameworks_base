@@ -19,7 +19,7 @@
     android:viewportHeight="24.0"
     android:viewportWidth="24.0"
     android:width="24.0dp"
-    android:tint="?attr/colorControlNormal"
+    android:tint="?android:attr/colorAccent"
     android:autoMirrored="true">
 
     <group
