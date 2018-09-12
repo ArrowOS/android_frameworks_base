@@ -36,34 +36,34 @@
   <string name="global_action_restart_hot">Швидке</string>
   <string name="global_action_screenshot">Знімок екрану</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Помилка</string>
-  <string name="omnijaws_service_unkown">Немає даних про погоду</string>
-  <string name="omnijaws_service_error_long">Помилка завантаження даних про погоду</string>
-  <string name="omnijaws_service_disabled">Службу вимкнено</string>
-  <string name="omnijaws_detail_header">Погода</string>
-  <string name="omnijaws_label_default">Погода</string>
-  <string name="omnijaws_current_text">Зараз</string>
-  <string name="omnijaws_package_not_available">OmniJaws не доступний</string>
-  <string name="omnijaws_service_last_update">Останнє оновлення:</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Значок в рядку стану</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
   <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Налаштування за замовчуванням</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">змінити функцію клавіши живлення</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Дозволити додатку змінити функцію клавіши живлення.</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">керувати редактором панелі навігації</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Дозволяє додатку редагувати панель навігації.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Логотип Arrow</string>
-  <string name="arrow_logo_summary">Логотип Arrow (перезавантажте інтерфейс системи для запуску)</string>
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Швидке заряджання (<xliff:g id="charging_time_left" example="4 години і 2 хвилини">%s</xliff:g> до повного зарядження)</string>
   <string name="keyguard_plugged_in_dash_charging">Швидке заряджання</string>
@@ -71,11 +71,11 @@
   <string name="keyguard_indication_turbo_power_time">Швидка зарядка під\'єднана (<xliff:g id="charging_time_left">%s</xliff:g> до повного зарядження)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Швидка зарядка під\'єднана</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Спливаючі повідомлення</string>
-  <string name="accessibility_quick_settings_heads_up_off">Спливаючі повідомлення вимкнуті.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Спливаючі повідомлення увімкнуті.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Спливаючі повідомлення вимкнено.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Спливаючі повідомлення увімкнено.</string>
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">USB-модем</string>
   <!-- Sync QS Tile -->
@@ -91,7 +91,7 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Закрити всі</string>
-  <string name="recents_app_killed">Програма закрита</string>
+  <string name="recents_app_killed">App killed</string>
   <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
   <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
   <!-- Navigation bar Tile -->

@@ -36,34 +36,34 @@
   <string name="global_action_restart_hot">ソフトリブート</string>
   <string name="global_action_screenshot">スクリーンショット</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">エラー</string>
-  <string name="omnijaws_service_unkown">気象情報がありません</string>
-  <string name="omnijaws_service_error_long">気象データの読み込みエラー</string>
-  <string name="omnijaws_service_disabled">サービスは無効です</string>
-  <string name="omnijaws_detail_header">天気</string>
-  <string name="omnijaws_label_default">天気</string>
-  <string name="omnijaws_current_text">現在</string>
-  <string name="omnijaws_package_not_available">OmniJawsは使用できません</string>
-  <string name="omnijaws_service_last_update">最終更新：</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">ステータスバーアイコン</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VoLTE</string>
-  <string name="systemui_tuner_navbar_title">標準の設定</string>
+  <string name="status_bar_volte">VOLTE</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">電源ボタンの置き換え</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">アプリが電源ボタンの機能を置き換えることを許可する</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">ナビゲーションエディターの制御</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">アプリのナビゲーションバーエディターの制御を許可する</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrowロゴ</string>
-  <string name="arrow_logo_summary">これは矢印です！（システムUIを再起動して適用）</string>
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">急速充電中（充電完了まで<xliff:g id="Charging_TIME_LEFT">%s</xliff:g>）</string>
   <string name="keyguard_plugged_in_dash_charging">急速充電中</string>
@@ -71,11 +71,11 @@
   <string name="keyguard_indication_turbo_power_time">急速充電中（充電完了まで<xliff:g id="charging_time_left">%s</xliff:g>）</string>
   <string name="keyguard_plugged_in_turbo_power_charging">急速充電中</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Heads Up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads Up オフ</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">USBテザリング</string>
   <!-- Sync QS Tile -->
@@ -91,21 +91,21 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">最近使った全てのアプリを閉じる</string>
-  <string name="recents_app_killed">アプリを終了しました</string>
-  <string name="recents_locked_app_kill_warning">アプリはロックされています。このアプリを強制停止しても終了しません。</string>
-  <string name="recents_kill_error_warning">このアプリの強制終了や強制停止ができませんでした。 操作が中止されました。</string>
+  <string name="recents_app_killed">App killed</string>
+  <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
+  <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
   <!-- Navigation bar Tile -->
-  <string name="quick_settings_navigation_bar">ナビゲーションバー</string>
-  <string name="quick_settings_smartbar">スマートバー</string>
+  <string name="quick_settings_navigation_bar">Navigation bar</string>
+  <string name="quick_settings_smartbar">SmartBar</string>
   <string name="quick_settings_fling">Fling</string>
-  <string name="quick_settings_navigation_default">標準</string>
-  <string name="quick_settings_navigation_disabled">無効</string>
+  <string name="quick_settings_navigation_default">Stock</string>
+  <string name="quick_settings_navigation_disabled">Disabled</string>
   <!-- HW keys QS Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">ハードウェアキー オン</string>
-  <string name="accessibility_quick_settings_hwkeys_off">ハードウェアキー オフ</string>
-  <string name="quick_settings_hwkeys_label">ハードウェアキー</string>
+  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
+  <string name="quick_settings_hwkeys_label">HW keys</string>
   <!-- QS customizer -->
-  <string name="drag_or_tap_to_add_tiles">タイルを追加するにはドラックかタップしてください</string>
+  <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
   <!-- Battery saver tile -->
-  <string name="battery_saver_qs_tile_fully_charged">充電完了</string>
+  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
 </resources>

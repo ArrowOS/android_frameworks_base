@@ -21,13 +21,13 @@
   <string name="reboot_title">Neustart</string>
   <string name="reboot_message">System neustarten</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">navigationseditor steuern</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Ermöglicht einer App die Kontrolle des Navigationsleisten-Editors.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Spoof Paketsignatur</string>
+  <string name="permlab_fakePackageSignature">Spoof package signature</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_fakePackageSignature">Ermöglicht der App, so zu tun, als wäre sie eine andere App. Schädliche Anwendungen können dies möglicherweise verwenden, um auf private Anwendungsdaten zuzugreifen. Gewähren Sie diese Erlaubnis nur mit Vorsicht!</string>
+  <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
   <!-- Pocket Lock -->
-  <string name="pocket_lock_message_long_press">Power-Button lange gedrückt halten, um mit dem Gerät zu interagieren</string>
+  <string name="pocket_lock_message_long_press">Long press power button to interact</string>
 </resources>

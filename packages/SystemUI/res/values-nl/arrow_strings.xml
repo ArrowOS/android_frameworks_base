@@ -36,34 +36,34 @@
   <string name="global_action_restart_hot">Snel</string>
   <string name="global_action_screenshot">Schermafbeelding</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Fout</string>
-  <string name="omnijaws_service_unkown">Geen weergegevens</string>
-  <string name="omnijaws_service_error_long">Fout bij het laden van weergegevens</string>
-  <string name="omnijaws_service_disabled">Service is uitgeschakeld</string>
-  <string name="omnijaws_detail_header">Weer</string>
-  <string name="omnijaws_label_default">Weer</string>
-  <string name="omnijaws_current_text">Nu</string>
-  <string name="omnijaws_package_not_available">OmniJaws niet beschikbaar</string>
-  <string name="omnijaws_service_last_update">Laatste update:</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Statusbalk icoon</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VoLTE</string>
-  <string name="systemui_tuner_navbar_title">Standaard instellingen</string>
+  <string name="status_bar_volte">VOLTE</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">negeer de aan / uit-knop</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Hiermee kan een app het gedrag van de aan/uit-knop overschrijven.</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">navigatie-editor</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Staat toe dat een applicatie de navigatiebalk-editor beheert.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow logo op statusbalk</string>
-  <string name="arrow_logo_summary">Dit is Arrow! (Herstart SysteemUI om toe te passen)</string>
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Dash Laden (<xliff:g id="charging_time_left" voorbeeld="4 uren en 2 minuten">%s</xliff:g> tot volledig vol)</string>
   <string name="keyguard_plugged_in_dash_charging">Dash Opladen</string>
@@ -71,11 +71,11 @@
   <string name="keyguard_indication_turbo_power_time">TurboPower aangesloten (<xliff:g id="charging_time_left">%s</xliff:g> tot volledig opgeladen)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower verbonden</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Zwevende notificaties</string>
-  <string name="accessibility_quick_settings_heads_up_off">Zwevende meldingen uit.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Zwevende meldingen aan.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Zwevende meldingen uitgeschakeld.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Zwevende meldingen ingeschakeld.</string>
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">USB tethering</string>
   <!-- Sync QS Tile -->

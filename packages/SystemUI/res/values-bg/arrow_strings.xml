@@ -28,13 +28,13 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reiniciar</string>
-  <string name="global_action_restart_advanced">Reinicialização avançada</string>
-  <string name="global_action_restart_recovery">Reinicar em Recovery Mode</string>
-  <string name="global_action_restart_bootloader">Reiniciar em Bootloader</string>
-  <string name="global_action_restart_ui">Interface do sistema</string>
-  <string name="global_action_restart_hot">Reinicio rápido</string>
-  <string name="global_action_screenshot">Captura de Ecrã</string>
+  <string name="global_action_restart_system">Рестартиране</string>
+  <string name="global_action_restart_advanced">Разширено рестартиране</string>
+  <string name="global_action_restart_recovery">Режим на Възстановяване</string>
+  <string name="global_action_restart_bootloader">Буутлоудър</string>
+  <string name="global_action_restart_ui">Системен UI</string>
+  <string name="global_action_restart_hot">Горещо</string>
+  <string name="global_action_screenshot">Екранна снимка</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">Error</string>
   <string name="omnijaws_service_unkown">No weather data</string>
@@ -65,11 +65,11 @@
   <string name="arrow_logo_title">Arrow swag</string>
   <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Indicador de carregamento (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> até estar completo)</string>
-  <string name="keyguard_plugged_in_dash_charging">Indicador de carregamento</string>
+  <string name="keyguard_indication_dash_charging_time">Бързо зареждане (<xliff:g id="charging_time_left" example="4 часа и 2 минути">%s</xliff:g> до пълното зареждане)</string>
+  <string name="keyguard_plugged_in_dash_charging">Бързо зареждане</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">Carregando rápido ligado(<xliff:g id="charging_time_left">%s</xliff:g> até à carga máxima)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">Carregamento rápido ligado</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower е свързан (<xliff:g id="charging_time_left">%s</xliff:g> до пълно зареждане)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower е свързан</string>
   <!-- Heads up QS tile -->
   <string name="quick_settings_heads_up_label">Heads up</string>
   <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
@@ -77,20 +77,20 @@
   <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
   <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">Partilha de ligação por USB</string>
+  <string name="quick_settings_usb_tether_label">USB Тетъринг</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sincronização</string>
-  <string name="accessibility_quick_settings_sync_off">Sincronização desativada</string>
-  <string name="accessibility_quick_settings_sync_on">Sincronização ativada</string>
-  <string name="accessibility_quick_settings_sync_changed_off">A sincronização foi desativada</string>
-  <string name="accessibility_quick_settings_sync_changed_on">A sincronização foi ativada</string>
+  <string name="quick_settings_sync_label">Синхронизиране</string>
+  <string name="accessibility_quick_settings_sync_off">Синхронизация изключена</string>
+  <string name="accessibility_quick_settings_sync_on">Синхронизация включена</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Синхронизацията е изключена</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Синхронизацията е включена</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - as notificações flutuantes vão parar por 1 minuto.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - as notificações flutuantes vão parar por <xliff:g id="number">%d</xliff:g> minutos.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Изскачащите известия са отложени за 1 минута.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Изскачащите известия са отложени за <xliff:g id="number">%d</xliff:g> минути.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Fechar notificações</string>
+  <string name="clear_recents">Затворете всички досегашни</string>
   <string name="recents_app_killed">App killed</string>
   <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
   <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
