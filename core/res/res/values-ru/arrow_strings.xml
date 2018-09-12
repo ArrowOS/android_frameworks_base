@@ -19,5 +19,5 @@
   <!-- Power menu -->
   <string name="reboot_title">Перезагрузить</string>
   <string name="reboot_message">Система перезагружается</string>
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Значки строки состояния</string>
 </resources>

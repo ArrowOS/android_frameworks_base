@@ -17,7 +17,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Power menu -->
-  <string name="reboot_title">Neustart</string>
-  <string name="reboot_message">System neustarten</string>
-  <string name="statusbar_items_title">Statusbar Symbol</string>
+  <string name="reboot_title">Ponovno pokretanje</string>
+  <string name="reboot_message">Ponovno pokretanje sistema</string>
+  <string name="statusbar_items_title">Ikonica statusne trake</string>
 </resources>
