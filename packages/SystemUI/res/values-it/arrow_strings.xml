@@ -36,34 +36,34 @@
   <string name="global_action_restart_hot">Riavvio veloce</string>
   <string name="global_action_screenshot">Cattura schermo</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Errore</string>
-  <string name="omnijaws_service_unkown">Dati meteo non disponibili</string>
-  <string name="omnijaws_service_error_long">Errore durante il caricamento dei dati meteo</string>
-  <string name="omnijaws_service_disabled">Servizio disabilitato</string>
-  <string name="omnijaws_detail_header">Meteo</string>
-  <string name="omnijaws_label_default">Meteo</string>
-  <string name="omnijaws_current_text">Adesso</string>
-  <string name="omnijaws_package_not_available">OmniJaws non disponibile</string>
-  <string name="omnijaws_service_last_update">Ultimo aggiornamento:</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Icona barra di stato</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
   <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Impostazioni predefinite</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">escludi tasto di accensione</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Consenti ad un\'applicazione di escludere il tasto di accensione.</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">controllo editor della barra di navigazione</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Consenti ad un\'applicazione di controllare l\'editor della barra di navigazione.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Logo Arrow</string>
-  <string name="arrow_logo_summary">Questo è Arrow! (Riavvia SystemUI per applicare)</string>
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Ricarica rapida (<xliff:g id="charging_time_left" example="4 ore e 2 minuti">%s</xliff:g> al termine)</string>
   <string name="keyguard_plugged_in_dash_charging">Ricarica rapida</string>
@@ -71,11 +71,11 @@
   <string name="keyguard_indication_turbo_power_time">TurboPower connesso (<xliff:g id="charging_time_left">%s</xliff:g> al termine)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connesso</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Notifiche fluttuanti</string>
-  <string name="accessibility_quick_settings_heads_up_off">Notifiche fluttuanti disattivate.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Notifiche fluttuanti attivate.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Notifiche fluttuanti disattivate.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Notifiche fluttuanti attivate.</string>
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">Tethering USB</string>
   <!-- Sync QS Tile -->
@@ -91,21 +91,21 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Chiudi app recenti</string>
-  <string name="recents_app_killed">Applicazione terminata</string>
-  <string name="recents_locked_app_kill_warning">L\'app è bloccata. Forza l\'arresto senza terminare questa app.</string>
-  <string name="recents_kill_error_warning">Impossibile terminare o forzare l\'arresto di questa app. Operazione fallita.</string>
+  <string name="recents_app_killed">App killed</string>
+  <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
+  <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
   <!-- Navigation bar Tile -->
-  <string name="quick_settings_navigation_bar">Barra di navigazione</string>
-  <string name="quick_settings_smartbar">Barra intelligente</string>
+  <string name="quick_settings_navigation_bar">Navigation bar</string>
+  <string name="quick_settings_smartbar">SmartBar</string>
   <string name="quick_settings_fling">Fling</string>
-  <string name="quick_settings_navigation_default">Predefinito</string>
-  <string name="quick_settings_navigation_disabled">Disabilitato</string>
+  <string name="quick_settings_navigation_default">Stock</string>
+  <string name="quick_settings_navigation_disabled">Disabled</string>
   <!-- HW keys QS Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">Tasti hardware attivati</string>
-  <string name="accessibility_quick_settings_hwkeys_off">Tasti hardware disattivati</string>
-  <string name="quick_settings_hwkeys_label">Tasti hardware</string>
+  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
+  <string name="quick_settings_hwkeys_label">HW keys</string>
   <!-- QS customizer -->
-  <string name="drag_or_tap_to_add_tiles">Trascina o premi per aggiungere tiles</string>
+  <string name="drag_or_tap_to_add_tiles">Drag or tap to add tiles</string>
   <!-- Battery saver tile -->
-  <string name="battery_saver_qs_tile_fully_charged">Ricarica completa</string>
+  <string name="battery_saver_qs_tile_fully_charged">Fully Charged</string>
 </resources>

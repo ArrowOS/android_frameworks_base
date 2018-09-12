@@ -21,9 +21,9 @@
   <string name="reboot_title">रीबूट</string>
   <string name="reboot_message">एंड्राइड वापिस चालू हो रहा है</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">नेविगेशन एडिटर का नियंत्रण</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">एप्लीकेशन को नेविगेशन बार में बदलाव करने की अनुमति</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_fakePackageSignature">Spoof package signature</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

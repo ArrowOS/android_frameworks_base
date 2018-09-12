@@ -21,13 +21,13 @@
   <string name="reboot_title">Reiniciar</string>
   <string name="reboot_message">Reiniciando sistema</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">editor de navegación de control</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Permite a una aplicación controlar el editor de barra de navegación.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Paquete de falsificación de firma</string>
+  <string name="permlab_fakePackageSignature">Spoof package signature</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_fakePackageSignature">Permitir a la aplicación que pretenda ser una aplicación diferente. Las aplicaciones maliciosas deben estar capacitadas para usar este acceso privado a los datos de la aplicación. ¡Solamente Conceda este permiso con cuidado!</string>
+  <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
   <!-- Pocket Lock -->
-  <string name="pocket_lock_message_long_press">Mantenga pulsado el botón de encendido para interactuar</string>
+  <string name="pocket_lock_message_long_press">Long press power button to interact</string>
 </resources>

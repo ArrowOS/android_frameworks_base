@@ -28,13 +28,13 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
-  <string name="global_action_restart_recovery">Recovery</string>
-  <string name="global_action_restart_bootloader">Bootloader</string>
-  <string name="global_action_restart_ui">SystemUI</string>
+  <string name="global_action_restart_system">다시시작</string>
+  <string name="global_action_restart_advanced">재시작 옵션</string>
+  <string name="global_action_restart_recovery">복구모드</string>
+  <string name="global_action_restart_bootloader">부트로더</string>
+  <string name="global_action_restart_ui">시스템UI</string>
   <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_screenshot">스크린샷</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">Error</string>
   <string name="omnijaws_service_unkown">No weather data</string>
@@ -65,11 +65,11 @@
   <string name="arrow_logo_title">Arrow swag</string>
   <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Dash 고속충전 (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> 후 충전 완료)</string>
+  <string name="keyguard_plugged_in_dash_charging">Dash 충전 중</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower 연결됨 (풀 충전까지 <xliff:g id="charging_time_left">%s</xliff:g> 남음)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower 연결됨</string>
   <!-- Heads up QS tile -->
   <string name="quick_settings_heads_up_label">Heads up</string>
   <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>

@@ -28,13 +28,13 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- Power menu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
-  <string name="global_action_restart_recovery">Recovery</string>
-  <string name="global_action_restart_bootloader">Bootloader</string>
-  <string name="global_action_restart_ui">SystemUI</string>
-  <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_restart_system">הפעלה מחדש</string>
+  <string name="global_action_restart_advanced">הפעלה מתקדמת מחדש</string>
+  <string name="global_action_restart_recovery">שיקום</string>
+  <string name="global_action_restart_bootloader">מנהל אתחול</string>
+  <string name="global_action_restart_ui">מנשק המערכת</string>
+  <string name="global_action_restart_hot">חם</string>
+  <string name="global_action_screenshot">צילום מסך</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">Error</string>
   <string name="omnijaws_service_unkown">No weather data</string>
@@ -79,18 +79,18 @@
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">USB tethering</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">סנכרון</string>
+  <string name="accessibility_quick_settings_sync_off">כיבוי סנכרון</string>
+  <string name="accessibility_quick_settings_sync_on">הפעלת סנכרון</string>
+  <string name="accessibility_quick_settings_sync_changed_off">סנכרון כבוי</string>
+  <string name="accessibility_quick_settings_sync_changed_on">סנכרון הופעל</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">סגירת כל האחרונים</string>
   <string name="recents_app_killed">App killed</string>
   <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
   <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>

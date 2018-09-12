@@ -36,31 +36,31 @@
   <string name="global_action_restart_hot">Nopea-uudelleenkäynnistys</string>
   <string name="global_action_screenshot">Ruudunkaappaus</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Virhe</string>
-  <string name="omnijaws_service_unkown">Säätietoja ei saatavilla</string>
-  <string name="omnijaws_service_error_long">Virhe ladattaessa säätietoja</string>
-  <string name="omnijaws_service_disabled">Palvelu poissa käytöstä</string>
-  <string name="omnijaws_detail_header">Sää</string>
-  <string name="omnijaws_label_default">Sää</string>
-  <string name="omnijaws_current_text">Nyt</string>
-  <string name="omnijaws_package_not_available">Omnijaws ei ole saatavilla</string>
-  <string name="omnijaws_service_last_update">Viimeisin päivitys:</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Tilapalkin kuvake</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
-  <string name="status_bar_volte">VoLTE</string>
-  <string name="systemui_tuner_navbar_title">Oletusasetukset</string>
+  <string name="status_bar_volte">VOLTE</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">ohita virtanäppäin</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Sallii sovelluksen ohittaa virtapainikkeen käytön.</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">hallitse navigointipalkin editointia</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Antaa sovelluksen hallita navigointipalkin muokkausta.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
   <string name="arrow_logo_title">Arrow swag</string>
   <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>

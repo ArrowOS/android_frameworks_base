@@ -21,13 +21,13 @@
   <string name="reboot_title">Khởi động lại</string>
   <string name="reboot_message">Đang khởi động lại hệ thống</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">trình tùy biến thanh điều hướng</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Cho phép ứng dụng kiểm soát chỉnh sửa thanh điều hướng.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Chữ ký gói giả mạo</string>
+  <string name="permlab_fakePackageSignature">Spoof package signature</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_fakePackageSignature">Cho phép ứng dụng giả mạo là một ứng dụng khác. Ứng dụng độc hại có thể sử dụng để truy cập vào dữ liệu riêng của ứng dụng khác. Hãy cấp quyền truy cập một cách thận trọng!</string>
+  <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
   <!-- Pocket Lock -->
-  <string name="pocket_lock_message_long_press">Nhấn giữ nút nguồn để tương tác</string>
+  <string name="pocket_lock_message_long_press">Long press power button to interact</string>
 </resources>

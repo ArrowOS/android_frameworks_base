@@ -22,7 +22,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description of the data connection type HSPA+ for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_data_connection_hspap">H+</string>
+  <string name="accessibility_data_connection_hspap">HSPA+</string>
   <!-- Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated.
@@ -36,34 +36,34 @@
   <string name="global_action_restart_hot">Quente</string>
   <string name="global_action_screenshot">Captura de tela</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Erro</string>
-  <string name="omnijaws_service_unkown">Sem informações meteorológicas</string>
-  <string name="omnijaws_service_error_long">Erro ao carregar as informações meteorológicas</string>
-  <string name="omnijaws_service_disabled">Serviço desabilitado</string>
-  <string name="omnijaws_detail_header">Clima</string>
-  <string name="omnijaws_label_default">Clima</string>
-  <string name="omnijaws_current_text">Novo</string>
-  <string name="omnijaws_package_not_available">OmniJaws indisponível</string>
-  <string name="omnijaws_service_last_update">Última atualização:</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Ícone da barra de status</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
   <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Configurações padrão</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">substituir o botão de ligar</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Permite que um aplicativo substitua o botão liga / desliga.</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">editor de controle de navegação</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Permite que um aplicativo controle o editor da barra de navegação.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Logo Arrow</string>
-  <string name="arrow_logo_summary">Isto é Arrow! (reiniciar interface do sistema para aplicar)</string>
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Carregamento Rápido (<xliff:g id="charging_time_left">%s</xliff:g> até concluir)</string>
   <string name="keyguard_plugged_in_dash_charging">Carregamento Rápido</string>
@@ -71,11 +71,11 @@
   <string name="keyguard_indication_turbo_power_time">TurboPower conectado (<xliff:g id="charging_time_left">%s</xliff:g> até concluir)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower conectado</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Notificações pop-up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Notificações pop-up desativadas.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Notificações pop-up ativadas.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Notificações pop-up foram desativadas.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">As notificações pop-up foram ativadas.</string>
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">Vínculo USB</string>
   <!-- Sync QS Tile -->

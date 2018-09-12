@@ -22,7 +22,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Content description of the data connection type HSPA+ for accessibility (not shown on the screen). [CHAR LIMIT=NONE] -->
-  <string name="accessibility_data_connection_hspap">HSPA +</string>
+  <string name="accessibility_data_connection_hspap">HSPA+</string>
   <!-- Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated.
@@ -36,34 +36,34 @@
   <string name="global_action_restart_hot">Nhiều quan tâm</string>
   <string name="global_action_screenshot">Ảnh chụp màn hình</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Lỗi</string>
-  <string name="omnijaws_service_unkown">Không có dữ liệu thời tiết</string>
-  <string name="omnijaws_service_error_long">Lỗi tải dữ liệu thời tiết</string>
-  <string name="omnijaws_service_disabled">Dịch vụ này bị vô hiệu hóa</string>
-  <string name="omnijaws_detail_header">Thời tiết</string>
-  <string name="omnijaws_label_default">Thời tiết</string>
-  <string name="omnijaws_current_text">Bây giờ</string>
-  <string name="omnijaws_package_not_available">OmniJaws không có sẵn</string>
-  <string name="omnijaws_service_last_update">Lần cập nhật cuối:</string>
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Statusbar icons -->
-  <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
+  <string name="statusbar_items_title">Statusbar icon</string>
   <!-- volte icon switch -->
   <string name="status_bar_volte">VOLTE</string>
-  <string name="systemui_tuner_navbar_title">Cài đặt gốc</string>
+  <string name="systemui_tuner_navbar_title">Stock settings</string>
   <!-- Empty -->
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_preventpower">thay thế phím nguồn</string>
+  <string name="permlab_preventpower">override power key</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_preventpower">Cho phép ứng dụng thay thế phím nguồn.</string>
+  <string name="permdesc_preventpower">Allows an app to override the power key.</string>
   <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_toggleNavigationEditor">trình tùy biến thanh điều hướng</string>
+  <string name="permlab_toggleNavigationEditor">control navigation editor</string>
   <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_toggleNavigationEditor">Cho phép ứng dụng kiểm soát chỉnh sửa thanh điều hướng.</string>
+  <string name="permdesc_toggleNavigationEditor">Allows an application to control the navigation bar editor.</string>
   <!-- logo -->
-  <string name="arrow_logo_title">Arrow biểu tượng trên thanh trạng thái</string>
-  <string name="arrow_logo_summary">Đây là Arrow! (khởi động lại SystemUI để áp dụng)</string>
+  <string name="arrow_logo_title">Arrow swag</string>
+  <string name="arrow_logo_summary">This is Arrow! (restart SystemUI to apply)</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Đang sạc nhanh (<xliff:g id="charging_time_left" example="4 giờ: 2 phút">%s</xliff:g>nữa sẽ đầy!)</string>
   <string name="keyguard_plugged_in_dash_charging">Sạc nhanh</string>
@@ -71,11 +71,11 @@
   <string name="keyguard_indication_turbo_power_time">Đang sạc nhanh (<xliff:g id="charging_time_left">%s</xliff:g> cho đến khi đầy)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Đã kết nối sạc nhanh</string>
   <!-- Heads up QS tile -->
-  <string name="quick_settings_heads_up_label">Thông báo nổi</string>
-  <string name="accessibility_quick_settings_heads_up_off">Tắt thông báo nổi.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Bật thông báo nổi.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Thông báo nổi đã tắt.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Thông báo nổi đã bật.</string>
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">Chia sẻ kết nối qua USB</string>
   <!-- Sync QS Tile -->
@@ -85,12 +85,12 @@
   <string name="accessibility_quick_settings_sync_changed_off">Đồng bộ đã tắt</string>
   <string name="accessibility_quick_settings_sync_changed_on">Đồng bộ đã bật</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong 1 phút.</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong <xliff:g id="number">%d</xliff:g> phút.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Đóng tất cả ứng dụng gần đây</string>
   <string name="recents_app_killed">App killed</string>
   <string name="recents_locked_app_kill_warning">App is locked. Force stopping but not dismissing this app.</string>
   <string name="recents_kill_error_warning">Couldn\'t kill or force stop this app. Operation aborted.</string>
