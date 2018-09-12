@@ -17,7 +17,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Power menu -->
-  <string name="reboot_title">Reboot</string>
-  <string name="reboot_message">Rebooting system</string>
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="reboot_title">Reiniciar</string>
+  <string name="reboot_message">Reiniciar sistema</string>
+  <string name="statusbar_items_title">Ícones da barra de estado</string>
 </resources>

@@ -19,5 +19,5 @@
   <!-- Power menu -->
   <string name="reboot_title">Reiniciar</string>
   <string name="reboot_message">Reiniciando sistema</string>
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Icono de barra de estado</string>
 </resources>

@@ -34,10 +34,10 @@
   <string name="accessibility_quick_settings_sync_changed_off">Synchronizacja wyłączona</string>
   <string name="accessibility_quick_settings_sync_changed_on">Synchronizacja włączona</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Dźwięk</string>
+  <string name="quick_settings_sound_ring">Dzwonek</string>
+  <string name="quick_settings_sound_vibrate">Wibracja</string>
+  <string name="quick_settings_sound_dnd">Nie przesszkadzać</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Restart</string>
   <string name="global_action_restart_advanced">Zaawansowany restart</string>
@@ -53,36 +53,48 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Zamknij ostanie aplikacje</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">Domyślne</string>
+  <string name="lockscreen_hidden">Żaden</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
+  <string name="custom_hint">Przesuń palcem od ikony, aby uruchomić</string>
   <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">Menu / Keyboard Switcher</string>
-  <string name="select_button">Select button to add</string>
-  <string name="add_button">Add button</string>
-  <string name="save">Save</string>
-  <string name="reset">Reset</string>
-  <string name="select_keycode">Select Keyboard Button</string>
-  <string name="left">Left</string>
-  <string name="right">Right</string>
-  <string name="navbar_editor_title">Editor</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
+  <string name="preview">Podgląd</string>
+  <string name="keycode">Klawisz</string>
+  <string name="no_home_title">Brak przycisku ekranu głównego</string>
+  <string name="no_home_message">Do prawidłowej obsługi urządzenia potrzebny jest przycisk ekranu głównego. Dodaj go, zanim zapiszesz zmiany.</string>
+  <string name="clipboard_description">Możesz przeciągać elementy bezpośrednio do schowka. Możesz też przeciągać umieszczone tam wcześniej elementy poza schowek.</string>
+  <string name="keycode_description">Na pasku nawigacji możesz umieszczać przyciski, które po naciśnięciu emulują funkcje klawiszy klawiatury. Najpierw musisz wybrać, jaki klawisz ma być przypisany do danego przycisku, a następnie wybrać dla niego grafikę.</string>
+  <string name="start">Rozpocznij</string>
+  <string name="center">Wyśrodkuj</string>
+  <string name="end">Koniec</string>
+  <string name="space">Spacja</string>
+  <string name="menu_ime">Menu / przełączanie klawiatury</string>
+  <string name="select_button">Wybierz przycisk do dodania</string>
+  <string name="add_button">Dodaj przycisk</string>
+  <string name="save">Zapisz</string>
+  <string name="reset">Zresetuj</string>
+  <string name="select_keycode">Wybierz przycisk klawiatury</string>
+  <string name="left">Lewo</string>
+  <string name="right">Prawo</string>
+  <string name="navbar_editor_title">Edytor</string>
+  <string name="navbar_editor_summary">Skonfiguruj pasek nawigacji</string>
+  <string name="statusbar_items_title">Ikony paska stanu</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Szybkie ładowanie (<xliff:g id="pozostały_czas" example="4 godziny i 2 minuty">%s</xliff:g> do pełnego naładowania)</string>
   <string name="keyguard_plugged_in_dash_charging">Szybkie ładowanie</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_turbo_power_time">TurboPower podłączony (<xliff:g id="charging_time_left">%s</xliff:g> do pełnego naładowania)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower podłączony</string>
+  <!-- Omni Weather -->
+  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_unkown">No weather data</string>
+  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_label_default">Weather</string>
+  <string name="omnijaws_current_text">Now</string>
+  <string name="omnijaws_package_not_available">OmniJaws not available</string>
+  <string name="omnijaws_service_last_update">Last update:</string>
+  <!-- Weather string format in expanded statusbar header -->
+  <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
 </resources>
