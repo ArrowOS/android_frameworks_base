@@ -4763,7 +4763,15 @@ public final class Settings {
         private static final Validator AICP_LOCKSCREEN_WEATHER_STYLE_VALIDATOR =
 		new SettingsValidators.InclusiveIntegerRangeValidator(0, 1);;
 
-    /**
+	/**
+	* @hide
+	*/
+	public static final String USE_OLD_MOBILETYPE = "use_old_mobiletype";
+
+	/** @hide */
+	private static final Validator USE_OLD_MOBILETYPE_VALIDATOR = BOOLEAN_VALIDATOR;
+
+	/**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -4841,6 +4849,7 @@ public final class Settings {
             LOCKSCREEN_WEATHER_SHOW_CITY,
             ONE_HAND_MODE_ENABLED,
 	    AICP_LOCKSCREEN_WEATHER_STYLE,
+            USE_OLD_MOBILETYPE,
         };
 
         /**
@@ -4991,6 +5000,8 @@ public final class Settings {
 	    PRIVATE_SETTINGS.add(BATTERY_SAVER_DARK_MODE);
             PRIVATE_SETTINGS.add(ONE_HAND_MODE_ENABLED);
 	    PRIVATE_SETTINGS.add(AICP_LOCKSCREEN_WEATHER_STYLE);
+            // Pre P Mobile Style
+            PRIVATE_SETTINGS.add(USE_OLD_MOBILETYPE);
         }
 
         /**
@@ -5099,6 +5110,7 @@ public final class Settings {
             VALIDATORS.put(CUSTOM_DEVICE_GESTURE_FEEDBACK_ENABLED, CUSTOM_DEVICE_GESTURE_FEEDBACK_ENABLED_VALIDATOR);
             VALIDATORS.put(CUSTOM_DEVICE_FEATURE_SETTINGS, CUSTOM_DEVICE_FEATURE_SETTINGS_VALIDATOR);
 	    VALIDATORS.put(AICP_LOCKSCREEN_WEATHER_STYLE,AICP_LOCKSCREEN_WEATHER_STYLE_VALIDATOR);
+	    VALIDATORS.put(USE_OLD_MOBILETYPE, USE_OLD_MOBILETYPE_VALIDATOR);
         }
 
         /**
