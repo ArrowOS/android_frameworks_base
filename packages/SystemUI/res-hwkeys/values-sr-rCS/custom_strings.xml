@@ -17,16 +17,16 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Bindable action labels -->
-  <string name="label_action_no_action">No action</string>
-  <string name="label_action_settings_panel">QS panel</string>
-  <string name="label_action_notification_panel">Notification panel</string>
-  <string name="label_action_screenshot">Screenshot</string>
-  <string name="label_action_region_screenshot">Partial screenshot</string>
-  <string name="label_action_screenrecord">Record screen</string>
-  <string name="label_action_expanded_desktop">Expanded desktop</string>
-  <string name="label_action_screen_off">Turn off screen</string>
-  <string name="label_action_force_close_app">Force close app</string>
-  <string name="label_action_google_assistant">Google assistant</string>
+  <string name="label_action_no_action">Nema akcije</string>
+  <string name="label_action_settings_panel">Panel brzih podešavanja</string>
+  <string name="label_action_notification_panel">Traka za obavještenja</string>
+  <string name="label_action_screenshot">Snimak ekrana</string>
+  <string name="label_action_region_screenshot">Djelomični snimak ekrana</string>
+  <string name="label_action_screenrecord">Snimanje ekrana</string>
+  <string name="label_action_expanded_desktop">Rašireni desktop</string>
+  <string name="label_action_screen_off">Ugasiti ekran</string>
+  <string name="label_action_force_close_app">Prisilno zaustaviti aplikaciju</string>
+  <string name="label_action_google_assistant">Google pomoćnik</string>
   <string name="label_action_in_app_search">In-app search</string>
   <string name="label_action_flashlight">Flashlight</string>
   <string name="label_action_bluetooth">Bluetooth</string>

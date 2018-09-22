@@ -38,6 +38,13 @@
   <string name="quick_settings_sound_ring">Ring</string>
   <string name="quick_settings_sound_vibrate">Vibrate</string>
   <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <!-- HW Keys Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Tasti hardware attivati</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Tasti HW disattivati</string>
+  <string name="quick_settings_hwkeys_label">Tasti HW</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Riavvia</string>
   <string name="global_action_restart_advanced">Riavvio avanzato</string>
@@ -86,15 +93,25 @@
   <string name="keyguard_indication_turbo_power_time">TurboPower connesso (<xliff:g id="charging_time_left">%s</xliff:g> al termine)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connesso</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Errore</string>
+  <string name="omnijaws_service_unkown">Dati meteo non disponibili</string>
+  <string name="omnijaws_service_error_long">Errore durante il caricamento dei dati meteo</string>
+  <string name="omnijaws_service_disabled">Servizio disabilitato</string>
+  <string name="omnijaws_detail_header">Meteo</string>
+  <string name="omnijaws_label_default">Meteo</string>
+  <string name="omnijaws_current_text">Adesso</string>
+  <string name="omnijaws_package_not_available">OmniJaws non disponibile</string>
+  <string name="omnijaws_service_last_update">Ultimo aggiornamento:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <!-- Caffeine QS Tile -->
+  <string name="quick_settings_caffeine_label">Caffeine</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">Notifiche a comparsa</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notifiche a comparsa disattivate.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Notifiche a comparsa attivate.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Notifiche a comparsa disattivate.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Notifiche a comparsa attivate.</string>
 </resources>
