@@ -38,6 +38,13 @@
   <string name="quick_settings_sound_ring">Ring</string>
   <string name="quick_settings_sound_vibrate">Vibrate</string>
   <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <!-- HW Keys Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Апаратні клавіші увімкнено</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Апаратні клавіші вимкнено</string>
+  <string name="quick_settings_hwkeys_label">Апаратні клавіші</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Перевантажити</string>
   <string name="global_action_restart_advanced">Розширене перезавантаження</string>
@@ -52,7 +59,7 @@
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Закрити всі</string>
+  <string name="clear_recents">Закрити всі нещодавні</string>
   <string name="lockscreen_default">Default</string>
   <string name="lockscreen_hidden">None</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
@@ -86,15 +93,25 @@
   <string name="keyguard_indication_turbo_power_time">Швидка зарядка під\'єднана (<xliff:g id="charging_time_left">%s</xliff:g> до повного зарядження)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Швидка зарядка під\'єднана</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Помилка</string>
+  <string name="omnijaws_service_unkown">Немає даних про погоду</string>
+  <string name="omnijaws_service_error_long">Помилка завантаження даних про погоду</string>
+  <string name="omnijaws_service_disabled">Службу вимкнено</string>
+  <string name="omnijaws_detail_header">Погода</string>
+  <string name="omnijaws_label_default">Погода</string>
+  <string name="omnijaws_current_text">Зараз</string>
+  <string name="omnijaws_package_not_available">OmniJaws недоступний</string>
+  <string name="omnijaws_service_last_update">Останнє оновлення:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <!-- Caffeine QS Tile -->
+  <string name="quick_settings_caffeine_label">Caffeine</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">Спливвючі сповіщення</string>
+  <string name="accessibility_quick_settings_heads_up_off">Сплмваючі сповіщення вимкнено.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Спливаючі сповіщення увімкнено.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Спливаючі сповіщення вимкнено.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Спливаючі сповіщення увімкнено.</string>
 </resources>
