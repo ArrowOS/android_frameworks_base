@@ -20,4 +20,8 @@
   <string name="reboot_title">다시시작</string>
   <string name="reboot_message">시스템 다시 시작 중</string>
   <string name="statusbar_items_title">Statusbar icon</string>
+  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permlab_fakePackageSignature">Spoof package signature</string>
+  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+  <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
 </resources>

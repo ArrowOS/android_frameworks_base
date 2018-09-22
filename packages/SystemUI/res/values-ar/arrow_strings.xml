@@ -38,6 +38,13 @@
   <string name="quick_settings_sound_ring">Ring</string>
   <string name="quick_settings_sound_vibrate">Vibrate</string>
   <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <!-- HW Keys Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">أزرار الجهاز مفعلة</string>
+  <string name="accessibility_quick_settings_hwkeys_off">أزرار الجهاز معطلة</string>
+  <string name="quick_settings_hwkeys_label">أزرار الجهاز</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">إعادة التشغيل</string>
   <string name="global_action_restart_advanced">إعادة تشغيل متقدمة</string>
@@ -86,15 +93,25 @@
   <string name="keyguard_indication_turbo_power_time">متصل بشاحن سريع (<xliff:g id="charging_time_left">%s</xliff:g> حتى يكتمل)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">متصل بشاحن سريع</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">خطأ</string>
+  <string name="omnijaws_service_unkown">لا توجد بيانات الطقس</string>
+  <string name="omnijaws_service_error_long">خطأ في تحميل بيانات الطقس</string>
+  <string name="omnijaws_service_disabled">تم تعطيل الخدمة</string>
+  <string name="omnijaws_detail_header">الطقس</string>
+  <string name="omnijaws_label_default">الطقس</string>
+  <string name="omnijaws_current_text">الآن</string>
+  <string name="omnijaws_package_not_available">OmniJaws غير متاح</string>
+  <string name="omnijaws_service_last_update">آخر تحديث:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <!-- Caffeine QS Tile -->
+  <string name="quick_settings_caffeine_label">Caffeine</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">اﻹشعارات العلوية</string>
+  <string name="accessibility_quick_settings_heads_up_off">الإشعارات العلوية متوقفة.</string>
+  <string name="accessibility_quick_settings_heads_up_on">الإشعارات العلوية تعمل.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">تم تعطيل الإشعارات العلوية.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">تم تفعيل الإشعارات العلوية.</string>
 </resources>

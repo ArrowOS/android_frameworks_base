@@ -26,18 +26,25 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">USB 网络共享</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">数据同步</string>
+  <string name="accessibility_quick_settings_sync_off">关闭同步</string>
+  <string name="accessibility_quick_settings_sync_on">开启同步</string>
+  <string name="accessibility_quick_settings_sync_changed_off">同步已关闭</string>
+  <string name="accessibility_quick_settings_sync_changed_on">同步已开启</string>
   <!-- Sound QS Tile -->
   <string name="quick_settings_sound_label">Sound</string>
   <string name="quick_settings_sound_ring">Ring</string>
   <string name="quick_settings_sound_vibrate">Vibrate</string>
   <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <!-- HW Keys Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">实体按键已启用</string>
+  <string name="accessibility_quick_settings_hwkeys_off">实体按键已禁用</string>
+  <string name="quick_settings_hwkeys_label">实体按键</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">重新启动</string>
   <string name="global_action_restart_advanced">高级重启</string>
@@ -47,12 +54,12 @@
   <string name="global_action_restart_hot">热重启</string>
   <string name="global_action_screenshot">屏幕截图</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 浮动通知暂停1分钟。</string>
+  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - 浮动通知暂停<xliff:g id="number">%d</xliff:g>分钟。</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">清理所有最近任务</string>
   <string name="lockscreen_default">Default</string>
   <string name="lockscreen_hidden">None</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
@@ -80,21 +87,31 @@
   <string name="navbar_editor_summary">Configure navigaton bar</string>
   <string name="statusbar_items_title">Statusbar icons</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">正在快速充电 (还需<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> 充满)</string>
+  <string name="keyguard_plugged_in_dash_charging">Dash 闪充中</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">正在快速充电 (还需 <xliff:g id="charging_time_left">%s</xliff:g> 充满)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">正在快速充电</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">错误</string>
+  <string name="omnijaws_service_unkown">无天气数据</string>
+  <string name="omnijaws_service_error_long">加载天气数据时出错</string>
+  <string name="omnijaws_service_disabled">已禁用服务</string>
+  <string name="omnijaws_detail_header">天气</string>
+  <string name="omnijaws_label_default">天气</string>
+  <string name="omnijaws_current_text">现在</string>
+  <string name="omnijaws_package_not_available">OmniJaws 不可用</string>
+  <string name="omnijaws_service_last_update">最新更新:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <!-- Caffeine QS Tile -->
+  <string name="quick_settings_caffeine_label">Caffeine</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">浮动通知</string>
+  <string name="accessibility_quick_settings_heads_up_off">关闭浮动通知</string>
+  <string name="accessibility_quick_settings_heads_up_on">开启浮动通知</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">浮动通知已关闭</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">浮动通知已开启</string>
 </resources>

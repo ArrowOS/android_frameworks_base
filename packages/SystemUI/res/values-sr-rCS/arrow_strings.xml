@@ -28,31 +28,38 @@
   <!-- USB tethering QS Tile -->
   <string name="quick_settings_usb_tether_label">USB tethering</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Sinhronizacija</string>
+  <string name="accessibility_quick_settings_sync_off">Sinhronizacija Ugašena</string>
+  <string name="accessibility_quick_settings_sync_on">Sinhronizacija upaljena</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sinhronizacija isključena</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sinhronizacija uključena</string>
   <!-- Sound QS Tile -->
   <string name="quick_settings_sound_label">Sound</string>
   <string name="quick_settings_sound_ring">Ring</string>
   <string name="quick_settings_sound_vibrate">Vibrate</string>
   <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <!-- HW Keys Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
+  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
+  <string name="global_action_restart_system">Ponovno pokretanje</string>
+  <string name="global_action_restart_advanced">Napredno ponovno pokretanje</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
   <string name="global_action_restart_ui">SystemUI</string>
-  <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
+  <string name="global_action_restart_hot">Brzi restart</string>
+  <string name="global_action_screenshot">Snimak ekrana</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
+  <string name="clear_recents">Zatvorite sve nedavne aplikacije</string>
   <string name="lockscreen_default">Default</string>
   <string name="lockscreen_hidden">None</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
@@ -80,21 +87,31 @@
   <string name="navbar_editor_summary">Configure navigaton bar</string>
   <string name="statusbar_items_title">Statusbar icons</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+  <string name="keyguard_indication_dash_charging_time">Dash Punjenje (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until do pune baterije)</string>
+  <string name="keyguard_plugged_in_dash_charging">Dash Punjenje</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_indication_turbo_power_time">TurboPower povezano (<xliff:g id="charging_time_left">%s</xliff:g> do pune baterije)</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower povezano</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Greška</string>
+  <string name="omnijaws_service_unkown">Nema vremenskih podataka</string>
+  <string name="omnijaws_service_error_long">Greška učitavanja vremenskih podataka</string>
+  <string name="omnijaws_service_disabled">Servis je ugašen</string>
+  <string name="omnijaws_detail_header">Vremenska prognoza</string>
+  <string name="omnijaws_label_default">Vremenska prognoza</string>
+  <string name="omnijaws_current_text">Trenutno</string>
+  <string name="omnijaws_package_not_available">OmniJaws nije dostupan</string>
+  <string name="omnijaws_service_last_update">Zadnje ažurirano:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <!-- Caffeine QS Tile -->
+  <string name="quick_settings_caffeine_label">Caffeine</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">Heads up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
 </resources>

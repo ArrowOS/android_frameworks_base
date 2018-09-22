@@ -38,6 +38,13 @@
   <string name="quick_settings_sound_ring">Ring</string>
   <string name="quick_settings_sound_vibrate">Vibrate</string>
   <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <!-- HW Keys Tile -->
+  <string name="accessibility_quick_settings_hwkeys_on">Donanım tuşları açık</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Donanım tuşları kapalı</string>
+  <string name="quick_settings_hwkeys_label">Donanım tuşları</string>
+  <!-- Screenshot QS tile -->
+  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Yeniden başlat</string>
   <string name="global_action_restart_advanced">Gelişmiş yeniden başlatma</string>
@@ -80,21 +87,31 @@
   <string name="navbar_editor_summary">Configure navigaton bar</string>
   <string name="statusbar_items_title">Statusbar icons</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Hızlı Şarj oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> kaldı)</string>
+  <string name="keyguard_indication_dash_charging_time">Dash Şarj oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> kaldı)</string>
   <string name="keyguard_plugged_in_dash_charging">Hızlı Şarj oluyor</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_turbo_power_time">Turbo şarj bağlandı (tam dolmasına <xliff:g id="charging_time_left">%s</xliff:g> kaldı)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Turbo şarj bağlandı</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Hata</string>
+  <string name="omnijaws_service_unkown">Hava durumu verisi yok</string>
+  <string name="omnijaws_service_error_long">Hava durumu verileri yüklenemedi</string>
+  <string name="omnijaws_service_disabled">Servis devre dışı</string>
+  <string name="omnijaws_detail_header">Hava durumu</string>
+  <string name="omnijaws_label_default">Hava durumu</string>
+  <string name="omnijaws_current_text">Şimdi</string>
+  <string name="omnijaws_package_not_available">OmniJaws mevcut değil</string>
+  <string name="omnijaws_service_last_update">Son güncelleme:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+  <!-- Caffeine QS Tile -->
+  <string name="quick_settings_caffeine_label">Caffeine</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <!-- Heads Up QS Tile -->
+  <string name="quick_settings_heads_up_label">Bildirim pencereleri</string>
+  <string name="accessibility_quick_settings_heads_up_off">Bildirim pencereleri kapalı.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Bildirim pencereleri açık.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Bildirim pencereleri kapatıldı.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Bildirim pencereleri açıldı.</string>
 </resources>
