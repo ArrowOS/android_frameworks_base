@@ -19,7 +19,7 @@
   <!-- Power menu -->
   <string name="reboot_title">Restartovat</string>
   <string name="reboot_message">Restartování systému</string>
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Ikona ve stavové liště</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_fakePackageSignature">Napodobit podpis balíčku</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

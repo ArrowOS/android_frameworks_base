@@ -19,9 +19,9 @@
   <!-- Power menu -->
   <string name="reboot_title">रीबूट</string>
   <string name="reboot_message">एंड्राइड वापिस चालू हो रहा है</string>
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">स्टेटसबार आइकन</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Spoof package signature</string>
+  <string name="permlab_fakePackageSignature">स्पूफ पैकेज हस्ताक्षर</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
+  <string name="permdesc_fakePackageSignature">इस अनुमति से एक ऐप दूसरे ऐप होने का नाटक कर सकता है। दुर्भावनापूर्ण ऐप इसका उपयोग निजी ऐप डेटा हासिल करने के लिए कर सकते हैं। सावधानी के साथ इस अनुमति को अनुदान दें!</string>
 </resources>

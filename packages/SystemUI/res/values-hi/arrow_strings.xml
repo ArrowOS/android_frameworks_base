@@ -26,24 +26,24 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">यूएसबी टेथरिंग</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">तुल्यकालन</string>
+  <string name="accessibility_quick_settings_sync_off">तुल्यकालन बंद</string>
+  <string name="accessibility_quick_settings_sync_on">तुल्यकालन चालू</string>
+  <string name="accessibility_quick_settings_sync_changed_off">तुल्यकालन को बंद किया गया है।</string>
+  <string name="accessibility_quick_settings_sync_changed_on">तुल्यकालन को चालू किया गया है।</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">ध्वनि</string>
+  <string name="quick_settings_sound_ring">रिंग</string>
+  <string name="quick_settings_sound_vibrate">कंपन</string>
+  <string name="quick_settings_sound_dnd">परेशान ना करें</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">हार्डवेयर बटन्स चालू</string>
+  <string name="accessibility_quick_settings_hwkeys_off">हार्डवेयर बटन्स बंद</string>
+  <string name="quick_settings_hwkeys_label">हार्डवेयर बटन्स</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
+  <string name="quick_settings_screenshot_label">स्क्रीनशॉट</string>
   <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">रीबूट</string>
