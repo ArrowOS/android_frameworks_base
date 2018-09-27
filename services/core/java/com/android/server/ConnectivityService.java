@@ -1887,6 +1887,19 @@ public class ConnectivityService extends IConnectivityManager.Stub
     }
 
     /**
+     * Update data activity tracking when network state is updated.
+     */
+    private void updateDataActivityTracking(NetworkAgentInfo newNetwork,
+            NetworkAgentInfo oldNetwork) {
+        if (newNetwork != null) {
+            setupDataActivityTracking(newNetwork);
+        }
+        if (oldNetwork != null) {
+            removeDataActivityTracking(oldNetwork);
+        }
+    }
+
+    /**
      * Reads the network specific MTU size from reources.
      * and set it on it's iface.
      */
@@ -2512,7 +2525,7 @@ public class ConnectivityService extends IConnectivityManager.Stub
         }
         nai.clearLingerState();
         if (nai.isSatisfyingRequest(mDefaultRequest.requestId)) {
-            removeDataActivityTracking(nai);
+            updateDataActivityTracking(null /*new Network*/, nai);
             notifyLockdownVpn(nai);
             ensureNetworkTransitionWakelock(nai.name());
         }
@@ -5169,7 +5182,6 @@ public class ConnectivityService extends IConnectivityManager.Stub
 
     private void makeDefault(NetworkAgentInfo newNetwork) {
         if (DBG) log("Switching to new default network: " + newNetwork);
-        setupDataActivityTracking(newNetwork);
         try {
             mNetd.setDefaultNetId(newNetwork.network.netId);
         } catch (Exception e) {
@@ -5344,6 +5356,7 @@ public class ConnectivityService extends IConnectivityManager.Stub
             }
         }
         if (isNewDefault) {
+            updateDataActivityTracking(newNetwork, oldDefaultNetwork);
             // Notify system services that this network is up.
             makeDefault(newNetwork);
             // Log 0 -> X and Y -> X default network transitions, where X is the new default.
