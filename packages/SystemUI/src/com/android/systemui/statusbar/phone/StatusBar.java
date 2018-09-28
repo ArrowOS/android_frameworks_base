@@ -4114,6 +4114,8 @@ public class StatusBar extends SystemUI implements DemoMode,
                             useDarkTheme, mLockscreenUserManager.getCurrentUserId());
                     mOverlayManager.setEnabled("com.android.gboard.theme.dark.arrow",
                             useDarkTheme, mLockscreenUserManager.getCurrentUserId());
+		    mOverlayManager.setEnabled("com.android.updater.theme.dark.arrow",
+                            useDarkTheme, mLockscreenUserManager.getCurrentUserId());
                     // Check for black and white accent so we don't end up
                     // with white on white or black on black
                     unfuckBlackWhiteAccent();
@@ -4132,6 +4134,8 @@ public class StatusBar extends SystemUI implements DemoMode,
                             useBlackTheme, mLockscreenUserManager.getCurrentUserId());
                             // Gboard overlays are common to DarkUI and BlackUI
                     mOverlayManager.setEnabled("com.android.gboard.theme.dark.arrow",
+                            useBlackTheme, mLockscreenUserManager.getCurrentUserId());
+		    mOverlayManager.setEnabled("com.android.updater.theme.black.arrow",
                             useBlackTheme, mLockscreenUserManager.getCurrentUserId());
                     // Check for black and white accent so we don't end up
                     // with white on white or black on black
