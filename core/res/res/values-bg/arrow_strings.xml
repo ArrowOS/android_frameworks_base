@@ -24,4 +24,9 @@
   <string name="permlab_fakePackageSignature">Имитиране на подписа на пакета</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_fakePackageSignature">Позволява на приложението да се представи като друго. Вредни приложения може да използват това, за да получат достъп до лична информация от приложения. Дайте разрешение с повишено внимание!</string>
+  <!-- Pocket Lock -->
+  <string name="pocket_lock_message_long_press">Long press power button to interact</string>
+  <!-- Defines the sysfs attribute path used by pocket bridge
+        to communicate pocket state to the pocket judge kernel driver. -->
+  <string name="config_pocketBridgeSysfsInpocket"></string>
 </resources>

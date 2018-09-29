@@ -24,4 +24,9 @@
   <string name="permlab_fakePackageSignature">Obmana potpisa paketa</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_fakePackageSignature">Dozvoljava aplikaciji da se pretvara da je druga aplikacija. Malicijozne aplikacije bi mogle ovo iskoristiti da prikupljaju privatne podatke. Dozvolite sa pažnjom!</string>
+  <!-- Pocket Lock -->
+  <string name="pocket_lock_message_long_press">Long press power button to interact</string>
+  <!-- Defines the sysfs attribute path used by pocket bridge
+        to communicate pocket state to the pocket judge kernel driver. -->
+  <string name="config_pocketBridgeSysfsInpocket"></string>
 </resources>

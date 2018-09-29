@@ -34,19 +34,19 @@
   <string name="accessibility_quick_settings_sync_changed_off">Sincronizzazione disattivata</string>
   <string name="accessibility_quick_settings_sync_changed_on">Sincronizzazione attivata</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Suono</string>
+  <string name="quick_settings_sound_ring">Anello</string>
+  <string name="quick_settings_sound_vibrate">Vibrazione</string>
+  <string name="quick_settings_sound_dnd">Non disturbare</string>
   <!-- HW Keys Tile -->
   <string name="accessibility_quick_settings_hwkeys_on">Tasti hardware attivati</string>
   <string name="accessibility_quick_settings_hwkeys_off">Tasti HW disattivati</string>
   <string name="quick_settings_hwkeys_label">Tasti HW</string>
   <!-- Screenshot QS tile -->
   <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_region_screenshot_label">Screenshot parziale</string>
   <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">Riavvia</string>
+  <string name="global_action_restart_system">Riavvio</string>
   <string name="global_action_restart_advanced">Riavvio avanzato</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
@@ -60,32 +60,32 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Chiudi app recenti</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">Predefinito</string>
+  <string name="lockscreen_hidden">Nessuno</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
+  <string name="custom_hint">Scorri dall\'icona per avviare</string>
   <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
+  <string name="preview">Anteprima</string>
   <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">Menu / Keyboard Switcher</string>
-  <string name="select_button">Select button to add</string>
-  <string name="add_button">Add button</string>
-  <string name="save">Save</string>
-  <string name="reset">Reset</string>
-  <string name="select_keycode">Select Keyboard Button</string>
-  <string name="left">Left</string>
-  <string name="right">Right</string>
-  <string name="navbar_editor_title">Editor</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
+  <string name="no_home_title">Nessun pulsante Home trovato</string>
+  <string name="no_home_message">Per potersi spostare tra le funzioni del dispositivo, è necessario un pulsante Home. Aggiungerne uno prima di salvare.</string>
+  <string name="clipboard_description">La funzione Appunti consente di trascinare gli elementi direttamente negli appunti. Gli elementi possono anche essere trascinati fuori dagli appunti, quando presenti.</string>
+  <string name="keycode_description">I pulsanti keycode consentono di aggiungere tasti della tastiera alla barra di navigazione. Quando vengono premuti, emulano il tasto selezionato. Innanzitutto è necessario selezionare il tasto da associare al pulsante, poi un\'immagine da mostrare sul pulsante.</string>
+  <string name="start">Avvia</string>
+  <string name="center">Centra</string>
+  <string name="end">Fine</string>
+  <string name="space">Spazio</string>
+  <string name="menu_ime">Selettore menu/tastiera</string>
+  <string name="select_button">Selez. pulsante da aggiungere</string>
+  <string name="add_button">Aggiungi pulsante</string>
+  <string name="save">Salva</string>
+  <string name="reset">Ripristina</string>
+  <string name="select_keycode">Seleziona il tasto della tastiera</string>
+  <string name="left">Sinistra</string>
+  <string name="right">Destra</string>
+  <string name="navbar_editor_title">Modifica</string>
+  <string name="navbar_editor_summary">Configura la barra di navigazione</string>
+  <string name="statusbar_items_title">Icone barra di stato</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Ricarica rapida (<xliff:g id="charging_time_left" example="4 ore e 2 minuti">%s</xliff:g> al termine)</string>
   <string name="keyguard_plugged_in_dash_charging">Ricarica rapida</string>
@@ -105,9 +105,9 @@
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <string name="quick_settings_caffeine_label">Caffeina</string>
+  <string name="accessibility_quick_settings_caffeine_off">Caffeina spento</string>
+  <string name="accessibility_quick_settings_caffeine_on">Caffeina acceso</string>
   <!-- Heads Up QS Tile -->
   <string name="quick_settings_heads_up_label">Notifiche a comparsa</string>
   <string name="accessibility_quick_settings_heads_up_off">Notifiche a comparsa disattivate.</string>
