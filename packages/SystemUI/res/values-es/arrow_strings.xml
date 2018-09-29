@@ -71,9 +71,9 @@
   <string name="no_home_message">Se necesita un botón de inicio para poder navegar por el dispositivo. Añádelo antes de guardar.</string>
   <string name="clipboard_description">Con este botón puedes arrastrar los elementos directamente al portapapeles y, si está presente, fuera de él.</string>
   <string name="keycode_description">Con los botones del código de teclado puedes añadir teclas a la barra de navegación que, al pulsarlas, emulan la tecla seleccionada. Primero debes seleccionar la tecla para el botón y, a continuación, la imagen que se va a mostrar en él.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
+  <string name="start">Comienzo</string>
+  <string name="center">Centrar</string>
+  <string name="end">Finalizar</string>
   <string name="space">Separador</string>
   <string name="menu_ime">Menú/Cambio de teclado</string>
   <string name="select_button">Selecciona un botón para añadirlo</string>
@@ -106,7 +106,7 @@
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
   <string name="quick_settings_caffeine_label">Cafeína</string>
-  <string name="accessibility_quick_settings_caffeine_off">Modo cafeína desactivada</string>
+  <string name="accessibility_quick_settings_caffeine_off">Cafeína desactivada</string>
   <string name="accessibility_quick_settings_caffeine_on">Modo cafeína activado</string>
   <!-- Heads Up QS Tile -->
   <string name="quick_settings_heads_up_label">Notificaciones flotantes</string>

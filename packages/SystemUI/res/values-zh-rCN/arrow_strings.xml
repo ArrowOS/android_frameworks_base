@@ -34,17 +34,17 @@
   <string name="accessibility_quick_settings_sync_changed_off">同步已关闭</string>
   <string name="accessibility_quick_settings_sync_changed_on">同步已开启</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">声音</string>
+  <string name="quick_settings_sound_ring">铃声</string>
+  <string name="quick_settings_sound_vibrate">振动</string>
+  <string name="quick_settings_sound_dnd">请勿打扰</string>
   <!-- HW Keys Tile -->
   <string name="accessibility_quick_settings_hwkeys_on">实体按键已启用</string>
   <string name="accessibility_quick_settings_hwkeys_off">实体按键已禁用</string>
   <string name="quick_settings_hwkeys_label">实体按键</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">屏幕截图</string>
+  <string name="quick_settings_region_screenshot_label">局部截图</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">重新启动</string>
   <string name="global_action_restart_advanced">高级重启</string>
@@ -60,32 +60,32 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">清理所有最近任务</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">默认</string>
+  <string name="lockscreen_hidden">无</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
+  <string name="custom_hint">滑动图标以启动</string>
   <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">Menu / Keyboard Switcher</string>
-  <string name="select_button">Select button to add</string>
-  <string name="add_button">Add button</string>
-  <string name="save">Save</string>
-  <string name="reset">Reset</string>
-  <string name="select_keycode">Select Keyboard Button</string>
-  <string name="left">Left</string>
-  <string name="right">Right</string>
-  <string name="navbar_editor_title">Editor</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
+  <string name="preview">预览</string>
+  <string name="keycode">键码</string>
+  <string name="no_home_title">未找到主屏幕按钮</string>
+  <string name="no_home_message">要在此设备上导航，您必须使用主屏幕按钮。请先添加主屏幕按钮后保存。</string>
+  <string name="clipboard_description">您可以利用“剪贴板”按钮将相应内容直接拖动到剪贴板中。剪贴板中有内容时，您也可以将剪贴板中的内容直接拖出来。</string>
+  <string name="keycode_description">您可以利用“键码”按钮将键盘按键添加到导航栏中。只要按下这些按钮，按钮即可模仿所选键盘按键执行相应的操作。要使用这项功能，您必须先为按钮选择相应的按键，然后再选择要在按钮上显示的图片。</string>
+  <string name="start">开始</string>
+  <string name="center">中间</string>
+  <string name="end">结束</string>
+  <string name="space">空格键</string>
+  <string name="menu_ime">菜单 / 键盘切换器</string>
+  <string name="select_button">选择要添加的按钮</string>
+  <string name="add_button">添加按钮</string>
+  <string name="save">保存</string>
+  <string name="reset">重置</string>
+  <string name="select_keycode">选择键盘按钮</string>
+  <string name="left">左</string>
+  <string name="right">右</string>
+  <string name="navbar_editor_title">编辑器</string>
+  <string name="navbar_editor_summary">配置导航栏</string>
+  <string name="statusbar_items_title">状态栏图标</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">正在快速充电 (还需<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> 充满)</string>
   <string name="keyguard_plugged_in_dash_charging">Dash 闪充中</string>
@@ -105,9 +105,9 @@
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <string name="quick_settings_caffeine_label">咖啡因</string>
+  <string name="accessibility_quick_settings_caffeine_off">已禁用咖啡因</string>
+  <string name="accessibility_quick_settings_caffeine_on">已启用咖啡因</string>
   <!-- Heads Up QS Tile -->
   <string name="quick_settings_heads_up_label">浮动通知</string>
   <string name="accessibility_quick_settings_heads_up_off">关闭浮动通知</string>
