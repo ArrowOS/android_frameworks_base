@@ -19,9 +19,14 @@
   <!-- Power menu -->
   <string name="reboot_title">Yeniden başlat</string>
   <string name="reboot_message">Sistem yeniden başlatılıyor</string>
-  <string name="statusbar_items_title">Statusbar icon</string>
+  <string name="statusbar_items_title">Durum çubuğu simgeleri</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permlab_fakePackageSignature">Sahte paket imzası</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_fakePackageSignature">Uygulamanın farklı bir uygulama gibi davranmasına izin verir. Zararlı uygulamalar bu özelliği kullanarak özel içerikli bilgilere ulaşabilir. Bu izni verirken dikkatli olun!</string>
+  <!-- Pocket Lock -->
+  <string name="pocket_lock_message_long_press">Long press power button to interact</string>
+  <!-- Defines the sysfs attribute path used by pocket bridge
+        to communicate pocket state to the pocket judge kernel driver. -->
+  <string name="config_pocketBridgeSysfsInpocket"></string>
 </resources>
