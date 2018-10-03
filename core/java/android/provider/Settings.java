@@ -4248,6 +4248,15 @@ public final class Settings {
          */
         public static final String POWERMENU_ADVANCED_REBOOT = "powermenu_advanced_reboot";
 
+       /**
+        * @hide
+        */
+        public static final String HIDE_NOTCH = "hide_notch";
+
+        /** @hide */
+        private static final Validator HIDE_NOTCH_VALIDATOR =
+                BOOLEAN_VALIDATOR;
+
         /**
          * Whether to display the screenshot option on the power menu
          *
@@ -4687,6 +4696,7 @@ public final class Settings {
             HAPTIC_FEEDBACK_INTENSITY,
             DISPLAY_COLOR_MODE,
             OMNI_NAVIGATION_BAR_SHOW,
+            HIDE_NOTCH,
             OMNI_QS_PANEL_BG_ALPHA,
             OMNI_LOCKSCREEN_WEATHER_ENABLED,
             STATUS_BAR_CLOCK,
@@ -4824,6 +4834,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_COLUMNS_PORTRAIT);
             PRIVATE_SETTINGS.add(QS_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
+            PRIVATE_SETTINGS.add(HIDE_NOTCH);
             PRIVATE_SETTINGS.add(OMNI_QS_PANEL_BG_ALPHA);
             PRIVATE_SETTINGS.add(OMNI_LOCKSCREEN_WEATHER_ENABLED);
             PRIVATE_SETTINGS.add(STATUS_BAR_CLOCK);
@@ -4929,6 +4940,7 @@ public final class Settings {
             VALIDATORS.put(WIFI_STATIC_DNS2, WIFI_STATIC_DNS2_VALIDATOR);
             VALIDATORS.put(SHOW_BATTERY_PERCENT, SHOW_BATTERY_PERCENT_VALIDATOR);
             VALIDATORS.put(OMNI_NAVIGATION_BAR_SHOW, OMNI_NAVIGATION_BAR_SHOW_VALIDATOR);
+            VALIDATORS.put(HIDE_NOTCH, HIDE_NOTCH_VALIDATOR);
             VALIDATORS.put(OMNI_QS_PANEL_BG_ALPHA, OMNI_QS_PANEL_BG_ALPHA_VALIDATOR);
             VALIDATORS.put(OMNI_LOCKSCREEN_WEATHER_ENABLED,
                     OMNI_LOCKSCREEN_WEATHER_ENABLED_VALIDATOR);
