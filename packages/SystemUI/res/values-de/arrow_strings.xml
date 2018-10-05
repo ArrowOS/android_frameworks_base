@@ -39,12 +39,12 @@
   <string name="quick_settings_sound_vibrate">Vibrieren</string>
   <string name="quick_settings_sound_dnd">Nicht stören</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">Hardwaretasten an</string>
-  <string name="accessibility_quick_settings_hwkeys_off">Hardwaretasten aus</string>
+  <string name="accessibility_quick_settings_hwkeys_on">Hardwaretasten aktiviert</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Hardwaretasten deaktiviert</string>
   <string name="quick_settings_hwkeys_label">Hardwaretasten</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Bildschirmfoto</string>
-  <string name="quick_settings_region_screenshot_label">Teilweiser Screenshot</string>
+  <string name="quick_settings_screenshot_label">Bildschirmaufnahme</string>
+  <string name="quick_settings_region_screenshot_label">Partieller Screenshot</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Neustart</string>
   <string name="global_action_restart_advanced">Erweiterter Neustart</string>
@@ -67,20 +67,20 @@
   <string name="status_bar_vpn">VPN</string>
   <string name="preview">Vorschau</string>
   <string name="keycode">Keycode</string>
-  <string name="no_home_title">Home-Taste fehlt</string>
+  <string name="no_home_title">Keine Startbildschirmtaste gefunden</string>
   <string name="no_home_message">Eine Home Taste wird benötigt, um dieses Gerät navigieren zu können. Bitte fügen Sie eine Home Taste hinzu, bevor Sie speichern.</string>
   <string name="clipboard_description">Elemente können direkt in die Zwischenablage gezogen werden. Ebenso können sie direkt aus der Zwischenablage gezogen werden, sofern diese geöffnet ist.</string>
   <string name="keycode_description">Mit den Keycode-Schaltflächen kann man der Navigationsleiste Tasten hinzufügen. Wird eine Keycode-Schaltfläche ausgewählt, führt sie die Aktion der entsprechenden Taste aus. Wähle zuerst die Taste für die Schaltfläche aus und dann ein Bild, das auf der Schaltfläche erscheinen soll.</string>
   <string name="start">Start</string>
-  <string name="center">Zentriert</string>
+  <string name="center">Zentrum</string>
   <string name="end">Ende</string>
   <string name="space">Leerzeichen</string>
-  <string name="menu_ime">Menü-/Tastaturwechsler</string>
+  <string name="menu_ime">Menü / Tastaturwechsler</string>
   <string name="select_button">Wähle eine Taste zum hinzufügen</string>
-  <string name="add_button">Schaltfläche hinzufügen</string>
+  <string name="add_button">Taste hinzufügen</string>
   <string name="save">Speichern</string>
   <string name="reset">Zurücksetzen</string>
-  <string name="select_keycode">Tastatur Button auswählen</string>
+  <string name="select_keycode">Tastatur Taste auswählen</string>
   <string name="left">Links</string>
   <string name="right">Rechts</string>
   <string name="navbar_editor_title">Editor</string>
@@ -94,8 +94,8 @@
   <string name="keyguard_plugged_in_turbo_power_charging">Schnelladelgerät angeschlossen</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">Fehler</string>
-  <string name="omnijaws_service_unkown">Keine Wetterdaten</string>
-  <string name="omnijaws_service_error_long">Fehler beim Laden der Wetterdaten</string>
+  <string name="omnijaws_service_unkown">Keine Wetterdaten verfügbar</string>
+  <string name="omnijaws_service_error_long">Fehler während des Ladens der Wetterdaten</string>
   <string name="omnijaws_service_disabled">Dienst ist deaktiviert</string>
   <string name="omnijaws_detail_header">Wetter</string>
   <string name="omnijaws_label_default">Wetter</string>

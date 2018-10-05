@@ -35,7 +35,7 @@
   <string name="accessibility_quick_settings_sync_changed_on">Sincronizzazione attivata</string>
   <!-- Sound QS Tile -->
   <string name="quick_settings_sound_label">Suono</string>
-  <string name="quick_settings_sound_ring">Anello</string>
+  <string name="quick_settings_sound_ring">Suoneria</string>
   <string name="quick_settings_sound_vibrate">Vibrazione</string>
   <string name="quick_settings_sound_dnd">Non disturbare</string>
   <!-- HW Keys Tile -->
