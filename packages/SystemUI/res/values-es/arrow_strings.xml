@@ -107,7 +107,7 @@
   <!-- Caffeine QS Tile -->
   <string name="quick_settings_caffeine_label">Cafeína</string>
   <string name="accessibility_quick_settings_caffeine_off">Cafeína desactivada</string>
-  <string name="accessibility_quick_settings_caffeine_on">Modo cafeína activado</string>
+  <string name="accessibility_quick_settings_caffeine_on">Cafeína activada</string>
   <!-- Heads Up QS Tile -->
   <string name="quick_settings_heads_up_label">Notificaciones flotantes</string>
   <string name="accessibility_quick_settings_heads_up_off">Notificaciones flotantes desactivadas.</string>
