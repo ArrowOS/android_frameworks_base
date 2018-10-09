@@ -107,16 +107,6 @@
             android:orientation="horizontal"
             >
 
-        <com.android.systemui.statusbar.policy.NetworkTraffic
-            android:id="@+id/networkTraffic"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:singleLine="false"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="right|center_vertical"/>
-
         <com.android.systemui.arrow.statusbarweather.StatusBarWeather
             android:id="@+id/weather_temp"
             android:layout_width="wrap_content"
@@ -132,7 +122,6 @@
             android:layout_height="match_parent"
             android:paddingStart="2dp"
             android:paddingEnd="2dp" />>
-
             <include layout="@layout/system_icons" />
 
         </com.android.keyguard.AlphaOptimizedLinearLayout>
