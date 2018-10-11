@@ -601,6 +601,10 @@ public class BatteryMeterDrawableBase extends Drawable {
             c.drawArc(mFrame, 270, 3.6f * level, false, mBatteryPaint);
         }
 
+        if (!mCharging && mPowerSaveEnabled && mPowerSaveAsColorError) {
+            c.drawArc(mFrame, 270, 3.6f * level, false, mPowersavePaint);
+        }
+
         final int height = mHeight;
         final int width = (int) (getAspectRatio() * mHeight);
         // compute percentage text
