@@ -26,50 +26,50 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">USB internetmegosztás</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Szinkronizálás</string>
+  <string name="accessibility_quick_settings_sync_off">Szinkronizálás ki</string>
+  <string name="accessibility_quick_settings_sync_on">Szinkronizálás be</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Szinkronizálás kikapcsolva</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Szinkronizálás bekapcsolva</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Hang</string>
+  <string name="quick_settings_sound_ring">Csengés</string>
+  <string name="quick_settings_sound_vibrate">Rezgés</string>
+  <string name="quick_settings_sound_dnd">Ne zavarjanak</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">Hardvergombok be</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Hardvergombok ki</string>
+  <string name="quick_settings_hwkeys_label">Hardvergombok</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">Képernyőmentés</string>
+  <string name="quick_settings_region_screenshot_label">Részleges képernyőmentés</string>
   <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
+  <string name="global_action_restart_system">Újraindítás</string>
+  <string name="global_action_restart_advanced">Speciális újraindítás</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
   <string name="global_action_restart_ui">SystemUI</string>
   <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_screenshot">Képernyőmentés</string>
+  <string name="global_action_lockdown">Lezárás</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">Close all recent</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="clear_recents">Az összes törlése</string>
+  <string name="lockscreen_default">Alapértelmezett</string>
+  <string name="lockscreen_hidden">Nincs</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
+  <string name="custom_hint">Indításhoz csúsztasson az ikonról</string>
   <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
+  <string name="preview">Előnézet</string>
+  <string name="keycode">Billentyűkód</string>
+  <string name="no_home_title">Home gomb nem található</string>
+  <string name="no_home_message">A készülék használatához egy home gomb szükséges. Kérjük adjon hozzá egy home gombot.</string>
   <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
   <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
   <string name="start">Start</string>
