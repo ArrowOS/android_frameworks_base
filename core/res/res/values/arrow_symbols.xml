@@ -43,4 +43,7 @@
 
     <!-- Component name of the combo network location provider. -->
     <java-symbol type="string" name="config_comboNetworkLocationProvider" />
+
+    <!-- FP sensor -->
+    <java-symbol type="bool" name="config_hasFingerprintSensor" />
 </resources>
