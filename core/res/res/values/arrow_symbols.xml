@@ -122,4 +122,7 @@
 
     <!-- Pocket bridge -->
     <java-symbol type="string" name="config_pocketBridgeSysfsInpocket" />
+
+    <!-- FP sensor -->
+    <java-symbol type="bool" name="config_hasFingerprintSensor" />
 </resources>
