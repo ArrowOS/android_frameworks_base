@@ -22,4 +22,6 @@
     <string-array name="config_vendorPlatformSignatures">
     </string-array>
 
+    <!-- Whether the device has fingeprint sensor or not -->
+    <bool name="config_hasFingerprintSensor">false</bool>
 </resources>
