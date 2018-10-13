@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">Arayüz</string>
   <string name="global_action_restart_hot">Hızlı</string>
   <string name="global_action_screenshot">Ekran görüntüsü</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Bildirim pencereleri 1 dakika kadar erteleniyor.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Bildirim pencereleri <xliff:g id="number">%d</xliff:g> dakika erteleniyor.</string>

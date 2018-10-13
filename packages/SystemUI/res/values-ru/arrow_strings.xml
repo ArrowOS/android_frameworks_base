@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">Интерфейс системы</string>
   <string name="global_action_restart_hot">Быстрая перезагрузка</string>
   <string name="global_action_screenshot">Скриншот</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> Всплывающие уведомления выключены на одну минуту.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Всплывающие уведомления выключены на <xliff:g id="number">%d</xliff:g> минут.</string>
