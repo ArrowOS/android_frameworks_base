@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">Інтерфейс системи</string>
   <string name="global_action_restart_hot">Швидке</string>
   <string name="global_action_screenshot">Знімок екрану</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> Спливаючі повідомлення вимкнені на одну хвилину.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Спливаючі повідомлення вимкнені на <xliff:g id="number">%d</xliff:g> хвилин.</string>

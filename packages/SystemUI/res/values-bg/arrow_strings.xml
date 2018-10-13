@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">Системен UI</string>
   <string name="global_action_restart_hot">Горещо</string>
   <string name="global_action_screenshot">Екранна снимка</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Изскачащите известия са отложени за 1 минута.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Изскачащите известия са отложени за <xliff:g id="number">%d</xliff:g> минути.</string>

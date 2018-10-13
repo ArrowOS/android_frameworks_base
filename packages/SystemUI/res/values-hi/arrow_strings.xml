@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">सिस्टम यूआई</string>
   <string name="global_action_restart_hot">क्विक रीबुट</string>
   <string name="global_action_screenshot">स्क्रीनशॉट</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> सूचना देखना 1 मिनट के लिए स्थगित किया गया हैं।</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>

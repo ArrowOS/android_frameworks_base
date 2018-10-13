@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">Σύστημα UI</string>
   <string name="global_action_restart_hot">Δημοφιλές</string>
   <string name="global_action_screenshot">Στιγμιότυπο οθόνης</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Η αναδυόμενη ειδοποίηση είναι ανενεργή για 1 λεπτό.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Οι αναδυόμενες ειδοποιήσεις είναι ανενεργές για <xliff:g id="number">%d</xliff:g> λεπτά.</string>

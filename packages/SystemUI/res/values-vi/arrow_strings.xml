@@ -53,6 +53,7 @@
   <string name="global_action_restart_ui">Giao diện người dùng hệ thống</string>
   <string name="global_action_restart_hot">Nhiều quan tâm</string>
   <string name="global_action_screenshot">Ảnh chụp màn hình</string>
+  <string name="global_action_lockdown">Lockdown</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong 1 phút.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong <xliff:g id="number">%d</xliff:g> phút.</string>
