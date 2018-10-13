@@ -95,10 +95,10 @@
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
   <!-- Omni Weather -->
   <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
+  <string name="omnijaws_service_unkown">Data cuaca tidak ada</string>
+  <string name="omnijaws_service_error_long">Kesalahan memuat data cuaca</string>
   <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
+  <string name="omnijaws_detail_header">Cuaca</string>
   <string name="omnijaws_label_default">Weather</string>
   <string name="omnijaws_current_text">Now</string>
   <string name="omnijaws_package_not_available">OmniJaws not available</string>
