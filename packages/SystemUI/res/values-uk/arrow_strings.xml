@@ -34,26 +34,26 @@
   <string name="accessibility_quick_settings_sync_changed_off">Синхр. вимкнено</string>
   <string name="accessibility_quick_settings_sync_changed_on">Синхр. увімкнено</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Звук</string>
+  <string name="quick_settings_sound_ring">Дзвінок</string>
+  <string name="quick_settings_sound_vibrate">Вібрація</string>
+  <string name="quick_settings_sound_dnd">Не турбувати</string>
   <!-- HW Keys Tile -->
   <string name="accessibility_quick_settings_hwkeys_on">Апаратні клавіші увімкнено</string>
   <string name="accessibility_quick_settings_hwkeys_off">Апаратні клавіші вимкнено</string>
   <string name="quick_settings_hwkeys_label">Апаратні клавіші</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">Знімок екрану</string>
+  <string name="quick_settings_region_screenshot_label">Частковий знімок екрана</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Перевантажити</string>
-  <string name="global_action_restart_advanced">Розширене перезавантаження</string>
+  <string name="global_action_restart_advanced">Розширене   перезавантаження</string>
   <string name="global_action_restart_recovery">Рекавері</string>
   <string name="global_action_restart_bootloader">Завантажувач</string>
   <string name="global_action_restart_ui">Інтерфейс системи</string>
   <string name="global_action_restart_hot">Швидке</string>
   <string name="global_action_screenshot">Знімок екрану</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">Блокування</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> Спливаючі повідомлення вимкнені на одну хвилину.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Спливаючі повідомлення вимкнені на <xliff:g id="number">%d</xliff:g> хвилин.</string>
@@ -61,32 +61,32 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Закрити всі нещодавні</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">За замовчанням</string>
+  <string name="lockscreen_hidden">Жоден</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
+  <string name="custom_hint">Проведіть від іконки для запуску</string>
   <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">Menu / Keyboard Switcher</string>
-  <string name="select_button">Select button to add</string>
-  <string name="add_button">Add button</string>
-  <string name="save">Save</string>
-  <string name="reset">Reset</string>
-  <string name="select_keycode">Select Keyboard Button</string>
-  <string name="left">Left</string>
-  <string name="right">Right</string>
-  <string name="navbar_editor_title">Editor</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
+  <string name="preview">Передперегляд</string>
+  <string name="keycode">Код клавіші</string>
+  <string name="no_home_title">Немає кнопки \"Головний екран\"</string>
+  <string name="no_home_message">Для навігації пристроєм потрібна кнопка \"Головний екран\". Перш ніж зберегти, додайте цю кнопку.</string>
+  <string name="clipboard_description">За допомогою кнопки \"Буфер обміну\" можна перетягувати елементи просто в буфер або з нього.</string>
+  <string name="keycode_description">За допомогою кнопок кодів клавіш можна додавати клавіші клавіатури на панель навігації. Якщо натиснути кнопку, вона імітує вибрану клавішу клавіатури. Потрібно вибрати клавішу та зображення для кнопки.</string>
+  <string name="start">Старт</string>
+  <string name="center">По центру</string>
+  <string name="end">Кінець</string>
+  <string name="space">Розділювач</string>
+  <string name="menu_ime">Вибір меню або клавіатури</string>
+  <string name="select_button">Виберіть кнопку, щоб додати</string>
+  <string name="add_button">Додати кнопку</string>
+  <string name="save">Зберегти</string>
+  <string name="reset">Скинути</string>
+  <string name="select_keycode">Вибрати кнопку клавіатури</string>
+  <string name="left">Ліворуч</string>
+  <string name="right">Праворуч</string>
+  <string name="navbar_editor_title">Редактор</string>
+  <string name="navbar_editor_summary">Налаштувати панель навігації</string>
+  <string name="statusbar_items_title">Значки панелі стану</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Швидке заряджання (<xliff:g id="charging_time_left" example="4 години і 2 хвилини">%s</xliff:g> до повного зарядження)</string>
   <string name="keyguard_plugged_in_dash_charging">Швидке заряджання</string>
@@ -106,12 +106,12 @@
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <string name="quick_settings_caffeine_label">Заборона сну</string>
+  <string name="accessibility_quick_settings_caffeine_off">Заборона сну вимк</string>
+  <string name="accessibility_quick_settings_caffeine_on">Заборона сну увімк</string>
   <!-- Heads Up QS Tile -->
   <string name="quick_settings_heads_up_label">Спливвючі сповіщення</string>
-  <string name="accessibility_quick_settings_heads_up_off">Сплмваючі сповіщення вимкнено.</string>
+  <string name="accessibility_quick_settings_heads_up_off">Спливаючі сповіщення вимкнено.</string>
   <string name="accessibility_quick_settings_heads_up_on">Спливаючі сповіщення увімкнено.</string>
   <string name="accessibility_quick_settings_heads_up_changed_off">Спливаючі сповіщення вимкнено.</string>
   <string name="accessibility_quick_settings_heads_up_changed_on">Спливаючі сповіщення увімкнено.</string>

@@ -20,7 +20,7 @@
   <string name="label_action_no_action">Нет действия</string>
   <string name="label_action_settings_panel">Панель быстрых настроек</string>
   <string name="label_action_notification_panel">Панель уведомлений</string>
-  <string name="label_action_screenshot">Скриншот</string>
+  <string name="label_action_screenshot">Снимок экрана</string>
   <string name="label_action_region_screenshot">Скриншот выбранной области экрана</string>
   <string name="label_action_screenrecord">Запись экрана</string>
   <string name="label_action_expanded_desktop">Расширенный рабочий стол</string>
