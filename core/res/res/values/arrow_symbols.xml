@@ -135,4 +135,7 @@
 
     <!-- Vendor mismatched fingerprint warning -->
     <java-symbol type="string" name="system_error_vendorprint" />
+
+    <!-- Screen off delay -->
+    <java-symbol type="integer" name="config_screen_off_delay" />
 </resources>
