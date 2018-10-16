@@ -69,6 +69,7 @@ import com.android.systemui.DockedStackExistsListener;
 import com.android.systemui.Interpolators;
 import com.android.systemui.R;
 import com.android.systemui.SysUiServiceProvider;
+import com.android.systemui.onehand.SlideTouchEvent;
 import com.android.systemui.assist.AssistManager;
 import com.android.systemui.recents.OverviewProxyService;
 import com.android.systemui.recents.Recents;
@@ -138,6 +139,7 @@ public class NavigationBarView extends FrameLayout implements
     private final SparseArray<ButtonDispatcher> mButtonDispatchers = new SparseArray<>();
     private final ContextualButtonGroup mContextualButtonGroup;
     private Configuration mConfiguration;
+    private SlideTouchEvent mSlideTouchEvent;
     private Configuration mTmpLastConfiguration;
 
     private NavigationBarInflaterView mNavigationInflaterView;
@@ -289,6 +291,8 @@ public class NavigationBarView extends FrameLayout implements
                 R.style.RotateButtonCCWStart90,
                 isGesturalMode ? mFloatingRotationButton : rotateSuggestionButton);
 
+        mSlideTouchEvent = new SlideTouchEvent(context);
+
         final ContextualButton backButton = new ContextualButton(R.id.back, 0);
 
         mConfiguration = new Configuration();
@@ -342,11 +346,15 @@ public class NavigationBarView extends FrameLayout implements
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent event) {
+        mSlideTouchEvent.handleTouchEvent(event);
+
         return shouldDeadZoneConsumeTouchEvents(event) || super.onInterceptTouchEvent(event);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        mSlideTouchEvent.handleTouchEvent(event);
+        
         shouldDeadZoneConsumeTouchEvents(event);
         return super.onTouchEvent(event);
     }
