@@ -26,7 +26,7 @@
     <dimen name="net_traffic_txt_img_padding">2dp</dimen>
 
 	    <!-- OmniJaws -->
-    <dimen name="current_weather_image_size">42dp</dimen>
+    <dimen name="current_weather_image_size">16dp</dimen>
 
     <!-- Burn-in protection -->
     <dimen name="horizontal_max_swift">3.0dp</dimen>
