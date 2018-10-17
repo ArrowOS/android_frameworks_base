@@ -1394,12 +1394,12 @@ static jint android_media_MediaDrm_getMaxSessionCount(JNIEnv *env,
         return 0;
     }
 
-    uint32_t open = 0, max = 0;
-    status_t err = drm->getNumberOfSessions(&open, &max);
+    uint32_t max = 1;
+//    status_t err = drm->getNumberOfSessions(&open, &max);
 
-    if (throwExceptionAsNecessary(env, err, "Failed to get number of sessions")) {
-        return 0;
-    }
+//    if (throwExceptionAsNecessary(env, err, "Failed to get number of sessions")) {
+  //      return 0;
+   // }
     return max;
 }
 
