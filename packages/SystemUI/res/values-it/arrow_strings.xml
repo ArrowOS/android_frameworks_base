@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">SystemUI</string>
   <string name="global_action_restart_hot">Riavvio veloce</string>
   <string name="global_action_screenshot">Cattura schermo</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">Blocca ora</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - La notificata è stata posticipata per 1 minuto.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Le notifiche saranno posticipate per <xliff:g id="number">%d</xliff:g> minuti.</string>

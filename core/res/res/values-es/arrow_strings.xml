@@ -23,9 +23,9 @@
   <string name="reboot_to_bootloader_message">Reiniciando en modo bootloader</string>
   <string name="reboot_title">Reiniciar</string>
   <string name="reboot_message">Reiniciando sistema</string>
-  <string name="statusbar_items_title">Icono de barra de estado</string>
+  <string name="statusbar_items_title">Icono de la barra de estado</string>
   <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Falsificación de firma</string>
+  <string name="permlab_fakePackageSignature">Falsificar firma del paquete</string>
   <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
   <string name="permdesc_fakePackageSignature">Permite que la aplicación se ejecute como una aplicación diferente. Las aplicaciones maliciosas pueden usar esto para acceder a datos personales. ¡Conceda este permiso con cuidado!</string>
   <!-- Pocket Lock -->
