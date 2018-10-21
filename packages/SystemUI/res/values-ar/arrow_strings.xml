@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">واجهة النظام</string>
   <string name="global_action_restart_hot">اعادة تشغيل سريع</string>
   <string name="global_action_screenshot">لقطة الشاشة</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">تأمين</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="سلسلة">%s</xliff:g> • التنبيهات الخاطفة في وضع الغفوة لدقيقة واحدة.</string>
   <string name="heads_up_snooze_message"><xliff:g id="سلسلة">%s</xliff:g> • التنبيهات الخاطفة فى وضع الغفوة لمدة <xliff:g id="number">%d</xliff:g> دقائق.</string>

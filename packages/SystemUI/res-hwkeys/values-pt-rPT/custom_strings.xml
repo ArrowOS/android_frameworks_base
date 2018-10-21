@@ -18,16 +18,16 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Bindable action labels -->
   <string name="label_action_no_action">Sem acção</string>
-  <string name="label_action_settings_panel">Painel QS</string>
+  <string name="label_action_settings_panel">Painel de definições rápidas</string>
   <string name="label_action_notification_panel">Painel de notificações</string>
   <string name="label_action_screenshot">Captura de Ecrã</string>
   <string name="label_action_region_screenshot">Captura parcial de ecrã</string>
-  <string name="label_action_screenrecord">A gravar ecrã</string>
+  <string name="label_action_screenrecord">Gravar ecrã</string>
   <string name="label_action_expanded_desktop">Ambiente de trabalho expandido</string>
   <string name="label_action_screen_off">Desligar ecrã</string>
   <string name="label_action_force_close_app">Forçar encerramento de aplicação</string>
   <string name="label_action_google_assistant">Assistente do Google</string>
-  <string name="label_action_in_app_search">Pesquisa de aplicação</string>
+  <string name="label_action_in_app_search">Pesquisa dentro da aplicação</string>
   <string name="label_action_flashlight">Lanterna</string>
   <string name="label_action_bluetooth">Bluetooth</string>
   <string name="label_action_wifi">WiFi</string>
@@ -38,7 +38,7 @@
   <string name="label_action_menu">Menu</string>
   <string name="label_action_back">Voltar</string>
   <string name="label_action_home">Página inicial</string>
-  <string name="label_action_ime_switcher">Alterar IME</string>
+  <string name="label_action_ime_switcher">Alterar método de entrada</string>
   <string name="label_action_stop_screenpinning">Parar fixação de ecrã</string>
   <string name="label_action_ime_down">Cursor para baixo</string>
   <string name="label_action_ime_left">Cursor para a esquerda</string>

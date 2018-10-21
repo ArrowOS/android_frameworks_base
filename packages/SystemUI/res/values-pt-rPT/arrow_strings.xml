@@ -34,26 +34,26 @@
   <string name="accessibility_quick_settings_sync_changed_off">A sincronização foi desativada</string>
   <string name="accessibility_quick_settings_sync_changed_on">A sincronização foi ativada</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Som</string>
+  <string name="quick_settings_sound_ring">Toque</string>
+  <string name="quick_settings_sound_vibrate">Vibração</string>
+  <string name="quick_settings_sound_dnd">Não incomodar</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">Botões físicos ligados</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Botões físicos desligados</string>
+  <string name="quick_settings_hwkeys_label">Botões físicos</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">Captura de Ecrã</string>
+  <string name="quick_settings_region_screenshot_label">Captura parcial de ecrã</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Reiniciar</string>
   <string name="global_action_restart_advanced">Reinicialização avançada</string>
-  <string name="global_action_restart_recovery">Reinicar em Recovery Mode</string>
+  <string name="global_action_restart_recovery">Reinicar em modo recuperação</string>
   <string name="global_action_restart_bootloader">Reiniciar em Bootloader</string>
   <string name="global_action_restart_ui">Interface do sistema</string>
   <string name="global_action_restart_hot">Reinicio rápido</string>
   <string name="global_action_screenshot">Captura de Ecrã</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">Bloquear</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - as notificações flutuantes vão parar por 1 minuto.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - as notificações flutuantes vão parar por <xliff:g id="number">%d</xliff:g> minutos.</string>
@@ -61,32 +61,32 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Fechar notificações</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">Predefinição</string>
+  <string name="lockscreen_hidden">Oculto</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
-  <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">Menu / Keyboard Switcher</string>
-  <string name="select_button">Select button to add</string>
-  <string name="add_button">Add button</string>
-  <string name="save">Save</string>
-  <string name="reset">Reset</string>
-  <string name="select_keycode">Select Keyboard Button</string>
-  <string name="left">Left</string>
-  <string name="right">Right</string>
+  <string name="custom_hint">Deslize a partir do ícone para iniciar</string>
+  <string name="status_bar_vpn">Vpn</string>
+  <string name="preview">Pré visualização</string>
+  <string name="keycode">Código de tecla</string>
+  <string name="no_home_title">Sem botão de página inicial</string>
+  <string name="no_home_message">É necessário um botão de página inicial para navegar neste dispositivo. Adicione um botão de página inicial antes de guardar.</string>
+  <string name="clipboard_description">A Área de transferência permite arrastar itens diretamente para a área de transferência. Também é possível arrastar itens diretamente para fora da mesma, quando aí se encontram.</string>
+  <string name="keycode_description">Os códigos de tecla permitem adicionar teclas do teclado à Barra de navegação. Quando são pressionados, emulam a tecla selecionada. É necessário selecionar primeiro a tecla para o botão e depois a imagem a ser apresentada no mesmo.</string>
+  <string name="start">Iniciar</string>
+  <string name="center">Centro</string>
+  <string name="end">Fim</string>
+  <string name="space">Espaçador</string>
+  <string name="menu_ime">Menu/comutador de teclado</string>
+  <string name="select_button">Selecione o botão para adicionar</string>
+  <string name="add_button">Adicionar botão</string>
+  <string name="save">Guardar</string>
+  <string name="reset">Repor</string>
+  <string name="select_keycode">Selecionar botão do teclado</string>
+  <string name="left">Esquerda</string>
+  <string name="right">Direita</string>
   <string name="navbar_editor_title">Editor</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
+  <string name="navbar_editor_summary">Configurar barra de navegação</string>
+  <string name="statusbar_items_title">Ícones da barra de estado</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Indicador de carregamento (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> até estar completo)</string>
   <string name="keyguard_plugged_in_dash_charging">Indicador de carregamento</string>
@@ -94,24 +94,24 @@
   <string name="keyguard_indication_turbo_power_time">Carregando rápido ligado(<xliff:g id="charging_time_left">%s</xliff:g> até à carga máxima)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">Carregamento rápido ligado</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Erro</string>
+  <string name="omnijaws_service_unkown">Sem informações meteorológicas</string>
+  <string name="omnijaws_service_error_long">Erro ao carregar os dados meteorológicos</string>
+  <string name="omnijaws_service_disabled">O serviço está desativado</string>
+  <string name="omnijaws_detail_header">Tempo</string>
+  <string name="omnijaws_label_default">Tempo</string>
+  <string name="omnijaws_current_text">Agora</string>
+  <string name="omnijaws_package_not_available">OmniJaws não está disponível</string>
+  <string name="omnijaws_service_last_update">Última atualização:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <string name="quick_settings_caffeine_label">Cafeína</string>
+  <string name="accessibility_quick_settings_caffeine_off">Cafeína desligada</string>
+  <string name="accessibility_quick_settings_caffeine_on">Cafeína ligada</string>
   <!-- Heads Up QS Tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+  <string name="quick_settings_heads_up_label">Notificações pop-up</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notificações pop-up desativadas.</string>
   <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
   <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
   <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>

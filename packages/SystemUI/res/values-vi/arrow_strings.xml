@@ -34,17 +34,17 @@
   <string name="accessibility_quick_settings_sync_changed_off">Đồng bộ đã tắt</string>
   <string name="accessibility_quick_settings_sync_changed_on">Đồng bộ đã bật</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Cài đặt nhãn âm thanh</string>
+  <string name="quick_settings_sound_ring">Chuông báo</string>
+  <string name="quick_settings_sound_vibrate">Báo rung</string>
+  <string name="quick_settings_sound_dnd">Không làm phiền</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">Bật phím cứng</string>
+  <string name="accessibility_quick_settings_hwkeys_off">Tắt phím cứng</string>
+  <string name="quick_settings_hwkeys_label">Phím cứng</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">Chụp màn hình</string>
+  <string name="quick_settings_region_screenshot_label">Chụp màn hình một phần</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Khởi động lại</string>
   <string name="global_action_restart_advanced">Khởi động lại nâng cao</string>
@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">Giao diện người dùng hệ thống</string>
   <string name="global_action_restart_hot">Nhiều quan tâm</string>
   <string name="global_action_screenshot">Ảnh chụp màn hình</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">Khóa</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong 1 phút.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Thông báo nổi sẽ báo lại trong <xliff:g id="number">%d</xliff:g> phút.</string>
@@ -61,8 +61,8 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Đóng tất cả ứng dụng gần đây</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">Màn hình khoá mặc định</string>
+  <string name="lockscreen_hidden">Bỏ chọn tất cả</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
   <string name="custom_hint">Swipe from icon to launch</string>
   <string name="status_bar_vpn">VPN</string>

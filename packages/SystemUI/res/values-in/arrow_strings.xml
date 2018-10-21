@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">UI Sistem</string>
   <string name="global_action_restart_hot">Panas</string>
   <string name="global_action_screenshot">Tangkapan Layar</string>
-  <string name="global_action_lockdown">Paksa Kunci</string>
+  <string name="global_action_lockdown">Kunci paksa</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Mengintip pemberitahuan tertunda selama 1 menit.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Mengintip pemberitahuan tertunda selama <xliff:g id="number">%d</xliff:g> menit.</string>
@@ -68,8 +68,8 @@
   <string name="status_bar_vpn">VPN</string>
   <string name="preview">Pratinjau</string>
   <string name="keycode">Keycode</string>
-  <string name="no_home_title">Tombol home tidak ditemukan</string>
-  <string name="no_home_message">Tombol home sangat dibutuhkan untuk menjalankan perangkat. Harap tambahkan tombol home sebelum menyimpan.</string>
+  <string name="no_home_title">Tombol beranda tidak ditemukan</string>
+  <string name="no_home_message">Tombol beranda sangat dibutuhkan untuk menjalankan perangkat. Harap tambahkan tombol beranda sebelum menyimpan.</string>
   <string name="clipboard_description">Papan Klip memungkinkan item untuk diseret langsung ke papan Klip. Item juga dapat diseret langsung dari papan klip ketika tersedia.</string>
   <string name="keycode_description">Tombol keycode memungkinan tombol keyboard untuk ditambahkan di Panel Navigasi. Ketika ditekan akan meniru tombol keyboard yang dipilih. Pertama pilih tombol, lalu diikuti oleh gambar untuk ditampilkan pada tombol.</string>
   <string name="start">Awal</string>
@@ -92,27 +92,27 @@
   <string name="keyguard_plugged_in_dash_charging">Pengisian Cepat</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_turbo_power_time">TurboPower terhubung (<xliff:g id="charging_time_left">%s</xliff:g> sampai penuh)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower terhubung</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
+  <string name="omnijaws_service_error">Eror</string>
   <string name="omnijaws_service_unkown">Data cuaca tidak ada</string>
   <string name="omnijaws_service_error_long">Kesalahan memuat data cuaca</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
+  <string name="omnijaws_service_disabled">Layanan dinonaktifkan</string>
   <string name="omnijaws_detail_header">Cuaca</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_label_default">Cuaca</string>
+  <string name="omnijaws_current_text">Sekarang</string>
+  <string name="omnijaws_package_not_available">OmniJaws tidak tersedia</string>
+  <string name="omnijaws_service_last_update">Pembaruan terakhir:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <string name="quick_settings_caffeine_label">Kafein</string>
+  <string name="accessibility_quick_settings_caffeine_off">Kafein mati</string>
+  <string name="accessibility_quick_settings_caffeine_on">Kafein hidup</string>
   <!-- Heads Up QS Tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Notifikasi mengambang</string>
+  <string name="accessibility_quick_settings_heads_up_off">Notifikasi mengambang mati.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Notifikasi mengambang hidup.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi mengambang dimatikan.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi mengambang dihidupkan.</string>
 </resources>

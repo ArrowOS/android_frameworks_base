@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">システムUI</string>
   <string name="global_action_restart_hot">ソフトリブート</string>
   <string name="global_action_screenshot">スクリーンショット</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">画面ロック</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 通知の表示は1分間一時停止します</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - 通知の表示は<xliff:g id="number">%d</xliff:g>分間停止します</string>

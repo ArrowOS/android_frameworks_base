@@ -26,36 +26,36 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
   <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
+  <string name="quick_settings_usb_tether_label">Tethering prin USB</string>
   <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">Sync</string>
-  <string name="accessibility_quick_settings_sync_off">Sync off</string>
-  <string name="accessibility_quick_settings_sync_on">Sync on</string>
-  <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+  <string name="quick_settings_sync_label">Sincronizare</string>
+  <string name="accessibility_quick_settings_sync_off">Sincronizare oprită</string>
+  <string name="accessibility_quick_settings_sync_on">Sincronizare pornită</string>
+  <string name="accessibility_quick_settings_sync_changed_off">Sincronizarea este dezactivată</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sincronizarea este activată</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Sunet</string>
+  <string name="quick_settings_sound_ring">Sonerie</string>
+  <string name="quick_settings_sound_vibrate">Vibrează</string>
+  <string name="quick_settings_sound_dnd">Nu deranjați</string>
   <!-- HW Keys Tile -->
   <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
   <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
   <string name="quick_settings_hwkeys_label">HW keys</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">Captură de ecran</string>
+  <string name="quick_settings_region_screenshot_label">Captură parțială de ecran</string>
   <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">Reboot</string>
-  <string name="global_action_restart_advanced">Advanced reboot</string>
+  <string name="global_action_restart_system">Repornire</string>
+  <string name="global_action_restart_advanced">Repornire avansată</string>
   <string name="global_action_restart_recovery">Recovery</string>
   <string name="global_action_restart_bootloader">Bootloader</string>
-  <string name="global_action_restart_ui">SystemUI</string>
+  <string name="global_action_restart_ui">Interfață sistem</string>
   <string name="global_action_restart_hot">Hot</string>
-  <string name="global_action_screenshot">Screenshot</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_screenshot">Captură de ecran</string>
+  <string name="global_action_lockdown">Blocare</string>
   <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
+  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Notificările sunt ascunse pentru 1 minut.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
   <!-- Recents Panel -->
   <!-- The text for the button in the notification window-shade that clears
