@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">系统界面</string>
   <string name="global_action_restart_hot">热重启</string>
   <string name="global_action_screenshot">屏幕截图</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">锁定</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 浮动通知暂停1分钟。</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - 浮动通知暂停<xliff:g id="number">%d</xliff:g>分钟。</string>

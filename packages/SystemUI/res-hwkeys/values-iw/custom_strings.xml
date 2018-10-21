@@ -18,15 +18,15 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Bindable action labels -->
   <string name="label_action_no_action">ללא פעולה</string>
-  <string name="label_action_settings_panel">QS panel</string>
-  <string name="label_action_notification_panel">Notification panel</string>
+  <string name="label_action_settings_panel">חלון הגדרות מהירות</string>
+  <string name="label_action_notification_panel">חלון התראות</string>
   <string name="label_action_screenshot">צילום מסך</string>
   <string name="label_action_region_screenshot">צילום מסך חלקי</string>
   <string name="label_action_screenrecord">הקלטת מסך</string>
   <string name="label_action_expanded_desktop">שולחן עבודה מורחב</string>
   <string name="label_action_screen_off">כיבוי המסך</string>
   <string name="label_action_force_close_app">כפיית סגירת יישומון</string>
-  <string name="label_action_google_assistant">Google assistant</string>
+  <string name="label_action_google_assistant">המסייעת של גוגל</string>
   <string name="label_action_in_app_search">חיפוש בתוך היישום</string>
   <string name="label_action_flashlight">פנס</string>
   <string name="label_action_bluetooth">Bluetooth</string>
@@ -45,7 +45,7 @@
   <string name="label_action_ime_right">Input method cursor right</string>
   <string name="label_action_ime_up">Input method cursor up</string>
   <string name="label_action_volume_panel">לוח עצמת השמע</string>
-  <string name="label_action_clear_notifications">Clear notifications</string>
+  <string name="label_action_clear_notifications">ניקוי התראות</string>
   <string name="label_action_split_screen">פיצול מסך</string>
   <string name="label_action_one_handed_mode_left">מצב שימוש ביד אחת (צד שמאל)</string>
   <string name="label_action_one_handed_mode_right">מצב שימוש ביד אחת (צד ימין)</string>
