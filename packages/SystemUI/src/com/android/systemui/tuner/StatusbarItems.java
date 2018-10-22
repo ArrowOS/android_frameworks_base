@@ -14,14 +14,72 @@
 
 package com.android.systemui.tuner;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.provider.Settings;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.view.MenuItem;
+
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
+import androidx.preference.SwitchPreference;
+
+import com.android.internal.logging.MetricsLogger;
+import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.systemui.R;
 
 public class StatusbarItems extends PreferenceFragment {
 
+    private static final String SHOW_VOLTE = "show_volte_icon";
+
+    private SwitchPreference mShowVoLTE;
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setHasOptionsMenu(true);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+        mShowVoLTE = (SwitchPreference) findPreference(SHOW_VOLTE);
+        mShowVoLTE.setChecked(Settings.System.getIntForUser(getActivity().getContentResolver(),
+            Settings.System.SHOW_VOLTE_ICON, 0,
+            UserHandle.USER_CURRENT) == 1);
+    }
+
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.statusbar_items);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        MetricsLogger.visibility(getContext(), MetricsEvent.TUNER, true);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        MetricsLogger.visibility(getContext(), MetricsEvent.TUNER, false);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            getActivity().onBackPressed();
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mShowVoLTE) {
+            boolean checked = ((SwitchPreference)preference).isChecked();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SHOW_VOLTE_ICON, checked ? 1 : 0);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preference);
     }
 }
