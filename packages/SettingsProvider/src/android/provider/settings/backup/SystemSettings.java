@@ -89,5 +89,6 @@ public class SystemSettings {
         Settings.System.NETWORK_TRAFFIC_STATE,
         Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD,
         Settings.System.FP_WAKE_UNLOCK,
+        Settings.System.SHOW_VOLTE_ICON,
     };
 }
