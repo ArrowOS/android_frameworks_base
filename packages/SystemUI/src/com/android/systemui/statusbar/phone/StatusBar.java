@@ -4150,6 +4150,8 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                             useDarkTheme, mLockscreenUserManager.getCurrentUserId());
 		    mOverlayManager.setEnabled("com.android.updater.theme.dark.arrow",
                             useDarkTheme, mLockscreenUserManager.getCurrentUserId());
+                   mOverlayManager.setEnabled("com.google.android.apps.wellbeing.theme.dark.arrow",
+                            useDarkTheme, mLockscreenUserManager.getCurrentUserId());
                     // Check for black and white accent so we don't end up
                     // with white on white or black on black
                     unfuckBlackWhiteAccent();
@@ -4170,6 +4172,8 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                     mOverlayManager.setEnabled("com.android.gboard.theme.dark.arrow",
                             useBlackTheme, mLockscreenUserManager.getCurrentUserId());
 		    mOverlayManager.setEnabled("com.android.updater.theme.black.arrow",
+                            useBlackTheme, mLockscreenUserManager.getCurrentUserId());
+                    mOverlayManager.setEnabled("com.google.android.apps.wellbeing.theme.black.arrow",
                             useBlackTheme, mLockscreenUserManager.getCurrentUserId());
                     // Check for black and white accent so we don't end up
                     // with white on white or black on black
