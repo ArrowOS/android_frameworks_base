@@ -115,4 +115,8 @@
   <string name="accessibility_quick_settings_heads_up_on">Włącz wyskakujące powiadomienia.</string>
   <string name="accessibility_quick_settings_heads_up_changed_off">Wyskakujące powiadomienia wyłączone.</string>
   <string name="accessibility_quick_settings_heads_up_changed_on">Wyskakujące powiadomienia włączone.</string>
+  <!-- Screen pinning dialog description. (for devices without navbar) -->
+  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+  <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
 </resources>

@@ -30,16 +30,16 @@
   <!-- Sync QS Tile -->
   <string name="quick_settings_sync_label">Sinkronisasi</string>
   <string name="accessibility_quick_settings_sync_off">Sinkronisasi mati</string>
-  <string name="accessibility_quick_settings_sync_on">Sinkronisasi menyala</string>
+  <string name="accessibility_quick_settings_sync_on">Sinkronisasi hidup</string>
   <string name="accessibility_quick_settings_sync_changed_off">Sinkronisasi dimatikan</string>
-  <string name="accessibility_quick_settings_sync_changed_on">Sinkronisasi dinyalakan</string>
+  <string name="accessibility_quick_settings_sync_changed_on">Sinkron diaktifkan</string>
   <!-- Sound QS Tile -->
   <string name="quick_settings_sound_label">Suara</string>
   <string name="quick_settings_sound_ring">Dering</string>
   <string name="quick_settings_sound_vibrate">Getar</string>
   <string name="quick_settings_sound_dnd">Jangan Ganggu</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">Tombol Fisik menyala</string>
+  <string name="accessibility_quick_settings_hwkeys_on">Tombol Fisik aktif</string>
   <string name="accessibility_quick_settings_hwkeys_off">Tombol Fisik mati</string>
   <string name="quick_settings_hwkeys_label">Tombol Fisik</string>
   <!-- Screenshot QS tile -->
@@ -115,4 +115,8 @@
   <string name="accessibility_quick_settings_heads_up_on">Notifikasi mengambang hidup.</string>
   <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi mengambang dimatikan.</string>
   <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi mengambang dihidupkan.</string>
+  <!-- Screen pinning dialog description. (for devices without navbar) -->
+  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+  <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
 </resources>
