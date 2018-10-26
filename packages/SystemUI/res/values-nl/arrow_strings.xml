@@ -34,17 +34,17 @@
   <string name="accessibility_quick_settings_sync_changed_off">Synchronisatie uitgeschakeld</string>
   <string name="accessibility_quick_settings_sync_changed_on">Synchronisatie ingeschakeld</string>
   <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">Sound</string>
-  <string name="quick_settings_sound_ring">Ring</string>
-  <string name="quick_settings_sound_vibrate">Vibrate</string>
-  <string name="quick_settings_sound_dnd">Do not disturb</string>
+  <string name="quick_settings_sound_label">Geluid</string>
+  <string name="quick_settings_sound_ring">Beltoon</string>
+  <string name="quick_settings_sound_vibrate">Trillen</string>
+  <string name="quick_settings_sound_dnd">Niet storen</string>
   <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-  <string name="quick_settings_hwkeys_label">HW keys</string>
+  <string name="accessibility_quick_settings_hwkeys_on">HW knoppen aan</string>
+  <string name="accessibility_quick_settings_hwkeys_off">HW knoppen uit</string>
+  <string name="quick_settings_hwkeys_label">HW knoppen</string>
   <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">Screenshot</string>
-  <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+  <string name="quick_settings_screenshot_label">Schermafdruk</string>
+  <string name="quick_settings_region_screenshot_label">Gedeeltelijke schermafdruk</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">Herstarten</string>
   <string name="global_action_restart_advanced">Geavanceerd herstarten</string>
@@ -53,7 +53,7 @@
   <string name="global_action_restart_ui">SysteemUI</string>
   <string name="global_action_restart_hot">Snel</string>
   <string name="global_action_screenshot">Schermafbeelding</string>
-  <string name="global_action_lockdown">Lockdown</string>
+  <string name="global_action_lockdown">Blokkeer</string>
   <!-- Heads up snooze toast -->
   <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s </xliff:g> - Peeking notificaties 1 minuut gedempt.</string>
   <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - Peeking notificaties zijn gedempt voor <xliff:g id="number">%d </xliff:g> minuten.</string>
@@ -61,32 +61,32 @@
   <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
   <string name="clear_recents">Sluit alle recente apps</string>
-  <string name="lockscreen_default">Default</string>
-  <string name="lockscreen_hidden">None</string>
+  <string name="lockscreen_default">Standaard</string>
+  <string name="lockscreen_hidden">Geen</string>
   <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
+  <string name="custom_hint">Veeg vanaf icoon om te starten</string>
   <string name="status_bar_vpn">VPN</string>
-  <string name="preview">Preview</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">No home button found</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
+  <string name="preview">Voorbeeld</string>
+  <string name="keycode">Toetscode</string>
+  <string name="no_home_title">Geen startknop gevonden</string>
+  <string name="no_home_message">Er is een startknop vereist om te navigeren op dit apparaat. Voeg een startknop toe voordat je opslaat.</string>
+  <string name="clipboard_description">Met Klembord kunnen items rechtstreeks naar het klembord worden gesleept. Indien aanwezig, kunnen items ook rechtstreeks van het klembord worden gesleept.</string>
+  <string name="keycode_description">Met toetscodeknoppen kunnen toetsenbordtoetsen worden toegevoegd aan de navigatiebalk. Wanneer hierop wordt gedrukt, emuleren ze de geselecteerde toetsenbordtoets. Eerst moet de toets voor de knop worden geselecteerd, gevolgd door een afbeelding die wordt weergegeven op de knop.</string>
   <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
+  <string name="center">Midden</string>
+  <string name="end">Einde</string>
   <string name="space">Spacer</string>
-  <string name="menu_ime">Menu / Keyboard Switcher</string>
-  <string name="select_button">Select button to add</string>
-  <string name="add_button">Add button</string>
-  <string name="save">Save</string>
-  <string name="reset">Reset</string>
-  <string name="select_keycode">Select Keyboard Button</string>
-  <string name="left">Left</string>
-  <string name="right">Right</string>
-  <string name="navbar_editor_title">Editor</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
+  <string name="menu_ime">Menu/toetsenbord-schakelaar</string>
+  <string name="select_button">Knop kiezen om toe te voegen</string>
+  <string name="add_button">Knop toevoegen</string>
+  <string name="save">Opslaan</string>
+  <string name="reset">Opnieuw instellen</string>
+  <string name="select_keycode">Selecteer toetsenbord knop</string>
+  <string name="left">Links</string>
+  <string name="right">Rechts</string>
+  <string name="navbar_editor_title">Bewerken</string>
+  <string name="navbar_editor_summary">Configureren navigatie bar</string>
+  <string name="statusbar_items_title">Statusbalk iconen</string>
   <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
   <string name="keyguard_indication_dash_charging_time">Dash Laden (<xliff:g id="charging_time_left" voorbeeld="4 uren en 2 minuten">%s</xliff:g> tot volledig vol)</string>
   <string name="keyguard_plugged_in_dash_charging">Dash Opladen</string>
@@ -94,25 +94,29 @@
   <string name="keyguard_indication_turbo_power_time">TurboPower aangesloten (<xliff:g id="charging_time_left">%s</xliff:g> tot volledig opgeladen)</string>
   <string name="keyguard_plugged_in_turbo_power_charging">TurboPower verbonden</string>
   <!-- Omni Weather -->
-  <string name="omnijaws_service_error">Error</string>
-  <string name="omnijaws_service_unkown">No weather data</string>
-  <string name="omnijaws_service_error_long">Error loading weather data</string>
-  <string name="omnijaws_service_disabled">Service is disabled</string>
-  <string name="omnijaws_detail_header">Weather</string>
-  <string name="omnijaws_label_default">Weather</string>
-  <string name="omnijaws_current_text">Now</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">Last update:</string>
+  <string name="omnijaws_service_error">Fout</string>
+  <string name="omnijaws_service_unkown">Geen weergegevens</string>
+  <string name="omnijaws_service_error_long">Fout bij het laden van weergegevens</string>
+  <string name="omnijaws_service_disabled">Service is uitgeschakeld</string>
+  <string name="omnijaws_detail_header">Weer</string>
+  <string name="omnijaws_label_default">Weer</string>
+  <string name="omnijaws_current_text">Zojuist</string>
+  <string name="omnijaws_package_not_available">OmniJaws is niet beschikbaar</string>
+  <string name="omnijaws_service_last_update">Laatst bijgewerkt:</string>
   <!-- Weather string format in expanded statusbar header -->
   <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
   <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+  <string name="quick_settings_caffeine_label">Cafeïne</string>
+  <string name="accessibility_quick_settings_caffeine_off">Cafeïne uit</string>
+  <string name="accessibility_quick_settings_caffeine_on">Cafeïne aan</string>
   <!-- Heads Up QS Tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+  <string name="quick_settings_heads_up_label">Zwevende notificaties</string>
+  <string name="accessibility_quick_settings_heads_up_off">Zwevende meldingen uit.</string>
+  <string name="accessibility_quick_settings_heads_up_on">Zwevende meldingen aan.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_off">Zwevende meldingen uitgeschakeld.</string>
+  <string name="accessibility_quick_settings_heads_up_changed_on">Zwevende meldingen ingeschakeld.</string>
+  <!-- Screen pinning dialog description. (for devices without navbar) -->
+  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+  <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
 </resources>
