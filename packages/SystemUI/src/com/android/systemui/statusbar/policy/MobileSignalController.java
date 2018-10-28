@@ -77,6 +77,11 @@ public class MobileSignalController extends SignalController<
     private Config mConfig;
 
     private boolean mRoamingIconAllowed;
+    private boolean mShow4gForLte;
+    private boolean mVoLTEicon;
+
+    private static final String SHOW_VOLTE_ICON =
+            "system:" + Settings.System.SHOW_VOLTE_ICON;
 
     // TODO: Reduce number of vars passed in, if we have the NetworkController, probably don't
     // need listener lists anymore.
@@ -114,6 +119,8 @@ public class MobileSignalController extends SignalController<
                 updateTelephony();
             }
         };
+
+	Dependency.get(TunerService.class).addTunable(this, SHOW_VOLTE_ICON);
 
         Handler mHandler = new Handler();
         SettingsObserver settingsObserver = new SettingsObserver(mHandler);
@@ -354,11 +361,10 @@ public class MobileSignalController extends SignalController<
         int typeIcon = (showDataIcon || mConfig.alwaysShowDataRatIcon) ? icons.mDataType : 0;
         callback.setMobileDataIndicators(statusIcon, qsIcon, typeIcon, qsTypeIcon,
                 activityIn, activityOut, dataContentDescription, description, icons.mIsWide,
-                mSubscriptionInfo.getSubscriptionId(), mCurrentState.roaming, isMobileIms());
+                mSubscriptionInfo.getSubscriptionId(), mCurrentState.roaming, mCurrentState.mobileIms);
     }
 
     private boolean isMobileIms() {
-
         List<SubscriptionInfo> subInfos = SubscriptionManager.from(mContext)
                         .getActiveSubscriptionInfoList();
         if (subInfos != null) {
@@ -373,7 +379,7 @@ public class MobileSignalController extends SignalController<
             Log.e(mTag, "Invalid SubscriptionInfo");
         }
         return false;
-      }
+    }
 
     @Override
     protected MobileState cleanState() {
@@ -542,6 +548,7 @@ public class MobileSignalController extends SignalController<
             mCurrentState.networkName = mServiceState.getOperatorAlphaShort();
         }
 
+        mCurrentState.mobileIms = isMobileIms() && mRoamingIconAllowed;
         notifyListenersIfNecessary();
     }
 
@@ -663,6 +670,7 @@ public class MobileSignalController extends SignalController<
         boolean isDefault;
         boolean userSetup;
         boolean roaming;
+        boolean mobileIms;
 
         @Override
         public void copyFrom(State s) {
@@ -678,6 +686,7 @@ public class MobileSignalController extends SignalController<
             carrierNetworkChangeMode = state.carrierNetworkChangeMode;
             userSetup = state.userSetup;
             roaming = state.roaming;
+            mobileIms = state.mobileIms;
         }
 
         @Override
@@ -689,6 +698,7 @@ public class MobileSignalController extends SignalController<
             builder.append("networkNameData=").append(networkNameData).append(',');
             builder.append("dataConnected=").append(dataConnected).append(',');
             builder.append("roaming=").append(roaming).append(',');
+            builder.append("mobileIms=").append(mobileIms).append(',');
             builder.append("isDefault=").append(isDefault).append(',');
             builder.append("isEmergency=").append(isEmergency).append(',');
             builder.append("airplaneMode=").append(airplaneMode).append(',');
@@ -709,7 +719,8 @@ public class MobileSignalController extends SignalController<
                     && ((MobileState) o).carrierNetworkChangeMode == carrierNetworkChangeMode
                     && ((MobileState) o).userSetup == userSetup
                     && ((MobileState) o).isDefault == isDefault
-                    && ((MobileState) o).roaming == roaming;
+                    && ((MobileState) o).roaming == roaming
+                    && ((MobileState) o).mobileIms == mobileIms;
         }
     }
 }
