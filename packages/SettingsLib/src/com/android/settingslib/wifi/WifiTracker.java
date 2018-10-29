@@ -277,7 +277,7 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
             mScanner = new Scanner();
         }
 
-        if (mWifiManager.isWifiEnabled()) {
+        if (isWifiEnabled()) {
             mScanner.resume();
         }
     }
@@ -406,7 +406,7 @@ public class WifiTracker implements LifecycleObserver, OnStart, OnStop, OnDestro
     }
 
     public boolean isWifiEnabled() {
-        return mWifiManager.isWifiEnabled();
+        return mWifiManager != null && mWifiManager.isWifiEnabled();
     }
 
     /**
