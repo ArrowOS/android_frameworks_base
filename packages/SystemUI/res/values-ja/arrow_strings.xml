@@ -42,9 +42,6 @@
   <string name="accessibility_quick_settings_hwkeys_on">ハードウェアキー オン</string>
   <string name="accessibility_quick_settings_hwkeys_off">ハードウェアキー オフ</string>
   <string name="quick_settings_hwkeys_label">ハードウェアキー</string>
-  <!-- Screenshot QS tile -->
-  <string name="quick_settings_screenshot_label">スクリーンショット</string>
-  <string name="quick_settings_region_screenshot_label">範囲選択してスクリーンショット</string>
   <!-- Advanced powermenu -->
   <string name="global_action_restart_system">再起動</string>
   <string name="global_action_restart_advanced">高度な再起動</string>
@@ -115,8 +112,17 @@
   <string name="accessibility_quick_settings_heads_up_on">Heads Up オン</string>
   <string name="accessibility_quick_settings_heads_up_changed_off">Heads Upをオフにしました</string>
   <string name="accessibility_quick_settings_heads_up_changed_on">Heads Upをオンにしました</string>
+  <!-- Advance location quick setting tile -->
+  <string name="quick_settings_secondary_location_off"></string>
+  <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
+  <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+  <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
+  <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+  <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
+  <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
   <!-- Screen pinning dialog description. (for devices without navbar) -->
-  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+  <string name="screen_pinning_description_no_navbar">固定を解除するまで画面が常に表示されるようになります。固定を解除するには戻るボタンを押し続けます。</string>
   <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
-  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
+  <string name="screen_pinning_toast_no_navbar">画面の固定を解除するには戻るボタンを長押しします</string>
+  <string name="quick_settings_screenshot_label">スクリーンショット</string>
 </resources>
