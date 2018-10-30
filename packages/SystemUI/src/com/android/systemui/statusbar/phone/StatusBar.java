@@ -1020,10 +1020,15 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                 if (mDozeServiceHost != null) {
                     mDozeServiceHost.firePowerSaveChanged(isPowerSave);
                 }
-                if (NIGHT_MODE_IN_BATTERY_SAVER) {
-                    mContext.getSystemService(UiModeManager.class).setNightMode(
-                        isPowerSave ? UiModeManager.MODE_NIGHT_YES : UiModeManager.MODE_NIGHT_NO);
-                }
+
+		boolean BatterySaverDarkModeState = Settings.System.getIntForUser(mContext.getContentResolver(),
+                	Settings.System.BATTERY_SAVER_DARK_MODE, 0,
+                	UserHandle.USER_CURRENT) == 1;
+
+                if (NIGHT_MODE_IN_BATTERY_SAVER == BatterySaverDarkModeState & isPowerSave)
+                    mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_YES);
+		else
+		    mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_NO);
             }
 
             @Override
@@ -5121,6 +5126,9 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_FOOTER_WARNINGS),
                     false, this, UserHandle.USER_ALL);
+	    resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BATTERY_SAVER_DARK_MODE),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -5149,7 +5157,19 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             } else if (uri.equals(Settings.System.getUriFor(
                 Settings.System.DOUBLE_TAP_SLEEP_GESTURE))) {
                 setStatusBarWindowViewOptions();
-            }
+	    } else if (uri.equals(Settings.System.getUriFor(
+		Settings.System.BATTERY_SAVER_DARK_MODE))) {
+		// Disable dark mode when batterysaver dark mode switch
+	        // is turned off while battery saver is still enabled.
+		if (mContext.getSystemService(
+			UiModeManager.class).getNightMode() == UiModeManager.MODE_NIGHT_YES
+			& mBatteryController.isPowerSave())
+		  mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_NO);
+		else if (mContext.getSystemService(
+                        UiModeManager.class).getNightMode() == UiModeManager.MODE_NIGHT_NO
+                        & mBatteryController.isPowerSave())
+		  mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_YES);
+	    }
         }
 
          public void update() {
