@@ -1020,9 +1020,15 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                 if (mDozeServiceHost != null) {
                     mDozeServiceHost.firePowerSaveChanged(isPowerSave);
                 }
-                if (NIGHT_MODE_IN_BATTERY_SAVER) {
-                    mContext.getSystemService(UiModeManager.class).setNightMode(
-                        isPowerSave ? UiModeManager.MODE_NIGHT_YES : UiModeManager.MODE_NIGHT_NO);
+
+		boolean BatterySaverDarkModeState = Settings.System.getIntForUser(mContext.getContentResolver(),
+                	Settings.System.BATTERY_SAVER_DARK_MODE, 0,
+                	UserHandle.USER_CURRENT) == 1;
+
+                if (NIGHT_MODE_IN_BATTERY_SAVER == BatterySaverDarkModeState & isPowerSave) {
+                    mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_YES);
+		else
+		    mContext.getSystemService(UiModeManager.class).setNightMode(UiModeManager.MODE_NIGHT_NO);
                 }
             }
 
@@ -5149,7 +5155,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             } else if (uri.equals(Settings.System.getUriFor(
                 Settings.System.DOUBLE_TAP_SLEEP_GESTURE))) {
                 setStatusBarWindowViewOptions();
-            }
+	    }
         }
 
          public void update() {
