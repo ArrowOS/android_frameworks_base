@@ -4576,6 +4576,14 @@ public final class Settings {
          */
         public static final String SYSTEM_UI_THEME = "system_ui_theme";
 
+ 	/**
+	 * Make night mode on battery saver configurable
+	 * Values: switch state
+	 *
+	 * @hide
+	 */
+	public static final String BATTERY_SAVER_NIGHT_MODE = "battery_saver_night_mode";
+
 
         /**
         * @hide
