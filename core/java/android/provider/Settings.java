@@ -7760,6 +7760,14 @@ public final class Settings {
         public static final String UI_NIGHT_MODE = "ui_night_mode";
 
         /**
+	 * Make night mode on battery saver configurable
+	 * Values: bool
+	 *
+	 * @hide
+	 */
+	public static final String BATTERY_SAVER_NIGHT_MODE = "battery_saver_night_mode";
+
+        /**
          * The current device UI theme mode effect SystemUI and Launcher.<br/>
          * <b>Values:</b><br/>
          * 0 - The mode that theme will controlled by wallpaper color.<br/>
