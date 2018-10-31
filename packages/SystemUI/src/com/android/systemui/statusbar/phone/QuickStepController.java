@@ -44,10 +44,12 @@ import android.util.Log;
 import android.util.Slog;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.KeyEvent;
 import android.view.WindowManagerGlobal;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.support.annotation.DimenRes;
+import com.android.internal.util.arrow.ArrowUtils;
 import com.android.systemui.Dependency;
 import com.android.systemui.OverviewProxyService;
 import com.android.systemui.R;
@@ -85,6 +87,8 @@ public class QuickStepController implements GestureHelper {
     private AnimatorSet mTrackAnimator;
     private ButtonDispatcher mHitTarget;
     private View mCurrentNavigationBarView;
+
+    private boolean mBackActionScheduled;
 
     private final Handler mHandler = new Handler();
     private final Rect mTrackRect = new Rect();
@@ -270,6 +274,17 @@ public class QuickStepController implements GestureHelper {
                     offset -= mIsVertical ? mTrackRect.height() : mTrackRect.width();
                 }
 
+                final boolean allowBackAction = !mNavigationBarView.isFullGestureMode() ? false
+                        : (!mDragPositive ? offset < 0 && pos > touchDown
+                        : offset >= 0 && pos < touchDown);
+                // if quickscrub is active, don't trigger the back action but allow quickscrub drag
+                // action so the user can still switch apps
+                if (!mQuickScrubActive && exceededScrubTouchSlop && allowBackAction) {
+                    // schedule a back button action and skip quickscrub
+                     mBackActionScheduled = true;
+                    break;
+                }
+
                 final boolean allowDrag = !mDragPositive
                         ? offset < 0 && pos < touchDown : offset >= 0 && pos > touchDown;
                 float scrubFraction = Utilities.clamp(Math.abs(offset) * 1f / trackSize, 0, 1);
@@ -296,8 +311,15 @@ public class QuickStepController implements GestureHelper {
                 break;
             }
             case MotionEvent.ACTION_CANCEL:
+                mBackActionScheduled = false;
+                break;
             case MotionEvent.ACTION_UP:
-                endQuickScrub(true /* animate */);
+                if (mBackActionScheduled) {
+                    mBackActionScheduled = false;
+                    ArrowUtils.sendKeycode(KeyEvent.KEYCODE_BACK);
+                } else {
+                    endQuickScrub(true /* animate */);
+                }
                 break;
         }
 

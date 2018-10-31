@@ -4654,6 +4654,11 @@ public final class Settings {
         private static final Validator LOCKSCREEN_WEATHER_SHOW_CITY_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**
+         * @hide
+         */
+        public static final String FULL_GESTURE_NAVBAR = "full_gesture_navbar";
+
+        /**
          * Unlock keystore with fingerprint after reboot
          * @hide
          */
