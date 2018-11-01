@@ -4120,7 +4120,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
     protected void updateTheme() {
         final boolean inflated = mStackScroller != null && mStatusBarWindowManager != null;
         int userThemeSetting = Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.SYSTEM_UI_THEME, 0, mLockscreenUserManager.getCurrentUserId());
+                Settings.System.SYSTEM_UI_THEME, 2, mLockscreenUserManager.getCurrentUserId());
         boolean useBlackTheme = false;
         boolean useDarkTheme = false;
 	final boolean wallpaperWantsDarkTheme;
@@ -4224,7 +4224,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
     // Switches theme accent from to another or back to stock
     public void updateAccents() {
         int accentSetting = Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.ACCENT_PICKER, 0, mLockscreenUserManager.getCurrentUserId());
+                Settings.System.ACCENT_PICKER, 15, mLockscreenUserManager.getCurrentUserId());
         if (accentSetting == 0) {
             unloadAccents();
         } else if (accentSetting == 1) {
