@@ -21,108 +21,108 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Text to use when the number in a notification info is too large
+    <!-- Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
-  <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">קשירת USB</string>
-  <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">סנכרון</string>
-  <string name="accessibility_quick_settings_sync_off">כיבוי סנכרון</string>
-  <string name="accessibility_quick_settings_sync_on">הפעלת סנכרון</string>
-  <string name="accessibility_quick_settings_sync_changed_off">סנכרון כבוי</string>
-  <string name="accessibility_quick_settings_sync_changed_on">סנכרון הופעל</string>
-  <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">צליל</string>
-  <string name="quick_settings_sound_ring">צלצול</string>
-  <string name="quick_settings_sound_vibrate">רטט</string>
-  <string name="quick_settings_sound_dnd">לא להפריע</string>
-  <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">מקשי חומרה פעילים</string>
-  <string name="accessibility_quick_settings_hwkeys_off">מקשי חומרה מושבתים</string>
-  <string name="quick_settings_hwkeys_label">מקשי חומרה</string>
-  <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">הפעלה מחדש</string>
-  <string name="global_action_restart_advanced">הפעלה מתקדמת מחדש</string>
-  <string name="global_action_restart_recovery">שיקום</string>
-  <string name="global_action_restart_bootloader">מנהל אתחול</string>
-  <string name="global_action_restart_ui">מנשק המערכת</string>
-  <string name="global_action_restart_hot">חם</string>
-  <string name="global_action_screenshot">צילום מסך</string>
-  <string name="global_action_lockdown">Lockdown</string>
-  <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
-  <!-- Recents Panel -->
-  <!-- The text for the button in the notification window-shade that clears
+    <!-- USB tethering QS Tile -->
+    <string name="quick_settings_usb_tether_label">קשירת USB</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">סנכרון</string>
+    <string name="accessibility_quick_settings_sync_off">כיבוי סנכרון</string>
+    <string name="accessibility_quick_settings_sync_on">הפעלת סנכרון</string>
+    <string name="accessibility_quick_settings_sync_changed_off">סנכרון כבוי</string>
+    <string name="accessibility_quick_settings_sync_changed_on">סנכרון הופעל</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">צליל</string>
+    <string name="quick_settings_sound_ring">צלצול</string>
+    <string name="quick_settings_sound_vibrate">רטט</string>
+    <string name="quick_settings_sound_dnd">לא להפריע</string>
+    <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">מקשי חומרה פעילים</string>
+    <string name="accessibility_quick_settings_hwkeys_off">מקשי חומרה מושבתים</string>
+    <string name="quick_settings_hwkeys_label">מקשי חומרה</string>
+    <!-- Advanced powermenu -->
+    <string name="global_action_restart_system">הפעלה מחדש</string>
+    <string name="global_action_restart_advanced">הפעלה מתקדמת מחדש</string>
+    <string name="global_action_restart_recovery">שיקום</string>
+    <string name="global_action_restart_bootloader">מנהל אתחול</string>
+    <string name="global_action_restart_ui">מנשק המערכת</string>
+    <string name="global_action_restart_hot">חם</string>
+    <string name="global_action_screenshot">צילום מסך</string>
+    <string name="global_action_lockdown">Lockdown</string>
+    <!-- Heads up snooze toast -->
+    <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
+    <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+    <!-- Recents Panel -->
+    <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">סגירת כל האחרונים</string>
-  <string name="lockscreen_default">בררת מחדל</string>
-  <string name="lockscreen_hidden">ללא</string>
-  <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
-  <string name="status_bar_vpn">VPN</string>
-  <string name="preview">תצוגה מקדימה</string>
-  <string name="keycode">Keycode</string>
-  <string name="no_home_title">לא נמצא כפתור בית</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">Start</string>
-  <string name="center">Center</string>
-  <string name="end">End</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">מחליף תפריט / מקלדת</string>
-  <string name="select_button">בחירת כפתור להוספה</string>
-  <string name="add_button">הוספת כפתור</string>
-  <string name="save">שמירה</string>
-  <string name="reset">איפוס</string>
-  <string name="select_keycode">בחירת כפתור במקלדת</string>
-  <string name="left">שמאל</string>
-  <string name="right">ימין</string>
-  <string name="navbar_editor_title">עורך</string>
-  <string name="navbar_editor_summary">הגדרת סרגל הניווט</string>
-  <string name="statusbar_items_title">Statusbar icons</string>
-  <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
-  <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
-  <!-- Omni Weather -->
-  <string name="omnijaws_service_error">שגיאה</string>
-  <string name="omnijaws_service_unkown">אין נתוני מזג אוויר</string>
-  <string name="omnijaws_service_error_long">שגיאה בטעינת נתוני מזג אוויר</string>
-  <string name="omnijaws_service_disabled">השירות מושבת</string>
-  <string name="omnijaws_detail_header">מזג אוויר</string>
-  <string name="omnijaws_label_default">מזג אוויר</string>
-  <string name="omnijaws_current_text">עכשיו</string>
-  <string name="omnijaws_package_not_available">OmniJaws not available</string>
-  <string name="omnijaws_service_last_update">עדכון אחרון:</string>
-  <!-- Weather string format in expanded statusbar header -->
-  <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
-  <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">Caffeine</string>
-  <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-  <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
-  <!-- Heads Up QS Tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
-  <!-- Advance location quick setting tile -->
-  <string name="quick_settings_secondary_location_off"></string>
-  <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
-  <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
-  <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
-  <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-  <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
-  <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
-  <!-- Screen pinning dialog description. (for devices without navbar) -->
-  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
-  <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
-  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
-  <string name="quick_settings_screenshot_label">צילום מסך</string>
+    <string name="clear_recents">סגירת כל האחרונים</string>
+    <string name="lockscreen_default">בררת מחדל</string>
+    <string name="lockscreen_hidden">ללא</string>
+    <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
+    <string name="custom_hint">Swipe from icon to launch</string>
+    <string name="status_bar_vpn">VPN</string>
+    <string name="preview">תצוגה מקדימה</string>
+    <string name="keycode">Keycode</string>
+    <string name="no_home_title">לא נמצא כפתור בית</string>
+    <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
+    <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
+    <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
+    <string name="start">Start</string>
+    <string name="center">Center</string>
+    <string name="end">End</string>
+    <string name="space">Spacer</string>
+    <string name="menu_ime">מחליף תפריט / מקלדת</string>
+    <string name="select_button">בחירת כפתור להוספה</string>
+    <string name="add_button">הוספת כפתור</string>
+    <string name="save">שמירה</string>
+    <string name="reset">איפוס</string>
+    <string name="select_keycode">בחירת כפתור במקלדת</string>
+    <string name="left">שמאל</string>
+    <string name="right">ימין</string>
+    <string name="navbar_editor_title">עורך</string>
+    <string name="navbar_editor_summary">הגדרת סרגל הניווט</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower connected</string>
+    <!-- Omni Weather -->
+    <string name="omnijaws_service_error">שגיאה</string>
+    <string name="omnijaws_service_unkown">אין נתוני מזג אוויר</string>
+    <string name="omnijaws_service_error_long">שגיאה בטעינת נתוני מזג אוויר</string>
+    <string name="omnijaws_service_disabled">השירות מושבת</string>
+    <string name="omnijaws_detail_header">מזג אוויר</string>
+    <string name="omnijaws_label_default">מזג אוויר</string>
+    <string name="omnijaws_current_text">עכשיו</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">עדכון אחרון:</string>
+    <!-- Weather string format in expanded statusbar header -->
+    <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <!-- Advance location quick setting tile -->
+    <string name="quick_settings_secondary_location_off"></string>
+    <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
+    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <!-- Screen pinning dialog description. (for devices without navbar) -->
+    <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+    <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+    <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
+    <string name="quick_settings_screenshot_label">צילום מסך</string>
 </resources>

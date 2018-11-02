@@ -21,108 +21,108 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Text to use when the number in a notification info is too large
+    <!-- Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
-  <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB 테더링</string>
-  <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">동기화</string>
-  <string name="accessibility_quick_settings_sync_off">동기화 끄기</string>
-  <string name="accessibility_quick_settings_sync_on">동기화 켜기</string>
-  <string name="accessibility_quick_settings_sync_changed_off">동기화 꺼짐</string>
-  <string name="accessibility_quick_settings_sync_changed_on">동기화 켜짐</string>
-  <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">소리</string>
-  <string name="quick_settings_sound_ring">벨소리</string>
-  <string name="quick_settings_sound_vibrate">진동</string>
-  <string name="quick_settings_sound_dnd">알림 일시중지</string>
-  <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">하드웨어 버튼 사용</string>
-  <string name="accessibility_quick_settings_hwkeys_off">하드웨어 버튼 사용 안함</string>
-  <string name="quick_settings_hwkeys_label">하드웨어 버튼</string>
-  <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">다시시작</string>
-  <string name="global_action_restart_advanced">고급 다시 시작</string>
-  <string name="global_action_restart_recovery">복구모드</string>
-  <string name="global_action_restart_bootloader">부트로더</string>
-  <string name="global_action_restart_ui">시스템UI</string>
-  <string name="global_action_restart_hot">빠른 다시 시작</string>
-  <string name="global_action_screenshot">스크린샷</string>
-  <string name="global_action_lockdown">잠금</string>
-  <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 피킹 알림을 1분 간 중지 시킵니다.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - 피킹 알람을 <xliff:g id="number">%d </xliff:g> 분 간 중지 시킵니다.</string>
-  <!-- Recents Panel -->
-  <!-- The text for the button in the notification window-shade that clears
+    <!-- USB tethering QS Tile -->
+    <string name="quick_settings_usb_tether_label">USB 테더링</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">동기화</string>
+    <string name="accessibility_quick_settings_sync_off">동기화 끄기</string>
+    <string name="accessibility_quick_settings_sync_on">동기화 켜기</string>
+    <string name="accessibility_quick_settings_sync_changed_off">동기화 꺼짐</string>
+    <string name="accessibility_quick_settings_sync_changed_on">동기화 켜짐</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">소리</string>
+    <string name="quick_settings_sound_ring">벨소리</string>
+    <string name="quick_settings_sound_vibrate">진동</string>
+    <string name="quick_settings_sound_dnd">알림 일시중지</string>
+    <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">하드웨어 버튼 사용</string>
+    <string name="accessibility_quick_settings_hwkeys_off">하드웨어 버튼 사용 안함</string>
+    <string name="quick_settings_hwkeys_label">하드웨어 버튼</string>
+    <!-- Advanced powermenu -->
+    <string name="global_action_restart_system">다시시작</string>
+    <string name="global_action_restart_advanced">고급 다시 시작</string>
+    <string name="global_action_restart_recovery">복구모드</string>
+    <string name="global_action_restart_bootloader">부트로더</string>
+    <string name="global_action_restart_ui">시스템UI</string>
+    <string name="global_action_restart_hot">빠른 다시 시작</string>
+    <string name="global_action_screenshot">스크린샷</string>
+    <string name="global_action_lockdown">잠금</string>
+    <!-- Heads up snooze toast -->
+    <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 피킹 알림을 1분 간 중지 시킵니다.</string>
+    <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - 피킹 알람을 <xliff:g id="number">%d </xliff:g> 분 간 중지 시킵니다.</string>
+    <!-- Recents Panel -->
+    <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">모든 알림 제거</string>
-  <string name="lockscreen_default">기본값</string>
-  <string name="lockscreen_hidden">없음</string>
-  <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">실행하려면 아이콘에서 스와이프하세요.</string>
-  <string name="status_bar_vpn">VPN</string>
-  <string name="preview">미리보기</string>
-  <string name="keycode">키 코드</string>
-  <string name="no_home_title">홈 버튼을 찾지 못 했습니다</string>
-  <string name="no_home_message">이 기기를 탐색하려면 홈 버튼을 사용해야 합니다. 홈 버튼을 추가한 다음 저장하세요.</string>
-  <string name="clipboard_description">클립보드를 사용하면 항목을 클립보드로 바로 드래그할 수 있습니다. 또한 항목을 클립보드 밖으로 바로 드래그할 수도 있습니다.</string>
-  <string name="keycode_description">키 코드 버튼을 사용하면 키보드 키를 네비게이션 바에 추가할 수 있습니다. 설정된 키 코드 버튼을 누르면 키보드 키가 에뮬레이션됩니다. 먼저 버튼에 할당할 키를 선택하고 그다음 버튼에 표시될 이미지를 선택해야 합니다.</string>
-  <string name="start">시작</string>
-  <string name="center">가운데</string>
-  <string name="end">종료</string>
-  <string name="space">스페이스</string>
-  <string name="menu_ime">메뉴/키보드 전환 도구</string>
-  <string name="select_button">추가할 버튼 선택</string>
-  <string name="add_button">버튼 추가</string>
-  <string name="save">저장</string>
-  <string name="reset">초기화</string>
-  <string name="select_keycode">키보드 버튼 선택</string>
-  <string name="left">왼쪽</string>
-  <string name="right">오른쪽</string>
-  <string name="navbar_editor_title">편집기</string>
-  <string name="navbar_editor_summary">네비게이션 바 설정</string>
-  <string name="statusbar_items_title">상태 표시줄 아이콘</string>
-  <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash 충전 (<xliff:g id="charging_time_left" example="4 시간 2 분">%s</xliff:g> 후 충전 완료)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash 충전 중</string>
-  <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower 연결됨 (<xliff:g id="charging_time_left">%s</xliff:g> 후 충전 완료)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower 연결됨</string>
-  <!-- Omni Weather -->
-  <string name="omnijaws_service_error">에러</string>
-  <string name="omnijaws_service_unkown">날씨 정보 없음</string>
-  <string name="omnijaws_service_error_long">날씨 정보 불러오기 오류</string>
-  <string name="omnijaws_service_disabled">서비스 사용 중지됨</string>
-  <string name="omnijaws_detail_header">날씨</string>
-  <string name="omnijaws_label_default">날씨</string>
-  <string name="omnijaws_current_text">현재</string>
-  <string name="omnijaws_package_not_available">OmniJaws를 사용할 수 없음</string>
-  <string name="omnijaws_service_last_update">최근 업데이트</string>
-  <!-- Weather string format in expanded statusbar header -->
-  <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
-  <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">카페인</string>
-  <string name="accessibility_quick_settings_caffeine_off">카페인 꺼짐</string>
-  <string name="accessibility_quick_settings_caffeine_on">카페인 켜짐</string>
-  <!-- Heads Up QS Tile -->
-  <string name="quick_settings_heads_up_label">피킹 알람</string>
-  <string name="accessibility_quick_settings_heads_up_off">피킹 알람 끔.</string>
-  <string name="accessibility_quick_settings_heads_up_on">피킹 알람 켬.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">피킹 알람 꺼짐.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">피킹 알람 켜짐.</string>
-  <!-- Advance location quick setting tile -->
-  <string name="quick_settings_secondary_location_off"></string>
-  <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
-  <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
-  <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
-  <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-  <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
-  <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
-  <!-- Screen pinning dialog description. (for devices without navbar) -->
-  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
-  <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
-  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
-  <string name="quick_settings_screenshot_label">스크린샷</string>
+    <string name="clear_recents">모든 알림 제거</string>
+    <string name="lockscreen_default">기본값</string>
+    <string name="lockscreen_hidden">없음</string>
+    <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
+    <string name="custom_hint">실행하려면 아이콘에서 스와이프하세요.</string>
+    <string name="status_bar_vpn">VPN</string>
+    <string name="preview">미리보기</string>
+    <string name="keycode">키 코드</string>
+    <string name="no_home_title">홈 버튼을 찾지 못 했습니다</string>
+    <string name="no_home_message">이 기기를 탐색하려면 홈 버튼을 사용해야 합니다. 홈 버튼을 추가한 다음 저장하세요.</string>
+    <string name="clipboard_description">클립보드를 사용하면 항목을 클립보드로 바로 드래그할 수 있습니다. 또한 항목을 클립보드 밖으로 바로 드래그할 수도 있습니다.</string>
+    <string name="keycode_description">키 코드 버튼을 사용하면 키보드 키를 네비게이션 바에 추가할 수 있습니다. 설정된 키 코드 버튼을 누르면 키보드 키가 에뮬레이션됩니다. 먼저 버튼에 할당할 키를 선택하고 그다음 버튼에 표시될 이미지를 선택해야 합니다.</string>
+    <string name="start">시작</string>
+    <string name="center">가운데</string>
+    <string name="end">종료</string>
+    <string name="space">스페이스</string>
+    <string name="menu_ime">메뉴/키보드 전환 도구</string>
+    <string name="select_button">추가할 버튼 선택</string>
+    <string name="add_button">버튼 추가</string>
+    <string name="save">저장</string>
+    <string name="reset">초기화</string>
+    <string name="select_keycode">키보드 버튼 선택</string>
+    <string name="left">왼쪽</string>
+    <string name="right">오른쪽</string>
+    <string name="navbar_editor_title">편집기</string>
+    <string name="navbar_editor_summary">네비게이션 바 설정</string>
+    <string name="statusbar_items_title">상태 표시줄 아이콘</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Dash 충전 (<xliff:g id="charging_time_left" example="4 시간 2 분">%s</xliff:g> 후 충전 완료)</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash 충전 중</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time">TurboPower 연결됨 (<xliff:g id="charging_time_left">%s</xliff:g> 후 충전 완료)</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower 연결됨</string>
+    <!-- Omni Weather -->
+    <string name="omnijaws_service_error">에러</string>
+    <string name="omnijaws_service_unkown">날씨 정보 없음</string>
+    <string name="omnijaws_service_error_long">날씨 정보 불러오기 오류</string>
+    <string name="omnijaws_service_disabled">서비스 사용 중지됨</string>
+    <string name="omnijaws_detail_header">날씨</string>
+    <string name="omnijaws_label_default">날씨</string>
+    <string name="omnijaws_current_text">현재</string>
+    <string name="omnijaws_package_not_available">OmniJaws를 사용할 수 없음</string>
+    <string name="omnijaws_service_last_update">최근 업데이트</string>
+    <!-- Weather string format in expanded statusbar header -->
+    <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">카페인</string>
+    <string name="accessibility_quick_settings_caffeine_off">카페인 꺼짐</string>
+    <string name="accessibility_quick_settings_caffeine_on">카페인 켜짐</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">피킹 알람</string>
+    <string name="accessibility_quick_settings_heads_up_off">피킹 알람 끔.</string>
+    <string name="accessibility_quick_settings_heads_up_on">피킹 알람 켬.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">피킹 알람 꺼짐.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">피킹 알람 켜짐.</string>
+    <!-- Advance location quick setting tile -->
+    <string name="quick_settings_secondary_location_off"></string>
+    <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
+    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <!-- Screen pinning dialog description. (for devices without navbar) -->
+    <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+    <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+    <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
+    <string name="quick_settings_screenshot_label">스크린샷</string>
 </resources>

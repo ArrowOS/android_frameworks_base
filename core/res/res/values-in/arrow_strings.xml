@@ -16,21 +16,21 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Power menu -->
-  <string name="reboot_to_recovery_title">Recovery</string>
-  <string name="reboot_to_recovery_message">Rebooting to recovery</string>
-  <string name="reboot_to_bootloader_title">Bootloader</string>
-  <string name="reboot_to_bootloader_message">Rebooting to bootloader</string>
-  <string name="reboot_title">Mulai Ulang</string>
-  <string name="reboot_message">Nyalakan Ulang Sistem</string>
-  <string name="statusbar_items_title">Ikon statusbar</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Paket tanda penyamaran</string>
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_fakePackageSignature">Izinkan app untuk menyamar menjadi app lain. Aplikasi jahat mungkin dapat menggunakan ini untuk mengakses data aplikasi privasi. Bolehkan perizinan ini dengan hati-hati!</string>
-  <!-- Pocket Lock -->
-  <string name="pocket_lock_message_long_press">Tekan lama tombol daya untuk berinteraksi</string>
-  <!-- Defines the sysfs attribute path used by pocket bridge
+    <!-- Power menu -->
+    <string name="reboot_to_recovery_title">Recovery</string>
+    <string name="reboot_to_recovery_message">Rebooting to recovery</string>
+    <string name="reboot_to_bootloader_title">Bootloader</string>
+    <string name="reboot_to_bootloader_message">Rebooting to bootloader</string>
+    <string name="reboot_title">Mulai Ulang</string>
+    <string name="reboot_message">Nyalakan Ulang Sistem</string>
+    <string name="statusbar_items_title">Ikon statusbar</string>
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_fakePackageSignature">Paket tanda penyamaran</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_fakePackageSignature">Izinkan app untuk menyamar menjadi app lain. Aplikasi jahat mungkin dapat menggunakan ini untuk mengakses data aplikasi privasi. Bolehkan perizinan ini dengan hati-hati!</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Tekan lama tombol daya untuk berinteraksi</string>
+    <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
-  <string name="config_pocketBridgeSysfsInpocket"></string>
+    <string name="config_pocketBridgeSysfsInpocket"></string>
 </resources>
