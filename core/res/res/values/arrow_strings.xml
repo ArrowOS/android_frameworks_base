@@ -38,4 +38,9 @@
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
+
+    <!-- Ambient play -->
+    <string name="ambient_recognition_notification">Now Playing</string>
+    <string name="ambient_recognition_information">%1$s by %2$s</string>
+
 </resources>
