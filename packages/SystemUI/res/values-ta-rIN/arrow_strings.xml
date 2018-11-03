@@ -21,111 +21,111 @@
  */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Text to use when the number in a notification info is too large
+    <!-- Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
-  <!-- USB tethering QS Tile -->
-  <string name="quick_settings_usb_tether_label">USB tethering</string>
-  <!-- Sync QS Tile -->
-  <string name="quick_settings_sync_label">ஒத்திசை</string>
-  <string name="accessibility_quick_settings_sync_off">ஒத்திசைவு அணை</string>
-  <string name="accessibility_quick_settings_sync_on">ஒத்திசைவு இயக்கு</string>
-  <string name="accessibility_quick_settings_sync_changed_off">ஒத்திசைவு அணைக்கப்படுக்கிறது</string>
-  <string name="accessibility_quick_settings_sync_changed_on">ஒத்திசைவு இயக்கப்படுக்கிறது</string>
-  <!-- Sound QS Tile -->
-  <string name="quick_settings_sound_label">ஒலி</string>
-  <string name="quick_settings_sound_ring">மணி</string>
-  <string name="quick_settings_sound_vibrate">அதிர்வு</string>
-  <string name="quick_settings_sound_dnd">தொந்தரவு செய்ய வேண்டாம்</string>
-  <!-- HW Keys Tile -->
-  <string name="accessibility_quick_settings_hwkeys_on">HW விசை இயக்கப்பட்டுள்ளது</string>
-  <string name="accessibility_quick_settings_hwkeys_off">HW விசை அணைக்கப்பட்டுள்ளது</string>
-  <string name="quick_settings_hwkeys_label">HW விசை</string>
-  <!-- Advanced powermenu -->
-  <string name="global_action_restart_system">மறுதொடக்கம்</string>
-  <string name="global_action_restart_advanced">மேம்படுத்தப்பட்ட மறுதொடக்கம்</string>
-  <string name="global_action_restart_recovery">மீட்டல்</string>
-  <string name="global_action_restart_bootloader">துவக்கேற்றி</string>
-  <string name="global_action_restart_ui">முறைமைUI</string>
-  <string name="global_action_restart_hot">சூடு</string>
-  <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
-  <string name="global_action_lockdown">Lockdown</string>
-  <!-- Heads up snooze toast -->
-  <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
-  <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
-  <!-- Recents Panel -->
-  <!-- The text for the button in the notification window-shade that clears
+    <!-- USB tethering QS Tile -->
+    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">ஒத்திசை</string>
+    <string name="accessibility_quick_settings_sync_off">ஒத்திசைவு அணை</string>
+    <string name="accessibility_quick_settings_sync_on">ஒத்திசைவு இயக்கு</string>
+    <string name="accessibility_quick_settings_sync_changed_off">ஒத்திசைவு அணைக்கப்படுக்கிறது</string>
+    <string name="accessibility_quick_settings_sync_changed_on">ஒத்திசைவு இயக்கப்படுக்கிறது</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">ஒலி</string>
+    <string name="quick_settings_sound_ring">மணி</string>
+    <string name="quick_settings_sound_vibrate">அதிர்வு</string>
+    <string name="quick_settings_sound_dnd">தொந்தரவு செய்ய வேண்டாம்</string>
+    <!-- HW Keys Tile -->
+    <string name="accessibility_quick_settings_hwkeys_on">HW விசை இயக்கப்பட்டுள்ளது</string>
+    <string name="accessibility_quick_settings_hwkeys_off">HW விசை அணைக்கப்பட்டுள்ளது</string>
+    <string name="quick_settings_hwkeys_label">HW விசை</string>
+    <!-- Advanced powermenu -->
+    <string name="global_action_restart_system">மறுதொடக்கம்</string>
+    <string name="global_action_restart_advanced">மேம்படுத்தப்பட்ட மறுதொடக்கம்</string>
+    <string name="global_action_restart_recovery">மீட்டல்</string>
+    <string name="global_action_restart_bootloader">துவக்கேற்றி</string>
+    <string name="global_action_restart_ui">முறைமைUI</string>
+    <string name="global_action_restart_hot">சூடு</string>
+    <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
+    <string name="global_action_lockdown">Lockdown</string>
+    <!-- Heads up snooze toast -->
+    <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
+    <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+    <!-- Recents Panel -->
+    <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-  <string name="clear_recents">எல்லா சமீபத்திய முடு</string>
-  <string name="lockscreen_default">இயல்புநிலை</string>
-  <string name="lockscreen_hidden">எதுவுமில்லை</string>
-  <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-  <string name="custom_hint">Swipe from icon to launch</string>
-  <string name="status_bar_vpn">VPN</string>
-  <string name="preview">முன்னோட்டம்</string>
-  <string name="keycode">விசை குறியீடு</string>
-  <string name="no_home_title">எந்த முகப்பு பொத்தானும் கண்டுபிடிக்கவில்லை</string>
-  <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-  <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-  <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
-  <string name="start">தொடக்கம்</string>
-  <string name="center">மையம்</string>
-  <string name="end">இறுதி</string>
-  <string name="space">Spacer</string>
-  <string name="menu_ime">மெனு / விசைப்பலகை நிலைமாற்றி</string>
-  <string name="select_button">சேர்க்க பொத்தானைத் தேர்ந்தெடு</string>
-  <string name="add_button">பொத்தானை சேர்</string>
-  <string name="save">சேமி</string>
-  <string name="reset">மீட்டமை</string>
-  <string name="select_keycode">விசைப்பலகை பட்டனை தேர்ந்தெடு</string>
-  <string name="left">இடது
+    <string name="clear_recents">எல்லா சமீபத்திய முடு</string>
+    <string name="lockscreen_default">இயல்புநிலை</string>
+    <string name="lockscreen_hidden">எதுவுமில்லை</string>
+    <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
+    <string name="custom_hint">Swipe from icon to launch</string>
+    <string name="status_bar_vpn">VPN</string>
+    <string name="preview">முன்னோட்டம்</string>
+    <string name="keycode">விசை குறியீடு</string>
+    <string name="no_home_title">எந்த முகப்பு பொத்தானும் கண்டுபிடிக்கவில்லை</string>
+    <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
+    <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
+    <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
+    <string name="start">தொடக்கம்</string>
+    <string name="center">மையம்</string>
+    <string name="end">இறுதி</string>
+    <string name="space">Spacer</string>
+    <string name="menu_ime">மெனு / விசைப்பலகை நிலைமாற்றி</string>
+    <string name="select_button">சேர்க்க பொத்தானைத் தேர்ந்தெடு</string>
+    <string name="add_button">பொத்தானை சேர்</string>
+    <string name="save">சேமி</string>
+    <string name="reset">மீட்டமை</string>
+    <string name="select_keycode">விசைப்பலகை பட்டனை தேர்ந்தெடு</string>
+    <string name="left">இடது
 
 smartbar_left
 கோப்பு: strings. xml</string>
-  <string name="right">வலது</string>
-  <string name="navbar_editor_title">திருத்தி</string>
-  <string name="navbar_editor_summary">Configure navigaton bar</string>
-  <string name="statusbar_items_title">நிலைப்பட்டி படவுருகள்</string>
-  <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
-  <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-  <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
-  <string name="keyguard_plugged_in_turbo_power_charging">TurboPower இணைக்கபட்டுள்ளது</string>
-  <!-- Omni Weather -->
-  <string name="omnijaws_service_error">பிழை</string>
-  <string name="omnijaws_service_unkown">வானிலை தகவல் இல்லை</string>
-  <string name="omnijaws_service_error_long">வானிலை புள்ளிவிபரங்கள் ஏற்றும் போது பிழை</string>
-  <string name="omnijaws_service_disabled">சேவை முடக்கப்பட்டுள்ளது</string>
-  <string name="omnijaws_detail_header">வானிலை</string>
-  <string name="omnijaws_label_default">வானிலை</string>
-  <string name="omnijaws_current_text">இப்போது</string>
-  <string name="omnijaws_package_not_available">Ommnijaws கிடைக்கவில்லை</string>
-  <string name="omnijaws_service_last_update">கடைசி புதுப்பி:</string>
-  <!-- Weather string format in expanded statusbar header -->
-  <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
-  <!-- Caffeine QS Tile -->
-  <string name="quick_settings_caffeine_label">காஃபின்</string>
-  <string name="accessibility_quick_settings_caffeine_off">காஃபின் அணை</string>
-  <string name="accessibility_quick_settings_caffeine_on">காஃபின் இயக்கு</string>
-  <!-- Heads Up QS Tile -->
-  <string name="quick_settings_heads_up_label">Heads up</string>
-  <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-  <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-  <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
-  <!-- Advance location quick setting tile -->
-  <string name="quick_settings_secondary_location_off"></string>
-  <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
-  <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
-  <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
-  <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-  <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
-  <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
-  <!-- Screen pinning dialog description. (for devices without navbar) -->
-  <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
-  <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
-  <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
-  <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
+    <string name="right">வலது</string>
+    <string name="navbar_editor_title">திருத்தி</string>
+    <string name="navbar_editor_summary">Configure navigaton bar</string>
+    <string name="statusbar_items_title">நிலைப்பட்டி படவுருகள்</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">TurboPower இணைக்கபட்டுள்ளது</string>
+    <!-- Omni Weather -->
+    <string name="omnijaws_service_error">பிழை</string>
+    <string name="omnijaws_service_unkown">வானிலை தகவல் இல்லை</string>
+    <string name="omnijaws_service_error_long">வானிலை புள்ளிவிபரங்கள் ஏற்றும் போது பிழை</string>
+    <string name="omnijaws_service_disabled">சேவை முடக்கப்பட்டுள்ளது</string>
+    <string name="omnijaws_detail_header">வானிலை</string>
+    <string name="omnijaws_label_default">வானிலை</string>
+    <string name="omnijaws_current_text">இப்போது</string>
+    <string name="omnijaws_package_not_available">Ommnijaws கிடைக்கவில்லை</string>
+    <string name="omnijaws_service_last_update">கடைசி புதுப்பி:</string>
+    <!-- Weather string format in expanded statusbar header -->
+    <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">காஃபின்</string>
+    <string name="accessibility_quick_settings_caffeine_off">காஃபின் அணை</string>
+    <string name="accessibility_quick_settings_caffeine_on">காஃபின் இயக்கு</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <!-- Advance location quick setting tile -->
+    <string name="quick_settings_secondary_location_off"></string>
+    <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
+    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <!-- Screen pinning dialog description. (for devices without navbar) -->
+    <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+    <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
+    <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
+    <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
 </resources>

@@ -16,21 +16,21 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Power menu -->
-  <string name="reboot_to_recovery_title">Recuperación</string>
-  <string name="reboot_to_recovery_message">Reiniciando en modo recovery</string>
-  <string name="reboot_to_bootloader_title">Modo Bootloader</string>
-  <string name="reboot_to_bootloader_message">Reiniciando en modo bootloader</string>
-  <string name="reboot_title">Reiniciar</string>
-  <string name="reboot_message">Reiniciando sistema</string>
-  <string name="statusbar_items_title">Icono de la barra de estado</string>
-  <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permlab_fakePackageSignature">Falsificar firma del paquete</string>
-  <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-  <string name="permdesc_fakePackageSignature">Permite que la aplicación se ejecute como una aplicación diferente. Las aplicaciones maliciosas pueden usar esto para acceder a datos personales. ¡Conceda este permiso con cuidado!</string>
-  <!-- Pocket Lock -->
-  <string name="pocket_lock_message_long_press">Mantenga pulsado el botón de encendido para interactuar</string>
-  <!-- Defines the sysfs attribute path used by pocket bridge
+    <!-- Power menu -->
+    <string name="reboot_to_recovery_title">Recuperación</string>
+    <string name="reboot_to_recovery_message">Reiniciando en modo recovery</string>
+    <string name="reboot_to_bootloader_title">Modo Bootloader</string>
+    <string name="reboot_to_bootloader_message">Reiniciando en modo bootloader</string>
+    <string name="reboot_title">Reiniciar</string>
+    <string name="reboot_message">Reiniciando sistema</string>
+    <string name="statusbar_items_title">Icono de la barra de estado</string>
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_fakePackageSignature">Falsificación de firma</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_fakePackageSignature">Permite que la aplicación se ejecute como una aplicación diferente. Las aplicaciones maliciosas pueden usar esto para acceder a datos personales. ¡Conceda este permiso con cuidado!</string>
+    <!-- Pocket Lock -->
+    <string name="pocket_lock_message_long_press">Mantenga pulsado el botón de encendido para interactuar</string>
+    <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
-  <string name="config_pocketBridgeSysfsInpocket"></string>
+    <string name="config_pocketBridgeSysfsInpocket"></string>
 </resources>
