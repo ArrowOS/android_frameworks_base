@@ -128,4 +128,9 @@
 
     <!-- Flashlight proximity check -->
     <java-symbol type="integer" name="config_flashlightProximityTimeout" />
+
+    <!-- Ambient play -->
+    <java-symbol type="string" name="ambient_recognition_notification" />
+    <java-symbol type="string" name="ambient_recognition_information" />
+
 </resources>
