@@ -707,9 +707,6 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
     }
     private OmniSettingsObserver mOmniSettingsObserver;
     private boolean mShowNavBar;
-
-    private AmbientIndicationNotification mAmbientNotification;
-    private RecoginitionObserverFactory mRecognition;
     private AmbientIndicationManager mAmbientIndicationManager;
     private boolean mRecognitionEnabled;
     private boolean mRecognitionEnabledOnKeyguard;
@@ -6149,7 +6146,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
     public void restartUI() {
         Log.d(TAG, "StatusBar API restartUI! Commiting suicide! Goodbye cruel world!");
         Process.killProcess(Process.myPid());
-
+    }
     protected void toggleKeyboardShortcuts(int deviceId) {
         KeyboardShortcuts.toggle(mContext, deviceId);
     }
