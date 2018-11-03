@@ -22,6 +22,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -41,6 +42,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.android.systemui.R;
+
+import com.android.internal.util.ambient.play.AmbientPlayHistoryManager;
 
 public class AmbientIndicationManager {
 
@@ -253,9 +256,15 @@ public class AmbientIndicationManager {
         isRecognitionObserverBusy = false;
         lastUpdated = System.currentTimeMillis();
         NO_MATCH_COUNT = 0;
+        if (!isRecognitionEnabled) {
+            dispatchRecognitionNoResult();
+            return;
+        }
         if (isRecognitionNotificationEnabled) {
             showNotification(observed.Song, observed.Artist);
         }
+        AmbientPlayHistoryManager.addSong(observed.Song, observed.Artist, mContext);
+        AmbientPlayHistoryManager.sendMatchBroadcast(mContext);
         for (AmbientIndicationManagerCallback cb : mCallbacks) {
             try {
                 cb.onRecognitionResult(observed);
@@ -312,10 +321,10 @@ public class AmbientIndicationManager {
         Notification.Builder mBuilder =
                 new Notification.Builder(mContext, "music_recognized_channel");
         final Bundle extras = Bundle.forPair(Notification.EXTRA_SUBSTITUTE_APP_NAME,
-                mContext.getResources().getString(R.string.ambient_recognition_notification));
+                mContext.getResources().getString(com.android.internal.R.string.ambient_recognition_notification));
         mBuilder.setSmallIcon(R.drawable.ic_music_note_24dp);
         mBuilder.setContentText(String.format(mContext.getResources().getString(
-                R.string.ambient_recognition_information), song, artist));
+                com.android.internal.R.string.ambient_recognition_information), song, artist));
         mBuilder.setColor(mContext.getResources().getColor(com.android.internal.R.color.system_notification_accent_color));
         mBuilder.setAutoCancel(false);
         mBuilder.setVisibility(Notification.VISIBILITY_PUBLIC);
@@ -323,14 +332,19 @@ public class AmbientIndicationManager {
         mBuilder.setShowWhen(true);
         mBuilder.setWhen(System.currentTimeMillis());
         mBuilder.setTicker(String.format(mContext.getResources().getString(
-                R.string.ambient_recognition_information), song, artist));
+                com.android.internal.R.string.ambient_recognition_information), song, artist));
         mBuilder.setExtras(extras);
+
+        Intent historyIntent = new Intent();
+        historyIntent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$AmbientPlayHistoryActivity"));
+        PendingIntent pendingIntent = PendingIntent.getActivity(mContext, 0, historyIntent, 0);
+        mBuilder.setContentIntent(pendingIntent);
 
         NotificationManager mNotificationManager =
                 (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
 
         NotificationChannel channel = new NotificationChannel("music_recognized_channel",
-                mContext.getResources().getString(R.string.ambient_recognition_notification),
+                mContext.getResources().getString(com.android.internal.R.string.ambient_recognition_notification),
                 NotificationManager.IMPORTANCE_MIN);
         mNotificationManager.createNotificationChannel(channel);
         mNotificationManager.notify(122306791, mBuilder.build());
