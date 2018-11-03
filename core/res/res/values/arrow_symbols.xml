@@ -126,6 +126,11 @@
     <!-- FP sensor -->
     <java-symbol type="bool" name="config_hasFingerprintSensor" />
 
+    <!-- Ambient play -->
+    <java-symbol type="string" name="ambient_recognition_notification" />
+    <java-symbol type="string" name="ambient_recognition_information" />
+
     <!-- Flashlight proximity check -->
     <java-symbol type="integer" name="config_flashlightProximityTimeout" />
+	
 </resources>

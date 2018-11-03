@@ -8420,6 +8420,20 @@ public final class Settings {
         public static final String MANAGED_PROFILE_CONTACT_REMOTE_SEARCH =
                 "managed_profile_contact_remote_search";
 
+        /**
+         * Whether Ambient Play enabled/disabled
+         *
+         * @hide
+         */
+        public static final String AMBIENT_RECOGNITION = "ambient_recognition";
+
+        /**
+         * Whether Ambient Play is shown on the lockscreen
+         *
+         * @hide
+         */
+        public static final String AMBIENT_RECOGNITION_KEYGUARD = "ambient_recognition_keyguard";
+
 	    /**
          * Whether or not the automatic storage manager is enabled and should run on the device.
          *
