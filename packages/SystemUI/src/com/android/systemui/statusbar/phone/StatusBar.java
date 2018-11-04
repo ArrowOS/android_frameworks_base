@@ -5143,6 +5143,8 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                     uri.equals(Settings.System.getUriFor(Settings.System.QS_COLUMNS_PORTRAIT)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.QS_COLUMNS_LANDSCAPE))) {
                 setQsRowsColumns();
+            } else if (uri.equals(Settings.System.getUriFor(Settings.System.QS_TILE_TITLE_VISIBILITY))) {
+                setQsRowsColumns();
             } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.ACCENT_PICKER))) {
                 // Unload the accents and update the accent only when the user asks.
@@ -5725,7 +5727,6 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
     public boolean isDeviceInVrMode() {
         return mVrMode;
     }
-
 
     private final BroadcastReceiver mBannerActionBroadcastReceiver = new BroadcastReceiver() {
         @Override
