@@ -6435,7 +6435,7 @@ message MetricsEvent {
     // END OF AOSP CONSTANTS
 
     // ARROW Metrics
-    ARROW = 1502;
+    ARROW = 1777;
 
     // Omni Metrics
     OMNI_QS_WEATHER = 1151;
