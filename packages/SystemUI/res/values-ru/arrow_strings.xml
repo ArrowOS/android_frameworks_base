@@ -71,7 +71,7 @@
     <string name="keycode_description">С помощью этой кнопки можно добавлять клавиши с клавиатуры в панель навигации. Необходимо нажать на клавишу или её изображение для соответствующей кнопки.</string>
     <string name="start">Пуск</string>
     <string name="center">Центр / Середина</string>
-    <string name="end">Конец</string>
+    <string name="end">Конец </string>
     <string name="space">Разделитель</string>
     <string name="menu_ime">Меню Переключения раскладки</string>
     <string name="select_button">Выберите кнопку</string>
