@@ -132,4 +132,6 @@
     <!-- Alternative keyhandler -->
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerLib" />
     <java-symbol type="string" name="config_alternativeDeviceKeyHandlerClass" />
+
+    <java-symbol type="bool" name="config_oldQtiTelephony" />
 </resources>
