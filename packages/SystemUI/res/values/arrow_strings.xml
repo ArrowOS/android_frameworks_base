@@ -147,5 +147,8 @@
     <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
 
      <string name="quick_settings_screenshot_label">Screenshot</string>
+
+    <!-- Screenshot Delete Toast -->
+    <string name="delete_screenshot_toast">Screenshot deleted</string>
 </resources>
 
