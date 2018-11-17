@@ -50,7 +50,7 @@
     <string name="global_action_restart_ui">SystemUI</string>
     <string name="global_action_restart_hot">Hot</string>
     <string name="global_action_screenshot">Screenshot</string>
-    <string name="global_action_lockdown">Lockdown</string>
+    <string name="global_action_lockdown">Sperren</string>
     <!-- Heads up snooze toast -->
     <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s </xliff:g> - Heads-Up Benachrichtigungen sind für 1 Minute deaktiviert.</string>
     <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - Heads-Up Benachrichtigungen sind für <xliff:g id="number">%d </xliff:g> Minuten deaktiviert.</string>
@@ -114,15 +114,15 @@
     <string name="accessibility_quick_settings_heads_up_changed_on">Pop-Up Benachrichtigungen eingeschaltet.</string>
     <!-- Advance location quick setting tile -->
     <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
-    <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
-    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-    <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
-    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <string name="quick_settings_location_secondary_battery_saving">Energiesparmodus</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Standortdienste: Energiesparmodus.</string>
+    <string name="quick_settings_location_secondary_gps_only">Nur Gerat</string>
+    <string name="accessibility_quick_settings_location_gps_only">Standortdienste: Nur Gerät.</string>
+    <string name="quick_settings_location_secondary_high_accuracy">Hohe Genauigkeit</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Standortdienste: Hohe Genauigkeit</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
-    <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+    <string name="screen_pinning_description_no_navbar">Der Bildschirm wird solange angezeigt, bis Sie die Fixierung aufheben. Berühren und halten Sie \"Zurück\", wenn Sie die Fixierung aufheben möchten.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
-    <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
+    <string name="screen_pinning_toast_no_navbar">Um die Fixierung dieses Bildschirms aufzuheben, \"Zurück\" berühren und halten</string>
     <string name="quick_settings_screenshot_label">Bildschirmaufnahme</string>
 </resources>

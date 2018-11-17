@@ -61,7 +61,7 @@
     <string name="lockscreen_default">இயல்புநிலை</string>
     <string name="lockscreen_hidden">எதுவுமில்லை</string>
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-    <string name="custom_hint">Swipe from icon to launch</string>
+    <string name="custom_hint">ஆரம்பிக்க படவுரு இலிருந்து ஸ்வைப் செய்க</string>
     <string name="status_bar_vpn">VPN</string>
     <string name="preview">முன்னோட்டம்</string>
     <string name="keycode">விசை குறியீடு</string>
@@ -85,7 +85,7 @@ smartbar_left
 கோப்பு: strings. xml</string>
     <string name="right">வலது</string>
     <string name="navbar_editor_title">திருத்தி</string>
-    <string name="navbar_editor_summary">Configure navigaton bar</string>
+    <string name="navbar_editor_summary">நாவிகேஷன் பட்டியை வடிவமை</string>
     <string name="statusbar_items_title">நிலைப்பட்டி படவுருகள்</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time">Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
@@ -117,9 +117,9 @@ smartbar_left
     <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Advance location quick setting tile -->
     <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
+    <string name="quick_settings_location_secondary_battery_saving">பேட்டரி சேமிப்பு</string>
     <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
-    <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
+    <string name="quick_settings_location_secondary_gps_only">உணரிகள் மட்டுமே</string>
     <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
     <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
