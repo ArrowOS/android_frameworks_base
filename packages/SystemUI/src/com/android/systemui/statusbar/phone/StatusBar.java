@@ -933,6 +933,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                     mStatusBarView.setBar(this);
                     mStatusBarView.setPanel(mNotificationPanel);
                     mStatusBarView.setScrimController(mScrimController);
+		    handleCutout(null);
 
                     // CollapsedStatusBarFragment re-inflated PhoneStatusBarView and both of
                     // mStatusBarView.mExpanded and mStatusBarView.mBouncerShowing are false.
@@ -2308,6 +2309,24 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
         }
     }
 
+    private void setCutoutOverlay(boolean enable) {
+        try {
+            mOverlayManager.setEnabled("com.arrow.overlay.hidecutout",
+                        enable, mLockscreenUserManager.getCurrentUserId());
+        } catch (RemoteException e) {
+            Log.w(TAG, "Failed to handle cutout overlay", e);
+        }
+    }
+
+    private void setStatusBarStockOverlay(boolean enable) {
+        try {
+            mOverlayManager.setEnabled("com.arrow.overlay.statusbarstock",
+                        enable, mLockscreenUserManager.getCurrentUserId());
+        } catch (RemoteException e) {
+            Log.w(TAG, "Failed to handle statusbar height overlay", e);
+        }
+    }
+
     @Nullable
     public View getAmbientIndicationContainer() {
         return mAmbientIndicationContainer;
@@ -3396,6 +3415,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
 
         mViewHierarchyManager.updateRowStates();
         mScreenPinningRequest.onConfigurationChanged();
+        handleCutout(newConfig);
     }
 
     @Override
@@ -5160,6 +5180,12 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
 	    resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.BATTERY_SAVER_DARK_MODE),
                     false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.DISPLAY_CUTOUT_MODE),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STOCK_STATUSBAR_IN_HIDE),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -5194,7 +5220,11 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
 		Settings.System.BATTERY_SAVER_DARK_MODE))) {
 		// If the batterysaver is already turned on act accordingly
 		updateBatterySaverDarkMode();
-	    }
+            } else if (uri.equals(Settings.System.getUriFor(Settings.System.DISPLAY_CUTOUT_MODE)) ||
+                    uri.equals(Settings.System.getUriFor(Settings.System.STOCK_STATUSBAR_IN_HIDE))) {
+                handleCutout(null);
+            }
+
         }
 
          public void update() {
@@ -5204,6 +5234,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
 	    setQsPanelOptions();
             updateTheme();
 	    setStatusBarWindowViewOptions();
+            handleCutout(null);
         }
     }
 
@@ -5231,6 +5262,37 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
         if (mStatusBarWindow != null) {
             mStatusBarWindow.setStatusBarWindowViewOptions();
         }
+    }
+
+    private void updateStatusBarColors(boolean enable) {
+        if (enable) {
+            if (mStatusBarView != null)
+                mStatusBarView.setBackgroundColor(0xFF000000);
+            if (mKeyguardStatusBar != null)
+                mKeyguardStatusBar.setBackgroundColor(0xFF000000);
+        } else {
+            if (mStatusBarView != null)
+                mStatusBarView.setBackgroundColor(Color.TRANSPARENT);
+            if (mKeyguardStatusBar != null)
+                mKeyguardStatusBar.setBackgroundColor(Color.TRANSPARENT);
+        }
+    }
+
+    private void handleCutout(Configuration newConfig) {
+        boolean immerseMode;
+        if (newConfig == null || newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            immerseMode = Settings.System.getIntForUser(mContext.getContentResolver(),
+                        Settings.System.DISPLAY_CUTOUT_MODE, 0, UserHandle.USER_CURRENT) == 1;
+        } else {
+            immerseMode = false;
+        }
+        final boolean hideCutoutMode = Settings.System.getIntForUser(mContext.getContentResolver(),
+                        Settings.System.DISPLAY_CUTOUT_MODE, 0, UserHandle.USER_CURRENT) == 2;
+        final boolean statusBarStock = Settings.System.getIntForUser(mContext.getContentResolver(),
+                        Settings.System.STOCK_STATUSBAR_IN_HIDE, 1, UserHandle.USER_CURRENT) == 1;
+        updateStatusBarColors(immerseMode);
+        setCutoutOverlay(hideCutoutMode);
+        setStatusBarStockOverlay(hideCutoutMode && statusBarStock);
     }
 
     private void setHeadsUpStoplist() {
