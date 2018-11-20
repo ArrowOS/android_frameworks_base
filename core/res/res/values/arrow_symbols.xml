@@ -135,4 +135,7 @@
 
     <!-- Vendor mismatched fingerprint warning -->
     <java-symbol type="string" name="system_error_vendorprint" />
+
+    <!-- System fonts -->
+    <java-symbol type="array" name="config_fontPackages" />
 </resources>
