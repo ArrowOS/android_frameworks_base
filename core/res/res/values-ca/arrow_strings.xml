@@ -29,7 +29,7 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Permet que l\'aplicació faci veure que n\'és una de diferent. Les aplicacions malicioses poden utilitzar això per accedir a dades personals. Concediu aquest permís amb compte!</string>
     <!-- Pocket Lock -->
-    <string name="pocket_lock_message_long_press">Long press power button to interact</string>
+    <string name="pocket_lock_message_long_press">Manté premut el botó d\'apagat per interactuar</string>
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
