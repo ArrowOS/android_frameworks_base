@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">Configurar la barra de navegació</string>
     <string name="statusbar_items_title">Icones de la barra d\'estat</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time">Càrrega ràpida (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> fins completar-la)</string>
+    <string name="keyguard_indication_dash_charging_time">Carregant ràpidament (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> fins completar-la)</string>
     <string name="keyguard_plugged_in_dash_charging">Carregant Ràpidament</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">TurboPower connectat (<xliff:g id="charging_time_left">%s</xliff:g> per càrrega completa)</string>
@@ -126,8 +126,8 @@
     <string name="screen_pinning_toast_no_navbar">Toca i mantén premut el botó Enrere per deixar de fixar aquesta pantalla</string>
     <string name="quick_settings_screenshot_label">Captura de pantalla</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Captura de pantalla esborrada</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Reiniciar</string>
+    <string name="quick_settings_reboot_recovery_label">Mode de Recuperació</string>
 </resources>

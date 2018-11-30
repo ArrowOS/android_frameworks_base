@@ -126,8 +126,8 @@
     <string name="screen_pinning_toast_no_navbar">Per rimuovere il blocco, tieni premuto Indietro</string>
     <string name="quick_settings_screenshot_label">Screenshot</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Screenshot eliminato</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Riavvia</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
 </resources>

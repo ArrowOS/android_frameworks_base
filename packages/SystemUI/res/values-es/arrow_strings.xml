@@ -126,8 +126,8 @@
     <string name="screen_pinning_toast_no_navbar">Para dejar de fijar esta pantalla, mantenga presionado el botón Atrás</string>
     <string name="quick_settings_screenshot_label">Captura de pantalla</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Captura borrada</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Reiniciar</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
 </resources>
