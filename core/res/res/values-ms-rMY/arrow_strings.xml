@@ -21,15 +21,15 @@
     <string name="reboot_to_recovery_message">Rebooting to recovery</string>
     <string name="reboot_to_bootloader_title">Bootloader</string>
     <string name="reboot_to_bootloader_message">Rebooting to bootloader</string>
-    <string name="reboot_title">மறுதொடக்கம்</string>
+    <string name="reboot_title">Reboot</string>
     <string name="reboot_message">Rebooting system</string>
-    <string name="statusbar_items_title">நிலைப்பட்டி படவுரு</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permlab_fakePackageSignature">ஏமாற்று தொகுப்பு கையொப்பம்</string>
+    <string name="permlab_fakePackageSignature">Spoof package signature</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">வேறொரு பயன்பாடாக நடிப்பதற்கு பயன்பாட்டை அனுமதிக்கிறது. தீங்கிழைக்கும் பயன்பாடுகள் தனிப்பட்ட தரவை அணுக இதைப் பயன்படுத்துகின்றன. முன்னெச்சரிக்கையுடன் இந்த அனுமதியை வழங்குங்கள்!</string>
+    <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
     <!-- Pocket Lock -->
-    <string name="pocket_lock_message_long_press">உரையாடும் சக்தி பொத்தானை நன்கு அழுத்தவும்</string>
+    <string name="pocket_lock_message_long_press">Long press power button to interact</string>
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
