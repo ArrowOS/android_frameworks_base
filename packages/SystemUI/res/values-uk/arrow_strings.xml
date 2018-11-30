@@ -126,8 +126,8 @@
     <string name="screen_pinning_toast_no_navbar">Щоб відкріпити цей екран, натисніть &amp; утримуйте кнопку \"Назад\"</string>
     <string name="quick_settings_screenshot_label">Знімок екрану</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Скріншот видалений.</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Перевантажити</string>
+    <string name="quick_settings_reboot_recovery_label">Режим відновлення</string>
 </resources>
