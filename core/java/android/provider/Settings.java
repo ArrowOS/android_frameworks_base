@@ -4516,17 +4516,6 @@ public final class Settings {
         public static final String SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
         /**
-         * Whether to change the transparency of the qs panel
-         * @hide
-         */
-        public static final String OMNI_QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
- 
-        /** @hide */
- 
-       private static final Validator OMNI_QS_PANEL_BG_ALPHA_VALIDATOR =
-                ANY_INTEGER_VALIDATOR;
-
-        /**
          * Select various accents to go along with system themes
          *
          * @hide
@@ -4829,7 +4818,6 @@ public final class Settings {
             CUSTOM_DEVICE_FEATURE_SETTINGS,
             OMNI_NAVIGATION_BAR_SHOW,
             HIDE_NOTCH,
-            OMNI_QS_PANEL_BG_ALPHA,
             OMNI_LOCKSCREEN_WEATHER_ENABLED,
             STATUS_BAR_CLOCK,
             STATUSBAR_CLOCK_STYLE,
@@ -4973,7 +4961,6 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_COLUMNS_LANDSCAPE);
             PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
             PRIVATE_SETTINGS.add(HIDE_NOTCH);
-            PRIVATE_SETTINGS.add(OMNI_QS_PANEL_BG_ALPHA);
             PRIVATE_SETTINGS.add(OMNI_LOCKSCREEN_WEATHER_ENABLED);
             PRIVATE_SETTINGS.add(STATUS_BAR_CLOCK);
             PRIVATE_SETTINGS.add(STATUSBAR_CLOCK_STYLE);
@@ -5082,7 +5069,6 @@ public final class Settings {
             VALIDATORS.put(SHOW_BATTERY_PERCENT, SHOW_BATTERY_PERCENT_VALIDATOR);
             VALIDATORS.put(OMNI_NAVIGATION_BAR_SHOW, OMNI_NAVIGATION_BAR_SHOW_VALIDATOR);
             VALIDATORS.put(HIDE_NOTCH, HIDE_NOTCH_VALIDATOR);
-            VALIDATORS.put(OMNI_QS_PANEL_BG_ALPHA, OMNI_QS_PANEL_BG_ALPHA_VALIDATOR);
             VALIDATORS.put(OMNI_LOCKSCREEN_WEATHER_ENABLED,
                     OMNI_LOCKSCREEN_WEATHER_ENABLED_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_CLOCK, STATUS_BAR_CLOCK_VALIDATOR);
