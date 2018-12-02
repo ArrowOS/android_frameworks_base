@@ -147,4 +147,12 @@
    
     <!-- Boost parameters which get passed to QPerformance -->
     <integer-array name="onbootboost_param_value"/>
+
+    <!-- Activities list for boost -->
+    <string-array translatable="false" name="boost_activityList">
+    </string-array>
+
+    <!-- Activity scroll boost params -->
+    <integer name="ascrollboost_timeout">0</integer>
+    <integer-array name="ascrollboost_param_value"/>
 </resources>

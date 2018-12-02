@@ -105,6 +105,9 @@ public class BoostFramework {
                     argClasses = new Class[] {};
                     mReleaseFunc = mPerfClass.getMethod("perfLockRelease", argClasses);
 
+		    argClasses = new Class[] {MotionEvent.class, DisplayMetrics.class, int.class, int[].class};
+                    mAcquireTouchFunc =  sPerfClass.getDeclaredMethod("perfLockAcquireTouch", argClasses);
+
                     argClasses = new Class[] {int.class};
                     mReleaseHandlerFunc = mPerfClass.getDeclaredMethod("perfLockReleaseHandler", argClasses);
 
@@ -177,6 +180,18 @@ public class BoostFramework {
         int ret = -1;
         try {
             Object retVal = mPerfHintFunc.invoke(mPerf, hint, userDataStr, userData1, userData2);
+            ret = (int)retVal;
+        } catch(Exception e) {
+            Log.e(TAG,"Exception " + e);
+        }
+        return ret;
+    }
+/** @hide */
+    public int perfLockAcquireTouch(MotionEvent ev, DisplayMetrics metrics,
+                                   int duration, int... list) {
+        int ret = -1;
+        try {
+            Object retVal = mAcquireTouchFunc.invoke(mPerf, ev, metrics, duration, list);
             ret = (int)retVal;
         } catch(Exception e) {
             Log.e(TAG,"Exception " + e);
