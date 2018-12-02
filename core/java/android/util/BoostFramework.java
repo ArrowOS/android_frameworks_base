@@ -35,6 +35,8 @@ import android.util.Log;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+import android.view.MotionEvent;
+import android.util.DisplayMetrics;
 
 /** @hide */
 public class BoostFramework {
@@ -182,6 +184,9 @@ public class BoostFramework {
 
                     argClasses = new Class[] {};
                     sReleaseFunc = sPerfClass.getMethod("perfLockRelease", argClasses);
+
+		    argClasses = new Class[] {MotionEvent.class, DisplayMetrics.class, int.class, int[].class};
+                    mAcquireTouchFunc =  sPerfClass.getDeclaredMethod("perfLockAcquireTouch", argClasses);
 
                     argClasses = new Class[] {int.class};
                     sReleaseHandlerFunc = sPerfClass.getDeclaredMethod("perfLockReleaseHandler", argClasses);
@@ -356,6 +361,19 @@ public class BoostFramework {
             ret = (String) retVal;
         } catch (Exception e) {
             Log.e(TAG, "Exception " + e);
+        }
+        return ret;
+    }
+
+/** @hide */
+    public int perfLockAcquireTouch(MotionEvent ev, DisplayMetrics metrics,
+                                   int duration, int... list) {
+        int ret = -1;
+        try {
+            Object retVal = mAcquireTouchFunc.invoke(mPerf, ev, metrics, duration, list);
+            ret = (int)retVal;
+        } catch(Exception e) {
+            Log.e(TAG,"Exception " + e);
         }
         return ret;
     }

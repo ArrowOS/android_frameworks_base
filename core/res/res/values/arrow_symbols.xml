@@ -138,4 +138,11 @@
     <java-symbol type="bool" name="config_enableCpuBoostOnBoot" />
     <java-symbol type="integer" name="onbootboost_duration" />
     <java-symbol type="array" name="onbootboost_param_value" />
+
+    <!-- Activities list for boost -->
+    <java-symbol type="array"  name="boost_activityList" />
+
+    <!-- Activity scroll boost params -->
+    <java-symbol type="integer" name="ascrollboost_timeout" />
+    <java-symbol type="array" name="ascrollboost_param_value" />
 </resources>
