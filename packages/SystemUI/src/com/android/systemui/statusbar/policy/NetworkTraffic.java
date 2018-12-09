@@ -26,16 +26,15 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.systemui.Dependency;
 import com.android.systemui.R;
-import com.android.systemui.statusbar.policy.DarkIconDispatcher.DarkReceiver;
+
 /*
 *
 * Seeing how an Integer object in java requires at least 16 Bytes, it seemed awfully wasteful
 * to only use it for a single boolean. 32-bits is plenty of room for what we need it to do.
 *
 */
-public class NetworkTraffic extends TextView implements DarkReceiver {
+public class NetworkTraffic extends TextView {
 
     private static final int INTERVAL = 1500; //ms
     private static final int KB = 1024;
@@ -96,7 +95,7 @@ public class NetworkTraffic extends TextView implements DarkReceiver {
                 output += formatOutput(timeDelta, rxData, symbol);
 
                 // Update view if there's anything new to show
-                if (! output.contentEquals(getText())) {
+                if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
                     setText(output);
                 }
@@ -204,7 +203,6 @@ public class NetworkTraffic extends TextView implements DarkReceiver {
             filter.addAction(Intent.ACTION_SCREEN_ON);
             mContext.registerReceiver(mIntentReceiver, filter, null, getHandler());
         }
-        Dependency.get(DarkIconDispatcher.class).addDarkReceiver(this);
         updateSettings();
     }
 
@@ -215,7 +213,6 @@ public class NetworkTraffic extends TextView implements DarkReceiver {
             mContext.unregisterReceiver(mIntentReceiver);
             mAttached = false;
         }
-        Dependency.get(DarkIconDispatcher.class).removeDarkReceiver(this);
     }
 
     private final BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
@@ -299,12 +296,5 @@ public class NetworkTraffic extends TextView implements DarkReceiver {
         txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
         setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
         setCompoundDrawablePadding(txtImgPadding);
-    }
-
-    @Override
-    public void onDarkChanged(Rect area, float darkIntensity, int tint) {
-        mTintColor = DarkIconDispatcher.getTint(area, this, tint);
-        setTextColor(mTintColor);
-        updateTrafficDrawable();
     }
 }
