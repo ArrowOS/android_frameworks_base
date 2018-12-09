@@ -102,20 +102,10 @@
         />
 
         <com.android.keyguard.AlphaOptimizedLinearLayout android:id="@+id/system_icon_area"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:orientation="horizontal"
             >
-
-        <com.android.systemui.statusbar.policy.NetworkTraffic
-            android:id="@+id/networkTraffic"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
-            android:singleLine="false"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="right|center_vertical"/>
 
         <com.android.systemui.arrow.statusbarweather.StatusBarWeather
             android:id="@+id/weather_temp"
