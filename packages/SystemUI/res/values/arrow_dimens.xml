@@ -22,5 +22,5 @@
     <dimen name="vertical_max_swift">1.0dp</dimen>
 
 	    <!-- OmniJaws -->
-    <dimen name="current_weather_image_size">42dp</dimen>
+    <dimen name="current_weather_image_size">30dp</dimen>
 </resources>
