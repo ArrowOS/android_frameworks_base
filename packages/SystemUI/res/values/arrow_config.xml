@@ -36,4 +36,7 @@
 
     <!-- Udfps HBM provider class name -->
     <string name="config_udfpsHbmProviderComponent">com.android.systemui.biometrics.DummyUdfpsHbmProvider</string>
+
+    <!-- Allow devices override audio panel location to the left side -->
+    <bool name="config_audioPanelOnLeftSide">false</bool>
 </resources>
