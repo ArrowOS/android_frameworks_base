@@ -34,8 +34,8 @@
     <string name="label_action_hotspot">Điểm phát sóng</string>
     <string name="label_action_last_app">Ứng dụng cuối cùng</string>
     <string name="label_action_overview">Gần đây</string>
-    <string name="label_action_power_menu">Trình đơn nguồn</string>
-    <string name="label_action_menu">Trình đơn</string>
+    <string name="label_action_power_menu">Menu nguồn</string>
+    <string name="label_action_menu">Menu</string>
     <string name="label_action_back">Trở lại</string>
     <string name="label_action_home">Trang chủ</string>
     <string name="label_action_ime_switcher">Thay đổi IME</string>
