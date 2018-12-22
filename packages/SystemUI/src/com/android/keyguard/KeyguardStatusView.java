@@ -83,6 +83,7 @@ public class KeyguardStatusView extends GridLayout implements
     private int mLastLayoutHeight;
     private CurrentWeatherView mWeatherView;
     private boolean mShowWeather;
+    private boolean mOmniStyle;
 
     private KeyguardUpdateMonitorCallback mInfoCallback = new KeyguardUpdateMonitorCallback() {
 
@@ -183,16 +184,16 @@ public class KeyguardStatusView extends GridLayout implements
         mClockSeparator = findViewById(R.id.clock_separator);
 
         mWeatherView = (CurrentWeatherView) findViewById(R.id.weather_container);
-
+        updateSettings();
         mVisibleInDoze = Sets.newArraySet();
         if (mWeatherView != null) {
-            mVisibleInDoze.add(mWeatherView);
+            if (mShowWeather && mOmniStyle) mVisibleInDoze.add(mWeatherView);
         }
         if (mClockView != null) {
             mVisibleInDoze.add(mClockView);
         }
         if (mKeyguardSlice != null) {
-            mVisibleInDoze.add(mKeyguardSlice);
+            if (mShowWeather && !mOmniStyle) mVisibleInDoze.add(mKeyguardSlice);
         }
 
         mTextColor = mClockView.getCurrentTextColor();
@@ -480,7 +481,7 @@ public class KeyguardStatusView extends GridLayout implements
         }
         mKeyguardSlice.setPulsing(pulsing, animate);
         if (mWeatherView != null) {
-            mWeatherView.setVisibility((mShowWeather && !mPulsing) ? View.VISIBLE : View.GONE);
+            mWeatherView.setVisibility((mShowWeather && mOmniStyle && !mPulsing) ? View.VISIBLE : View.GONE);
         }
         updateDozeVisibleViews();
     }
@@ -488,6 +489,9 @@ public class KeyguardStatusView extends GridLayout implements
     private void updateDozeVisibleViews() {
         for (View child : mVisibleInDoze) {
             child.setAlpha(mDarkAmount == 1 && mPulsing ? 0.8f : 1);
+	}
+        if (mWeatherView != null) {
+            mWeatherView.setVisibility((mShowWeather && mOmniStyle) ? View.VISIBLE : View.GONE);
         }
     }
 
@@ -513,12 +517,16 @@ public class KeyguardStatusView extends GridLayout implements
                 Settings.System.OMNI_LOCKSCREEN_WEATHER_ENABLED, 0,
                 UserHandle.USER_CURRENT) == 1;
 
+        mOmniStyle = Settings.System.getIntForUser(resolver,
+                Settings.System.AICP_LOCKSCREEN_WEATHER_STYLE, 0,
+                UserHandle.USER_CURRENT) == 0;
+
         if (mWeatherView != null) {
-            if (mShowWeather) {
+            if (mShowWeather && mOmniStyle) {
                 mWeatherView.setVisibility(View.VISIBLE);
                 mWeatherView.enableUpdates();
             }
-            if (!mShowWeather) {
+            if (!mShowWeather || !mOmniStyle) {
                 mWeatherView.setVisibility(View.GONE);
                 mWeatherView.disableUpdates();
             }
