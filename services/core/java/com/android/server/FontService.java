@@ -141,7 +141,7 @@ public class FontService extends IFontService.Stub {
                     packageName = (String) msg.obj;
                     boolean isFontProvider = isPackageFontProvider(packageName);
                     if (isFontProvider) {
-                        Log.e(TAG, packageName + " was added or updated. Adding or updating fonts");
+                        Log.v(TAG, packageName + " was added or updated. Adding or updating fonts");
                         synchronized (mFontMap) {
                             processFontPackage(packageName);
                         }
@@ -152,13 +152,13 @@ public class FontService extends IFontService.Stub {
                     boolean hadFonts = mFontMap.containsKey(packageName);
                     if (hadFonts) {
                         synchronized (mFontMap) {
-                            Log.e(TAG,
+                            Log.v(TAG,
                                     packageName + " was removed. Clearing fonts from provider map");
                             removeFontPackage(packageName);
                         }
                         // if removed package provided current font, reset to system
                         if (TextUtils.equals(packageName, mFontInfo.packageName)) {
-                            Log.e(TAG, packageName
+                            Log.v(TAG, packageName
                                     + " provided the current font. Restoring to system font");
                             applyFontsPriv(FontInfo.getDefaultFontInfo());
                         }
@@ -227,7 +227,7 @@ public class FontService extends IFontService.Stub {
                 || info.previewPath == null) {
             info.updateFrom(FontInfo.getDefaultFontInfo());
         }
-        Log.e(TAG, "applyFonts() packageName = " + info.toString());
+        Log.v(TAG, "applyFonts() packageName = " + info.toString());
         Message msg = mFontHandler.obtainMessage(
                 FontHandler.MESSAGE_CHANGE_FONT);
         msg.obj = info;
@@ -258,7 +258,7 @@ public class FontService extends IFontService.Stub {
         for (String pkg : packageList) {
             processFontPackage(pkg);
         }
-        Log.e(TAG, " Font map initialized- " + mFontMap.toString());
+        Log.v(TAG, " Font map initialized- " + mFontMap.toString());
     }
 
     private void processFontPackage(String packageName) {
@@ -280,7 +280,7 @@ public class FontService extends IFontService.Stub {
             File currentFontPreviewDir = new File(packageFontPreviewDir, sanitizedZipName);
             makeDir(currentFontPreviewDir);
 
-            Log.e(TAG, "CurrentFontPreviewDir absolute path = "
+            Log.v(TAG, "CurrentFontPreviewDir absolute path = "
                     + currentFontPreviewDir.getAbsolutePath());
 
             // copy zip to preview cache
@@ -337,7 +337,7 @@ public class FontService extends IFontService.Stub {
             packageList.add(packageName);
             putFontPackagesIntoProvider(packageList);
         }
-        Log.e(TAG, "The new FontInfo map: " + mFontMap.toString());
+        Log.v(TAG, "The new FontInfo map: " + mFontMap.toString());
     }
 
     private void removeFontPackage(String packageName) {
@@ -375,7 +375,7 @@ public class FontService extends IFontService.Stub {
                     if (fonts != null && fonts.length > 0) {
                         FontConfig.Font font = fonts[0];
                         if (font != null) {
-                            Log.e(TAG, "Font found from parsing fonts.xml! " + font.getFontName());
+                            Log.v(TAG, "Font found from parsing fonts.xml! " + font.getFontName());
                             return font.getFontName();
                         }
                     }
@@ -431,7 +431,7 @@ public class FontService extends IFontService.Stub {
         }
         list.removeAll(previews);
 
-        Log.e(TAG, packageName + " has the following fonts - " + list.toString());
+        Log.v(TAG, packageName + " has the following fonts - " + list.toString());
         return list;
     }
 
@@ -492,7 +492,7 @@ public class FontService extends IFontService.Stub {
     }
 
     private void applyFontsPriv(FontInfo info) {
-        Log.e(TAG, "applyFontsPriv() packageName = " + info.toString());
+        Log.v(TAG, "applyFontsPriv() packageName = " + info.toString());
         final long ident = Binder.clearCallingIdentity();
         try {
             if (info.equals(FontInfo.getDefaultFontInfo())) {
@@ -666,7 +666,7 @@ public class FontService extends IFontService.Stub {
                     continue;
                 }
                 if (ze.getName().equals(fileName)) {
-                    Log.e(TAG, "iterating " + zipFile.getName() + "Found " + fileName
+                    Log.v(TAG, "iterating " + zipFile.getName() + "Found " + fileName
                             + ", trying to extract");
                     FileOutputStream fout = new FileOutputStream(destFile);
                     try {
