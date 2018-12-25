@@ -83,9 +83,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
          mContentResolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUSBAR_CLOCK_STYLE),
                     false, this, UserHandle.USER_ALL);
-            mContentResolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP),
-                    false, this, UserHandle.USER_ALL);
        }
 
        @Override
@@ -95,11 +92,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     }
     private SettingsObserver mSettingsObserver = new SettingsObserver(mHandler);
     private ContentResolver mContentResolver;
-
-    // Statusbar Weather Image
-    private View mWeatherImageView;
-    private View mWeatherTextView;
-    private int mShowWeather;
 
     private SignalCallback mSignalCallback = new SignalCallback() {
         @Override
@@ -136,8 +128,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         Dependency.get(StatusBarIconController.class).addIconGroup(mDarkIconManager);
         mSystemIconArea = mStatusBar.findViewById(R.id.system_icon_area);
         mClockView = mStatusBar.findViewById(R.id.clock);
-        mWeatherTextView = mStatusBar.findViewById(R.id.weather_temp);
-        mWeatherImageView = mStatusBar.findViewById(R.id.weather_image);
         mCenterClockLayout = (LinearLayout) mStatusBar.findViewById(R.id.center_clock_layout);
         mRightClock = mStatusBar.findViewById(R.id.right_clock);
         updateSettings(false);
@@ -351,9 +341,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     }
 
     public void updateSettings(boolean animate) {
-        mShowWeather = Settings.System.getIntForUser(
-                getContext().getContentResolver(), Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP, 0,
-                UserHandle.USER_CURRENT);
         mClockStyle = Settings.System.getIntForUser(mContentResolver,
                 Settings.System.STATUSBAR_CLOCK_STYLE, 0, UserHandle.USER_CURRENT);
         updateClockStyle(animate);
