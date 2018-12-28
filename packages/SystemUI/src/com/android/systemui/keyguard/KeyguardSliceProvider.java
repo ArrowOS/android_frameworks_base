@@ -433,8 +433,8 @@ public class KeyguardSliceProvider extends SliceProvider implements
             mWeatherSettingsObserver = new WeatherSettingsObserver(mHandler);
             mWeatherSettingsObserver.observe();
             mWeatherClient = new OmniJawsClient(getContext());
-            mWeatherEnabled = Settings.System.getIntForUser(mContentResolver, Settings.System.OMNI_LOCKSCREEN_WEATHER_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
-            mShowWeatherSlice = Settings.System.getIntForUser(mContentResolver, Settings.System.AICP_LOCKSCREEN_WEATHER_STYLE, 0, UserHandle.USER_CURRENT) != 0;
+            mWeatherSettingsObserver.updateLockscreenWeatherStyle();
+            mWeatherSettingsObserver.updateLockscreenWeather();
             mWeatherClient.addSettingsObserver();
             mWeatherClient.addObserver(this);
             queryAndUpdateWeather();
