@@ -205,6 +205,8 @@ public class KeyguardStatusView extends GridLayout implements
         mKeyguardSlice.setContentChangeListener(this::onSliceContentChanged);
         onSliceContentChanged();
 
+        updateSettings();
+
         boolean shouldMarquee = KeyguardUpdateMonitor.getInstance(mContext).isDeviceInteractive();
         setEnableMarquee(shouldMarquee);
         refreshFormat();
@@ -397,6 +399,11 @@ public class KeyguardStatusView extends GridLayout implements
         return false;
     }
 
+    public void updateAll() {
+        updateSettings();
+        mKeyguardSlice.refresh();
+    }
+
     // DateFormat.getBestDateTimePattern is extremely expensive, and refresh is called often.
     // This is an optimization to ensure we only recompute the patterns when the inputs change.
     private static final class Patterns {
@@ -531,6 +538,12 @@ public class KeyguardStatusView extends GridLayout implements
                 mWeatherView.disableUpdates();
             }
         }
+
+	boolean showClock = Settings.System.getIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CLOCK, 1, UserHandle.USER_CURRENT) == 1;
+
+        mClockView = (TextClock) findViewById(R.id.clock_view);
+        mClockView.setVisibility(showClock ? View.VISIBLE : View.GONE);
     }
 
     private class ClipChildrenAnimationListener extends AnimatorListenerAdapter implements
