@@ -5211,6 +5211,12 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.FORCE_AMBIENT_FOR_MEDIA),
                     false, this, UserHandle.USER_ALL);
+			resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.LOCKSCREEN_CLOCK),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.LOCKSCREEN_INFO),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
@@ -5241,18 +5247,21 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             } else if (uri.equals(Settings.System.getUriFor(
                 Settings.System.DOUBLE_TAP_SLEEP_GESTURE))) {
                 setStatusBarWindowViewOptions();
-	    } else if (uri.equals(Settings.System.getUriFor(
-		Settings.System.BATTERY_SAVER_DARK_MODE))) {
-		// If the batterysaver is already turned on act accordingly
-		updateBatterySaverDarkMode();
+
+	    	} else if (uri.equals(Settings.System.getUriFor(
+					Settings.System.BATTERY_SAVER_DARK_MODE))) {
+				// If the batterysaver is already turned on act accordingly
+				updateBatterySaverDarkMode();
+
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.DISPLAY_CUTOUT_MODE)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.STOCK_STATUSBAR_IN_HIDE))) {
                 handleCutout(null);
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.FORCE_AMBIENT_FOR_MEDIA))) {
                 setForceAmbient();
-            }
-
-        }
+            } else if (uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_CLOCK)) ||
+                   uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_INFO))) {
+                updateKeyguardStatusSettings();
+			}
 
          public void update() {
             setHeadsUpStoplist();
@@ -5263,7 +5272,12 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
 	    setStatusBarWindowViewOptions();
             handleCutout(null);
             setForceAmbient();
+			updateKeyguardStatusSettings();
         }
+    }
+
+    private void updateKeyguardStatusSettings() {
+        mNotificationPanel.updateKeyguardStatusSettings();
     }
 
     private void updateBatterySaverDarkMode() {
