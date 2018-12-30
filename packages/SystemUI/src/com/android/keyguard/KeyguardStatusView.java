@@ -211,6 +211,8 @@ public class KeyguardStatusView extends GridLayout implements
         mKeyguardSlice.setContentChangeListener(this::onSliceContentChanged);
         onSliceContentChanged();
 
+        updateSettings();
+
         boolean shouldMarquee = KeyguardUpdateMonitor.getInstance(mContext).isDeviceInteractive();
         setEnableMarquee(shouldMarquee);
         refreshFormat();
@@ -535,6 +537,12 @@ public class KeyguardStatusView extends GridLayout implements
                 Settings.System.AICP_LOCKSCREEN_WEATHER_STYLE, 0,
                 UserHandle.USER_CURRENT) == 0;
 
+        boolean showClock = Settings.System.getIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CLOCK, 1, UserHandle.USER_CURRENT) == 1;
+
+        mClockView = (TextClock) findViewById(R.id.clock_view);
+        mClockView.setVisibility(showClock ? View.VISIBLE : View.GONE);
+
         if (mWeatherView != null) {
             if (mShowWeather && mOmniStyle) {
                 mWeatherView.setVisibility(View.VISIBLE);
@@ -545,6 +553,11 @@ public class KeyguardStatusView extends GridLayout implements
                 mWeatherView.disableUpdates();
             }
         }
+    }
+
+    public void updateAll() {
+        updateSettings();
+        mKeyguardSlice.refresh();
     }
 
     private class ClipChildrenAnimationListener extends AnimatorListenerAdapter implements
