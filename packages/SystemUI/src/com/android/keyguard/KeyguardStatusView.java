@@ -32,6 +32,7 @@ import android.os.RemoteException;
 import android.os.UserHandle;
 import android.provider.Settings;
 import android.support.v4.graphics.ColorUtils;
+import android.text.Html;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.ArraySet;
@@ -91,6 +92,8 @@ public class KeyguardStatusView extends GridLayout implements
 
     private boolean mForcedMediaDoze;
 
+    private int mClockSelection;
+
     private KeyguardUpdateMonitorCallback mInfoCallback = new KeyguardUpdateMonitorCallback() {
 
         @Override
@@ -148,6 +151,7 @@ public class KeyguardStatusView extends GridLayout implements
         mHandler = new Handler(Looper.myLooper());
         mSmallClockScale = getResources().getDimension(R.dimen.widget_small_font_size)
                 / getResources().getDimension(R.dimen.widget_big_font_size);
+
         onDensityOrFontScaleChanged();
     }
 
@@ -337,6 +341,28 @@ public class KeyguardStatusView extends GridLayout implements
 
     private void refreshTime() {
         mClockView.refresh();
+
+        switch(mClockSelection) {
+            case 0:
+                mClockView.setFormat12Hour(Patterns.clockView12);
+                mClockView.setFormat24Hour(Patterns.clockView24);
+                break;
+
+            case 1:
+                mClockView.setFormat12Hour(Html.fromHtml("<strong>hh</strong>mm"));
+                mClockView.setFormat24Hour(Html.fromHtml("<strong>kk</strong>mm"));
+                break;
+
+            case 4:
+                mClockView.setFormat12Hour(Html.fromHtml("<strong>hh</strong><br>mm"));
+                mClockView.setFormat24Hour(Html.fromHtml("<strong>kk</strong><br>mm"));
+                break;
+
+            default:
+                mClockView.setFormat12Hour("hh\nmm");
+                mClockView.setFormat24Hour("kk\nmm");
+                break;
+        }
     }
 
     private void refreshFormat() {
@@ -503,10 +529,12 @@ public class KeyguardStatusView extends GridLayout implements
             } else {
                 child.setAlpha(mDarkAmount == 1 ? 0 : 1);
             }
-	    if (mWeatherView != null) {
-		mWeatherView.setVisibility((mShowWeather && mOmniStyle && !mPulsing && !mForcedMediaDoze) ? View.VISIBLE : View.GONE);
-	    }
-       }
+            if (mWeatherView != null) {
+                mWeatherView.setVisibility((mShowWeather && mOmniStyle && !mPulsing && !mForcedMediaDoze) ? View.VISIBLE : View.GONE);
+            }
+        }
+
+        refreshTime();
     }
 
     private boolean shouldShowLogout() {
@@ -535,6 +563,10 @@ public class KeyguardStatusView extends GridLayout implements
                 Settings.System.AICP_LOCKSCREEN_WEATHER_STYLE, 0,
                 UserHandle.USER_CURRENT) == 0;
 
+        mClockSelection = Settings.System.getIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CLOCK_SELECTION, 0, 
+                UserHandle.USER_CURRENT);
+
         if (mWeatherView != null) {
             if (mShowWeather && mOmniStyle) {
                 mWeatherView.setVisibility(View.VISIBLE);
@@ -545,6 +577,38 @@ public class KeyguardStatusView extends GridLayout implements
                 mWeatherView.disableUpdates();
             }
         }
+
+        RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)
+                mKeyguardSlice.getLayoutParams();
+
+        switch (mClockSelection) {
+            case 0: // default digital
+            default:
+                mClockView.setVisibility(View.VISIBLE);
+                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+                mClockView.setSingleLine(true);
+                break;
+            case 1: // digital (bold)
+                mClockView.setVisibility(View.VISIBLE);
+                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+                mClockView.setSingleLine(true);
+                break;
+            case 2: // sammy
+                mClockView.setVisibility(View.VISIBLE);
+                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+                mClockView.setSingleLine(false);
+                break;
+            case 3: // sammy (bold)
+                mClockView.setVisibility(View.VISIBLE);
+                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+                mClockView.setSingleLine(false);
+                break;
+        }
+    }
+
+    public void updateAll() {
+        updateSettings();
+        mKeyguardSlice.refresh();
     }
 
     private class ClipChildrenAnimationListener extends AnimatorListenerAdapter implements

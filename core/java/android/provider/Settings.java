@@ -3094,6 +3094,12 @@ public final class Settings {
             "lock_pattern_tactile_feedback_enabled";
 
         /**
+         * Select which lockscreen clock style to display
+         * @hide
+         */
+        public static final String LOCKSCREEN_CLOCK_SELECTION = "lockscreen_clock_selection";
+
+        /**
          * Whether to scramble a pin unlock layout
          * @hide
          */
