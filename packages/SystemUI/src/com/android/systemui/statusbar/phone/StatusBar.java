@@ -5163,7 +5163,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
         SbSettingsObserver(Handler handler) {
             super(handler);
         }
-         void observe() {
+        void observe() {
             ContentResolver resolver = mContext.getContentResolver();
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.HEADS_UP_STOPLIST_VALUES), false, this);
@@ -5187,19 +5187,19 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.SYSTEM_UI_THEME),
                     false, this, UserHandle.USER_ALL);
-	    resolver.registerContentObserver(Settings.System.getUriFor(
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN),
                     false, this, UserHandle.USER_ALL);
-	    resolver.registerContentObserver(Settings.System.getUriFor(
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.DOUBLE_TAP_SLEEP_GESTURE),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_FOOTER_WARNINGS),
                     false, this, UserHandle.USER_ALL);
-	    resolver.registerContentObserver(Settings.System.getUriFor(
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.BATTERY_SAVER_DARK_MODE),
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
@@ -5216,12 +5216,15 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                     false, this, UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.LOCKSCREEN_INFO),
+            		false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.LOCKSCREEN_CLOCK_SELECTION),
                     false, this, UserHandle.USER_ALL);
         }
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
-	    super.onChange(selfChange, uri);
+        super.onChange(selfChange, uri);
             update();
 
             if (uri.equals(Settings.System.getUriFor(Settings.System.QS_ROWS_PORTRAIT)) ||
@@ -5247,29 +5250,29 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
             } else if (uri.equals(Settings.System.getUriFor(
                 Settings.System.DOUBLE_TAP_SLEEP_GESTURE))) {
                 setStatusBarWindowViewOptions();
-
-	    	} else if (uri.equals(Settings.System.getUriFor(
-					Settings.System.BATTERY_SAVER_DARK_MODE))) {
-				// If the batterysaver is already turned on act accordingly
-				updateBatterySaverDarkMode();
-
+            } else if (uri.equals(Settings.System.getUriFor(
+                Settings.System.BATTERY_SAVER_DARK_MODE))) {
+                // If the batterysaver is already turned on act accordingly
+                updateBatterySaverDarkMode();
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.DISPLAY_CUTOUT_MODE)) ||
                     uri.equals(Settings.System.getUriFor(Settings.System.STOCK_STATUSBAR_IN_HIDE))) {
                 handleCutout(null);
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.FORCE_AMBIENT_FOR_MEDIA))) {
                 setForceAmbient();
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_CLOCK)) ||
-                   uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_INFO))) {
+                   uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_INFO)) ||
+                   uri.equals(Settings.System.getUriFor(Settings.System.LOCKSCREEN_CLOCK_SELECTION))) {
                 updateKeyguardStatusSettings();
-			}
+            }
+        }
 
-         public void update() {
+        public void update() {
             setHeadsUpStoplist();
             setHeadsUpBlacklist();
             setQsRowsColumns();
-	    setQsPanelOptions();
+            setQsPanelOptions();
             updateTheme();
-	    setStatusBarWindowViewOptions();
+            setStatusBarWindowViewOptions();
             handleCutout(null);
             setForceAmbient();
 			updateKeyguardStatusSettings();
@@ -5281,23 +5284,23 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
     }
 
     private void updateBatterySaverDarkMode() {
-	int batterySaverDarkState = Settings.System.getIntForUser(mContext.getContentResolver(),
+        int batterySaverDarkState = Settings.System.getIntForUser(mContext.getContentResolver(),
                 	Settings.System.BATTERY_SAVER_DARK_MODE, 0,
                 	UserHandle.USER_CURRENT);
 
-	if (batterySaverDarkState == 0 & mBatteryController.isPowerSave())
-              mContext.getSystemService(UiModeManager.class)
-                          .setNightMode(UiModeManager.MODE_NIGHT_NO);
+        if (batterySaverDarkState == 0 & mBatteryController.isPowerSave())
+            mContext.getSystemService(UiModeManager.class)
+                .setNightMode(UiModeManager.MODE_NIGHT_NO);
 
-        else if (batterySaverDarkState == 1 & mBatteryController.isPowerSave())
-              mContext.getSystemService(UiModeManager.class)
-                          .setNightMode(UiModeManager.MODE_NIGHT_YES);
+    else if (batterySaverDarkState == 1 & mBatteryController.isPowerSave())
+        mContext.getSystemService(UiModeManager.class)
+            .setNightMode(UiModeManager.MODE_NIGHT_YES);
     }
 
-         private void setQsRowsColumns() {
-            if (mQSPanel != null) {
-                mQSPanel.updateResources();
-         }
+    private void setQsRowsColumns() {
+        if (mQSPanel != null) {
+            mQSPanel.updateResources();
+        }
     }
 
     private void setStatusBarWindowViewOptions() {
