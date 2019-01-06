@@ -4173,6 +4173,7 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
                     // Check for black and white accent so we don't end up
                     // with white on white or black on black
                     unfuckBlackWhiteAccent();
+		    mNotificationPanel.setLockscreenClockTheme(useDarkTheme);
                 } catch (RemoteException e) {
                     Log.w(TAG, "Can't change dark theme", e);
             }
