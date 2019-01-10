@@ -310,7 +310,6 @@ public final class SmsManager {
     public void sendTextMessage(
             String destinationAddress, String scAddress, String text,
             PendingIntent sentIntent, PendingIntent deliveryIntent) {
-        android.util.SeempLog.record_str(75, destinationAddress);
         sendTextMessageInternal(destinationAddress, scAddress, text, sentIntent, deliveryIntent,
                 true /* persistMessage*/);
     }
@@ -378,7 +377,6 @@ public final class SmsManager {
     public void sendTextMessageWithSelfPermissions(
             String destinationAddress, String scAddress, String text,
             PendingIntent sentIntent, PendingIntent deliveryIntent, boolean persistMessage) {
-        android.util.SeempLog.record_str(75, destinationAddress);
         if (TextUtils.isEmpty(destinationAddress)) {
             throw new IllegalArgumentException("Invalid destinationAddress");
         }
@@ -828,7 +826,6 @@ public final class SmsManager {
     public void sendDataMessage(
             String destinationAddress, String scAddress, short destinationPort,
             byte[] data, PendingIntent sentIntent, PendingIntent deliveryIntent) {
-        android.util.SeempLog.record_str(73, destinationAddress);
         if (TextUtils.isEmpty(destinationAddress)) {
             throw new IllegalArgumentException("Invalid destinationAddress");
         }
@@ -856,7 +853,6 @@ public final class SmsManager {
     public void sendDataMessageWithSelfPermissions(
             String destinationAddress, String scAddress, short destinationPort,
             byte[] data, PendingIntent sentIntent, PendingIntent deliveryIntent) {
-        android.util.SeempLog.record_str(73, destinationAddress);
         if (TextUtils.isEmpty(destinationAddress)) {
             throw new IllegalArgumentException("Invalid destinationAddress");
         }
@@ -990,7 +986,6 @@ public final class SmsManager {
      * {@hide}
      */
     public boolean copyMessageToIcc(byte[] smsc, byte[] pdu,int status) {
-        android.util.SeempLog.record(79);
         boolean success = false;
 
         if (null == pdu) {
@@ -1022,7 +1017,6 @@ public final class SmsManager {
      */
     public boolean
     deleteMessageFromIcc(int messageIndex) {
-        android.util.SeempLog.record(80);
         boolean success = false;
         byte[] pdu = new byte[SMS_RECORD_LENGTH-1];
         Arrays.fill(pdu, (byte)0xff);
@@ -1056,7 +1050,6 @@ public final class SmsManager {
      * {@hide}
      */
     public boolean updateMessageOnIcc(int messageIndex, int newStatus, byte[] pdu) {
-        android.util.SeempLog.record(81);
         boolean success = false;
 
         try {
