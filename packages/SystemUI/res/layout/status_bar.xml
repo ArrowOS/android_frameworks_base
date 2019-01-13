@@ -107,7 +107,7 @@
             android:orientation="horizontal"
             >
 
-        <com.android.systemui.statusbar.policy.NetworkTraffic
+        <com.android.systemui.statusbar.policy.NetworkTrafficSB
             android:id="@+id/networkTraffic"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
