@@ -22,6 +22,7 @@ import android.animation.ObjectAnimator;
 import android.content.res.Resources;
 import android.view.View;
 
+import com.android.internal.util.du.Utils;
 import com.android.systemui.R;
 
 public final class PhoneStatusBarTransitions extends BarTransitions {
@@ -52,6 +53,9 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
         mClock = mView.findViewById(R.id.clock);
         mCenterClock = mView.findViewById(R.id.center_clock);
         mRightClock = mView.findViewById(R.id.right_clock);
+        mNetworkTraffic = mView.findViewById(R.id.networkTraffic);
+        mNetworkTraffic.setVisibility(
+                Utils.hasNotch(mView.getContext()) ? View.GONE : View.VISIBLE);
         applyModeBackground(-1, getMode(), false /*animate*/);
         applyMode(getMode(), false /*animate*/);
     }
@@ -98,8 +102,9 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
                     animateTransitionTo(mNetworkTraffic, newAlpha),
                     animateTransitionTo(mClock, newAlphaBC),
                     animateTransitionTo(mCenterClock, newAlphaBC),
-                    animateTransitionTo(mRightClock, newAlphaBC)
-                    );
+                    animateTransitionTo(mRightClock, newAlphaBC),
+                    animateTransitionTo(mNetworkTraffic, newAlpha)
+            );
             if (isLightsOut(mode)) {
                 anims.setDuration(LIGHTS_OUT_DURATION);
             }
@@ -116,6 +121,7 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
             mClock.setAlpha(newAlphaBC);
             mCenterClock.setAlpha(newAlphaBC);
             mRightClock.setAlpha(newAlphaBC);
+            mNetworkTraffic.setAlpha(newAlpha);
         }
     }
 }
