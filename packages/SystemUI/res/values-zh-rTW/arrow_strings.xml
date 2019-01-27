@@ -126,8 +126,12 @@
     <string name="screen_pinning_toast_no_navbar">如要取消固定這個畫面，請長按「返回」按鈕。</string>
     <string name="quick_settings_screenshot_label">螢幕截圖</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">螢幕截圖已刪除</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">重新啟動</string>
+    <string name="quick_settings_reboot_recovery_label">復原</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>
