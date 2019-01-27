@@ -130,4 +130,8 @@
     <!-- Reboot/Recovery QS Tile -->
     <string name="quick_settings_reboot_label">Reinicialização</string>
     <string name="quick_settings_reboot_recovery_label">Reinicar em Recovery Mode</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>

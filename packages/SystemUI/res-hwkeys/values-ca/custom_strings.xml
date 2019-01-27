@@ -50,7 +50,7 @@
     <string name="label_action_one_handed_mode_left">Mode a una mà (costat esquerre)</string>
     <string name="label_action_one_handed_mode_right">Mode a una mà (costat dret)</string>
     <string name="label_action_media_left">Cançó anterior</string>
-    <string name="label_action_media_right">Següent cançó</string>
+    <string name="label_action_media_right">Cançó següent</string>
     <string name="label_action_assistant_sound_search">Cerca de sons de Google</string>
     <!-- App killed message -->
     <string name="app_killed_message">Aplicació %s finalitzada</string>

@@ -79,8 +79,8 @@
     <string name="save">Save</string>
     <string name="reset">Reset</string>
     <string name="select_keycode">Select Keyboard Button</string>
-    <string name="left">Left</string>
-    <string name="right">Right</string>
+    <string name="left">Stânga</string>
+    <string name="right">Dreapta</string>
     <string name="navbar_editor_title">Editor</string>
     <string name="navbar_editor_summary">Configure navigaton bar</string>
     <string name="statusbar_items_title">Statusbar icons</string>
@@ -130,4 +130,8 @@
     <!-- Reboot/Recovery QS Tile -->
     <string name="quick_settings_reboot_label">Reboot</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>

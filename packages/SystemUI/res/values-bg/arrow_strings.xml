@@ -29,8 +29,8 @@
     <string name="quick_settings_usb_tether_label">USB Тетъринг</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Синхронизиране</string>
-    <string name="accessibility_quick_settings_sync_off">Синхронизация изключена</string>
-    <string name="accessibility_quick_settings_sync_on">Синхронизация включена</string>
+    <string name="accessibility_quick_settings_sync_off">Синхр. изкл.</string>
+    <string name="accessibility_quick_settings_sync_on">Синхр. вкл.</string>
     <string name="accessibility_quick_settings_sync_changed_off">Синхронизацията е изключена</string>
     <string name="accessibility_quick_settings_sync_changed_on">Синхронизацията е включена</string>
     <!-- Sound QS Tile -->
@@ -76,7 +76,7 @@
     <string name="menu_ime">Превключвател за меню / клавиатура</string>
     <string name="select_button">Изберете бутон за добавяне</string>
     <string name="add_button">Добавяне на бутон</string>
-    <string name="save">Запиши</string>
+    <string name="save">Запис</string>
     <string name="reset">Нулирай</string>
     <string name="select_keycode">Изберете бутон от клавиатурата</string>
     <string name="left">Ляво</string>
@@ -114,11 +114,11 @@
     <string name="accessibility_quick_settings_heads_up_changed_on">Изскачащите известия са включени.</string>
     <!-- Advance location quick setting tile -->
     <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">Battery Saving</string>
+    <string name="quick_settings_location_secondary_battery_saving">Пестене на батерия</string>
     <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
     <string name="quick_settings_location_secondary_gps_only">Sensors Only</string>
     <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-    <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
+    <string name="quick_settings_location_secondary_high_accuracy">Висока точност</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
@@ -126,8 +126,12 @@
     <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
     <string name="quick_settings_screenshot_label">Екранна снимка</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Снимката на екрана е изтрита</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Рестартиране</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>
