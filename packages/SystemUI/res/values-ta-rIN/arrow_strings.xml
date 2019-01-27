@@ -50,7 +50,7 @@
     <string name="global_action_restart_ui">முறைமைUI</string>
     <string name="global_action_restart_hot">சூடு</string>
     <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
-    <string name="global_action_lockdown">Lockdown</string>
+    <string name="global_action_lockdown">பூட்டுதல்</string>
     <!-- Heads up snooze toast -->
     <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Peeking notification are snoozing for 1 minute.</string>
     <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Peeking notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
@@ -118,10 +118,10 @@ smartbar_left
     <!-- Advance location quick setting tile -->
     <string name="quick_settings_secondary_location_off"></string>
     <string name="quick_settings_location_secondary_battery_saving">பேட்டரி சேமிப்பு</string>
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_battery_saving">இருப்பிடம் அறிவித்தல்: பேட்டரி சேமிப்பு பயன்முறை.</string>
     <string name="quick_settings_location_secondary_gps_only">உணரிகள் மட்டுமே</string>
     <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-    <string name="quick_settings_location_secondary_high_accuracy">High Accuracy</string>
+    <string name="quick_settings_location_secondary_high_accuracy">அதிக துல்லியம்</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
@@ -129,8 +129,12 @@ smartbar_left
     <string name="screen_pinning_toast_no_navbar">To unpin this screen, touch &amp; hold Back button</string>
     <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">திரைப்பிடிப்பு நீக்கப்பட்டது</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">மறுதொடக்கம்</string>
+    <string name="quick_settings_reboot_recovery_label">மீட்டல்</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>

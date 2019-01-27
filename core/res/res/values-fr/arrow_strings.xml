@@ -27,10 +27,12 @@
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Imiter la signature du package</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Autoriser l\'application à prétendre être une autre application. Des applications malveillantes peuvent essayer d\'accéder à des données privées d\'autres applications, accordez cette permission qu\'avec prudence !</string>
+    <string name="permdesc_fakePackageSignature">Autoriser l\'application à prétendre être une autre application. Des applications malveillantes peuvent essayer d\'accéder à des données privées d\'autres applications, accordez cette permission avec prudence !</string>
     <!-- Pocket Lock -->
     <string name="pocket_lock_message_long_press">Appui long sur le bouton d\'alimentation pour interagir</string>
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
+    <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
+    <string name="system_error_vendorprint">It appears your vendor image may be out of date. Please flash the latest vendor image for your device.</string>
 </resources>

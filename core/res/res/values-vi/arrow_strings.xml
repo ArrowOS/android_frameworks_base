@@ -18,9 +18,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Power menu -->
     <string name="reboot_to_recovery_title">Recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery</string>
+    <string name="reboot_to_recovery_message">Khởi động vào Recovery</string>
     <string name="reboot_to_bootloader_title">Bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader</string>
+    <string name="reboot_to_bootloader_message">Khởi động vào Bootloader</string>
     <string name="reboot_title">Khởi động lại</string>
     <string name="reboot_message">Đang khởi động lại hệ thống</string>
     <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
@@ -33,4 +33,6 @@
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
+    <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
+    <string name="system_error_vendorprint">It appears your vendor image may be out of date. Please flash the latest vendor image for your device.</string>
 </resources>

@@ -126,8 +126,12 @@
     <string name="screen_pinning_toast_no_navbar">Um die Fixierung dieses Bildschirms aufzuheben, \"Zurück\" berühren und halten</string>
     <string name="quick_settings_screenshot_label">Bildschirmaufnahme</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Screenshot gelöscht</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Neustart</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>

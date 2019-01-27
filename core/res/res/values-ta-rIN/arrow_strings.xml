@@ -22,7 +22,7 @@
     <string name="reboot_to_bootloader_title">Bootloader</string>
     <string name="reboot_to_bootloader_message">Rebooting to bootloader</string>
     <string name="reboot_title">மறுதொடக்கம்</string>
-    <string name="reboot_message">Rebooting system</string>
+    <string name="reboot_message">முறைமையை மறுதொடக்குகிறது</string>
     <string name="statusbar_items_title">நிலைப்பட்டி படவுரு</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">ஏமாற்று தொகுப்பு கையொப்பம்</string>
@@ -33,4 +33,6 @@
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
+    <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
+    <string name="system_error_vendorprint">It appears your vendor image may be out of date. Please flash the latest vendor image for your device.</string>
 </resources>

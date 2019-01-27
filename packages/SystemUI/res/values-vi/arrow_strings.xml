@@ -26,7 +26,7 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- USB tethering QS Tile -->
-    <string name="quick_settings_usb_tether_label">Truy cập Internet qua USB</string>
+    <string name="quick_settings_usb_tether_label">Truy cập internet qua USB</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Đồng bộ</string>
     <string name="accessibility_quick_settings_sync_off">Tắt đồng bộ</string>
@@ -34,7 +34,7 @@
     <string name="accessibility_quick_settings_sync_changed_off">Đồng bộ đã tắt</string>
     <string name="accessibility_quick_settings_sync_changed_on">Đồng bộ đã bật</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Cài đặt nhãn âm thanh</string>
+    <string name="quick_settings_sound_label">Âm thanh</string>
     <string name="quick_settings_sound_ring">Chuông báo</string>
     <string name="quick_settings_sound_vibrate">Báo rung</string>
     <string name="quick_settings_sound_dnd">Không làm phiền</string>
@@ -45,7 +45,7 @@
     <!-- Advanced powermenu -->
     <string name="global_action_restart_system">Khởi động lại</string>
     <string name="global_action_restart_advanced">Khởi động lại nâng cao</string>
-    <string name="global_action_restart_recovery">Về chế độ phục hồi</string>
+    <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Chế độ bootloader</string>
     <string name="global_action_restart_ui">Giao diện người dùng hệ thống</string>
     <string name="global_action_restart_hot">Nhiều quan tâm</string>
@@ -65,8 +65,8 @@
     <string name="status_bar_vpn">VPN</string>
     <string name="preview">Xem trước</string>
     <string name="keycode">Mã phím</string>
-    <string name="no_home_title">Không tìm thấy nút trang chủ</string>
-    <string name="no_home_message">Cần có nút trang chủ để có thể điều hướng thiết bị này. Vui lòng thêm nút trang chủ trước khi lưu.</string>
+    <string name="no_home_title">Không tìm thấy nút home</string>
+    <string name="no_home_message">Cần có nút home để có thể điều hướng thiết bị này. Vui lòng thêm nút home trước khi lưu.</string>
     <string name="clipboard_description">Khay nhớ tạm cho phép kéo trực tiếp mục vào khay nhớ tạm. Bạn cũng có thể kéo trực tiếp mục ra khỏi khay nhớ tạm khi hiển thị.</string>
     <string name="keycode_description">Các nút mã phím cho phép thêm các phím trên bàn phím vào Thanh điều hướng. Khi bạn nhấn, các nút này sẽ mô phỏng phím trên bàn phím được chọn. Trước tiên, bạn phải chọn phím cho nút, sau đó chọn một hình ảnh để hiển thị trên nút.</string>
     <string name="start">Bắt đầu</string>
@@ -126,8 +126,12 @@
     <string name="screen_pinning_toast_no_navbar">Để bỏ ghim màn hình này, chạm &amp; giữ nút Quay lại</string>
     <string name="quick_settings_screenshot_label">Chụp màn hình</string>
     <!-- Screenshot Delete Toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Đã xóa ảnh chụp màn hình</string>
     <!-- Reboot/Recovery QS Tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Khởi động lại</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- navbar disable QS Tile -->
+    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
 </resources>
