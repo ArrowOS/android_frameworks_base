@@ -4763,6 +4763,20 @@ public final class Settings {
         private static final Validator AICP_LOCKSCREEN_WEATHER_STYLE_VALIDATOR =
 		new SettingsValidators.InclusiveIntegerRangeValidator(0, 1);;
 
+         /**
+         * Whether to enable DOZE only when charging
+         * @hide
+         */
+        public static final String DOZE_ON_CHARGE = "doze_on_charge";
+
+        private static final Validator DOZE_ON_CHARGE_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
+         * hidden stting of the current atate of DOZE only when charging
+         * @hide
+         */
+        public static final String DOZE_ON_CHARGE_NOW = "doze_on_charge_now";
+
         /**
          * Whether to disable showing arrows in network traffic indicators
          * @hide
@@ -4848,6 +4862,7 @@ public final class Settings {
             ONE_HAND_MODE_ENABLED,
 	    AICP_LOCKSCREEN_WEATHER_STYLE,
             NOTIFICATION_LIGHT_PULSE,
+            DOZE_ON_CHARGE
         };
 
         /**
@@ -4998,6 +5013,7 @@ public final class Settings {
 	    PRIVATE_SETTINGS.add(BATTERY_SAVER_DARK_MODE);
             PRIVATE_SETTINGS.add(ONE_HAND_MODE_ENABLED);
 	    PRIVATE_SETTINGS.add(AICP_LOCKSCREEN_WEATHER_STYLE);
+            PRIVATE_SETTINGS.add(DOZE_ON_CHARGE);
         }
 
         /**
@@ -5107,6 +5123,7 @@ public final class Settings {
             VALIDATORS.put(CUSTOM_DEVICE_FEATURE_SETTINGS, CUSTOM_DEVICE_FEATURE_SETTINGS_VALIDATOR);
 	    VALIDATORS.put(AICP_LOCKSCREEN_WEATHER_STYLE,AICP_LOCKSCREEN_WEATHER_STYLE_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_PULSE, BOOLEAN_VALIDATOR);
+            VALIDATORS.put(DOZE_ON_CHARGE, DOZE_ON_CHARGE_VALIDATOR);
         }
 
         /**
