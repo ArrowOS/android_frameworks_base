@@ -34,5 +34,5 @@
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
-    <string name="system_error_vendorprint">It appears your vendor image may be out of date. Please flash the latest vendor image for your device.</string>
+    <string name="system_error_vendorprint">Zdá se, že váš dodavatel obrazu může být zastaralý. Prosím flashněte nejnovějšího dodavatele obrazu pro vaše zařízení.</string>
 </resources>
