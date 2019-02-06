@@ -126,6 +126,10 @@ public class QuickStatusBarHeader extends RelativeLayout implements
     /** Counts how many times the long press tooltip has been shown to the user. */
     private int mShownCount;
 
+    // Statusbar Weather Image
+    private View mWeatherImageView;
+    private View mWeatherTextView;
+
     private final BroadcastReceiver mRingerReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -133,7 +137,6 @@ public class QuickStatusBarHeader extends RelativeLayout implements
             updateStatusText();
         }
     };
-
 
 
     /**
@@ -187,6 +190,8 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mBatteryMeterView.setOnClickListener(this);
         mClockView = findViewById(R.id.clock);
         mClockView.setOnClickListener(this);
+	mWeatherTextView = findViewById(R.id.weather_temp);
+        mWeatherImageView = findViewById(R.id.weather_image);
         mDateView = findViewById(R.id.date);
         mDateView.setOnClickListener(this);
     }

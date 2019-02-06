@@ -39,6 +39,23 @@
         android:textAppearance="@style/TextAppearance.StatusBar.Clock"
         systemui:showDark="false" />
 
+    <com.android.systemui.arrow.statusbarweather.StatusBarWeather
+        android:id="@+id/weather_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+	android:gravity="left|center_vertical"
+        android:maxLines="1"
+	systemui:showDark="false"
+	android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp" />
+
+    <com.android.systemui.arrow.statusbarweather.StatusBarWeatherImage
+        android:id="@+id/weather_image"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:paddingStart="2dp"
+        android:paddingEnd="@dimen/status_bar_left_clock_end_padding" />
+
     <android.widget.Space
         android:id="@+id/space"
         android:layout_width="0dp"
