@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.ContentObserver;
-import android.graphics.Rect;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
@@ -32,16 +31,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.systemui.R;
-import com.android.systemui.Dependency;
 import com.android.systemui.omni.DetailedWeatherView;
 import com.android.systemui.omni.OmniJawsClient;
-import com.android.systemui.statusbar.policy.DarkIconDispatcher;
-import com.android.systemui.statusbar.policy.DarkIconDispatcher.DarkReceiver;
 
 import java.util.Arrays;
 
 public class StatusBarWeather extends TextView implements
-        OmniJawsClient.OmniJawsObserver, DarkReceiver {
+        OmniJawsClient.OmniJawsObserver {
 
     private static final String TAG = StatusBarWeather.class.getSimpleName();
 
@@ -103,7 +99,6 @@ public class StatusBarWeather extends TextView implements
         super.onAttachedToWindow();
         mEnabled = mWeatherClient.isOmniJawsEnabled();
         mWeatherClient.addObserver(this);
-        Dependency.get(DarkIconDispatcher.class).addDarkReceiver(this);
         queryAndUpdateWeather();
     }
 
@@ -112,7 +107,6 @@ public class StatusBarWeather extends TextView implements
         super.onDetachedFromWindow();
         mWeatherClient.removeObserver(this);
         mWeatherClient.cleanupObserver();
-        Dependency.get(DarkIconDispatcher.class).removeDarkReceiver(this);
     }
 
     @Override
@@ -168,6 +162,7 @@ public class StatusBarWeather extends TextView implements
                             setVisibility(View.VISIBLE);
                         }
                     }
+		    setTextColor(mTintColor);
                 } else {
                     setVisibility(View.GONE);
                 }
@@ -177,11 +172,5 @@ public class StatusBarWeather extends TextView implements
         } catch(Exception e) {
             // Do nothing
         }
-    }
-
-    public void onDarkChanged(Rect area, float darkIntensity, int tint) {
-        mTintColor = DarkIconDispatcher.getTint(area, this, tint);
-        setTextColor(mTintColor);
-        queryAndUpdateWeather();
     }
 }
