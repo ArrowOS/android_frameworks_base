@@ -66,6 +66,9 @@ import com.android.systemui.statusbar.policy.DateView;
 import com.android.systemui.statusbar.policy.NextAlarmController;
 import com.android.systemui.statusbar.policy.ZenModeController;
 
+import com.android.systemui.arrow.statusbarweather.StatusBarWeatherImage;
+import com.android.systemui.arrow.statusbarweather.StatusBarWeather;
+
 import java.util.Locale;
 import java.util.Objects;
 
@@ -125,6 +128,10 @@ public class QuickStatusBarHeader extends RelativeLayout implements
     private ZenModeController mZenController;
     /** Counts how many times the long press tooltip has been shown to the user. */
     private int mShownCount;
+
+    // Statusbar Weather Image
+    private StatusBarWeatherImage mWeatherImageView;
+    private StatusBarWeather mWeatherTextView;
 
     private final BroadcastReceiver mRingerReceiver = new BroadcastReceiver() {
         @Override
@@ -189,6 +196,8 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mClockView.setOnClickListener(this);
         mDateView = findViewById(R.id.date);
         mDateView.setOnClickListener(this);
+	mWeatherTextView = findViewById(R.id.weather_temp);
+	mWeatherImageView = findViewById(R.id.weather_image);
     }
 
     private void updateStatusText() {
@@ -267,6 +276,8 @@ public class QuickStatusBarHeader extends RelativeLayout implements
                 newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE;
         mBatteryMeterView.useWallpaperTextColor(shouldUseWallpaperTextColor);
         mClockView.useWallpaperTextColor(shouldUseWallpaperTextColor);
+	mWeatherImageView.useWallpaperTextColor(shouldUseWallpaperTextColor);
+	mWeatherTextView.useWallpaperTextColor(shouldUseWallpaperTextColor);
     }
 
     @Override
