@@ -21,7 +21,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.ContentObserver;
-import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.VectorDrawable;
@@ -34,10 +33,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.android.systemui.R;
-import com.android.systemui.Dependency;
 import com.android.systemui.omni.DetailedWeatherView;
 import com.android.systemui.omni.OmniJawsClient;
-import com.android.systemui.statusbar.policy.DarkIconDispatcher;
 
 public class StatusBarWeatherImage extends ImageView implements
         OmniJawsClient.OmniJawsObserver {
@@ -88,7 +85,6 @@ public class StatusBarWeatherImage extends ImageView implements
         super.onAttachedToWindow();
         mEnabled = mWeatherClient.isOmniJawsEnabled();
         mWeatherClient.addObserver(this);
-        Dependency.get(DarkIconDispatcher.class).addDarkReceiver(this);
         queryAndUpdateWeather();
     }
 
@@ -97,7 +93,6 @@ public class StatusBarWeatherImage extends ImageView implements
         super.onDetachedFromWindow();
         mWeatherClient.removeObserver(this);
         mWeatherClient.cleanupObserver();
-        Dependency.get(DarkIconDispatcher.class).removeDarkReceiver(this);
     }
 
     class SettingsObserver extends ContentObserver {
@@ -171,10 +166,5 @@ public class StatusBarWeatherImage extends ImageView implements
         } catch(Exception e) {
             // Do nothing
         }
-    }
-
-    public void onDarkChanged(Rect area, float darkIntensity, int tint) {
-        mTintColor = DarkIconDispatcher.getTint(area, this, tint);
-        queryAndUpdateWeather();
     }
 }
