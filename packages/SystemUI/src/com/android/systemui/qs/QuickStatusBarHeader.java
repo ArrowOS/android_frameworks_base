@@ -27,6 +27,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.ComponentName;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.media.AudioManager;
@@ -197,7 +198,9 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mDateView = findViewById(R.id.date);
         mDateView.setOnClickListener(this);
 	mWeatherTextView = findViewById(R.id.weather_temp);
+	mWeatherTextView.setOnClickListener(this);
 	mWeatherImageView = findViewById(R.id.weather_image);
+	mWeatherImageView.setOnClickListener(this);
     }
 
     private void updateStatusText() {
@@ -465,7 +468,13 @@ public class QuickStatusBarHeader extends RelativeLayout implements
             builder.appendPath(Long.toString(System.currentTimeMillis()));
             Intent todayIntent = new Intent(Intent.ACTION_VIEW, builder.build());
             Dependency.get(ActivityStarter.class).postStartActivityDismissingKeyguard(todayIntent, 0);
-        }
+        } else if (v == mWeatherImageView || v == mWeatherTextView) {
+	    Intent weatherIntent = new Intent();
+	    weatherIntent.setClassName("com.android.settings", ".Settings$ArrowWeather");
+	    weatherIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                        Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+            Dependency.get(ActivityStarter.class).postStartActivityDismissingKeyguard(weatherIntent, 0);
+	}
     }
 
     @Override
