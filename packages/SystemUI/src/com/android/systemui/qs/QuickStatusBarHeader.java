@@ -134,6 +134,9 @@ public class QuickStatusBarHeader extends RelativeLayout implements
     private StatusBarWeatherImage mWeatherImageView;
     private StatusBarWeather mWeatherTextView;
 
+    // Statusbar Traffic
+    private View mTraffic;
+
     private final BroadcastReceiver mRingerReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -201,6 +204,8 @@ public class QuickStatusBarHeader extends RelativeLayout implements
 	mWeatherImageView.setOnClickListener(this);
         mDateView = findViewById(R.id.date);
         mDateView.setOnClickListener(this);
+	mTraffic = findViewById(R.id.networkTraffic);
+	mTraffic.setOnClickListener(this);
     }
 
     private void updateStatusText() {
@@ -474,6 +479,12 @@ public class QuickStatusBarHeader extends RelativeLayout implements
 	    weatherIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
                         Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
             Dependency.get(ActivityStarter.class).postStartActivityDismissingKeyguard(weatherIntent, 0);
+	} else if (v == mTraffic) {
+	    Intent trafficIntent = new Intent();
+            trafficIntent.setClassName("com.android.settings", "com.android.settings.Settings$ArrowTraffic");
+            trafficIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                        Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+            Dependency.get(ActivityStarter.class).postStartActivityDismissingKeyguard(trafficIntent, 0);
 	}
     }
 
