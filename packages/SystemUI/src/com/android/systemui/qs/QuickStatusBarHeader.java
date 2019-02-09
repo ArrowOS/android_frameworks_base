@@ -69,6 +69,7 @@ import com.android.systemui.statusbar.policy.ZenModeController;
 
 import com.android.systemui.arrow.statusbarweather.StatusBarWeatherImage;
 import com.android.systemui.arrow.statusbarweather.StatusBarWeather;
+import com.android.systemui.statusbar.policy.NetworkTraffic;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -135,7 +136,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
     private StatusBarWeather mWeatherTextView;
 
     // Statusbar Traffic
-    private View mTraffic;
+    private NetworkTraffic mTraffic;
 
     private final BroadcastReceiver mRingerReceiver = new BroadcastReceiver() {
         @Override
@@ -286,6 +287,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mClockView.useWallpaperTextColor(shouldUseWallpaperTextColor);
 	mWeatherImageView.useWallpaperTextColor(shouldUseWallpaperTextColor);
 	mWeatherTextView.useWallpaperTextColor(shouldUseWallpaperTextColor);
+	mTraffic.useWallpaperTextColor(shouldUseWallpaperTextColor);
     }
 
     @Override
