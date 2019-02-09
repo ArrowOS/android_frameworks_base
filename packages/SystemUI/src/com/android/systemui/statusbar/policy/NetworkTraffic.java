@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.systemui.R;
+import com.android.settingslib.Utils;
 
 /*
 *
@@ -302,5 +303,16 @@ public class NetworkTraffic extends TextView {
         txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
         setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
         setCompoundDrawablePadding(txtImgPadding);
+    }
+
+    public void useWallpaperTextColor(boolean shouldUseWallpaperTextColor) {
+        if (shouldUseWallpaperTextColor) {
+            mTintColor = Utils.getColorAttr(mContext, R.attr.wallpaperTextColor);
+	    updateTrafficDrawable();
+        } else {
+	    final Resources resources = getResources();
+	    mTintColor = resources.getColor(android.R.color.white);
+	    updateTrafficDrawable();
+	}
     }
 }
