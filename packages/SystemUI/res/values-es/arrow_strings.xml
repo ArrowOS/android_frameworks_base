@@ -95,8 +95,8 @@
     <string name="omnijaws_service_unkown">No hay datos metereológicos</string>
     <string name="omnijaws_service_error_long">Error al cargar datos meteorológicos</string>
     <string name="omnijaws_service_disabled">Servicio deshabilitado</string>
-    <string name="omnijaws_detail_header">Tiempo metereològico</string>
-    <string name="omnijaws_label_default">Tiempo metereològico</string>
+    <string name="omnijaws_detail_header">Clima</string>
+    <string name="omnijaws_label_default">Clima</string>
     <string name="omnijaws_current_text">Ahora</string>
     <string name="omnijaws_package_not_available">OmniJaws no está disponible</string>
     <string name="omnijaws_service_last_update">Última actualización:</string>
@@ -131,7 +131,7 @@
     <string name="quick_settings_reboot_label">Reiniciar</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- navbar disable QS Tile -->
-    <string name="quick_settings_navbar_disable_label">Navbar</string>
-    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
-    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
+    <string name="quick_settings_navbar_disable_label">Barra de navegación</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Barra de navegación desactivada.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Barra de navegación activada.</string>
 </resources>

@@ -48,7 +48,7 @@
     <string name="global_action_restart_recovery">Récupération</string>
     <string name="global_action_restart_bootloader">Amorçage</string>
     <string name="global_action_restart_ui">Interface utilisateur</string>
-    <string name="global_action_restart_hot">Hot</string>
+    <string name="global_action_restart_hot">À chaud</string>
     <string name="global_action_screenshot">Capture d\'écran</string>
     <string name="global_action_lockdown">Verrouillage</string>
     <!-- Heads up snooze toast -->
@@ -64,11 +64,11 @@
     <string name="custom_hint">Balayez l\'icône pour lancer l\'application</string>
     <string name="status_bar_vpn">VPN</string>
     <string name="preview">Prévisualisation</string>
-    <string name="keycode">Keycode</string>
+    <string name="keycode">Code de touche</string>
     <string name="no_home_title">Aucun bouton d\'accueil trouvé</string>
     <string name="no_home_message">Un bouton d\'accueil est nécessaire pour naviguer sur cet appareil. Veuillez ajouter un bouton d\'accueil avant d\'enregistrer.</string>
-    <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
-    <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
+    <string name="clipboard_description">Vous pouvez faire glisser des éléments directement dans le Presse-papiers et inversement.</string>
+    <string name="keycode_description">Les boutons de touches permettent d\'ajouter des touches du clavier à la barre de navigation. En les cliquants, ils simulent un appui de la touche de clavier sélectionnée. Il faut d\'abord sélectionner la cible du bouton, puis l\'image à afficher comme bouton.</string>
     <string name="start">Démarrer</string>
     <string name="center">Aligner vers le centre</string>
     <string name="end">Fin</string>
@@ -88,7 +88,7 @@
     <string name="keyguard_indication_dash_charging_time">Charge Rapide (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> restant jusqu\'à charge complète)</string>
     <string name="keyguard_plugged_in_dash_charging">Charge rapide</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_turbo_power_time">TurboPower connected (<xliff:g id="charging_time_left">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_turbo_power_time">Charge rapide (temps restant : <xliff:g id="charging_time_left">%s</xliff:g> jusqu\'a charge complète )</string>
     <string name="keyguard_plugged_in_turbo_power_charging">Charge rapide en cours</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Erreur</string>
@@ -97,15 +97,15 @@
     <string name="omnijaws_service_disabled">Le service est désactivé</string>
     <string name="omnijaws_detail_header">Météo</string>
     <string name="omnijaws_label_default">Météo</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_current_text">À l\'instant</string>
+    <string name="omnijaws_package_not_available">OmniJaws indisponible</string>
     <string name="omnijaws_service_last_update">Dernière mise à jour :</string>
     <!-- Weather string format in expanded statusbar header -->
-    <string name="status_bar_weather_format"><xliff:g id="temp">%1$s</xliff:g></string>
+    <string name="status_bar_weather_format"><xliff:g id="temp">%1$s </xliff:g></string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Caféine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Mode caféine désactivé</string>
+    <string name="accessibility_quick_settings_caffeine_on">Mode caféine activé</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Notifications flottantes</string>
     <string name="accessibility_quick_settings_heads_up_off">Notifications flottantes désactivées.</string>
@@ -121,7 +121,7 @@
     <string name="quick_settings_location_secondary_high_accuracy">Haute précision</string>
     <string name="accessibility_quick_settings_location_high_accuracy">Localisation : mode haute précision.</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
-    <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
+    <string name="screen_pinning_description_no_navbar">Cela le laisse en vue jusqu\'à ce que vous le détachiez. Appuyez et maintenez le bouton retour pour annuler l\'épinglage.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
     <string name="screen_pinning_toast_no_navbar">Pour annuler l\'épinglage de l\'écran, appuyez et maintenez le bouton Retour</string>
     <string name="quick_settings_screenshot_label">Capture d\'écran</string>
@@ -131,7 +131,7 @@
     <string name="quick_settings_reboot_label">Redémarrer</string>
     <string name="quick_settings_reboot_recovery_label">Récupération</string>
     <!-- navbar disable QS Tile -->
-    <string name="quick_settings_navbar_disable_label">Navbar</string>
-    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
-    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
+    <string name="quick_settings_navbar_disable_label">Barre de navigation</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Barre de navigation désactivé.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Barre de navigation activé.</string>
 </resources>

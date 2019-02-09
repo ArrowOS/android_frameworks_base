@@ -131,7 +131,7 @@
     <string name="quick_settings_reboot_label">Neustart</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- navbar disable QS Tile -->
-    <string name="quick_settings_navbar_disable_label">Navbar</string>
-    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
-    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
+    <string name="quick_settings_navbar_disable_label">Navigationsleiste</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Navbar deaktiviert.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Navbar aktiviert.</string>
 </resources>
