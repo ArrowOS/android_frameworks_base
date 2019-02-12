@@ -82,7 +82,6 @@ public class KeyguardIndicationController implements StateListener,
         KeyguardStateController.Callback {
 
     private static final String TAG = "KeyguardIndication";
-    private static final boolean DEBUG_CHARGING_SPEED = false;
 
     private static final int MSG_HIDE_TRANSIENT = 1;
     private static final int MSG_CLEAR_BIOMETRIC_MSG = 2;
@@ -120,7 +119,7 @@ public class KeyguardIndicationController implements StateListener,
     private boolean mPowerPluggedInWired;
     private boolean mPowerCharged;
     private int mChargingSpeed;
-    private int mChargingWattage;
+    private double mChargingWattage;
     private int mBatteryLevel;
     private long mChargingTimeRemaining;
     private float mDisclosureMaxAlpha;
@@ -456,9 +455,8 @@ public class KeyguardIndicationController implements StateListener,
                 mTextView.switchIndication(mAlignmentIndication);
                 isError = true;
             } else if (mPowerPluggedIn) {
-                if (DEBUG_CHARGING_SPEED) {
-                    powerIndication += ",  " + (mChargingWattage / 1000) + " mW";
-                }
+                String indication = computePowerIndication();
+                mTextView.setTextColor(mInitialTextColorState);
                 if (animate) {
                     animateText(mTextView, powerIndication);
                 } else {
@@ -569,11 +567,15 @@ public class KeyguardIndicationController implements StateListener,
             Settings.System.LOCKSCREEN_BATTERY_INFO, 1, UserHandle.USER_CURRENT) == 1;
          if (showbatteryInfo) {
             if (mChargingCurrent > 0) {
-                batteryInfo = batteryInfo + (mChargingCurrent / 1000) + "mA";
+                batteryInfo = batteryInfo + String.format("%.2f", (mChargingCurrent / 1000 / 1000)) + "A";
             }
             if (mChargingVoltage > 0) {
                 batteryInfo = (batteryInfo == "" ? "" : batteryInfo + " · ") +
                         String.format("%.1f", (mChargingVoltage / 1000 / 1000)) + "V";
+            }
+            if (mChargingWattage > 0) {
+                batteryInfo = (batteryInfo == "" ? "" : batteryInfo + " · ") +
+                        String.format("%.1f" , (mChargingWattage / 1000 / 1000)) + "W";
             }
             if (mTemperature > 0) {
                 batteryInfo = (batteryInfo == "" ? "" : batteryInfo + " · ") +
