@@ -96,9 +96,9 @@ public class KeyguardIndicationController {
     private boolean mPowerPluggedInWired;
     private boolean mPowerCharged;
     private int mChargingSpeed;
-    private int mChargingWattage;
+    private double mChargingWattage;
     private int mBatteryLevel;
-    private int mChargingCurrent;
+    private double mChargingCurrent;
     private double mChargingVoltage;
     private int mTemperature;
     private String mMessageToShowOnScreenOn;
@@ -432,7 +432,7 @@ public class KeyguardIndicationController {
             Settings.System.LOCKSCREEN_BATTERY_INFO, 1, UserHandle.USER_CURRENT) == 1;
          if (showbatteryInfo) {
             if (mChargingCurrent > 0) {
-                batteryInfo = batteryInfo + (mChargingCurrent / 1000) + "mA";
+                batteryInfo = batteryInfo + String.format("%.2f", (mChargingCurrent / 1000 / 1000)) + "A";
             }
             if (mChargingVoltage > 0) {
                 batteryInfo = (batteryInfo == "" ? "" : batteryInfo + " · ") +
@@ -441,6 +441,10 @@ public class KeyguardIndicationController {
             if (mTemperature > 0) {
                 batteryInfo = (batteryInfo == "" ? "" : batteryInfo + " · ") +
                         mTemperature / 10 + "°C";
+            }
+            if (mChargingWattage > 0) {
+                batteryInfo = (batteryInfo == "" ? "" : batteryInfo + " · ") +
+                        String.format("%.1f" , (mChargingWattage / 1000 / 1000)) + "W";
             }
             if (batteryInfo != "") {
                 batteryInfo = "\n" + batteryInfo;
