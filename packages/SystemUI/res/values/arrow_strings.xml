@@ -156,5 +156,8 @@
 
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">Always On Display</string>
-</resources>
 
+    <string name="tuner_keyguard_show_watt_title">Show charging watt</string>
+    <string name="tuner_keyguard_show_watt_summary">Show charging watt value in mW</string>
+
+</resources>
