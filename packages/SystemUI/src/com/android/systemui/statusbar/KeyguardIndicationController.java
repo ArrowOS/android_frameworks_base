@@ -40,6 +40,7 @@ import android.text.format.Formatter;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import com.android.systemui.tuner.TunerService;
 
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.app.IBatteryStats;
@@ -67,7 +68,6 @@ import java.util.IllegalFormatConversionException;
 public class KeyguardIndicationController {
 
     private static final String TAG = "KeyguardIndication";
-    private static final boolean DEBUG_CHARGING_SPEED = false;
 
     private static final int MSG_HIDE_TRANSIENT = 1;
     private static final int MSG_CLEAR_FP_MSG = 2;
@@ -108,6 +108,7 @@ public class KeyguardIndicationController {
     private final DevicePolicyManager mDevicePolicyManager;
     private boolean mDozing;
 
+    private static final String KEYGUARD_SHOW_WATT_ON_CHARGING = "sysui_keyguard_show_watt";
     /**
      * Creates a new KeyguardIndicationController and registers callbacks.
      */
@@ -305,6 +306,7 @@ public class KeyguardIndicationController {
                     mTextView.switchIndication(mTransientIndication);
                 } else if (mPowerPluggedIn) {
                     String indication = computePowerIndication();
+                    indication += ",  " + (mChargingWattage / 1000) + " mW";
                     if (animate) {
                         animateText(mTextView, indication);
                     } else {
@@ -334,9 +336,7 @@ public class KeyguardIndicationController {
                 mTextView.setTextColor(mInitialTextColor);
             } else if (mPowerPluggedIn) {
                 String indication = computePowerIndication();
-                if (DEBUG_CHARGING_SPEED) {
                     indication += ",  " + (mChargingWattage / 1000) + " mW";
-                }
                 mTextView.setTextColor(mInitialTextColor);
                 if (animate) {
                     animateText(mTextView, indication);
