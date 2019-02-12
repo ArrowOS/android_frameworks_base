@@ -23,7 +23,7 @@
     <string name="reboot_to_bootloader_message">Rebooting to bootloader</string>
     <string name="reboot_title">Reiniciar</string>
     <string name="reboot_message">Reiniciando o sistema</string>
-    <string name="statusbar_items_title">Icone do Statusbar</string>
+    <string name="statusbar_items_title">Icone da barra de status</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Substituir a assinatura do pacote</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

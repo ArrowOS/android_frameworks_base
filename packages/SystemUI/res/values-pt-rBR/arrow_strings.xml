@@ -31,12 +31,12 @@
     <string name="quick_settings_sync_label">Sincronização</string>
     <string name="accessibility_quick_settings_sync_off">Sincronização desligada</string>
     <string name="accessibility_quick_settings_sync_on">Sincronização ativada</string>
-    <string name="accessibility_quick_settings_sync_changed_off">A sincronização está desativada</string>
-    <string name="accessibility_quick_settings_sync_changed_on">A sincronização está ativada</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sincronização desativada</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sincronização ativada</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Som</string>
     <string name="quick_settings_sound_ring">Toque</string>
-    <string name="quick_settings_sound_vibrate">Vibração</string>
+    <string name="quick_settings_sound_vibrate">Vibrar</string>
     <string name="quick_settings_sound_dnd">Não perturbe</string>
     <!-- HW Keys Tile -->
     <string name="accessibility_quick_settings_hwkeys_on">Teclas físicas ativadas</string>
@@ -131,7 +131,7 @@
     <string name="quick_settings_reboot_label">Reinicialização</string>
     <string name="quick_settings_reboot_recovery_label">Reinicar em Recovery Mode</string>
     <!-- navbar disable QS Tile -->
-    <string name="quick_settings_navbar_disable_label">Navbar</string>
-    <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
-    <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
+    <string name="quick_settings_navbar_disable_label">Barra de navegação</string>
+    <string name="accessibility_quick_settings_navbar_disable_on">Barra de navegação desabilitada.</string>
+    <string name="accessibility_quick_settings_navbar_disable_off">Barra de navegação habilitada.</string>
 </resources>

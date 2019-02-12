@@ -34,5 +34,5 @@
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
-    <string name="system_error_vendorprint">Sembra che la tua vendor image sia obsoleta. Si prega di installare l\'ultima vendor image per il tuo dispositivo.</string>
+    <string name="system_error_vendorprint">Sembra che la versione del software sia obsoleta. Si prega di installare l\'ultima versione per il tuo dispositivo.</string>
 </resources>
