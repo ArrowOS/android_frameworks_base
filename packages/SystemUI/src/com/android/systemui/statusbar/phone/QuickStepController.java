@@ -245,6 +245,7 @@ public class QuickStepController implements GestureHelper {
                     isDoubleTapPending = false;
                     wasConsumed = true;
                     mHandler.removeCallbacks(mDoubleTapCancelTimeout);
+		    mNavigationBarView.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                     ArrowUtils.switchScreenOff(mContext);
                 } else {
                     // this is the first tap, let's go further and schedule a
@@ -364,8 +365,8 @@ public class QuickStepController implements GestureHelper {
 
                 if (mBackActionScheduled) {
 		    endQuickScrub(true /* animate */);
-                    ArrowUtils.sendKeycode(KeyEvent.KEYCODE_BACK);
 		    mNavigationBarView.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+                    ArrowUtils.sendKeycode(KeyEvent.KEYCODE_BACK);
                 } else {
                     endQuickScrub(true /* animate */);
                 }
@@ -387,6 +388,7 @@ public class QuickStepController implements GestureHelper {
             wasConsumed = false;
             isDoubleTapPending = false;
             // it was a single tap, let's trigger the home button action
+	    mNavigationBarView.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
             ArrowUtils.sendKeycode(KeyEvent.KEYCODE_HOME);
         }
     };
