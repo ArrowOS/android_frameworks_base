@@ -4613,10 +4613,16 @@ public final class Settings {
         public static final String STATUS_BAR_SHOW_WEATHER_TEMP = "status_bar_show_weather_temp";
 
         /**
-         * Wheter to show network traffic indicator in statusbar
+         * Wheter to show network traffic indicator in QS statusbar header
          * @hide
          */
         public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+
+	/**
+         * Wheter to show network traffic indicator in statusbar
+         * @hide
+         */
+        public static final String NETWORK_TRAFFIC_STATE_SB = "network_traffic_state_sb";
 
         /**
          * Network traffic inactivity threshold (default is 1 kBs)
