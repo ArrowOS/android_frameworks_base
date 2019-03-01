@@ -1642,14 +1642,19 @@ public class WifiManager {
     }
 
     /**
-     * WPS has been deprecated from Client mode operation.
+     * Creates a configuration token describing the current network of MIME type
+     * application/vnd.wfa.wsc. Can be used to configure WiFi networks via NFC.
      *
-     * @return null
+     * @return hex-string encoded configuration token or null if there is no current network
      * @hide
      * @deprecated This API is deprecated
      */
     public String getCurrentNetworkWpsNfcConfigurationToken() {
-        return null;
+        try {
+            return mService.getCurrentNetworkWpsNfcConfigurationToken();
+        } catch (RemoteException e) {
+            throw e.rethrowFromSystemServer();
+        }
     }
 
     /**
@@ -2893,6 +2898,36 @@ public class WifiManager {
                         ((ActionListener) listener).onSuccess();
                     }
                     break;
+                case WifiManager.START_WPS_SUCCEEDED:
+                    if (listener != null) {
+                        WpsResult result = (WpsResult) message.obj;
+                        ((WpsCallback) listener).onStarted(result.pin);
+                        //Listener needs to stay until completion or failure
+                        synchronized (mListenerMapLock) {
+                            mListenerMap.put(message.arg2, listener);
+                        }
+                    }
+                    break;
+                case WifiManager.WPS_COMPLETED:
+                    if (listener != null) {
+                        ((WpsCallback) listener).onSucceeded();
+                    }
+                    break;
+                case WifiManager.WPS_FAILED:
+                    if (listener != null) {
+                        ((WpsCallback) listener).onFailed(message.arg1);
+                    }
+                    break;
+                case WifiManager.CANCEL_WPS_SUCCEDED:
+                    if (listener != null) {
+                        ((WpsCallback) listener).onSucceeded();
+                    }
+                    break;
+                case WifiManager.CANCEL_WPS_FAILED:
+                    if (listener != null) {
+                        ((WpsCallback) listener).onFailed(message.arg1);
+                    }
+                    break;
                 case WifiManager.RSSI_PKTCNT_FETCH_SUCCEEDED:
                     if (listener != null) {
                         RssiPacketCountInfo info = (RssiPacketCountInfo) message.obj;
@@ -3071,32 +3106,29 @@ public class WifiManager {
     }
 
     /**
-     * WPS suport has been deprecated from Client mode and this method will immediately trigger
-     * {@link WpsCallback#onFailed(int)} with a generic error.
+     * Start Wi-fi Protected Setup
      *
      * @param config WPS configuration (does not support {@link WpsInfo#LABEL})
      * @param listener for callbacks on success or failure. Can be null.
-     * @throws IllegalStateException if the WifiManager instance needs to be initialized again
+     * @throws IllegalStateException if the WifiManager instance needs to be
+     * initialized again
      * @deprecated This API is deprecated
      */
     public void startWps(WpsInfo config, WpsCallback listener) {
-        if (listener != null ) {
-            listener.onFailed(ERROR);
-        }
+        if (config == null) throw new IllegalArgumentException("config cannot be null");
+        getChannel().sendMessage(START_WPS, 0, putListener(listener), config);
     }
 
     /**
-     * WPS support has been deprecated from Client mode and this method will immediately trigger
-     * {@link WpsCallback#onFailed(int)} with a generic error.
+     * Cancel any ongoing Wi-fi Protected Setup
      *
      * @param listener for callbacks on success or failure. Can be null.
-     * @throws IllegalStateException if the WifiManager instance needs to be initialized again
+     * @throws IllegalStateException if the WifiManager instance needs to be
+     * initialized again
      * @deprecated This API is deprecated
      */
     public void cancelWps(WpsCallback listener) {
-        if (listener != null) {
-            listener.onFailed(ERROR);
-        }
+        getChannel().sendMessage(CANCEL_WPS, 0, putListener(listener));
     }
 
     /**
