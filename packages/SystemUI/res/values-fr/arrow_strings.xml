@@ -26,21 +26,21 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- USB tethering QS Tile -->
-    <string name="quick_settings_usb_tether_label">Partage de connexion par USB</string>
+    <string name="quick_settings_usb_tether_label">Partage de connexion USB</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Synchroniser</string>
-    <string name="accessibility_quick_settings_sync_off">Synchronisation désactivée</string>
-    <string name="accessibility_quick_settings_sync_on">Synchronisation activée</string>
+    <string name="accessibility_quick_settings_sync_off">Désactiver synchronisation</string>
+    <string name="accessibility_quick_settings_sync_on">Activer synchronisation</string>
     <string name="accessibility_quick_settings_sync_changed_off">La synchronisation est désactivée</string>
     <string name="accessibility_quick_settings_sync_changed_on">La synchronisation est activée</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Volume</string>
+    <string name="quick_settings_sound_label">Son</string>
     <string name="quick_settings_sound_ring">Sonnerie</string>
     <string name="quick_settings_sound_vibrate">Vibrer</string>
     <string name="quick_settings_sound_dnd">Ne pas déranger</string>
     <!-- HW Keys Tile -->
-    <string name="accessibility_quick_settings_hwkeys_on">Boutons physiques activés</string>
-    <string name="accessibility_quick_settings_hwkeys_off">Boutons physiques désactivés</string>
+    <string name="accessibility_quick_settings_hwkeys_on">Activer boutons physiques</string>
+    <string name="accessibility_quick_settings_hwkeys_off">Désactiver boutons physiques</string>
     <string name="quick_settings_hwkeys_label">Boutons physiques</string>
     <!-- Advanced powermenu -->
     <string name="global_action_restart_system">Redémarrer</string>
@@ -70,9 +70,9 @@
     <string name="clipboard_description">Vous pouvez faire glisser des éléments directement dans le Presse-papiers et inversement.</string>
     <string name="keycode_description">Les boutons de touches permettent d\'ajouter des touches du clavier à la barre de navigation. En les cliquants, ils simulent un appui de la touche de clavier sélectionnée. Il faut d\'abord sélectionner la cible du bouton, puis l\'image à afficher comme bouton.</string>
     <string name="start">Démarrer</string>
-    <string name="center">Aligner vers le centre</string>
+    <string name="center">Centrer</string>
     <string name="end">Fin</string>
-    <string name="space">Espacer</string>
+    <string name="space">Espaceur</string>
     <string name="menu_ime">Sélecteur menu/clavier</string>
     <string name="select_button">Sélectionner le bouton à ajouter</string>
     <string name="add_button">Ajouter un bouton</string>
@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">Configurer la barre de navigation</string>
     <string name="statusbar_items_title">Icônes de la Barre d\'état</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time">Charge Rapide (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> restant jusqu\'à charge complète)</string>
+    <string name="keyguard_indication_dash_charging_time">Charge Rapide (<xliff:g id="charging_time_left" example="4 heures et 2 minutes">%s</xliff:g> restant jusqu\'à charge complète)</string>
     <string name="keyguard_plugged_in_dash_charging">Charge rapide</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">Charge rapide (temps restant : <xliff:g id="charging_time_left">%s</xliff:g> jusqu\'a charge complète )</string>
@@ -108,8 +108,8 @@
     <string name="accessibility_quick_settings_caffeine_on">Mode caféine activé</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Notifications flottantes</string>
-    <string name="accessibility_quick_settings_heads_up_off">Notifications flottantes désactivées.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Notifications flottantes activées.</string>
+    <string name="accessibility_quick_settings_heads_up_off">Désactiver les notifications flottantes.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Activer les notifications flottantes.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Notifications flottantes désactivées.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Notifications flottantes activées.</string>
     <!-- Advance location quick setting tile -->

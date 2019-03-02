@@ -22,5 +22,5 @@
     <!-- Label for estimated remaining duration of dash battery charging -->
     <string name="power_remaining_dash_charging_duration_only">Pengisian Cepat (<xliff:g id="time">%1$s</xliff:g> tersisa, sampai penuh)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
-    <string name="battery_info_status_dash_charging">Pengisian Cepat</string>
+    <string name="battery_info_status_dash_charging">Pengisian Daya Cepat</string>
 </resources>

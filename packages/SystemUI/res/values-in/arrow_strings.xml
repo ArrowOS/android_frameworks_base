@@ -32,7 +32,7 @@
     <string name="accessibility_quick_settings_sync_off">Sinkronisasi mati</string>
     <string name="accessibility_quick_settings_sync_on">Sinkronisasi hidup</string>
     <string name="accessibility_quick_settings_sync_changed_off">Sinkronisasi dimatikan</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sinkron diaktifkan</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sinkronisasi diaktifkan</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Suara</string>
     <string name="quick_settings_sound_ring">Dering</string>
@@ -47,7 +47,7 @@
     <string name="global_action_restart_advanced">Mulai ulang lanjutan</string>
     <string name="global_action_restart_recovery">Pemulihan</string>
     <string name="global_action_restart_bootloader">Bootloader</string>
-    <string name="global_action_restart_ui">UI Sistem</string>
+    <string name="global_action_restart_ui">Sistem Antar Pengguna</string>
     <string name="global_action_restart_hot">Panas</string>
     <string name="global_action_screenshot">Tangkapan Layar</string>
     <string name="global_action_lockdown">Kunci paksa</string>
@@ -57,12 +57,12 @@
     <!-- Recents Panel -->
     <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-    <string name="clear_recents">Tutup semua recent</string>
+    <string name="clear_recents">Tutup semua yang baru-baru</string>
     <string name="lockscreen_default">Bawaan</string>
     <string name="lockscreen_hidden">Tidak ada</string>
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
     <string name="custom_hint">Usap dari ikon untuk meluncurkan</string>
-    <string name="status_bar_vpn">VPN</string>
+    <string name="status_bar_vpn">Jaringan Pribadi Virtual</string>
     <string name="preview">Pratinjau</string>
     <string name="keycode">Keycode</string>
     <string name="no_home_title">Tombol beranda tidak ditemukan</string>
@@ -75,7 +75,7 @@
     <string name="space">Jarak</string>
     <string name="menu_ime">Menu / Pengalih Keyboard</string>
     <string name="select_button">Pilih tombol untuk menambahkan</string>
-    <string name="add_button">Tambah tombol</string>
+    <string name="add_button">Tambahkan tombol</string>
     <string name="save">Simpan</string>
     <string name="reset">Setel ulang</string>
     <string name="select_keycode">Pilih tombol keyboard</string>
@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">Mengkonfigurasi panel navigasi</string>
     <string name="statusbar_items_title">Ikon statusbar</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time">Pengisian cepat (<xliff:g id="charging_time_left" example="4 jam dan 2 menit">%s</xliff:g> sampai penuh)</string>
+    <string name="keyguard_indication_dash_charging_time">Pengisian Cepat (<xliff:g id="charging_time_left" example="4 jam dan 2 menit">%s</xliff:g> hingga penuh)</string>
     <string name="keyguard_plugged_in_dash_charging">Pengisian Cepat</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">TurboPower terhubung (<xliff:g id="charging_time_left">%s</xliff:g> sampai penuh)</string>
