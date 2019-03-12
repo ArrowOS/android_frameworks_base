@@ -29,6 +29,8 @@ import java.util.List;
 
 import static com.android.systemui.statusbar.phone.StatusBarIconController.TAG_PRIMARY;
 import com.android.systemui.statusbar.policy.NetworkTrafficSB;
+import com.android.systemui.arrow.statusbarweather.StatusBarWeatherSB;
+import com.android.systemui.arrow.statusbarweather.StatusBarWeatherImageSB;
 
 public class StatusBarIconList {
     private ArrayList<Slot> mSlots = new ArrayList<>();
@@ -40,6 +42,9 @@ public class StatusBarIconList {
         }
         // Network traffic slot
         mSlots.add(0, new Slot(NetworkTrafficSB.SLOT, StatusBarIconHolder.fromNetworkTraffic()));
+	// Statusbar Weather slot
+	mSlots.add(0, new Slot(StatusBarWeatherImageSB.SLOT, StatusBarIconHolder.fromWeatherImage()));
+	mSlots.add(0, new Slot(StatusBarWeatherSB.SLOT, StatusBarIconHolder.fromWeather()));
     }
 
     public int getSlotIndex(String slot) {

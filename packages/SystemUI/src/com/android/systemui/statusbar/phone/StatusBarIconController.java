@@ -19,6 +19,8 @@ import static android.app.StatusBarManager.DISABLE_NONE;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_ICON;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_MOBILE;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_NETWORK_TRAFFIC;
+import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_WEATHER;
+import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_WEATHER_IMAGE;
 import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_WIFI;
 
 import android.content.Context;
@@ -47,6 +49,8 @@ import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.WifiIconState;
 import com.android.systemui.statusbar.policy.DarkIconDispatcher;
 import com.android.systemui.statusbar.policy.DarkIconDispatcher.DarkReceiver;
 import com.android.systemui.statusbar.policy.NetworkTrafficSB;
+import com.android.systemui.arrow.statusbarweather.StatusBarWeatherSB;
+import com.android.systemui.arrow.statusbarweather.StatusBarWeatherImageSB;
 import com.android.systemui.util.Utils.DisableStateTracker;
 import java.util.List;
 
@@ -253,6 +257,13 @@ public interface StatusBarIconController {
 
                 case TYPE_NETWORK_TRAFFIC:
                     return addNetworkTraffic(index, slot);
+
+		case TYPE_WEATHER_IMAGE:
+                    return addWeatherImage(index, slot);
+
+		case TYPE_WEATHER:
+                    return addWeather(index, slot);
+
             }
 
             return null;
@@ -281,6 +292,18 @@ public interface StatusBarIconController {
 
         protected NetworkTrafficSB addNetworkTraffic(int index, String slot) {
             NetworkTrafficSB view = onCreateNetworkTraffic(slot);
+            mGroup.addView(view, index, onCreateLayoutParams());
+            return view;
+        }
+
+	protected StatusBarWeatherSB addWeather(int index, String slot) {
+            StatusBarWeatherSB view = onCreateWeather(slot);
+            mGroup.addView(view, index, onCreateLayoutParams());
+            return view;
+        }
+
+	protected StatusBarWeatherImageSB addWeatherImage(int index, String slot) {
+            StatusBarWeatherImageSB view = onCreateWeatherImage(slot);
             mGroup.addView(view, index, onCreateLayoutParams());
             return view;
         }
@@ -314,6 +337,18 @@ public interface StatusBarIconController {
         private NetworkTrafficSB onCreateNetworkTraffic(String slot) {
             NetworkTrafficSB view = new NetworkTrafficSB(mContext);
             view.setPadding(3, 6, 3, 0);
+            return view;
+        }
+
+	private StatusBarWeatherSB onCreateWeather(String slot) {
+            StatusBarWeatherSB view = new StatusBarWeatherSB(mContext);
+            view.setPadding(0, 0, 0, 0);
+            return view;
+        }
+
+	private StatusBarWeatherImageSB onCreateWeatherImage(String slot) {
+            StatusBarWeatherImageSB view = new StatusBarWeatherImageSB(mContext);
+            view.setPadding(0, 0, 4, 0);
             return view;
         }
 
