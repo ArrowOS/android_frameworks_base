@@ -16,6 +16,7 @@ import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.TrafficStats;
@@ -109,6 +110,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 // Update view if there's anything new to show
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
+		    setTypeface(null, Typeface.BOLD);
                     setText(output);
                 }
                 mTrafficVisible = true;
@@ -198,8 +200,8 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     public NetworkTrafficSB(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         final Resources resources = getResources();
-        txtSize = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
-        txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_traffic_txt_img_padding);
+        txtSize = resources.getDimensionPixelSize(R.dimen.net_sbtraffic_multi_text_size);
+        txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_sbtraffic_txt_img_padding);
         mTintColor = resources.getColor(android.R.color.white);
         Handler mHandler = new Handler();
         SettingsObserver settingsObserver = new SettingsObserver(mHandler);
@@ -312,9 +314,10 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
 
     public void onDensityOrFontScaleChanged() {
         final Resources resources = getResources();
-        txtSize = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
-        txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
+        txtSize = resources.getDimensionPixelSize(R.dimen.net_sbtraffic_multi_text_size);
+        txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_sbtraffic_multi_text_size);
         setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
+	setTypeface(null, Typeface.BOLD);
         setCompoundDrawablePadding(txtImgPadding);
     }
 
