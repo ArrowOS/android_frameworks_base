@@ -34,11 +34,18 @@ import com.android.settingslib.Utils;
 import com.android.systemui.R;
 import com.android.systemui.omni.DetailedWeatherView;
 import com.android.systemui.omni.OmniJawsClient;
+import com.android.systemui.statusbar.StatusIconDisplayable;
+
+import static com.android.systemui.statusbar.StatusBarIconView.STATE_DOT;
+import static com.android.systemui.statusbar.StatusBarIconView.STATE_HIDDEN;
+import static com.android.systemui.statusbar.StatusBarIconView.STATE_ICON;
 
 import java.util.Arrays;
 
 public class StatusBarWeatherSB extends TextView implements
-        OmniJawsClient.OmniJawsObserver {
+        OmniJawsClient.OmniJawsObserver,StatusIconDisplayable {
+
+    public static final String SLOT = "weather";
 
     private static final String TAG = StatusBarWeatherSB.class.getSimpleName();
 
@@ -52,6 +59,9 @@ public class StatusBarWeatherSB extends TextView implements
     private OmniJawsClient.WeatherInfo mWeatherData;
     private boolean mEnabled;
     private int mTintColor;
+    private int mVisibleState = -1;
+    private boolean mWeatherVisible = false;
+    private boolean mSystemIconVisible = true;
 
     Handler mHandler;
 
@@ -122,6 +132,7 @@ public class StatusBarWeatherSB extends TextView implements
     }
 
     public void updateSettings(boolean onChange) {
+	updateVisibility();
         ContentResolver resolver = mContext.getContentResolver();
         mStatusBarWeatherEnabled = Settings.System.getIntForUser(
                 resolver, Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP_SB, 0,
@@ -129,8 +140,6 @@ public class StatusBarWeatherSB extends TextView implements
         if (mStatusBarWeatherEnabled != 0 && mStatusBarWeatherEnabled != 5) {
             mWeatherClient.setOmniJawsEnabled(true);
             queryAndUpdateWeather();
-        } else {
-            setVisibility(View.GONE);
         }
 
         if (onChange && mStatusBarWeatherEnabled == 0) {
@@ -161,29 +170,72 @@ public class StatusBarWeatherSB extends TextView implements
                             setText(mWeatherData.temp + mWeatherData.tempUnits);
                         }
                         if (mStatusBarWeatherEnabled != 0 && mStatusBarWeatherEnabled != 5) {
-                            setVisibility(View.VISIBLE);
+                            mWeatherVisible = true;
                         }
                     }
                 } else {
-                    setVisibility(View.GONE);
+                    mWeatherVisible = false;
                 }
             } else {
-                setVisibility(View.GONE);
+                mWeatherVisible = false;
             }
+	    updateVisibility();
         } catch(Exception e) {
             // Do nothing
         }
     }
 
-    public void useWallpaperTextColor(boolean shouldUseWallpaperTextColor) {
+    @Override
+    public String getSlot() {
+        return SLOT;
+    }
 
-        if (shouldUseWallpaperTextColor) {
-            mTintColor = Utils.getColorAttr(mContext, R.attr.wallpaperTextColor);
-	    queryAndUpdateWeather();
+    @Override
+    public boolean isIconVisible() {
+        return mEnabled;
+    }
+
+    @Override
+    public int getVisibleState() {
+        return mVisibleState;
+    }
+
+    @Override
+    public void setVisibleState(int state) {
+        if (state == mVisibleState) {
+            return;
+        }
+        mVisibleState = state;
+
+        switch (state) {
+            case STATE_ICON:
+                mSystemIconVisible = true;
+                break;
+            case STATE_DOT:
+            case STATE_HIDDEN:
+            default:
+                mSystemIconVisible = false;
+                break;
+        }
+        updateVisibility();
+    }
+
+    private void updateVisibility() {
+        if (mEnabled && mWeatherVisible && mSystemIconVisible) {
+            setVisibility(View.VISIBLE);
         } else {
-	    final Resources resources = getResources();
-	    mTintColor = resources.getColor(android.R.color.white);
-	    queryAndUpdateWeather();
-	}
+            setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void setStaticDrawableColor(int color) {
+        mTintColor = color;
+        setTextColor(mTintColor);
+        queryAndUpdateWeather();
+    }
+
+    @Override
+    public void setDecorColor(int color) {
     }
 }
