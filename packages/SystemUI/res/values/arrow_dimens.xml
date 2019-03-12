@@ -25,6 +25,8 @@
     <dimen name="net_traffic_multi_text_size">8dp</dimen>
     <dimen name="net_traffic_txt_img_padding">2dp</dimen>
 
+    <dimen name="net_sbtraffic_multi_text_size">13dp</dimen>
+
 	    <!-- OmniJaws -->
     <dimen name="current_weather_image_size">30dp</dimen>
 
