@@ -38,9 +38,16 @@ import com.android.systemui.Dependency;
 import com.android.systemui.omni.DetailedWeatherView;
 import com.android.systemui.omni.OmniJawsClient;
 import com.android.systemui.statusbar.policy.DarkIconDispatcher;
+import com.android.systemui.statusbar.StatusIconDisplayable;
+
+import static com.android.systemui.statusbar.StatusBarIconView.STATE_DOT;
+import static com.android.systemui.statusbar.StatusBarIconView.STATE_HIDDEN;
+import static com.android.systemui.statusbar.StatusBarIconView.STATE_ICON;
 
 public class StatusBarWeatherImageSB extends ImageView implements
-        OmniJawsClient.OmniJawsObserver {
+        OmniJawsClient.OmniJawsObserver,StatusIconDisplayable {
+
+    public static final String SLOT = "weatherimage";
 
     private String TAG = StatusBarWeatherImageSB.class.getSimpleName();
 
@@ -55,6 +62,9 @@ public class StatusBarWeatherImageSB extends ImageView implements
     private boolean mEnabled;
     private boolean mAttached;
     private int mTintColor;
+    private int mVisibleState = -1;
+    private boolean mWeatherImageVisible = false;
+    private boolean mSystemIconVisible = true;
 
     Handler mHandler;
 
@@ -88,7 +98,7 @@ public class StatusBarWeatherImageSB extends ImageView implements
         super.onAttachedToWindow();
         mEnabled = mWeatherClient.isOmniJawsEnabled();
         mWeatherClient.addObserver(this);
-	Dependency.get(DarkIconDispatcher.class).addDarkReceiver(this);
+	Dependency.get(DarkIconDispatcher.class).addDarkReceiver((ImageView) this);
         queryAndUpdateWeather();
     }
 
@@ -97,7 +107,7 @@ public class StatusBarWeatherImageSB extends ImageView implements
         super.onDetachedFromWindow();
         mWeatherClient.removeObserver(this);
         mWeatherClient.cleanupObserver();
-	Dependency.get(DarkIconDispatcher.class).removeDarkReceiver(this);
+	Dependency.get(DarkIconDispatcher.class).removeDarkReceiver((ImageView) this);
     }
 
     class SettingsObserver extends ContentObserver {
@@ -131,6 +141,7 @@ public class StatusBarWeatherImageSB extends ImageView implements
     }
 
     public void updateSettings() {
+	updateVisibility();
         ContentResolver resolver = mContext.getContentResolver();
         mStatusBarWeatherEnabled = Settings.System.getIntForUser(
                 resolver, Settings.System.STATUS_BAR_SHOW_WEATHER_TEMP_SB, 0,
@@ -140,8 +151,6 @@ public class StatusBarWeatherImageSB extends ImageView implements
                 || mStatusBarWeatherEnabled == 5) {
             mWeatherClient.setOmniJawsEnabled(true);
             queryAndUpdateWeather();
-        } else {
-            setVisibility(View.GONE);
         }
     }
 
@@ -160,14 +169,15 @@ public class StatusBarWeatherImageSB extends ImageView implements
                             || mStatusBarWeatherEnabled == 2
                             || mStatusBarWeatherEnabled == 5) {
                         setImageDrawable(mWeatherImage);
-                        setVisibility(View.VISIBLE);
+                        mWeatherImageVisible = true;
                     }
                 } else {
-                    setVisibility(View.GONE);
+                    mWeatherImageVisible = false;
                 }
             } else {
-                setVisibility(View.GONE);
+                mWeatherImageVisible = false;
             }
+	    updateVisibility();
         } catch(Exception e) {
             // Do nothing
         }
@@ -176,5 +186,58 @@ public class StatusBarWeatherImageSB extends ImageView implements
     public void onDarkChanged(Rect area, float darkIntensity, int tint) {
         mTintColor = DarkIconDispatcher.getTint(area, this, tint);
         queryAndUpdateWeather();
+    }
+
+    @Override
+    public String getSlot() {
+        return SLOT;
+    }
+
+    @Override
+    public boolean isIconVisible() {
+        return mEnabled;
+    }
+
+    @Override
+    public int getVisibleState() {
+        return mVisibleState;
+    }
+
+    @Override
+    public void setVisibleState(int state) {
+        if (state == mVisibleState) {
+            return;
+        }
+        mVisibleState = state;
+
+        switch (state) {
+            case STATE_ICON:
+                mSystemIconVisible = true;
+                break;
+            case STATE_DOT:
+            case STATE_HIDDEN:
+            default:
+                mSystemIconVisible = false;
+                break;
+        }
+        updateVisibility();
+    }
+
+    private void updateVisibility() {
+        if (mEnabled && mWeatherImageVisible && mSystemIconVisible) {
+            setVisibility(View.VISIBLE);
+        } else {
+            setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void setStaticDrawableColor(int color) {
+        mTintColor = color;
+        queryAndUpdateWeather();
+    }
+
+    @Override
+    public void setDecorColor(int color) {
     }
 }
