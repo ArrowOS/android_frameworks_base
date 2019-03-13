@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">Διαμόρφωση μενού πλοήγησης</string>
     <string name="statusbar_items_title">Εικονίδια γραμμής κατάστασης</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time">Ταχεία φόρτιση (<xliff:g id="charging_time_left" example="4 ώρες και 2 λεπτά">%s</xliff:g> για πλήρη φόρτιση)</string>
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
     <string name="keyguard_plugged_in_dash_charging">Ταχεία Φόρτιση</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">Συνδέθηκε η γρήγορη φόρτιση (<xliff:g id="charging_time_left">%s</xliff:g> μέχρι να φορτίσει πλήρως)</string>
