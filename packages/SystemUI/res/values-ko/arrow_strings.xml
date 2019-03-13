@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">네비게이션 바 설정</string>
     <string name="statusbar_items_title">상태 표시줄 아이콘</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time">Dash 충전 (<xliff:g id="charging_time_left" example="4 시간 2 분">%s</xliff:g> 후 충전 완료)</string>
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
     <string name="keyguard_plugged_in_dash_charging">Dash 충전 중</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">TurboPower 연결됨 (<xliff:g id="charging_time_left">%s</xliff:g> 후 충전 완료)</string>
