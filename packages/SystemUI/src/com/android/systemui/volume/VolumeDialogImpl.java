@@ -171,8 +171,10 @@ public class VolumeDialogImpl implements VolumeDialog,
     private boolean mShowA11yStream;
 
     private int mActiveStream;
+    private int mAllyStream;
     private int mPrevActiveStream;
     private boolean mAutomute = VolumePrefs.DEFAULT_ENABLE_AUTOMUTE;
+    private boolean mMusicHidden;
     private boolean mSilentMode = VolumePrefs.DEFAULT_ENABLE_SILENT_MODE;
     private State mState;
     private SafetyWarningDialog mSafetyWarning;
@@ -388,6 +390,9 @@ public class VolumeDialogImpl implements VolumeDialog,
         initRingerH();
         initSettingsH();
         initODICaptionsH();
+
+        mAllyStream = -1;
+        mMusicHidden = false;
     }
 
     private final OnComputeInternalInsetsListener mInsetsListener = internalInsetsInfo -> {
@@ -599,6 +604,10 @@ public class VolumeDialogImpl implements VolumeDialog,
             });
         }
 
+        if (mAllyStream == -1) {
+            mAllyStream = mActiveStream;
+        }
+
         if (mExpandRowsView != null) {
             mExpandRowsView.setVisibility(
                     mDeviceProvisionedController.isCurrentUserSetup() &&
@@ -608,6 +617,10 @@ public class VolumeDialogImpl implements VolumeDialog,
         if (mExpandRows != null) {
             mExpandRows.setOnClickListener(v -> {
                 rescheduleTimeoutH();
+                if (mMusicHidden) {
+                    Util.setVisOrGone(findRow(AudioManager.STREAM_MUSIC).view,
+                            !mExpanded);
+                }
                 Util.setVisOrGone(findRow(AudioManager.STREAM_RING).view, !mExpanded);
                 Util.setVisOrGone(findRow(STREAM_ALARM).view, !mExpanded);
                 if (!isNotificationStreamLinked()) {
@@ -615,7 +628,7 @@ public class VolumeDialogImpl implements VolumeDialog,
                             findRow(AudioManager.STREAM_NOTIFICATION).view, !mExpanded);
                 }
 
-                if (mExpanded) mController.setActiveStream(AudioManager.STREAM_MUSIC);
+                if (mExpanded) mController.setActiveStream(mAllyStream);
                 mExpandRows.setExpanded(!mExpanded);
                 mExpanded = !mExpanded;
             });
@@ -939,6 +952,8 @@ public class VolumeDialogImpl implements VolumeDialog,
                     }
                     mExpanded = false;
                     mExpandRows.setExpanded(mExpanded);
+                    mAllyStream = -1;
+                    mMusicHidden = false;
                     tryToRemoveCaptionsTooltip();
                     mController.notifyVisible(false);
                 }, 50));
@@ -960,6 +975,12 @@ public class VolumeDialogImpl implements VolumeDialog,
 
     private boolean shouldBeVisibleH(VolumeRow row, VolumeRow activeRow) {
         boolean isActive = row.stream == activeRow.stream;
+
+        if (row.stream == AudioSystem.STREAM_MUSIC &&
+                activeRow.stream != AudioSystem.STREAM_MUSIC && !mExpanded) {
+            mMusicHidden = true;
+            return false;
+        }
 
         if (isActive) {
             return true;
