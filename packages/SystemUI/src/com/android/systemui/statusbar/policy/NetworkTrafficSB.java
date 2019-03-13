@@ -109,6 +109,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                     setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
                     setGravity(Gravity.RIGHT);
                     setText(output);
+		    updateTrafficDrawable("up");
                 }
                 mTrafficVisible = true;
 	    } else {
@@ -121,6 +122,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
 		    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
 		    setGravity(Gravity.RIGHT);
                     setText(output);
+		    updateTrafficDrawable("down");
                 }
                 mTrafficVisible = true;
             }
@@ -159,6 +161,28 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
 
 	    return (speedTxKB > speedRxKB);
 	}
+
+	private void updateTrafficDrawable(String arrow) {
+        int trafficArrowDrawable;
+        if (mIsEnabled) {
+            if (arrow == "up") {
+                trafficArrowDrawable = R.drawable.stat_sys_network_traffic_up_arrow;
+                Drawable d = getContext().getDrawable(trafficArrowDrawable);
+                d.setColorFilter(mTintColor, Mode.MULTIPLY);
+                setCompoundDrawablePadding(txtImgPadding);
+                setCompoundDrawablesWithIntrinsicBounds(null, d, null, null);
+            } else if (arrow == "down") {
+                trafficArrowDrawable = R.drawable.stat_sys_network_traffic_down_arrow;
+                Drawable d = getContext().getDrawable(trafficArrowDrawable);
+                d.setColorFilter(mTintColor, Mode.MULTIPLY);
+                setCompoundDrawablePadding(txtImgPadding);
+                setCompoundDrawablesWithIntrinsicBounds(null, null, null, d);
+            } else {
+                setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+            }
+        }
+        setTextColor(mTintColor);
+        }
     };
 
     private Runnable mRunnable = new Runnable() {
@@ -281,7 +305,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 lastUpdateTime = SystemClock.elapsedRealtime();
                 mTrafficHandler.sendEmptyMessage(1);
             }
-            updateTrafficDrawable();
+            updateTrafficDrawable("nothing");
             return;
         } else {
             clearHandlerCallbacks();
@@ -304,23 +328,27 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         mTrafficHandler.removeMessages(1);
     }
 
-    private void updateTrafficDrawable() {
-        int intTrafficDrawable;
-        if (mIsEnabled) {
-            intTrafficDrawable = R.drawable.stat_sys_network_traffic_updown;
-        } else {
-            intTrafficDrawable = 0;
-        }
-        if (intTrafficDrawable != 0) {
-            Drawable d = getContext().getDrawable(intTrafficDrawable);
-            d.setColorFilter(mTintColor, Mode.SRC_ATOP);
-            setCompoundDrawablePadding(txtImgPadding);
-            setCompoundDrawablesWithIntrinsicBounds(null, null, d, null);
-        } else {
-            setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-        }
+    /*private void updateTrafficDrawable(String arrow) {
+        int trafficArrowDrawable;
+	if (mIsEnabled) {
+            if (arrow == "up") {
+	        trafficArrowDrawable = R.drawable.stat_sys_network_traffic_up_arrow;
+                Drawable d = getContext().getDrawable(trafficArrowDrawable);
+                d.setColorFilter(mTintColor, Mode.MULTIPLY);
+                setCompoundDrawablePadding(txtImgPadding);
+                setCompoundDrawablesWithIntrinsicBounds(null, d, null, null);
+            } else if (arrow == "down") {
+                trafficArrowDrawable = R.drawable.stat_sys_network_traffic_down_arrow;
+                Drawable d = getContext().getDrawable(trafficArrowDrawable);
+                d.setColorFilter(mTintColor, Mode.MULTIPLY);
+                setCompoundDrawablePadding(txtImgPadding);
+                setCompoundDrawablesWithIntrinsicBounds(null, null, null, d);
+            } else {
+                setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+            }
+	}
         setTextColor(mTintColor);
-    }
+    }*/
 
     public void onDensityOrFontScaleChanged() {
         final Resources resources = getResources();
@@ -336,7 +364,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     public void onDarkChanged(Rect area, float darkIntensity, int tint) {
         mTintColor = DarkIconDispatcher.getTint(area, this, tint);
         setTextColor(mTintColor);
-        updateTrafficDrawable();
+        updateTrafficDrawable("nothing");
     }
 
     @Override
@@ -386,7 +414,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     public void setStaticDrawableColor(int color) {
         mTintColor = color;
         setTextColor(mTintColor);
-        updateTrafficDrawable();
+        updateTrafficDrawable("nothing");
     }
 
     @Override
