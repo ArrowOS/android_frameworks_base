@@ -45,6 +45,9 @@ using ISecLight  = ::vendor::samsung::hardware::light::V2_0::ISecLight;
 using SecType    = ::vendor::samsung::hardware::light::V2_0::SecType;
 static bool sLightSupported = true;
 
+static sp<ISecLight> sSecHal;
+static bool sSecTried = false;
+
 static bool validate(jint light, jint flash, jint brightness) {
     bool valid = true;
 
@@ -145,19 +148,23 @@ static void setLight_native(
         return;
     }
 
-    sp<ISecLight> secHal = ISecLight::getService();
+    if(!sSecTried) {
+        sSecHal = ISecLight::getService();
+        sSecTried = true;
+    }
 
-    if(secHal != nullptr) {
+    if(sSecHal != nullptr) {
         SecType type = static_cast<SecType>(light);
         LightState state = constructState(
                 colorARGB, flashMode, onMS, offMS, brightnessMode);
 
         {
             android::base::Timer t;
-            Return<Status> ret = secHal->setLightSec(type, state);
+            Return<Status> ret = sSecHal->setLightSec(type, state);
             processReturn(ret, static_cast<Type>(light), state);
             if (t.duration() > 50ms) ALOGD("Excessive delay setting light");
         }
+	return;
     }
 
     Type type = static_cast<Type>(light);

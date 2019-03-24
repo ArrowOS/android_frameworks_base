@@ -779,6 +779,8 @@ java_defaults {
         "android.hardware.vibrator-V1.2-java",
         "android.hardware.vibrator-V1.3-java",
         "android.hardware.wifi-V1.0-java-constants",
+	"vendor.mediatek.hardware.radio-V2.0-java",
+	"vendor.samsung.hardware.radio-V1.2-java",
         "devicepolicyprotosnano",
     ],
 
