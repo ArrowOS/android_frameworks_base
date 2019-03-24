@@ -150,7 +150,12 @@ public class TestHarnessModeService extends SystemService {
                     + "PersistentDataBlockManagerInternal was bound!");
             return null;
         }
-        byte[] testHarnessModeData = blockManager.getTestHarnessModeData();
+        byte[] testHarnessModeData = null;
+        try {
+            testHarnessModeData = blockManager.getTestHarnessModeData();
+        } catch(Exception e) {
+            Slog.e(TAG, "Failed to read block for test harness", e);
+        }
         if (testHarnessModeData == null || testHarnessModeData.length == 0) {
             // There's no data to apply, so leave it as-is.
             return null;
