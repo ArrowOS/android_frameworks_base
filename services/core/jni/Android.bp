@@ -134,6 +134,8 @@ cc_defaults {
         "android.frameworks.sensorservice@1.0",
         "android.system.suspend@1.0",
         "suspend_control_aidl_interface-cpp",
+
+        "vendor.samsung.hardware.light@2.0",
     ],
 
     static_libs: [
