@@ -35,7 +35,7 @@
         android:layout_marginStart="12dp"
         android:layout_toRightOf="@android:id/icon"
         android:textAppearance="@style/TextAppearance.Toast"
-        android:textColor="@color/toast_text" />
+        android:textColor="@color/toast_text_color" />
 
     <ImageView
         android:id="@android:id/icon"
