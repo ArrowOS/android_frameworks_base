@@ -29,20 +29,18 @@
 
     <TextView
         android:id="@android:id/message"
+        android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_gravity="center_vertical"
         android:layout_toRightOf="@android:id/icon"
         android:textAppearance="@style/TextAppearance.Toast"
-        android:textColor="@color/toast_text"
-        />
+        android:textColor="@color/toast_text" />
 
     <ImageView
         android:id="@android:id/icon"
+        android:layout_centerVertical="true"
         android:layout_width="24dp"
-        android:layout_height="24dp"
-    android:layout_gravity="center_vertical"
-        />
+        android:layout_height="24dp" />
 
 </RelativeLayout>
