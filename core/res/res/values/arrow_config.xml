@@ -105,7 +105,10 @@
     <!-- Whether device has dash charging support -->
     <bool name="config_hasDashCharger">false</bool>
 
-  <!-- Whether to post reset runnable for all clients. Needed for some older
+    <!-- Whether to post reset runnable for all clients. Needed for some older
          vendor fingerprint HAL implementations. -->
-  <bool name="config_fingerprintPostResetRunnableForAllClients">false</bool>
+    <bool name="config_fingerprintPostResetRunnableForAllClients">false</bool>
+
+    <!-- Shows the required view for in-display fingerprint --> 
+    <bool name="config_supportsInDisplayFingerprint">false</bool>
 </resources>
