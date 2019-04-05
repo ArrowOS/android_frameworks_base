@@ -38,4 +38,7 @@
 
     <!-- Whether device has dash charging support -->
     <bool name="config_hasDashCharger">false</bool>
+
+    <!-- Shows the required view for in-display fingerprint --> 
+    <bool name="config_supportsInDisplayFingerprint">false</bool>
 </resources>
