@@ -207,6 +207,9 @@ public class KeyguardStatusView extends GridLayout implements
         if (mClockView != null) {
             mVisibleInDoze.add(mClockView);
         }
+        if (mTextClock != null) {
+            mVisibleInDoze.add(mTextClock);
+        }
         if (mKeyguardSlice != null) {
             if (mShowWeather && !mOmniStyle) mVisibleInDoze.add(mKeyguardSlice);
         }
