@@ -690,6 +690,8 @@ public class KeyguardStatusView extends GridLayout implements
                 mClockView.setVisibility(mDarkAmount != 1 ? (showClock ?
                     View.VISIBLE : View.GONE) : View.VISIBLE);
 
+                params.addRule(RelativeLayout.BELOW, R.id.custom_textclock_view);
+
                 mTextClock.setVisibility(View.VISIBLE);
 
                 break;
