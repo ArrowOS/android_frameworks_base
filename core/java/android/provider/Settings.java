@@ -5157,6 +5157,12 @@ public final class Settings {
         public static final String FP_WAKE_UNLOCK = "fp_wake_unlock";
 
         /**
+         * Force full screen for devices with cutout
+         * @hide
+         */
+        public static final String FORCE_FULLSCREEN_CUTOUT_APPS = "force_full_screen_cutout_apps";
+
+        /**
          * @hide
          */
         public static final String SMART_CHARGING = "smart_charging";
@@ -5355,6 +5361,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(VIBRATE_ON_CALLWAITING);
             PRIVATE_SETTINGS.add(VIBRATE_ON_DISCONNECT);
             PRIVATE_SETTINGS.add(FP_WAKE_UNLOCK);
+            PRIVATE_SETTINGS.add(FORCE_FULLSCREEN_CUTOUT_APPS);
         }
 
         /**
