@@ -50,7 +50,7 @@ import android.widget.TextView;
 
 import com.android.internal.widget.LockPatternUtils;
 import com.android.internal.widget.ViewClippingUtil;
-import com.android.keyguard.clocks.CustomTextClock;
+import com.android.keyguard.clocks.TypographicClock;
 import com.android.systemui.Dependency;
 import com.android.systemui.Interpolators;
 import com.android.systemui.omni.CurrentWeatherView;
@@ -78,7 +78,7 @@ public class KeyguardStatusView extends GridLayout implements
     private TextView mLogoutView;
     private TextClock mClockView;
     private View mClockSeparator;
-    private LinearLayout mTextClock;
+    private TypographicClock mTextClock;
     private TextView mOwnerInfo;
     private KeyguardSliceView mKeyguardSlice;
     private Runnable mPendingMarqueeStart;
@@ -98,6 +98,8 @@ public class KeyguardStatusView extends GridLayout implements
     private boolean mForcedMediaDoze;
 
     private int mClockSelection;
+
+    private boolean mWasLatestViewSmall;
 
     private KeyguardUpdateMonitorCallback mInfoCallback = new KeyguardUpdateMonitorCallback() {
 
@@ -200,7 +202,6 @@ public class KeyguardStatusView extends GridLayout implements
         mClockSeparator = findViewById(R.id.clock_separator);
 
         mWeatherView = (CurrentWeatherView) findViewById(R.id.weather_container);
-        updateSettings();
         mVisibleInDoze = Sets.newArraySet();
         if (mWeatherView != null) {
             if (mShowWeather && mOmniStyle) mVisibleInDoze.add(mWeatherView);
@@ -240,6 +241,8 @@ public class KeyguardStatusView extends GridLayout implements
      */
     private void onSliceContentChanged() {
         boolean smallClock = mKeyguardSlice.hasHeader() || mPulsing;
+        prepareSmallView(smallClock);
+
         float clockScale = smallClock ? mSmallClockScale : 1;
 		Typeface tf = Typeface.create(FONT_FAMILY, Typeface.NORMAL);
         RelativeLayout.LayoutParams layoutParams =
@@ -271,6 +274,8 @@ public class KeyguardStatusView extends GridLayout implements
         int heightOffset = mPulsing || mWasPulsing ? 0 : getHeight() - mLastLayoutHeight;
         boolean hasHeader = mKeyguardSlice.hasHeader();
         boolean smallClock = hasHeader || mPulsing;
+        prepareSmallView(smallClock);
+
         long duration = KeyguardSliceView.DEFAULT_ANIM_DURATION;
         long delay = smallClock || mWasPulsing ? 0 : duration / 4;
         mWasPulsing = false;
@@ -360,6 +365,11 @@ public class KeyguardStatusView extends GridLayout implements
     private void refreshTime() {
         mClockView.refresh();
 
+        if (mWasLatestViewSmall) {
+            mClockView.setFormat12Hour(Patterns.clockView12);
+            mClockView.setFormat24Hour(Patterns.clockView24);
+        }
+
         switch(mClockSelection) {
             //digital
             case 0:
@@ -395,6 +405,11 @@ public class KeyguardStatusView extends GridLayout implements
             case 5:
                 mClockView.setFormat12Hour(Html.fromHtml("<strong>hh<br><font color=" + getResources().getColor(R.color.sammy_accent) + ">mm</font></strong>"));
                 mClockView.setFormat24Hour(Html.fromHtml("<strong>kk<br><font color=" + getResources().getColor(R.color.sammy_accent) + ">mm</font></strong>"));
+                break;
+
+            //text clock
+            case 6:
+                mTextClock.onTimeChanged();
                 break;
 
             default:
@@ -537,6 +552,11 @@ public class KeyguardStatusView extends GridLayout implements
         mKeyguardSlice.setDarkAmount(mDarkAmount);
         mClockView.setTextColor(blendedTextColor);
         mClockSeparator.setBackgroundColor(blendedTextColor);
+
+        if (mClockSelection == 6) {
+            mTextClock.setTextColor(blendedTextColor);
+        }
+
         updateSettings();
     }
 
@@ -618,9 +638,6 @@ public class KeyguardStatusView extends GridLayout implements
                 Settings.System.AICP_LOCKSCREEN_WEATHER_STYLE, 0,
                 UserHandle.USER_CURRENT) == 0;
 
-        boolean showClock = Settings.System.getIntForUser(resolver,
-                Settings.System.LOCKSCREEN_CLOCK, 1, UserHandle.USER_CURRENT) == 1;
-
         mClockView = (TextClock) findViewById(R.id.clock_view);
 
         mClockSelection = Settings.System.getIntForUser(resolver,
@@ -638,11 +655,21 @@ public class KeyguardStatusView extends GridLayout implements
             }
         }
 
+        setStyle();
+    }
+
+    private void setStyle() {
+        final ContentResolver resolver = getContext().getContentResolver();
+
         RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)
                 mKeyguardSlice.getLayoutParams();
 
+        boolean showClock = Settings.System.getIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CLOCK, 1, UserHandle.USER_CURRENT) == 1;
+
         switch (mClockSelection) {
             case 0: // default digital
+            case 1: // digital (bold)
             default:
                 mClockView.setVisibility(mDarkAmount != 1 ? (showClock ?
                     View.VISIBLE : View.GONE) : View.VISIBLE);
@@ -657,35 +684,10 @@ public class KeyguardStatusView extends GridLayout implements
 
                 mTextClock.setVisibility(View.GONE);
                 break;
-            case 1: // digital (bold)
-                mClockView.setVisibility(mDarkAmount != 1 ? (showClock ?
-                    View.VISIBLE : View.GONE) : View.VISIBLE);
-
-                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
-
-                mClockView.setSingleLine(true);
-                mClockView.setGravity(Gravity.CENTER);
-                mClockView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                	getResources().getDimensionPixelSize(R.dimen.widget_big_font_size));
-                mClockView.setLineSpacing(0,1f);
-
-                mTextClock.setVisibility(View.GONE);
-                break;
             case 2: // sammy
-                mClockView.setVisibility(mDarkAmount != 1 ? (showClock ?
-                    View.VISIBLE : View.GONE) : View.VISIBLE);
-
-                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
-
-                mClockView.setSingleLine(false);
-                mClockView.setGravity(Gravity.CENTER);
-                mClockView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                	getResources().getDimensionPixelSize(R.dimen.widget_big_font_size));
-                mClockView.setLineSpacing(0,1f);
-
-                mTextClock.setVisibility(View.GONE);
-                break;
             case 3: // sammy (bold)
+            case 4: // sammy accent
+            case 5: // sammy accent (alt)
                 mClockView.setVisibility(mDarkAmount != 1 ? (showClock ?
                     View.VISIBLE : View.GONE) : View.VISIBLE);
 
@@ -698,34 +700,7 @@ public class KeyguardStatusView extends GridLayout implements
                 mClockView.setLineSpacing(0,1f);
 
                 mTextClock.setVisibility(View.GONE);
-                break;
-            case 4: // sammy accent
-                mClockView.setVisibility(mDarkAmount != 1 ? (showClock ? View.VISIBLE :
-                       View.GONE) : View.VISIBLE);
-
-                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
-
-                mClockView.setSingleLine(false);
-                mClockView.setGravity(Gravity.CENTER);
-                mClockView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                	getResources().getDimensionPixelSize(R.dimen.widget_big_font_size));
-                mClockView.setLineSpacing(0,1f);
-
-                mTextClock.setVisibility(View.GONE);
-                break;
-            case 5: // sammy accent (alt)
-                mClockView.setVisibility(mDarkAmount != 1 ? (showClock ? View.VISIBLE :
-                       View.GONE) : View.VISIBLE);
-
-                params.addRule(RelativeLayout.BELOW, R.id.clock_view);
-
-                mClockView.setSingleLine(false);
-                mClockView.setGravity(Gravity.CENTER);
-                mClockView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
-                	getResources().getDimensionPixelSize(R.dimen.widget_big_font_size));
-                mClockView.setLineSpacing(0,1f);
-
-                mTextClock.setVisibility(View.GONE);
+                
                 break;
             case 6: // custom text clock
                 mTextClock.setVisibility(mDarkAmount != 1 ? (showClock ?
@@ -733,13 +708,56 @@ public class KeyguardStatusView extends GridLayout implements
 
                 params.addRule(RelativeLayout.BELOW, R.id.custom_textclock_view);
 
+                mClockView.setSingleLine(false);
+                mClockView.setGravity(Gravity.CENTER);
+                mClockView.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                	getResources().getDimensionPixelSize(R.dimen.widget_big_font_size));
+                mClockView.setLineSpacing(0,1f);
+                mClockView.setSingleLine(false);
+                mClockView.setGravity(Gravity.CENTER);
+
                 mClockView.setVisibility(View.GONE);
+
                 break;
+        }
+
+        mKeyguardSlice.setLayoutParams(params);
+
+        updateDozeVisibleViews();
+    }
+
+    private void prepareSmallView(boolean small) {
+        if (mWasLatestViewSmall == small) return;
+
+        final ContentResolver resolver = getContext().getContentResolver();
+
+        mWasLatestViewSmall = small;
+
+        if (small) {
+            RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams)
+                    mKeyguardSlice.getLayoutParams();
+
+            boolean showClock = Settings.System.getIntForUser(resolver,
+                Settings.System.LOCKSCREEN_CLOCK, 1, UserHandle.USER_CURRENT) == 1;
+
+            params.addRule(RelativeLayout.BELOW, R.id.clock_view);
+
+            mClockView.setSingleLine(true);
+            mClockView.setBackgroundResource(0);
+            mClockView.setGravity(Gravity.CENTER);
+            mClockView.setVisibility(mDarkAmount != 1 ? (showClock ? View.VISIBLE :
+                    View.GONE) : View.VISIBLE);
+
+            mTextClock.setVisibility(View.GONE);
+        } else {
+            setStyle();
+            refreshTime();
         }
     }
 
     public void updateAll() {
         updateSettings();
+
         mKeyguardSlice.refresh();
     }
 
