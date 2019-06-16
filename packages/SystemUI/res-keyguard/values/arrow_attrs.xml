@@ -1,7 +1,0 @@
-<resources>
-
-    <declare-styleable name="CustomTextClock">
-        <attr name="HandType"/>
-    </declare-styleable>
-
-</resources>
