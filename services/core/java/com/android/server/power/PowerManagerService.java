@@ -1827,9 +1827,8 @@ public final class PowerManagerService extends SystemService
 
     private boolean shouldWakeUpWhenPluggedOrUnpluggedLocked(
             boolean wasPowered, int oldPlugType, boolean dockedOnWirelessCharger) {
-
         // Don't wake when powered unless configured to do so.
-        if (!mWakeUpWhenPluggedOrUnpluggedConfig && !mDozeOnChargeEnabled) {
+        if (!mWakeUpWhenPluggedOrUnpluggedConfig) {
             return false;
         }
 
@@ -1859,8 +1858,10 @@ public final class PowerManagerService extends SystemService
         }
 
         // On Always On Display, SystemUI shows the charging indicator
-        if (mAlwaysOnEnabled && !mDozeOnChargeEnabled && mWakefulness == WAKEFULNESS_DOZING) {
-            return false;
+        if (mAlwaysOnEnabled && mWakefulness == WAKEFULNESS_DOZING) {
+            if (!mDozeOnChargeEnabled) {
+                return false;
+            }
         }
 
         // Otherwise wake up!
