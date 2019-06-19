@@ -543,9 +543,6 @@ public final class PowerManagerService extends SystemService
     // True if we are currently in VR Mode.
     private boolean mIsVrModeEnabled;
 
-    // doze on charge
-    private boolean mDozeOnChargeEnabled;
-
     private final class ForegroundProfileObserver extends SynchronousUserSwitchObserver {
         @Override
         public void onUserSwitching(int newUserId) throws RemoteException {}
@@ -785,10 +782,6 @@ public final class PowerManagerService extends SystemService
     }
 
     public void systemReady(IAppOpsService appOps) {
-        // set initial value
-        Settings.System.putIntForUser(mContext.getContentResolver(),
-                Settings.System.DOZE_ON_CHARGE_NOW, 0, UserHandle.USER_CURRENT);
-
         synchronized (mLock) {
             mSystemReady = true;
             mAppOps = appOps;
@@ -885,12 +878,6 @@ public final class PowerManagerService extends SystemService
                 false, mSettingsObserver, UserHandle.USER_SYSTEM);
         resolver.registerContentObserver(Settings.System.getUriFor(
                 Settings.System.PROXIMITY_ON_WAKE),
-                false, mSettingsObserver, UserHandle.USER_ALL);
-        resolver.registerContentObserver(Settings.System.getUriFor(
-                Settings.System.DOZE_ON_CHARGE_NOW),
-                false, mSettingsObserver, UserHandle.USER_ALL);
-        resolver.registerContentObserver(Settings.System.getUriFor(
-                Settings.System.DOZE_ON_CHARGE),
                 false, mSettingsObserver, UserHandle.USER_ALL);
         IVrManager vrManager = (IVrManager) getBinderService(Context.VR_SERVICE);
         if (vrManager != null) {
@@ -1024,8 +1011,7 @@ public final class PowerManagerService extends SystemService
         mTheaterModeEnabled = Settings.Global.getInt(mContext.getContentResolver(),
                 Settings.Global.THEATER_MODE_ON, 0) == 1;
         mAlwaysOnEnabled = mAmbientDisplayConfiguration.alwaysOnEnabled(UserHandle.USER_CURRENT);
-        mDozeOnChargeEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.DOZE_ON_CHARGE, 0, UserHandle.USER_CURRENT) != 0;
+
         if (mSupportsDoubleTapWakeConfig) {
             boolean doubleTapWakeEnabled = Settings.Secure.getIntForUser(resolver,
                     Settings.Secure.DOUBLE_TAP_TO_WAKE, DEFAULT_DOUBLE_TAP_TO_WAKE,
@@ -1790,11 +1776,6 @@ public final class PowerManagerService extends SystemService
                 final boolean dockedOnWirelessCharger = mWirelessChargerDetector.update(
                         mIsPowered, mPlugType);
 
-                if (mDozeOnChargeEnabled) {
-                    Settings.System.putIntForUser(mContext.getContentResolver(),
-                            Settings.System.DOZE_ON_CHARGE_NOW, mIsPowered ? 1 : 0,
-                            UserHandle.USER_CURRENT);
-                }
                 // Treat plugging and unplugging the devices as a user activity.
                 // Users find it disconcerting when they plug or unplug the device
                 // and it shuts off right away.
@@ -1827,9 +1808,8 @@ public final class PowerManagerService extends SystemService
 
     private boolean shouldWakeUpWhenPluggedOrUnpluggedLocked(
             boolean wasPowered, int oldPlugType, boolean dockedOnWirelessCharger) {
-
         // Don't wake when powered unless configured to do so.
-        if (!mWakeUpWhenPluggedOrUnpluggedConfig && !mDozeOnChargeEnabled) {
+        if (!mWakeUpWhenPluggedOrUnpluggedConfig) {
             return false;
         }
 
@@ -1859,7 +1839,7 @@ public final class PowerManagerService extends SystemService
         }
 
         // On Always On Display, SystemUI shows the charging indicator
-        if (mAlwaysOnEnabled && !mDozeOnChargeEnabled && mWakefulness == WAKEFULNESS_DOZING) {
+        if (mAlwaysOnEnabled && mWakefulness == WAKEFULNESS_DOZING) {
             return false;
         }
 
