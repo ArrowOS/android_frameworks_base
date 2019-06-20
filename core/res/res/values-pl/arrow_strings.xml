@@ -35,4 +35,11 @@
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
     <string name="system_error_vendorprint">Wygląda na to, że używany przez Ciebie obraz vendor jest przestarzały. Zaleca się wgranie najnowszego obrazu dla Twojego urządzenia.</string>
+    <!-- Font service -->
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">dostęp do menadżera czcionek</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Zezwól aplikacjom na dostęp do menadżera czcionek.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">Zainstalowany pakiet czcionek nie jest zgodny ze względu na brak pliku fonts.xml. W celu uzyskania pomocy skontaktuj się z twórcą pakietu.</string>
 </resources>

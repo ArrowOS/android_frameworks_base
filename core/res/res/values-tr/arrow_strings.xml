@@ -35,4 +35,11 @@
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
     <string name="system_error_vendorprint">Görünüşe göre satıcı imajınız güncel değil. Lütfen cihazınız için en son satıcı imajını yükleyin.</string>
+    <!-- Font service -->
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">yazı tipi yöneticisine erişim</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Bir uygulamanın yazı tipi yöneticisine erişmesine izin verir.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">Yüklediğiniz yazı tipi paketi dosyalarındaki eksik fonts.xml nedeniyle uyumlu değil. Lütfen destek için paket geliştiriciye başvurun.</string>
 </resources>

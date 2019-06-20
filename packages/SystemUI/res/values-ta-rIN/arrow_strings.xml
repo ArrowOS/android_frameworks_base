@@ -115,14 +115,6 @@ smartbar_left
     <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
-    <!-- Advance location quick setting tile -->
-    <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">பேட்டரி சேமிப்பு</string>
-    <string name="accessibility_quick_settings_location_battery_saving">இருப்பிடம் அறிவித்தல்: பேட்டரி சேமிப்பு பயன்முறை.</string>
-    <string name="quick_settings_location_secondary_gps_only">உணரிகள் மட்டுமே</string>
-    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-    <string name="quick_settings_location_secondary_high_accuracy">அதிக துல்லியம்</string>
-    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">This keeps it in view until you unpin. Touch &amp; hold Back to unpin.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
@@ -137,4 +129,8 @@ smartbar_left
     <string name="quick_settings_navbar_disable_label">Navbar</string>
     <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
     <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
+    <!-- Ambient Display Pixel-Like string -->
+    <string name="ambientmusic_songinfo">%s by %s</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Always On Display</string>
 </resources>

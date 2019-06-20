@@ -29,10 +29,17 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">讓此應用程式模仿成別的應用程式。惡意的應用程式將可能竊取您的個人資訊，請小心的給予權限。</string>
     <!-- Pocket Lock -->
-    <string name="pocket_lock_message_long_press">長按電源鍵的動作</string>
+    <string name="pocket_lock_message_long_press">Long press power button to interact</string>
     <!-- Defines the sysfs attribute path used by pocket bridge
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
     <string name="system_error_vendorprint">您的 vendor 映像檔似乎過時了。請為您的裝置刷入最新的 vendor 映像檔。</string>
+    <!-- Font service -->
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">access font manager</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Allows an application to access the font manager.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">The font package you\'ve installed is not compatible due to missing fonts.xml on their files. Please contact the package developer for support.</string>
 </resources>

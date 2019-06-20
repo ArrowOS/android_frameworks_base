@@ -35,4 +35,12 @@
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
     <string name="system_error_vendorprint">Кажется, ваш раздел vendor может быть устаревшим. Пожалуйста, прошейте новый образ vendor для вашего устройства.</string>
+    <!-- Font service -->
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">Доступ к менеджеру шрифтов</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Разрешает приложению получить доступ к менеджеру шрифтов</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">Набор шрифтов, который вы установили несовместим из-за fonts.xml.
+Обратитесь к разработчику для получения помощи</string>
 </resources>
