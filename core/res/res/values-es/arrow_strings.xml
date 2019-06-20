@@ -34,5 +34,12 @@
         to communicate pocket state to the pocket judge kernel driver. -->
     <string name="config_pocketBridgeSysfsInpocket"></string>
     <!-- Vendor mismatched fingerprint warning [CHAR LIMIT=NONE] -->
-    <string name="system_error_vendorprint">Parece que su imagen de proveedor puede estar fuera de fecha. Por favor, flashee la imagen más reciente de proveedor para su dispositivo.</string>
+    <string name="system_error_vendorprint">Parece que su imagen de vendor puede estar desactualizada. Por favor, flashee la imagen más reciente del vendor para su dispositivo.</string>
+    <!-- Font service -->
+    <!-- [CHAR LIMIT=NONE] Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_accessFontManager">acceder al gestor de fuentes</string>
+    <!-- [CHAR LIMIT=NONE] Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_accessFontManager">Permite a una aplicación acceder al gestor de fuentes.</string>
+    <!-- [CHAR LIMIT=NONE] Error when a package is installed but got the missing fonts.xml file, notifying the user why it isn't showing up. -->
+    <string name="fontservice_incompatible_font">El paquete de fuentes que ha instalado no es compatible debido a la falta de fonts.xml en sus archivos. Póngase en contacto con el desarrollador del paquete para obtener asistencia.</string>
 </resources>

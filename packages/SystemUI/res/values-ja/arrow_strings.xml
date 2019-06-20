@@ -35,9 +35,9 @@
     <string name="accessibility_quick_settings_sync_changed_on">同期を ON にしました</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">音声</string>
-    <string name="quick_settings_sound_ring">鳴動</string>
+    <string name="quick_settings_sound_ring">通常</string>
     <string name="quick_settings_sound_vibrate">振動</string>
-    <string name="quick_settings_sound_dnd">マナーモード</string>
+    <string name="quick_settings_sound_dnd">サイレント</string>
     <!-- HW Keys Tile -->
     <string name="accessibility_quick_settings_hwkeys_on">ハードウェアキー ON</string>
     <string name="accessibility_quick_settings_hwkeys_off">ハードウェアキー OFF</string>
@@ -53,7 +53,7 @@
     <string name="global_action_lockdown">画面ロック</string>
     <!-- Heads up snooze toast -->
     <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - 通知の表示は1分間一時停止します</string>
-    <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - 通知の表示は <xliff:g id="number">%d</xliff:g> 分間停止します</string>
+    <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - 通知の表示は<xliff:g id="number">%d</xliff:g>分間停止します</string>
     <!-- Recents Panel -->
     <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
@@ -83,12 +83,12 @@
     <string name="right">右側</string>
     <string name="navbar_editor_title">エディタ</string>
     <string name="navbar_editor_summary">ナビゲーションバーを編集</string>
-    <string name="statusbar_items_title">ステータスバーアイコン</string>
+    <string name="statusbar_items_title">ステータスバーのアイコン</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • 急速充電中 (充電完了まで残り<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g>)</string>
     <string name="keyguard_plugged_in_dash_charging">急速充電中</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_turbo_power_time">急速充電中 (充電完了まで <xliff:g id="charging_time_left">%s</xliff:g>)</string>
+    <string name="keyguard_indication_turbo_power_time">急速充電中 (充電完了まで<xliff:g id="charging_time_left">%s</xliff:g>)</string>
     <string name="keyguard_plugged_in_turbo_power_charging">急速充電中</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">エラー</string>
@@ -112,14 +112,6 @@
     <string name="accessibility_quick_settings_heads_up_on">Heads Up ON</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Heads Up をオフにしました</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Heads Up を ON にしました</string>
-    <!-- Advance location quick setting tile -->
-    <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">バッテリーセーバー</string>
-    <string name="accessibility_quick_settings_location_battery_saving">位置情報レポート: バッテリー節約モード</string>
-    <string name="quick_settings_location_secondary_gps_only">センサーのみ</string>
-    <string name="accessibility_quick_settings_location_gps_only">位置情報: センサーのみモード</string>
-    <string name="quick_settings_location_secondary_high_accuracy">高精度</string>
-    <string name="accessibility_quick_settings_location_high_accuracy">位置情報レポート: 高精度モード</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">固定を解除するまで画面が常に表示されるようになります。固定を解除するには戻るボタンを押し続けます。</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
@@ -134,4 +126,8 @@
     <string name="quick_settings_navbar_disable_label">ナビゲーションバー</string>
     <string name="accessibility_quick_settings_navbar_disable_on">ナビゲーションバーは無効です</string>
     <string name="accessibility_quick_settings_navbar_disable_off">ナビゲーションバーは有効です</string>
+    <!-- Ambient Display Pixel-Like string -->
+    <string name="ambientmusic_songinfo">%s - %s</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Always On Display</string>
 </resources>

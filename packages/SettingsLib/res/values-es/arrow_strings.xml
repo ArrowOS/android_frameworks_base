@@ -22,5 +22,5 @@
     <!-- Label for estimated remaining duration of dash battery charging -->
     <string name="power_remaining_dash_charging_duration_only">Carga inalámbrica (<xliff:g id="time">%1$s</xliff:g> restante hasta el completo)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
-    <string name="battery_info_status_dash_charging">Carga inalámbrica</string>
+    <string name="battery_info_status_dash_charging">Carga rápida</string>
 </resources>

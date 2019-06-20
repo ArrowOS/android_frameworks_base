@@ -69,7 +69,7 @@
     <string name="no_home_message">Se necesita un botón de inicio para poder navegar por el dispositivo. Añádelo antes de guardar.</string>
     <string name="clipboard_description">Con este botón puedes arrastrar los elementos directamente al portapapeles y, si está presente, fuera de él.</string>
     <string name="keycode_description">Con los botones del código de teclado puedes añadir teclas a la barra de navegación que, al pulsarlas, emulan la tecla seleccionada. Primero debes seleccionar la tecla para el botón y, a continuación, la imagen que se va a mostrar en él.</string>
-    <string name="start">Comienzo</string>
+    <string name="start">Inicio</string>
     <string name="center">Centrar</string>
     <string name="end">Finalizar</string>
     <string name="space">Separador</string>
@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">Configurar la barra de navegación</string>
     <string name="statusbar_items_title">Iconos de la barra de estado</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 horas y 2 minutos">%s</xliff:g> hasta que esté llena)</string>
     <string name="keyguard_plugged_in_dash_charging">Carga Rápida</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">TurboPower conectado (<xliff:g id="charging_time_left">%s</xliff:g> hasta completar)</string>
@@ -112,14 +112,6 @@
     <string name="accessibility_quick_settings_heads_up_on">Notificaciones flotantes activadas.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones flotantes están desactivadas.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones flotantes están activadas.</string>
-    <!-- Advance location quick setting tile -->
-    <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">Ahorro de batería</string>
-    <string name="accessibility_quick_settings_location_battery_saving">Informe de ubicación: modo de ahorro de batería.</string>
-    <string name="quick_settings_location_secondary_gps_only">Sólo sensores</string>
-    <string name="accessibility_quick_settings_location_gps_only">Informe de ubicación: modo sólo sensores.</string>
-    <string name="quick_settings_location_secondary_high_accuracy">Alta precisión</string>
-    <string name="accessibility_quick_settings_location_high_accuracy">Informe de ubicación: modo alta precisión.</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">Fija el contenido en pantalla. Mantén el botón Atrás para desfijar.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
@@ -134,4 +126,8 @@
     <string name="quick_settings_navbar_disable_label">Barra de navegación</string>
     <string name="accessibility_quick_settings_navbar_disable_on">Barra de navegación desactivada.</string>
     <string name="accessibility_quick_settings_navbar_disable_off">Barra de navegación activada.</string>
+    <!-- Ambient Display Pixel-Like string -->
+    <string name="ambientmusic_songinfo">%s por %s</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Pantalla siempre encendida</string>
 </resources>

@@ -40,7 +40,7 @@
     <string name="quick_settings_sound_dnd">Nicht stören</string>
     <!-- HW Keys Tile -->
     <string name="accessibility_quick_settings_hwkeys_on">Hardwaretasten aktiviert</string>
-    <string name="accessibility_quick_settings_hwkeys_off">Hardwaretasten deaktiviert</string>
+    <string name="accessibility_quick_settings_hwkeys_off">Tasten am Gerät aus</string>
     <string name="quick_settings_hwkeys_label">Hardwaretasten</string>
     <!-- Advanced powermenu -->
     <string name="global_action_restart_system">Neustart</string>
@@ -52,8 +52,8 @@
     <string name="global_action_screenshot">Bildschirmfoto</string>
     <string name="global_action_lockdown">Sperren</string>
     <!-- Heads up snooze toast -->
-    <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s </xliff:g> - Heads-Up Benachrichtigungen sind für 1 Minute deaktiviert.</string>
-    <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - Heads-Up Benachrichtigungen sind für <xliff:g id="number">%d </xliff:g> Minuten deaktiviert.</string>
+    <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s </xliff:g> - Pop-Up Benachrichtigungen schlummern 1 Minute.</string>
+    <string name="heads_up_snooze_message"><xliff:g id="string">%s </xliff:g> - Pop-Up Benachrichtigungen schlummern <xliff:g id="number">%d </xliff:g> Minuten.</string>
     <!-- Recents Panel -->
     <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
@@ -85,11 +85,11 @@
     <string name="navbar_editor_summary">Navigationsleiste konfigurieren</string>
     <string name="statusbar_items_title">Statusleisten Symbole</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Schnellladen (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> bis zur vollständigen Aufladung)</string>
     <string name="keyguard_plugged_in_dash_charging">Schnellladen</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">TurboPower verbunden (<xliff:g id="charging_time_left">%s</xliff:g> bis zur vollständigen Aufladung)</string>
-    <string name="keyguard_plugged_in_turbo_power_charging">Schnelladelgerät angeschlossen</string>
+    <string name="keyguard_plugged_in_turbo_power_charging">Schnellladegerät angeschlossen</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Fehler</string>
     <string name="omnijaws_service_unkown">Keine Wetterdaten verfügbar</string>
@@ -112,14 +112,6 @@
     <string name="accessibility_quick_settings_heads_up_on">Pop-Up Benachrichtigungen an.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Pop-Up Benachrichtigungen ausgeschaltet.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Pop-Up Benachrichtigungen eingeschaltet.</string>
-    <!-- Advance location quick setting tile -->
-    <string name="quick_settings_secondary_location_off"></string>
-    <string name="quick_settings_location_secondary_battery_saving">Energiesparmodus</string>
-    <string name="accessibility_quick_settings_location_battery_saving">Standortdienste: Energiesparmodus.</string>
-    <string name="quick_settings_location_secondary_gps_only">Nur Gerat</string>
-    <string name="accessibility_quick_settings_location_gps_only">Standortdienste: Nur Gerät.</string>
-    <string name="quick_settings_location_secondary_high_accuracy">Hohe Genauigkeit</string>
-    <string name="accessibility_quick_settings_location_high_accuracy">Standortdienste: Hohe Genauigkeit</string>
     <!-- Screen pinning dialog description. (for devices without navbar) -->
     <string name="screen_pinning_description_no_navbar">Der Bildschirm wird solange angezeigt, bis Sie die Fixierung aufheben. Berühren und halten Sie \"Zurück\", wenn Sie die Fixierung aufheben möchten.</string>
     <!-- Notify use that they are in Lock-to-app (for devices without navbar)-->
@@ -134,4 +126,8 @@
     <string name="quick_settings_navbar_disable_label">Navigationsleiste</string>
     <string name="accessibility_quick_settings_navbar_disable_on">Navbar deaktiviert.</string>
     <string name="accessibility_quick_settings_navbar_disable_off">Navbar aktiviert.</string>
+    <!-- Ambient Display Pixel-Like string -->
+    <string name="ambientmusic_songinfo">%s von %s</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Display immer an</string>
 </resources>

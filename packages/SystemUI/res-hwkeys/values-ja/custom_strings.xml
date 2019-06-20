@@ -22,11 +22,11 @@
     <string name="label_action_notification_panel">通知パネル</string>
     <string name="label_action_screenshot">スクリーンショット</string>
     <string name="label_action_region_screenshot">範囲選択してスクリーンショット</string>
-    <string name="label_action_screenrecord">画面の録画</string>
+    <string name="label_action_screenrecord">画面録画</string>
     <string name="label_action_expanded_desktop">拡張デスクトップ</string>
     <string name="label_action_screen_off">画面を消灯</string>
     <string name="label_action_force_close_app">アプリを強制終了</string>
-    <string name="label_action_google_assistant">Googleアシスタント</string>
+    <string name="label_action_google_assistant">Google アシスタント</string>
     <string name="label_action_in_app_search">アプリ内検索</string>
     <string name="label_action_flashlight">ライト</string>
     <string name="label_action_bluetooth">Bluetooth</string>
