@@ -21,7 +21,7 @@
     <string name="label_action_settings_panel">クイック設定パネル</string>
     <string name="label_action_notification_panel">通知パネル</string>
     <string name="label_action_screenshot">スクリーンショット</string>
-    <string name="label_action_region_screenshot">範囲選択してスクリーンショット</string>
+    <string name="label_action_region_screenshot">範囲選択</string>
     <string name="label_action_screenrecord">画面録画</string>
     <string name="label_action_expanded_desktop">拡張デスクトップ</string>
     <string name="label_action_screen_off">画面を消灯</string>
@@ -36,7 +36,7 @@
     <string name="label_action_overview">アプリ履歴</string>
     <string name="label_action_power_menu">電源メニュー</string>
     <string name="label_action_menu">メニュー</string>
-    <string name="label_action_back">バック</string>
+    <string name="label_action_back">戻る</string>
     <string name="label_action_home">ホーム</string>
     <string name="label_action_ime_switcher">IME の変更</string>
     <string name="label_action_stop_screenpinning">画面の固定を停止</string>
