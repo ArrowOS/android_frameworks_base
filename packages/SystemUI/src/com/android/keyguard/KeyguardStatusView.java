@@ -258,6 +258,7 @@ public class KeyguardStatusView extends GridLayout implements
         textlayoutParams.bottomMargin = getResources().getDimensionPixelSize(
                 R.dimen.keyguard_security_view_top_margin);
         mTextClock.setLayoutParams(textlayoutParams);
+        mTextClock.setTypeface(tf);
 
         layoutParams = (RelativeLayout.LayoutParams) mClockSeparator.getLayoutParams();
         layoutParams.topMargin = smallClock ? (int) mWidgetPadding : 0;
