@@ -148,7 +148,7 @@ public class TypographicClock extends TextView {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                setText(TextUtils.expandTemplate(colored, new CharSequence[]{mHours[hours], mMinutes[minutes]}));
+                setText(TextUtils.expandTemplate(colored, mHours[hours], mMinutes[minutes]));
                 startAnimation(fadeIn);
             }
 
@@ -190,12 +190,8 @@ public class TypographicClock extends TextView {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        Calendar calendar = mTime;
-        TimeZone timeZone = mTimeZone;
-        if (timeZone == null) {
-            timeZone = TimeZone.getDefault();
-        }
-        calendar.setTimeZone(timeZone);
+        TimeZone timeZone = mTimeZone == null ? TimeZone.getDefault() : mTimeZone;
+        mTime.setTimeZone(timeZone);
         onTimeChanged();
 
         IntentFilter filter = new IntentFilter();
