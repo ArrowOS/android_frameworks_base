@@ -66,6 +66,14 @@ class NotificationInterruptLogger @Inject constructor(
         })
     }
 
+    fun logNoHeadsUpBoringNotification(entry: NotificationEntry) {
+        buffer.log(TAG, DEBUG, {
+            str1 = entry.logKey
+        }, {
+            "No heads up: boring notification: $str1"
+        })
+    }
+
     fun logNoHeadsUpPackageSnoozed(entry: NotificationEntry) {
         buffer.log(TAG, DEBUG, {
             str1 = entry.logKey
