@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-service statsd /system/bin/statsd
-    class main
-    socket statsdw dgram+passcred 0222 statsd statsd
-    user statsd
-    group statsd log
-    writepid /dev/cpuset/system-background/tasks
-
-on property:ro.statsd.enable=false
-    stop statsd
+#service statsd /system/bin/statsd
+#    class main
+#    socket statsdw dgram+passcred 0222 statsd statsd
+#    user statsd
+#    group statsd log
+#    writepid /dev/cpuset/system-background/tasks
+#
+#on property:ro.statsd.enable=false
+#    stop statsd
 
 on post-fs-data
     # Create directory for statsd
