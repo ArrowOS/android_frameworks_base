@@ -5,8 +5,6 @@
     <item quantity="other"><annotation name="color">It’s</annotation>\"
 ^1
 ^2\"</item>
-    <item quantity="one"><annotation name="color">It’s</annotation>\"
-^1
-^2\"</item>
+    <item quantity="one"><annotation name="color">Il est</annotation>\" ^1 ^2\"</item>
   </plurals>
 </resources>
