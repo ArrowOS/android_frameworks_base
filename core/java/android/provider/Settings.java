@@ -4595,14 +4595,6 @@ public final class Settings {
          */
         public static final String SYSTEM_UI_THEME = "system_ui_theme";
 
- 	/**
-	 * Make night mode on battery saver configurable
-	 * Values: switch state
-	 *
-	 * @hide
-	 */
-	public static final String BATTERY_SAVER_DARK_MODE = "battery_saver_dark_mode";
-
 
         /**
         * @hide
@@ -5058,7 +5050,6 @@ public final class Settings {
             PRIVATE_SETTINGS.add(POCKET_JUDGE);
             PRIVATE_SETTINGS.add(LOCKSCREEN_WEATHER_SHOW_TEMP);
             PRIVATE_SETTINGS.add(LOCKSCREEN_WEATHER_SHOW_CITY);
-	    PRIVATE_SETTINGS.add(BATTERY_SAVER_DARK_MODE);
             PRIVATE_SETTINGS.add(ONE_HAND_MODE_ENABLED);
 	    PRIVATE_SETTINGS.add(AICP_LOCKSCREEN_WEATHER_STYLE);
             PRIVATE_SETTINGS.add(DISPLAY_CUTOUT_MODE);
