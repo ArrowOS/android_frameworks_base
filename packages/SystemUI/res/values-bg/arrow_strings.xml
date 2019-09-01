@@ -36,7 +36,7 @@
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Звук</string>
     <string name="quick_settings_sound_ring">Звън</string>
-    <string name="quick_settings_sound_vibrate">Вибрация</string>
+    <string name="quick_settings_sound_vibrate">Вибриране</string>
     <string name="quick_settings_sound_dnd">Режим \"Не безпокой\"</string>
     <!-- HW Keys Tile -->
     <string name="accessibility_quick_settings_hwkeys_on">Хардуерни бутони вкл</string>
@@ -93,7 +93,7 @@
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Грешка</string>
     <string name="omnijaws_service_unkown">Няма информация за времето</string>
-    <string name="omnijaws_service_error_long">Грешка при зареждане на данни за времето</string>
+    <string name="omnijaws_service_error_long">Грешка, зареждайки данните за времето</string>
     <string name="omnijaws_service_disabled">Услугата е забранена</string>
     <string name="omnijaws_detail_header">Метеорологични условия</string>
     <string name="omnijaws_label_default">Метеорологични условия</string>
@@ -121,9 +121,9 @@
     <string name="delete_screenshot_toast">Снимката на екрана е изтрита</string>
     <!-- Reboot/Recovery QS Tile -->
     <string name="quick_settings_reboot_label">Рестартиране</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_recovery_label">Възстановяване</string>
     <!-- navbar disable QS Tile -->
-    <string name="quick_settings_navbar_disable_label">Navbar</string>
+    <string name="quick_settings_navbar_disable_label">Навигационна лента</string>
     <string name="accessibility_quick_settings_navbar_disable_on">Navbar disabled.</string>
     <string name="accessibility_quick_settings_navbar_disable_off">Navbar enabled.</string>
     <!-- Ambient Display Pixel-Like string -->

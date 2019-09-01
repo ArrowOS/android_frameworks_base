@@ -127,7 +127,7 @@
     <string name="accessibility_quick_settings_navbar_disable_on">关闭导航栏</string>
     <string name="accessibility_quick_settings_navbar_disable_off">开启导航栏</string>
     <!-- Ambient Display Pixel-Like string -->
-    <string name="ambientmusic_songinfo">%s by %s</string>
+    <string name="ambientmusic_songinfo">%s 由 %s</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">始终显示</string>
 </resources>
