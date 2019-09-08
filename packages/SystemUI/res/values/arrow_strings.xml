@@ -133,4 +133,8 @@
     <string name="tuner_battery_percent_hide">Don\'t show this icon</string>
     <string name="tuner_battery_percent_title">Battery percent</string>
     <string name="tuner_status_bar_show_battery_image">Battery image</string>
+
+    <!-- ADB over network QS tile -->
+    <string name="quick_settings_network_adb_label">ADB over network</string>
+    <string name="quick_settings_network_adb_no_network">no network</string>
 </resources>
