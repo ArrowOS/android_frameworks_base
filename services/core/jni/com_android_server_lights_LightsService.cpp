@@ -150,7 +150,7 @@ static void setLight_native(
 
     if(!sSecTried) {
         sSecHal = ISecLight::getService();
-        sSecTried = true;
+        //sSecTried = true;
     }
 
     if(sSecHal != nullptr) {
