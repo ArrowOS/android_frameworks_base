@@ -4791,10 +4791,16 @@ public final class Settings {
         public static final String DOUBLE_TAP_SLEEP_LOCKSCREEN = "double_tap_sleep_lockscreen";
 
         /**
-         * Enable/Disable screenshot sound
          * @hide
          */
         public static final String SCREENSHOT_SOUND = "screenshot_sound";
+
+        /**
+         * Setting to hold the current set overlay for color bucket.
+         * overlay package name (String)
+         * @hide
+         */
+        public static final String COLOR_BUCKET_OVERLAY = "color_bucket_overlay";
 
 
         /**
@@ -4925,6 +4931,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(COLOR_BUCKET_OVERLAY);
         }
 
         /**
