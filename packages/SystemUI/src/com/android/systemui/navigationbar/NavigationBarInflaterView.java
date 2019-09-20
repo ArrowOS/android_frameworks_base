@@ -62,6 +62,7 @@ public class NavigationBarInflaterView extends FrameLayout
     public static final String NAV_BAR_VIEWS = "sysui_nav_bar";
     public static final String NAV_BAR_LEFT = "sysui_nav_bar_left";
     public static final String NAV_BAR_RIGHT = "sysui_nav_bar_right";
+    public static final String NAV_BAR_INVERSE = "sysui_nav_bar_inverse";
 
     public static final String MENU_IME_ROTATE = "menu_ime";
     public static final String BACK = "back";
@@ -115,6 +116,7 @@ public class NavigationBarInflaterView extends FrameLayout
     private int mNavBarMode = NAV_BAR_MODE_3BUTTON;
 
     private boolean mIsHintEnabled;
+    private boolean mInverseLayout;
 
     public NavigationBarInflaterView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -176,8 +178,15 @@ public class NavigationBarInflaterView extends FrameLayout
     }
 
     @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Dependency.get(TunerService.class).addTunable(this, NAV_BAR_INVERSE);
+    }
+
+    @Override
     protected void onDetachedFromWindow() {
         Dependency.get(NavigationModeController.class).removeListener(this);
+        Dependency.get(TunerService.class).removeTunable(this);
         super.onDetachedFromWindow();
     }
 
@@ -188,6 +197,20 @@ public class NavigationBarInflaterView extends FrameLayout
             updateHint();
             onLikelyDefaultLayoutChange();
         }
+    }
+
+    @Override
+    public void onTuningChanged(String key, String newValue) {
+        if (NAV_BAR_INVERSE.equals(key)) {
+            mInverseLayout = TunerService.parseIntegerSwitch(newValue, false);
+            updateLayoutInversion();
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        updateLayoutInversion();
     }
 
     public void onLikelyDefaultLayoutChange() {
@@ -315,6 +338,19 @@ public class NavigationBarInflaterView extends FrameLayout
                 true /* landscape */, false /* start */);
 
         updateButtonDispatchersCurrentView();
+    }
+
+    private void updateLayoutInversion() {
+        if (mInverseLayout) {
+            Configuration config = mContext.getResources().getConfiguration();
+            if (config.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+                setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            } else {
+                setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            }
+        } else {
+            setLayoutDirection(View.LAYOUT_DIRECTION_INHERIT);
+        }
     }
 
     private void addGravitySpacer(LinearLayout layout) {
