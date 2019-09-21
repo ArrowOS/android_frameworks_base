@@ -111,4 +111,7 @@
 
     <!-- Shows the required view for in-display fingerprint --> 
     <bool name="config_supportsInDisplayFingerprint">false</bool>
+
+    <!-- Whether to use scaled brightness (set -1 to disable) -->
+    <integer name="config_useScaleBrightness">-1</integer>
 </resources>
