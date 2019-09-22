@@ -4831,6 +4831,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_QUICKBAR_COLUMNS);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(ADVANCED_REBOOT);
         }
 
         /**
