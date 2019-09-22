@@ -4705,6 +4705,7 @@ public final class Settings {
             QS_QUICKBAR_COLUMNS,
             DOUBLE_TAP_SLEEP_GESTURE,
             DOUBLE_TAP_SLEEP_LOCKSCREEN,
+            ADVANCED_REBOOT,
         };
 
         /**
@@ -4831,6 +4832,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_QUICKBAR_COLUMNS);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(ADVANCED_REBOOT);
         }
 
         /**
@@ -9205,8 +9207,7 @@ public final class Settings {
             SILENCE_TIMER_GESTURE_COUNT,
             DARK_MODE_DIALOG_SEEN,
             GLOBAL_ACTIONS_PANEL_ENABLED,
-            AWARE_LOCK_ENABLED,
-            ADVANCED_REBOOT
+            AWARE_LOCK_ENABLED
         };
 
         /**
