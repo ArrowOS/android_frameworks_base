@@ -4571,6 +4571,13 @@ public final class Settings {
         /**
          * @hide
          */
+        public static final String ADVANCED_REBOOT = "advanced_reboot";
+
+        private static final Validator ADVANCED_REBOOT_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
+         * @hide
+         */
         public static final String GLOBAL_ACTIONS_LIST = "global_actions_list";
 
         /**
@@ -4714,6 +4721,7 @@ public final class Settings {
             QS_QUICKBAR_COLUMNS,
             DOUBLE_TAP_SLEEP_GESTURE,
             DOUBLE_TAP_SLEEP_LOCKSCREEN,
+            ADVANCED_REBOOT,
         };
 
         /**
@@ -4840,6 +4848,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(QS_QUICKBAR_COLUMNS);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(ADVANCED_REBOOT);
         }
 
         /**
@@ -4942,6 +4951,7 @@ public final class Settings {
                     DOUBLE_TAP_SLEEP_GESTURE_VALIDATOR);
             VALIDATORS.put(DOUBLE_TAP_SLEEP_LOCKSCREEN,
                     DOUBLE_TAP_SLEEP_LOCKSCREEN_VALIDATOR);
+            VALIDATORS.put(ADVANCED_REBOOT, ADVANCED_REBOOT_VALIDATOR);
         }
 
         /**
@@ -9144,13 +9154,6 @@ public final class Settings {
         public static final String GLOBAL_ACTION_DNAA = "global_action_dnaa";
 
         /**
-         * @hide
-         */
-        public static final String ADVANCED_REBOOT = "advanced_reboot";
-
-        private static final Validator ADVANCED_REBOOT_VALIDATOR = BOOLEAN_VALIDATOR;
-
-        /**
          * This are the settings to be backed up.
          *
          * NOTE: Settings are backed up and restored in the order they appear
@@ -9292,8 +9295,7 @@ public final class Settings {
             SILENCE_TIMER_TOUCH_COUNT,
             DARK_MODE_DIALOG_SEEN,
             GLOBAL_ACTIONS_PANEL_ENABLED,
-            AWARE_LOCK_ENABLED,
-            ADVANCED_REBOOT
+            AWARE_LOCK_ENABLED
         };
 
         /**
@@ -9488,7 +9490,6 @@ public final class Settings {
             VALIDATORS.put(UI_NIGHT_MODE, UI_NIGHT_MODE_VALIDATOR);
             VALIDATORS.put(GLOBAL_ACTIONS_PANEL_ENABLED, GLOBAL_ACTIONS_PANEL_ENABLED_VALIDATOR);
             VALIDATORS.put(AWARE_LOCK_ENABLED, AWARE_LOCK_ENABLED_VALIDATOR);
-            VALIDATORS.put(ADVANCED_REBOOT, ADVANCED_REBOOT_VALIDATOR);
         }
 
         /**
