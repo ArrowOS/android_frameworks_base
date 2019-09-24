@@ -715,6 +715,8 @@ public final class NotificationPanelViewController extends PanelViewController {
     private final KeyguardBottomAreaViewModel mKeyguardBottomAreaViewModel;
     private final KeyguardBottomAreaInteractor mKeyguardBottomAreaInteractor;
 
+    private int mStatusBarHeaderHeight;
+
     @Inject
     public NotificationPanelViewController(NotificationPanelView view,
             @Main Handler handler,
@@ -1086,6 +1088,8 @@ public final class NotificationPanelViewController extends PanelViewController {
         mUdfpsMaxYBurnInOffset = mResources.getDimensionPixelSize(R.dimen.udfps_burn_in_offset_y);
         mSplitShadeScrimTransitionDistance = mResources.getDimensionPixelSize(
                 R.dimen.split_shade_scrim_transition_distance);
+        mStatusBarHeaderHeight = mResources.getDimensionPixelSize(
+                R.dimen.status_bar_height);
     }
 
     private void updateViewControllers(KeyguardStatusView keyguardStatusView,
@@ -4261,6 +4265,14 @@ public final class NotificationPanelViewController extends PanelViewController {
                         mView.getContext().getContentResolver(),
                         Settings.Secure.DOUBLE_TAP_TO_WAKE, 0, UserHandle.USER_CURRENT) == 1) {
                     mDoubleTapGestureListener.onTouchEvent(event);
+                } else if (!mQsExpanded
+                        && mDoubleTapToSleepEnabled
+                        && event.getY() < mStatusBarHeaderHeight) {
+                    mDoubleTapGestureListener.onTouchEvent(event);
+                    // quick pulldown can trigger those values
+                    // on double tap - so reset them
+                    mQsExpandImmediate = false;
+                    setListening(false);
                 }
 
                 // Make sure the next touch won't the blocked after the current ends.
@@ -5051,6 +5063,10 @@ public final class NotificationPanelViewController extends PanelViewController {
                     false /* delayed */,
                     1.0f /* speedUpFactor */);
         }
+    }
+
+    public void updateDoubleTapToSleep(boolean doubleTapToSleepEnabled) {
+        mDoubleTapToSleepEnabled = doubleTapToSleepEnabled;
     }
 
     @SysUISingleton
