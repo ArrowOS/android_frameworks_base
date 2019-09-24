@@ -17,7 +17,9 @@
 package com.android.systemui.shade;
 
 import static android.app.StatusBarManager.WINDOW_STATE_SHOWING;
+import static android.provider.Settings.Secure.DOUBLE_TAP_TO_WAKE;
 import static android.provider.Settings.Secure.STATUS_BAR_QUICK_QS_PULLDOWN;
+import static android.provider.Settings.System.DOUBLE_TAP_SLEEP_GESTURE;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 
@@ -66,6 +68,7 @@ import android.graphics.Rect;
 import android.graphics.Region;
 import android.hardware.biometrics.SensorLocationInternal;
 import android.hardware.fingerprint.FingerprintSensorPropertiesInternal;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
@@ -707,6 +710,9 @@ public final class NotificationPanelViewController implements Dumpable {
     private int mDreamingToLockscreenTransitionTranslationY;
     private int mOccludedToLockscreenTransitionTranslationY;
     private boolean mUnocclusionTransitionFlagEnabled = false;
+
+    private boolean mDoubleTapToSleepEnabled;
+    private boolean mDoubleTapToWakeEnabled;
 
     private final Runnable mFlingCollapseRunnable = () -> fling(0, false /* expand */,
             mNextCollapseSpeedUpFactor, false /* expandBecauseOfFalsing */);
@@ -4763,6 +4769,17 @@ public final class NotificationPanelViewController implements Dumpable {
                 /* notifyForDescendants */ false,
                 mSettingsChangeObserver
         );
+        mContentResolver.registerContentObserver(
+                Settings.Secure.getUriFor(DOUBLE_TAP_TO_WAKE),
+                /* notifyForDescendants */ false,
+                mSettingsChangeObserver
+        );
+        mContentResolver.registerContentObserver(
+                Settings.System.getUriFor(DOUBLE_TAP_SLEEP_GESTURE),
+                /* notifyForDescendants */ false,
+                mSettingsChangeObserver
+        );
+        mSettingsChangeObserver.update();
     }
 
     /** Updates notification panel-specific flags on {@link SysUiState}. */
@@ -5607,11 +5624,23 @@ public final class NotificationPanelViewController implements Dumpable {
         }
 
         @Override
-        public void onChange(boolean selfChange) {
+        public void onChange(boolean selfChange, Uri uri) {
             debugLog("onSettingsChanged");
 
-            // Can affect multi-user switcher visibility
-            reInflateViews();
+            if (uri.equals(Settings.System.getUriFor(DOUBLE_TAP_SLEEP_GESTURE))
+                    || uri.equals(Settings.Secure.getUriFor(DOUBLE_TAP_TO_WAKE))) {
+                update();
+            } else {
+                // Can affect multi-user switcher visibility
+                reInflateViews();
+            }
+        }
+
+        public void update() {
+            mDoubleTapToSleepEnabled = Settings.System.getIntForUser(mContentResolver,
+                    DOUBLE_TAP_SLEEP_GESTURE, 0, UserHandle.USER_CURRENT) == 1;
+            mDoubleTapToWakeEnabled = Settings.Secure.getIntForUser(mContentResolver,
+                    DOUBLE_TAP_TO_WAKE, 0, UserHandle.USER_CURRENT) == 1;
         }
     }
 
@@ -6160,9 +6189,11 @@ public final class NotificationPanelViewController implements Dumpable {
                 return false;
             }
 
-            if (mBarState == StatusBarState.KEYGUARD && Settings.Secure.getIntForUser(
-                    mView.getContext().getContentResolver(),
-                    Settings.Secure.DOUBLE_TAP_TO_WAKE, 0, UserHandle.USER_CURRENT) == 1) {
+            // Double tap to sleep on lockscreen
+            if ((mDoubleTapToWakeEnabled && isOnKeyguard())
+                    // Double tap to sleep on statusbar
+                    || (mDoubleTapToSleepEnabled && !mQsExpanded
+                    && event.getY() < mStatusBarMinHeight)) {
                 mDoubleTapGestureListener.onTouchEvent(event);
             }
 
@@ -6294,7 +6325,7 @@ public final class NotificationPanelViewController implements Dumpable {
                         onTrackingStarted();
                     }
                     if (isFullyCollapsed() && !mHeadsUpManager.hasPinnedHeadsUp()
-                            && !mCentralSurfaces.isBouncerShowing()) {
+                            && !mCentralSurfaces.isBouncerShowing() && !mDoubleTapToSleepEnabled) {
                         startOpening(event);
                     }
                     break;

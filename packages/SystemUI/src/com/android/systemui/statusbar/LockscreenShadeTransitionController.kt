@@ -5,8 +5,12 @@ import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
 import android.content.Context
 import android.content.res.Configuration
+import android.database.ContentObserver
+import android.os.Handler
 import android.os.PowerManager
 import android.os.SystemClock
+import android.os.UserHandle
+import android.provider.Settings.System.DOUBLE_TAP_SLEEP_GESTURE
 import android.util.IndentingPrintWriter
 import android.util.MathUtils
 import android.view.MotionEvent
@@ -14,6 +18,7 @@ import android.view.View
 import android.view.ViewConfiguration
 import androidx.annotation.FloatRange
 import androidx.annotation.VisibleForTesting
+import com.android.internal.policy.SystemBarUtils
 import com.android.systemui.Dumpable
 import com.android.systemui.ExpandHelper
 import com.android.systemui.Gefingerpoken
@@ -23,6 +28,7 @@ import com.android.systemui.biometrics.UdfpsKeyguardViewController
 import com.android.systemui.classifier.Classifier
 import com.android.systemui.classifier.FalsingCollector
 import com.android.systemui.dagger.SysUISingleton
+import com.android.systemui.dagger.qualifiers.Main
 import com.android.systemui.dump.DumpManager
 import com.android.systemui.keyguard.WakefulnessLifecycle
 import com.android.systemui.media.controls.ui.MediaHierarchyManager
@@ -41,6 +47,7 @@ import com.android.systemui.statusbar.phone.KeyguardBypassController
 import com.android.systemui.statusbar.phone.LSShadeTransitionLogger
 import com.android.systemui.statusbar.policy.ConfigurationController
 import com.android.systemui.util.LargeScreenUtils
+import com.android.systemui.util.settings.SystemSettings
 import java.io.PrintWriter
 import javax.inject.Inject
 
@@ -67,6 +74,8 @@ class LockscreenShadeTransitionController @Inject constructor(
     private val context: Context,
     private val splitShadeOverScrollerFactory: SplitShadeLockScreenOverScroller.Factory,
     private val singleShadeOverScrollerFactory: SingleShadeLockScreenOverScroller.Factory,
+    private val systemSettings: SystemSettings,
+    @Main private val handler: Handler,
     wakefulnessLifecycle: WakefulnessLifecycle,
     configurationController: ConfigurationController,
     falsingManager: FalsingManager,
@@ -171,7 +180,8 @@ class LockscreenShadeTransitionController @Inject constructor(
     /**
      * The touch helper responsible for the drag down animation.
      */
-    val touchHelper = DragDownHelper(falsingManager, falsingCollector, this, context)
+    val touchHelper = DragDownHelper(
+            falsingManager, falsingCollector, systemSettings, handler, this, context)
 
     private val splitShadeOverScroller: SplitShadeLockScreenOverScroller by lazy {
         splitShadeOverScrollerFactory.create({ qS }, { nsslController })
@@ -725,6 +735,8 @@ class LockscreenShadeTransitionController @Inject constructor(
 class DragDownHelper(
     private val falsingManager: FalsingManager,
     private val falsingCollector: FalsingCollector,
+    private val systemSettings: SystemSettings,
+    private val handler: Handler,
     private val dragDownCallback: LockscreenShadeTransitionController,
     context: Context
 ) : Gefingerpoken {
@@ -732,6 +744,7 @@ class DragDownHelper(
     private var dragDownAmountOnStart = 0.0f
     lateinit var expandCallback: ExpandHelper.Callback
     lateinit var host: View
+    lateinit var goToSleep: Runnable
 
     private var minDragDistance = 0
     private var initialTouchX = 0f
@@ -742,6 +755,10 @@ class DragDownHelper(
     private var draggedFarEnough = false
     private var startingChild: ExpandableView? = null
     private var lastHeight = 0f
+    private var doubleTapToSleepEnabled = false
+    private var statusBarHeight = 0
+    private var lastDownEvent = -1L
+    private var doubleTapTimeout = 0
     var isDraggingDown = false
         private set
 
@@ -754,10 +771,26 @@ class DragDownHelper(
             }
         }
 
+    private val settingsObserver = object : ContentObserver(handler) {
+        override fun onChange(selfChange: Boolean) = update()
+
+        fun update() {
+            doubleTapToSleepEnabled = systemSettings.getBoolForUser(
+                    DOUBLE_TAP_SLEEP_GESTURE, false, UserHandle.USER_CURRENT)
+        }
+    }
+
     val isDragDownEnabled: Boolean
         get() = dragDownCallback.isDragDownEnabledForView(null)
 
     init {
+        goToSleep = Runnable {
+            val pm = context.getSystemService(Context.POWER_SERVICE) as PowerManager
+            pm.goToSleep(lastDownEvent)
+        }
+        systemSettings.registerContentObserverForUser(
+                DOUBLE_TAP_SLEEP_GESTURE, settingsObserver, UserHandle.USER_CURRENT)
+        settingsObserver.update()
         updateResources(context)
     }
 
@@ -767,6 +800,8 @@ class DragDownHelper(
         val configuration = ViewConfiguration.get(context)
         touchSlop = configuration.scaledTouchSlop.toFloat()
         slopMultiplier = configuration.scaledAmbiguousGestureMultiplier
+        doubleTapTimeout = ViewConfiguration.getDoubleTapTimeout()
+        statusBarHeight = SystemBarUtils.getStatusBarHeight(context)
     }
 
     override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
@@ -779,6 +814,18 @@ class DragDownHelper(
                 startingChild = null
                 initialTouchY = y
                 initialTouchX = x
+                if (doubleTapToSleepEnabled && y < statusBarHeight) {
+                    val eventTime = event.eventTime
+                    lastDownEvent = if (lastDownEvent != -1L) {
+                        val diff = eventTime - lastDownEvent
+                        if (diff < doubleTapTimeout) {
+                            goToSleep.run()
+                        }
+                        -1
+                    } else {
+                        eventTime
+                    }
+                }
             }
             MotionEvent.ACTION_MOVE -> {
                 val h = y - initialTouchY
