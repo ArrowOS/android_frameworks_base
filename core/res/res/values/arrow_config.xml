@@ -17,10 +17,6 @@
     <!-- Whether to cleanup fingerprints upon connection to the daemon and when user switches -->
     <bool name="config_cleanupUnusedFingerprints">true</bool>
 
-    <!-- Full screen aspect ratio -->
-    <bool name="config_haveHigherAspectRatioScreen">false</bool>
-    <item name="config_screenAspectRatio" format="float" type="dimen">2.1</item>
-
     <!-- The list of vendor package signatures that should also be considered
          platform signatures, specifically for use on devices with a vendor partition. -->
     <string-array name="config_vendorPlatformSignatures">
