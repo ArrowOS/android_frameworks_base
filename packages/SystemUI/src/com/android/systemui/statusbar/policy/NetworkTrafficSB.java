@@ -11,6 +11,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.graphics.drawable.Drawable;
@@ -145,13 +146,13 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         private String formatOutput(long timeDelta, long data, String symbol) {
             long speed = (long)(data / (timeDelta / 1000F));
             if (speed < KB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
+                return decimalFormat.format(speed / (float)KB) + '\nK' + symbol;
             } else if (speed < MB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
+                return decimalFormat.format(speed / (float)KB) + '\nK' + symbol;
             } else if (speed < GB) {
-                return decimalFormat.format(speed / (float)MB) + 'M' + symbol;
+                return decimalFormat.format(speed / (float)MB) + '\nM' + symbol;
             }
-            return decimalFormat.format(speed / (float)GB) + 'G' + symbol;
+            return decimalFormat.format(speed / (float)GB) + '\nG' + symbol;
         }
 
         private boolean shouldHide(long rxData, long txData, long timeDelta) {
@@ -358,7 +359,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     @Override
     public void onDarkChanged(Rect area, float darkIntensity, int tint) {
         mTintColor = DarkIconDispatcher.getTint(area, this, tint);
-        setTextColor(mTintColor);
+        setTextColor(ColorStateList.valueOf(mTintColor));
         updateTrafficDrawable();
     }
 
@@ -408,7 +409,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
 
     @Override
     public void setStaticDrawableColor(int color) {
-        mTintColor = color;
+        mTintColor = ColorStateList.valueOf(color);
         setTextColor(mTintColor);
         updateTrafficDrawable();
     }
