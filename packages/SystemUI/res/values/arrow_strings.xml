@@ -119,4 +119,7 @@
     <string name="omnijaws_service_last_update">Last update:</string>
 
     <string name="statusbar_items_title">Statusbar icons</string>
+
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>
