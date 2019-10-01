@@ -20,4 +20,7 @@
     <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
 
     <string name="statusbar_items_title">Statusbar icons</string>
+
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>
