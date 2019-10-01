@@ -68,8 +68,10 @@ import com.android.settingslib.mobile.TelephonyIcons;
 import com.android.settingslib.net.SignalStrengthUtil;
 import com.android.systemui.R;
 import com.android.systemui.dagger.qualifiers.Background;
+import com.android.systemui.Dependency;
 import com.android.systemui.flags.FeatureFlags;
 import com.android.systemui.util.CarrierConfigTracker;
+import com.android.systemui.tuner.TunerService;
 
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -81,7 +83,8 @@ import java.util.Map;
 /**
  * Monitors the mobile signal changes and update the SysUI icons.
  */
-public class MobileSignalController extends SignalController<MobileState, MobileIconGroup> {
+public class MobileSignalController extends SignalController<MobileState, MobileIconGroup>
+                                    implements TunerService.Tunable {
     private static final SimpleDateFormat SSDF = new SimpleDateFormat("MM-dd HH:mm:ss.SSS");
     private static final int STATUS_HISTORY_SIZE = 64;
     private static final int IMS_TYPE_WWAN = 1;
@@ -124,6 +127,8 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
     private boolean mShowVolteIcon;
 
     private boolean mIsVowifiAvailable;
+
+    private boolean mVolteIcon = false;
 
     private final MobileStatusTracker.Callback mMobileCallback =
             new MobileStatusTracker.Callback() {
@@ -240,6 +245,7 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
                 com.android.internal.R.string.lockscreen_carrier_default).toString();
         mReceiverHandler = new Handler(receiverLooper);
 
+        Dependency.get(TunerService.class).addTunable(this, "volte");
         mNetworkToIconLookup = mapIconSets(mConfig);
         mDefaultIcons = getDefaultIcons(mConfig);
 
@@ -288,6 +294,14 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
                 info, mDefaults, mMobileCallback);
         mProviderModelBehavior = featureFlags.isCombinedStatusBarSignalIconsEnabled();
         mProviderModelSetting = featureFlags.isProviderModelSettingEnabled();
+    }
+
+    @Override
+    public void onTuningChanged(String key, String newValue) {
+        if (key.equals("volte")) {
+            mVolteIcon = TunerService.parseIntegerSwitch(newValue, false);
+            notifyListenersIfNecessary();
+        }
     }
 
     void setConfiguration(Config config) {
@@ -503,7 +517,7 @@ public class MobileSignalController extends SignalController<MobileState, Mobile
         final QsInfo qsInfo = getQsInfo(contentDescription, icons.dataType);
         final SbInfo sbInfo = getSbInfo(contentDescription, icons.dataType);
 
-        int volteId = mShowVolteIcon && isVolteSwitchOn() ? getVolteResId() : 0;
+        int volteId = mShowVolteIcon && isVolteSwitchOn() && mVolteIcon ? getVolteResId() : 0;
 
         MobileDataIndicators mobileDataIndicators = new MobileDataIndicators(
                 sbInfo.icon,
