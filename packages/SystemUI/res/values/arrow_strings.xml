@@ -65,6 +65,7 @@
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Statusbar icons</string>
 
+<<<<<<< HEAD
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
 
@@ -109,4 +110,8 @@
     <string name="usage_data">used today</string>
     <string name="usage_data_default_suffix">Data</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
+=======
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
+>>>>>>> 2c06f5b664d1 (SystemUI: Add VoLTE switch in tuner)
 </resources>
