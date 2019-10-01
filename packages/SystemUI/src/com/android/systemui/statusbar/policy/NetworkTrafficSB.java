@@ -125,7 +125,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
 		    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-		    setGravity(Gravity.RIGHT);
+                    setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
                     setText(output);
                     indicatorDown = true;
                 }
@@ -303,10 +303,10 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     private void setMode() {
         ContentResolver resolver = mContext.getContentResolver();
         mIsEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_STATE, 0,
+                Settings.System.NETWORK_TRAFFIC_STATE, 1,
                 UserHandle.USER_CURRENT) == 1;
         mAutoHideThreshold = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0,
+                Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 1,
                 UserHandle.USER_CURRENT);
         mHideArrow = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_HIDEARROW, 0,
@@ -334,16 +334,14 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 d.setColorFilter(mTintColor, Mode.MULTIPLY);
                 setCompoundDrawablePadding(txtImgPadding);
                 setCompoundDrawablesWithIntrinsicBounds(null, null, d, null);
-            } else {
-                setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-            }
-        } else {
+           } else {
             setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-        }
+           }
+       }
         setTextColor(mTintColor);
         indicatorUp = false;
         indicatorDown = false;
-    }
+-   }
 
     public void onDensityOrFontScaleChanged() {
         final Resources resources = getResources();
@@ -352,7 +350,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
         setCompoundDrawablePadding(txtImgPadding);
         setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-        setGravity(Gravity.RIGHT);
     }
 
     @Override
@@ -378,7 +375,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     }
 
     @Override
-    public void setVisibleState(int state, boolean mIsEnabled) {
+    public void setVisibleState(int state, boolean animate) {
         if (state == mVisibleState) {
             return;
         }
