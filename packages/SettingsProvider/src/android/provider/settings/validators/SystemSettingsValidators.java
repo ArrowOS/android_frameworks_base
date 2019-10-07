@@ -244,5 +244,6 @@ public class SystemSettingsValidators {
         VALIDATORS.put(System.VOLUME_BUTTON_MUSIC_CONTROL, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.EDGE_GESTURE_Y_DEAD_ZONE, new InclusiveIntegerRangeValidator(0, 3));
         VALIDATORS.put(System.FP_WAKE_UNLOCK, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.DOZE_ON_CHARGE, BOOLEAN_VALIDATOR);
     }
 }
