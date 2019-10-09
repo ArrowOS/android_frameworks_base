@@ -31,7 +31,6 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.internal.util.arrow.ArrowUtils;
 import com.android.systemui.Dependency;
 import com.android.systemui.R;
 import com.android.systemui.plugins.DarkIconDispatcher;
@@ -54,10 +53,10 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     private static final int GB = MB * KB;
     private static final String symbol = "/s";
 
-    private static DecimalFormat decimalFormat = new DecimalFormat("##0.#");
+    private static DecimalFormat decimalFormat = new DecimalFormat("##0");
     static {
         decimalFormat.setMaximumIntegerDigits(3);
-        decimalFormat.setMaximumFractionDigits(1);
+        decimalFormat.setMaximumFractionDigits(0);
     }
 
     private boolean mIsEnabled;
@@ -112,20 +111,20 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
                     setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-                    setGravity(Gravity.RIGHT);
+                    setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
                     setText(output);
                     indicatorUp = true;
                 }
                 mTrafficVisible = true;
             } else {
                 // Add information for downlink if it's called for
-                String output = formatOutput(timeDelta, rxData, symbol);
+                String output += formatOutput(timeDelta, rxData, symbol);
 
                 // Update view if there's anything new to show
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
-		    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-		    setGravity(Gravity.RIGHT);
+                    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
+                    setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
                     setText(output);
                     indicatorDown = true;
                 }
@@ -378,7 +377,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     }
 
     @Override
-    public void setVisibleState(int state, boolean mIsEnabled) {
+    public void setVisibleState(int state, boolean animate) {
         if (state == mVisibleState) {
             return;
         }
@@ -398,8 +397,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     }
 
     private void updateVisibility() {
-        if (!ArrowUtils.hasNotch(mContext) && mIsEnabled &&
-                mTrafficVisible && mSystemIconVisible) {
+        if (mIsEnabled && mTrafficVisible && mSystemIconVisible) {
             setVisibility(View.VISIBLE);
         } else {
             setVisibility(View.GONE);
