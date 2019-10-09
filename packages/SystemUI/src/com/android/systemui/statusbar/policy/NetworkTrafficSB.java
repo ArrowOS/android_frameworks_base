@@ -31,7 +31,6 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.android.internal.util.arrow.ArrowUtils;
 import com.android.systemui.Dependency;
 import com.android.systemui.R;
 import com.android.systemui.plugins.DarkIconDispatcher;
@@ -112,7 +111,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
                     setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-                    setGravity(Gravity.RIGHT);
+                    setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
                     setText(output);
                     indicatorUp = true;
                 }
@@ -124,8 +123,8 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 // Update view if there's anything new to show
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
-		    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-		    setGravity(Gravity.RIGHT);
+                    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
+                    setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
                     setText(output);
                     indicatorDown = true;
                 }
@@ -145,7 +144,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         private String formatOutput(long timeDelta, long data, String symbol) {
             long speed = (long)(data / (timeDelta / 1000F));
             if (speed < KB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
+                return decimalFormat.format(speed) + symbol;
             } else if (speed < MB) {
                 return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
             } else if (speed < GB) {
@@ -398,8 +397,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     }
 
     private void updateVisibility() {
-        if (!ArrowUtils.hasNotch(mContext) && mIsEnabled &&
-                mTrafficVisible && mSystemIconVisible) {
+        if (mIsEnabled && mTrafficVisible && mSystemIconVisible) {
             setVisibility(View.VISIBLE);
         } else {
             setVisibility(View.GONE);
