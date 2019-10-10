@@ -112,7 +112,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
                     setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-                    setGravity(Gravity.RIGHT);
+                    setGravity(Gravity.CENTER);
                     setText(output);
                     indicatorUp = true;
                 }
@@ -125,7 +125,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 if (!output.contentEquals(getText())) {
                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
 		    setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-		    setGravity(Gravity.RIGHT);
+		    setGravity(Gravity.CENTER);
                     setText(output);
                     indicatorDown = true;
                 }
@@ -352,7 +352,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
         setCompoundDrawablePadding(txtImgPadding);
         setTypeface(Typeface.create("sans-serif-condensed", Typeface.NORMAL));
-        setGravity(Gravity.RIGHT);
+        setGravity(Gravity.CENTER);
     }
 
     @Override
