@@ -54,11 +54,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     private static final int GB = MB * KB;
     private static final String symbol = "/s";
 
-    private static DecimalFormat decimalFormat = new DecimalFormat("##0.#");
-    static {
-        decimalFormat.setMaximumIntegerDigits(3);
-        decimalFormat.setMaximumFractionDigits(1);
-    }
+    private static DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     private boolean mIsEnabled;
     private boolean mAttached;
@@ -144,14 +140,13 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
 
         private String formatOutput(long timeDelta, long data, String symbol) {
             long speed = (long)(data / (timeDelta / 1000F));
-            if (speed < KB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
-            } else if (speed < MB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
-            } else if (speed < GB) {
+            if (speed > 100 * MB) {
+                return decimalFormat.format(speed / (float)GB) + 'G' + symbol;
+            } else if (speed > 100 * KB) {
                 return decimalFormat.format(speed / (float)MB) + 'M' + symbol;
+            } else {
+                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
             }
-            return decimalFormat.format(speed / (float)GB) + 'G' + symbol;
         }
 
         private boolean shouldHide(long rxData, long txData, long timeDelta) {
