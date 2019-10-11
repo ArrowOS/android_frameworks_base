@@ -54,12 +54,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     private static final int GB = MB * KB;
     private static final String symbol = "/s";
 
-    private static DecimalFormat decimalFormat = new DecimalFormat("##0.#");
-    static {
-        decimalFormat.setMaximumIntegerDigits(3);
-        decimalFormat.setMaximumFractionDigits(1);
-    }
-
     private boolean mIsEnabled;
     private boolean mAttached;
     private long totalRxBytes;
@@ -75,6 +69,8 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     private boolean indicatorUp = false;
     private boolean indicatorDown = false;
     private boolean mHideArrow;
+  //  private DecimalFormat mDecimalFormat;
+    private DecimalFormat mDecimalFormat = new DecimalFormat();
 
     private boolean mScreenOn = true;
 
@@ -143,15 +139,40 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         }
 
         private String formatOutput(long timeDelta, long data, String symbol) {
+            String spunit;
+            String newspeed;
             long speed = (long)(data / (timeDelta / 1000F));
-            if (speed < KB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
-            } else if (speed < MB) {
-                return decimalFormat.format(speed / (float)KB) + 'K' + symbol;
-            } else if (speed < GB) {
-                return decimalFormat.format(speed / (float)MB) + 'M' + symbol;
+            if (speed > 1000 * MB) {
+                DecimalFormat mDecimalFormat = new DecimalFormat("0.00");
+                spunit = "G";
+                newspeed =  mDecimalFormat.format(speed / (float)GB);
+            }else if (speed > 100 * MB) {
+                DecimalFormat mDecimalFormat = new DecimalFormat("000");
+                spunit = "M";
+                newspeed =  mDecimalFormat.format(speed / (float)MB);
+            } else if (speed > 10 * MB) {
+                DecimalFormat mDecimalFormat = new DecimalFormat("00.0");
+                spunit = "M";
+                newspeed =  mDecimalFormat.format(speed / (float)MB);
+            } else if (speed > 1 * MB) {
+                DecimalFormat mDecimalFormat = new DecimalFormat("0.00");
+                spunit = "M";
+                newspeed =  mDecimalFormat.format(speed / (float)MB);
+            } else if (speed > 100 * KB) {
+                DecimalFormat mDecimalFormat = new DecimalFormat("000");
+                spunit = "K";
+                newspeed =  mDecimalFormat.format(speed / (float)KB);
+            } else if (speed > 10 * KB) {
+                DecimalFormat mDecimalFormat = new DecimalFormat("00.0");
+                spunit = "K";
+                newspeed =  mDecimalFormat.format(speed / (float)MB);
+            } else {
+                DecimalFormat mDecimalFormat = new DecimalFormat("0.00");
+                spunit = "K";
+                newspeed = mDecimalFormat.format(speed / (float)KB);
             }
-            return decimalFormat.format(speed / (float)GB) + 'G' + symbol;
+            return newspeed + spunit + symbol;
+
         }
 
         private boolean shouldHide(long rxData, long txData, long timeDelta) {
