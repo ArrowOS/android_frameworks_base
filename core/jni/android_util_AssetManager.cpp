@@ -229,6 +229,9 @@ static jobjectArray NativeCreateIdmapsForStaticOverlaysTargetingAndroid(JNIEnv* 
   // --input-directory can be given multiple times, but idmap2 expects the directory to exist
   std::vector<std::string> input_dirs;
   struct stat st;
+  if (stat("/system/overlay", &st) == 0) {
+    input_dirs.push_back("/system/overlay");
+  }
   if (stat(AssetManager::VENDOR_OVERLAY_DIR, &st) == 0) {
     input_dirs.push_back(AssetManager::VENDOR_OVERLAY_DIR);
   }

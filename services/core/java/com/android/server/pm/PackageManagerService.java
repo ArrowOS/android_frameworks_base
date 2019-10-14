@@ -2640,6 +2640,12 @@ public class PackageManagerService extends IPackageManager.Stub
             // any apps.)
             // For security and version matching reason, only consider overlay packages if they
             // reside in the right directory.
+            scanDirTracedLI(new File("/system/overlay"),
+                    mDefParseFlags
+                    | PackageParser.PARSE_IS_SYSTEM_DIR,
+                    scanFlags
+                    | SCAN_AS_SYSTEM,
+                    0);
             scanDirTracedLI(new File(VENDOR_OVERLAY_DIR),
                     mDefParseFlags
                     | PackageParser.PARSE_IS_SYSTEM_DIR,

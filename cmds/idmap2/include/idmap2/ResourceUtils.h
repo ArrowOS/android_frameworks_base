@@ -30,6 +30,9 @@ namespace android::idmap2::utils {
 struct OverlayManifestInfo {
   std::string target_package;  // NOLINT(misc-non-private-member-variables-in-classes)
   std::string target_name;     // NOLINT(misc-non-private-member-variables-in-classes)
+  std::string property_name;     // NOLINT(misc-non-private-member-variables-in-classes)
+  std::string property_value;     // NOLINT(misc-non-private-member-variables-in-classes)
+  bool property_match; // NOLINT(misc-non-private-member-variables-in-classes)
   bool is_static;              // NOLINT(misc-non-private-member-variables-in-classes)
   int priority = -1;           // NOLINT(misc-non-private-member-variables-in-classes)
 };

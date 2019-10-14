@@ -18,7 +18,9 @@
 
 #include <memory>
 #include <string>
+#include <fnmatch.h>
 
+#include "android-base/properties.h"
 #include "androidfw/StringPiece.h"
 #include "androidfw/Util.h"
 #include "idmap2/Result.h"
@@ -91,6 +93,30 @@ Result<OverlayManifestInfo> ExtractOverlayManifestInfo(const std::string& path,
   iter = tag->find("targetName");
   if (iter != tag->end()) {
     info.target_name = iter->second;
+  }
+
+  iter = tag->find("requiredSystemPropertyName");
+  if (iter != tag->end()) {
+    info.property_name = iter->second;
+  }
+
+  iter = tag->find("requiredSystemPropertyValue");
+  if (iter != tag->end()) {
+    info.property_value = iter->second;
+  }
+
+  info.property_match = false;
+  if(!info.property_name.empty() && !info.property_value.empty()) {
+      std::string prop = android::base::GetProperty(info.property_name, "");
+      if(info.property_value == prop) {
+          info.property_match = true;
+      }
+      if(info.property_value[0] == '+') {
+          info.property_match =
+              fnmatch(info.property_value.c_str()+1, prop.c_str(), 0) == 0;
+      }
+  } else {
+      info.property_match = true;
   }
 
   iter = tag->find("isStatic");
