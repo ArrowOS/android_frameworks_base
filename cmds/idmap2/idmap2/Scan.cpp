@@ -159,10 +159,14 @@ Result<Unit> Scan(const std::vector<std::string>& args) {
     Result<OverlayManifestInfo> overlay_info =
         ExtractOverlayManifestInfo(path, /* assert_overlay */ false);
     if (!overlay_info) {
-      return overlay_info.GetError();
+      continue;
     }
 
     if (!overlay_info->is_static) {
+      continue;
+    }
+
+    if (!overlay_info->property_match) {
       continue;
     }
 
