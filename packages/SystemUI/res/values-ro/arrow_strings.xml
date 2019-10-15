@@ -39,9 +39,9 @@
     <string name="quick_settings_sound_vibrate">Vibrează</string>
     <string name="quick_settings_sound_dnd">Nu deranjați</string>
     <!-- HW Keys Tile -->
-    <string name="accessibility_quick_settings_hwkeys_on">HW keys on</string>
-    <string name="accessibility_quick_settings_hwkeys_off">HW keys off</string>
-    <string name="quick_settings_hwkeys_label">HW keys</string>
+    <string name="accessibility_quick_settings_hwkeys_on">Taste fizice pornite</string>
+    <string name="accessibility_quick_settings_hwkeys_off">Taste fizice oprite</string>
+    <string name="quick_settings_hwkeys_label">Taste fizice</string>
     <!-- Advanced powermenu -->
     <string name="global_action_restart_system">Repornire</string>
     <string name="global_action_restart_advanced">Repornire avansată</string>
@@ -57,17 +57,17 @@
     <!-- Recents Panel -->
     <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
-    <string name="clear_recents">Close all recent</string>
-    <string name="lockscreen_default">Default</string>
+    <string name="clear_recents">Inchide toate recente</string>
+    <string name="lockscreen_default">Implicit</string>
     <string name="lockscreen_hidden">None</string>
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
-    <string name="custom_hint">Swipe from icon to launch</string>
+    <string name="custom_hint">Glisare dinspre pictogramă pentru a lansa</string>
     <string name="status_bar_vpn">VPN</string>
-    <string name="preview">Preview</string>
-    <string name="keycode">Keycode</string>
-    <string name="no_home_title">No home button found</string>
-    <string name="no_home_message">A home button is required to be able to navigate this device. Please add a home button before saving.</string>
-    <string name="clipboard_description">The Clipboard allows items to be dragged directly to the clipboard. Items can also be dragged directly out of the clipboard when present.</string>
+    <string name="preview">Previzualizare</string>
+    <string name="keycode">Cod tastă</string>
+    <string name="no_home_title">Nu s-a găsit niciun buton pentru Ecran de pornire</string>
+    <string name="no_home_message">Pentru a naviga pe acest dispozitiv este necesar un buton Ecran de pornire. Adăugați un buton Ecran de pornire înainte să salvați.</string>
+    <string name="clipboard_description">Clipboard permite elementelor sa fie trase direct in clipboard. Elementele pot deasemenea fii trase direct afară din clipboard.</string>
     <string name="keycode_description">Keycode buttons allow keyboard keys to be added to the Navigation Bar. When pressed they emulate the selected keyboard key. First the key must be selected for the button, followed by an image to be shown on the button.</string>
     <string name="start">Start</string>
     <string name="center">Center</string>
@@ -130,4 +130,35 @@
     <string name="ambientmusic_songinfo">%s by %s</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">Always On Display</string>
+    <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_battery_saving_label">Battery saving</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">Battery\nsaving</string>
+    <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_gps_only_label">GPS only</string>
+    <string name="quick_settings_location_gps_only_label_twoline">GPS only</string>
+    <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_high_accuracy_label">High accuracy</string>
+    <string name="quick_settings_location_high_accuracy_label_twoline">High\naccuracy</string>
+    <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_detail_title">Location</string>
+    <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_detail_menu_title">Select mode:</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
+    <string name="quick_settings_location_detail_mode_high_accuracy_title">High accuracy</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
+    <string name="quick_settings_location_detail_mode_battery_saving_title">Battery saving</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
+    <string name="quick_settings_location_detail_mode_sensors_only_title">Device only</string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">Use GPS, Wi\u2011Fi, Bluetooth, or cellular networks to determine location </string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
+    <string name="quick_settings_location_detail_mode_battery_saving_description">Use Wi\u2011Fi, Bluetooth, or cellular networks to determine location</string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
+    <string name="quick_settings_location_detail_mode_sensors_only_description">Use GPS to determine your location</string>
 </resources>

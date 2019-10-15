@@ -48,7 +48,7 @@
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Chế độ bootloader</string>
     <string name="global_action_restart_ui">Giao diện người dùng hệ thống</string>
-    <string name="global_action_restart_hot">Nhiều quan tâm</string>
+    <string name="global_action_restart_hot">Nóng</string>
     <string name="global_action_screenshot">Ảnh chụp màn hình</string>
     <string name="global_action_lockdown">Khóa</string>
     <!-- Heads up snooze toast -->
@@ -58,8 +58,8 @@
     <!-- The text for the button in the notification window-shade that clears
          all of the currently visible notifications. [CHAR LIMIT=10]-->
     <string name="clear_recents">Đóng tất cả ứng dụng gần đây</string>
-    <string name="lockscreen_default">Màn hình khoá mặc định</string>
-    <string name="lockscreen_hidden">Bỏ chọn tất cả</string>
+    <string name="lockscreen_default">Mặc định</string>
+    <string name="lockscreen_hidden">Không có</string>
     <!-- Shows when people have clicked on the custom lockscreen shortcut [CHAR LIMIT=60] -->
     <string name="custom_hint">Trượt từ biểu tượng để khởi chạy</string>
     <string name="status_bar_vpn">VPN</string>
@@ -130,4 +130,35 @@
     <string name="ambientmusic_songinfo">%s bởi %s</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">Màn hình luôn luôn bật</string>
+    <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_battery_saving">Báo cáo vị trí: chế độ tiết kiệm pin.</string>
+    <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_gps_only">Báo cáo vị trí: chế độ chỉ dùng cảm biến.</string>
+    <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_high_accuracy">Báo cáo vị trí: chế độ chính xác cao.</string>
+    <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_battery_saving_label">Tiết kiệm pin</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">Tiết kiệm\npin</string>
+    <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_gps_only_label">Chỉ GPS</string>
+    <string name="quick_settings_location_gps_only_label_twoline">Chỉ GPS</string>
+    <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_high_accuracy_label">Độ chính xác cao</string>
+    <string name="quick_settings_location_high_accuracy_label_twoline">Chính xác\ncao</string>
+    <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_detail_title">Vị trí</string>
+    <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_detail_menu_title">Chọn chế độ:</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
+    <string name="quick_settings_location_detail_mode_high_accuracy_title">Độ chính xác cao</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
+    <string name="quick_settings_location_detail_mode_battery_saving_title">Tiết kiệm pin</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
+    <string name="quick_settings_location_detail_mode_sensors_only_title">Chỉ GPS</string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">Sử dụng GPS, Wi\u2011Fi, Bluetooth hoặc mạng di động để xác định vị trí </string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
+    <string name="quick_settings_location_detail_mode_battery_saving_description">Sử dụng Wi\u2011Fi, Bluetooth hoặc mạng di động để xác định vị trí</string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
+    <string name="quick_settings_location_detail_mode_sensors_only_description">Sử dụng GPS để xác định vị trí của bạn</string>
 </resources>

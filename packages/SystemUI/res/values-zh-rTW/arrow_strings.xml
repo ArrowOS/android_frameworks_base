@@ -85,7 +85,7 @@
     <string name="navbar_editor_summary">配置導覽列</string>
     <string name="statusbar_items_title">狀態列圖示</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_dash_charging_time"><xliff:g id="Percentage">%2$s</xliff:g> • 快速充電中 (<xliff:g id="Charging_TIME_LEFT">%s</xliff:g>後充飽)</string>
     <string name="keyguard_plugged_in_dash_charging">Dash 閃充中</string>
     <!-- Indication on the keyguard that is shown when the device is charging with a turbo power charger. Should match keyguard_plugged_in_turbo_power_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_turbo_power_time">正在快速充電中（還需 <xliff:g id="charging_time_left">%s</xliff:g> 充滿）</string>
@@ -129,5 +129,36 @@
     <!-- Ambient Display Pixel-Like string -->
     <string name="ambientmusic_songinfo">%s by %s</string>
     <!-- AOD QS tile -->
-    <string name="quick_settings_aod_label">Always On Display</string>
+    <string name="quick_settings_aod_label">一律顯示</string>
+    <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_battery_saving">位置回報：省電模式</string>
+    <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_gps_only">位置回報：僅限感應器模式</string>
+    <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_location_high_accuracy">位置回報：高精確度</string>
+    <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_battery_saving_label">節約耗電量</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">省電\n模式</string>
+    <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_gps_only_label">僅 GPS</string>
+    <string name="quick_settings_location_gps_only_label_twoline">僅 GPS</string>
+    <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_high_accuracy_label">高精確度</string>
+    <string name="quick_settings_location_high_accuracy_label_twoline">高\n精確度</string>
+    <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_detail_title">位置</string>
+    <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
+    <string name="quick_settings_location_detail_menu_title">選擇模式：</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
+    <string name="quick_settings_location_detail_mode_high_accuracy_title">高精確度</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
+    <string name="quick_settings_location_detail_mode_battery_saving_title">節約耗電量</string>
+    <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
+    <string name="quick_settings_location_detail_mode_sensors_only_title">僅限裝置</string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">使用 GPS、Wi\u2011Fi、藍牙或行動網路判斷位置 </string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
+    <string name="quick_settings_location_detail_mode_battery_saving_description">使用 Wi\u2011Fi、藍牙或行動網路來判斷您的位置</string>
+    <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
+    <string name="quick_settings_location_detail_mode_sensors_only_description">使用 GPS 來判斷您的位置</string>
 </resources>
