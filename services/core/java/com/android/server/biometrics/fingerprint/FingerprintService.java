@@ -190,6 +190,16 @@ public class FingerprintService extends BiometricServiceBase {
         }
 
         @Override
+        public boolean onAuthenticated(BiometricAuthenticator.Identifier identifier,
+            boolean authenticated, ArrayList<Byte> token) {
+            boolean result = super.onAuthenticated(identifier, authenticated, token);
+            android.util.Log.d("PHH-Enroll", "auth-ed ret " + result);
+            if(result) mFacola.hide();
+            return result;
+        }
+
+
+        @Override
         public int start() {
             mFacola.show();
             return super.start();
@@ -228,6 +238,7 @@ public class FingerprintService extends BiometricServiceBase {
                 final IFingerprintServiceReceiver receiver, final int flags,
                 final String opPackageName) {
             checkPermission(MANAGE_FINGERPRINT);
+            mFacola.show();
 
             final boolean restricted = isRestricted();
             final int groupId = userId; // default group for fingerprint enrollment
@@ -678,6 +689,9 @@ public class FingerprintService extends BiometricServiceBase {
                     }
                 }
                 FingerprintService.super.handleError(deviceId, error, vendorCode);
+                if ( error == BiometricConstants.BIOMETRIC_ERROR_CANCELED) {
+                    mFacola.hide();
+                }
                 // TODO: this chunk of code should be common to all biometric services
                 if (error == BiometricConstants.BIOMETRIC_ERROR_HW_UNAVAILABLE) {
                     // If we get HW_UNAVAILABLE, try to connect again later...
