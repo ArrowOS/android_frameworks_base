@@ -57,6 +57,8 @@ public class FacolaView extends ImageView implements OnTouchListener {
 
     private final WindowManager mWM;
     private final boolean samsungFod = samsungHasCmd("fod_enable");
+
+    private boolean mHidden = true;
     FacolaView(Context context) {
         super(context);
 
@@ -106,7 +108,7 @@ public class FacolaView extends ImageView implements OnTouchListener {
         //TODO w!=h?
         if(mInsideCircle) {
             try {
-                int nitValue = 3;
+                int nitValue = 2;
                 if(mXiaomiFingerprint != null)
                     mXiaomiFingerprint.extCmd(0xa, nitValue);
             } catch(Exception e) {
@@ -156,6 +158,8 @@ public class FacolaView extends ImageView implements OnTouchListener {
 
     public void show() {
         Slog.d("PHH-Enroll", "Show", new Exception());
+        if(!mHidden) return;
+        mHidden = false;
         if(samsungFod) {
             samsungCmd("fod_enable,1,1");
         }
@@ -194,7 +198,10 @@ public class FacolaView extends ImageView implements OnTouchListener {
     }
 
     public void hide() {
+        mInsideCircle = false;
         Slog.d("PHH-Enroll", "Hide", new Exception());
+        if(mHidden) return;
+        mHidden = true;
         if(samsungFod) {
             samsungCmd("fod_enable,0");
         }
