@@ -127,4 +127,10 @@
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Reboot</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+
+    <!-- Screen recorder -->
+    <string name="screenrecord_stopdot_label">Show stop dot</string>
+
+    <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
+    <string name="global_action_screenshot_cust">"Screenshot/Rec"</string>
 </resources>
