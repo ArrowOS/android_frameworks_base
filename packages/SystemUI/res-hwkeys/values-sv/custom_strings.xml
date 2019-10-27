@@ -16,41 +16,42 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Bindable action labels -->
-  <string name="label_action_no_action">Ingen åtgärd</string>
-  <string name="label_action_settings_panel">Inställningspanel</string>
-  <string name="label_action_notification_panel">Notifieringspanel</string>
-  <string name="label_action_screenshot">Skärmdump</string>
-  <string name="label_action_region_screenshot">Partiell skärmdump</string>
-  <string name="label_action_screenrecord">Spela in skärmen</string>
-  <string name="label_action_expanded_desktop">Utökat skrivbord</string>
-  <string name="label_action_screen_off">Stäng av skärm</string>
-  <string name="label_action_force_close_app">Tvinga stängning av app</string>
-  <string name="label_action_google_assistant">Google assistent</string>
-  <string name="label_action_in_app_search">Sök i app</string>
-  <string name="label_action_flashlight">Ficklampa</string>
-  <string name="label_action_bluetooth">Blåtand</string>
-  <string name="label_action_wifi">WiFi</string>
-  <string name="label_action_hotspot">Trådlös surfzon</string>
-  <string name="label_action_last_app">Senaste app</string>
-  <string name="label_action_overview">Senaste appar</string>
-  <string name="label_action_power_menu">Avstängningsmeny</string>
-  <string name="label_action_menu">Meny</string>
-  <string name="label_action_back">Tillbaka</string>
-  <string name="label_action_home">Hem</string>
-  <string name="label_action_ime_switcher">IME-växlare</string>
-  <string name="label_action_stop_screenpinning">Stoppa fastlåsning av skärm</string>
-  <string name="label_action_ime_down">Inmatningsmetod pil nedåt</string>
-  <string name="label_action_ime_left">Inmatningsmetod pil vänster</string>
-  <string name="label_action_ime_right">Inmatningsmetod pil höger</string>
-  <string name="label_action_ime_up">Inmatningsmetod pil uppåt</string>
-  <string name="label_action_volume_panel">Volympanel</string>
-  <string name="label_action_clear_notifications">Rensa aviseringar.</string>
-  <string name="label_action_split_screen">Dela skärm</string>
-  <string name="label_action_one_handed_mode_left">Enhandsläge (vänster sida)</string>
-  <string name="label_action_one_handed_mode_right">Enhandsläge (höger sida)</string>
-  <string name="label_action_media_left">Föregående spår</string>
-  <string name="label_action_media_right">Nästa spår</string>
-  <!-- App killed message -->
-  <string name="app_killed_message">%s tvångsavslutades</string>
+    <!-- Bindable action labels -->
+    <string name="label_action_no_action">Ingen åtgärd</string>
+    <string name="label_action_settings_panel">QS panel</string>
+    <string name="label_action_notification_panel">Aviseringspanel</string>
+    <string name="label_action_screenshot">Skärmdump</string>
+    <string name="label_action_region_screenshot">Partiell skärmdump</string>
+    <string name="label_action_screenrecord">Spela in skärmen</string>
+    <string name="label_action_expanded_desktop">Utökat skrivbord</string>
+    <string name="label_action_screen_off">Stänga av skärmen</string>
+    <string name="label_action_force_close_app">Tvingad avslutning</string>
+    <string name="label_action_google_assistant">Google assistent</string>
+    <string name="label_action_in_app_search">Sökning i app</string>
+    <string name="label_action_flashlight">Ficklampa</string>
+    <string name="label_action_bluetooth">Bluetooth</string>
+    <string name="label_action_wifi">WiFi</string>
+    <string name="label_action_hotspot">Hotspot</string>
+    <string name="label_action_last_app">Senaste app</string>
+    <string name="label_action_overview">Senaste</string>
+    <string name="label_action_power_menu">Power menu</string>
+    <string name="label_action_menu">Meny</string>
+    <string name="label_action_back">Tillbaka</string>
+    <string name="label_action_home">Home</string>
+    <string name="label_action_ime_switcher">Inmatningsväxlare</string>
+    <string name="label_action_stop_screenpinning">Stop screen pinning</string>
+    <string name="label_action_ime_down">Inmatningsmetod markör nedåt</string>
+    <string name="label_action_ime_left">Inmatningsmetod markör vänster</string>
+    <string name="label_action_ime_right">Inmatningsmetod markör höger</string>
+    <string name="label_action_ime_up">Inmatningsmetod markör uppåt</string>
+    <string name="label_action_volume_panel">Volympanel</string>
+    <string name="label_action_clear_notifications">Rensa aviseringar</string>
+    <string name="label_action_split_screen">Delad skärm</string>
+    <string name="label_action_one_handed_mode_left">Enhandsläge (vänster sida)</string>
+    <string name="label_action_one_handed_mode_right">Enhandsläge (höger sida)</string>
+    <string name="label_action_media_left">Föregående spår</string>
+    <string name="label_action_media_right">Nästa spår</string>
+    <string name="label_action_assistant_sound_search">Google ljudsökning</string>
+    <!-- App killed message -->
+    <string name="app_killed_message">%s tvångsavslutades</string>
 </resources>
