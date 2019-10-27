@@ -69,7 +69,7 @@ import android.telephony.ServiceState;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.ArraySet;
-import android.util.FeatureFlagUtils;
+//import android.util.FeatureFlagUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.ContextThemeWrapper;
@@ -928,11 +928,11 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
         @Override
         public boolean onLongPress() {
-            if (FeatureFlagUtils.isEnabled(mContext, FeatureFlagUtils.SCREENRECORD_LONG_PRESS)) {
+            //if (FeatureFlagUtils.isEnabled(mContext, FeatureFlagUtils.SCREENRECORD_LONG_PRESS)) {
                 mScreenRecordHelper.launchRecordPrompt();
-            } else {
+            /*} else {
                 onPress();
-            }
+            }*/
             return true;
         }
     }
