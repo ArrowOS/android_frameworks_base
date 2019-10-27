@@ -16,42 +16,42 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Bindable action labels -->
-  <string name="label_action_no_action">Без акције</string>
-  <string name="label_action_settings_panel">Панел поставки</string>
-  <string name="label_action_notification_panel">Панел обавештења</string>
-  <string name="label_action_screenshot">Снимак слике екрана</string>
-  <string name="label_action_region_screenshot">Делимичан снимак слике екрана</string>
-  <string name="label_action_screenrecord">Снимање екрана</string>
-  <string name="label_action_expanded_desktop">Проширена радна површина</string>
-  <string name="label_action_screen_off">Искључи екран</string>
-  <string name="label_action_force_close_app">Присилно затвори апликацију</string>
-  <string name="label_action_google_assistant">Гугл асистент</string>
-  <string name="label_action_in_app_search">Претрага унутар апликације</string>
-  <string name="label_action_flashlight">Лампа</string>
-  <string name="label_action_bluetooth">Bluetooth</string>
-  <string name="label_action_wifi">Wi-Fi</string>
-  <string name="label_action_hotspot">Приступна тачка</string>
-  <string name="label_action_last_app">Последња апликација</string>
-  <string name="label_action_overview">Мени недавних апликација</string>
-  <string name="label_action_power_menu">Мени напајања</string>
-  <string name="label_action_menu">Мени</string>
-  <string name="label_action_back">Назад</string>
-  <string name="label_action_home">Почетна</string>
-  <string name="label_action_ime_switcher">Промена начина уноса</string>
-  <string name="label_action_stop_screenpinning">Заустави откачињање екрана</string>
-  <string name="label_action_ime_down">Начин уноса - стрелица за доле</string>
-  <string name="label_action_ime_left">Начин уноза - стрелица лево</string>
-  <string name="label_action_ime_right">Начин уноса - стрелица десно</string>
-  <string name="label_action_ime_up">Начин уноса - стрелица за горе</string>
-  <string name="label_action_volume_panel">Панел јачине звука</string>
-  <string name="label_action_clear_notifications">Избриши обавештења</string>
-  <string name="label_action_split_screen">Подељени екран</string>
-  <string name="label_action_one_handed_mode_left">Режим коришћења једном руком (лева страна)</string>
-  <string name="label_action_one_handed_mode_right">Режим коришћења једном руком (десна страна)</string>
-  <string name="label_action_media_left">Предходна нумера</string>
-  <string name="label_action_media_right">Следећа нумера</string>
-  <string name="label_action_assistant_sound_search">Gугл гласовно претраживање</string>
-  <!-- App killed message -->
-  <string name="app_killed_message">%s заустављена</string>
+    <!-- Bindable action labels -->
+    <string name="label_action_no_action">No action</string>
+    <string name="label_action_settings_panel">QS panel</string>
+    <string name="label_action_notification_panel">Notification panel</string>
+    <string name="label_action_screenshot">Screenshot</string>
+    <string name="label_action_region_screenshot">Partial screenshot</string>
+    <string name="label_action_screenrecord">Record screen</string>
+    <string name="label_action_expanded_desktop">Expanded desktop</string>
+    <string name="label_action_screen_off">Turn off screen</string>
+    <string name="label_action_force_close_app">Force close app</string>
+    <string name="label_action_google_assistant">Google assistant</string>
+    <string name="label_action_in_app_search">In-app search</string>
+    <string name="label_action_flashlight">Flashlight</string>
+    <string name="label_action_bluetooth">Bluetooth</string>
+    <string name="label_action_wifi">WiFi</string>
+    <string name="label_action_hotspot">Hotspot</string>
+    <string name="label_action_last_app">Last app</string>
+    <string name="label_action_overview">Recents</string>
+    <string name="label_action_power_menu">Power menu</string>
+    <string name="label_action_menu">Menu</string>
+    <string name="label_action_back">Back</string>
+    <string name="label_action_home">Home</string>
+    <string name="label_action_ime_switcher">IME changer</string>
+    <string name="label_action_stop_screenpinning">Stop screen pinning</string>
+    <string name="label_action_ime_down">Input method cursor down</string>
+    <string name="label_action_ime_left">Input method cursor left</string>
+    <string name="label_action_ime_right">Input method cursor right</string>
+    <string name="label_action_ime_up">Input method cursor up</string>
+    <string name="label_action_volume_panel">Volume panel</string>
+    <string name="label_action_clear_notifications">Clear notifications</string>
+    <string name="label_action_split_screen">Split screen</string>
+    <string name="label_action_one_handed_mode_left">One handed mode (left side)</string>
+    <string name="label_action_one_handed_mode_right">One handed mode (right side)</string>
+    <string name="label_action_media_left">Previous track</string>
+    <string name="label_action_media_right">Next track</string>
+    <string name="label_action_assistant_sound_search">Google sound search</string>
+    <!-- App killed message -->
+    <string name="app_killed_message">%s killed</string>
 </resources>
