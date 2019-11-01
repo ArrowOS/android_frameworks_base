@@ -69,8 +69,8 @@
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_description">GPS で現在地を特定する</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Columns</string>
-    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
+    <string name="qs_menu_item_columns">列数</string>
+    <string name="qs_menu_item_columns_landscape">列数 (横向き)</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -78,25 +78,25 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset</string>
-    <string name="qs_menu_item_titles">Show labels</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_reset">リセット</string>
+    <string name="qs_menu_item_titles">ラベルを表示</string>
+    <string name="qs_menu_item_qs_columns">クイックバーの列数</string>
+    <string name="qs_menu_item_columns_auto">自動</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_reboot">再起動</string>
+    <string name="global_action_reboot_more">再起動中...</string>
+    <string name="global_action_reboot_sub">システム</string>
+    <string name="global_action_reboot_recovery">リカバリー</string>
+    <string name="global_action_reboot_bootloader">ブートローダー</string>
+    <string name="global_action_dismissable_dialog_text">高度な再起動が無効です。\n再起動しますか\u003f</string>
+    <string name="global_action_dnaa">今後表示しない</string>
+    <string name="global_action_settings">設定</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">スクリーンショット</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">ライト</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">エラー</string>
     <string name="omnijaws_service_unkown">天気データがありません</string>
