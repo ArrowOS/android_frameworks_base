@@ -16,42 +16,42 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <!-- Bindable action labels -->
-  <string name="label_action_no_action">Немає дій</string>
-  <string name="label_action_settings_panel">Панель налаштувань</string>
-  <string name="label_action_notification_panel">Панель сповіщень</string>
-  <string name="label_action_screenshot">Знімок екрану</string>
-  <string name="label_action_region_screenshot">Частковий скріншот</string>
-  <string name="label_action_screenrecord">Записати екран</string>
-  <string name="label_action_expanded_desktop">Розширений робочий стіл</string>
-  <string name="label_action_screen_off">Вимкнути екран</string>
-  <string name="label_action_force_close_app">Закрити примусово</string>
-  <string name="label_action_google_assistant">Google Помічник</string>
-  <string name="label_action_in_app_search">Пошук у додатку</string>
-  <string name="label_action_flashlight">Ліхтарик</string>
-  <string name="label_action_bluetooth">Bluetooth</string>
-  <string name="label_action_wifi">WiFi</string>
-  <string name="label_action_hotspot">Точка доступу</string>
-  <string name="label_action_last_app">Останній додаток</string>
-  <string name="label_action_overview">Нещодавні</string>
-  <string name="label_action_power_menu">Меню вимкнення</string>
-  <string name="label_action_menu">Меню</string>
-  <string name="label_action_back">Назад</string>
-  <string name="label_action_home">Додому</string>
-  <string name="label_action_ime_switcher">IME перемикач</string>
-  <string name="label_action_stop_screenpinning">Зупинити закріплення екрану</string>
-  <string name="label_action_ime_down">Метод введення курсор вниз</string>
-  <string name="label_action_ime_left">Метод введення курсор вліво</string>
-  <string name="label_action_ime_right">Метод введення курсор вправо</string>
-  <string name="label_action_ime_up">Метод введення курсор вгору</string>
-  <string name="label_action_volume_panel">Панель гучності</string>
-  <string name="label_action_clear_notifications">Очистити сповіщення</string>
-  <string name="label_action_split_screen">Розділення екрану</string>
-  <string name="label_action_one_handed_mode_left">Режим однієї руки (зліва)</string>
-  <string name="label_action_one_handed_mode_right">Режим однієї руки (справа)</string>
-  <string name="label_action_media_left">Попередня композиція</string>
-  <string name="label_action_media_right">Наступна композиція</string>
-  <string name="label_action_assistant_sound_search">Голосовий пошук Google</string>
-  <!-- App killed message -->
-  <string name="app_killed_message">%s закрито</string>
+    <!-- Bindable action labels -->
+    <string name="label_action_no_action">Немає дії</string>
+    <string name="label_action_settings_panel">Панель швидких налаштувань</string>
+    <string name="label_action_notification_panel">Панель сповіщень</string>
+    <string name="label_action_screenshot">Знімок екрану</string>
+    <string name="label_action_region_screenshot">Знімок частини екрана</string>
+    <string name="label_action_screenrecord">Запис з екрану</string>
+    <string name="label_action_expanded_desktop">Розширений робочий стіл</string>
+    <string name="label_action_screen_off">Вимкнути екран</string>
+    <string name="label_action_force_close_app">Примусово закрити програму</string>
+    <string name="label_action_google_assistant">Google асистент</string>
+    <string name="label_action_in_app_search">Пошук в програмі</string>
+    <string name="label_action_flashlight">Ліхтарик</string>
+    <string name="label_action_bluetooth">Bluetooth</string>
+    <string name="label_action_wifi">Wi-Fi</string>
+    <string name="label_action_hotspot">Точка доступу</string>
+    <string name="label_action_last_app">Остання програма</string>
+    <string name="label_action_overview">Нещодавні</string>
+    <string name="label_action_power_menu">Меню кнопки \"Живлення\"</string>
+    <string name="label_action_menu">Меню</string>
+    <string name="label_action_back">Назад</string>
+    <string name="label_action_home">Додому</string>
+    <string name="label_action_ime_switcher">Перемикач редактору засобів вводу</string>
+    <string name="label_action_stop_screenpinning">Зупинити закріплення екрану</string>
+    <string name="label_action_ime_down">Метод введення курсор вниз</string>
+    <string name="label_action_ime_left">Метод введення курсор вліво</string>
+    <string name="label_action_ime_right">Метод введення курсор вправо</string>
+    <string name="label_action_ime_up">Метод введення курсор вгору</string>
+    <string name="label_action_volume_panel">Панель гучності</string>
+    <string name="label_action_clear_notifications">Очистити сповіщення</string>
+    <string name="label_action_split_screen">Розділити екран</string>
+    <string name="label_action_one_handed_mode_left">Режим управління однією рукою (зліва)</string>
+    <string name="label_action_one_handed_mode_right">Режим управління однією рукою (справа)</string>
+    <string name="label_action_media_left">Попередня композиція</string>
+    <string name="label_action_media_right">Наступна композиція</string>
+    <string name="label_action_assistant_sound_search">Голосовий пошук Google</string>
+    <!-- App killed message -->
+    <string name="app_killed_message">%s вбито</string>
 </resources>
