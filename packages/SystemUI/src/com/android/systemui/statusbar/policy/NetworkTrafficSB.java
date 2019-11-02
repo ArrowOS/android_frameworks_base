@@ -34,6 +34,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
+import androidx.core.widget.TextViewCompat;
 
 import com.android.internal.util.arrow.ArrowUtils;
 import com.android.systemui.Dependency;
@@ -111,6 +112,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                     setGravity(Gravity.CENTER);
                     setMaxLines(2);
                     setLineSpacing(0.75f, 0.75f);
+                    setAutoSizeTextTypeWithDefaults(AUTO_SIZE_TEXT_TYPE_UNIFORM);
                     setText(output);
                     indicatorUp = true;
                 }
@@ -125,6 +127,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                     setGravity(Gravity.CENTER);
                     setMaxLines(2);
                     setLineSpacing(0.75f, 0.75f);
+                    setAutoSizeTextTypeWithDefaults(AUTO_SIZE_TEXT_TYPE_UNIFORM);
                     setText(output);
                     indicatorDown = true;
                 }
@@ -390,6 +393,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
         setGravity(Gravity.CENTER);
         setMaxLines(2);
         setLineSpacing(0.75f, 0.75f);
+        setAutoSizeTextTypeWithDefaults(AUTO_SIZE_TEXT_TYPE_UNIFORM);
     }
 
     @Override
