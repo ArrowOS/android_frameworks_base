@@ -5048,12 +5048,6 @@ public final class Settings {
         };
 
         /**
-         * Unlock keystore with fingerprint after reboot
-         * @hide
-         */
-        public static final String FP_UNLOCK_KEYSTORE = "fp_unlock_keystore";
-
-       /**
          * These are all public system settings
          *
          * @hide
