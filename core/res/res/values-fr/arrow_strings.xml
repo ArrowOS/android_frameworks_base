@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Imiter la signature du paquet</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Autoriser l\'application à prétendre être une autre application. Des applications malveillantes peuvent essayer d\'accéder à des données privées d\'autres applications, accordez cette permission avec prudence !</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>

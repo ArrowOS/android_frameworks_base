@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Підміна підпису пакету</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Дозволити додатку видавати себе за інший додаток. Небезпечні додатки можуть отримати доступ до приватних даних. Будьте обережні під час надання цього дозволу!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>

@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Μίμηση υπογραφής πακέτου</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Επιτρέπει στην εφαρμογή να προσποιείται ότι είναι μια διαφορετική εφαρμογή. Οι κακόβουλες εφαρμογές μπορούν να είναι σε θέση να χρησιμοποιήσουν αυτήν την λειτουργία για να έχουν πρόσβαση στα προσωπικά σας δεδομένα. Εκχωρήστε αυτήν την άδεια με ιδιαίτερη προσοχή!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>
