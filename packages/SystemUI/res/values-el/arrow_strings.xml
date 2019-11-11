@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">Τώρα</string>
     <string name="omnijaws_package_not_available">Τα OmniJaws δεν είναι διαθέσιμα</string>
     <string name="omnijaws_service_last_update">Τελευταία ενημέρωση:</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>

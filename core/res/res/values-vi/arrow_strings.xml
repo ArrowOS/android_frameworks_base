@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Chữ ký gói giả mạo</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Cho phép ứng dụng có thể giả mạo làm ứng dụng khác. Các ứng dụng độc hại có thể sử dụng quyền này để truy cập trái phép vào dữ liệu riêng tư của bạn. Hãy thận trọng khi cấp quyền này!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>
