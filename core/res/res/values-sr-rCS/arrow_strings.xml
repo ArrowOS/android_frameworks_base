@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Obmana potpisa paketa</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Dozvoljava aplikaciji da se pretvara da je druga aplikacija. Malicijozne aplikacije bi mogle ovo iskoristiti da prikupljaju privatne podatke. Dozvolite sa pažnjom!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>
