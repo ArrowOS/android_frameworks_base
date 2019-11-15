@@ -24,5 +24,8 @@
     <dimen name="current_weather_image_size">30dp</dimen>
 
     <!-- Width of the battery icon in the status bar when set to circle style. -->
-    <dimen name="status_bar_battery_icon_circle_width">14.5dp</dimen>
+    <dimen name="status_bar_battery_icon_circle_width">12.5dp</dimen>
+
+    <!-- Height of the battery icon in the status bar when set to circle style. -->
+    <dimen name="status_bar_battery_icon_circle_height">12.5dp</dimen>
 </resources>
