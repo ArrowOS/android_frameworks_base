@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">Зараз</string>
     <string name="omnijaws_package_not_available">OmniJaws недоступний</string>
     <string name="omnijaws_service_last_update">Останнє оновлення:</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>

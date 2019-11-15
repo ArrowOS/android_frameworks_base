@@ -69,8 +69,8 @@
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_description">K určování polohy používat GPS</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Columns</string>
-    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
+    <string name="qs_menu_item_columns">Sloupce</string>
+    <string name="qs_menu_item_columns_landscape">Sloupce (na šířku)</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -78,25 +78,25 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset</string>
-    <string name="qs_menu_item_titles">Show labels</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_reset">Resetovat</string>
+    <string name="qs_menu_item_titles">Zobrazit popisky</string>
+    <string name="qs_menu_item_qs_columns">Sloupce panelu QS</string>
+    <string name="qs_menu_item_columns_auto">Automaticky</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
+    <string name="global_action_reboot">Restartovat</string>
+    <string name="global_action_reboot_more">Restartovat\u2026</string>
+    <string name="global_action_reboot_sub">Systém</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_dismissable_dialog_text">Rozšířený restart je zakázán.\nChcete restartovat\u003f</string>
+    <string name="global_action_dnaa">Znovu nezobrazovat</string>
+    <string name="global_action_settings">Nastavení</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">Snímek obrazovky</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">Svítilna</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Chyba</string>
     <string name="omnijaws_service_unkown">Žádné údaje o počasí</string>
@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">Nyní</string>
     <string name="omnijaws_package_not_available">OmniJaws není k dispozici</string>
     <string name="omnijaws_service_last_update">Poslední aktualizace:</string>
+    <string name="statusbar_items_title">Ikony na stavovém řádku</string>
 </resources>

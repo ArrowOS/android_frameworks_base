@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">Acum</string>
     <string name="omnijaws_package_not_available">OmniJaws not available</string>
     <string name="omnijaws_service_last_update">Ultima actualizare:</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>
