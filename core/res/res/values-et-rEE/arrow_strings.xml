@@ -17,16 +17,17 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">Taaskäivita Bootloader\'isse</string>
+    <string name="reboot_to_bootloader_message">Algkäivitus režiimi taaskäivitamine\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
+    <string name="reboot_to_recovery_title">Taaskäivita Recovery\'sse</string>
+    <string name="reboot_to_recovery_message">Taastamis režiimi taaskäivitamine\u2026</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_system_title">Taaskäivitage süsteem</string>
+    <string name="reboot_system_message">Süsteemi taaskäivitamine\u2026</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Pettepaketi allkiri</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Lubab rakendusel teeselda teistsugust rakendust. Pahatahtlikud tarkvarad võivad saada seda kasutada, et tungida rakenduse privaatsetesse andmetesse. Anna seda luba ainult, kui sa oled selles täiesti kindel!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>

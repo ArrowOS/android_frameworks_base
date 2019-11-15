@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Ändra paketets signatur</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Tillåter appen att låtsas vara en annan app. Skadliga program skulle kunna använda detta för att komma åt privata programdata. Var försiktig med att ge detta tillstånd!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>

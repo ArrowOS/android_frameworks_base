@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Signatura del paquet suplantat</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Permet que l\'aplicació faci veure que n\'és una de diferent. Les aplicacions malicioses poden utilitzar això per accedir a dades personals. Concediu aquest permís amb compte!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>

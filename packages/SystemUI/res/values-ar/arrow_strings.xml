@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">الآن</string>
     <string name="omnijaws_package_not_available">OmniJaws غير متاح</string>
     <string name="omnijaws_service_last_update">آخر تحديث:</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>

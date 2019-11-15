@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Palsukan tanda tangan paket</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Izinkan aplikasi untuk berpura-pura sebagai aplikasi lain. Aplikasi berbahaya mungkin dapat menggunakan ini untuk mengakses data aplikasi. Berikan izin ini dengan hati-hati!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>

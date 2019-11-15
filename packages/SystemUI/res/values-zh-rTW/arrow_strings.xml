@@ -69,8 +69,8 @@
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_description">使用 GPS 來判斷您的位置</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Columns</string>
-    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
+    <string name="qs_menu_item_columns">列</string>
+    <string name="qs_menu_item_columns_landscape">列 (橫向)</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -78,25 +78,25 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset</string>
-    <string name="qs_menu_item_titles">Show labels</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_reset">重設</string>
+    <string name="qs_menu_item_titles">顯示標籤</string>
+    <string name="qs_menu_item_qs_columns">快速欄列數</string>
+    <string name="qs_menu_item_columns_auto">自動</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
+    <string name="global_action_reboot">重新啟動</string>
+    <string name="global_action_reboot_more">重新啟動\u2026</string>
+    <string name="global_action_reboot_sub">系統</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_dismissable_dialog_text">進階重新啟動已停用。\n是否重新啟動\u003f</string>
+    <string name="global_action_dnaa">不再顯示</string>
+    <string name="global_action_settings">設定</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">螢幕截圖</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">手電筒</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">錯誤</string>
     <string name="omnijaws_service_unkown">無天氣資料</string>
@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">現在</string>
     <string name="omnijaws_package_not_available">OmniJaws 無法使用</string>
     <string name="omnijaws_service_last_update">上次更新：</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>

@@ -107,4 +107,5 @@
     <string name="omnijaws_current_text">இப்போது</string>
     <string name="omnijaws_package_not_available">Ommnijaws கிடைக்கவில்லை</string>
     <string name="omnijaws_service_last_update">கடைசி புதுப்பி:</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
 </resources>

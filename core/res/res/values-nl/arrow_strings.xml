@@ -29,4 +29,5 @@
     <string name="permlab_fakePackageSignature">Spoofpakket handtekening</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Hiermee kan de app zich voordoen als een andere app. Schadelijke apps kunnen dit mogelijk gebruiken om toegang te krijgen tot persoonlijke toepassingsgegevens. Verleen deze toestemming alleen met de nodige voorzichtigheid!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
 </resources>
