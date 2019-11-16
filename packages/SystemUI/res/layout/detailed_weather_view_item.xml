@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Copyright (C) 2019 ArrowOS
+  Copyright (C) 2019 The RevengeOS Project
+
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 2 of the License, or
   (at your option) any later version.
+
   This program is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   GNU General Public License for more details.
+
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<resources>
-    <!-- Network traffic monitor -->
-    <dimen name="net_traffic_txt_img_padding">1dp</dimen>
-
-    <!-- Burn in protection -->
-    <dimen name="horizontal_max_swift">3.0dp</dimen>
-    <dimen name="vertical_max_swift">1.0dp</dimen>
-
-	    <!-- OmniJaws -->
-    <dimen name="current_weather_image_size">30dp</dimen>
-    <dimen name="ForecastImageSize">50dp</dimen>
-    <dimen name="TemperatureTextMarginTop">5dp</dimen>
-    <dimen name="TemperatureTextMarginBottom">5dp</dimen>
-    <dimen name="ForecastItemsMarginVertical">10dp</dimen>
-
-</resources>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:systemui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/weather_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_weight="1">
+        
+</LinearLayout>
