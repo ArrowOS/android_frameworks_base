@@ -81,15 +81,6 @@
             android:paddingEnd="10dp">
 
             <TextView
-                android:id="@+id/current_weather_provider"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="start"
-                android:textAppearance="@style/TextAppearance.StatusBar.Expanded.Weather.Detailed"
-                android:layout_weight="1" />
-
-            <TextView
                 android:id="@+id/current_weather_timestamp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

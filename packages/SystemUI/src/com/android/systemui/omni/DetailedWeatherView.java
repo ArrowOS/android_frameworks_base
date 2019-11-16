@@ -80,7 +80,6 @@ public class DetailedWeatherView extends FrameLayout {
     private View mEmptyView;
     private ImageView mEmptyViewImage;
     private View mWeatherLine;
-    private TextView mProviderName;
 
     public DetailedWeatherView(Context context) {
         this(context, null);
@@ -113,7 +112,6 @@ public class DetailedWeatherView extends FrameLayout {
         mEmptyView = findViewById(android.R.id.empty);
         mEmptyViewImage = (ImageView) findViewById(R.id.empty_weather_image);
         mWeatherLine = findViewById(R.id.current_weather);
-        mProviderName = (TextView) findViewById(R.id.current_weather_provider);
         weatherforecastitemcontainer = findViewById(R.id.weather_forecast_items);
         forecastimagesize = getResources().getDimensionPixelSize(R.dimen.ForecastImageSize);
 
@@ -160,7 +158,6 @@ public class DetailedWeatherView extends FrameLayout {
         mWeatherLine.setVisibility(View.VISIBLE);
         weatherforecastitemcontainer.setVisibility(View.VISIBLE);
         mWeatherCity.setText(weatherData.city);
-        mProviderName.setText(weatherData.provider);
         mWeatherData.setText(weatherData.windSpeed + " " + weatherData.windUnits + " " + weatherData.pinWheel +" - " + weatherData.humidity);
 
         Long timeStamp = weatherData.timeStamp;
