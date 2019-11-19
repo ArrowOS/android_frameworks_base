@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bd4de074_acc12f14",
+        "filename": "packages/SystemUI/src/com/android/systemui/statusbar/policy/MobileSignalController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2019-11-19T06:13:05Z",
+      "side": 1,
+      "message": "This boolean should be false by default",
+      "revId": "75bfc23adf3583090a848fffe37511119845d5ff",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
