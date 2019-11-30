@@ -109,12 +109,6 @@
             android:icon="@drawable/ic_statusbar_call_strength"
             android:title="@string/status_bar_call_strength" />
 
-        <com.android.systemui.tuner.BatteryPreference
-            android:title="@string/battery"
-            android:icon="@drawable/ic_statusbar_battery"
-            android:summary="%s"
-            android:entries="@array/battery_options" />
-
         <com.android.systemui.tuner.ClockPreference
             android:title="@string/tuner_time"
             android:icon="@drawable/ic_statusbar_clock"
