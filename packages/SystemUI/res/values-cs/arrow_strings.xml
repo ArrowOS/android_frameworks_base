@@ -108,4 +108,6 @@
     <string name="omnijaws_package_not_available">OmniJaws není k dispozici</string>
     <string name="omnijaws_service_last_update">Poslední aktualizace:</string>
     <string name="statusbar_items_title">Ikony na stavovém řádku</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>

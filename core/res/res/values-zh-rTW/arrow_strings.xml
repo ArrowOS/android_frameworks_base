@@ -29,5 +29,5 @@
     <string name="permlab_fakePackageSignature">模仿應用程式簽名。</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">讓此應用程式偽裝成別的應用程式。惡意的應用程式將可能竊取您的個人資訊，請小心的給予權限。</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">狀態列圖示</string>
 </resources>
