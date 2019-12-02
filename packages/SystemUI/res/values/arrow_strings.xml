@@ -124,6 +124,7 @@
     <string name="status_bar_volte">VoLTE</string>
     <string name="status_bar_vpn">VPN</string>
     <string name="quick_settings_roaming_title">Roaming indicator</string>
+    <string name="status_bar_location">Location</string>
 
     <!-- Statusbar battery percentage -->
     <string name="tuner_battery_percent_disable">Don\'t show percentage</string>
@@ -131,5 +132,5 @@
     <string name="tuner_battery_percent_charging">Show percentage when charging</string>
     <string name="tuner_battery_percent_hide">Don\'t show this icon</string>
     <string name="tuner_battery_percent_title">Battery percent</string>
-    <string name="tuner_status_bar_show_battery_image">Show battery image</string>
+    <string name="tuner_status_bar_show_battery_image">Battery image</string>
 </resources>
