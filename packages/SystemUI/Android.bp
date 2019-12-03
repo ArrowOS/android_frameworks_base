@@ -73,10 +73,7 @@ android_library {
         "ims-common",
     ],
 
-    aaptflags: [
-        "--extra-packages",
-        "com.android.keyguard",
-    ],
+    kotlincflags: ["-Xjvm-default=enable"],
 
     plugins: ["dagger2-compiler-2.19"],
 }
@@ -115,6 +112,7 @@ android_library {
         "androidx.lifecycle_lifecycle-extensions",
         "androidx.dynamicanimation_dynamicanimation",
         "androidx-constraintlayout_constraintlayout",
+        "iconloader_base",
         "SystemUI-tags",
         "SystemUI-proto",
         "metrics-helper-lib",
@@ -131,9 +129,10 @@ android_library {
         "android.test.base",
         "ims-common",
     ],
+    kotlincflags: ["-Xjvm-default=enable"],
     aaptflags: [
         "--extra-packages",
-        "com.android.keyguard:com.android.systemui",
+        "com.android.systemui",
     ],
     plugins: ["dagger2-compiler-2.19"],
 }
@@ -159,11 +158,9 @@ android_app {
         "ims-common",
     ],
 
+    kotlincflags: ["-Xjvm-default=enable"],
+
     dxflags: ["--multi-dex"],
-    aaptflags: [
-        "--extra-packages",
-        "com.android.keyguard",
-    ],
     required: ["privapp_whitelist_com.android.systemui"],
 
 }
@@ -180,10 +177,6 @@ android_app {
     privileged: true,
 
     dxflags: ["--multi-dex"],
-    aaptflags: [
-        "--extra-packages",
-        "com.android.keyguard",
-    ],
     optimize: {
         proguard_flags_files: ["proguard.flags", "legacy/recents/proguard.flags"],
     },
@@ -195,6 +188,8 @@ android_app {
         "telephony-common",
         "ims-common",
     ],
+
+    kotlincflags: ["-Xjvm-default=enable"],
 
     srcs: [
         "legacy/recents/src/**/*.java",
