@@ -31,7 +31,6 @@ import com.android.systemui.ExpandHelper;
 import com.android.systemui.Gefingerpoken;
 import com.android.systemui.Interpolators;
 import com.android.systemui.R;
-import com.android.systemui.classifier.FalsingManagerFactory;
 import com.android.systemui.plugins.FalsingManager;
 import com.android.systemui.statusbar.notification.row.ExpandableView;
 
@@ -68,8 +67,9 @@ public class DragDownHelper implements Gefingerpoken {
     private long mDoubleTapTimeout;
     private Runnable mGoToSleep;
 
-    public DragDownHelper(final Context context, View host, ExpandHelper.Callback callback,
-            DragDownCallback dragDownCallback) {
+    public DragDownHelper(Context context, View host, ExpandHelper.Callback callback,
+            DragDownCallback dragDownCallback,
+            FalsingManager falsingManager) {
         mMinDragDistance = context.getResources().getDimensionPixelSize(
                 R.dimen.keyguard_drag_down_min_distance);
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
@@ -77,7 +77,7 @@ public class DragDownHelper implements Gefingerpoken {
         mCallback = callback;
         mDragDownCallback = dragDownCallback;
         mHost = host;
-        mFalsingManager = FalsingManagerFactory.getInstance(context);
+        mFalsingManager = falsingManager;
         mStatusBarHeaderHeight = context
                 .getResources().getDimensionPixelSize(R.dimen.status_bar_header_height_keyguard);
         mGoToSleep = new Runnable() {
@@ -125,7 +125,7 @@ public class DragDownHelper implements Gefingerpoken {
                     mInitialTouchY = y;
                     mInitialTouchX = x;
                     mDragDownCallback.onTouchSlopExceeded();
-                    return true;
+                    return mStartingChild != null || mDragDownCallback.isDragDownAnywhereEnabled();
                 }
                 break;
         }
@@ -195,7 +195,11 @@ public class DragDownHelper implements Gefingerpoken {
         if (mStartingChild == null) {
             mStartingChild = findView(x, y);
             if (mStartingChild != null) {
-                mCallback.setUserLockedChild(mStartingChild, true);
+                if (mDragDownCallback.isDragDownEnabledForView(mStartingChild)) {
+                    mCallback.setUserLockedChild(mStartingChild, true);
+                } else {
+                    mStartingChild = null;
+                }
             }
         }
     }
@@ -270,6 +274,10 @@ public class DragDownHelper implements Gefingerpoken {
         return mDraggingDown;
     }
 
+    public boolean isDragDownEnabled() {
+        return mDragDownCallback.isDragDownEnabledForView(null);
+    }
+
     public interface DragDownCallback {
 
         /**
@@ -286,6 +294,17 @@ public class DragDownHelper implements Gefingerpoken {
         void onTouchSlopExceeded();
         void setEmptyDragAmount(float amount);
         boolean isFalsingCheckNeeded();
+
+        /**
+         * Is dragging down enabled on a given view
+         * @param view The view to check or {@code null} to check if it's enabled at all
+         */
+        boolean isDragDownEnabledForView(ExpandableView view);
+
+        /**
+         * @return if drag down is enabled anywhere, not just on selected views.
+         */
+        boolean isDragDownAnywhereEnabled();
     }
 
     public void updateDoubleTapToSleep(boolean updateDoubleTapToSleep) {

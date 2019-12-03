@@ -80,7 +80,9 @@ public class KeyguardIndicationController implements StateListener,
 
     private static final int MSG_HIDE_TRANSIENT = 1;
     private static final int MSG_CLEAR_BIOMETRIC_MSG = 2;
+    private static final int MSG_SWIPE_UP_TO_UNLOCK = 3;
     private static final long TRANSIENT_BIOMETRIC_ERROR_TIMEOUT = 1300;
+    private static final float BOUNCE_ANIMATION_FINAL_Y = 0f;
 
     private final Context mContext;
     private final ShadeController mShadeController;
@@ -330,6 +332,7 @@ public class KeyguardIndicationController implements StateListener,
         mTransientIndication = transientIndication;
         mTransientTextColorState = textColorState;
         mHandler.removeMessages(MSG_HIDE_TRANSIENT);
+        mHandler.removeMessages(MSG_SWIPE_UP_TO_UNLOCK);
         if (mDozing && !TextUtils.isEmpty(mTransientIndication)) {
             // Make sure this doesn't get stuck and burns in. Acquire wakelock until its cleared.
             mWakeLock.setAcquired(true);
@@ -421,7 +424,6 @@ public class KeyguardIndicationController implements StateListener,
         int animateDownDuration = mContext.getResources().getInteger(
                 R.integer.wired_charging_keyguard_text_animation_duration_down);
         textView.animate().cancel();
-        float translation = textView.getTranslationY();
         ViewClippingUtil.setClippingDeactivated(textView, true, mClippingParams);
         textView.animate()
                 .translationYBy(yTranslation)
@@ -437,7 +439,7 @@ public class KeyguardIndicationController implements StateListener,
 
                     @Override
                     public void onAnimationCancel(Animator animation) {
-                        textView.setTranslationY(translation);
+                        textView.setTranslationY(BOUNCE_ANIMATION_FINAL_Y);
                         mCancelled = true;
                     }
 
@@ -451,15 +453,11 @@ public class KeyguardIndicationController implements StateListener,
                         textView.animate()
                                 .setDuration(animateDownDuration)
                                 .setInterpolator(Interpolators.BOUNCE)
-                                .translationY(translation)
+                                .translationY(BOUNCE_ANIMATION_FINAL_Y)
                                 .setListener(new AnimatorListenerAdapter() {
                                     @Override
-                                    public void onAnimationCancel(Animator animation) {
-                                        textView.setTranslationY(translation);
-                                    }
-
-                                    @Override
                                     public void onAnimationEnd(Animator animation) {
+                                        textView.setTranslationY(BOUNCE_ANIMATION_FINAL_Y);
                                         ViewClippingUtil.setClippingDeactivated(textView, false,
                                                 mClippingParams);
                                     }
@@ -583,9 +581,25 @@ public class KeyguardIndicationController implements StateListener,
                 hideTransientIndication();
             } else if (msg.what == MSG_CLEAR_BIOMETRIC_MSG) {
                 mLockIcon.setTransientBiometricsError(false);
+            } else if (msg.what == MSG_SWIPE_UP_TO_UNLOCK) {
+                showSwipeUpToUnlock();
             }
         }
     };
+
+    private void showSwipeUpToUnlock() {
+        if (mDozing) {
+            return;
+        }
+
+        if (mStatusBarKeyguardViewManager.isBouncerShowing()) {
+            String message = mContext.getString(R.string.keyguard_retry);
+            mStatusBarKeyguardViewManager.showBouncerMessage(message, mInitialTextColorState);
+        } else if (mKeyguardUpdateMonitor.isScreenOn()) {
+            showTransientIndication(mContext.getString(R.string.keyguard_unlock));
+            hideTransientIndicationDelayed(BaseKeyguardCallback.HIDE_DELAY_MS);
+        }
+    }
 
     public void setDozing(boolean dozing) {
         if (mDozing == dozing) {
@@ -669,13 +683,20 @@ public class KeyguardIndicationController implements StateListener,
             if (!updateMonitor.isUnlockingWithBiometricAllowed()) {
                 return;
             }
-            animatePadlockError();
+            boolean showSwipeToUnlock =
+                    msgId == KeyguardUpdateMonitor.BIOMETRIC_HELP_FACE_NOT_RECOGNIZED;
             if (mStatusBarKeyguardViewManager.isBouncerShowing()) {
                 mStatusBarKeyguardViewManager.showBouncerMessage(helpString,
                         mInitialTextColorState);
             } else if (updateMonitor.isScreenOn()) {
                 showTransientIndication(helpString);
-                hideTransientIndicationDelayed(TRANSIENT_BIOMETRIC_ERROR_TIMEOUT);
+                if (!showSwipeToUnlock) {
+                    hideTransientIndicationDelayed(TRANSIENT_BIOMETRIC_ERROR_TIMEOUT);
+                }
+            }
+            if (showSwipeToUnlock) {
+                mHandler.sendMessageDelayed(mHandler.obtainMessage(MSG_SWIPE_UP_TO_UNLOCK),
+                        TRANSIENT_BIOMETRIC_ERROR_TIMEOUT);
             }
         }
 
@@ -687,7 +708,11 @@ public class KeyguardIndicationController implements StateListener,
                 return;
             }
             animatePadlockError();
-            if (mStatusBarKeyguardViewManager.isBouncerShowing()) {
+            if (msgId == FaceManager.FACE_ERROR_TIMEOUT) {
+                // The face timeout message is not very actionable, let's ask the user to
+                // manually retry.
+                showSwipeUpToUnlock();
+            } else if (mStatusBarKeyguardViewManager.isBouncerShowing()) {
                 mStatusBarKeyguardViewManager.showBouncerMessage(errString, mInitialTextColorState);
             } else if (updateMonitor.isScreenOn()) {
                 showTransientIndication(errString);
@@ -765,13 +790,5 @@ public class KeyguardIndicationController implements StateListener,
                 updateIndication(false);
             }
         }
-
-        @Override
-        public void onKeyguardBouncerChanged(boolean bouncer) {
-            if (mLockIcon == null) {
-                return;
-            }
-            mLockIcon.setBouncerVisible(bouncer);
-        }
-    };
+    }
 }
