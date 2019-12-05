@@ -107,5 +107,7 @@
     <string name="omnijaws_current_text">Praegu</string>
     <string name="omnijaws_package_not_available">OmniJaws ei ole kättesaadav</string>
     <string name="omnijaws_service_last_update">Viimane uuendus:</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Olekuriba ikoonid</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>

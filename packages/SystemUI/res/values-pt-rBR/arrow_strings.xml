@@ -30,13 +30,13 @@
     <string name="accessibility_quick_settings_heads_up_off">Notificações pop-up desativadas.</string>
     <string name="accessibility_quick_settings_heads_up_on">Notificações pop-up ativadas.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Notificações pop-up foram desativadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">As notificações pop-up foram ativadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notificações pop-up foram ativadas.</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Sincronização</string>
     <string name="accessibility_quick_settings_sync_off">Sincronização desligada</string>
     <string name="accessibility_quick_settings_sync_on">Sincronização ativada</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sincronização desativada</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sincronização ativada</string>
+    <string name="accessibility_quick_settings_sync_changed_off">A sincronização foi desativada</string>
+    <string name="accessibility_quick_settings_sync_changed_on">A sincronização foi ativada</string>
     <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
     <string name="accessibility_quick_settings_location_battery_saving">Localização: modo de economia de bateria.</string>
     <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
@@ -44,7 +44,7 @@
     <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
     <string name="accessibility_quick_settings_location_high_accuracy">Localização: modo de alta precisão.</string>
     <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_battery_saving_label">Economia de Bateria</string>
+    <string name="quick_settings_location_battery_saving_label">Economia de bateria</string>
     <string name="quick_settings_location_battery_saving_label_twoline">Economia\nde energia</string>
     <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
     <string name="quick_settings_location_gps_only_label">Somente GPS</string>
@@ -67,7 +67,7 @@
     <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
     <string name="quick_settings_location_detail_mode_battery_saving_description">Usar Wi-Fi, Bluetooth ou redes celulares para determinar a localização</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_description">Utiliza somente o GPS para determinar sua localização</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_description">Usar o GPS para determinar sua localização</string>
     <!-- QS Config -->
     <string name="qs_menu_item_columns">Colunas</string>
     <string name="qs_menu_item_columns_landscape">Colunas em paisagem</string>
@@ -79,7 +79,7 @@
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
     <string name="qs_menu_item_reset">Redefinir</string>
-    <string name="qs_menu_item_titles">Alterna visibilidade das etiquetas</string>
+    <string name="qs_menu_item_titles">Mostrar etiquetas</string>
     <string name="qs_menu_item_qs_columns">Colunas de barra rápida</string>
     <string name="qs_menu_item_columns_auto">Automático</string>
     <!-- Power Menu -->
@@ -107,5 +107,7 @@
     <string name="omnijaws_current_text">Agora</string>
     <string name="omnijaws_package_not_available">OmniJaws indisponível</string>
     <string name="omnijaws_service_last_update">Última atualização:</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Ícones da barra de status</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>
