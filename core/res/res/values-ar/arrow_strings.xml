@@ -17,17 +17,17 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">إعادة التشغيل الى وضع البوتلودر</string>
+    <string name="reboot_to_bootloader_message">يتم إعادة التشغيل إلى وضع البوتلودر</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
+    <string name="reboot_to_recovery_title">اعادة التشغيل إلى وضع الإسترداد</string>
+    <string name="reboot_to_recovery_message">يتم اعادة التشغيل إلى وضع الإسترداد</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_system_title">إعادة تشغيل النظام</string>
+    <string name="reboot_system_message">يتم إعادة تشغيل النظام</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">تزييف التوقيع الرقمي للحزمة</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">السمح للتطبيق بالتظاهر بأنه تطبيق آخر. يمكن للتطبيقات الخبيثة أن تستخدم هذه الميزة للوصول إلى البيانات الخاصة للتطبيق. توخٙ الحذر عند منح هذا الإذن!</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
 </resources>
