@@ -38,7 +38,7 @@
     <string name="accessibility_quick_settings_sync_changed_off">Synchronisatie uitgeschakeld</string>
     <string name="accessibility_quick_settings_sync_changed_on">Synchronisatie ingeschakeld</string>
     <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Locatiebepaling: accubesparing.</string>
     <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
     <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
     <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
@@ -108,4 +108,6 @@
     <string name="omnijaws_package_not_available">OmniJaws is niet beschikbaar</string>
     <string name="omnijaws_service_last_update">Laatst bijgewerkt:</string>
     <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>

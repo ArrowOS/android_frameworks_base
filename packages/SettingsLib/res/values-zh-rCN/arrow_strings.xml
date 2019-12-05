@@ -19,4 +19,10 @@
     <string name="screen_zoom_summary_smaller">小</string>
     <!-- Description for the screen zoom level that makes interface elements smallest. [CHAR LIMIT=24] -->
     <string name="screen_zoom_summary_smallest">最小</string>
+    <!-- Deep sleep info -->
+    <string name="status_deep_sleep">(深度休眠：%1$d%2$s)</string>
+    <!-- Caffeine QS tile -->
+    <string name="quick_settings_caffeine_label">保持亮屏</string>
+    <string name="accessibility_quick_settings_caffeine_off">关闭保持亮屏</string>
+    <string name="accessibility_quick_settings_caffeine_on">开启保持亮屏</string>
 </resources>

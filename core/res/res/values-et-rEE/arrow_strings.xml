@@ -29,5 +29,5 @@
     <string name="permlab_fakePackageSignature">Pettepaketi allkiri</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Lubab rakendusel teeselda teistsugust rakendust. Pahatahtlikud tarkvarad võivad saada seda kasutada, et tungida rakenduse privaatsetesse andmetesse. Anna seda luba ainult, kui sa oled selles täiesti kindel!</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">Olekuriba ikoon</string>
 </resources>

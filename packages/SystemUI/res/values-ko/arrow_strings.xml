@@ -108,4 +108,6 @@
     <string name="omnijaws_package_not_available">OmniJaws를 사용할 수 없음</string>
     <string name="omnijaws_service_last_update">최근 업데이트</string>
     <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>

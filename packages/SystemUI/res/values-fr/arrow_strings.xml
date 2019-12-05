@@ -69,8 +69,8 @@
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_description">Utiliser le GPS pour déterminer la position</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Columns</string>
-    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
+    <string name="qs_menu_item_columns">Colonnes</string>
+    <string name="qs_menu_item_columns_landscape">Colonnes en paysage</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -78,25 +78,25 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset</string>
-    <string name="qs_menu_item_titles">Show labels</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_reset">Réinitialiser</string>
+    <string name="qs_menu_item_titles">Afficher les libellés</string>
+    <string name="qs_menu_item_qs_columns">Colonnes de la barre de raccourcis</string>
+    <string name="qs_menu_item_columns_auto">Automatique</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_reboot">Redémarrer</string>
+    <string name="global_action_reboot_more">Redémarrage\u2026</string>
+    <string name="global_action_reboot_sub">Système</string>
+    <string name="global_action_reboot_recovery">Récupération</string>
+    <string name="global_action_reboot_bootloader">Amorçage</string>
+    <string name="global_action_dismissable_dialog_text">Le redémarrage avancé est désactivé.\nVoulez-vous redémarrer\u003f</string>
+    <string name="global_action_dnaa">Ne plus afficher</string>
+    <string name="global_action_settings">Paramètres</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">Capture d\'écran</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">Lampe-torche</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Erreur</string>
     <string name="omnijaws_service_unkown">Pas de données météorologiques</string>
@@ -107,5 +107,7 @@
     <string name="omnijaws_current_text">À l\'instant</string>
     <string name="omnijaws_package_not_available">OmniJaws indisponible</string>
     <string name="omnijaws_service_last_update">Dernière mise à jour :</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Icônes de la Barre d\'état</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
 </resources>

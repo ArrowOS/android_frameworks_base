@@ -19,4 +19,10 @@
     <string name="screen_zoom_summary_smaller">صغير جدٓا</string>
     <!-- Description for the screen zoom level that makes interface elements smallest. [CHAR LIMIT=24] -->
     <string name="screen_zoom_summary_smallest">أصغر</string>
+    <!-- Deep sleep info -->
+    <string name="status_deep_sleep">(سبات عميق: %1$d%2$s)</string>
+    <!-- Caffeine QS tile -->
+    <string name="quick_settings_caffeine_label">كافيين</string>
+    <string name="accessibility_quick_settings_caffeine_off">كافيين معطل</string>
+    <string name="accessibility_quick_settings_caffeine_on">كافيين مفعل</string>
 </resources>
