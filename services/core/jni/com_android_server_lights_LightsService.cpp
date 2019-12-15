@@ -24,6 +24,8 @@
 #include <android/hardware/light/2.0/types.h>
 #include <vendor/samsung/hardware/light/2.0/ISecLight.h>
 #include <vendor/samsung/hardware/light/2.0/types.h>
+#include <vendor/samsung/hardware/light/3.0/ISehLight.h>
+#include <vendor/samsung/hardware/light/3.0/types.h>
 #include <android-base/chrono_utils.h>
 #include <utils/misc.h>
 #include <utils/Log.h>
@@ -43,9 +45,13 @@ using Return     = ::android::hardware::Return<T>;
 
 using ISecLight  = ::vendor::samsung::hardware::light::V2_0::ISecLight;
 using SecType    = ::vendor::samsung::hardware::light::V2_0::SecType;
+using ISehLight  = ::vendor::samsung::hardware::light::V3_0::ISehLight;
+using SehType    = ::vendor::samsung::hardware::light::V3_0::SehType;
+using SehLightState = ::vendor::samsung::hardware::light::V3_0::SehLightState;
 static bool sLightSupported = true;
 
 static sp<ISecLight> sSecHal;
+static sp<ISehLight> sSehHal;
 static bool sSecTried = false;
 
 static bool validate(jint light, jint flash, jint brightness) {
@@ -150,6 +156,7 @@ static void setLight_native(
 
     if(!sSecTried) {
         sSecHal = ISecLight::getService();
+        sSehHal = ISehLight::getService();
         //sSecTried = true;
     }
 
@@ -162,6 +169,25 @@ static void setLight_native(
             android::base::Timer t;
             Return<Status> ret = sSecHal->setLightSec(type, state);
             processReturn(ret, static_cast<Type>(light), state);
+            if (t.duration() > 50ms) ALOGD("Excessive delay setting light");
+        }
+	return;
+    }
+
+    if(sSehHal != nullptr && light == 0 && flashMode == static_cast<jint>(Flash::HARDWARE)) {
+        SehType type = static_cast<SehType>(light);
+        SehLightState state {};
+        state.flashMode = Flash::NONE;
+	Brightness brightness = static_cast<Brightness>(brightnessMode);
+	state.brightnessMode = brightness;
+	state.extendedBrightness = colorARGB;
+
+        {
+            android::base::Timer t;
+            Return<Status> ret = sSehHal->sehSetLight(type, state);
+	    if(!ret.isOk()) {
+		    ALOGE("Failed to issue set light command.");
+	    }
             if (t.duration() > 50ms) ALOGD("Excessive delay setting light");
         }
 	return;

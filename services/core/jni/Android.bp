@@ -136,6 +136,7 @@ cc_defaults {
         "suspend_control_aidl_interface-cpp",
 
         "vendor.samsung.hardware.light@2.0",
+        "vendor.samsung.hardware.light@3.0",
     ],
 
     static_libs: [
