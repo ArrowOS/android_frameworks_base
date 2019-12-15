@@ -57,6 +57,7 @@ public class FacolaView extends ImageView implements OnTouchListener {
 
     private final WindowManager mWM;
     private final boolean samsungFod = samsungHasCmd("fod_enable");
+    private final boolean noDim;
 
     private boolean mHidden = true;
     FacolaView(Context context) {
@@ -68,6 +69,7 @@ public class FacolaView extends ImageView implements OnTouchListener {
         mHandlerThread.start();
         mHandler = new Handler(mHandlerThread.getLooper());
 
+        noDim = android.os.SystemProperties.getBoolean("persist.sys.phh.nodim", false);
         String[] location = android.os.SystemProperties.get("persist.vendor.sys.fp.fod.location.X_Y", "").split(",");
         String[] size = android.os.SystemProperties.get("persist.vendor.sys.fp.fod.size.width_height", "").split(",");
         Slog.d("PHH-Enroll", "FacolaView hello");
@@ -149,8 +151,10 @@ public class FacolaView extends ImageView implements OnTouchListener {
             return false;
         }
 
-        mParams.dimAmount = TOUCHED_DIM;
-        mParams.screenBrightness = 1.0f;
+	if(!noDim) {
+		mParams.dimAmount = TOUCHED_DIM;
+		mParams.screenBrightness = 1.0f;
+	}
         mWM.updateViewLayout(this, mParams);
 
         return true;
