@@ -135,6 +135,7 @@ cc_defaults {
         "android.system.suspend@1.0",
         "suspend_control_aidl_interface-cpp",
 
+        "vendor.samsung.hardware.miscpower@2.0",
         "vendor.samsung.hardware.light@2.0",
         "vendor.samsung.hardware.light@3.0",
     ],
