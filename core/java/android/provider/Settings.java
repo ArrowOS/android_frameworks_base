@@ -8697,6 +8697,16 @@ public final class Settings {
                 "torch_power_button_gesture";
 
         /**
+         * Set edge gesture Y dead zone
+         * 0 - disabled - stock behavior - default
+         * 1 - smaller top area of the screen
+         * 2 - small top area of the screen
+         * 3 - half top of the screen
+         * @hide
+         */
+        public static final String EDGE_GESTURE_Y_DEAD_ZONE = "edge_gesture_y_dead_zone";
+
+        /**
          * Whether or not the flashlight (camera torch mode) is available required to turn
          * on flashlight.
          *
