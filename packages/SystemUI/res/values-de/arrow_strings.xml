@@ -80,7 +80,7 @@
     <string name="qs_menu_item_columns_nine">9</string>
     <string name="qs_menu_item_reset">Zurücksetzen</string>
     <string name="qs_menu_item_titles">Beschriftungen anzeigen</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_qs_columns">Spalten (Mini-Kacheln)</string>
     <string name="qs_menu_item_columns_auto">Automatisch</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Neustarten</string>
@@ -88,7 +88,7 @@
     <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dismissable_dialog_text">Erweiterter Neustart ist deaktiviert.\nWollen Sie\u003f neustarten?</string>
     <string name="global_action_dnaa">Nicht erneut anzeigen</string>
     <string name="global_action_settings">Einstellungen</string>
     <!-- Global actions -->

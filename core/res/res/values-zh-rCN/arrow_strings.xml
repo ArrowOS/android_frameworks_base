@@ -17,11 +17,11 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">重启至 Bootloader</string>
-    <string name="reboot_to_bootloader_message">正在重启至 Bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">重启至引导模式</string>
+    <string name="reboot_to_bootloader_message">正在重启至引导模式\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">重启至 Recovery</string>
-    <string name="reboot_to_recovery_message">正在重启至 Recovery\u2026</string>
+    <string name="reboot_to_recovery_title">重启至恢复模式</string>
+    <string name="reboot_to_recovery_message">正在重启至恢复模式\u2026</string>
     <!-- advanced reboot system -->
     <string name="reboot_system_title">重启系统</string>
     <string name="reboot_system_message">正在重启系统\u2026</string>
