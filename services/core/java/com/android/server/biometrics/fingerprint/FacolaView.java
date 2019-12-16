@@ -119,10 +119,11 @@ public class FacolaView extends ImageView implements OnTouchListener {
         if(mInsideCircle) {
             try {
                 int nitValue = 2;
-                if(mXiaomiFingerprint != null)
+                if(mXiaomiFingerprint != null) {
                     mXiaomiFingerprint.extCmd(0xa, nitValue);
-                if(mGoodixFingerprint != null)
-                    mXiaomiFingerprint.extCmd(10, 1);
+                } else if(mGoodixFingerprint != null) {
+                    mGoodixFingerprint.goodixExtendCommand(10, 1);
+                }
             } catch(Exception e) {
                 Slog.d("PHH-Enroll", "Failed calling xiaomi fp extcmd");
             }
@@ -130,10 +131,11 @@ public class FacolaView extends ImageView implements OnTouchListener {
             canvas.drawCircle(mW/2, mH/2, (float) (mW/2.0f), this.mPaintFingerprint);
         } else {
             try {
-                if(mXiaomiFingerprint != null)
+                if(mXiaomiFingerprint != null) {
                     mXiaomiFingerprint.extCmd(0xa, 0);
-                if(mGoodixFingerprint != null)
-                    mXiaomiFingerprint.extCmd(10, 0);
+                } else if(mGoodixFingerprint != null) {
+                    mGoodixFingerprint.goodixExtendCommand(10, 0);
+                }
             } catch(Exception e) {
                 Slog.d("PHH-Enroll", "Failed calling xiaomi fp extcmd");
             }
@@ -226,8 +228,11 @@ public class FacolaView extends ImageView implements OnTouchListener {
         if(mX == -1 || mY == -1 || mW == -1 || mH == -1) return;
 
         try {
-            if(mXiaomiFingerprint != null)
+            if(mXiaomiFingerprint != null) {
                 mXiaomiFingerprint.extCmd(0xa, 0);
+            } else if(mGoodixFingerprint != null) {
+                mXiaomiFingerprint.extCmd(10, 0);
+            }
         } catch(Exception e) {
             Slog.d("PHH-Enroll", "Failed calling xiaomi fp extcmd");
         }
