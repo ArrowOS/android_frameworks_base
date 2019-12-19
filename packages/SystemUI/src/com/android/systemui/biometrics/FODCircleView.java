@@ -100,14 +100,8 @@ public class FODCircleView extends ImageView {
             if (dreaming) {
                 mBurnInProtectionTimer = new Timer();
                 mBurnInProtectionTimer.schedule(new BurnInProtectionTask(), 0, 60 * 1000);
-                if (!mWakeLock.isHeld()) {
-                    mWakeLock.acquire();
-                }
             } else if (mBurnInProtectionTimer != null) {
                 mBurnInProtectionTimer.cancel();
-                if (mWakeLock.isHeld()) {
-                    mWakeLock.release();
-                }
             }
         }
 
@@ -152,6 +146,8 @@ public class FODCircleView extends ImageView {
 
         mWindowManager = context.getSystemService(WindowManager.class);
 
+        mDisplayManager = context.getSystemService(DisplayManager.class);
+
         mNavigationBarSize = res.getDimensionPixelSize(R.dimen.navigation_bar_size);
 
         mDreamingMaxOffset = (int) (mSize * 0.1f);
@@ -178,8 +174,13 @@ public class FODCircleView extends ImageView {
         mUpdateMonitor = KeyguardUpdateMonitor.getInstance(context);
         mUpdateMonitor.registerCallback(mMonitorCallback);
 
+        updateCutoutFlags();
+
+        Dependency.get(ConfigurationController.class).addCallback(this);
+
         mPowerManager = context.getSystemService(PowerManager.class);
-        mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "FODCircleView");
+        mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+                FODCircleView.class.getSimpleName());
     }
 
     @Override
@@ -273,6 +274,10 @@ public class FODCircleView extends ImageView {
         mIsCircleShowing = true;
 
         setKeepScreenOn(true);
+
+        if (mIsDreaming) {
+            mWakeLock.acquire(300);
+        }
 
         setDim(true);
         updateAlpha();
