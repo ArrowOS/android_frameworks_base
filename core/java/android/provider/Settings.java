@@ -4726,6 +4726,12 @@ public final class Settings {
         public static final String GLOBAL_ACTIONS_SCREENSHOT = "global_actions_screenshot";
 
         /**
+         * Whether the Screenrecord button should be shown in the power menu.
+         * @hide
+         */
+        public static final String GLOBAL_ACTIONS_SCREENRECORD = "global_actions_screenrecord";
+
+        /**
          * Whether to display settings in the power menu
          *
          * @hide
@@ -9463,7 +9469,6 @@ public final class Settings {
          * @hide
          */
         public static final String LOCKDOWN_IN_POWER_MENU = "lockdown_in_power_menu";
-
         private static final Validator LOCKDOWN_IN_POWER_MENU_VALIDATOR = BOOLEAN_VALIDATOR;
 
         /**

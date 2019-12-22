@@ -459,7 +459,10 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
                     mItems.add(new ScreenshotAction());
                 }
             } else if (GLOBAL_ACTION_KEY_SCREENRECORD.equals(actionKey)) {
-                mItems.add(new ScreenrecordAction());
+                if (Settings.System.getInt(mContext.getContentResolver(),
+                        Settings.System.GLOBAL_ACTIONS_SCREENRECORD, 0) == 1) {
+                    mItems.add(new ScreenrecordAction());
+                }
             } else if (GLOBAL_ACTION_KEY_FLASHLIGHT.equals(actionKey)) {
                 if (Settings.System.getInt(mContext.getContentResolver(),
                         Settings.System.GLOBAL_ACTIONS_FLASHLIGHT, 0) == 1) {
