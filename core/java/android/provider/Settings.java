@@ -4777,6 +4777,13 @@ public final class Settings {
          */
         public static final String MULTI_AUDIO_FOCUS_ENABLED = "multi_audio_focus_enabled";
 
+        /* ArrowOS Custom Settings */
+        /**
+         * This enables or disables the home pill visible at the bottom of the screen on
+         * gesture mode.The value is boolean (1 or 0)
+         */
+        public static final String GESTURE_PILL_TOGGLE = "gesture_pill_toggle";
+
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
@@ -4853,6 +4860,7 @@ public final class Settings {
             PUBLIC_SETTINGS.add(HAPTIC_FEEDBACK_ENABLED);
             PUBLIC_SETTINGS.add(SHOW_WEB_SUGGESTIONS);
             PUBLIC_SETTINGS.add(VIBRATE_WHEN_RINGING);
+            PUBLIC_SETTINGS.add(GESTURE_PILL_TOGGLE);
         }
 
         /**
