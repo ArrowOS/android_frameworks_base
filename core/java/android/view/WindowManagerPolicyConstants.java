@@ -59,11 +59,13 @@ public interface WindowManagerPolicyConstants {
     int NAV_BAR_MODE_3BUTTON = 0;
     int NAV_BAR_MODE_2BUTTON = 1;
     int NAV_BAR_MODE_GESTURAL = 2;
+    int NAV_BAR_MODE_GESTURAL_NO_PILL = 3;
 
     // Associated overlays for each nav bar mode
     String NAV_BAR_MODE_3BUTTON_OVERLAY = "com.android.internal.systemui.navbar.threebutton";
     String NAV_BAR_MODE_2BUTTON_OVERLAY = "com.android.internal.systemui.navbar.twobutton";
     String NAV_BAR_MODE_GESTURAL_OVERLAY = "com.android.internal.systemui.navbar.gestural";
+    String NAV_BAR_MODE_GESTURAL_OVERLAY_NO_PILL = "com.android.internal.systemui.navbar.gestural_no_pill";
 
     /**
      * Sticky broadcast of the current HDMI plugged state.
