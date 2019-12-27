@@ -19,6 +19,8 @@ package com.android.systemui.statusbar.phone;
 import static android.content.Intent.ACTION_OVERLAY_CHANGED;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL;
 import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_NO_PILL;
+import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY_NO_PILL;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -131,7 +133,7 @@ public class NavigationModeController implements Dumpable {
     public void updateCurrentInteractionMode(boolean notify) {
         mCurrentUserContext = getCurrentUserContext();
         int mode = getCurrentInteractionMode(mCurrentUserContext);
-        if (mode == NAV_BAR_MODE_GESTURAL) {
+        if (mode == NAV_BAR_MODE_GESTURAL || mode == NAV_BAR_MODE_GESTURAL_NO_PILL) {
             switchToDefaultGestureNavOverlayIfNecessary();
         }
         mUiBgExecutor.execute(() ->
@@ -189,16 +191,26 @@ public class NavigationModeController implements Dumpable {
 
     private void switchToDefaultGestureNavOverlayIfNecessary() {
         final int userId = mCurrentUserContext.getUserId();
+        int mode = getCurrentInteractionMode(mCurrentUserContext);
         try {
             final IOverlayManager om = IOverlayManager.Stub.asInterface(
                     ServiceManager.getService(Context.OVERLAY_SERVICE));
-            final OverlayInfo info = om.getOverlayInfo(NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
+            final OverlayInfo info;
+            if (mode == NAV_BAR_MODE_GESTURAL) {
+                info = om.getOverlayInfo(NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
+            } else if (mode == NAV_BAR_MODE_GESTURAL_NO_PILL) {
+                info = om.getOverlayInfo(NAV_BAR_MODE_GESTURAL_OVERLAY_NO_PILL, userId);
+            }
             if (info != null && !info.isEnabled()) {
                 // Enable the default gesture nav overlay, and move the back gesture inset scale to
                 // Settings.Secure for left and right sensitivity.
                 final int curInset = mCurrentUserContext.getResources().getDimensionPixelSize(
                         com.android.internal.R.dimen.config_backGestureInset);
-                om.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
+                if (mode == NAV_BAR_MODE_GESTURAL) {
+                    om.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
+                } else if (mode == NAV_BAR_MODE_GESTURAL_NO_PILL) {
+                    om.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY_NO_PILL, userId);
+                }
                 final int defInset = mCurrentUserContext.getResources().getDimensionPixelSize(
                         com.android.internal.R.dimen.config_backGestureInset);
 
