@@ -4949,6 +4949,13 @@ public final class Settings {
          */
         public static final String WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
 
+        /** @hide */
+        public static final String GESTURE_NO_PILL = "gesture_no_pill";
+
+        /** @hide */
+        private static final Validator GESTURE_NO_PILL =
+                BOOLEAN_VALIDATOR;
+
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
@@ -5032,7 +5039,8 @@ public final class Settings {
             LOCKSCREEN_WEATHER_SHOW_CITY,
             VOLUME_ROCKER_WAKE,
             VOLUME_BUTTON_MUSIC_CONTROL,
-            BACK_GESTURE_HEIGHT
+            BACK_GESTURE_HEIGHT,
+            GESTURE_NO_PILL
         };
 
         /**
@@ -5185,6 +5193,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(SWAP_VOLUME_BUTTONS);
             PRIVATE_SETTINGS.add(PROXIMITY_ON_WAKE);
             PRIVATE_SETTINGS.add(BACK_GESTURE_HEIGHT);
+            PRIVATE_SETTINGS.add(GESTURE_NO_PILL);
         }
 
         /**
@@ -5302,6 +5311,7 @@ public final class Settings {
             VALIDATORS.put(VOLUME_BUTTON_MUSIC_CONTROL, VOLUME_BUTTON_MUSIC_CONTROL_VALIDATOR);
             VALIDATORS.put(PROXIMITY_ON_WAKE, PROXIMITY_ON_WAKE_VALIDATOR);
             VALIDATORS.put(BACK_GESTURE_HEIGHT, BACK_GESTURE_HEIGHT_VALIDATOR);
+            VALIDATORS.put(GESTURE_NO_PILL, GESTURE_NO_PILL_VALIDATOR);
         }
 
         /**
