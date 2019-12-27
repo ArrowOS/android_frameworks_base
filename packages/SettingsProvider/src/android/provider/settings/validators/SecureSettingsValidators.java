@@ -217,7 +217,7 @@ public class SecureSettingsValidators {
         VALIDATORS.put(Secure.SILENCE_GESTURE, BOOLEAN_VALIDATOR);
         VALIDATORS.put(Secure.THEME_CUSTOMIZATION_OVERLAY_PACKAGES, JSON_OBJECT_VALIDATOR);
         VALIDATORS.put(
-                Secure.NAVIGATION_MODE, new DiscreteValueValidator(new String[] {"0", "1", "2"}));
+                Secure.NAVIGATION_MODE, new DiscreteValueValidator(new String[] {"0", "1", "2", "3"}));
         VALIDATORS.put(Secure.BACK_GESTURE_INSET_SCALE_LEFT,
                 new InclusiveFloatRangeValidator(0.0f, Float.MAX_VALUE));
         VALIDATORS.put(Secure.BACK_GESTURE_INSET_SCALE_RIGHT,
