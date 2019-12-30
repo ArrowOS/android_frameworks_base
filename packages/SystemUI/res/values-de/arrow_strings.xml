@@ -100,7 +100,7 @@
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Fehler</string>
     <string name="omnijaws_service_unkown">Keine Wetterdaten verfügbar</string>
-    <string name="omnijaws_service_error_long">Fehler während des Ladens der Wetterdaten</string>
+    <string name="omnijaws_service_error_long">Fehler beim Laden der Wetterdaten</string>
     <string name="omnijaws_service_disabled">Dienst ist deaktiviert</string>
     <string name="omnijaws_detail_header">Wetter</string>
     <string name="omnijaws_label_default">Wetter</string>
