@@ -26,7 +26,7 @@
     <string name="accessibility_quick_settings_caffeine_off">关闭保持亮屏</string>
     <string name="accessibility_quick_settings_caffeine_on">开启保持亮屏</string>
     <!-- Label for estimated remaining duration of dash battery charging -->
-    <string name="power_remaining_dash_charging_duration_only">Dash charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+    <string name="power_remaining_dash_charging_duration_only">正在快速充电 (还需<xliff:g id="time">%1$s</xliff:g> 充满)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
-    <string name="battery_info_status_dash_charging">Dash charging</string>
+    <string name="battery_info_status_dash_charging">快速充电中</string>
 </resources>
