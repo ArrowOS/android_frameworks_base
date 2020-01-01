@@ -26,7 +26,7 @@
     <string name="accessibility_quick_settings_caffeine_off">カフェイン OFF</string>
     <string name="accessibility_quick_settings_caffeine_on">カフェイン ON</string>
     <!-- Label for estimated remaining duration of dash battery charging -->
-    <string name="power_remaining_dash_charging_duration_only">Dash charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
+    <string name="power_remaining_dash_charging_duration_only">急速充電中 (充電完了まで残り<xliff:g id="time">%1$s</xliff:g>)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
-    <string name="battery_info_status_dash_charging">Dash charging</string>
+    <string name="battery_info_status_dash_charging">急速充電中</string>
 </resources>

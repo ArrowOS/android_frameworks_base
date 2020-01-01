@@ -33,8 +33,8 @@
     <string name="accessibility_quick_settings_heads_up_changed_on">Etteteavitus on sisselülitatud.</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Sünkrooni</string>
-    <string name="accessibility_quick_settings_sync_off">Sünk. väljas</string>
-    <string name="accessibility_quick_settings_sync_on">Sünk. sees</string>
+    <string name="accessibility_quick_settings_sync_off">Sünkroonimine väljas</string>
+    <string name="accessibility_quick_settings_sync_on">Sünkroniseerimine sees</string>
     <string name="accessibility_quick_settings_sync_changed_off">Sünk välja lülitatud</string>
     <string name="accessibility_quick_settings_sync_changed_on">Sünk sisse lülitatud</string>
     <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
