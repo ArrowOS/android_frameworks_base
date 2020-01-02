@@ -264,7 +264,6 @@ java_library {
         "android.hardware.vibrator-V2-java",
         "android.system.suspend.control.internal-java",
         "devicepolicyprotosnano",
-
         "com.android.sysprop.apex",
         "com.android.sysprop.init",
         "com.android.sysprop.localization",
