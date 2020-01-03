@@ -42,4 +42,7 @@
 
     <!-- Whether to show VoLTE icon in the status bar -->
     <bool name="config_display_volte">true</bool>
+
+    <!-- Allow devices to use unordinary cutout overlays -->
+    <bool name="config_customCutout">false</bool>
 </resources>
