@@ -586,7 +586,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private final class PowerAction extends SinglePressAction implements LongPressAction {
         private PowerAction() {
-            super(R.drawable.ic_lock_power_off,
+            super(com.android.systemui.R.drawable.ic_lock_power_off,
                     R.string.global_action_power_off);
         }
 
@@ -691,7 +691,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private final class RestartAction extends SinglePressAction implements LongPressAction {
         private RestartAction() {
-            super(R.drawable.ic_restart, com.android.systemui.R.string.global_action_reboot);
+            super(com.android.systemui.R.drawable.ic_restart, com.android.systemui.R.string.global_action_reboot);
             if (mRebootMenu) {
                 mMessageResId = com.android.systemui.R.string.global_action_reboot_sub;
             } else if (showRebootSubmenu() && advancedRebootEnabled(mContext)) {
@@ -896,7 +896,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
     private class ScreenshotAction extends SinglePressAction implements LongPressAction {
         public ScreenshotAction() {
-            super(R.drawable.ic_screenshot, R.string.global_action_screenshot);
+            super(com.android.systemui.R.drawable.ic_screenshot, R.string.global_action_screenshot);
         }
 
         @Override
