@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "104bbae8_ccf1b914",
+        "filename": "core/res/AndroidManifest.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 638,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2020-01-04T09:38:46Z",
+      "side": 1,
+      "message": "We ArrowOS, not AOSiP",
+      "revId": "03ae83374c27faaa78eca488ae52f3397ab1118d",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
