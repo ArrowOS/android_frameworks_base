@@ -26,7 +26,6 @@ import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.PowerManager;
 import android.os.RemoteException;
 import android.provider.Settings;
 import android.view.Display;
@@ -69,9 +68,6 @@ public class FODCircleView extends ImageView {
     private boolean mIsCircleShowing;
 
     private Handler mHandler;
-
-    private PowerManager mPowerManager;
-    private PowerManager.WakeLock mWakeLock;
 
     private Timer mBurnInProtectionTimer;
 
@@ -144,6 +140,8 @@ public class FODCircleView extends ImageView {
         mPaintFingerprint.setColor(res.getColor(R.color.config_fodColor));
 
         mWindowManager = context.getSystemService(WindowManager.class);
+
+        mDisplayManager = context.getSystemService(DisplayManager.class);
 
         mNavigationBarSize = res.getDimensionPixelSize(R.dimen.navigation_bar_size);
 
@@ -311,7 +309,6 @@ public class FODCircleView extends ImageView {
 
     private void updateAlpha() {
         if (mIsCircleShowing) {
-          if (mIsDreaming) mWakeLock.acquire(300);
             setAlpha(1.0f);
         } else {
             setAlpha(mIsDreaming ? 0.5f : 1.0f);
