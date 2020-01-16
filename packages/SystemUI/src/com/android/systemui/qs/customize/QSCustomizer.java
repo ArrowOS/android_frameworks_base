@@ -47,6 +47,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settingslib.Utils;
+import com.android.systemui.Dependency;
 import com.android.systemui.R;
 import com.android.systemui.keyguard.ScreenLifecycle;
 import com.android.systemui.plugins.qs.QS;
@@ -58,6 +59,7 @@ import com.android.systemui.statusbar.phone.LightBarController;
 import com.android.systemui.statusbar.phone.NotificationsQuickSettingsContainer;
 import com.android.systemui.statusbar.policy.KeyguardMonitor;
 import com.android.systemui.statusbar.policy.KeyguardMonitor.Callback;
+import com.android.systemui.tuner.TunerService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +76,9 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
 
     private static final String EXTRA_QS_CUSTOMIZING = "qs_customizing";
     private static final String TAG = "QSCustomizer";
+
+    public static final String QS_SHOW_BRIGHTNESS = "qs_show_brightness";
+    public static final String QS_BRIGHTNESS_POSITION_BOTTOM = "qs_brightness_position_bottom";
 
     private final QSDetailClipper mClipper;
     private final LightBarController mLightBarController;
@@ -98,6 +103,9 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
     private Menu mColumnsSubMenu;
     private Menu mColumnsLandscapeSubMenu;
     private Menu mQsColumnsSubMenu;
+    private Menu mBrightnessTweaksSubMenu;
+
+    private final TunerService tunerService;
 
     @Inject
     public QSCustomizer(Context context, AttributeSet attrs,
@@ -119,9 +127,14 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
                 hide();
             }
         });
+        tunerService = Dependency.get(TunerService.class);
         mToolbar.setOnMenuItemClickListener(this);
         MenuInflater menuInflater = new MenuInflater(mContext);
         menuInflater.inflate(R.menu.qs_customize_menu, mToolbar.getMenu());
+        MenuItem menuItemBrightness = mToolbar.getMenu().findItem(R.id.menu_item_brightness_tweaks);
+        if (menuItemBrightness != null) {
+            mBrightnessTweaksSubMenu = menuItemBrightness.getSubMenu();
+        }
         MenuItem menuItem = mToolbar.getMenu().findItem(R.id.menu_item_columns);
         if (menuItem != null) {
             mColumnsSubMenu = menuItem.getSubMenu();
@@ -257,6 +270,9 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         if (isShown) {
             MetricsLogger.hidden(getContext(), MetricsProto.MetricsEvent.QS_EDIT);
             isShown = false;
+            if (mBrightnessTweaksSubMenu != null) {
+                mBrightnessTweaksSubMenu.close();
+            }
             if (mColumnsSubMenu != null) {
                 mColumnsSubMenu.close();
             }
@@ -300,6 +316,19 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         if (id == R.id.menu_item_reset) {
             MetricsLogger.action(getContext(), MetricsProto.MetricsEvent.ACTION_QS_EDIT_RESET);
             reset();
+        } else if (id == R.id.menu_item_qs_show_brightness) {
+            item.setChecked(!item.isChecked());
+            tunerService.setValue(QS_SHOW_BRIGHTNESS, item.isChecked() ? 1 : 0);
+        } else if (id == R.id.menu_item_qs_brightness_position_bottom) {
+            item.setChecked(!item.isChecked());
+            tunerService.setValue(QS_BRIGHTNESS_POSITION_BOTTOM, item.isChecked() ? 1 : 0);
+        } else if (id == R.id.menu_item_qs_show_brightness_icon) {
+            item.setChecked(!item.isChecked());
+            Settings.System.putIntForUser(mContext.getContentResolver(),
+                   Settings.System.QS_SHOW_BRIGHTNESS_ICON, item.isChecked() ? 1 : 0,
+                   UserHandle.USER_CURRENT);
+
+            mHost.forceCollapsePanels();
         } else if (id == R.id.menu_item_columns_three) {
             Settings.System.putIntForUser(mContext.getContentResolver(),
                     Settings.System.QS_LAYOUT_COLUMNS, 3, UserHandle.USER_CURRENT);
@@ -475,6 +504,29 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         mTileAdapter.setHideLabel(!showTitles);
         mLayout.setSpanCount(isPortrait ? columns : columnsLandscape);
         updateColumnsMenu(defaultColumns);
+        updateBrightnessMenu();
+    }
+    private void updateBrightnessMenu() {
+        int mShowBrightness = tunerService.getValue(QS_SHOW_BRIGHTNESS, 1);
+        int mBrightnessPositionBottom = tunerService.getValue(QS_BRIGHTNESS_POSITION_BOTTOM, 0);
+        int mShowBrightnessIcon = Settings.System.getIntForUser(
+            mContext.getContentResolver(), Settings.System.QS_SHOW_BRIGHTNESS_ICON, 1,
+            UserHandle.USER_CURRENT);
+
+        MenuItem menuShowBrightness = mToolbar.getMenu().findItem(R.id.menu_item_qs_show_brightness);
+        menuShowBrightness.setChecked(mShowBrightness == 1);
+        MenuItem menuBrightnessPositionBottom = mToolbar.getMenu().findItem(R.id.menu_item_qs_brightness_position_bottom);
+        menuBrightnessPositionBottom.setChecked(mBrightnessPositionBottom == 1);
+        MenuItem menuShowBrightnessIcon = mToolbar.getMenu().findItem(R.id.menu_item_qs_show_brightness_icon);
+        menuShowBrightnessIcon.setChecked(mShowBrightnessIcon == 1);
+
+        if (mShowBrightness != 1) {
+            menuBrightnessPositionBottom.setEnabled(false);
+            menuShowBrightnessIcon.setEnabled(false);
+        } else {
+            menuBrightnessPositionBottom.setEnabled(true);
+            menuShowBrightnessIcon.setEnabled(true);
+        }
     }
     private void updateColumnsMenu(int defaultColumns) {
         int columns = Settings.System.getIntForUser(
@@ -519,4 +571,4 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         MenuItem menuItemAuto = mToolbar.getMenu().findItem(R.id.menu_item_qs_columns_auto);
         menuItemAuto.setChecked(qsColumns == -1);
     }
-}
+} 
