@@ -73,6 +73,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.PowerManager;
+import android.os.Process;
 import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.UserHandle;
@@ -201,6 +202,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     private static final String GLOBAL_ACTION_KEY_REBOOT_RECOVERY = "reboot_recovery";
     private static final String GLOBAL_ACTION_KEY_REBOOT_BOOTLOADER = "reboot_bootloader";
     private static final String GLOBAL_ACTION_KEY_REBOOT_FASTBOOT = "reboot_fastboot";
+     private static final String GLOBAL_ACTION_KEY_REBOOT_HOT = "reboot_hot";
     private static final String GLOBAL_ACTION_KEY_SCREENRECORD = "screenrecord";
     private static final String GLOBAL_ACTION_KEY_FLASHLIGHT = "flashlight";
 
@@ -615,6 +617,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
             String actionKey = rebootMenuActions[i];
             if (GLOBAL_ACTION_KEY_REBOOT_RECOVERY.equals(actionKey)) {
                 items.add(new RebootRecoveryAction());
+            } else if (GLOBAL_ACTION_KEY_REBOOT_HOT.equals(actionKey)) {
+                items.add(new RebootHotAction());
             } else if (GLOBAL_ACTION_KEY_REBOOT_BOOTLOADER.equals(actionKey)) {
                 items.add(new RebootBootloaderAction());
             }
@@ -749,6 +753,9 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
             } else if (GLOBAL_ACTION_KEY_REBOOT_RECOVERY.equals(actionKey) &&
                     isAdvancedRebootPossible(mContext)) {
                 addIfShouldShowAction(tempActions, new RebootRecoveryAction());
+            } else if (GLOBAL_ACTION_KEY_REBOOT_HOT.equals(actionKey) &&
+                    isAdvancedRebootPossible(mContext)) {
+                addIfShouldShowAction(tempActions, new RebootHotAction());
             } else if (GLOBAL_ACTION_KEY_REBOOT_BOOTLOADER.equals(actionKey) &&
                     isAdvancedRebootPossible(mContext)) {
                 addIfShouldShowAction(tempActions, new RebootBootloaderAction());
@@ -1138,6 +1145,33 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         }
     }
 
+    private final class RebootHotAction extends SinglePressAction {
+        private RebootHotAction() {
+            super(com.android.systemui.R.drawable.ic_restart_hot,
+                    com.android.systemui.R.string.global_action_reboot_hot);
+        }
+
+        @Override
+        public boolean showDuringKeyguard() {
+            return true;
+        }
+
+        @Override
+        public boolean showDuringRestrictedKeyguard() {
+            return false;
+        }
+
+        @Override
+        public boolean showBeforeProvisioning() {
+            return true;
+        }
+
+        @Override
+        public void onPress() {
+            Process.killProcess(Process.myPid());
+        }
+    }
+
     private final class RebootBootloaderAction extends SinglePressAction {
         private RebootBootloaderAction() {
             super(com.android.systemui.R.drawable.ic_restart_bootloader,
@@ -1191,6 +1225,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
             mWindowManagerFuncs.reboot(false, PowerManager.REBOOT_FASTBOOT);
         }
     }
+
+    
 
     @VisibleForTesting
     class ScreenshotAction extends SinglePressAction implements LongPressAction {
