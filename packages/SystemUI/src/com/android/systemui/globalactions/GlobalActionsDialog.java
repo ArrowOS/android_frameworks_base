@@ -22,9 +22,11 @@ import static com.android.internal.widget.LockPatternUtils.StrongAuthTracker.STR
 import static com.android.internal.widget.LockPatternUtils.StrongAuthTracker.STRONG_AUTH_REQUIRED_AFTER_USER_LOCKDOWN;
 
 import android.app.ActivityManager;
+import android.app.ActivityManagerNative;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.KeyguardManager;
+import android.app.IActivityManager;
 import android.app.PendingIntent;
 import android.app.StatusBarManager;
 import android.app.WallpaperManager;
@@ -151,6 +153,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     private static final String GLOBAL_ACTION_KEY_SCREENSHOT = "screenshot";
     private static final String GLOBAL_ACTION_KEY_REBOOT_RECOVERY = "reboot_recovery";
     private static final String GLOBAL_ACTION_KEY_REBOOT_BOOTLOADER = "reboot_bootloader";
+    private static final String GLOBAL_ACTION_KEY_REBOOT_HOT = "reboot_hot";
     private static final String GLOBAL_ACTION_KEY_FLASHLIGHT = "flashlight";
 
     private final Context mContext;
@@ -371,6 +374,11 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
                 if (isActionVisible(a)) {
                     items.add(a);
                 }
+            } else if (advancedRebootEnabled(mContext) && GLOBAL_ACTION_KEY_REBOOT_HOT.equals(actionKey)) {
+                RebootBootloaderAction a = new RebootBootloaderAction();
+                if (isActionVisible(a)) {
+                    items.add(a);
+                }
             }
         }
         return items;
@@ -440,6 +448,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
                 mItems.add(new RebootRecoveryAction());
             } else if (advancedRebootEnabled(mContext) && GLOBAL_ACTION_KEY_REBOOT_BOOTLOADER.equals(actionKey)) {
                 mItems.add(new RebootBootloaderAction());
+            } else if (advancedRebootEnabled(mContext) && GLOBAL_ACTION_KEY_REBOOT_HOT.equals(actionKey)) {
+                mItems.add(new RebootHotAction());
             } else if (GLOBAL_ACTION_KEY_SCREENSHOT.equals(actionKey)) {
                 if (Settings.System.getInt(mContext.getContentResolver(),
                         Settings.System.GLOBAL_ACTIONS_SCREENSHOT, 0) == 1) {
@@ -828,6 +838,39 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         }
     }
 
+    private final class RebootHotAction extends SinglePressAction {
+        private RebootHotAction() {
+            super(com.android.systemui.R.drawable.ic_restart_hot, com.android.systemui.R.string.global_action_reboot_hot);
+        }
+
+        @Override
+        public boolean showDuringKeyguard() {
+            return true;
+        }
+
+        @Override
+        public boolean showDuringRestrictedKeyguard() {
+            return false;
+        }
+
+        @Override
+        public boolean showBeforeProvisioning() {
+            return true;
+        }
+
+        @Override
+        public void onPress() {
+            try {
+            final IActivityManager am =
+                  ActivityManagerNative.asInterface(ServiceManager.checkService("activity"));
+                if (am != null) {
+                    am.restart();
+                }
+            } catch (RemoteException e) {
+                Log.e(TAG, "failure trying to perform hot reboot", e);
+            }
+        }
+    }
 
     private Action getFlashlightToggleAction() {
         return new SinglePressAction(com.android.systemui.R.drawable.ic_lock_flashlight,
