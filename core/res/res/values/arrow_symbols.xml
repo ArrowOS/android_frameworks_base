@@ -86,4 +86,7 @@
 
     <!-- In-display Fingerprint -->
     <java-symbol type="bool" name="config_supportsInDisplayFingerprint" />
+
+    <!-- Themes -->
+    <java-symbol type="color" name="theme_generic_semi_transparent_color" />
 </resources>
