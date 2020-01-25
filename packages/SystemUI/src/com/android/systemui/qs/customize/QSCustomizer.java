@@ -157,11 +157,6 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         if (menuItemQs != null) {
             mQsColumnsSubMenu = menuItemQs.getSubMenu();
         }
-        int qsTitlesValue = Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.QS_TILE_TITLE_VISIBILITY, 1,
-                UserHandle.USER_CURRENT);
-        MenuItem qsTitlesMenuItem = mToolbar.getMenu().findItem(R.id.menu_item_titles);
-        qsTitlesMenuItem.setChecked(qsTitlesValue == 1);
 
         int accentColor = Utils.getColorAccentDefaultColor(context);
         mToolbar.setTitleTextColor(accentColor);
@@ -450,6 +445,7 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
             tiles.add(tile);
         }
         mTileAdapter.resetTileSpecs(mHost, tiles);
+        resetSettings();
     }
 
     private void setTileSpecs() {
@@ -565,6 +561,8 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         boolean showTitles = Settings.System.getIntForUser(
                 mContext.getContentResolver(), Settings.System.QS_TILE_TITLE_VISIBILITY, 1,
                 UserHandle.USER_CURRENT) == 1;
+        MenuItem qsTitlesMenuItem = mToolbar.getMenu().findItem(R.id.menu_item_titles);
+        qsTitlesMenuItem.setChecked(showTitles);
         mTileAdapter.setColumnCount(isPortrait ? columns : columnsLandscape);
         mTileAdapter.setHideLabel(!showTitles);
         mLayout.setSpanCount(isPortrait ? columns : columnsLandscape);
@@ -675,4 +673,31 @@ public class QSCustomizer extends LinearLayout implements OnMenuItemClickListene
         menuItemEight = mToolbar.getMenu().findItem(R.id.menu_item_rows_landscape_eight);
         menuItemEight.setChecked(rowsLandscape == 8);
     }
-} 
+
+    private void resetSettings() {
+        int defColumns = Math.max(1, mContext.getResources().getInteger(R.integer.quick_settings_num_columns));
+
+        // Reset QS rows and columns configuration
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.QS_LAYOUT_ROWS, 3, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.QS_LAYOUT_COLUMNS, defColumns, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.QS_LAYOUT_ROWS_LANDSCAPE, 2, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.QS_LAYOUT_COLUMNS_LANDSCAPE, defColumns, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                   Settings.System.QS_TILE_TITLE_VISIBILITY, 1, UserHandle.USER_CURRENT);
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                    Settings.System.QS_QUICKBAR_COLUMNS, -1, UserHandle.USER_CURRENT);
+
+        // Reset QS brightness slider
+        tunerService.setValue(QS_SHOW_BRIGHTNESS, 1);
+        tunerService.setValue(QS_BRIGHTNESS_POSITION_BOTTOM, 0);
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                   Settings.System.QS_SHOW_BRIGHTNESS_ICON, 1, UserHandle.USER_CURRENT);
+
+        updateSettings();
+        mHost.forceCollapsePanels();
+    }
+}
