@@ -88,6 +88,7 @@
     <string name="global_action_reboot_sub">Süsteem</string>
     <string name="global_action_reboot_recovery">Taastamine</string>
     <string name="global_action_reboot_bootloader">Algkäivitus</string>
+    <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">Täiustatud taaskäivitamine on keelatud.\nKas soovite taaskäivitad\u003f</string>
     <string name="global_action_dnaa">Ära enam näita</string>
     <string name="global_action_settings">Seaded</string>
@@ -110,4 +111,15 @@
     <string name="statusbar_items_title">Olekuriba ikoonid</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Andmekaardi vahetamine</string>
+    <string name="qs_data_switch_toast_0">Hetkel pole SIM-kaarti sisestatud</string>
+    <string name="qs_data_switch_toast_1">Hetkel on vaid üks SIM-kaart sisestatud</string>
+    <string name="qs_data_switch_changed_1">Lülitage andmekaart SIM-ile 1.</string>
+    <string name="qs_data_switch_changed_2">Lülitage andmekaart SIM-ile 2.</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 </resources>

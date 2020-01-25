@@ -88,6 +88,7 @@
     <string name="global_action_reboot_sub">Systém</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">Rozšířený restart je zakázán.\nChcete restartovat\u003f</string>
     <string name="global_action_dnaa">Znovu nezobrazovat</string>
     <string name="global_action_settings">Nastavení</string>
@@ -110,4 +111,15 @@
     <string name="statusbar_items_title">Ikony na stavovém řádku</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Přepnout SIM pro data</string>
+    <string name="qs_data_switch_toast_0">Momentálně není vložena žádná SIM karta</string>
+    <string name="qs_data_switch_toast_1">Momentálně je vložena pouze jedna SIM karta</string>
+    <string name="qs_data_switch_changed_1">Přepnout datovou kartu na SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Přepnout datovou kartu na SIM 2.</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 </resources>

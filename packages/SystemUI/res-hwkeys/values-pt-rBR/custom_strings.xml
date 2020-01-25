@@ -22,7 +22,7 @@
     <string name="label_action_notification_panel">Painel de notificações</string>
     <string name="label_action_screenshot">Captura de tela</string>
     <string name="label_action_region_screenshot">Captura de tela parcial</string>
-    <string name="label_action_screenrecord">Gravar tela</string>
+    <string name="label_action_screenrecord">Gravador de tela</string>
     <string name="label_action_expanded_desktop">Área de trabalho expandida</string>
     <string name="label_action_screen_off">Desligar a tela</string>
     <string name="label_action_force_close_app">Forçar fechamento do app</string>
