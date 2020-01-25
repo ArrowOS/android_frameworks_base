@@ -33,7 +33,7 @@
     <string name="accessibility_quick_settings_heads_up_changed_on">Notificações pop-up foram ativadas.</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Sincronização</string>
-    <string name="accessibility_quick_settings_sync_off">Sincronização desligada</string>
+    <string name="accessibility_quick_settings_sync_off">Sincronização desativada</string>
     <string name="accessibility_quick_settings_sync_on">Sincronização ativada</string>
     <string name="accessibility_quick_settings_sync_changed_off">A sincronização foi desativada</string>
     <string name="accessibility_quick_settings_sync_changed_on">A sincronização foi ativada</string>
@@ -88,6 +88,7 @@
     <string name="global_action_reboot_sub">Sistema</string>
     <string name="global_action_reboot_recovery">Reinicar em Recovery Mode</string>
     <string name="global_action_reboot_bootloader">Reiniciar em Bootloader</string>
+    <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">A reinicialização avançada está desativada.\nDeseja reiniciar\u003f</string>
     <string name="global_action_dnaa">Não mostrar novamente</string>
     <string name="global_action_settings">Configurações</string>
@@ -110,4 +111,15 @@
     <string name="statusbar_items_title">Ícones da barra de status</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Trocar cartão de dados</string>
+    <string name="qs_data_switch_toast_0">Atualmente, nenhum cartão SIM está inserido</string>
+    <string name="qs_data_switch_toast_1">Atualmente, apenas um cartão SIM está inserido</string>
+    <string name="qs_data_switch_changed_1">Mude o cartão de dados para o SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Mude o cartão de dados para o SIM 2.</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 </resources>

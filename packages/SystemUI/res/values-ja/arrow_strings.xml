@@ -88,6 +88,7 @@
     <string name="global_action_reboot_sub">システム</string>
     <string name="global_action_reboot_recovery">リカバリー</string>
     <string name="global_action_reboot_bootloader">ブートローダー</string>
+    <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">高度な再起動が無効です。\n再起動しますか\u003f</string>
     <string name="global_action_dnaa">今後表示しない</string>
     <string name="global_action_settings">設定</string>
@@ -110,4 +111,15 @@
     <string name="statusbar_items_title">ステータスバーのアイコン</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">データ SIM の変更</string>
+    <string name="qs_data_switch_toast_0">現在 SIM カードは挿入されていません</string>
+    <string name="qs_data_switch_toast_1">現在1枚のみ SIM カードは挿入されています</string>
+    <string name="qs_data_switch_changed_1">SIM 1 をデータ通信に使用します</string>
+    <string name="qs_data_switch_changed_2">SIM 2 をデータ通信に使用します</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 </resources>

@@ -29,8 +29,8 @@
     <string name="quick_settings_heads_up_label">Notificaciones flotantes</string>
     <string name="accessibility_quick_settings_heads_up_off">Notificaciones flotantes desactivadas.</string>
     <string name="accessibility_quick_settings_heads_up_on">Notificaciones flotantes activadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones flotantes están desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones flotantes están activadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Las notificaciones flotantes están desactivadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Las notificaciones flotantes están activadas.</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Sincronizar</string>
     <string name="accessibility_quick_settings_sync_off">Sincronizar desactivado</string>
@@ -38,39 +38,39 @@
     <string name="accessibility_quick_settings_sync_changed_off">La sincronización ha sido desactivada</string>
     <string name="accessibility_quick_settings_sync_changed_on">La sincronización ha sido habilitada</string>
     <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Informe de ubicación: modo ahorro de batería.</string>
     <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="accessibility_quick_settings_location_gps_only">Informe de ubicación: modo solo sensores.</string>
     <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Informe de ubicación: modo alta precisión.</string>
     <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_battery_saving_label">Battery saving</string>
-    <string name="quick_settings_location_battery_saving_label_twoline">Battery\nsaving</string>
+    <string name="quick_settings_location_battery_saving_label">Ahorro de batería</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">Ahorro\nde batería</string>
     <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_gps_only_label">GPS only</string>
-    <string name="quick_settings_location_gps_only_label_twoline">GPS only</string>
+    <string name="quick_settings_location_gps_only_label">Solo GPS</string>
+    <string name="quick_settings_location_gps_only_label_twoline">Solo GPS</string>
     <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_high_accuracy_label">High accuracy</string>
-    <string name="quick_settings_location_high_accuracy_label_twoline">High\naccuracy</string>
+    <string name="quick_settings_location_high_accuracy_label">Alta precisión</string>
+    <string name="quick_settings_location_high_accuracy_label_twoline">Alta\nprecisión</string>
     <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_detail_title">Location</string>
+    <string name="quick_settings_location_detail_title">Ubicación</string>
     <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_detail_menu_title">Select mode:</string>
+    <string name="quick_settings_location_detail_menu_title">Seleccionar modo:</string>
     <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_title">High accuracy</string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_title">Alta precisión</string>
     <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_title">Battery saving</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_title">Ahorro de batería</string>
     <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_title">Device only</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_title">Solo dispositivo</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_description">Use GPS, Wi\u2011Fi, Bluetooth, or cellular networks to determine location </string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">Usar GPS, Wi\u2011Fi, Bluetooth, o redes móviles para determinar la ubicación </string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_description">Use Wi\u2011Fi, Bluetooth, or cellular networks to determine location</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_description">Usar Wi\u2011Fi, Bluetooth, o redes móviles para determinar la ubicación</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_description">Use GPS to determine your location</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_description">Usar GPS para determinar tu ubicación</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Columns</string>
-    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
+    <string name="qs_menu_item_columns">Columnas</string>
+    <string name="qs_menu_item_columns_landscape">Vista de columnas</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -78,25 +78,26 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset</string>
-    <string name="qs_menu_item_titles">Show labels</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_reset">Restablecer</string>
+    <string name="qs_menu_item_titles">Mostrar etiquetas</string>
+    <string name="qs_menu_item_qs_columns">Columnas de ajustes rápidos</string>
+    <string name="qs_menu_item_columns_auto">Automático</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_reboot">Reiniciar</string>
+    <string name="global_action_reboot_more">Reiniciar\u2026</string>
+    <string name="global_action_reboot_sub">Sistema</string>
+    <string name="global_action_reboot_recovery">Modo recuperación</string>
+    <string name="global_action_reboot_bootloader">Gestor de arranque</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_dismissable_dialog_text">El reinicio avanzado está desactivado. ¿Deseas reiniciar?</string>
+    <string name="global_action_dnaa">No mostrar de nuevo</string>
+    <string name="global_action_settings">Configuraciones</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">Captura de pantalla</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">Linterna</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Error</string>
     <string name="omnijaws_service_unkown">No hay datos metereológicos</string>
@@ -107,7 +108,18 @@
     <string name="omnijaws_current_text">Ahora</string>
     <string name="omnijaws_package_not_available">OmniJaws no está disponible</string>
     <string name="omnijaws_service_last_update">Última actualización:</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Íconos de la barra de estado</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Cambiar tarjeta de datos</string>
+    <string name="qs_data_switch_toast_0">No se ha insertado ninguna tarjeta SIM</string>
+    <string name="qs_data_switch_toast_1">Actualmente solo se ha insertado una tarjeta SIM</string>
+    <string name="qs_data_switch_changed_1">Cambiar tarjeta de datos por la tarjeta SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Cambiar tarjeta de datos por la tarjeta SIM 2.</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 </resources>

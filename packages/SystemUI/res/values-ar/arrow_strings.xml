@@ -88,6 +88,7 @@
     <string name="global_action_reboot_sub">النظام</string>
     <string name="global_action_reboot_recovery">الإسترداد</string>
     <string name="global_action_reboot_bootloader">محمل الإقلاع</string>
+    <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">تم تعطيل إعادة التشغيل المتقدمة.\nهل تريد إعادة التشغيل</string>
     <string name="global_action_dnaa">عدم الإظهار مرة أخرى</string>
     <string name="global_action_settings">الاعدادات</string>
@@ -110,4 +111,15 @@
     <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
 </resources>
