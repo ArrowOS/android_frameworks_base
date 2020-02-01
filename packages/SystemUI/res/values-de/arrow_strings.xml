@@ -78,17 +78,27 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Zurücksetzen</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
     <string name="qs_menu_item_titles">Beschriftungen anzeigen</string>
     <string name="qs_menu_item_qs_columns">Spalten (Mini-Kacheln)</string>
     <string name="qs_menu_item_columns_auto">Automatisch</string>
+    <string name="qs_menu_item_rows">Rows</string>
+    <string name="qs_menu_item_rows_landscape">Rows landscape</string>
+    <string name="qs_menu_item_rows_two">2</string>
+    <string name="qs_menu_item_rows_three">3</string>
+    <string name="qs_menu_item_rows_four">4</string>
+    <string name="qs_menu_item_rows_five">5</string>
+    <string name="qs_menu_item_rows_six">6</string>
+    <string name="qs_menu_item_rows_seven">7</string>
+    <string name="qs_menu_item_rows_eight">8</string>
+    <string name="qs_menu_item_rows_nine">9</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Neustarten</string>
     <string name="global_action_reboot_more">Neustarten\u2026</string>
     <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_hot">Warmstart</string>
     <string name="global_action_dismissable_dialog_text">Erweiterter Neustart ist deaktiviert.\nWollen Sie\u003f neustarten?</string>
     <string name="global_action_dnaa">Nicht erneut anzeigen</string>
     <string name="global_action_settings">Einstellungen</string>
@@ -112,7 +122,7 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_label">Daten SIM-Karte wechseln</string>
     <string name="qs_data_switch_toast_0">Derzeit ist keine SIM-Karte eingelegt</string>
     <string name="qs_data_switch_toast_1">Derzeit ist nur eine SIM-Karte eingelegt</string>
     <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
@@ -121,5 +131,5 @@
     <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
     <string name="qs_menu_item_show_brightness">Show brightness bar</string>
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
+    <string name="qs_menu_item_brightness_icon">Helligkeitssymbol</string>
 </resources>

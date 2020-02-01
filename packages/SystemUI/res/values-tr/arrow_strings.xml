@@ -78,10 +78,20 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Sıfırla</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
     <string name="qs_menu_item_titles">Etiketleri göster</string>
     <string name="qs_menu_item_qs_columns">Hızlı ayarlar sütunları</string>
     <string name="qs_menu_item_columns_auto">Otomatik</string>
+    <string name="qs_menu_item_rows">Rows</string>
+    <string name="qs_menu_item_rows_landscape">Rows landscape</string>
+    <string name="qs_menu_item_rows_two">2</string>
+    <string name="qs_menu_item_rows_three">3</string>
+    <string name="qs_menu_item_rows_four">4</string>
+    <string name="qs_menu_item_rows_five">5</string>
+    <string name="qs_menu_item_rows_six">6</string>
+    <string name="qs_menu_item_rows_seven">7</string>
+    <string name="qs_menu_item_rows_eight">8</string>
+    <string name="qs_menu_item_rows_nine">9</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Yeniden başlat</string>
     <string name="global_action_reboot_more">Yeniden başlatma\u2026</string>

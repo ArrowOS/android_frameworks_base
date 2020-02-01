@@ -78,17 +78,27 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Redefinir</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
     <string name="qs_menu_item_titles">Mostrar etiquetas</string>
     <string name="qs_menu_item_qs_columns">Colunas de barra rápida</string>
     <string name="qs_menu_item_columns_auto">Automático</string>
+    <string name="qs_menu_item_rows">Rows</string>
+    <string name="qs_menu_item_rows_landscape">Rows landscape</string>
+    <string name="qs_menu_item_rows_two">2</string>
+    <string name="qs_menu_item_rows_three">3</string>
+    <string name="qs_menu_item_rows_four">4</string>
+    <string name="qs_menu_item_rows_five">5</string>
+    <string name="qs_menu_item_rows_six">6</string>
+    <string name="qs_menu_item_rows_seven">7</string>
+    <string name="qs_menu_item_rows_eight">8</string>
+    <string name="qs_menu_item_rows_nine">9</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Reiniciar</string>
     <string name="global_action_reboot_more">Reiniciar\u2026</string>
     <string name="global_action_reboot_sub">Sistema</string>
     <string name="global_action_reboot_recovery">Reinicar em Recovery Mode</string>
     <string name="global_action_reboot_bootloader">Reiniciar em Bootloader</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_hot">Reinicio rápido</string>
     <string name="global_action_dismissable_dialog_text">A reinicialização avançada está desativada.\nDeseja reiniciar\u003f</string>
     <string name="global_action_dnaa">Não mostrar novamente</string>
     <string name="global_action_settings">Configurações</string>
@@ -118,8 +128,8 @@
     <string name="qs_data_switch_changed_1">Mude o cartão de dados para o SIM 1.</string>
     <string name="qs_data_switch_changed_2">Mude o cartão de dados para o SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
-    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
+    <string name="qs_menu_item_brightness_tweaks">Ajustes na barra de brilho</string>
+    <string name="qs_menu_item_show_brightness">Mostrar barra de brilho</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Barra de brilho inferior</string>
+    <string name="qs_menu_item_brightness_icon">Ícone de brilho</string>
 </resources>
