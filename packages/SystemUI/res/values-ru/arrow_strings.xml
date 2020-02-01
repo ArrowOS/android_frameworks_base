@@ -78,17 +78,27 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Сбросить</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
     <string name="qs_menu_item_titles">Показывать подписи</string>
     <string name="qs_menu_item_qs_columns">Количество панелей быстрого доступа</string>
     <string name="qs_menu_item_columns_auto">Авто</string>
+    <string name="qs_menu_item_rows">Rows</string>
+    <string name="qs_menu_item_rows_landscape">Rows landscape</string>
+    <string name="qs_menu_item_rows_two">2</string>
+    <string name="qs_menu_item_rows_three">3</string>
+    <string name="qs_menu_item_rows_four">4</string>
+    <string name="qs_menu_item_rows_five">5</string>
+    <string name="qs_menu_item_rows_six">6</string>
+    <string name="qs_menu_item_rows_seven">7</string>
+    <string name="qs_menu_item_rows_eight">8</string>
+    <string name="qs_menu_item_rows_nine">9</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Перезагрузить</string>
     <string name="global_action_reboot_more">Перезагрузка\u2026</string>
     <string name="global_action_reboot_sub">Система</string>
     <string name="global_action_reboot_recovery">Режим восстановления</string>
     <string name="global_action_reboot_bootloader">Загрузчик</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_hot">Быстрая перезагрузка</string>
     <string name="global_action_dismissable_dialog_text">Расширенное меню перезагрузки отключено.\nХотите перезагрузиться\u003f</string>
     <string name="global_action_dnaa">Не показывать снова</string>
     <string name="global_action_settings">Настройки</string>
@@ -112,14 +122,14 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_label">Поменять SIM для передачи данных</string>
+    <string name="qs_data_switch_toast_0">В настоящее время SIM-карта не вставлена</string>
+    <string name="qs_data_switch_toast_1">В настоящее время вставлена только одна SIM-карта</string>
+    <string name="qs_data_switch_changed_1">Переключить передачу данных на SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Переключить передачу данных на SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
-    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
+    <string name="qs_menu_item_brightness_tweaks">Настройки слайдера регулировки яркости</string>
+    <string name="qs_menu_item_show_brightness">Показать ползунок регулировки яркости</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Слайдер регулировки яркости внизу</string>
+    <string name="qs_menu_item_brightness_icon">Иконка авто-яркости</string>
 </resources>
