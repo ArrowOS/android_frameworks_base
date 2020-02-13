@@ -167,6 +167,8 @@ public class SamsungBoldClockController implements ClockPlugin {
 
     @Override
     public void onTimeTick() {
+        if (mView != null) mView.onTimeChanged();
+        if (mClock != null) mClock.refreshTime();
     }
 
     @Override
