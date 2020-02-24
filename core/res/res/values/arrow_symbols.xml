@@ -22,4 +22,7 @@
     <java-symbol type="array" name="config_deviceKeyHandlerClasses" />
 
     <java-symbol type="integer" name="config_buttonBrightnessSettingDefault" />
+
+    <!-- Vendor platform signatures -->
+    <java-symbol type="array" name="config_vendorPlatformSignatures" />
 </resources>
