@@ -152,7 +152,7 @@ public class ArrowUtils {
         float n = temp + 0.5f;
         // Use boolean to determine celsius or fahrenheit
         return String.valueOf((n - c) % 2 == 0 ? (int) temp :
-                ForC ? c * 9/5 + 32 + "°F" :c + "°C");
+                ForC ? c + "°C" :c * 9/5 + 32 + "°F");
     }
 
     // Check if device has a notch
