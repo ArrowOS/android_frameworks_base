@@ -7431,6 +7431,9 @@ message MetricsEvent {
     // Add new aosp constants above this line.
     // END OF AOSP CONSTANTS
     
+     // Panel for Bluetooth
+    PANEL_BLUETOOTH = 9996;
+    
      // Panel for Mobile Data
     PANEL_MOBILE_DATA = 9997;
 
