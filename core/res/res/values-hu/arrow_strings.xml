@@ -19,8 +19,8 @@
     <string name="reboot_to_bootloader_title">Újraindítás Bootloader módba</string>
     <string name="reboot_to_bootloader_message">Újraindítás Bootloader módba\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Újraindítás Recovery módba</string>
-    <string name="reboot_to_recovery_message">Újraindítás Recovery módba</string>
+    <string name="reboot_to_recovery_title">Újraindítás Recovery módban</string>
+    <string name="reboot_to_recovery_message">Újraindítás Recovery módban</string>
     <!-- advanced reboot system -->
     <string name="reboot_system_title">Rendszer újraindítása</string>
     <string name="reboot_system_message">A Rendszer újraindítása\u2026</string>
