@@ -8191,7 +8191,15 @@ public class PackageManagerService extends IPackageManager.Stub
         // identify cached items. In particular, changing the value of certain
         // feature flags should cause us to invalidate any caches.
         final String cacheName = FORCE_PACKAGE_PARSED_CACHE_ENABLED ? "debug"
+<<<<<<< HEAD   (b83804 SystemUI: Enable NFC tile)
                 : SystemProperties.digestOf("ro.build.version.incremental");
+=======
+                : SystemProperties.digestOf(
+                        "ro.build.version.incremental",
+                        StorageManager.PROP_ISOLATED_STORAGE,
+                        StorageManager.PROP_ISOLATED_STORAGE_SNAPSHOT
+                );
+>>>>>>> CHANGE (a37611 PackageManagerService: Drop caches according to incremental )
 
         // Reconcile cache directories, keeping only what we'd actually use.
         for (File cacheDir : FileUtils.listFilesOrEmpty(cacheBaseDir)) {
