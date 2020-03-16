@@ -700,6 +700,7 @@ public class StatusBar extends SystemUI implements DemoMode,
 
         mUiModeManager = mContext.getSystemService(UiModeManager.class);
         mKeyguardViewMediator = getComponent(KeyguardViewMediator.class);
+        mNavigationBarSystemUiVisibility = mNavigationBarController.createSystemUiVisibility();
         mActivityIntentHelper = new ActivityIntentHelper(mContext);
 
         KeyguardSliceProvider sliceProvider = KeyguardSliceProvider.getAttachedInstance();
@@ -952,7 +953,7 @@ public class StatusBar extends SystemUI implements DemoMode,
         mNotificationLogger.setHeadsUpManager(mHeadsUpManager);
         putComponent(HeadsUpManager.class, mHeadsUpManager);
 
-        updateNavigationBar(true);
+        updateNavigationBar(result, true);
 
         if (ENABLE_LOCKSCREEN_WALLPAPER && mWallpaperSupported) {
             mLockscreenWallpaper = new LockscreenWallpaper(mContext, this, mHandler);
@@ -2253,6 +2254,16 @@ public class StatusBar extends SystemUI implements DemoMode,
         if (displayId != mDisplayId) {
             return;
         }
+
+        mNavigationBarSystemUiVisibility.displayId = displayId;
+        mNavigationBarSystemUiVisibility.vis = vis;
+        mNavigationBarSystemUiVisibility.fullscreenStackVis = fullscreenStackVis;
+        mNavigationBarSystemUiVisibility.dockedStackVis = dockedStackVis;
+        mNavigationBarSystemUiVisibility.mask = mask;
+        mNavigationBarSystemUiVisibility.fullscreenStackBounds = fullscreenStackBounds;
+        mNavigationBarSystemUiVisibility.dockedStackBounds = dockedStackBounds;
+        mNavigationBarSystemUiVisibility.navbarColorManagedByIme = navbarColorManagedByIme;
+
         final int oldVal = mSystemUiVisibility;
         final int newVal = (oldVal&~mask) | (vis&mask);
         final int diff = newVal ^ oldVal;
@@ -4414,6 +4425,7 @@ public class StatusBar extends SystemUI implements DemoMode,
             Dependency.get(DeviceProvisionedController.class);
 
     protected NavigationBarController mNavigationBarController;
+    private NavigationBarController.SystemUiVisibility mNavigationBarSystemUiVisibility;
 
     // UI-specific methods
 
@@ -4779,16 +4791,17 @@ public class StatusBar extends SystemUI implements DemoMode,
         return mStatusBarMode;
     }
 
-    private void updateNavigationBar(boolean init) {
+    private void updateNavigationBar(@Nullable RegisterStatusBarResult result, boolean init) {
         boolean showNavBar = ArrowUtils.deviceSupportNavigationBar(mContext);
+
         if (init) {
             if (showNavBar) {
-                mNavigationBarController.createNavigationBars(true, null);
+                mNavigationBarController.createNavigationBars(true, result);
             }
         } else {
             if (showNavBar != mShowNavBar) {
                 if (showNavBar) {
-                    mNavigationBarController.createNavigationBars(true, null);
+                    mNavigationBarController.recreateNavigationBars(true, result, mNavigationBarSystemUiVisibility);
                 } else {
                     mNavigationBarController.removeNavigationBar(mDisplayId);
                 }
