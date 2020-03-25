@@ -4,7 +4,7 @@
     android:height="32dp"
     android:viewportWidth="24.0"
     android:viewportHeight="24.0"
-    android:tint="@color/powermenu_icon_tint">
+    android:tint="?android:attr/colorControlNormal">
     <path
         android:fillColor="#FF000000"
         android:pathData="M19.4,13.0c0.0,-0.3 0.1,-0.6 0.1,-1.0s0.0,-0.7 -0.1,-1.0l2.1,-1.7c0.2,-0.2
