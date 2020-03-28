@@ -46,4 +46,8 @@
 
     <!-- Battery Leds -->
     <java-symbol type="bool" name="config_intrusiveBatteryLed" />
+
+    <!-- Enable face auth only when swiping security view -->
+    <java-symbol type="bool" name="config_faceAuthOnlyOnSecurityView" />
+
 </resources>
