@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2021 The Android Open Source Project
+     Copyright (C) 2018-2022 ArrowOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,10 +15,6 @@
      limitations under the License.
 -->
 <resources>
-  <!-- An animation used by DialogLaunchAnimator to make a dialog appear instantly (to animate -->
-  <!-- in-window) and disappear by fading out (when the exit into view is disabled). -->
-  <style name="Animation.LaunchAnimation" parent="@android:style/Animation">
-    <item name="android:windowEnterAnimation">@anim/launch_dialog_enter</item>
-    <item name="android:windowExitAnimation">@anim/launch_dialog_exit</item>
-  </style>
+    <!-- Whether usage of the proximity sensor during doze is supported -->
+    <bool name="doze_proximity_sensor_supported">true</bool>
 </resources>
