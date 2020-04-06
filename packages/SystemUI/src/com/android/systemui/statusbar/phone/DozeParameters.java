@@ -210,6 +210,10 @@ public class DozeParameters implements
         return SystemProperties.getBoolean("doze.vibrate.pickup", false);
     }
 
+    public boolean getDozeSupportsProxSensor() {
+        return getBoolean("doze.supports.prox.sensor", R.bool.doze_proximity_sensor_supported);
+    }
+
     public boolean getProxCheckBeforePulse() {
         return getBoolean("doze.pulse.proxcheck", R.bool.doze_proximity_check_before_pulse);
     }
