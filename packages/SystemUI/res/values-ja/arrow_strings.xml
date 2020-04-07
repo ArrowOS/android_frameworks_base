@@ -121,4 +121,22 @@
     <string name="qs_menu_item_show_brightness">明るさバーを表示</string>
     <string name="qs_menu_item_qs_brightness_position_bottom">下部の明るさバー</string>
     <string name="qs_menu_item_brightness_icon">明るさアイコン</string>
+    <!-- VPN QS tile -->
+    <string name="quick_settings_vpn_label">VPN</string>
+    <string name="quick_settings_vpn_connect_dialog_title">接続先...</string>
+    <string name="vpn_credentials_hint"><xliff:g id="name">%s</xliff:g> への接続の認証情報を入力して下さい</string>
+    <string name="vpn_credentials_username">ユーザー名</string>
+    <string name="vpn_credentials_password">パスワード</string>
+    <string name="vpn_credentials_dialog_connect">接続</string>
+    <!--Immersive mode tile -->
+    <string name="quick_settings_immersive_tile">全画面モード</string>
+    <string name="quick_settings_immersive_tile_off">全画面モード OFF</string>
+    <string name="quick_settings_immersive_tile_statusbar">ステータスバーを隠す</string>
+    <string name="quick_settings_immersive_tile_navbar">ナビゲーションバーを隠す</string>
+    <string name="quick_settings_immersive_tile_full">全て隠す</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">音声</string>
+    <string name="quick_settings_sound_ring">着信</string>
+    <string name="quick_settings_sound_vibrate">振動</string>
+    <string name="quick_settings_sound_dnd">マナーモード</string>
 </resources>

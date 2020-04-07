@@ -37,36 +37,36 @@
     <string name="accessibility_quick_settings_sync_changed_off">동기화 꺼짐</string>
     <string name="accessibility_quick_settings_sync_changed_on">동기화 켜짐</string>
     <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_battery_saving">위치 확인: 배터리 절약 모드</string>
     <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="accessibility_quick_settings_location_gps_only">위치 확인: 센서만 사용</string>
     <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">위치 확인: 높은 정확도 모드</string>
     <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_battery_saving_label">Battery saving</string>
-    <string name="quick_settings_location_battery_saving_label_twoline">Battery\nsaving</string>
+    <string name="quick_settings_location_battery_saving_label">배터리 절약</string>
+    <string name="quick_settings_location_battery_saving_label_twoline">배터리\n절약</string>
     <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_gps_only_label">GPS only</string>
-    <string name="quick_settings_location_gps_only_label_twoline">GPS only</string>
+    <string name="quick_settings_location_gps_only_label">GPS 전용</string>
+    <string name="quick_settings_location_gps_only_label_twoline">GPS 전용</string>
     <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_high_accuracy_label">High accuracy</string>
-    <string name="quick_settings_location_high_accuracy_label_twoline">High\naccuracy</string>
+    <string name="quick_settings_location_high_accuracy_label">높은 정확도</string>
+    <string name="quick_settings_location_high_accuracy_label_twoline">높은\n정확도</string>
     <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_detail_title">Location</string>
+    <string name="quick_settings_location_detail_title">위치</string>
     <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_detail_menu_title">Select mode:</string>
+    <string name="quick_settings_location_detail_menu_title">선택 모드</string>
     <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_title">High accuracy</string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_title">높은 정확도</string>
     <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_title">Battery saving</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_title">배터리 절약</string>
     <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_title">Device only</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_title">기기 전용</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
     <string name="quick_settings_location_detail_mode_high_accuracy_description">Use GPS, Wi\u2011Fi, Bluetooth, or cellular networks to determine location </string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_description">Use Wi\u2011Fi, Bluetooth, or cellular networks to determine location</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_description">Wi\u2011Fi, 블루투스 또는 이동통신망을 사용하여 위치를 찾습니다.</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_description">Use GPS to determine your location</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_description">GPS를 사용하여 위치를 찾습니다.</string>
     <!-- QS Config -->
     <string name="qs_menu_item_columns">Columns</string>
     <string name="qs_menu_item_columns_landscape">Columns landscape</string>
@@ -77,48 +77,66 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset defaults</string>
-    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_reset">기본값으로 재설정</string>
+    <string name="qs_menu_item_titles">라벨 표시</string>
     <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_columns_auto">자동</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_hot">Hot</string>
-    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_reboot">다시 시작</string>
+    <string name="global_action_reboot_more">다시 시작하는 중...</string>
+    <string name="global_action_reboot_sub">시스템</string>
+    <string name="global_action_reboot_recovery">복구모드</string>
+    <string name="global_action_reboot_bootloader">부트로더</string>
+    <string name="global_action_reboot_hot">빠른 다시 시작</string>
+    <string name="global_action_dismissable_dialog_text">고급 재시작이 꺼져있습니다.\n재시작하겠습니까?\u003f</string>
+    <string name="global_action_dnaa">다시 표시 안 함</string>
+    <string name="global_action_settings">설정</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">스크린샷</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">손전등</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">오류</string>
     <string name="omnijaws_service_unkown">날씨 정보 없음</string>
-    <string name="omnijaws_service_error_long">날씨 정보 불러오기 오류</string>
+    <string name="omnijaws_service_error_long">날씨 데이터를 불러올 수 없음</string>
     <string name="omnijaws_service_disabled">서비스 사용 중지됨</string>
     <string name="omnijaws_detail_header">날씨</string>
     <string name="omnijaws_label_default">날씨</string>
     <string name="omnijaws_current_text">현재</string>
     <string name="omnijaws_package_not_available">OmniJaws를 사용할 수 없음</string>
     <string name="omnijaws_service_last_update">최근 업데이트</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">상태 표시줄 아이콘</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_label">SIM 카드 전환</string>
+    <string name="qs_data_switch_toast_0">현재 SIM 카드가 삽입되어 있지 않습니다</string>
+    <string name="qs_data_switch_toast_1">현재 하나의 SIM 카드 만 삽입되었습니다</string>
     <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
     <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
     <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
-    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_show_brightness">밝기 조정 슬라이더 표시</string>
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
     <string name="qs_menu_item_brightness_icon">Brightness icon</string>
+    <!-- VPN QS tile -->
+    <string name="quick_settings_vpn_label">VPN</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
+    <!--Immersive mode tile -->
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
 </resources>

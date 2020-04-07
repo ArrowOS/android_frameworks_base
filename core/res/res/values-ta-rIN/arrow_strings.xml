@@ -16,17 +16,17 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
+    <string name="reboot_to_bootloader_title">துவக்க ஏற்றியை மறுதொடக்கம் செய்</string>
     <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
     <!-- advanced reboot to recovery. -->
     <string name="reboot_to_recovery_title">Reboot recovery</string>
     <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Restart system</string>
+    <string name="reboot_system_title">முறைமையை மறுதொடக்கம் செய்</string>
     <string name="reboot_system_message">Restarting system\u2026</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">ஏமாற்று தொகுப்பு கையொப்பம்</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">வேறொரு பயன்பாடாக நடிப்பதற்கு பயன்பாட்டை அனுமதிக்கிறது. தீங்கிழைக்கும் பயன்பாடுகள் தனிப்பட்ட தரவை அணுக இதைப் பயன்படுத்துகின்றன. முன்னெச்சரிக்கையுடன் இந்த அனுமதியை வழங்குங்கள்!</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">நிலைப்பட்டி படவுரு</string>
 </resources>

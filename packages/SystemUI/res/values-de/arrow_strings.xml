@@ -26,7 +26,7 @@
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Pop-Up-Benachrichtigungen</string>
-    <string name="accessibility_quick_settings_heads_up_off">Pop-Up Benachrichtigungen aus.</string>
+    <string name="accessibility_quick_settings_heads_up_off">Pop-Up-Benachrichtigungen aus.</string>
     <string name="accessibility_quick_settings_heads_up_on">Pop-Up Benachrichtigungen an.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Pop-Up Benachrichtigungen ausgeschaltet.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Pop-Up Benachrichtigungen eingeschaltet.</string>
@@ -43,7 +43,7 @@
     <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
     <string name="accessibility_quick_settings_location_high_accuracy">Standortdienste: Hohe Genauigkeit</string>
     <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_battery_saving_label">Akku-Sparmodus</string>
+    <string name="quick_settings_location_battery_saving_label">Energiesparmodus</string>
     <string name="quick_settings_location_battery_saving_label_twoline">Energiesparmodus</string>
     <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
     <string name="quick_settings_location_gps_only_label">Nur GPS</string>
@@ -58,7 +58,7 @@
     <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
     <string name="quick_settings_location_detail_mode_high_accuracy_title">Hohe Genauigkeit</string>
     <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_title">Akku-Sparmodus</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_title">Energiesparmodus</string>
     <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_title">Nur Gerät</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
@@ -121,4 +121,22 @@
     <string name="qs_menu_item_show_brightness">Show brightness bar</string>
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
     <string name="qs_menu_item_brightness_icon">Helligkeitssymbol</string>
+    <!-- VPN QS tile -->
+    <string name="quick_settings_vpn_label">VPN</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
+    <!--Immersive mode tile -->
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
 </resources>

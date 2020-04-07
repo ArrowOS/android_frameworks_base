@@ -16,17 +16,17 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">Khởi động vào trình nạp khởi động</string>
+    <string name="reboot_to_bootloader_message">Đang khởi động vào trình nạp khởi động\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
+    <string name="reboot_to_recovery_title">Khởi động vào trình phục hồi</string>
+    <string name="reboot_to_recovery_message">Đang khởi động vào trình phục hồi\u2026</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_system_title">Khởi động lại hệ thống</string>
+    <string name="reboot_system_message">Đang khởi động lại hệ thống\u2026</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Chữ ký gói giả mạo</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Cho phép ứng dụng có thể giả mạo làm ứng dụng khác. Các ứng dụng độc hại có thể sử dụng quyền này để truy cập trái phép vào dữ liệu riêng tư của bạn. Hãy thận trọng khi cấp quyền này!</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
 </resources>

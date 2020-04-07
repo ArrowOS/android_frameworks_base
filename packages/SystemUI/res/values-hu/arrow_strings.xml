@@ -77,7 +77,7 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_reset">Alapértékek visszaállítása</string>
     <string name="qs_menu_item_titles">Feliratok megjelenítése</string>
     <string name="qs_menu_item_qs_columns">Gyorssáv oszlopok</string>
     <string name="qs_menu_item_columns_auto">Automatikus</string>
@@ -87,7 +87,7 @@
     <string name="global_action_reboot_sub">Rendszer</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_hot">Forró</string>
     <string name="global_action_dismissable_dialog_text">A Speciális újraindítás ki van kapcsolva.\nÚjra szeretné indítani\u003f</string>
     <string name="global_action_dnaa">Ne jelenjen meg többé</string>
     <string name="global_action_settings">Beállítások</string>
@@ -111,14 +111,32 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_label">SIM-kártya váltása</string>
+    <string name="qs_data_switch_toast_0">Jelenleg nincs SIM-kártya behelyezve</string>
+    <string name="qs_data_switch_toast_1">Jelenleg csak egy SIM-kártya van behelyezve</string>
+    <string name="qs_data_switch_changed_1">SIM 1 lesz az adatkártya.</string>
+    <string name="qs_data_switch_changed_2">SIM 2 lesz az adatkártya.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
-    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
+    <string name="qs_menu_item_brightness_tweaks">A fényerőcsúszka tökéletesítése</string>
+    <string name="qs_menu_item_show_brightness">A fényerőcsúszka megjelenítése</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">A fényerőcsúszka megjelenítése alul</string>
+    <string name="qs_menu_item_brightness_icon">Fényerő ikon</string>
+    <!-- VPN QS tile -->
+    <string name="quick_settings_vpn_label">VPN</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Csatlakozás a következőhöz\u2026</string>
+    <string name="vpn_credentials_hint">Kérjük, adja meg a hitelesítőadatait, hogy csatlakozhasson a következőhöz: <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Felhasználónév</string>
+    <string name="vpn_credentials_password">Jelszó</string>
+    <string name="vpn_credentials_dialog_connect">Kapcsolódás</string>
+    <!--Immersive mode tile -->
+    <string name="quick_settings_immersive_tile">Teljes képernyős mód</string>
+    <string name="quick_settings_immersive_tile_off">Teljes képernyős mód ki</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
 </resources>
