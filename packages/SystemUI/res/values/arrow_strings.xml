@@ -157,5 +157,8 @@
     <string name="quick_settings_sound_ring">Ring</string>
     <string name="quick_settings_sound_vibrate">Vibrate</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
+	
+	<!-- Alerting notification header label -->
+    <string name="notification_section_header_alerting">Alerting notifications</string>
 
 </resources>
