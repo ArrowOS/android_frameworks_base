@@ -1,5 +1,5 @@
 <!--
-     Copyright (C) 2018-2019 Arrow
+     Copyright (C) 2018-2020 Arrow
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -116,4 +116,7 @@
          flashlight with the Power button. Set to -1 to disable
          the proximity sensor check at all -->
     <integer name="config_flashlightProximityTimeout">300</integer>
+
+    <!-- Whether the device has hw keys -->
+    <bool name="config_canShowNavbarToggle">false</bool>
 </resources>
