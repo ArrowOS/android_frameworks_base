@@ -116,4 +116,10 @@
          flashlight with the Power button. Set to -1 to disable
          the proximity sensor check at all -->
     <integer name="config_flashlightProximityTimeout">300</integer>
+
+    <!-- Whether the device has a notch -->
+    <bool name="arrow_config_deviceHasNotch">false</bool>
+
+    <!-- Whether the device has hw keys -->
+    <bool name="arrow_config_deviceHasHwKeys">false</bool>
 </resources>
