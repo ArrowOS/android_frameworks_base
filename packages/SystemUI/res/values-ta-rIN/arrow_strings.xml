@@ -50,23 +50,23 @@
     <string name="quick_settings_location_gps_only_label_twoline">GPS மட்டும்</string>
     <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
     <string name="quick_settings_location_high_accuracy_label">அதிக துல்லியம்</string>
-    <string name="quick_settings_location_high_accuracy_label_twoline">High\naccuracy</string>
+    <string name="quick_settings_location_high_accuracy_label_twoline">அதிக\nதுல்லியம்</string>
     <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
     <string name="quick_settings_location_detail_title">இருப்பிடம்</string>
     <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
     <string name="quick_settings_location_detail_menu_title">பயன்முறை தேர்ந்தெடு:</string>
     <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_title">High accuracy</string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_title">அதிக துல்லியம்</string>
     <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
     <string name="quick_settings_location_detail_mode_battery_saving_title">பேட்டரி சேமிப்பு</string>
     <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
     <string name="quick_settings_location_detail_mode_sensors_only_title">சாதனம் மட்டும்</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_description">Use GPS, Wi\u2011Fi, Bluetooth, or cellular networks to determine location </string>
+    <string name="quick_settings_location_detail_mode_high_accuracy_description">இருப்பிடத்தைத் தீர்மானிக்க GPS, Wi\u2011Fi, Bluetooth அல்லது மொபைல் பிணையங்களைப் பயன்படுத்துக </string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_description">Use Wi\u2011Fi, Bluetooth, or cellular networks to determine location</string>
+    <string name="quick_settings_location_detail_mode_battery_saving_description">இருப்பிடத்தைத் தீர்மானிக்க Wi\u2011Fi, Bluetooth அல்லது மொபைல் பிணையங்களைப் பயன்படுத்துக</string>
     <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_description">Use GPS to determine your location</string>
+    <string name="quick_settings_location_detail_mode_sensors_only_description">உங்கள் இருப்பிடத்தைக் கண்டறிய, GPSஐப் பயன்படுத்துக</string>
     <!-- QS Config -->
     <string name="qs_menu_item_columns">நெடுவரிசைகள்</string>
     <string name="qs_menu_item_columns_landscape">Columns landscape</string>
@@ -135,7 +135,7 @@
     <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
     <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_label">ஒலி</string>
     <string name="quick_settings_sound_ring">Ring</string>
     <string name="quick_settings_sound_vibrate">Vibrate</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
