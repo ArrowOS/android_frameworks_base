@@ -1322,6 +1322,12 @@
     <!-- Name of the data saver status bar icon. -->
     <string name="status_bar_data_saver">Data saver</string>
 
+    <!-- Name of the location status bar icon. -->
+    <string name="status_bar_location">Location</string>
+
+    <!-- Name of the microphone status bar icon. -->
+    <string name="status_bar_microphone">Microphone</string>
+
     <!-- Wallet strings -->
     <!-- Wallet empty state, title [CHAR LIMIT=32] -->
     <string name="wallet_title">Wallet</string>
