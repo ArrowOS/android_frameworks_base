@@ -83,11 +83,11 @@
     <string name="qs_menu_item_columns_auto">自動</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">再起動</string>
-    <string name="global_action_reboot_more">再起動中...</string>
+    <string name="global_action_reboot_more">再起動...</string>
     <string name="global_action_reboot_sub">システム</string>
     <string name="global_action_reboot_recovery">リカバリー</string>
     <string name="global_action_reboot_bootloader">ブートローダー</string>
-    <string name="global_action_reboot_hot">ソフトリブート</string>
+    <string name="global_action_reboot_hot">ソフト</string>
     <string name="global_action_dismissable_dialog_text">高度な再起動が無効です。\n再起動しますか\u003f</string>
     <string name="global_action_dnaa">今後表示しない</string>
     <string name="global_action_settings">設定</string>

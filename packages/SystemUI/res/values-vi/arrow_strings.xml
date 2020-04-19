@@ -87,7 +87,7 @@
     <string name="global_action_reboot_sub">Hệ thống</string>
     <string name="global_action_reboot_recovery">Chế độ phục hồi</string>
     <string name="global_action_reboot_bootloader">Bộ nạp khởi động</string>
-    <string name="global_action_reboot_hot">Nóng</string>
+    <string name="global_action_reboot_hot">Nhanh</string>
     <string name="global_action_dismissable_dialog_text">Khởi động lại nâng cao bị vô hiệu hóa.\nBạn có muốn khởi động lại\u003f</string>
     <string name="global_action_dnaa">Không hiển thị lại</string>
     <string name="global_action_settings">Cài đặt</string>
