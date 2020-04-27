@@ -304,6 +304,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
 
         // Tint for the battery icons are handled in setupHost()
         mBatteryRemainingIcon = findViewById(R.id.batteryRemainingIcon);
+        mBatteryRemainingIcon.setIsQsHeader(true);
         mRingerModeTextView.setSelected(true);
         mNextAlarmTextView.setSelected(true);
         Dependency.get(TunerService.class).addTunable(this,
