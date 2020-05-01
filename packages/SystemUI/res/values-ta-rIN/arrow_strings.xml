@@ -37,11 +37,11 @@
     <string name="accessibility_quick_settings_sync_changed_off">ஒத்திசைவு அணைக்கப்படுக்கிறது</string>
     <string name="accessibility_quick_settings_sync_changed_on">ஒத்திசைவு இயக்கப்படுக்கிறது</string>
     <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_battery_saving">இருப்பிடம் அறிவித்தல்: பேட்டரி சேமிப்பு பயன்முறை.</string>
     <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="accessibility_quick_settings_location_gps_only">இருப்பிடம் அறிவித்தல்: உணர்கருவிகள் மட்டும் பயன்முறை.</string>
     <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">இருப்பிடம் அறிவித்தல்: உயர் துல்லியப் பயன்முறை.</string>
     <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
     <string name="quick_settings_location_battery_saving_label">பேட்டரி சேமிப்பு</string>
     <string name="quick_settings_location_battery_saving_label_twoline">பேட்டரி\nசேமிப்பு</string>
@@ -137,6 +137,6 @@
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">ஒலி</string>
     <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_vibrate">அதிர்வு</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
 </resources>
