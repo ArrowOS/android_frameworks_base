@@ -21,11 +21,11 @@
     <!-- Deep sleep info -->
     <string name="status_deep_sleep">(Deep sleep: %1$d%2$s)</string>
     <!-- Caffeine QS tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Kofeiini</string>
+    <string name="accessibility_quick_settings_caffeine_off">Kofeiini pois päältä</string>
+    <string name="accessibility_quick_settings_caffeine_on">Kofeiini päälle</string>
     <!-- Label for estimated remaining duration of dash battery charging -->
     <string name="power_remaining_dash_charging_duration_only">Dash charging (<xliff:g id="time">%1$s</xliff:g> left until full)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
-    <string name="battery_info_status_dash_charging">Dash charging</string>
+    <string name="battery_info_status_dash_charging">Dash Lataus</string>
 </resources>
