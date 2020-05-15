@@ -16,17 +16,17 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">Käynnistetään bootloader-tilaan</string>
+    <string name="reboot_to_bootloader_message">Uudelleenkäynnistetään Bootloader-tilaan\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
+    <string name="reboot_to_recovery_title">Käynnistä Recovery -tilaan</string>
+    <string name="reboot_to_recovery_message">Uudelleenkäynnistetään Recovery-tilaan\u2026</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_system_title">Uudelleenkäynnistä järjestelmä</string>
+    <string name="reboot_system_message">Käynnistetään käyttöliittymä uudelleen\u2026</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Väärennä paketin digitaalinen allekirjoitus</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Antaa sovelluksen peittää itsensä olemalla toinen sovellus. Haitalliset sovellukset ehkä voivat käyttää tätä sovelluksien yksityistietojen saamiseen. Anna tämä käyttöoikeus sovellukselle huolella!</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">Tilapalkin kuvake</string>
 </resources>
