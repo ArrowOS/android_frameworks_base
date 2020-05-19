@@ -11214,6 +11214,12 @@ public final class Settings {
          * @hide
          */
         public static final String STATUS_BAR_QUICK_QS_PULLDOWN = "status_bar_quick_qs_pulldown";
+
+        /**
+         * boolean value. toggles swipe up hint in gestural nav mode
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_HINT = "navigation_bar_hint";
     }
 
     /**
