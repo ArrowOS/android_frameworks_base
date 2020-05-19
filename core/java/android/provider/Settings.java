@@ -4797,6 +4797,12 @@ public final class Settings {
          */
         public static final String SCREENSHOT_SOUND = "screenshot_sound";
 
+        /**
+         * Enable/Disable navigation bar gestural mode hint
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_HINT = "navigation_bar_hint";
+
 
         /**
          * IMPORTANT: If you add a new public settings you also have to add it to
@@ -4926,6 +4932,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
             PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_LOCKSCREEN);
+            PRIVATE_SETTINGS.add(NAVIGATION_BAR_HINT);
         }
 
         /**
