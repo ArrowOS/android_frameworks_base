@@ -153,7 +153,6 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
 
         @Override
         public void onScreenTurnedOff() {
-            mScreenTurnedOn = false;
             hideCircle();
         }
 
@@ -356,7 +355,10 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
     }
 
     public void show() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 544f5df0262... dont hide fod on screen off
         if (mIsBouncer && !isPinOrPattern(mUpdateMonitor.getCurrentUser())) {
             // Ignore show calls when Keyguard password screen is being shown
             return;
