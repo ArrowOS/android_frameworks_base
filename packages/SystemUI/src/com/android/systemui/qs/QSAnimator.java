@@ -14,12 +14,14 @@
 
 package com.android.systemui.qs;
 
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.view.View.OnLayoutChangeListener;
 
 import com.android.systemui.Dependency;
+import com.android.systemui.arrow.ArrowSettingsService;
 import com.android.systemui.plugins.qs.QS;
 import com.android.systemui.plugins.qs.QSTile;
 import com.android.systemui.plugins.qs.QSTileView;
@@ -35,7 +37,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class QSAnimator implements Callback, PageListener, Listener, OnLayoutChangeListener,
-        OnAttachStateChangeListener, Tunable {
+        OnAttachStateChangeListener, Tunable, ArrowSettingsService.ArrowSettingsObserver {
 
     private static final String TAG = "QSAnimator";
 
@@ -44,6 +46,8 @@ public class QSAnimator implements Callback, PageListener, Listener, OnLayoutCha
 
     public static final float EXPANDED_TILE_DELAY = .86f;
 
+    private static final String QS_SHOW_BRIGHTNESS_SLIDER =
+                                Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER;
 
     private final ArrayList<View> mAllViews = new ArrayList<>();
     /**
@@ -76,6 +80,8 @@ public class QSAnimator implements Callback, PageListener, Listener, OnLayoutCha
     private float mLastPosition;
     private QSTileHost mHost;
     private boolean mShowCollapsedOnKeyguard;
+
+    private boolean mIsQuickQsBrightnessEnabled;
 
     public QSAnimator(QS qs, QuickQSPanel quickPanel, QSPanel panel) {
         mQs = qs;
@@ -143,6 +149,7 @@ public class QSAnimator implements Callback, PageListener, Listener, OnLayoutCha
     public void onViewAttachedToWindow(View v) {
         Dependency.get(TunerService.class).addTunable(this, ALLOW_FANCY_ANIMATION,
                 MOVE_FULL_ROWS);
+        Dependency.get(ArrowSettingsService.class).addIntObserver(this, QS_SHOW_BRIGHTNESS_SLIDER);
     }
 
     @Override
@@ -151,6 +158,7 @@ public class QSAnimator implements Callback, PageListener, Listener, OnLayoutCha
             mHost.removeCallback(this);
         }
         Dependency.get(TunerService.class).removeTunable(this);
+        Dependency.get(ArrowSettingsService.class).removeObserver(this);
     }
 
     @Override
@@ -164,6 +172,15 @@ public class QSAnimator implements Callback, PageListener, Listener, OnLayoutCha
             mFullRows = TunerService.parseIntegerSwitch(newValue, true);
         }
         updateAnimators();
+    }
+
+    @Override
+    public void onIntSettingChanged(String key, Integer newValue) {
+        if (DEBUG) Log.d(TAG, "onIntSettingChanged " + key + " -> " + newValue);
+
+        if (QS_SHOW_BRIGHTNESS_SLIDER.equals(key)) {
+            mIsQuickQsBrightnessEnabled = TunerService.parseInteger(newValue, 0) > 1;
+        }
     }
 
     @Override
@@ -280,7 +297,7 @@ public class QSAnimator implements Callback, PageListener, Listener, OnLayoutCha
             if (brightness != null) {
                 firstPageBuilder.addFloat(brightness, "translationY", heightDiff, 0);
                 mBrightnessAnimator = new TouchAnimator.Builder()
-                        .addFloat(brightness, "alpha", 0, 1)
+                        .addFloat(brightness, "alpha", mIsQuickQsBrightnessEnabled ? 1 : 0, 1)
                         .setStartDelay(.5f)
                         .build();
                 mAllViews.add(brightness);
