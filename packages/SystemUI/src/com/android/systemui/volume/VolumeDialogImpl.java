@@ -581,6 +581,10 @@ public class VolumeDialogImpl implements VolumeDialog,
                 rescheduleTimeoutH();
                 Util.setVisOrGone(findRow(AudioManager.STREAM_RING).view, !mExpanded);
                 Util.setVisOrGone(findRow(STREAM_ALARM).view, !mExpanded);
+                if (!isNotificationStreamLinked()) {
+                    Util.setVisOrGone(
+                            findRow(AudioManager.STREAM_NOTIFICATION).view, !mExpanded);
+                }
 
                 if (mExpanded) mController.setActiveStream(AudioManager.STREAM_MUSIC);
                 mExpandRows.setExpanded(!mExpanded);
