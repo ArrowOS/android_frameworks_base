@@ -70,6 +70,7 @@ import com.android.systemui.statusbar.policy.ConfigurationController;
 import com.android.systemui.statusbar.policy.ConfigurationController.ConfigurationListener;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController;
 import com.android.systemui.statusbar.policy.DeviceProvisionedController.DeviceProvisionedListener;
+import com.android.systemui.tuner.TunerService;
 import com.android.systemui.util.settings.SecureSettings;
 
 import org.json.JSONException;
@@ -111,6 +112,7 @@ public class ThemeOverlayController extends SystemUI implements Dumpable {
     private final SecureSettings mSecureSettings;
     private final Executor mMainExecutor;
     private final Handler mBgHandler;
+    private final TunerService mTunerService;
     private final boolean mIsMonetEnabled;
     private final UserTracker mUserTracker;
     private final DeviceProvisionedController mDeviceProvisionedController;
@@ -347,7 +349,8 @@ public class ThemeOverlayController extends SystemUI implements Dumpable {
             UserManager userManager, DeviceProvisionedController deviceProvisionedController,
             UserTracker userTracker, DumpManager dumpManager, FeatureFlags featureFlags,
             WakefulnessLifecycle wakefulnessLifecycle,
-            ConfigurationController configurationController) {
+            ConfigurationController configurationController,
+            TunerService tunerService) {
         super(context);
 
         mIsMonetEnabled = featureFlags.isMonetEnabled();
@@ -363,8 +366,16 @@ public class ThemeOverlayController extends SystemUI implements Dumpable {
         mUserTracker = userTracker;
         mWakefulnessLifecycle = wakefulnessLifecycle;
         mConfigurationController = configurationController;
+        mTunerService = tunerService;
         dumpManager.registerDumpable(TAG, this);
     }
+
+    private final TunerService.Tunable mTunable = new TunerService.Tunable() {
+        @Override
+        public void onTuningChanged(String key, String newValue) {
+            reevaluateSystemTheme(true /* forceReload */);
+        }
+    };
 
     @Override
     public void start() {
@@ -424,6 +435,10 @@ public class ThemeOverlayController extends SystemUI implements Dumpable {
                     }
                 },
                 UserHandle.USER_ALL);
+
+        mTunerService.addTunable(mTunable, Settings.Secure.UI_NIGHT_MODE,
+                Settings.Secure.UI_NIGHT_MODE_OVERRIDE_ON,
+                Settings.Secure.UI_NIGHT_MODE_OVERRIDE_OFF);
 
         if (!mIsMonetEnabled) {
             return;
