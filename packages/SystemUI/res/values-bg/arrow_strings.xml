@@ -36,39 +36,8 @@
     <string name="accessibility_quick_settings_sync_on">Синхр. вкл.</string>
     <string name="accessibility_quick_settings_sync_changed_off">Синхронизацията е изключена</string>
     <string name="accessibility_quick_settings_sync_changed_on">Синхронизацията е включена</string>
-    <!-- Content description of the location tile in quick settings when on, battery saving mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
-    <!-- Content description of the location tile in quick settings when on, sensors only mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
-    <!-- Content description of the location tile in quick settings when on, high accuracy mode (not shown on the screen). [CHAR LIMIT=NONE] -->
-    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
-    <!-- QuickSettings: Location (On, low-power) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_battery_saving_label">Battery saving</string>
-    <string name="quick_settings_location_battery_saving_label_twoline">Battery\nsaving</string>
-    <!-- QuickSettings: Location (On, gps-only) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_gps_only_label">GPS only</string>
-    <string name="quick_settings_location_gps_only_label_twoline">GPS only</string>
-    <!-- QuickSettings: Location (On, high-accuracy) [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_high_accuracy_label">High accuracy</string>
-    <string name="quick_settings_location_high_accuracy_label_twoline">High\naccuracy</string>
-    <!-- QuickSettings: Location detail panel title [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_detail_title">Location</string>
-    <!-- QuickSettings: Location detail panel menu title [CHAR LIMIT=NONE] -->
-    <string name="quick_settings_location_detail_menu_title">Select mode:</string>
-    <!-- [CHAR LIMIT=30] Location detail panel, high accuracy location mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_title">High accuracy</string>
-    <!-- [CHAR LIMIT=30] Location detail panel, battery saving location mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_title">Battery saving</string>
-    <!-- [CHAR LIMIT=30] Location detail panel, device only location mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_title">Device only</string>
-    <!-- [CHAR LIMIT=130] Location detail panel, description for high accuracy mode -->
-    <string name="quick_settings_location_detail_mode_high_accuracy_description">Use GPS, Wi\u2011Fi, Bluetooth, or cellular networks to determine location </string>
-    <!-- [CHAR LIMIT=130] Location detail panel, description for battery saving mode -->
-    <string name="quick_settings_location_detail_mode_battery_saving_description">Use Wi\u2011Fi, Bluetooth, or cellular networks to determine location</string>
-    <!-- [CHAR LIMIT=130] Location detail panel, description for sensors only mode -->
-    <string name="quick_settings_location_detail_mode_sensors_only_description">Use GPS to determine your location</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns">Колони</string>
     <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
@@ -80,30 +49,30 @@
     <string name="qs_menu_item_reset">Reset defaults</string>
     <string name="qs_menu_item_titles">Show labels</string>
     <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <string name="qs_menu_item_columns_auto">Автоматично</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_reboot">Презареждане</string>
+    <string name="global_action_reboot_more">Рестартиране\u2026</string>
+    <string name="global_action_reboot_sub">Система</string>
+    <string name="global_action_reboot_recovery">Възстановяване</string>
+    <string name="global_action_reboot_bootloader">Зареждачка за операц. сист.</string>
     <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_dnaa">Без ново показване</string>
+    <string name="global_action_settings">Настройки</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">Екранна снимка</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">Фенерче</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Грешка</string>
-    <string name="omnijaws_service_unkown">Няма информация за времето</string>
+    <string name="omnijaws_service_unkown">Няма данни за времето</string>
     <string name="omnijaws_service_error_long">Грешка, зареждайки данните за времето</string>
-    <string name="omnijaws_service_disabled">Услугата е забранена</string>
-    <string name="omnijaws_detail_header">Метеорологични условия</string>
-    <string name="omnijaws_label_default">Метеорологични условия</string>
+    <string name="omnijaws_service_disabled">Услугата е изключена</string>
+    <string name="omnijaws_detail_header">Времето</string>
+    <string name="omnijaws_label_default">Времето</string>
     <string name="omnijaws_current_text">Сега</string>
     <string name="omnijaws_package_not_available">OmniJaws не е наличен</string>
     <string name="omnijaws_service_last_update">Последно обновяване:</string>
@@ -122,12 +91,12 @@
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
     <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
-    <string name="quick_settings_vpn_label">VPN</string>
+    <string name="quick_settings_vpn_label">Виртуална частна мрежа (VPN)</string>
     <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
     <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">Username</string>
-    <string name="vpn_credentials_password">Password</string>
-    <string name="vpn_credentials_dialog_connect">Connect</string>
+    <string name="vpn_credentials_username">Потребителско име</string>
+    <string name="vpn_credentials_password">Парола</string>
+    <string name="vpn_credentials_dialog_connect">Свързване</string>
     <!--Immersive mode tile -->
     <string name="quick_settings_immersive_tile">Immersive mode</string>
     <string name="quick_settings_immersive_tile_off">Immersive off</string>
@@ -135,8 +104,8 @@
     <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
     <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Звук</string>
+    <string name="quick_settings_sound_ring">Звънене</string>
+    <string name="quick_settings_sound_vibrate">Вибриране</string>
+    <string name="quick_settings_sound_dnd">Не безпокойте</string>
 </resources>
