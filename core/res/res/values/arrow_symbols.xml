@@ -37,6 +37,9 @@
     <!-- In-display Fingerprint -->
     <java-symbol type="bool" name="config_supportsInDisplayFingerprint" />
 
+    <!-- FOD icon dimming -->
+    <java-symbol type="bool" name="config_targetUsesInKernelDimming" />
+
     <!-- Proximity check on screen on -->
     <java-symbol type="bool" name="config_proximityCheckOnWake" />
 
