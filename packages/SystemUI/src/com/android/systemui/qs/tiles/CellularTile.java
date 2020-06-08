@@ -37,8 +37,8 @@ import android.widget.Switch;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.net.DataUsageController;
-import com.android.systemui.Dependency;
 import com.android.systemui.Prefs;
+import com.android.systemui.Dependency;
 import com.android.systemui.R;
 import com.android.systemui.plugins.ActivityStarter;
 import com.android.systemui.plugins.qs.DetailAdapter;
@@ -48,11 +48,10 @@ import com.android.systemui.qs.QSHost;
 import com.android.systemui.qs.SignalTileView;
 import com.android.systemui.qs.tileimpl.QSTileImpl;
 import com.android.systemui.statusbar.phone.SystemUIDialog;
-import com.android.systemui.statusbar.phone.UnlockMethodCache;
-import com.android.systemui.statusbar.policy.KeyguardMonitor;
 import com.android.systemui.statusbar.policy.NetworkController;
 import com.android.systemui.statusbar.policy.NetworkController.IconState;
 import com.android.systemui.statusbar.policy.NetworkController.SignalCallback;
+import com.android.systemui.statusbar.policy.KeyguardMonitor;
 
 import javax.inject.Inject;
 
@@ -66,23 +65,19 @@ public class CellularTile extends QSTileImpl<SignalState> {
 
     private final CellSignalCallback mSignalCallback = new CellSignalCallback();
     private final ActivityStarter mActivityStarter;
-    private final KeyguardMonitor mKeyguardMonitor;
-    private final UnlockMethodCache mUnlockMethodCache;
 
     private final KeyguardMonitor mKeyguard;
     private final KeyguardCallback mKeyguardCallback = new KeyguardCallback();
 
     @Inject
     public CellularTile(QSHost host, NetworkController networkController,
-            ActivityStarter activityStarter, KeyguardMonitor keyguardMonitor) {
+            ActivityStarter activityStarter) {
         super(host);
         mController = networkController;
         mActivityStarter = activityStarter;
-        mKeyguardMonitor = keyguardMonitor;
-        mKeyguard = Dependency.get(KeyguardMonitor.class);
-        mUnlockMethodCache = UnlockMethodCache.getInstance(mContext);
         mDataController = mController.getMobileDataController();
         mDetailAdapter = new CellularDetailAdapter();
+        mKeyguard = Dependency.get(KeyguardMonitor.class);
         mController.observe(getLifecycle(), mSignalCallback);
     }
 
@@ -127,13 +122,6 @@ public class CellularTile extends QSTileImpl<SignalState> {
             });
             return;
         } else {
-        if (mKeyguard.isSecure() && mKeyguard.isShowing()) {
-                Dependency.get(ActivityStarter.class).postQSRunnableDismissingKeyguard(() -> {
-                    mHost.openPanels();
-                    mDataController.setMobileDataEnabled(true);
-                });
-                return;
-            }
             mDataController.setMobileDataEnabled(!mDataController.isMobileDataEnabled());
         }
     }
@@ -168,11 +156,8 @@ public class CellularTile extends QSTileImpl<SignalState> {
 
     @Override
     protected void handleSecondaryClick() {
-        if (getState().state == Tile.STATE_UNAVAILABLE) {
-            return;
-        }
         if (mDataController.isMobileDataSupported()) {
-            if (mKeyguardMonitor.isSecure() && !mUnlockMethodCache.canSkipBouncer()) {
+            if (mKeyguard.isSecure() && mKeyguard.isShowing()) {
                 Dependency.get(ActivityStarter.class).postQSRunnableDismissingKeyguard(() -> {
                     mHost.openPanels();
                     showDetail(true);
@@ -200,7 +185,6 @@ public class CellularTile extends QSTileImpl<SignalState> {
 
         DataUsageController.DataUsageInfo carrierLabelInfo = mDataController.getDataUsageInfo();
         final Resources r = mContext.getResources();
-        state.dualTarget = true;
         boolean mobileDataEnabled = mDataController.isMobileDataSupported()
                 && mDataController.isMobileDataEnabled();
         state.value = mobileDataEnabled;
@@ -379,10 +363,7 @@ public class CellularTile extends QSTileImpl<SignalState> {
             final DataUsageDetailView v = (DataUsageDetailView) (convertView != null
                     ? convertView
                     : LayoutInflater.from(mContext).inflate(R.layout.data_usage, parent, false));
-            DataUsageController mobileDataController = new DataUsageController(mContext);
-            mobileDataController.setSubscriptionId(
-                    SubscriptionManager.getDefaultDataSubscriptionId());
-            final DataUsageController.DataUsageInfo info = mobileDataController.getDataUsageInfo();
+            final DataUsageController.DataUsageInfo info = mDataController.getDataUsageInfo();
             if (info == null) return v;
             v.bind(info);
             v.findViewById(R.id.roaming_text).setVisibility(mSignalCallback.mInfo.roaming
