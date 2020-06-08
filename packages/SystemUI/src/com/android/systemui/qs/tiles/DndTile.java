@@ -106,7 +106,7 @@ public class DndTile extends QSTileImpl<BooleanState> {
 
     @Override
     public boolean isDualTarget() {
-        return true;
+        return false;
     }
 
     public static void setVisible(Context context, boolean visible) {
