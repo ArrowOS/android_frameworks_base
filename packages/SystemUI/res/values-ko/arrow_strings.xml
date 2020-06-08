@@ -48,7 +48,7 @@
     <string name="qs_menu_item_columns_nine">9</string>
     <string name="qs_menu_item_reset">기본값으로 재설정</string>
     <string name="qs_menu_item_titles">라벨 표시</string>
-    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_qs_columns">퀵 바 개수</string>
     <string name="qs_menu_item_columns_auto">자동</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">다시 시작</string>
@@ -83,29 +83,32 @@
     <string name="qs_data_switch_label">SIM 카드 전환</string>
     <string name="qs_data_switch_toast_0">현재 SIM 카드가 삽입되어 있지 않습니다</string>
     <string name="qs_data_switch_toast_1">현재 하나의 SIM 카드 만 삽입되었습니다</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_changed_1">데이터 카드를 SIM 1로 전환하십시오.</string>
+    <string name="qs_data_switch_changed_2">데이터 카드를 SIM 2로 전환하십시오.</string>
     <!-- QS menu brightness tweaks -->
     <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
     <string name="qs_menu_item_show_brightness">밝기 조정 슬라이더 표시</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">밝기 조정 슬라이더를 하단에 표시</string>
+    <string name="qs_menu_item_brightness_icon">밝기 아이콘</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
     <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
     <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
     <string name="vpn_credentials_username">Username</string>
-    <string name="vpn_credentials_password">Password</string>
-    <string name="vpn_credentials_dialog_connect">Connect</string>
+    <string name="vpn_credentials_password">비밀번호</string>
+    <string name="vpn_credentials_dialog_connect">연결</string>
     <!--Immersive mode tile -->
     <string name="quick_settings_immersive_tile">Immersive mode</string>
     <string name="quick_settings_immersive_tile_off">Immersive off</string>
-    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
-    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
-    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <string name="quick_settings_immersive_tile_statusbar">전체 화면 상태바</string>
+    <string name="quick_settings_immersive_tile_navbar">전체 화면 내비게이션 바</string>
+    <string name="quick_settings_immersive_tile_full">전체화면 꽉차게</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">소리</string>
+    <string name="quick_settings_sound_ring">벨소리</string>
+    <string name="quick_settings_sound_vibrate">진동</string>
+    <string name="quick_settings_sound_dnd">방해금지</string>
+    <!-- Reboot/Recovery QS tile -->
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
 </resources>
