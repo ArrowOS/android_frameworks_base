@@ -16,17 +16,17 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">Reinici a bootloader</string>
+    <string name="reboot_to_bootloader_message">Reiniciant al gestor d\'arrencada\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
+    <string name="reboot_to_recovery_title">Reinicia a recuperació</string>
+    <string name="reboot_to_recovery_message">Reiniciant al mode recuperació\u2026</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_system_title">Reinicia el Sistema</string>
+    <string name="reboot_system_message">Reiniciant el sistema</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Signatura del paquet suplantat</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Permet que l\'aplicació faci veure que n\'és una de diferent. Les aplicacions malicioses poden utilitzar això per accedir a dades personals. Concediu aquest permís amb compte!</string>
-    <string name="statusbar_items_title">Statusbar icon</string>
+    <string name="statusbar_items_title">Icona de la barra d\'estat</string>
 </resources>
