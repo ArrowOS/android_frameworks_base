@@ -25,7 +25,7 @@
     <string name="accessibility_quick_settings_caffeine_off">Modalità Caffeina disattivata</string>
     <string name="accessibility_quick_settings_caffeine_on">Modalità Caffeina attivata</string>
     <!-- Label for estimated remaining duration of dash battery charging -->
-    <string name="power_remaining_dash_charging_duration_only">Ricarica Dash (<xliff:g id="time">%1$s</xliff:g> mancanti fino a carica completa)</string>
+    <string name="power_remaining_dash_charging_duration_only">Ricarica Dash (<xliff:g id="time">%1$s</xliff:g> rimanenti alla carica completa)</string>
     <!-- Battery use screen.  Battery status shown in chart label when charging from a dash source.  -->
     <string name="battery_info_status_dash_charging">Ricarica Dash</string>
 </resources>

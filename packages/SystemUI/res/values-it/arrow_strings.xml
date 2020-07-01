@@ -52,7 +52,7 @@
     <string name="qs_menu_item_columns_auto">Automatico</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Riavvia</string>
-    <string name="global_action_reboot_more">Riavvio in corso</string>
+    <string name="global_action_reboot_more">Riavvio\u2026</string>
     <string name="global_action_reboot_sub">Sistema</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
@@ -92,23 +92,23 @@
     <string name="qs_menu_item_brightness_icon">Icona luminosità</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
-    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">Username</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connetti a\u2026</string>
+    <string name="vpn_credentials_hint">Inserisci le tue credenziali per connetterti a <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Nome utente</string>
     <string name="vpn_credentials_password">Password</string>
-    <string name="vpn_credentials_dialog_connect">Connect</string>
+    <string name="vpn_credentials_dialog_connect">Connetti</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">Immersive mode</string>
-    <string name="quick_settings_immersive_tile_off">Immersive off</string>
-    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
-    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
-    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <string name="quick_settings_immersive_tile">Modalità immersiva</string>
+    <string name="quick_settings_immersive_tile_off">Modalità immersiva disattivata</string>
+    <string name="quick_settings_immersive_tile_statusbar">Barra di stato immersiva</string>
+    <string name="quick_settings_immersive_tile_navbar">Barra di navigazione immersiva</string>
+    <string name="quick_settings_immersive_tile_full">Modalità immersiva completa</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Modalità suoneria</string>
+    <string name="quick_settings_sound_ring">Suoneria</string>
+    <string name="quick_settings_sound_vibrate">Vibrazione</string>
+    <string name="quick_settings_sound_dnd">Non disturbare</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Riavvio</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
 </resources>
