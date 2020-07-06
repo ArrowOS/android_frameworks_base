@@ -2469,7 +2469,6 @@ public class NotificationPanelView extends PanelView implements
 
     @Override
     protected void onTrackingStarted() {
-        Secure.putInt(mContext.getContentResolver(), "sysui_rounded_size_top", -1);
         mFalsingManager.onTrackingStarted(mStatusBar.isKeyguardCurrentlySecure());
         super.onTrackingStarted();
         if (mQsFullyExpanded) {
@@ -2485,8 +2484,6 @@ public class NotificationPanelView extends PanelView implements
 
     @Override
     protected void onTrackingStopped(boolean expand) {
-        if (!expand)
-            Secure.putInt(mContext.getContentResolver(), "sysui_rounded_size_top", -2);
         mFalsingManager.onTrackingStopped();
         super.onTrackingStopped(expand);
         if (expand) {
