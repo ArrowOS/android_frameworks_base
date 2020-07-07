@@ -659,12 +659,16 @@ public class StatusBar extends SystemUI implements DemoMode,
             mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
                     Settings.System.FORCE_SHOW_NAVBAR),
                     false, this, UserHandle.USER_ALL);
+            mContext.getContentResolver().registerContentObserver(Settings.Secure.getUriFor(
+                    "sysui_rounded_size"),
+                    false, this, UserHandle.USER_ALL);
         }
 
         @Override
         public void onChange(boolean selfChange, Uri uri) {
             if (uri.equals(Settings.System.getUriFor(Settings.System.DISPLAY_CUTOUT_MODE)) ||
-                    uri.equals(Settings.System.getUriFor(Settings.System.STOCK_STATUSBAR_IN_HIDE))) {
+                    uri.equals(Settings.System.getUriFor(Settings.System.STOCK_STATUSBAR_IN_HIDE)) ||
+                    uri.equals(Settings.Secure.getUriFor("sysui_rounded_size"))) {
                 handleCutout(null);
             } else if (uri.equals(Settings.System.getUriFor(Settings.System.FORCE_SHOW_NAVBAR))) {
                 updateNavigationBar(getRegisterStatusBarResult(), false);
@@ -926,7 +930,6 @@ public class StatusBar extends SystemUI implements DemoMode,
                     if (mHeadsUpManager.hasPinnedHeadsUp()) {
                         mNotificationPanel.notifyBarPanelExpansionChanged();
                     }
-                    handleCutout(null);
                     mStatusBarView.setBouncerShowing(mBouncerShowing);
                     if (oldStatusBarView != null) {
                         float fraction = oldStatusBarView.getExpansionFraction();
@@ -949,6 +952,7 @@ public class StatusBar extends SystemUI implements DemoMode,
                     checkBarModes();
                     mBurnInProtectionController =
                         new BurnInProtectionController(mContext, this, mStatusBarView);
+                    handleCutout(null);
                 }).getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.status_bar_container, new CollapsedStatusBarFragment(),
@@ -3994,8 +3998,26 @@ public class StatusBar extends SystemUI implements DemoMode,
         }
     }
 
+    private void setNotificationPanelPadding(boolean enable) {
+        if (mNotificationPanel == null) return;
+        if (enable) {
+            int size = (int) (Settings.Secure.getIntForUser(mContext.getContentResolver(),
+                    "sysui_rounded_size", -1, UserHandle.USER_CURRENT) * getDisplayDensity());
+            // Choose a sane safe size in immerse, often
+            // defaults are too large
+            if (size < 0) {
+                size = (int) (20 * getDisplayDensity());
+            }
+            mNotificationPanel.setPadding(size, 0, size, 0);
+        } else {
+            mNotificationPanel.setPadding(0, 0, 0, 0);
+        }
+
+    }
+
     private void handleCutout(Configuration newConfig) {
         boolean immerseMode;
+        if (newConfig == null) newConfig = mContext.getResources().getConfiguration();
         if (newConfig == null || newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
             immerseMode = Settings.System.getIntForUser(mContext.getContentResolver(),
                         Settings.System.DISPLAY_CUTOUT_MODE, 0, UserHandle.USER_CURRENT) == 1;
@@ -4008,6 +4030,7 @@ public class StatusBar extends SystemUI implements DemoMode,
                         Settings.System.STOCK_STATUSBAR_IN_HIDE, 1, UserHandle.USER_CURRENT) == 1;
         setBlackStatusBar(immerseMode);
         setCutoutOverlay(hideCutoutMode);
+        setNotificationPanelPadding(immerseMode);
         setStatusBarStockOverlay(hideCutoutMode && statusBarStock);
     }
 
