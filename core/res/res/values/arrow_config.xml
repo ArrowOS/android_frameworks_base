@@ -116,4 +116,7 @@
 
     <!-- Whether the device has hw keys -->
     <bool name="config_canShowNavbarToggle">false</bool>
+
+    <!-- Whether device supports in-display fingerprint when screen is turned off -->
+    <bool name="config_supportsInDisplayFingerprintGesture">false</bool>
 </resources>

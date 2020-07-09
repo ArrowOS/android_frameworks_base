@@ -5033,6 +5033,21 @@ public final class Settings {
                 BOOLEAN_VALIDATOR;
 
         /**
+         * Screen off fod
+         * @hide
+         */
+        public static final String FOD_GESTURE = "fod_gesture";
+
+        /** @hide */
+        public static final Validator FOD_GESTURE_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
+         * IMPORTANT: If you add a new public settings you also have to add it to
+         * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
+         * it to PRIVATE_SETTINGS below. Also add a validator that can validate
+         * the setting value. See an example above.
+
+       /**
          * Whether the Home button works during call
          * @hide
          */
@@ -5300,6 +5315,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(STOCK_STATUSBAR_IN_HIDE);
             PRIVATE_SETTINGS.add(FORCE_SHOW_NAVBAR);
             PRIVATE_SETTINGS.add(ALLOW_INCALL_HOME);
+            PRIVATE_SETTINGS.add(FOD_GESTURE);
         }
 
         /**
@@ -5421,6 +5437,7 @@ public final class Settings {
             VALIDATORS.put(STOCK_STATUSBAR_IN_HIDE, STOCK_STATUSBAR_IN_HIDE_VALIDATOR);
             VALIDATORS.put(FORCE_SHOW_NAVBAR, FORCE_SHOW_NAVBAR_VALIDATOR);
             VALIDATORS.put(ALLOW_INCALL_HOME, ALLOW_INCALL_HOME_VALIDATOR);
+            VALIDATORS.put(FOD_GESTURE, FOD_GESTURE_VALIDATOR);
         }
 
         /**
