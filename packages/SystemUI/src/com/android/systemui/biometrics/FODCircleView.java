@@ -18,8 +18,10 @@ package com.android.systemui.biometrics;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.database.ContentObserver;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -27,8 +29,11 @@ import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.PowerManager;
 import android.os.RemoteException;
+import android.os.SystemClock;
 import android.provider.Settings;
+import android.net.Uri;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -73,6 +78,16 @@ public class FODCircleView extends ImageView {
     private boolean mIsDreaming;
     private boolean mIsShowing;
     private boolean mIsCircleShowing;
+    private boolean mSupportsFodGesture;
+
+    private boolean mDozeEnabled;
+    private boolean mFodGestureEnable;
+    private boolean mPressPending;
+    private boolean mScreenTurnedOn;
+
+    private Context mContext;
+    private PowerManager mPowerManager;
+    private PowerManager.WakeLock mWakeLock;
 
     private Handler mHandler;
 
@@ -84,12 +99,26 @@ public class FODCircleView extends ImageView {
             new IFingerprintInscreenCallback.Stub() {
         @Override
         public void onFingerDown() {
-            mHandler.post(() -> showCircle());
+            if (mSupportsFodGesture && mFodGestureEnable && !mScreenTurnedOn) {
+                if (mDozeEnabled) {
+                    mHandler.post(() -> mContext.sendBroadcast(new Intent("com.android.systemui.doze.pulse")));
+                } else {
+                    mWakeLock.acquire(3000);
+                    mHandler.post(() -> mPowerManager.wakeUp(SystemClock.uptimeMillis(),
+                        PowerManager.WAKE_REASON_GESTURE, FODCircleView.class.getSimpleName()));
+                }
+                mPressPending = true;
+            } else {
+                mHandler.post(() -> showCircle());
+            }
         }
 
         @Override
         public void onFingerUp() {
             mHandler.post(() -> hideCircle());
+            if (mSupportsFodGesture && mPressPending) {
+                mPressPending = false;
+            }
         }
     };
 
@@ -125,12 +154,111 @@ public class FODCircleView extends ImageView {
 
         @Override
         public void onScreenTurnedOff() {
-            hideCircle();
+            mScreenTurnedOn = false;
+            if (mSupportsFodGesture){
+                hideCircle();
+            }else{
+                hide();
+            }
+        }
+
+        @Override
+        public void onScreenTurnedOn() {
+            if (!mSupportsFodGesture && mUpdateMonitor.isFingerprintDetectionRunning()) {
+                show();
+            }
+            if (mSupportsFodGesture && mPressPending) {
+                mHandler.post(() -> showCircle());
+                mPressPending = false;
+            }
+            mScreenTurnedOn = true;
+        }
+
+        @Override
+        public void onBiometricHelp(int msgId, String helpString,
+                BiometricSourceType biometricSourceType) {
+            if (biometricSourceType == BiometricSourceType.FINGERPRINT &&
+                    msgId == -1){ // Auth error
+                hideCircle();
+            }
+        }
+
+        @Override
+        public void onStrongAuthStateChanged(int userId) {
+            mCanUnlockWithFp = canUnlockWithFp();
+            if (!mCanUnlockWithFp){
+                hide();
+            }
         }
     };
 
+    private boolean canUnlockWithFp() {
+        int currentUser = ActivityManager.getCurrentUser();
+        boolean biometrics = mUpdateMonitor.isUnlockingWithBiometricsPossible(currentUser);
+        KeyguardUpdateMonitor.StrongAuthTracker strongAuthTracker =
+                mUpdateMonitor.getStrongAuthTracker();
+        int strongAuth = strongAuthTracker.getStrongAuthForUser(currentUser);
+        if (biometrics && !strongAuthTracker.hasUserAuthenticatedSinceBoot()) {
+            return false;
+        } else if (biometrics && (strongAuth & STRONG_AUTH_REQUIRED_AFTER_TIMEOUT) != 0) {
+            return false;
+        } else if (biometrics && (strongAuth & STRONG_AUTH_REQUIRED_AFTER_DPM_LOCK_NOW) != 0) {
+            return false;
+        } else if (biometrics && (strongAuth & STRONG_AUTH_REQUIRED_AFTER_LOCKOUT) != 0) {
+            return false;
+        } else if (biometrics && (strongAuth & STRONG_AUTH_REQUIRED_AFTER_USER_LOCKDOWN) != 0) {
+            return false;
+        }
+        return true;
+    }
+
+    private class FodGestureSettingsObserver extends ContentObserver {
+        Context mContext;
+
+        FodGestureSettingsObserver(Context context, Handler handler) {
+            super(handler);
+            mContext = context;
+        }
+
+        void registerListener() {
+            mContext.getContentResolver().registerContentObserver(
+                    Settings.Secure.getUriFor(
+                    Settings.Secure.DOZE_ENABLED),
+                    false, this, UserHandle.USER_ALL);
+            mContext.getContentResolver().registerContentObserver(
+                    Settings.System.getUriFor(
+                    Settings.System.FOD_GESTURE),
+                    false, this, UserHandle.USER_ALL);
+            updateSettings();
+        }
+
+        @Override
+        public void onChange(boolean selfChange, Uri uri) {
+            super.onChange(selfChange, uri);
+            updateSettings();
+        }
+
+        public void updateSettings() {
+            mDozeEnabled = Settings.Secure.getIntForUser(
+                    mContext.getContentResolver(),
+                    Settings.Secure.DOZE_ENABLED, 1,
+                    UserHandle.USER_CURRENT) == 1;
+            mFodGestureEnable = Settings.System.getIntForUser(
+                    mContext.getContentResolver(),
+                    Settings.System.FOD_GESTURE, 1,
+                    UserHandle.USER_CURRENT) == 1;
+        }
+    }
+
+    private boolean mCutoutMasked;
+    private int mStatusbarHeight;
+    private FodGestureSettingsObserver mFodGestureSettingsObserver;
+
+>>>>>>> c694fcc845d... fwb: Add screen off fod [1/2]
     public FODCircleView(Context context) {
         super(context);
+
+        mContext = context;
 
         setScaleType(ScaleType.CENTER);
 
@@ -150,11 +278,18 @@ public class FODCircleView extends ImageView {
 
         Resources res = context.getResources();
 
+        mSupportsFodGesture = context.getResources().getBoolean(
+            com.android.internal.R.bool.config_supportsInDisplayFingerprintGesture);
+
         mColor = res.getColor(R.color.config_fodColor);
         mColorBackground = res.getColor(R.color.config_fodColorBackground);
 
         mPaintFingerprint.setAntiAlias(true);
         mPaintFingerprint.setColor(mColorBackground);
+
+        mPowerManager = context.getSystemService(PowerManager.class);
+        mWakeLock = mPowerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+                 FODCircleView.class.getSimpleName());
 
         mWindowManager = context.getSystemService(WindowManager.class);
 
@@ -185,7 +320,12 @@ public class FODCircleView extends ImageView {
 
         mUpdateMonitor = KeyguardUpdateMonitor.getInstance(context);
         mUpdateMonitor.registerCallback(mMonitorCallback);
-    }
+
+        if (mSupportsFodGesture){
+            mFodGestureSettingsObserver = new FodGestureSettingsObserver(context, mHandler);
+            mFodGestureSettingsObserver.registerListener();
+        }
+
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -301,6 +441,10 @@ public class FODCircleView extends ImageView {
     }
 
     public void show() {
+        if (!mSupportsFodGesture && !mUpdateMonitor.isScreenOn()) {
+            // Keyguard is shown just after screen turning off
+            return;
+        }
 
         if (mIsBouncer && !isPinOrPattern(mUpdateMonitor.getCurrentUser())) {
             // Ignore show calls when Keyguard password screen is being shown
