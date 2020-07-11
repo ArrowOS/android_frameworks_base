@@ -3056,6 +3056,15 @@ public final class Settings {
         }
 
         /**
+          * Swipe to screenshot
+          * @hide
+          */
+         public static final String FOD_GESTURE = "fod_gesture";
+ 
+         /** @hide */
+         public static final Validator FOD_GESTURE_VALIDATOR = BOOLEAN_VALIDATOR;
+
+        /**
          * Convenience function to write a batch of configuration-related
          * settings from a {@link Configuration} object.
          *
@@ -5389,6 +5398,7 @@ public final class Settings {
             VALIDATORS.put(WIFI_STATIC_IP, WIFI_STATIC_IP_VALIDATOR);
             VALIDATORS.put(WIFI_STATIC_GATEWAY, WIFI_STATIC_GATEWAY_VALIDATOR);
             VALIDATORS.put(WIFI_STATIC_NETMASK, WIFI_STATIC_NETMASK_VALIDATOR);
+            VALIDATORS.put(FOD_GESTURE, FOD_GESTURE_VALIDATOR);
             VALIDATORS.put(WIFI_STATIC_DNS1, WIFI_STATIC_DNS1_VALIDATOR);
             VALIDATORS.put(WIFI_STATIC_DNS2, WIFI_STATIC_DNS2_VALIDATOR);
             VALIDATORS.put(QS_SHOW_BATTERY_PERCENT, QS_SHOW_BATTERY_PERCENT_VALIDATOR);
