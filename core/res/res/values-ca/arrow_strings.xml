@@ -29,4 +29,8 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Permet que l\'aplicació faci veure que n\'és una de diferent. Les aplicacions malicioses poden utilitzar això per accedir a dades personals. Concediu aquest permís amb compte!</string>
     <string name="statusbar_items_title">Icona de la barra d\'estat</string>
+    <!-- App error dialog -->
+    <string name="aerr_copy">Copy crash log URL</string>
+    <string name="url_copy_success">URL copied successfully</string>
+    <string name="url_copy_failed">An error occured while uploading the log to dogbin</string>
 </resources>
