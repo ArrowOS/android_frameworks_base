@@ -29,4 +29,8 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">アプリが別のアプリになりすます事を許可します。悪意のあるアプリケーションがこれを利用してアプリの個人情報にアクセスする可能性があります。 慎重にこの許可を与えて下さい!</string>
     <string name="statusbar_items_title">ステータスバーのアイコン</string>
+    <!-- App error dialog -->
+    <string name="aerr_copy">クラッシュログ URL をコピー</string>
+    <string name="url_copy_success">URL がコピーされました</string>
+    <string name="url_copy_failed">dogbin へのログのアップロード中にエラーが発生しました</string>
 </resources>

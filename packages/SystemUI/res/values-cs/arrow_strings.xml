@@ -111,4 +111,27 @@
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Restartovat</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- Screen recorder -->
+    <string name="screenrecord_dialog_title">Spustit nahrávání?</string>
+    <string name="screenrecord_dialog_summary">Během nahrávání může systém Android zachytit jakékoli citlivé informace, které jsou viditelné nebo přehrávané na obrazovce vašeho zařízení. To zahrnuje hesla, informace o platbách, fotografie, zprávy a zvuk.</string>
+    <string name="screenrecord_dialog_start">Spustit</string>
+    <string name="screenrecord_dialog_cancel">Zrušit</string>
+    <string name="screenrecord_audio_title">Zdroj zvuku</string>
+    <string name="screenrecord_audio_summary">Umožňuje vybrat zvukový vstup nebo jej vypnout.</string>
+    <string name="screenrecord_audio_recording_internal">Interní</string>
+    <string name="screenrecord_audio_recording_microphone">Mikrofon</string>
+    <string name="screenrecord_audio_recording_off">Vypnuto</string>
+    <string name="screenrecord_taps_title">Zobrazit na obrazovce doteky</string>
+    <string name="screenrecord_taps_summary">Během nahrávání zobrazit vizuální zpětnou vazbu</string>
+    <string name="screenrecord_stopdot_title">Zobrazit puntík pro zastavení</string>
+    <string name="screenrecord_stopdot_summary">Zobrazit červený puntík pro zastavení nahrávání jediným klepnutím. Dlouhým stiskem ji přesunete na opačnou stranu.</string>
+    <string name="screenrecord_video_bitrate_title">Bitrate videa</string>
+    <string name="screenrecord_video_bitrate_summary">Nastavte bitrate videa pro lepší kvalitu videa za cenu větší velikosti souboru.</string>
+    <!-- Screenshot toast -->
+    <string name="delete_screenshot_toast">Snímek obrazovky smazán</string>
+    <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
+    <string name="global_action_screenshot_cust">Snímek obrazovky</string>
+    <string name="global_action_screenrecord">Videozáznam obrazovky</string>
+    <!--Screenrecord Tile-->
+    <string name="screenrecorder_title_tile">Videozáznam obrazovky</string>
 </resources>

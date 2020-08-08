@@ -29,4 +29,8 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">السمح للتطبيق بالتظاهر بأنه تطبيق آخر. يمكن للتطبيقات الخبيثة أن تستخدم هذه الميزة للوصول إلى البيانات الخاصة للتطبيق. توخٙ الحذر عند منح هذا الإذن!</string>
     <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
+    <!-- App error dialog -->
+    <string name="aerr_copy">Copy crash log URL</string>
+    <string name="url_copy_success">URL copied successfully</string>
+    <string name="url_copy_failed">An error occured while uploading the log to dogbin</string>
 </resources>

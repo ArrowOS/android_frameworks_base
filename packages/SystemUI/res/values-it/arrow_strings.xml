@@ -111,4 +111,27 @@
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Riavvio</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- Screen recorder -->
+    <string name="screenrecord_dialog_title">Avviare la registrazione?</string>
+    <string name="screenrecord_dialog_summary">Durante la registrazione, il sistema Android può registrare ogni informazione sensibile mostrata o riprodotta sul tuo dispositivo. Questo include password, informazioni di pagamento, foto, messaggi e audio.</string>
+    <string name="screenrecord_dialog_start">Avvia</string>
+    <string name="screenrecord_dialog_cancel">Annulla</string>
+    <string name="screenrecord_audio_title">Fonte audio</string>
+    <string name="screenrecord_audio_summary">Permette di scegliere l\'input audio o disattivarlo.</string>
+    <string name="screenrecord_audio_recording_internal">Interno</string>
+    <string name="screenrecord_audio_recording_microphone">Microfono</string>
+    <string name="screenrecord_audio_recording_off">Disabilitato</string>
+    <string name="screenrecord_taps_title">Mostra tocchi sullo schermo</string>
+    <string name="screenrecord_taps_summary">Mostra feedback visivo durante la registazione</string>
+    <string name="screenrecord_stopdot_title">Mostra pulsante stop</string>
+    <string name="screenrecord_stopdot_summary">Mostra un pulsante rosso per interrompere la registrazione con un singolo tocco. Premilo a lungo per spostarlo nella parte opposta.</string>
+    <string name="screenrecord_video_bitrate_title">Bitrate del video</string>
+    <string name="screenrecord_video_bitrate_summary">Impostare il bitrate video per una migliore qualità video, al costo di un file più grande.</string>
+    <!-- Screenshot toast -->
+    <string name="delete_screenshot_toast">Screenshot eliminato</string>
+    <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
+    <string name="global_action_screenshot_cust">Cattura schermo</string>
+    <string name="global_action_screenrecord">Registra schermo</string>
+    <!--Screenrecord Tile-->
+    <string name="screenrecorder_title_tile">Registra schermo</string>
 </resources>

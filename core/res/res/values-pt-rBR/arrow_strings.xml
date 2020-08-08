@@ -29,4 +29,8 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Permite que o aplicativo finja ser um aplicativo diferente. Os Aplicativos podem ser capazes de usar essa configuração para acessar dados particulares. Conceda esta permissão com cautela!</string>
     <string name="statusbar_items_title">Ícone da barra de status</string>
+    <!-- App error dialog -->
+    <string name="aerr_copy">Copiar URL do log de erro</string>
+    <string name="url_copy_success">URL copiada com sucesso</string>
+    <string name="url_copy_failed">Ocorreu um erro durante o upload do log para o dogbin</string>
 </resources>

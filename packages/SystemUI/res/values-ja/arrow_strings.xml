@@ -111,4 +111,27 @@
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">再起動</string>
     <string name="quick_settings_reboot_recovery_label">リカバリー</string>
+    <!-- Screen recorder -->
+    <string name="screenrecord_dialog_title">録画を開始しますか?</string>
+    <string name="screenrecord_dialog_summary">録画している間、Android システムは画面に写っているプライバシー等に関わる全ての情報をキャプチャすることができます。プライバシー情報の具体的な例として、パスワードや支払い情報、写真、メッセージ、周囲の音も含みます。</string>
+    <string name="screenrecord_dialog_start">開始</string>
+    <string name="screenrecord_dialog_cancel">中止</string>
+    <string name="screenrecord_audio_title">音声ソース</string>
+    <string name="screenrecord_audio_summary">音声入力の有効化と無効化を選択する</string>
+    <string name="screenrecord_audio_recording_internal">内部</string>
+    <string name="screenrecord_audio_recording_microphone">マイク</string>
+    <string name="screenrecord_audio_recording_off">無効</string>
+    <string name="screenrecord_taps_title">タップされた位置の表示</string>
+    <string name="screenrecord_taps_summary">録画中視覚フィードバック表示する</string>
+    <string name="screenrecord_stopdot_title">停止ドットを表示</string>
+    <string name="screenrecord_stopdot_summary">シングルタップで録音を停止する赤い点を表示します。長押しして反対側に移動します。</string>
+    <string name="screenrecord_video_bitrate_title">映像ビットレート</string>
+    <string name="screenrecord_video_bitrate_summary">ファイルサイズの増加と引き換えに高品質動画を記録するために映像ビットレートを上げる</string>
+    <!-- Screenshot toast -->
+    <string name="delete_screenshot_toast">スクリーンショットを削除しました</string>
+    <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
+    <string name="global_action_screenshot_cust">スクリーンショット</string>
+    <string name="global_action_screenrecord">画面録画</string>
+    <!--Screenrecord Tile-->
+    <string name="screenrecorder_title_tile">画面録画</string>
 </resources>

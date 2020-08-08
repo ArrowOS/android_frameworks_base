@@ -111,4 +111,27 @@
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Перезагрузка</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- Screen recorder -->
+    <string name="screenrecord_dialog_title">Начать запись?</string>
+    <string name="screenrecord_dialog_summary">Во время записи система Android может записать любую важную информацию, которая видна на вашем экране или воспроизведена на вашем устройстве. Сюда входят пароли, платежные данные, фотографии, сообщения и аудио.</string>
+    <string name="screenrecord_dialog_start">Начать</string>
+    <string name="screenrecord_dialog_cancel">Отменить</string>
+    <string name="screenrecord_audio_title">Источник звука</string>
+    <string name="screenrecord_audio_summary">Позволяет выбрать источник звука или выключить его.</string>
+    <string name="screenrecord_audio_recording_internal">Встроенный</string>
+    <string name="screenrecord_audio_recording_microphone">Микрофон</string>
+    <string name="screenrecord_audio_recording_off">Отключён</string>
+    <string name="screenrecord_taps_title">Показывать касания экрана</string>
+    <string name="screenrecord_taps_summary">Показывать нажатия на экран при записи</string>
+    <string name="screenrecord_stopdot_title">Показать кнопку остановки</string>
+    <string name="screenrecord_stopdot_summary">Показывать красную кнопку для остановки записи одним нажатием. Длительное нажатие переместит кнопку в противоположную сторону.</string>
+    <string name="screenrecord_video_bitrate_title">Битрейт видео</string>
+    <string name="screenrecord_video_bitrate_summary">Задать битрейт, чтобы получить лучшее качество видео за счёт увеличения размера файла.</string>
+    <!-- Screenshot toast -->
+    <string name="delete_screenshot_toast">Снимок экрана удален</string>
+    <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
+    <string name="global_action_screenshot_cust">Снимок экрана</string>
+    <string name="global_action_screenrecord">Запись экрана</string>
+    <!--Screenrecord Tile-->
+    <string name="screenrecorder_title_tile">Запись экрана</string>
 </resources>

@@ -29,4 +29,8 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Autoriser l\'application à prétendre être une autre application. Des applications malveillantes peuvent essayer d\'accéder à des données privées d\'autres applications, accordez cette permission avec prudence !</string>
     <string name="statusbar_items_title">Icône de la barre d\'état</string>
+    <!-- App error dialog -->
+    <string name="aerr_copy">Copy crash log URL</string>
+    <string name="url_copy_success">URL copied successfully</string>
+    <string name="url_copy_failed">An error occured while uploading the log to dogbin</string>
 </resources>

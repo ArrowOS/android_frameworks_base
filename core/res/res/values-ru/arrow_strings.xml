@@ -29,4 +29,8 @@
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Разрешить приложению выдавать себя за другое. Вредоносное приложение может получить доступ к вашим данным. Используйте только на свой страх и риск!</string>
     <string name="statusbar_items_title">Значки строки состояния</string>
+    <!-- App error dialog -->
+    <string name="aerr_copy">Скопировать ссылку лога ошибки</string>
+    <string name="url_copy_success">Ссылка скопирована успешно</string>
+    <string name="url_copy_failed">Произошла ошибка при загрузки лога на dogbin</string>
 </resources>
