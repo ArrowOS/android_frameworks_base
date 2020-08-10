@@ -178,7 +178,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
             } else if (speed >= 10 * KB) {
                 mDecimalFormat = new DecimalFormat("00.0");
                 mUnit = "KB";
-                formatSpeed =  mDecimalFormat.format(speed / (float)MB);
+                formatSpeed =  mDecimalFormat.format(speed / (float)KB);
             } else {
                 mDecimalFormat = new DecimalFormat("0.00");
                 mUnit = "KB";
