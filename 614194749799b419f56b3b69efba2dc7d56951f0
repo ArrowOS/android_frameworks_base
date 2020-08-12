@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2a5d4042_16b56d98",
+        "filename": "packages/SystemUI/src/com/android/systemui/biometrics/FODCircleView.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 361,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2020-08-12T11:22:58Z",
+      "side": 1,
+      "message": "Man, really?",
+      "revId": "614194749799b419f56b3b69efba2dc7d56951f0",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
