@@ -30,7 +30,7 @@
     <string name="permdesc_fakePackageSignature">允许应用伪装成为其他应用。恶意应用可以使用此权限访问其他应用程序的私有数据。请小心授予此权限！</string>
     <string name="statusbar_items_title">状态栏图标</string>
     <!-- App error dialog -->
-    <string name="aerr_copy">Copy crash log URL</string>
-    <string name="url_copy_success">URL copied successfully</string>
-    <string name="url_copy_failed">An error occured while uploading the log to dogbin</string>
+    <string name="aerr_copy">复制崩溃日志链接</string>
+    <string name="url_copy_success">已成功复制链接</string>
+    <string name="url_copy_failed">在上传日志到 dogbin 的时候发生了一个错误。</string>
 </resources>
