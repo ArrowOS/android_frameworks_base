@@ -109,18 +109,18 @@
     <string name="quick_settings_sound_vibrate">Vibrate</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Neustarten</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">Start recording?</string>
+    <string name="screenrecord_dialog_title">Bildschirmaufnahme starten?</string>
     <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
     <string name="screenrecord_dialog_start">Start</string>
-    <string name="screenrecord_dialog_cancel">Cancel</string>
-    <string name="screenrecord_audio_title">Audio source</string>
+    <string name="screenrecord_dialog_cancel">Abbrechen</string>
+    <string name="screenrecord_audio_title">Audioquelle</string>
     <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
     <string name="screenrecord_audio_recording_internal">Internal</string>
     <string name="screenrecord_audio_recording_microphone">Microphone</string>
-    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_audio_recording_off">Deaktiviert</string>
     <string name="screenrecord_taps_title">Show touches on screen</string>
     <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
     <string name="screenrecord_stopdot_title">Show stop dot</string>
@@ -130,7 +130,7 @@
     <!-- Screenshot toast -->
     <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">Screenshot</string>
+    <string name="global_action_screenshot_cust">Bildschirmfoto</string>
     <string name="global_action_screenrecord">Screenrecord</string>
     <!--Screenrecord Tile-->
     <string name="screenrecorder_title_tile">Screenrecord</string>

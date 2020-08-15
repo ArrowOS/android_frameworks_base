@@ -113,25 +113,25 @@
     <string name="quick_settings_reboot_recovery_label">Recuperação</string>
     <!-- Screen recorder -->
     <string name="screenrecord_dialog_title">Iniciar Gravação?</string>
-    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_summary">Durante a gravação, o Android pode capturar informações sensíveis que são visíveis na sua tela ou reproduzidas em seu dispositivo. Isso inclui senhas, dados de pagamento, fotos, imagens e áudio.</string>
     <string name="screenrecord_dialog_start">Iniciar</string>
     <string name="screenrecord_dialog_cancel">Cancelar</string>
     <string name="screenrecord_audio_title">Fonte de áudio</string>
     <string name="screenrecord_audio_summary">Permite escolher a entrada de áudio ou desativá-la.</string>
     <string name="screenrecord_audio_recording_internal">Interno</string>
     <string name="screenrecord_audio_recording_microphone">Microfone</string>
-    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_audio_recording_off">Desativado</string>
     <string name="screenrecord_taps_title">Mostrar toques na tela</string>
     <string name="screenrecord_taps_summary">Mostrar feedback visual durante a gravação</string>
-    <string name="screenrecord_stopdot_title">Show stop dot</string>
-    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
-    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
-    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
+    <string name="screenrecord_stopdot_title">Mostrar ponto final</string>
+    <string name="screenrecord_stopdot_summary">Mostre um ponto vermelho para interromper a gravação com um único toque. Pressione longamente para movê-lo para o lado oposto.</string>
+    <string name="screenrecord_video_bitrate_title">Taxa de Bits do vídeo</string>
+    <string name="screenrecord_video_bitrate_summary">Defina a taxa de bits de vídeo para obter melhor qualidade de vídeo, ao custo de um arquivo maior.</string>
     <!-- Screenshot toast -->
     <string name="delete_screenshot_toast">Captura de tela excluída</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
     <string name="global_action_screenshot_cust">Captura de tela</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenrecord">Gravação a tela</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">Screenrecord</string>
+    <string name="screenrecorder_title_tile">Gravação a tela</string>
 </resources>
