@@ -94,9 +94,9 @@
     <string name="quick_settings_vpn_label">VPN</string>
     <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
     <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">Username</string>
-    <string name="vpn_credentials_password">Password</string>
-    <string name="vpn_credentials_dialog_connect">Connect</string>
+    <string name="vpn_credentials_username">Nutzername</string>
+    <string name="vpn_credentials_password">Passwort</string>
+    <string name="vpn_credentials_dialog_connect">Verbinden</string>
     <!--Immersive mode tile -->
     <string name="quick_settings_immersive_tile">Immersive mode</string>
     <string name="quick_settings_immersive_tile_off">Immersive off</string>
@@ -104,10 +104,10 @@
     <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
     <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Ton</string>
+    <string name="quick_settings_sound_ring">Klingelton</string>
+    <string name="quick_settings_sound_vibrate">Vibrieren</string>
+    <string name="quick_settings_sound_dnd">Bitte nicht stören</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Neustarten</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
@@ -118,17 +118,17 @@
     <string name="screenrecord_dialog_cancel">Abbrechen</string>
     <string name="screenrecord_audio_title">Audioquelle</string>
     <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
-    <string name="screenrecord_audio_recording_internal">Internal</string>
-    <string name="screenrecord_audio_recording_microphone">Microphone</string>
+    <string name="screenrecord_audio_recording_internal">Intern</string>
+    <string name="screenrecord_audio_recording_microphone">Mikrofon</string>
     <string name="screenrecord_audio_recording_off">Deaktiviert</string>
     <string name="screenrecord_taps_title">Show touches on screen</string>
     <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
     <string name="screenrecord_stopdot_title">Show stop dot</string>
     <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
-    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
+    <string name="screenrecord_video_bitrate_title">Videobitrate</string>
     <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Bildschirmfoto gelöscht</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
     <string name="global_action_screenshot_cust">Bildschirmfoto</string>
     <string name="global_action_screenrecord">Screenrecord</string>

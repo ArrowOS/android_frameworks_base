@@ -112,26 +112,26 @@
     <string name="quick_settings_reboot_label">Reiniciar</string>
     <string name="quick_settings_reboot_recovery_label">Recuperación</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">Start recording?</string>
-    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
-    <string name="screenrecord_dialog_start">Start</string>
-    <string name="screenrecord_dialog_cancel">Cancel</string>
-    <string name="screenrecord_audio_title">Audio source</string>
-    <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
-    <string name="screenrecord_audio_recording_internal">Internal</string>
-    <string name="screenrecord_audio_recording_microphone">Microphone</string>
-    <string name="screenrecord_audio_recording_off">Disabled</string>
-    <string name="screenrecord_taps_title">Show touches on screen</string>
-    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
-    <string name="screenrecord_stopdot_title">Show stop dot</string>
-    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
-    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
-    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
+    <string name="screenrecord_dialog_title">¿Iniciar grabación?</string>
+    <string name="screenrecord_dialog_summary">Durante la grabación, el sistema Android puede capturar cualquier información sensible que sea visible en tu pantalla o reproducida en tu dispositivo. Esto incluye contraseñas, información de pago, fotos, mensajes y audio.</string>
+    <string name="screenrecord_dialog_start">Comenzar</string>
+    <string name="screenrecord_dialog_cancel">Cancelar</string>
+    <string name="screenrecord_audio_title">Fuente de audio</string>
+    <string name="screenrecord_audio_summary">Activa o desactiva la entrada de sonido.</string>
+    <string name="screenrecord_audio_recording_internal">Interna</string>
+    <string name="screenrecord_audio_recording_microphone">Micrófono</string>
+    <string name="screenrecord_audio_recording_off">Desactivado</string>
+    <string name="screenrecord_taps_title">Mostrar toques en pantalla</string>
+    <string name="screenrecord_taps_summary">Mostrar retroalimentación visual durante la grabación</string>
+    <string name="screenrecord_stopdot_title">Mostrar icono para detener</string>
+    <string name="screenrecord_stopdot_summary">Mostrar un punto rojo para dejar de grabar con un solo toque. Mantenga pulsado para moverlo al lado opuesto.</string>
+    <string name="screenrecord_video_bitrate_title">Frecuencia de bits (Bitrate) de video</string>
+    <string name="screenrecord_video_bitrate_summary">Ajusta el bitrate de vídeo para una mejor calidad de vídeo, pero generando un archivo de mayor tamaño.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Captura borrada</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">Screenshot</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenshot_cust">Captura de pantalla</string>
+    <string name="global_action_screenrecord">Grabación de pantalla</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">Screenrecord</string>
+    <string name="screenrecorder_title_tile">Grabación de pantalla</string>
 </resources>
