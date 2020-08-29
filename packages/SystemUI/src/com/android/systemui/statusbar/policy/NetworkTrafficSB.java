@@ -131,9 +131,11 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
                 }
                 mTrafficVisible = true;
             }
-            updateVisibility();
+
             if (!mHideArrow)
                 updateTrafficDrawable();
+
+            updateVisibility();
 
             // Post delayed message to refresh in ~1000ms
             totalRxBytes = newTotalRxBytes;
@@ -341,7 +343,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable 
     private void setMode() {
         ContentResolver resolver = mContext.getContentResolver();
         mIsEnabled = Settings.System.getIntForUser(resolver,
-                Settings.System.NETWORK_TRAFFIC_STATE, 0,
+                Settings.System.NETWORK_TRAFFIC_STATE, 1,
                 UserHandle.USER_CURRENT) == 1;
         mAutoHideThreshold = Settings.System.getIntForUser(resolver,
                 Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, 0,
