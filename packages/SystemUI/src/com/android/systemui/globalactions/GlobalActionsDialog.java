@@ -1883,6 +1883,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         }
 
         private void onClickItem(int position) {
+            if (mDialog == null) return;
             Action item = getItem(position);
             if (!(item instanceof SilentModeTriStateAction)) {
                 if (mDialog != null) {
