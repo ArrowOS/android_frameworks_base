@@ -298,7 +298,7 @@ public abstract class ClientMonitor extends LoggableMonitor implements IBinder.D
     public final void vibrateSuccess() {
         Vibrator vibrator = mContext.getSystemService(Vibrator.class);
         if (vibrator != null) {
-            vibrator.vibrate(mSuccessVibrationEffect, FINGERPRINT_SONFICATION_ATTRIBUTES);
+            //vibrator.vibrate(mSuccessVibrationEffect, FINGERPRINT_SONFICATION_ATTRIBUTES);
         }
     }
 
