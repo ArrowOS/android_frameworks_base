@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "48d7371e_016fc52e",
+        "filename": "services/core/java/com/android/server/pm/PackageManagerService.java",
+        "patchSetId": 9
+      },
+      "lineNbr": 3903,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2020-09-24T09:30:42Z",
+      "side": 1,
+      "message": "no need",
+      "range": {
+        "startLine": 3903,
+        "startChar": 0,
+        "endLine": 3903,
+        "endChar": 69
+      },
+      "revId": "34928c0835b76088ce740c07768a222b592e2ff8",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
