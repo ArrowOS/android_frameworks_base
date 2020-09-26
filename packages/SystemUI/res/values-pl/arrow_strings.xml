@@ -38,7 +38,7 @@
     <string name="accessibility_quick_settings_sync_changed_on">Synchronizacja włączona</string>
     <!-- QS Config -->
     <string name="qs_menu_item_columns">Kolumny</string>
-    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
+    <string name="qs_menu_item_columns_landscape">Kolumny poziomo</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -81,57 +81,57 @@
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Przełącz kartę SIM</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_toast_0">Obecnie nie ma włożonej karty SIM</string>
+    <string name="qs_data_switch_toast_1">Obecnie włożono tylko jedną kartę SIM</string>
+    <string name="qs_data_switch_changed_1">Przełącz kartę danych na kartę SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Przełącz kartę danych na kartę SIM 2.</string>
     <!-- QS menu brightness tweaks -->
     <string name="qs_menu_item_brightness_tweaks">Ulepszenia paska jasności</string>
     <string name="qs_menu_item_show_brightness">Pokaż suwak jasności</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Dolny pasek jasności</string>
     <string name="qs_menu_item_brightness_icon">Ikona jasności</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
     <string name="quick_settings_vpn_connect_dialog_title">Połącz z\u2026</string>
-    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_hint">Wprowadź swoje dane uwierzytelniające, aby połączyć się z <xliff:g id="name">%s</xliff:g></string>
     <string name="vpn_credentials_username">Nazwa użytkownika</string>
     <string name="vpn_credentials_password">Hasło</string>
     <string name="vpn_credentials_dialog_connect">Połącz</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">Immersive mode</string>
-    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile">Tryb pełnoekranowy</string>
+    <string name="quick_settings_immersive_tile_off">Tryb pełnoekranowy wył</string>
     <string name="quick_settings_immersive_tile_statusbar">Schowaj pasek statusu</string>
     <string name="quick_settings_immersive_tile_navbar">Schowaj pasek nawigacyjny</string>
-    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <string name="quick_settings_immersive_tile_full">Pełny pełnoekranowy</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Dźwięk</string>
-    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_ring">Dzwonek</string>
     <string name="quick_settings_sound_vibrate">Wibruj</string>
     <string name="quick_settings_sound_dnd">Nie przeszkadzać</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Uruchom ponownie</string>
+    <string name="quick_settings_reboot_recovery_label">Uruchom w trybie Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">Start recording?</string>
-    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_title">Rozpocząć nagrywanie?</string>
+    <string name="screenrecord_dialog_summary">Podczas nagrywania, system Android może przechwycić wszelkie wrażliwe dane widoczne lub odtwarzane na ekranie telefonu. Wliczając w to hasła, dane o płatnościach, zdjęcia, wiadomości oraz dźwięki.</string>
     <string name="screenrecord_dialog_start">Start</string>
-    <string name="screenrecord_dialog_cancel">Cancel</string>
-    <string name="screenrecord_audio_title">Audio source</string>
-    <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
-    <string name="screenrecord_audio_recording_internal">Internal</string>
-    <string name="screenrecord_audio_recording_microphone">Microphone</string>
-    <string name="screenrecord_audio_recording_off">Disabled</string>
-    <string name="screenrecord_taps_title">Show touches on screen</string>
-    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
-    <string name="screenrecord_stopdot_title">Show stop dot</string>
-    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
-    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
-    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
+    <string name="screenrecord_dialog_cancel">Anuluj</string>
+    <string name="screenrecord_audio_title">Źródła dźwięku</string>
+    <string name="screenrecord_audio_summary">Pozwala wybrać lub wyłączyć wejście audio.</string>
+    <string name="screenrecord_audio_recording_internal">Pamięć telefonu</string>
+    <string name="screenrecord_audio_recording_microphone">Mikrofon</string>
+    <string name="screenrecord_audio_recording_off">Wyłączony</string>
+    <string name="screenrecord_taps_title">Pokaż dotknięcia ekranu</string>
+    <string name="screenrecord_taps_summary">Pokaż dotknięcia podczas nagrywania</string>
+    <string name="screenrecord_stopdot_title">Pokaż kropkę wstrzymującą</string>
+    <string name="screenrecord_stopdot_summary">Pokaż czerwoną kropkę, aby zatrzymać nagrywanie jednym dotknięciem. Naciśnij i przytrzymaj, aby przenieść go na przeciwną stronę.</string>
+    <string name="screenrecord_video_bitrate_title">Bitrate wideo</string>
+    <string name="screenrecord_video_bitrate_summary">Ustaw przepływność wideo dla lepszej jakości wideo, kosztem większego pliku.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">Screenshot deleted</string>
+    <string name="delete_screenshot_toast">Zrzut ekranu został usunięty</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">Screenshot</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenshot_cust">Zrzut ekranu</string>
+    <string name="global_action_screenrecord">Nagrywanie ekranu</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">Screenrecord</string>
+    <string name="screenrecorder_title_tile">Nagrywanie ekranu</string>
 </resources>
