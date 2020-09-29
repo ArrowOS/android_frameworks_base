@@ -15,7 +15,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
-    <string name="old_version_number">நிறுவப்பட்ட பதிப்பு: <xliff:g id="old_version">%1$s</xliff:g></string>
+    <string name="old_version_number">Nainštalovaná verzia: <xliff:g id="old_version">%1$s</xliff:g></string>
     <!-- Message for updating an existing system app [CHAR LIMIT=NONE] -->
-    <string name="new_version_number">நிறுவப்பட வேண்டும்:<xliff:g id="new_version">%1$s</xliff:g></string>
+    <string name="new_version_number">Na nainštalovanie: <xliff:g id="new_version">%1$s</xliff:g></string>
 </resources>

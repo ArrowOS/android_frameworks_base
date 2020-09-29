@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2009, The Android Open Source Project
+ * Copyright (c) 2015, The CyanogenMod Project
+ * Copyright (c) 2017, The LineageOS Project
+ * Copyright (c) 2018, ArrowOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Text to use when the number in a notification info is too large
+         (greater than status_bar_notification_info_maxnum, defined in
+         values/config.xml) and must be truncated.
+         [CHAR LIMIT=4] -->
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">Synchronizácia</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Synchronizácia vypnutá</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Synchronizácia zapnutá</string>
+    <!-- QS Config -->
+    <string name="qs_menu_item_columns">Stĺpce</string>
+    <string name="qs_menu_item_columns_landscape">Stĺpce na šírku</string>
+    <string name="qs_menu_item_columns_three">3</string>
+    <string name="qs_menu_item_columns_four">4</string>
+    <string name="qs_menu_item_columns_five">5</string>
+    <string name="qs_menu_item_columns_six">6</string>
+    <string name="qs_menu_item_columns_seven">7</string>
+    <string name="qs_menu_item_columns_eight">8</string>
+    <string name="qs_menu_item_columns_nine">9</string>
+    <string name="qs_menu_item_reset">Obnoviť predvolené</string>
+    <string name="qs_menu_item_titles">Zobraziť menovky</string>
+    <string name="qs_menu_item_qs_columns">Stĺpce rýchlej lišty</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Reštartovať</string>
+    <string name="global_action_reboot_more">Reštartovať\u2026</string>
+    <string name="global_action_reboot_sub">Systém</string>
+    <string name="global_action_reboot_recovery">Recovery</string>
+    <string name="global_action_reboot_bootloader">Zavádzač</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Nezobrazovať znovu</string>
+    <string name="global_action_settings">Nastavenia</string>
+    <!-- Global actions -->
+    <!-- string name="global_action_restart_advanced">Advanced reboot</string>
+    <string name="global_action_restart_recovery">Recovery</string>
+    <string name="global_action_restart_bootloader">Bootloader</string-->
+    <string name="global_action_screenshot">Snímka obrazovky</string>
+    <string name="global_action_flashlight">Svietidlo</string>
+    <!-- Omni Weather -->
+    <string name="omnijaws_service_error">Chyba</string>
+    <string name="omnijaws_service_unkown">Žiadne údaje počasia</string>
+    <string name="omnijaws_service_error_long">Chyba pri načítaní údajov počasia</string>
+    <string name="omnijaws_service_disabled">Služba je zakázaná</string>
+    <string name="omnijaws_detail_header">Počasie</string>
+    <string name="omnijaws_label_default">Počasie</string>
+    <string name="omnijaws_current_text">Teraz</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Posledná aktualizácia:</string>
+    <string name="statusbar_items_title">Ikony stavovej lišty</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Prepnúť dátovú kartu</string>
+    <string name="qs_data_switch_toast_0">Momentálne nie je vložená žiadna SIM karta</string>
+    <string name="qs_data_switch_toast_1">Momentálne je vložená iba jedna SIM karta</string>
+    <string name="qs_data_switch_changed_1">Prepnúť dátovú kartu na SIM č. 1.</string>
+    <string name="qs_data_switch_changed_2">Prepnúť dátovú kartu na SIM č. 2.</string>
+    <!-- QS menu brightness tweaks -->
+    <string name="qs_menu_item_brightness_tweaks">Vyladenia lišty s jasom</string>
+    <string name="qs_menu_item_show_brightness">Zobraziť lištu s jasom</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Lišta s jasom na spodnej časti</string>
+    <string name="qs_menu_item_brightness_icon">Ikona jasu</string>
+    <!-- VPN QS tile -->
+    <string name="quick_settings_vpn_label">VPN</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Pripojiť k\u2026</string>
+    <string name="vpn_credentials_hint">Prosím, zadajte vaše poverenia na pripojenie k <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Používateľské meno</string>
+    <string name="vpn_credentials_password">Heslo</string>
+    <string name="vpn_credentials_dialog_connect">Pripojiť</string>
+    <!--Immersive mode tile -->
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Zvuk</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrovať</string>
+    <string name="quick_settings_sound_dnd">Nevyrušovať</string>
+    <!-- Reboot/Recovery QS tile -->
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- Screen recorder -->
+    <string name="screenrecord_dialog_title">Spustiť nahrávanie?</string>
+    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_start">Spustiť</string>
+    <string name="screenrecord_dialog_cancel">Zrušiť</string>
+    <string name="screenrecord_audio_title">Zdroj zvuku</string>
+    <string name="screenrecord_audio_summary">Umožňuje vybrať zvukový vstup alebo ho zakázať.</string>
+    <string name="screenrecord_audio_recording_internal">Internal</string>
+    <string name="screenrecord_audio_recording_microphone">Mikrofón</string>
+    <string name="screenrecord_audio_recording_off">Zakázané</string>
+    <string name="screenrecord_taps_title">Zobraziť dotyky na obrazovke</string>
+    <string name="screenrecord_taps_summary">Zobrazenie vizuálnej spätnej väzby počas nahrávania</string>
+    <string name="screenrecord_stopdot_title">Show stop dot</string>
+    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
+    <string name="screenrecord_video_bitrate_title">Bitová rýchlosť videa</string>
+    <string name="screenrecord_video_bitrate_summary">Nastavte rýchlosť videa pre lepšiu kvalitu na úkor veľkosti súboru.</string>
+    <!-- Screenshot toast -->
+    <string name="delete_screenshot_toast">Snímka obrazovky odstránená</string>
+    <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
+    <string name="global_action_screenshot_cust">Snímka obrazovky</string>
+    <string name="global_action_screenrecord">Záznam obrazovky</string>
+    <!--Screenrecord Tile-->
+    <string name="screenrecorder_title_tile">Záznam obrazovky</string>
+</resources>
