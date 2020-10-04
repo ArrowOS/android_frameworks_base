@@ -1328,6 +1328,9 @@
     <!-- Name of the microphone status bar icon. -->
     <string name="status_bar_microphone">Microphone</string>
 
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+
     <!-- Wallet strings -->
     <!-- Wallet empty state, title [CHAR LIMIT=32] -->
     <string name="wallet_title">Wallet</string>

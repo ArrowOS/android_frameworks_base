@@ -94,6 +94,11 @@
         android:icon="@drawable/ic_statusbar_data_saver" />
 
     <com.android.systemui.tuner.StatusBarSwitch
+        android:key="nfc"
+        android:title="@string/status_bar_nfc"
+        android:icon="@drawable/ic_statusbar_nfc" />
+
+    <com.android.systemui.tuner.StatusBarSwitch
         android:key="alarm_clock"
         android:title="@string/status_bar_alarm"
         android:icon="@drawable/ic_statusbar_alarm" />
