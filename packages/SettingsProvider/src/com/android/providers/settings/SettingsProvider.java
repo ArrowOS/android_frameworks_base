@@ -239,6 +239,8 @@ public class SettingsProvider extends ContentProvider {
     private static final Set<String> OVERLAY_ALLOWED_SYSTEM_INSTANT_APP_SETTINGS = new ArraySet<>();
     private static final Set<String> OVERLAY_ALLOWED_SECURE_INSTANT_APP_SETTINGS = new ArraySet<>();
 
+    private static final String HIDDEN_OVERLAY_PKG = "com.custom.overlay.systemui.gestural.hidden";
+
     static {
         for (String name : Resources.getSystem().getStringArray(
                 com.android.internal.R.array.config_allowedGlobalInstantAppSettings)) {
@@ -4971,7 +4973,9 @@ public class SettingsProvider extends ContentProvider {
                     int mode = getContext().getResources().getInteger(
                             com.android.internal.R.integer.config_navBarInteractionMode);
                     if (mode == NAV_BAR_MODE_GESTURAL) {
-                        switchToDefaultGestureNavBackInset(userId, secureSettings);
+                        boolean hidden = Settings.Secure.getFloat(getContext().getContentResolver(),
+                        Secure.GESTURE_NAVBAR_LENGTH, 1.0f) == 0.0f;
+                        switchToDefaultGestureNavBackInset(userId, secureSettings, hidden);
                     }
                     migrateBackGestureSensitivity(Secure.BACK_GESTURE_INSET_SCALE_LEFT, userId,
                             secureSettings);
@@ -5268,15 +5272,17 @@ public class SettingsProvider extends ContentProvider {
          * If a non-default overlay package is enabled, then enable the default overlay exclusively,
          * and set the calculated inset size difference as a scale value in secure.settings.
          */
-        private void switchToDefaultGestureNavBackInset(int userId, SettingsState secureSettings) {
+        private void switchToDefaultGestureNavBackInset(int userId, SettingsState secureSettings, boolean hidden) {
             try {
                 final IOverlayManager om = IOverlayManager.Stub.asInterface(
                         ServiceManager.getService(Context.OVERLAY_SERVICE));
-                final OverlayInfo info = om.getOverlayInfo(NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
+                final OverlayInfo info = om.getOverlayInfo(hidden ? HIDDEN_OVERLAY_PKG :
+                                                    NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
                 if (info != null && !info.isEnabled()) {
                     final int curInset = getContext().getResources().getDimensionPixelSize(
                             com.android.internal.R.dimen.config_backGestureInset);
-                    om.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
+                    om.setEnabledExclusiveInCategory(hidden ? HIDDEN_OVERLAY_PKG :
+                                                    NAV_BAR_MODE_GESTURAL_OVERLAY, userId);
                     final int defInset = getContext().getResources().getDimensionPixelSize(
                             com.android.internal.R.dimen.config_backGestureInset);
 
