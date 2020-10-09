@@ -5119,6 +5119,11 @@ public final class Settings {
         /**
          * @hide
          */
+        public static final String OMNI_QS_MEDIA_PLAYER = "qs_media_player";
+
+        /**
+         * @hide
+         */
         public static final String LOCKSCREEN_WEATHER_SHOW_TEMP = "lockscreen_weather_show_temp";
 
         /**
@@ -5353,6 +5358,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(VOLUME_PANEL_ON_LEFT);
             PRIVATE_SETTINGS.add(LOCKSCREEN_MEDIA_METADATA);
             PRIVATE_SETTINGS.add(OMNI_LOCKSCREEN_WEATHER_ENABLED);
+            PRIVATE_SETTINGS.add(OMNI_QS_MEDIA_PLAYER);
             PRIVATE_SETTINGS.add(LOCKSCREEN_WEATHER_SHOW_TEMP);
             PRIVATE_SETTINGS.add(LOCKSCREEN_WEATHER_SHOW_CITY);
             PRIVATE_SETTINGS.add(LOCKSCREEN_WEATHER_STYLE);
