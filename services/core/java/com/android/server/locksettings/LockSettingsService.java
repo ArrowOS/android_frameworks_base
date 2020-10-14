@@ -114,6 +114,7 @@ import com.android.internal.notification.SystemNotificationChannels;
 import com.android.internal.util.DumpUtils;
 import com.android.internal.util.IndentingPrintWriter;
 import com.android.internal.util.Preconditions;
+import com.android.internal.util.custom.faceunlock.FaceUnlockUtils;
 import com.android.internal.widget.ICheckCredentialProgressCallback;
 import com.android.internal.widget.ILockSettings;
 import com.android.internal.widget.LockPatternUtils;
@@ -2939,15 +2940,24 @@ public class LockSettingsService extends ILockSettings.Stub {
         FaceManager mFaceManager = mInjector.getFaceManager();
         if (mFaceManager != null && mFaceManager.isHardwareDetected()) {
             if (mFaceManager.hasEnrolledTemplates(userId)) {
-                mFaceManager.setActiveUser(userId);
                 CountDownLatch latch = new CountDownLatch(1);
-                Face face = new Face(null, 0, 0);
-                mFaceManager.remove(face, userId, faceManagerRemovalCallback(latch));
+                FaceManager.RemovalCallback removalCallback = faceManagerRemovalCallback(latch));
                 try {
                     latch.await(10000, TimeUnit.MILLISECONDS);
                 } catch (InterruptedException e) {
                     Slog.e(TAG, "Latch interrupted when removing face", e);
                 }
+
+                if (FaceUnlockUtils.hasMotoFaceUnlock()){
+                    final List<Face> faces = mFaceManager.getEnrolledFaces(userId);
+                    if (!faces.isEmpty()) {
+                        mFaceManager.remove(faces.get(0), userId, removalCallback);
+                    }
+                    return;
+                }
+                mFaceManager.setActiveUser(userId);
+                Face face = new Face(null, 0, 0);
+                mFaceManager.remove(face, userId, removalCallback);
             }
         }
     }
