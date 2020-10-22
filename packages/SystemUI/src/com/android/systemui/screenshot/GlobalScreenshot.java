@@ -853,6 +853,10 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
                     @Override
                     void onActionsReady(SavedImageData imageData) {
                         showUiOnActionsReady(imageData);
+
+                        // TODO: Guard this to be optional
+                        mNotificationsController
+                                    .showScreenshotActionsNotification(imageData);
                     }
                 });
 
