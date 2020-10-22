@@ -497,7 +497,14 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
         mBackgroundProtection = mScreenshotLayout.findViewById(
                 R.id.global_screenshot_actions_background);
         mDismissButton = mScreenshotLayout.findViewById(R.id.global_screenshot_dismiss_button);
+        ImageView mSettingsButton = mScreenshotLayout.findViewById(R.id.global_screenshot_settings_button);
         mDismissButton.setOnClickListener(view -> {
+            mUiEventLogger.log(ScreenshotEvent.SCREENSHOT_EXPLICIT_DISMISSAL);
+            dismissScreenshot("dismiss_button", false);
+            mOnCompleteRunnable.run();
+        });
+
+        mSettingsButton.setOnClickListener(view -> {
             mUiEventLogger.log(ScreenshotEvent.SCREENSHOT_EXPLICIT_DISMISSAL);
             dismissScreenshot("dismiss_button", false);
             mOnCompleteRunnable.run();
