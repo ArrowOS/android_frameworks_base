@@ -39,7 +39,7 @@
         android:textAppearance="@style/TextAppearance.StatusBar.Clock"
         systemui:showDark="false" />
 
-    <android.widget.Space
+    <!--<android.widget.Space
         android:id="@+id/space"
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -56,5 +56,5 @@
         android:singleLine="false"
         android:lineSpacingMultiplier="1.2"
         systemui:showDark="false"
-        android:gravity="right|center_vertical"/>
+        android:gravity="right|center_vertical"/>-->
 </FrameLayout>
