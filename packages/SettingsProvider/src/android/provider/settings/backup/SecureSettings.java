@@ -167,6 +167,7 @@ public class SecureSettings {
         Settings.Secure.MEDIA_CONTROLS_RESUME,
         Settings.Secure.ACCESSIBILITY_MAGNIFICATION_MODE,
         Settings.Secure.ACCESSIBILITY_BUTTON_TARGETS,
-        Settings.Secure.VOLUME_LINK_NOTIFICATION
+        Settings.Secure.VOLUME_LINK_NOTIFICATION,
+        Settings.Secure.TORCH_POWER_BUTTON_GESTURE
     };
 }
