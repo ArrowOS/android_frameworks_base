@@ -13,10 +13,11 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.systemui.qs.customize.QSCustomizerSettings xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.systemui.qs.customize.QSCustomizerSettingsTiles xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:systemui="http://schemas.android.com/apk/res-auto"
     android:id="@+id/qs_customize_settings"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical">
 
@@ -155,7 +156,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:orientation="horizontal">
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -226,60 +227,14 @@
                 android:drawableStart="@drawable/ic_text_label"
                 android:gravity="center_vertical" />
 
-            <Switch
-                android:id="@+id/qs_customize_settings_show_labels"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_weight="1"
-            android:layout_marginStart="20dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/qs_customize_settings_brightness_slider_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:contentDescription="@string/customize_brightness_slider"
-                android:drawableStart="@drawable/ic_qs_brightness_slider_bar"
-                android:gravity="center_vertical" />
-
-            <Button
-                android:id="@+id/qs_customize_settings_brightness_slider"
+            <com.arrow.support.widget.SystemSettingsSwitch
+                android:id="@+id/qs_tile_title_visibility"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
-                android:gravity="center" />
-
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:contentDescription="@string/customize_brightness_icon"
-                android:drawableStart="@drawable/ic_qs_brightness_auto_off"
-                android:gravity="center_vertical" />
-
-            <Switch
-                android:id="@+id/qs_customize_settings_brightness_icon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="10dp" />
+                systemui:initialValue="1" />
 
         </LinearLayout>
     </LinearLayout>
-</com.android.systemui.qs.customize.QSCustomizerSettings>
+</com.android.systemui.qs.customize.QSCustomizerSettingsTiles>
