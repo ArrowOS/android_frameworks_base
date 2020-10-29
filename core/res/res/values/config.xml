@@ -2758,15 +2758,16 @@
          on the current state of the device.
          Each item must be one of the following strings:
          "power" = Power off
-         "settings" = An action to launch settings
-         "airplane" = Airplane mode toggle
-         "bugreport" = Take bug report, if available
-         "silent" = silent mode
-         "users" = list of users
          "restart" = restart device
-         "emergency" = Launch emergency dialer
+         "screenshot" = Takes a normal/partial screenshot
+         "screenrecord" = Records screen
+         "airplane" = Airplane mode toggle
+         "settings" = An action to launch settings
          "lockdown" = Lock down device until the user authenticates
-         "logout" =  Logout the current user
+         "flashlight" = Toggles flashlight
+         "users" = list of users
+         "silent" = silent mode
+         "emergency" = Launch emergency dialer
          -->
     <string-array translatable="false" name="config_globalActionsList">
         <item>power</item>
@@ -2776,7 +2777,7 @@
         <item>airplane</item>
         <item>settings</item>
         <item>lockdown</item>
-        <item>flashlight</item>
+<!--        <item>flashlight</item>-->
         <item>users</item>
         <item>silent</item>
         <item>emergency</item>
