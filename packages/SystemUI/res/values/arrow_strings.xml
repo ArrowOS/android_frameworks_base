@@ -110,4 +110,6 @@
     <string name="customize_brightness_slider_hide">hide</string>
     <string name="customize_brightness_slider_expanded">expanded</string>
     <string name="customize_brightness_slider_quick">quick</string>
+    <string name="tuner_show_drag_handle">Show drag handle</string>
+    <string name="tuner_qs_media_player">Inline media player - reboot required</string>
 </resources>
