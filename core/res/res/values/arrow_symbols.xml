@@ -76,4 +76,7 @@
      <java-symbol type="string" name="config_SmartChargingSuspendValue" />
      <java-symbol type="string" name="config_SmartChargingResumeValue" />
 
+    <!-- Horizon Light -->
+    <java-symbol type="integer" name="config_AmbientPulseLightColor" />
+
 </resources>
