@@ -31,11 +31,11 @@
     <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">तुल्यकालन</string>
-    <string name="accessibility_quick_settings_sync_off">तुल्यकालन बंद</string>
-    <string name="accessibility_quick_settings_sync_on">तुल्यकालन चालू</string>
-    <string name="accessibility_quick_settings_sync_changed_off">तुल्यकालन को बंद किया गया है।</string>
-    <string name="accessibility_quick_settings_sync_changed_on">तुल्यकालन को चालू किया गया है।</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
     <string name="qs_menu_item_columns">Columns</string>
     <string name="qs_menu_item_columns_landscape">Columns landscape</string>
@@ -51,21 +51,21 @@
     <string name="qs_menu_item_qs_columns">Quickbar columns</string>
     <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
-    <string name="global_action_reboot">Restart</string>
+    <string name="global_action_reboot">पुन: शुरू करें</string>
     <string name="global_action_reboot_more">Restart\u2026</string>
     <string name="global_action_reboot_sub">System</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_reboot_recovery">रिकवरी</string>
+    <string name="global_action_reboot_bootloader">बूटलोडर</string>
     <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
     <string name="global_action_dnaa">Do not show again</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_settings">सेटिंग्स</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
     <string name="global_action_restart_recovery">Recovery</string>
     <string name="global_action_restart_bootloader">Bootloader</string-->
     <string name="global_action_screenshot">स्क्रीनशॉट</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_flashlight">फ्लैशलाइट</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Error</string>
     <string name="omnijaws_service_unkown">No weather data</string>
@@ -131,7 +131,7 @@
     <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
     <string name="global_action_screenshot_cust">Screenshot</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenrecord">स्क्रीन रिकॉर्ड</string>
     <!--Screenrecord Tile-->
     <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>

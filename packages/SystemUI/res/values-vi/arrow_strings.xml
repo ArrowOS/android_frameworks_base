@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Thông báo nổi</string>
-    <string name="accessibility_quick_settings_heads_up_off">Tắt thông báo nổi.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Bật thông báo nổi.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Thông báo nổi đã tắt.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Thông báo nổi đã bật.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Đồng bộ</string>
-    <string name="accessibility_quick_settings_sync_off">Tắt đồng bộ</string>
-    <string name="accessibility_quick_settings_sync_on">Bật đồng bộ</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Đồng bộ đã tắt</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Đồng bộ đã bật</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Cột</string>
-    <string name="qs_menu_item_columns_landscape">Cột khi nằm ngang</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Khôi phục về mặc định</string>
-    <string name="qs_menu_item_titles">Hiển thị nhãn</string>
-    <string name="qs_menu_item_qs_columns">Cột thanh cài đặt nhanh</string>
-    <string name="qs_menu_item_columns_auto">Tự động</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Khởi động lại</string>
-    <string name="global_action_reboot_more">Khởi động lại\u2026</string>
-    <string name="global_action_reboot_sub">Hệ thống</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Chế độ phục hồi</string>
     <string name="global_action_reboot_bootloader">Bộ nạp khởi động</string>
-    <string name="global_action_reboot_hot">Khởi Động Nhanh</string>
-    <string name="global_action_dismissable_dialog_text">Khởi động lại nâng cao bị vô hiệu hóa.\nBạn có muốn khởi động lại\u003f</string>
-    <string name="global_action_dnaa">Không hiển thị lại</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">Cài đặt</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,71 +67,71 @@
     <string name="global_action_screenshot">Ảnh chụp màn hình</string>
     <string name="global_action_flashlight">Đèn pin</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Lỗi</string>
-    <string name="omnijaws_service_unkown">Không có dữ liệu thời tiết</string>
-    <string name="omnijaws_service_error_long">Lỗi tải dữ liệu thời tiết</string>
-    <string name="omnijaws_service_disabled">Dịch vụ bị vô hiệu hóa</string>
-    <string name="omnijaws_detail_header">Thời tiết</string>
-    <string name="omnijaws_label_default">Thời tiết</string>
-    <string name="omnijaws_current_text">Bây giờ</string>
-    <string name="omnijaws_package_not_available">OmniJaws không có sẵn</string>
-    <string name="omnijaws_service_last_update">Lần cập nhật cuối:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Chuyển đổi thẻ sim</string>
-    <string name="qs_data_switch_toast_0">Hiện tại không có thẻ SIM nào được lắp vào</string>
-    <string name="qs_data_switch_toast_1">Hiện tại chỉ có 1 thẻ SIM được gắn</string>
-    <string name="qs_data_switch_changed_1">Chuyển đổi thẻ dữ liệu sang SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Chuyển đổi thẻ dữ liệu sang SIM 2.</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Thanh chỉnh độ sáng</string>
-    <string name="qs_menu_item_show_brightness">Hiển thị thanh chỉnh độ sáng</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Thanh chỉnh độ sáng ở dưới</string>
-    <string name="qs_menu_item_brightness_icon">Biểu tượng độ sáng</string>
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">Kết nối với\u2026</string>
-    <string name="vpn_credentials_hint">Vui lòng nhập thông tin đăng nhập của bạn để kết nối với <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">Tên người dùng</string>
-    <string name="vpn_credentials_password">Mật khẩu</string>
-    <string name="vpn_credentials_dialog_connect">Kết nối</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">Chế độ toàn màn hình</string>
-    <string name="quick_settings_immersive_tile_off">Toàn màn hình tắt</string>
-    <string name="quick_settings_immersive_tile_statusbar">Ẩn thanh trạng thái</string>
-    <string name="quick_settings_immersive_tile_navbar">Ẩn thanh điều hướng</string>
-    <string name="quick_settings_immersive_tile_full">Toàn màn hình</string>
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Âm thanh</string>
-    <string name="quick_settings_sound_ring">Chuông</string>
-    <string name="quick_settings_sound_vibrate">Rung</string>
-    <string name="quick_settings_sound_dnd">Không làm phiền</string>
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Khởi Động Lại</string>
-    <string name="quick_settings_reboot_recovery_label">Phục Hồi</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">Bắt đầu ghi</string>
-    <string name="screenrecord_dialog_summary">Trong khi ghi, hệ thống Android có thể giấu bất kỳ thông tin nhạy cảm nào có thể nhìn thấy trên màn hình hoặc phát trên thiết bị. Bao gồm mật khẩu, thông tin thanh toán, hình ảnh, tin nhắn và âm thanh.</string>
-    <string name="screenrecord_dialog_start">Bắt Đầu</string>
-    <string name="screenrecord_dialog_cancel">Hủy bỏ</string>
-    <string name="screenrecord_audio_title">Nguồn âm thanh</string>
-    <string name="screenrecord_audio_summary">Cho phép chọn đầu vào âm thanh hoặc vô hiệu hóa nó.</string>
-    <string name="screenrecord_audio_recording_internal">Bộ nhớ trong</string>
-    <string name="screenrecord_audio_recording_microphone">Micro điện thoại</string>
-    <string name="screenrecord_audio_recording_off">Vô hiệu hóa</string>
-    <string name="screenrecord_taps_title">Hiện số lần chạm</string>
-    <string name="screenrecord_taps_summary">Hiển thị phản hồi trực quan trong khi ghi</string>
-    <string name="screenrecord_stopdot_title">Hiển thị dấu chấm</string>
-    <string name="screenrecord_stopdot_summary">Hiển thị một chấm màu đỏ để dừng ghi chỉ với một lần nhấn. Nhấn và giữ nó để di chuyển nó sang phía đối diện.</string>
-    <string name="screenrecord_video_bitrate_title">Tốc độ video</string>
-    <string name="screenrecord_video_bitrate_summary">Đặt tốc độ video để có chất lượng tốt hơn , với dung lượng của tệp lớn hơn</string>
+    <string name="screenrecord_dialog_title">Start recording?</string>
+    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_start">Start</string>
+    <string name="screenrecord_dialog_cancel">Cancel</string>
+    <string name="screenrecord_audio_title">Audio source</string>
+    <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
+    <string name="screenrecord_audio_recording_internal">Internal</string>
+    <string name="screenrecord_audio_recording_microphone">Microphone</string>
+    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_taps_title">Show touches on screen</string>
+    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
+    <string name="screenrecord_stopdot_title">Show stop dot</string>
+    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
+    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
+    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">Đã xóa ảnh chụp màn hình</string>
+    <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">Ảnh chụp màn hình</string>
+    <string name="global_action_screenshot_cust">Screenshot</string>
     <string name="global_action_screenrecord">Quay màn hình</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">Quay màn hình</string>
+    <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>
