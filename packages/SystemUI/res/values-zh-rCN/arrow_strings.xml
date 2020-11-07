@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">浮动通知</string>
-    <string name="accessibility_quick_settings_heads_up_off">关闭浮动通知</string>
-    <string name="accessibility_quick_settings_heads_up_on">开启浮动通知</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">浮动通知已关闭</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">浮动通知已开启</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">数据同步</string>
-    <string name="accessibility_quick_settings_sync_off">关闭同步</string>
-    <string name="accessibility_quick_settings_sync_on">开启同步</string>
-    <string name="accessibility_quick_settings_sync_changed_off">同步已关闭</string>
-    <string name="accessibility_quick_settings_sync_changed_on">同步已开启</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">列</string>
-    <string name="qs_menu_item_columns_landscape">横向列数</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">重置默认设置</string>
-    <string name="qs_menu_item_titles">显示标签</string>
-    <string name="qs_menu_item_qs_columns">快速栏列数</string>
-    <string name="qs_menu_item_columns_auto">自动</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">重启</string>
-    <string name="global_action_reboot_more">重启\u2026</string>
-    <string name="global_action_reboot_sub">系统</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">恢复模式</string>
     <string name="global_action_reboot_bootloader">引导模式</string>
-    <string name="global_action_reboot_hot">软重启</string>
-    <string name="global_action_dismissable_dialog_text">高级重启已禁用。\n你要重启吗\u003f</string>
-    <string name="global_action_dnaa">不再显示</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">设置</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,71 +67,71 @@
     <string name="global_action_screenshot">屏幕截图</string>
     <string name="global_action_flashlight">手电筒</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">错误</string>
-    <string name="omnijaws_service_unkown">无天气数据</string>
-    <string name="omnijaws_service_error_long">加载天气数据时出错</string>
-    <string name="omnijaws_service_disabled">已禁用服务</string>
-    <string name="omnijaws_detail_header">天气</string>
-    <string name="omnijaws_label_default">天气</string>
-    <string name="omnijaws_current_text">现在</string>
-    <string name="omnijaws_package_not_available">OmniJaws 不可用</string>
-    <string name="omnijaws_service_last_update">最新更新:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">状态栏图标</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">切换数据卡</string>
-    <string name="qs_data_switch_toast_0">当前没有插入 SIM 卡</string>
-    <string name="qs_data_switch_toast_1">当前只插入了一张 SIM 卡</string>
-    <string name="qs_data_switch_changed_1">切换数据卡到 SIM 卡 1</string>
-    <string name="qs_data_switch_changed_2">切换数据卡到 SIM 卡 2</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">亮度滑块调节</string>
-    <string name="qs_menu_item_show_brightness">显示亮度滑块</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">底部亮度滑块</string>
-    <string name="qs_menu_item_brightness_icon">亮度图标 </string>
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">连接到\u2026</string>
-    <string name="vpn_credentials_hint">请输入用于连接到 <xliff:g id="name">%s</xliff:g> 的凭据</string>
-    <string name="vpn_credentials_username">用户名</string>
-    <string name="vpn_credentials_password">密码</string>
-    <string name="vpn_credentials_dialog_connect">连接</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">沉浸模式</string>
-    <string name="quick_settings_immersive_tile_off">沉浸模式已关闭</string>
-    <string name="quick_settings_immersive_tile_statusbar">沉浸式状态栏</string>
-    <string name="quick_settings_immersive_tile_navbar">沉浸式导航栏</string>
-    <string name="quick_settings_immersive_tile_full">完全沉浸</string>
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">声音</string>
-    <string name="quick_settings_sound_ring">响铃</string>
-    <string name="quick_settings_sound_vibrate">振动</string>
-    <string name="quick_settings_sound_dnd">勿扰</string>
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">重启</string>
-    <string name="quick_settings_reboot_recovery_label">恢复模式</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">开始录制？</string>
-    <string name="screenrecord_dialog_summary">在录制过程中，Android 系统可以捕获在您的屏幕上可见或在您的设备上播放的任何敏感信息。这可能包括密码、付款信息、照片、消息和音频。</string>
-    <string name="screenrecord_dialog_start">开始</string>
-    <string name="screenrecord_dialog_cancel">取消</string>
-    <string name="screenrecord_audio_title">音频来源</string>
-    <string name="screenrecord_audio_summary">选择或停用音频输入</string>
-    <string name="screenrecord_audio_recording_internal">内部</string>
-    <string name="screenrecord_audio_recording_microphone">麦克风</string>
-    <string name="screenrecord_audio_recording_off">已禁用</string>
-    <string name="screenrecord_taps_title">显示屏幕上的点按操作</string>
-    <string name="screenrecord_taps_summary">录制时显示视觉反馈</string>
-    <string name="screenrecord_stopdot_title">显示停止红点</string>
-    <string name="screenrecord_stopdot_summary">显示一个可以单击以停止录制的红点。长按可以将其移动到另一边。</string>
-    <string name="screenrecord_video_bitrate_title">视频比特率</string>
-    <string name="screenrecord_video_bitrate_summary">设置视频比特率，以更大的文件体积换取更好的视频质量</string>
+    <string name="screenrecord_dialog_title">Start recording?</string>
+    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_start">Start</string>
+    <string name="screenrecord_dialog_cancel">Cancel</string>
+    <string name="screenrecord_audio_title">Audio source</string>
+    <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
+    <string name="screenrecord_audio_recording_internal">Internal</string>
+    <string name="screenrecord_audio_recording_microphone">Microphone</string>
+    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_taps_title">Show touches on screen</string>
+    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
+    <string name="screenrecord_stopdot_title">Show stop dot</string>
+    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
+    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
+    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">屏幕截图已删除</string>
+    <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">屏幕截图</string>
+    <string name="global_action_screenshot_cust">Screenshot</string>
     <string name="global_action_screenrecord">屏幕录制</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">屏幕录制</string>
+    <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>

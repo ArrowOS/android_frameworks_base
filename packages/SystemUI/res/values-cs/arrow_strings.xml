@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Plovoucí oznámení</string>
-    <string name="accessibility_quick_settings_heads_up_off">Plovoucí oznámení vyp.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Plovoucí oznámení zap.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Plovoucí oznámení bylo vypnuto.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Plovoucí oznámení bylo zapnuto.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Synchr.</string>
-    <string name="accessibility_quick_settings_sync_off">Synch. vyp</string>
-    <string name="accessibility_quick_settings_sync_on">Synch. zap</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Synchronizace byla vypnuta</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Synchronizace byla zapnuta</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Sloupce</string>
-    <string name="qs_menu_item_columns_landscape">Sloupce (na šířku)</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Obnovit výchozí</string>
-    <string name="qs_menu_item_titles">Zobrazit popisky</string>
-    <string name="qs_menu_item_qs_columns">Sloupce panelu QS</string>
-    <string name="qs_menu_item_columns_auto">Automaticky</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Restartovat</string>
-    <string name="global_action_reboot_more">Restartovat\u2026</string>
-    <string name="global_action_reboot_sub">Systém</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_hot">Horký restart</string>
-    <string name="global_action_dismissable_dialog_text">Rozšířený restart je zakázán.\nChcete restartovat\u003f</string>
-    <string name="global_action_dnaa">Znovu nezobrazovat</string>
+    <string name="global_action_reboot_hot">Horko</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">Nastavení</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -83,26 +83,26 @@
     <string name="qs_data_switch_label">Přepnout SIM pro data</string>
     <string name="qs_data_switch_toast_0">Momentálně není vložena žádná SIM karta</string>
     <string name="qs_data_switch_toast_1">Momentálně je vložena pouze jedna SIM karta</string>
-    <string name="qs_data_switch_changed_1">Přepnout datovou kartu na SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Přepnout datovou kartu na SIM 2.</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Nastavení posuvníku jasu</string>
-    <string name="qs_menu_item_show_brightness">Zobrazit posuvník jasu</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Posuvník jasu v dolní části</string>
-    <string name="qs_menu_item_brightness_icon">Ikona jasu</string>
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">Připojit k\u2026</string>
-    <string name="vpn_credentials_hint">Zadejte prosím přihlašovací údaje pro připojení k <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">Uživ. jméno</string>
-    <string name="vpn_credentials_password">Heslo</string>
-    <string name="vpn_credentials_dialog_connect">Připojit</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">Režim celé obrazovky</string>
-    <string name="quick_settings_immersive_tile_off">Roztažení vypnuto</string>
-    <string name="quick_settings_immersive_tile_statusbar">Pohlcující stavový řádek</string>
-    <string name="quick_settings_immersive_tile_navbar">Pohlcující navigační panel</string>
-    <string name="quick_settings_immersive_tile_full">Pohlcující režim celé obrazovky</string>
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Zvuk</string>
     <string name="quick_settings_sound_ring">Vyzvánění</string>
@@ -112,26 +112,26 @@
     <string name="quick_settings_reboot_label">Restartovat</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">Spustit nahrávání?</string>
-    <string name="screenrecord_dialog_summary">Během nahrávání může systém Android zachytit jakékoli citlivé informace, které jsou viditelné nebo přehrávané na obrazovce vašeho zařízení. To zahrnuje hesla, informace o platbách, fotografie, zprávy a zvuk.</string>
-    <string name="screenrecord_dialog_start">Spustit</string>
-    <string name="screenrecord_dialog_cancel">Zrušit</string>
-    <string name="screenrecord_audio_title">Zdroj zvuku</string>
-    <string name="screenrecord_audio_summary">Umožňuje vybrat zvukový vstup nebo jej vypnout.</string>
-    <string name="screenrecord_audio_recording_internal">Interní</string>
-    <string name="screenrecord_audio_recording_microphone">Mikrofon</string>
-    <string name="screenrecord_audio_recording_off">Vypnuto</string>
-    <string name="screenrecord_taps_title">Zobrazit na obrazovce doteky</string>
-    <string name="screenrecord_taps_summary">Během nahrávání zobrazit vizuální zpětnou vazbu</string>
-    <string name="screenrecord_stopdot_title">Zobrazit puntík pro zastavení</string>
-    <string name="screenrecord_stopdot_summary">Zobrazit červený puntík pro zastavení nahrávání jediným klepnutím. Dlouhým stiskem ji přesunete na opačnou stranu.</string>
-    <string name="screenrecord_video_bitrate_title">Bitrate videa</string>
-    <string name="screenrecord_video_bitrate_summary">Nastavte bitrate videa pro lepší kvalitu videa za cenu větší velikosti souboru.</string>
+    <string name="screenrecord_dialog_title">Start recording?</string>
+    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_start">Start</string>
+    <string name="screenrecord_dialog_cancel">Cancel</string>
+    <string name="screenrecord_audio_title">Audio source</string>
+    <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
+    <string name="screenrecord_audio_recording_internal">Internal</string>
+    <string name="screenrecord_audio_recording_microphone">Microphone</string>
+    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_taps_title">Show touches on screen</string>
+    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
+    <string name="screenrecord_stopdot_title">Show stop dot</string>
+    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
+    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
+    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">Snímek obrazovky smazán</string>
+    <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">Snímek obrazovky</string>
+    <string name="global_action_screenshot_cust">Screenshot</string>
     <string name="global_action_screenrecord">Videozáznam obrazovky</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">Videozáznam obrazovky</string>
+    <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>

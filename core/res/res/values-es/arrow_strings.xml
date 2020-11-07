@@ -16,21 +16,21 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reiniciar en modo gestor de arranque</string>
-    <string name="reboot_to_bootloader_message">Reiniciando en modo gestor de arranque\u2026</string>
+    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
+    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
     <!-- advanced reboot to recovery. -->
-    <string name="reboot_to_recovery_title">Reiniciar en modo recuperación</string>
-    <string name="reboot_to_recovery_message">Reiniciando en modo recuperación\u2026</string>
+    <string name="reboot_to_recovery_title">Reboot recovery</string>
+    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
     <!-- advanced reboot system -->
-    <string name="reboot_system_title">Reiniciar sistema</string>
-    <string name="reboot_system_message">Reiniciando el sistema\u2026</string>
+    <string name="reboot_system_title">Restart system</string>
+    <string name="reboot_system_message">Restarting system\u2026</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Falsificación de firma</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Permite que la aplicación se ejecute como una aplicación diferente. Las aplicaciones maliciosas pueden usar esto para acceder a datos personales. ¡Conceda este permiso con cuidado!</string>
-    <string name="statusbar_items_title">Íconos de la barra de estado</string>
+    <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
+    <string name="statusbar_items_title">Statusbar icon</string>
     <!-- App error dialog -->
-    <string name="aerr_copy">Copiar URL del registro de errores</string>
-    <string name="url_copy_success">URL copiada con éxito</string>
-    <string name="url_copy_failed">Se ha producido un error al cargar el registro en dogbin</string>
+    <string name="aerr_copy">Copy crash log URL</string>
+    <string name="url_copy_success">URL copied successfully</string>
+    <string name="url_copy_failed">An error occured while uploading the log to dogbin</string>
 </resources>
