@@ -16,8 +16,8 @@
 -->
 <resources>
     <!-- advanced reboot to bootloader. -->
-    <string name="reboot_to_bootloader_title">Reporniţi în Bootloader</string>
-    <string name="reboot_to_bootloader_message">Se repornește în Bootloader</string>
+    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
+    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
     <!-- advanced reboot to recovery. -->
     <string name="reboot_to_recovery_title">Reboot recovery</string>
     <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
@@ -27,7 +27,7 @@
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Falsifică semnătura pachetului</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Permite aplicației să pretindă că este o aplicație diferită. Aplicațiile rău-intenționate ar putea să utilizeze aceasta pentru a accesa datele aplicațiilor private. Acordați această permisiune numai cu prudență!</string>
+    <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Grant this permission with caution only!</string>
     <string name="statusbar_items_title">Statusbar icon</string>
     <!-- App error dialog -->
     <string name="aerr_copy">Copy crash log URL</string>

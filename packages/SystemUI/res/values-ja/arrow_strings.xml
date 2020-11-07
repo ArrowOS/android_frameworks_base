@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads Up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads Up OFF</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads Up ON</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads Up をオフにしました</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads Up を ON にしました</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">同期</string>
-    <string name="accessibility_quick_settings_sync_off">同期 OFF</string>
-    <string name="accessibility_quick_settings_sync_on">同期 ON</string>
-    <string name="accessibility_quick_settings_sync_changed_off">同期を OFF しました</string>
-    <string name="accessibility_quick_settings_sync_changed_on">同期を ON にしました</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">列数</string>
-    <string name="qs_menu_item_columns_landscape">列数 (横向き)</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">標準設定にリセット</string>
-    <string name="qs_menu_item_titles">ラベルを表示</string>
-    <string name="qs_menu_item_qs_columns">クイックバーの列数</string>
-    <string name="qs_menu_item_columns_auto">自動</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">再起動</string>
-    <string name="global_action_reboot_more">再起動...</string>
-    <string name="global_action_reboot_sub">システム</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">リカバリー</string>
     <string name="global_action_reboot_bootloader">ブートローダー</string>
-    <string name="global_action_reboot_hot">ソフト</string>
-    <string name="global_action_dismissable_dialog_text">高度な再起動が無効です。\n再起動しますか\u003f</string>
-    <string name="global_action_dnaa">今後表示しない</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">設定</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,71 +67,71 @@
     <string name="global_action_screenshot">スクリーンショット</string>
     <string name="global_action_flashlight">ライト</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">エラー</string>
-    <string name="omnijaws_service_unkown">天気データがありません</string>
-    <string name="omnijaws_service_error_long">気象データの読み込みエラー</string>
-    <string name="omnijaws_service_disabled">サービスは無効です</string>
-    <string name="omnijaws_detail_header">天気</string>
-    <string name="omnijaws_label_default">天気</string>
-    <string name="omnijaws_current_text">現在</string>
-    <string name="omnijaws_package_not_available">OmniJaws は使用できません</string>
-    <string name="omnijaws_service_last_update">最終更新:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">ステータスバーのアイコン</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">データ SIM の変更</string>
-    <string name="qs_data_switch_toast_0">現在 SIM カードは挿入されていません</string>
-    <string name="qs_data_switch_toast_1">現在1枚のみ SIM カードは挿入されています</string>
-    <string name="qs_data_switch_changed_1">SIM 1 をデータ通信に使用します</string>
-    <string name="qs_data_switch_changed_2">SIM 2 をデータ通信に使用します</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">明るさバーの設定</string>
-    <string name="qs_menu_item_show_brightness">明るさバーを表示</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">下部の明るさバー</string>
-    <string name="qs_menu_item_brightness_icon">明るさアイコン</string>
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">接続先...</string>
-    <string name="vpn_credentials_hint"><xliff:g id="name">%s</xliff:g> への接続の認証情報を入力して下さい</string>
-    <string name="vpn_credentials_username">ユーザー名</string>
-    <string name="vpn_credentials_password">パスワード</string>
-    <string name="vpn_credentials_dialog_connect">接続</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">全画面モード</string>
-    <string name="quick_settings_immersive_tile_off">全画面モード OFF</string>
-    <string name="quick_settings_immersive_tile_statusbar">ステータスバーを隠す</string>
-    <string name="quick_settings_immersive_tile_navbar">ナビゲーションバーを隠す</string>
-    <string name="quick_settings_immersive_tile_full">全て隠す</string>
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">音声</string>
-    <string name="quick_settings_sound_ring">着信</string>
-    <string name="quick_settings_sound_vibrate">振動</string>
-    <string name="quick_settings_sound_dnd">マナーモード</string>
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">再起動</string>
-    <string name="quick_settings_reboot_recovery_label">リカバリー</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">録画を開始しますか?</string>
-    <string name="screenrecord_dialog_summary">録画している間、Android システムは画面に写っているプライバシー等に関わる全ての情報をキャプチャすることができます。プライバシー情報の具体的な例として、パスワードや支払い情報、写真、メッセージ、周囲の音も含みます。</string>
-    <string name="screenrecord_dialog_start">開始</string>
-    <string name="screenrecord_dialog_cancel">中止</string>
-    <string name="screenrecord_audio_title">音声ソース</string>
-    <string name="screenrecord_audio_summary">音声入力の有効化と無効化を選択する</string>
-    <string name="screenrecord_audio_recording_internal">内部</string>
-    <string name="screenrecord_audio_recording_microphone">マイク</string>
-    <string name="screenrecord_audio_recording_off">無効</string>
-    <string name="screenrecord_taps_title">タップされた位置の表示</string>
-    <string name="screenrecord_taps_summary">録画中視覚フィードバック表示する</string>
-    <string name="screenrecord_stopdot_title">停止ドットを表示</string>
-    <string name="screenrecord_stopdot_summary">シングルタップで録音を停止する赤い点を表示します。長押しして反対側に移動します。</string>
-    <string name="screenrecord_video_bitrate_title">映像ビットレート</string>
-    <string name="screenrecord_video_bitrate_summary">ファイルサイズの増加と引き換えに高品質動画を記録するために映像ビットレートを上げる</string>
+    <string name="screenrecord_dialog_title">Start recording?</string>
+    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
+    <string name="screenrecord_dialog_start">Start</string>
+    <string name="screenrecord_dialog_cancel">Cancel</string>
+    <string name="screenrecord_audio_title">Audio source</string>
+    <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
+    <string name="screenrecord_audio_recording_internal">Internal</string>
+    <string name="screenrecord_audio_recording_microphone">Microphone</string>
+    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_taps_title">Show touches on screen</string>
+    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
+    <string name="screenrecord_stopdot_title">Show stop dot</string>
+    <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
+    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
+    <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">スクリーンショットを削除しました</string>
+    <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">スクリーンショット</string>
+    <string name="global_action_screenshot_cust">Screenshot</string>
     <string name="global_action_screenrecord">画面録画</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">画面録画</string>
+    <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>

@@ -25,19 +25,19 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">ஹெட்ஸ் அப்</string>
-    <string name="accessibility_quick_settings_heads_up_off">ஹெட்ஸ் அப் ஆஃப்.</string>
-    <string name="accessibility_quick_settings_heads_up_on">ஹெட்ஸ் அப் ஆன்.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">ஹெட்ஸ் அப் ஆஃப் செய்யப்பட்டது.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">ஹெட்ஸ் அப் ஆன் செய்யப்பட்டது.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">ஒத்திசை</string>
-    <string name="accessibility_quick_settings_sync_off">ஒத்திசைவு அணை</string>
-    <string name="accessibility_quick_settings_sync_on">ஒத்திசைவு இயக்கு</string>
-    <string name="accessibility_quick_settings_sync_changed_off">ஒத்திசைவு அணைக்கப்படுக்கிறது</string>
-    <string name="accessibility_quick_settings_sync_changed_on">ஒத்திசைவு இயக்கப்படுக்கிறது</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">நெடுவரிசைகள்</string>
+    <string name="qs_menu_item_columns">Columns</string>
     <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">இயல்புநிலைக்கு மீட்டமை</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
     <string name="qs_menu_item_titles">Show labels</string>
     <string name="qs_menu_item_qs_columns">Quickbar columns</string>
-    <string name="qs_menu_item_columns_auto">தானியங்கி</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">மறுதொடக்கம்</string>
     <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">முறைமை</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">மீட்டல்</string>
     <string name="global_action_reboot_bootloader">துவக்கேற்றி</string>
     <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
-    <string name="global_action_dnaa">மீண்டும் காட்ட வேண்டாம்</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">அமைப்புகள்</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,36 +67,36 @@
     <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
     <string name="global_action_flashlight">டார்ச் விளக்கு</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">பிழை</string>
-    <string name="omnijaws_service_unkown">வானிலை தகவல் இல்லை</string>
-    <string name="omnijaws_service_error_long">வானிலை புள்ளிவிபரங்கள் ஏற்றும் போது பிழை</string>
-    <string name="omnijaws_service_disabled">சேவை முடக்கப்பட்டுள்ளது</string>
-    <string name="omnijaws_detail_header">வானிலை</string>
-    <string name="omnijaws_label_default">வானிலை</string>
-    <string name="omnijaws_current_text">இப்போது</string>
-    <string name="omnijaws_package_not_available">Ommnijaws கிடைக்கவில்லை</string>
-    <string name="omnijaws_service_last_update">கடைசி புதுப்பி:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">Statusbar icons</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">தரவு அட்டையை மாற்று</string>
-    <string name="qs_data_switch_toast_0">தற்பொழுது எந்த செறிவட்டையும் செருகப்படவில்லை</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
     <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">தரவு அட்டையை SIM 1 இற்கு மாற்று.</string>
-    <string name="qs_data_switch_changed_2">தரவு அட்டையை SIM 2 இற்கு மாற்று.</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
     <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
-    <string name="qs_menu_item_show_brightness">பிரகாசப் பட்டையைக் காண்பி</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">பிரகாச படவுரு</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">\u2026 உடன் இணை</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
     <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">பயனர் பெயர்</string>
-    <string name="vpn_credentials_password">கடவுச்சொல்</string>
-    <string name="vpn_credentials_dialog_connect">இணை</string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
     <string name="quick_settings_immersive_tile">Immersive mode</string>
     <string name="quick_settings_immersive_tile_off">Immersive off</string>
@@ -104,9 +104,9 @@
     <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
     <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">ஒலி</string>
+    <string name="quick_settings_sound_label">Sound</string>
     <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">அதிர்வு</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Reboot</string>
