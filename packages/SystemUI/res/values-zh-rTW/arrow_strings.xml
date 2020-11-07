@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">浮動通知</string>
-    <string name="accessibility_quick_settings_heads_up_off">關閉浮動通知。</string>
-    <string name="accessibility_quick_settings_heads_up_on">開啟浮動通知</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">浮動通知已關閉。</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">浮動通知已開啟。</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">同步處理</string>
-    <string name="accessibility_quick_settings_sync_off">關閉同步處理</string>
-    <string name="accessibility_quick_settings_sync_on">開啟同步處理</string>
-    <string name="accessibility_quick_settings_sync_changed_off">同步處理已關閉</string>
-    <string name="accessibility_quick_settings_sync_changed_on">同步處理已開啟</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">列</string>
-    <string name="qs_menu_item_columns_landscape">列 (橫向)</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -47,18 +47,18 @@
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
     <string name="qs_menu_item_reset">Reset defaults</string>
-    <string name="qs_menu_item_titles">顯示標籤</string>
-    <string name="qs_menu_item_qs_columns">快速欄列數</string>
-    <string name="qs_menu_item_columns_auto">自動</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">重新啟動</string>
-    <string name="global_action_reboot_more">重新啟動\u2026</string>
-    <string name="global_action_reboot_sub">系統</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_hot">Hot</string>
-    <string name="global_action_dismissable_dialog_text">進階重新啟動已停用。\n是否重新啟動\u003f</string>
-    <string name="global_action_dnaa">不再顯示</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">設定</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,15 +67,15 @@
     <string name="global_action_screenshot">螢幕截圖</string>
     <string name="global_action_flashlight">手電筒</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">錯誤</string>
-    <string name="omnijaws_service_unkown">無天氣資料</string>
-    <string name="omnijaws_service_error_long">載入天氣資訊時錯誤</string>
-    <string name="omnijaws_service_disabled">服務已停用</string>
-    <string name="omnijaws_detail_header">天氣</string>
-    <string name="omnijaws_label_default">天氣</string>
-    <string name="omnijaws_current_text">現在</string>
-    <string name="omnijaws_package_not_available">OmniJaws 無法使用</string>
-    <string name="omnijaws_service_last_update">上次更新：</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">Statusbar icons</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
@@ -106,10 +106,10 @@
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Sound</string>
     <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">震動</string>
-    <string name="quick_settings_sound_dnd">零打擾</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">重新開機</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
     <string name="screenrecord_dialog_title">Start recording?</string>

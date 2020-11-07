@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">اﻹشعارات العلوية</string>
-    <string name="accessibility_quick_settings_heads_up_off">الإشعارات العلوية متوقفة.</string>
-    <string name="accessibility_quick_settings_heads_up_on">الإشعارات العلوية تعمل.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">تم تعطيل الإشعارات العلوية.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">تم تفعيل الإشعارات العلوية.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">المزامنة</string>
-    <string name="accessibility_quick_settings_sync_off">المزامنة متوقفة</string>
-    <string name="accessibility_quick_settings_sync_on">تشغيل المزامنة</string>
-    <string name="accessibility_quick_settings_sync_changed_off">تم إيقاف المزامنة</string>
-    <string name="accessibility_quick_settings_sync_changed_on">تم تشغيل المزامنة</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">الأعمدة</string>
-    <string name="qs_menu_item_columns_landscape">الأعمدة (أفقي)</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -47,18 +47,18 @@
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
     <string name="qs_menu_item_reset">Reset defaults</string>
-    <string name="qs_menu_item_titles">عرض التسميات</string>
-    <string name="qs_menu_item_qs_columns">أعمدة الشريط السريع</string>
-    <string name="qs_menu_item_columns_auto">تلقائي</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">إعادة التشغيل</string>
-    <string name="global_action_reboot_more">إعادة التشغيل</string>
-    <string name="global_action_reboot_sub">النظام</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">الإسترداد</string>
     <string name="global_action_reboot_bootloader">محمل الإقلاع</string>
     <string name="global_action_reboot_hot">Hot</string>
-    <string name="global_action_dismissable_dialog_text">تم تعطيل إعادة التشغيل المتقدمة.\nهل تريد إعادة التشغيل</string>
-    <string name="global_action_dnaa">عدم الإظهار مرة أخرى</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">الاعدادات</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,15 +67,15 @@
     <string name="global_action_screenshot">لقطة الشاشة</string>
     <string name="global_action_flashlight">ضوء الفلاش</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">خطأ</string>
-    <string name="omnijaws_service_unkown">لا توجد بيانات الطقس</string>
-    <string name="omnijaws_service_error_long">خطأ في تحميل بيانات الطقس</string>
-    <string name="omnijaws_service_disabled">تم تعطيل الخدمة</string>
-    <string name="omnijaws_detail_header">الطقس</string>
-    <string name="omnijaws_label_default">الطقس</string>
-    <string name="omnijaws_current_text">الآن</string>
-    <string name="omnijaws_package_not_available">OmniJaws غير متاح</string>
-    <string name="omnijaws_service_last_update">آخر تحديث:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>

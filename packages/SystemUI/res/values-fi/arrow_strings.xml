@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Leijuvat ilmoitukset</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up pois.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up päällä.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up pois päältä.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up päällä.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Synkronoi</string>
-    <string name="accessibility_quick_settings_sync_off">Synkronointi pois</string>
-    <string name="accessibility_quick_settings_sync_on">Synkronointi päälle</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Synkronointi pois päältä</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Synkronointi käytössä</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Sarakkeet</string>
-    <string name="qs_menu_item_columns_landscape">Sarakkeet vaaka-asento</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Palauta oletukset</string>
-    <string name="qs_menu_item_titles">Näytä selite</string>
-    <string name="qs_menu_item_qs_columns">Pikapalkkien määrä</string>
-    <string name="qs_menu_item_columns_auto">Automaattinen</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Käynnistä uudelleen</string>
-    <string name="global_action_reboot_more">Käynnistetään uudelleen\u2026</string>
-    <string name="global_action_reboot_sub">Järjestelmä</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Recovery-tila</string>
     <string name="global_action_reboot_bootloader">Bootloader-tila</string>
     <string name="global_action_reboot_hot">Hot</string>
-    <string name="global_action_dismissable_dialog_text">Edistynyt uudelleenkäynnistys pois käytöstä.\nHaluatko käynnistää uudelleen\u003f</string>
-    <string name="global_action_dnaa">Älä näytä uudestaan</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">Asetukset</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,47 +67,47 @@
     <string name="global_action_screenshot">Ruudunkaappaus</string>
     <string name="global_action_flashlight">Taskulamppu</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Virhe</string>
-    <string name="omnijaws_service_unkown">Ei säätietoja</string>
-    <string name="omnijaws_service_error_long">Virhe ladattaessa säätietoja</string>
-    <string name="omnijaws_service_disabled">Palvelu poissa käytöstä</string>
-    <string name="omnijaws_detail_header">Sää</string>
-    <string name="omnijaws_label_default">Sää</string>
-    <string name="omnijaws_current_text">Nyt</string>
-    <string name="omnijaws_package_not_available">Omnijaws ei ole saatavilla</string>
-    <string name="omnijaws_service_last_update">Viimeisin päivitys:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">Tilapalkin kuvakkeet</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Vaihda data kortti</string>
-    <string name="qs_data_switch_toast_0">Ei löydy asennettua SIM-korttia</string>
-    <string name="qs_data_switch_toast_1">Vain yksi SIM-kortti asennettu</string>
-    <string name="qs_data_switch_changed_1">Vaihda data SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Vaihda data SIM 2.</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Kirkkauspalkin säädöt</string>
-    <string name="qs_menu_item_show_brightness">Näytä kirkkauden säädin</string>
-    <string name="qs_menu_item_qs_brightness_position_bottom">Kirkkauden säädin pohjalla</string>
-    <string name="qs_menu_item_brightness_icon">Kirkkaussäätimen kuvake</string>
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
+    <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">Yhdistä\u2026</string>
-    <string name="vpn_credentials_hint">Syötä tietosi yhdistääksesi <xliff:g id="name">%s</xliff:g></string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
+    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
     <string name="vpn_credentials_username">Username</string>
     <string name="vpn_credentials_password">Password</string>
-    <string name="vpn_credentials_dialog_connect">Yhdistä</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">Kokoruututila</string>
-    <string name="quick_settings_immersive_tile_off">Immersive pois käytöstä</string>
-    <string name="quick_settings_immersive_tile_statusbar">Immersive tilapalkki</string>
-    <string name="quick_settings_immersive_tile_navbar">Immersive navigointipalkki</string>
-    <string name="quick_settings_immersive_tile_full">Kokoruututila</string>
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Ääni</string>
-    <string name="quick_settings_sound_ring">Soi</string>
-    <string name="quick_settings_sound_vibrate">Värinä</string>
-    <string name="quick_settings_sound_dnd">Älä häiritse</string>
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Reboot</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
@@ -131,7 +131,7 @@
     <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
     <string name="global_action_screenshot_cust">Screenshot</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenrecord">Näytöntallennus</string>
     <!--Screenrecord Tile-->
     <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>

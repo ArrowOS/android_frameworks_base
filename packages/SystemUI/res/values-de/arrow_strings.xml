@@ -25,20 +25,20 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Pop-Up-Benachrichtigungen</string>
-    <string name="accessibility_quick_settings_heads_up_off">Pop-Up-Benachrichtigungen aus.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Pop-Up Benachrichtigungen an.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Pop-Up Benachrichtigungen ausgeschaltet.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Pop-Up Benachrichtigungen eingeschaltet.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Synchronisation</string>
-    <string name="accessibility_quick_settings_sync_off">Synchronisation deaktiviert</string>
-    <string name="accessibility_quick_settings_sync_on">Synchronisation aktiviert</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Synchronisation ausgeschaltet</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Synchronisation eingeschaltet</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
-    <string name="qs_menu_item_columns">Spalten</string>
-    <string name="qs_menu_item_columns_landscape">Spalten im Querformat</string>
+    <string name="qs_menu_item_columns">Columns</string>
+    <string name="qs_menu_item_columns_landscape">Columns landscape</string>
     <string name="qs_menu_item_columns_three">3</string>
     <string name="qs_menu_item_columns_four">4</string>
     <string name="qs_menu_item_columns_five">5</string>
@@ -46,19 +46,19 @@
     <string name="qs_menu_item_columns_seven">7</string>
     <string name="qs_menu_item_columns_eight">8</string>
     <string name="qs_menu_item_columns_nine">9</string>
-    <string name="qs_menu_item_reset">Auf Standardwerte zurücksetzen</string>
-    <string name="qs_menu_item_titles">Beschriftungen anzeigen</string>
-    <string name="qs_menu_item_qs_columns">Spalten (Mini-Kacheln)</string>
-    <string name="qs_menu_item_columns_auto">Automatisch</string>
+    <string name="qs_menu_item_reset">Reset defaults</string>
+    <string name="qs_menu_item_titles">Show labels</string>
+    <string name="qs_menu_item_qs_columns">Quickbar columns</string>
+    <string name="qs_menu_item_columns_auto">Automatic</string>
     <!-- Power Menu -->
     <string name="global_action_reboot">Neustarten</string>
-    <string name="global_action_reboot_more">Neustarten\u2026</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
     <string name="global_action_reboot_sub">System</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_hot">Warmstart</string>
-    <string name="global_action_dismissable_dialog_text">Erweiterter Neustart ist deaktiviert.\nWollen Sie\u003f neustarten?</string>
-    <string name="global_action_dnaa">Nicht erneut anzeigen</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_dismissable_dialog_text">Advanced restart is disabled.\nDo you want to restart\u003f</string>
+    <string name="global_action_dnaa">Do not show again</string>
     <string name="global_action_settings">Einstellungen</string>
     <!-- Global actions -->
     <!-- string name="global_action_restart_advanced">Advanced reboot</string>
@@ -67,71 +67,71 @@
     <string name="global_action_screenshot">Bildschirmfoto</string>
     <string name="global_action_flashlight">Taschenlampe</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Fehler</string>
-    <string name="omnijaws_service_unkown">Keine Wetterdaten verfügbar</string>
-    <string name="omnijaws_service_error_long">Fehler beim Laden der Wetterdaten</string>
-    <string name="omnijaws_service_disabled">Dienst ist deaktiviert</string>
-    <string name="omnijaws_detail_header">Wetter</string>
-    <string name="omnijaws_label_default">Wetter</string>
-    <string name="omnijaws_current_text">Jetzt</string>
-    <string name="omnijaws_package_not_available">OmniJaws nicht verfügbar</string>
-    <string name="omnijaws_service_last_update">Letzte Aktualisierung:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">Statusleisten Symbole</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Daten SIM-Karte wechseln</string>
-    <string name="qs_data_switch_toast_0">Derzeit ist keine SIM-Karte eingelegt</string>
-    <string name="qs_data_switch_toast_1">Derzeit ist nur eine SIM-Karte eingelegt</string>
-    <string name="qs_data_switch_changed_1">Daten SIM Karte zu SIM 1 wechseln.</string>
-    <string name="qs_data_switch_changed_2">Daten SIM Karte zu SIM 2 wechseln.</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
     <!-- QS menu brightness tweaks -->
-    <string name="qs_menu_item_brightness_tweaks">Helligkeitsregler Anpassungen</string>
-    <string name="qs_menu_item_show_brightness">Helligkeitsregler anzeigen</string>
+    <string name="qs_menu_item_brightness_tweaks">Brightness bar tweaks</string>
+    <string name="qs_menu_item_show_brightness">Show brightness bar</string>
     <string name="qs_menu_item_qs_brightness_position_bottom">Brightness bar bottom</string>
-    <string name="qs_menu_item_brightness_icon">Helligkeitssymbol</string>
+    <string name="qs_menu_item_brightness_icon">Brightness icon</string>
     <!-- VPN QS tile -->
     <string name="quick_settings_vpn_label">VPN</string>
-    <string name="quick_settings_vpn_connect_dialog_title">Verbinden mit\u2026</string>
+    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
     <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
-    <string name="vpn_credentials_username">Nutzername</string>
-    <string name="vpn_credentials_password">Passwort</string>
-    <string name="vpn_credentials_dialog_connect">Verbinden</string>
+    <string name="vpn_credentials_username">Username</string>
+    <string name="vpn_credentials_password">Password</string>
+    <string name="vpn_credentials_dialog_connect">Connect</string>
     <!--Immersive mode tile -->
-    <string name="quick_settings_immersive_tile">Immersiver Modus</string>
-    <string name="quick_settings_immersive_tile_off">Immersiver Modus aus</string>
-    <string name="quick_settings_immersive_tile_statusbar">Immersive Statusleiste</string>
-    <string name="quick_settings_immersive_tile_navbar">Immersive Navigationsleiste</string>
-    <string name="quick_settings_immersive_tile_full">Vollständig immersiver Modus</string>
+    <string name="quick_settings_immersive_tile">Immersive mode</string>
+    <string name="quick_settings_immersive_tile_off">Immersive off</string>
+    <string name="quick_settings_immersive_tile_statusbar">Immersive statusbar</string>
+    <string name="quick_settings_immersive_tile_navbar">Immersive navbar</string>
+    <string name="quick_settings_immersive_tile_full">Immersive full</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Ton</string>
-    <string name="quick_settings_sound_ring">Klingelton</string>
-    <string name="quick_settings_sound_vibrate">Vibrieren</string>
-    <string name="quick_settings_sound_dnd">Bitte nicht stören</string>
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Neustarten</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- Screen recorder -->
-    <string name="screenrecord_dialog_title">Bildschirmaufnahme starten?</string>
-    <string name="screenrecord_dialog_summary">Während der Aufnahme kann das Android-System alle sensiblen Informationen erfassen, die auf deinem Bildschirm sichtbar sind oder auf dem Gerät abgespielt werden. Dazu gehören Passwörter, Zahlungsinformationen, Fotos, Nachrichten und Töne.</string>
+    <string name="screenrecord_dialog_title">Start recording?</string>
+    <string name="screenrecord_dialog_summary">While recording, Android system can capture any sensitive information that\'s visible on your screen or played on your device. This includes passwords, payment info, photos, messages, and audio.</string>
     <string name="screenrecord_dialog_start">Start</string>
-    <string name="screenrecord_dialog_cancel">Abbrechen</string>
-    <string name="screenrecord_audio_title">Audioquelle</string>
+    <string name="screenrecord_dialog_cancel">Cancel</string>
+    <string name="screenrecord_audio_title">Audio source</string>
     <string name="screenrecord_audio_summary">Allows to pick the audio input or disable it.</string>
-    <string name="screenrecord_audio_recording_internal">Intern</string>
-    <string name="screenrecord_audio_recording_microphone">Mikrofon</string>
-    <string name="screenrecord_audio_recording_off">Deaktiviert</string>
-    <string name="screenrecord_taps_title">Bildschirmberührungen anzeigen</string>
-    <string name="screenrecord_taps_summary">Visuelles Feedback während der Aufnahme anzeigen</string>
-    <string name="screenrecord_stopdot_title">Stop Button anzeigen</string>
+    <string name="screenrecord_audio_recording_internal">Internal</string>
+    <string name="screenrecord_audio_recording_microphone">Microphone</string>
+    <string name="screenrecord_audio_recording_off">Disabled</string>
+    <string name="screenrecord_taps_title">Show touches on screen</string>
+    <string name="screenrecord_taps_summary">Show visual feedback while recording</string>
+    <string name="screenrecord_stopdot_title">Show stop dot</string>
     <string name="screenrecord_stopdot_summary">Show a red dot to stop recording with a single tap. Longpress it to move it to the opposite side.</string>
-    <string name="screenrecord_video_bitrate_title">Videobitrate</string>
+    <string name="screenrecord_video_bitrate_title">Video Bitrate</string>
     <string name="screenrecord_video_bitrate_summary">Set the video bitrate for better video quality, at the cost of a bigger file.</string>
     <!-- Screenshot toast -->
-    <string name="delete_screenshot_toast">Bildschirmfoto gelöscht</string>
+    <string name="delete_screenshot_toast">Screenshot deleted</string>
     <!-- Power menu item for taking a screenshot [CHAR LIMIT=20]-->
-    <string name="global_action_screenshot_cust">Bildschirmfoto</string>
+    <string name="global_action_screenshot_cust">Screenshot</string>
     <string name="global_action_screenrecord">Bildschirmaufnahme</string>
     <!--Screenrecord Tile-->
-    <string name="screenrecorder_title_tile">Bildschirmaufnahme</string>
+    <string name="screenrecorder_title_tile">Screenrecord</string>
 </resources>

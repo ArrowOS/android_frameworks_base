@@ -25,17 +25,17 @@
          values/config.xml) and must be truncated.
          [CHAR LIMIT=4] -->
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Αναδυόμενες ειδοποιήσεις</string>
-    <string name="accessibility_quick_settings_heads_up_off">Αναδυόμενες ειδοποιήσεις ανενεργές</string>
-    <string name="accessibility_quick_settings_heads_up_on">Αναδυόμενες ειδοποιήσεις ενεργές.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Οι Αναδυόμενες ειδοποιήσεις απενεργοποιήθηκαν.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Οι Αναδυόμενες ειδοποιήσεις ενεργοποιήθηκαν.</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Συγχρονισμος</string>
-    <string name="accessibility_quick_settings_sync_off">Συγχρονισμός ανενεργός</string>
-    <string name="accessibility_quick_settings_sync_on">Συγχρονισμός ενεργός</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Ο συγχρονισμός απενεργοποιήθηκε</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Ο συγχρονισμός ενεργοποιήθηκε</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- QS Config -->
     <string name="qs_menu_item_columns">Columns</string>
     <string name="qs_menu_item_columns_landscape">Columns landscape</string>
@@ -67,15 +67,15 @@
     <string name="global_action_screenshot">Στιγμιότυπο οθόνης</string>
     <string name="global_action_flashlight">Flashlight</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Σφάλμα</string>
-    <string name="omnijaws_service_unkown">Δεν υπάρχουν δεδομένα καιρού</string>
-    <string name="omnijaws_service_error_long">Σφάλμα κατά τη φόρτωση δεδομένων καιρού</string>
-    <string name="omnijaws_service_disabled">Η υπηρεσία απενεργοποιήθηκε</string>
-    <string name="omnijaws_detail_header">Καιρός</string>
-    <string name="omnijaws_label_default">Καιρός</string>
-    <string name="omnijaws_current_text">Τώρα</string>
-    <string name="omnijaws_package_not_available">Τα OmniJaws δεν είναι διαθέσιμα</string>
-    <string name="omnijaws_service_last_update">Τελευταία ενημέρωση:</string>
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <string name="statusbar_items_title">Statusbar icons</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>

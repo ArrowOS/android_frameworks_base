@@ -16,23 +16,23 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Bindable action labels -->
-    <string name="label_action_no_action">No action</string>
-    <string name="label_action_settings_panel">QS panel</string>
-    <string name="label_action_notification_panel">Notification panel</string>
-    <string name="label_action_screenshot">Screenshot</string>
-    <string name="label_action_region_screenshot">Partial screenshot</string>
-    <string name="label_action_screenrecord">Record screen</string>
-    <string name="label_action_expanded_desktop">Expanded desktop</string>
-    <string name="label_action_screen_off">Turn off screen</string>
-    <string name="label_action_force_close_app">Force close app</string>
+    <string name="label_action_no_action">Ei toimintoa</string>
+    <string name="label_action_settings_panel">Pikasetus paneeli</string>
+    <string name="label_action_notification_panel">Ilmoitusvalikko</string>
+    <string name="label_action_screenshot">Kuvakaappaus</string>
+    <string name="label_action_region_screenshot">Osittainen kuvakaappaus</string>
+    <string name="label_action_screenrecord">Nauhoita näyttöä</string>
+    <string name="label_action_expanded_desktop">Laajennettu työpöytä</string>
+    <string name="label_action_screen_off">Sammuta näyttö</string>
+    <string name="label_action_force_close_app">Pakota sovelluksen sulkeminen</string>
     <string name="label_action_google_assistant">Google assistant</string>
-    <string name="label_action_in_app_search">In-app search</string>
-    <string name="label_action_flashlight">Flashlight</string>
+    <string name="label_action_in_app_search">Haku sovelluksessa</string>
+    <string name="label_action_flashlight">Taskulamppu</string>
     <string name="label_action_bluetooth">Bluetooth</string>
     <string name="label_action_wifi">WiFi</string>
     <string name="label_action_hotspot">Hotspot</string>
-    <string name="label_action_last_app">Last app</string>
-    <string name="label_action_overview">Recents</string>
+    <string name="label_action_last_app">Äskeinen sovellus</string>
+    <string name="label_action_overview">Viimeaikaiset</string>
     <string name="label_action_power_menu">Käynnistysvalikko</string>
     <string name="label_action_menu">Valikko</string>
     <string name="label_action_back">Takaisin</string>
