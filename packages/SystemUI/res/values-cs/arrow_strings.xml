@@ -14,49 +14,49 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • DASH nabíjení (zbývá <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> do plného nabití)</string>
+    <string name="keyguard_plugged_in_dash_charging">DASH nabíjení</string>
     <string name="statusbar_items_title">Ikony na stavovém řádku</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Prohlížení oznámení</string>
+    <string name="accessibility_quick_settings_heads_up_off">Prohlížení oznámení vyp.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Prohlížení oznámení zap.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Prohlížení oznámení je vypnuto.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Prohlížení oznámení je zapnuto.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB tethering</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">Restartovat</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_system">Systém</string>
+    <string name="global_action_reboot_progress">Restartování\u2026</string>
     <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
+    <string name="global_action_reboot_recovery_progress">Restartování do režimu recovery\u2026</string>
     <string name="global_action_reboot_hot">Horko</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">Restartování do režimu bootloader\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">Restartování do režimu fastbootd\u2026</string>
     <string name="global_action_settings">Nastavení</string>
     <string name="global_action_screenshot">Snímek obrazovky</string>
     <string name="global_action_screenrecord">Videozáznam obrazovky</string>
     <string name="global_action_flashlight">Svítilna</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">Aktuální</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">Snímek obrazovky</string>
+    <string name="quick_settings_region_screenshot_label">Částečný snímek obrazovky</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine vyp.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine zap.</string>
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Přepnout SIM pro data</string>
     <string name="qs_data_switch_toast_0">Momentálně není vložena žádná SIM karta</string>
     <string name="qs_data_switch_toast_1">Momentálně je vložena pouze jedna SIM karta</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_changed_1">Mobilní data jsou používána na SIM 1</string>
+    <string name="qs_data_switch_changed_2">Mobilní data jsou používána na SIM 2</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Zvuk</string>
     <string name="quick_settings_sound_ring">Vyzvánění</string>
@@ -76,12 +76,12 @@
     <string name="quick_settings_reboot_label">Restartovat</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Dotykem odeberete nebo přetažením změníte uspořádání dlaždic</string>
+    <string name="drag_or_touch_to_add_tiles">Dotykem nebo přetažením přidáte dlaždice</string>
+    <string name="customize_settings_info_text"><b>Poznámka:</b> sloupce budou automaticky omezeny.</string>
+    <string name="customize_show_labels">Popisky</string>
+    <string name="customize_quickbar_sync">Synchr.</string>
+    <string name="customize_quickbar_label">Rychlý panel</string>
+    <string name="customize_columns_land_label">Na šířku</string>
+    <string name="customize_columns_port_label">Na výšku</string>
 </resources>

@@ -14,74 +14,74 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • 正在快速充电 (还需 <xliff:g id="charging_time_left">%s</xliff:g>充满)</string>
+    <string name="keyguard_plugged_in_dash_charging">快速充电中</string>
     <string name="statusbar_items_title">状态栏图标</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">浮动通知</string>
+    <string name="accessibility_quick_settings_heads_up_off">浮动通知已禁用。</string>
+    <string name="accessibility_quick_settings_heads_up_on">浮动通知已允许。</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">浮动通知已关闭。</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">浮动通知已开启。</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">USB 网络共享</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">重启</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_system">系统</string>
+    <string name="global_action_reboot_progress">正在重启\u2026</string>
     <string name="global_action_reboot_recovery">恢复模式</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_recovery_progress">正在重启至恢复模式\u2026</string>
+    <string name="global_action_reboot_hot">软重启</string>
     <string name="global_action_reboot_bootloader">引导模式</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">正在重启至引导模式\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">正在重启至 fastbootd 模式\u2026</string>
     <string name="global_action_settings">设置</string>
     <string name="global_action_screenshot">屏幕截图</string>
     <string name="global_action_screenrecord">屏幕录制</string>
     <string name="global_action_flashlight">手电筒</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">当前</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">屏幕截图</string>
+    <string name="quick_settings_region_screenshot_label">局部截图</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">保持亮屏</string>
+    <string name="accessibility_quick_settings_caffeine_off">关闭保持亮屏</string>
+    <string name="accessibility_quick_settings_caffeine_on">开启保持亮屏</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_label">切换数据卡</string>
+    <string name="qs_data_switch_toast_0">当前没有插入 SIM 卡</string>
+    <string name="qs_data_switch_toast_1">当前只插入了一张 SIM 卡</string>
+    <string name="qs_data_switch_changed_1">设置卡1为数据卡</string>
+    <string name="qs_data_switch_changed_2">设置卡2为数据卡</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">声音</string>
+    <string name="quick_settings_sound_ring">响铃</string>
+    <string name="quick_settings_sound_vibrate">振动</string>
+    <string name="quick_settings_sound_dnd">勿扰</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
-    <string name="omnijaws_detail_header">Weather</string>
-    <string name="omnijaws_label_default">Weather</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
-    <string name="omnijaws_service_last_update">Last update:</string>
+    <string name="omnijaws_service_error">出错</string>
+    <string name="omnijaws_service_unkown">无天气数据</string>
+    <string name="omnijaws_service_error_long">加载天气数据时出错</string>
+    <string name="omnijaws_service_disabled">已禁用服务</string>
+    <string name="omnijaws_detail_header">天气</string>
+    <string name="omnijaws_label_default">天气</string>
+    <string name="omnijaws_current_text">现在</string>
+    <string name="omnijaws_package_not_available">OmniJaws 不可用</string>
+    <string name="omnijaws_service_last_update">最新更新：</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">重启</string>
+    <string name="quick_settings_reboot_recovery_label">恢复模式</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="drag_or_touch_to_rearrange_tiles">触摸可移除或拖动以重新排列瓷块</string>
+    <string name="drag_or_touch_to_add_tiles">触摸或拖动以添加瓷块</string>
+    <string name="customize_settings_info_text"><b>注意：</b> 列将被自动限制在可用空间。</string>
+    <string name="customize_show_labels">标签</string>
+    <string name="customize_quickbar_sync">同步</string>
+    <string name="customize_quickbar_label">工具栏</string>
+    <string name="customize_columns_land_label">横向</string>
+    <string name="customize_columns_port_label">纵向</string>
 </resources>

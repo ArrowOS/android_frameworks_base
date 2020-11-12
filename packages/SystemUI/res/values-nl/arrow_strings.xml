@@ -14,74 +14,74 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Snel opladen (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> tot volledig opgeladen)</string>
+    <string name="keyguard_plugged_in_dash_charging">Snel opladen</string>
+    <string name="statusbar_items_title">Statusbalk iconen</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Spiek meldingen</string>
+    <string name="accessibility_quick_settings_heads_up_off">Spiek notificaties uitgeschakeld.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Spiek notificaties toegestaan.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Spiek notificaties uitgeschakeld.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Spiek meldingen ingeschakeld.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB tethering</string>
     <!-- Advanced restart -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot">Herstarten</string>
+    <string name="global_action_reboot_system">Systeem</string>
+    <string name="global_action_reboot_progress">Herstarten\u2026</string>
+    <string name="global_action_reboot_recovery">Herstelmodus</string>
+    <string name="global_action_reboot_recovery_progress">Herstarten naar herstelmodus\u2026</string>
+    <string name="global_action_reboot_hot">Snel</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">Herstarten naar bootloader modus\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
-    <string name="global_action_settings">Settings</string>
+    <string name="global_action_reboot_fastboot_progress">Herstarten naar fastboot modus\u2026</string>
+    <string name="global_action_settings">Instellingen</string>
     <string name="global_action_screenshot">Schermafbeelding</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_screenrecord">Schermopname</string>
+    <string name="global_action_flashlight">Zaklamp</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">Huidige</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_region_screenshot_label">Gedeeltelijke screenshot</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Cafeïne</string>
+    <string name="accessibility_quick_settings_caffeine_off">Cafeïne uit</string>
+    <string name="accessibility_quick_settings_caffeine_on">Cafeïne aan</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_label">Gegevenskaart omschakelen</string>
+    <string name="qs_data_switch_toast_0">Momenteel is er geen SIM-kaart geplaatst</string>
+    <string name="qs_data_switch_toast_1">Momenteel is slechts één SIM-kaart geplaatst</string>
+    <string name="qs_data_switch_changed_1">Simkaart 1 gebruiken voor mobiele data</string>
+    <string name="qs_data_switch_changed_2">Simkaart 2 gebruiken voor mobiele data</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_label">Geluid</string>
     <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_vibrate">Trillen</string>
+    <string name="quick_settings_sound_dnd">Niet storen</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
-    <string name="omnijaws_detail_header">Weather</string>
-    <string name="omnijaws_label_default">Weather</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
-    <string name="omnijaws_service_last_update">Last update:</string>
+    <string name="omnijaws_service_error">Fout</string>
+    <string name="omnijaws_service_unkown">Geen weergegevens</string>
+    <string name="omnijaws_service_error_long">Fout bij het laden van weergegevens</string>
+    <string name="omnijaws_service_disabled">Service is uitgeschakeld</string>
+    <string name="omnijaws_detail_header">Weer</string>
+    <string name="omnijaws_label_default">Weer</string>
+    <string name="omnijaws_current_text">Nu</string>
+    <string name="omnijaws_package_not_available">OmniJaws is niet beschikbaar</string>
+    <string name="omnijaws_service_last_update">Laatst bijgewerkt:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Herstarten</string>
+    <string name="quick_settings_reboot_recovery_label">Herstelmodus</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Raak aan om te verwijderen of sleep om tegels te herschikken</string>
+    <string name="drag_or_touch_to_add_tiles">Raak aan of sleep om tegels toe te voegen</string>
+    <string name="customize_settings_info_text"><b>Opmerking:</b> kolommen worden automatisch beperkt voor beschikbare ruimte.</string>
     <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="customize_quickbar_sync">Synchroniseer</string>
+    <string name="customize_quickbar_label">Snelbalk</string>
+    <string name="customize_columns_land_label">Landschap</string>
+    <string name="customize_columns_port_label">Portret</string>
 </resources>
