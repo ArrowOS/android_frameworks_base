@@ -762,7 +762,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
 
             } else if (GLOBAL_ACTION_KEY_REBOOT_FASTBOOT.equals(actionKey) &&
-                    isAdvancedRebootPossible(mContext)) {
+                    isAdvancedRebootPossible(mContext) &&
+                    SystemProperties.getBoolean("ro.fastbootd.available", false)) {
                 addIfShouldShowAction(tempActions, new RebootFastbootAction());
             } else if (GLOBAL_ACTION_KEY_SCREENSHOT.equals(actionKey)) {
                 if (Settings.System.getInt(mContext.getContentResolver(),
