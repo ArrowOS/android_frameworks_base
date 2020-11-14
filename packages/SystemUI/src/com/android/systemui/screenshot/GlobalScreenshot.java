@@ -227,8 +227,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
     private float mCornerSizeX;
     private float mDismissDeltaY;
 
-    private MediaActionSound mCameraSound;
-
     private int mNavMode;
     private int mLeftInset;
     private int mRightInset;
@@ -323,10 +321,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
 
         mFastOutSlowIn =
                 AnimationUtils.loadInterpolator(mContext, android.R.interpolator.fast_out_slow_in);
-
-        // Setup the Camera shutter sound
-        mCameraSound = new MediaActionSound();
-        mCameraSound.load(MediaActionSound.SHUTTER_CLICK);
 
         // Store UI background executor
         mUiBgExecutor = uiBgExecutor;
@@ -449,6 +443,7 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
      */
     void dismissScreenshot(String reason, boolean immediate) {
         Log.v(TAG, "clearing screenshot: " + reason);
+        mNotificationsController.cancelNotification();
         mScreenshotHandler.removeMessages(MESSAGE_CORNER_TIMEOUT);
         mScreenshotLayout.getViewTreeObserver().removeOnComputeInternalInsetsListener(this);
         if (!immediate) {
@@ -675,11 +670,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
      * failure).
      */
     private void saveScreenshotAndToast(Consumer<Uri> finisher) {
-        // Play the shutter sound to notify that we've taken a screenshot
-        mScreenshotHandler.post(() -> {
-            mCameraSound.play(MediaActionSound.SHUTTER_CLICK);
-        });
-
         saveScreenshotInWorkerThread(finisher, new ActionsReadyListener() {
             @Override
             void onActionsReady(SavedImageData imageData) {
@@ -690,7 +680,7 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
                             R.string.screenshot_failed_to_capture_text);
                 } else {
                     mUiEventLogger.log(ScreenshotEvent.SCREENSHOT_SAVED);
-
+                    mNotificationsController.peekScreenshotNotification(imageData);
                     mScreenshotHandler.post(() -> {
                         Toast.makeText(mContext, R.string.screenshot_saved_title,
                                 Toast.LENGTH_SHORT).show();
@@ -729,11 +719,9 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
                     @Override
                     void onActionsReady(SavedImageData imageData) {
                         showUiOnActionsReady(imageData);
+                        mNotificationsController.peekScreenshotNotification(imageData);
                     }
                 });
-
-                // Play the shutter sound to notify that we've taken a screenshot
-                mCameraSound.play(MediaActionSound.SHUTTER_CLICK);
 
                 mScreenshotPreview.setLayerType(View.LAYER_TYPE_HARDWARE, null);
                 mScreenshotPreview.buildLayer();
