@@ -25,7 +25,7 @@
     <string name="label_action_expanded_desktop">扩展桌面</string>
     <string name="label_action_screen_off">关闭屏幕</string>
     <string name="label_action_force_close_app">强制关闭应用</string>
-    <string name="label_action_google_assistant">助手应用</string>
+    <string name="label_action_google_assistant">Google 助理</string>
     <string name="label_action_in_app_search">应用内搜索</string>
     <string name="label_action_flashlight">闪光灯</string>
     <string name="label_action_bluetooth">蓝牙</string>
@@ -50,7 +50,7 @@
     <string name="label_action_one_handed_mode_right">单手模式 (右侧)</string>
     <string name="label_action_media_left">上一首</string>
     <string name="label_action_media_right">下一首</string>
-    <string name="label_action_assistant_sound_search">谷歌语音搜索</string>
+    <string name="label_action_assistant_sound_search">Google 语音搜索</string>
     <!-- App killed message -->
     <string name="app_killed_message">%s 被终止</string>
 </resources>

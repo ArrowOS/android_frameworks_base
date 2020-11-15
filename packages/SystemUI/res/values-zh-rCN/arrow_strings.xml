@@ -55,8 +55,8 @@
     <string name="qs_data_switch_label">切换数据卡</string>
     <string name="qs_data_switch_toast_0">当前没有插入 SIM 卡</string>
     <string name="qs_data_switch_toast_1">当前只插入了一张 SIM 卡</string>
-    <string name="qs_data_switch_changed_1">设置卡1为数据卡</string>
-    <string name="qs_data_switch_changed_2">设置卡2为数据卡</string>
+    <string name="qs_data_switch_changed_1">设置卡 1 为数据卡</string>
+    <string name="qs_data_switch_changed_2">设置卡 2 为数据卡</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">声音</string>
     <string name="quick_settings_sound_ring">响铃</string>
@@ -71,7 +71,7 @@
     <string name="omnijaws_label_default">天气</string>
     <string name="omnijaws_current_text">现在</string>
     <string name="omnijaws_package_not_available">OmniJaws 不可用</string>
-    <string name="omnijaws_service_last_update">最新更新：</string>
+    <string name="omnijaws_service_last_update">最后更新：</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">重启</string>
     <string name="quick_settings_reboot_recovery_label">恢复模式</string>
