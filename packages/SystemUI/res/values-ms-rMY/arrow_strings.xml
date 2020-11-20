@@ -14,74 +14,74 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g>• Pengecasan Pantas (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> sehingga penuh)</string>
+    <string name="keyguard_plugged_in_dash_charging">Pengecasan pantas</string>
+    <string name="statusbar_items_title">Ikon statusbar</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Lihat notifikasi</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notifikasi pop naik dinyahaktifkan.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notifikasi pop naik diaktifkan.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi pop naik dipadamkan.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi pop naik dihidupkan.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">Penambatan USB</string>
     <!-- Advanced restart -->
-    <string name="global_action_reboot">Restart</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot">Memulakan semula</string>
+    <string name="global_action_reboot_system">Sistem</string>
+    <string name="global_action_reboot_progress">Memula semula\u2026</string>
+    <string name="global_action_reboot_recovery">Mod Pemulihan</string>
+    <string name="global_action_reboot_recovery_progress">Memula semula ke mod pemulihan\u2026</string>
+    <string name="global_action_reboot_hot">Panas</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">Memula semula ke modbootloader\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
-    <string name="global_action_settings">Settings</string>
-    <string name="global_action_screenshot">Screenshot</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
-    <string name="global_action_flashlight">Flashlight</string>
+    <string name="global_action_reboot_fastboot_progress">Memula semula ke mod fastbootd\u2026</string>
+    <string name="global_action_settings">Tetapan</string>
+    <string name="global_action_screenshot">Tangkap layar</string>
+    <string name="global_action_screenrecord">Rakam skrin</string>
+    <string name="global_action_flashlight">Lampu suluh</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">Semasa</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">Tangkap layar</string>
+    <string name="quick_settings_region_screenshot_label">Tangkap layar separa</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Kafein</string>
+    <string name="accessibility_quick_settings_caffeine_off">Mod kafein dinyahaktifkan</string>
+    <string name="accessibility_quick_settings_caffeine_on">Mod kafein diaktifkan</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_label">Tukar kad data</string>
+    <string name="qs_data_switch_toast_0">Tiada kad SIM dimasukkan</string>
+    <string name="qs_data_switch_toast_1">Hanya satu kad SIM dimasukkan</string>
+    <string name="qs_data_switch_changed_1">Menggunakan SIM 1 untuk data Mobil</string>
+    <string name="qs_data_switch_changed_2">Menggunakan SIM 2 untuk data Mobil</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Bunyi</string>
+    <string name="quick_settings_sound_ring">Deringan</string>
+    <string name="quick_settings_sound_vibrate">Getaran</string>
+    <string name="quick_settings_sound_dnd">Jangan Ganggu</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
-    <string name="omnijaws_detail_header">Weather</string>
-    <string name="omnijaws_label_default">Weather</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
-    <string name="omnijaws_service_last_update">Last update:</string>
+    <string name="omnijaws_service_error">Ralat</string>
+    <string name="omnijaws_service_unkown">Tiada maklumat cuaca</string>
+    <string name="omnijaws_service_error_long">Masalah mengemaskini maklumat cuaca</string>
+    <string name="omnijaws_service_disabled">Perkhidmatan dilumpuhkan</string>
+    <string name="omnijaws_detail_header">Cuaca</string>
+    <string name="omnijaws_label_default">Cuaca</string>
+    <string name="omnijaws_current_text">Sekarang</string>
+    <string name="omnijaws_package_not_available">OmniJaws tidak dijumpai</string>
+    <string name="omnijaws_service_last_update">Kemaskini terakhir:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Boot semula</string>
+    <string name="quick_settings_reboot_recovery_label">Reboot</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Sentuh untuk mengeluarkan atau seret untuk menyusun semula jubin</string>
+    <string name="drag_or_touch_to_add_tiles">Sentuh atau leret untuk menambah tiles</string>
+    <string name="customize_settings_info_text"><b>Perhatian:</b> lajur akan terhad secara automatik untuk ruang yang ada.</string>
+    <string name="customize_show_labels">Label</string>
+    <string name="customize_quickbar_sync">Selaras</string>
     <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="customize_columns_land_label">Landskap</string>
+    <string name="customize_columns_port_label">Potret</string>
 </resources>
