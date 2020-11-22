@@ -99,4 +99,6 @@
     <string name="customize_quickbar_label">Quickbar</string>
     <string name="customize_columns_land_label">Landscape</string>
     <string name="customize_columns_port_label">Portrait</string>
+    <string name="customize_brightness_slider">brightness slider</string>
+    <string name="customize_brightness_icon">brightness icon</string>
 </resources>

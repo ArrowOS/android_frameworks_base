@@ -161,10 +161,19 @@ android_library {
     plugins: ["dagger2-compiler-2.19"],
 }
 
+android_library_import {
+    name: "tristatetogglebutton",
+    aars: ["libs/aar/TriStateToggleButton-1.1.4.aar"],
+    sdk_version: "current",
+    static_libs: [
+    ],
+}
+
 android_app {
     name: "SystemUI",
     static_libs: [
         "SystemUI-core",
+        "tristatetogglebutton",
     ],
     resource_dirs: [],
 

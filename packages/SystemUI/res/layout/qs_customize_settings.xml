@@ -195,10 +195,36 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp" />
 
-        <Space
-            android:layout_width="0dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/customize_brightness_slider"
+            android:drawableStart="@drawable/ic_text_label"
+            android:gravity="center_vertical" />
+
+        <it.beppi.tristatetogglebutton_library.TriStateToggleButton
+            android:id="@+id/qs_customize_settings_brightness_slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            app:tbDefaultStatus="off" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/customize_brightness_icon"
+            android:drawableStart="@drawable/ic_quickbar_sync"
+            android:gravity="center_vertical" />
+
+        <Switch
+            android:id="@+id/qs_customize_settings_brightness_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
