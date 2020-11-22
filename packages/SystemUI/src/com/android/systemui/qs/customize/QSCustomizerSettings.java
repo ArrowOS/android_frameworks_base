@@ -57,6 +57,29 @@ public class QSCustomizerSettings extends LinearLayout {
                     Settings.System.QS_TILE_TITLE_VISIBILITY, isChecked ? 1 : 0,
                     UserHandle.USER_CURRENT);
         });
+
+        Switch showBrightnessIcon = findViewById(R.id.qs_customize_settings_brightness_icon);
+        boolean showBrightnessIconValue = Settings.Secure.getIntForUser(
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_AUTO_BRIGHTNESS, 1,
+                UserHandle.USER_CURRENT) == 1;
+        showBrightnessIcon.setChecked(showBrightnessIconValue);
+        showBrightnessIcon.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Settings.Secure.putIntForUser(mContext.getContentResolver(),
+                    Settings.Secure.QS_SHOW_AUTO_BRIGHTNESS, isChecked ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+        });
+
+        Switch showBrightnessSlider = findViewById(R.id.qs_customize_settings_brightness_slider);
+        boolean showBrightnessSliderValue = Settings.Secure.getIntForUser(
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 0,
+                UserHandle.USER_CURRENT) == 0;
+        showBrightnessSlider.setChecked(showBrightnessSliderValue);
+        showBrightnessSlider.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Settings.Secure.putIntForUser(mContext.getContentResolver(),
+                    Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, isChecked ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+        });
+
         int defaultMaxTiles = mContext.getResources().getInteger(R.integer.quick_qs_panel_max_columns);
         int quickColumns = Settings.System.getIntForUser(
                 mContext.getContentResolver(), Settings.System.QS_QUICKBAR_COLUMNS,
