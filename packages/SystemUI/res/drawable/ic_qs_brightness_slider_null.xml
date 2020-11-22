@@ -1,0 +1,24 @@
+<!--
+/**
+ * Copyright (c) 2020, ArrowOS
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<vector android:autoMirrored="true" android:height="24dp"
+    android:viewportHeight="121.807" android:viewportWidth="121.807"
+    android:tint="?android:attr/textColorSecondary"
+    android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@android:color/white" android:pathData="M7.308,75.519C3.271,75.519 0,78.789 0,82.827c0,4.036 3.271,7.31 7.308,7.31h18.897l-3.496,3.495c-2.855,2.854 -2.855,7.48 0,10.337c1.428,1.427 3.299,2.141 5.167,2.141c1.869,0 3.74,-0.714 5.167,-2.139l13.833,-13.834h67.621c4.037,0 7.31,-3.272 7.31,-7.31s-3.271,-7.309 -7.31,-7.309H61.495L80.982,56.03h33.515c4.037,0 7.31,-3.272 7.31,-7.308c0,-4.037 -3.271,-7.309 -7.31,-7.309H95.602l13.24,-13.24c2.854,-2.855 2.854,-7.481 0,-10.336c-2.855,-2.855 -7.479,-2.853 -10.334,0L74.932,41.414H7.308C3.271,41.414 0,44.685 0,48.723c0,4.036 3.271,7.308 7.308,7.308H60.31L40.821,75.519H7.308z"/>
+</vector>
