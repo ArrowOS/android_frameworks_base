@@ -39,6 +39,10 @@ public class QSCustomizerSettings extends LinearLayout {
     private static final String PREFS = "qscustomizer_prefs";
     private static final String COLUMNS_TOOLTIP_SHOWN = "columns_tooltip_shown";
 
+    private static final int brightnessSliderNull = R.drawable.ic_qs_brightness_slider_null;
+    private static final int brightnessSliderSingle = R.drawable.ic_qs_brightness_slider_single;
+    private static final int brightnessSliderDouble = R.drawable.ic_qs_brightness_slider_double;
+
     public QSCustomizerSettings(Context context, AttributeSet attrs) {
         super(new ContextThemeWrapper(context, R.style.edit_theme), attrs);
     }
@@ -57,6 +61,58 @@ public class QSCustomizerSettings extends LinearLayout {
                     Settings.System.QS_TILE_TITLE_VISIBILITY, isChecked ? 1 : 0,
                     UserHandle.USER_CURRENT);
         });
+
+        Switch showBrightnessIcon = findViewById(R.id.qs_customize_settings_brightness_icon);
+        boolean showBrightnessIconValue = Settings.Secure.getIntForUser(
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_AUTO_BRIGHTNESS, 1,
+                UserHandle.USER_CURRENT) == 1;
+        showBrightnessIcon.setChecked(showBrightnessIconValue);
+        showBrightnessIcon.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            Settings.Secure.putIntForUser(mContext.getContentResolver(),
+                    Settings.Secure.QS_SHOW_AUTO_BRIGHTNESS, isChecked ? 1 : 0,
+                    UserHandle.USER_CURRENT);
+        });
+
+        Button showBrightnessSlider = findViewById(R.id.qs_customize_settings_brightness_slider);
+        int currentBrightnessSliderValue = Settings.Secure.getIntForUser(
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 0,
+                UserHandle.USER_CURRENT);
+
+        if (currentBrightnessSliderValue == 0)
+            showBrightnessSlider.setCompoundDrawablesWithIntrinsicBounds(brightnessSliderNull, 0, 0, 0);
+        else if (currentBrightnessSliderValue == 1)
+            showBrightnessSlider.setCompoundDrawablesWithIntrinsicBounds(brightnessSliderSingle, 0, 0, 0);
+        else if (currentBrightnessSliderValue == 2)
+            showBrightnessSlider.setCompoundDrawablesWithIntrinsicBounds(brightnessSliderDouble, 0, 0, 0);
+
+        showBrightnessSlider.setOnClickListener(new View.OnClickListener() {
+            int showBrightnessSliderValue = Settings.Secure.getIntForUser(
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 0,
+                UserHandle.USER_CURRENT);
+
+            public void onClick(View v) {
+                Log.d(TAG, "onClick : " + showBrightnessSliderValue);
+
+                if (showBrightnessSliderValue >= 2) showBrightnessSliderValue = 0;
+                else showBrightnessSliderValue += 1;
+
+                Log.d(TAG, "onClick after check: " + showBrightnessSliderValue);
+
+                if (showBrightnessSliderValue == 0)
+                    showBrightnessSlider.setCompoundDrawablesWithIntrinsicBounds(brightnessSliderNull, 0, 0, 0);
+                else if (showBrightnessSliderValue == 1)
+                    showBrightnessSlider.setCompoundDrawablesWithIntrinsicBounds(brightnessSliderSingle, 0, 0, 0);
+                else if (showBrightnessSliderValue == 2)
+                    showBrightnessSlider.setCompoundDrawablesWithIntrinsicBounds(brightnessSliderDouble, 0, 0, 0);
+
+                Settings.Secure.putIntForUser(mContext.getContentResolver(),
+                    Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, showBrightnessSliderValue,
+                    UserHandle.USER_CURRENT);
+
+                Log.d(TAG, "onClick new value: " + showBrightnessSliderValue);
+            }
+        });
+
         int defaultMaxTiles = mContext.getResources().getInteger(R.integer.quick_qs_panel_max_columns);
         int quickColumns = Settings.System.getIntForUser(
                 mContext.getContentResolver(), Settings.System.QS_QUICKBAR_COLUMNS,
