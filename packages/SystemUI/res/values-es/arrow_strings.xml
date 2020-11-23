@@ -83,5 +83,5 @@
     <string name="customize_quickbar_sync">Sincronizar</string>
     <string name="customize_quickbar_label">Acesso Rápido</string>
     <string name="customize_columns_land_label">Modo horizontal</string>
-    <string name="customize_columns_port_label">Vertical</string>
+    <string name="customize_columns_port_label">Modo vertical</string>
 </resources>
