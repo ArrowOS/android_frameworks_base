@@ -481,6 +481,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
         setVisibility(View.GONE);
         hideCircle();
         dispatchHide();
+        mHandler.post(() -> mFODAnimation.hideFODanimation());
     }
 
     private void updateAlpha() {
