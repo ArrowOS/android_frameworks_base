@@ -93,6 +93,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
     private boolean mIsCircleShowing;
     private boolean mIsDreaming;
     private boolean mIsKeyguard;
+    private boolean mTouchedOutside;
 
     private boolean mDozeEnabled;
     private boolean mFodGestureEnable;
@@ -317,11 +318,13 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
         mParams.packageName = "android";
         mParams.type = WindowManager.LayoutParams.TYPE_KEYGUARD_DIALOG;
         mParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE |
-                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
+                WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN |
+                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH;
         mParams.gravity = Gravity.TOP | Gravity.LEFT;
 
         mPressedParams.copyFrom(mParams);
-        mPressedParams.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND;
+        mPressedParams.flags |= WindowManager.LayoutParams.FLAG_DIM_BEHIND |
+                WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH;
 
         mParams.setTitle("Fingerprint on display");
         mPressedParams.setTitle("Fingerprint on display.touched");
@@ -400,6 +403,12 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
         float y = event.getAxisValue(MotionEvent.AXIS_Y);
 
         boolean newIsInside = (x > 0 && x < mSize) && (y > 0 && y < mSize);
+        mTouchedOutside = false;
+
+        if (event.getAction() == MotionEvent.ACTION_OUTSIDE) {
+            mTouchedOutside = true;
+            return true;
+        }
 
         if (event.getAction() == MotionEvent.ACTION_DOWN && newIsInside) {
             showCircle();
@@ -476,6 +485,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
     }
 
     public void showCircle() {
+        if (mTouchedOutside) return;
         mIsCircleShowing = true;
 
         setKeepScreenOn(true);
