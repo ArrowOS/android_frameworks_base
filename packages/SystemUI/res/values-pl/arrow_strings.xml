@@ -20,11 +20,11 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Powiadomienia w formie okienka</string>
+    <string name="accessibility_quick_settings_heads_up_off">Wyskakujące powiadomienia są wyłączone.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Wyskakujące powiadomienia są włączone.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Wyskakujące powiadomienia są wyłączone.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Wyskakujące powiadomienia są włączone.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">Tethering USB</string>
     <!-- Advanced restart -->
@@ -33,7 +33,7 @@
     <string name="global_action_reboot_progress">Ponowne uruchamianie\u2026</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_recovery_progress">Ponowne uruchamianie w trybie recovery\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_hot">Gorący</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_bootloader_progress">Ponowne uruchamianie w trybie bootloader\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
@@ -48,11 +48,11 @@
     <string name="quick_settings_screenshot_label">Zrzut ekranu</string>
     <string name="quick_settings_region_screenshot_label">Częściowy zrzut ekranu</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Kofeina</string>
+    <string name="accessibility_quick_settings_caffeine_off">Wyłączono kofeinę</string>
+    <string name="accessibility_quick_settings_caffeine_on">Włączono kofeinę</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_label">Zmień kartę do obsługi danych mobilnych</string>
     <string name="qs_data_switch_toast_0">Nie wykryto żadnej karty SIM</string>
     <string name="qs_data_switch_toast_1">Wykryto tylko jedną kartę SIM</string>
     <string name="qs_data_switch_changed_1">Karta SIM 1 jest używana do obsługi danych komórkowych</string>
@@ -74,14 +74,14 @@
     <string name="omnijaws_service_last_update">Ostatnia aktualizacja:</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Uruchom ponownie</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_recovery_label">Uruchom w trybie Recovery</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Dotknij, aby usunąć lub przeciągnąć, w celu zmiany kolejność kafelków</string>
+    <string name="drag_or_touch_to_add_tiles">Przytrzymaj i przeciągnij, by dodać kafelki</string>
+    <string name="customize_settings_info_text"><b>Uwaga:</b> kolumny zostaną automatycznie ograniczone dla dostępnej przestrzeni.</string>
+    <string name="customize_show_labels">Etykiety</string>
+    <string name="customize_quickbar_sync">Synchronizacja</string>
+    <string name="customize_quickbar_label">Pasek podręczny</string>
+    <string name="customize_columns_land_label">Tryb poziomy</string>
+    <string name="customize_columns_port_label">Tryb pionowy</string>
 </resources>
