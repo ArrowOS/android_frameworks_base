@@ -118,6 +118,11 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
             new IFingerprintInscreenCallback.Stub() {
         @Override
         public void onFingerDown() {
+            if (mUpdateMonitor.userNeedsStrongAuth()) {
+                // Keyguard requires strong authentication (not biometrics)
+                return;
+            }
+
             if (mFodGestureEnable && !mScreenTurnedOn) {
                 if (mDozeEnabled) {
                     mHandler.post(() -> mContext.sendBroadcast(new Intent(DOZE_INTENT)));
