@@ -52,7 +52,7 @@
     <string name="accessibility_quick_settings_caffeine_off">Kafein kapalı</string>
     <string name="accessibility_quick_settings_caffeine_on">Kafein açık</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_label">Veri kartını değiştir</string>
     <string name="qs_data_switch_toast_0">Şuan takılı SIM kart yok</string>
     <string name="qs_data_switch_toast_1">Şuan sadece 1 SIM kart takılı</string>
     <string name="qs_data_switch_changed_1">Mobil veri için SIM 1 kullanılıyor</string>
