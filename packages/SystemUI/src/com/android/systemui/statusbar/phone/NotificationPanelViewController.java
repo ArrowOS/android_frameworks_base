@@ -2648,6 +2648,7 @@ public class NotificationPanelViewController extends PanelViewController {
         super.onClosingFinished();
         resetHorizontalPanelPosition();
         setClosingWithAlphaFadeout(false);
+        mMediaHierarchyManager.closeGuts();
     }
 
     private void setClosingWithAlphaFadeout(boolean closing) {
