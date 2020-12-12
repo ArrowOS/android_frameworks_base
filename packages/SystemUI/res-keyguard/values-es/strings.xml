@@ -137,4 +137,102 @@
     <string name="clock_title_default" msgid="6342735240617459864">"Predeterminado"</string>
     <string name="clock_title_bubble" msgid="2204559396790593213">"Burbuja"</string>
     <string name="clock_title_analog" msgid="8409262532900918273">"Analógico"</string>
+
+    <!-- Time displayed on typographic clock face, which displays the time in words.
+             Example:
+                 It's
+                 Four
+                 Twenty
+                 Nine
+         This string requires two arguments: the first in the hours of the time and
+         the second is the minutes of the time. The hours string is obtained from
+         string-array type_clock_hours below and the minutes string is obtained
+         from string-array type_clock_minutes below.
+    [CHAR LIMIT=8] -->
+    <plurals name="type_clock_header">
+        <item quantity="one"><annotation name="color">Es la</annotation>\n^1\n^2</item>
+        <item quantity="few"><annotation name="color">Son las</annotation>\n^1\n^2</item>
+        <item quantity="other"><annotation name="color">Son las</annotation>\n^1\n^2</item>
+    </plurals>
+
+    <!-- Hour displayed in words on the typographic clock face. [CHAR LIMIT=12] -->
+    <string-array name="type_clock_hours">
+        <item>Doce</item>
+        <item>Una</item>
+        <item>Dos</item>
+        <item>Tres</item>
+        <item>Cuatro</item>
+        <item>Cinco</item>
+        <item>Seis</item>
+        <item>Siete</item>
+        <item>Ocho</item>
+        <item>Nueve</item>
+        <item>Diez</item>
+        <item>Once</item>
+    </string-array>
+
+    <!-- Minutes displayed in words on the typographic clock face. [CHAR LIMIT=20] -->
+    <string-array name="type_clock_minutes">
+        <item>En Punto</item>
+        <item>Y Uno</item>
+        <item>Y dos</item>
+        <item>Y Tres</item>
+        <item>Y Cuatro</item>
+        <item>Y Cinco</item>
+        <item>Y Seis</item>
+        <item>Y Siete</item>
+        <item>Y Ocho</item>
+        <item>y Nueve</item>
+        <item>Y Diez</item>
+        <item>Y Once</item>
+        <item>Y Doce</item>
+        <item>Y Trece</item>
+        <item>Y Catorce</item>
+        <item>Y Quince</item>
+        <item>Y Dieciseis</item>
+        <item>Y Diecisiete</item>
+        <item>Y Dieciocho</item>
+        <item>Y Diecinueve</item>
+        <item>Y Veinte</item>
+        <item>Y Veintiuno</item>
+        <item>Y Veintidós</item>
+        <item>Y Veintitrés</item>
+        <item>Y Veinticuatro</item>
+        <item>Y Veinticinco</item>
+        <item>Y Veintiseis</item>
+        <item>Y Veintisiete</item>
+        <item>Y Veintiocho</item>
+        <item>Y Veintinueve</item>
+        <item>Y Media</item>
+        <item>Y Treinta y uno</item>
+        <item>Y Treinta y dos</item>
+        <item>Y Treinta y trés</item>
+        <item>Y Treinta y cuatro</item>
+        <item>Y Treinta y cinco</item>
+        <item>Y Treinta y seis</item>
+        <item>Y Treinta y siete</item>
+        <item>Y Treinta y ocho</item>
+        <item>Y Treinta y nueve</item>
+        <item>Y Cuarenta</item>
+        <item>Y Cuarenta y uno</item>
+        <item>Y Cuarenta y dos</item>
+        <item>Y Cuarenta y trés</item>
+        <item>Y Cuarenta y cuatro</item>
+        <item>Y Cuarenta y cinco</item>
+        <item>Y Cuarenta y seis</item>
+        <item>Y Cuarenta y siete</item>
+        <item>Y Cuarenta y ocho</item>
+        <item>Y Cuarenta y nueve</item>
+        <item>Y Cincuenta</item>
+        <item>Y Cincuenta y uno</item>
+        <item>Y Cincuenta y dos</item>
+        <item>Y Cincuenta y tres</item>
+        <item>Y Cincuenta y cuatro</item>
+        <item>Y Cincuenta y cinco</item>
+        <item>Y Cincuenta y seis</item>
+        <item>Y Cincuenta y siete</item>
+        <item>Y Cincuenta y ocho</item>
+        <item>Y Cincuenta y nueve</item>
+    </string-array>
+
 </resources>
