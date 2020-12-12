@@ -15,7 +15,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Şarj Oluyor (tam dolmasına <xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> kaldı)</string>
-    <string name="keyguard_plugged_in_dash_charging">Hızlı Şarj Oluyor</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Şarj Oluyor</string>
     <string name="statusbar_items_title">Durum çubuğu simgeleri</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
