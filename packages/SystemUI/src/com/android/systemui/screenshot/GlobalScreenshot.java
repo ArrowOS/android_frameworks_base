@@ -770,6 +770,10 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
             });
         }
 
+        mImageData = null; // make sure we clear the current stored data
+        mNotificationsController.reset();
+        mNotificationsController.setImage(mScreenBitmap);
+
         mSaveInBgTask = new SaveImageInBackgroundTask(mContext, mScreenshotSmartActions, data);
         mSaveInBgTask.execute();
     }
