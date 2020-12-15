@@ -90,7 +90,7 @@
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">brightness slider</string>
     <string name="customize_brightness_icon">brightness icon</string>
-    <string name="customize_brightness_slider_hide">hide</string>
-    <string name="customize_brightness_slider_expanded">expanded</string>
+    <string name="customize_brightness_slider_hide">ocultar</string>
+    <string name="customize_brightness_slider_expanded">expandido</string>
     <string name="customize_brightness_slider_quick">quick</string>
 </resources>
