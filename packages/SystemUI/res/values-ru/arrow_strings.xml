@@ -74,7 +74,7 @@
     <string name="omnijaws_service_last_update">Последнее обновление:</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Перезагрузка</string>
-    <string name="quick_settings_reboot_recovery_label">Режим восстановления</string>
+    <string name="quick_settings_reboot_recovery_label">Рекавери</string>
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Нажмите, чтобы удалить или перетащить для перестановки плитки</string>
     <string name="drag_or_touch_to_add_tiles">Нажмите или перетащите, чтобы добавить плитки</string>
