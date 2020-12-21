@@ -39,7 +39,6 @@ public class FODAnimation extends ImageView {
     private AnimationDrawable recognizingAnim;
     private WindowManager mWindowManager;
     private boolean mIsKeyguard;
-    private boolean mIsRecognizingAnimEnabled;
 
     private int mSelectedAnim;
     private final int[] ANIMATION_STYLES = {
@@ -79,21 +78,12 @@ public class FODAnimation extends ImageView {
         mAnimParams.y = mPositionY - (mAnimationSize / 2) + mAnimationOffset;
 
         setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-
-        mIsRecognizingAnimEnabled = Settings.System.getInt(mContext.getContentResolver(),
-            Settings.System.FOD_RECOGNIZING_ANIMATION, 0) != 0;
-
-        update(mIsRecognizingAnimEnabled);
+        update();
     }
 
-    public void update(boolean isEnabled) {
+    public void update() {
         mSelectedAnim = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.FOD_ANIM, 0);
-
-        if (isEnabled)
-            setAlpha(1.0f);
-        else
-            setAlpha(0.0f);
 
         setBackgroundResource(ANIMATION_STYLES[mSelectedAnim]);
         recognizingAnim = (AnimationDrawable) getBackground();
