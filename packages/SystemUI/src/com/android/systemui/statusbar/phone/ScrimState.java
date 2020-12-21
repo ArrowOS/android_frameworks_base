@@ -145,7 +145,7 @@ public enum ScrimState {
             mAnimationDuration = ScrimController.ANIMATION_DURATION_LONG;
             // DisplayPowerManager may blank the screen for us,
             // in this case we just need to set our state.
-            mAnimateChange = mDozeParameters.shouldControlScreenOff();
+            mAnimateChange = false;
         }
 
         @Override
