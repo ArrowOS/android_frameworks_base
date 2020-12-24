@@ -85,7 +85,7 @@
     <string name="customize_columns_land_label">Modo horizontal</string>
     <string name="customize_columns_port_label">Modo vertical</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
+    <string name="screenrecord_stopdot_label">Mostrar punto para detener grabación.\nPulsación larga para moverlo</string>
     <string name="screenrecord_lowquality_label">Menor calidad para un tamaño de archivo más pequeño</string>
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">barra de brillo</string>
