@@ -32,7 +32,7 @@
     <string name="global_action_reboot_system">System</string>
     <string name="global_action_reboot_progress">Redémarrage\u2026</string>
     <string name="global_action_reboot_recovery">Récupération</string>
-    <string name="global_action_reboot_recovery_progress">Redémarrage en mode de récupération\u2026</string>
+    <string name="global_action_reboot_recovery_progress">Redémarrage en mode récupération\u2026</string>
     <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_reboot_bootloader">bootloader</string>
     <string name="global_action_reboot_bootloader_progress">Redémarrage en mode bootloader\u2026</string>
