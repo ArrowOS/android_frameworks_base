@@ -31,10 +31,10 @@
     <string name="global_action_reboot">Redémarrer</string>
     <string name="global_action_reboot_system">Système</string>
     <string name="global_action_reboot_progress">Redémarrage\u2026</string>
-    <string name="global_action_reboot_recovery">Récupération</string>
+    <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_recovery_progress">Redémarrage en mode recovery\u2026</string>
-    <string name="global_action_reboot_hot">À chaud</string>
-    <string name="global_action_reboot_bootloader">Amorçage</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_bootloader_progress">Redémarrage en mode bootloader\u2026</string>
     <string name="global_action_reboot_fastboot">Fastboot</string>
     <string name="global_action_reboot_fastboot_progress">Redémarrage en mode fastboot\u2026</string>
