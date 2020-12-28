@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Bindable action labels -->
     <string name="label_action_no_action">Aucune action</string>
-    <string name="label_action_settings_panel">Volet des réglages rapides</string>
+    <string name="label_action_settings_panel">Panneau de configuration rapide</string>
     <string name="label_action_notification_panel">Panneau de notification</string>
     <string name="label_action_screenshot">Capture d\'écran</string>
     <string name="label_action_region_screenshot">Capture d’écran partielle</string>
