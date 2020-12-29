@@ -127,7 +127,7 @@ public class TypeClockController implements ClockPlugin {
 
     @Override
     public String getTitle() {
-        return mResources.getString(R.string.clock_title_type);
+        return mResources.getString(R.string.clock_title_type_arrow);
     }
 
     @Override
