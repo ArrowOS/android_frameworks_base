@@ -60,8 +60,8 @@ public class TypographicClock extends TextView {
         super(context, attrs, defStyleAttr);
         mDescFormat = ((SimpleDateFormat) DateFormat.getTimeFormat(context)).toLocalizedPattern();
         mResources = context.getResources();
-        mHours = mResources.getStringArray(R.array.type_clock_hours);
-        mMinutes = mResources.getStringArray(R.array.type_clock_minutes);
+        mHours = mResources.getStringArray(R.array.type_clock_hours_arrow);
+        mMinutes = mResources.getStringArray(R.array.type_clock_minutes_arrow);
         mAccentColor = mResources.getColor(R.color.typeClockAccentColor, null);
     }
 
@@ -76,7 +76,7 @@ public class TypographicClock extends TextView {
 
         // Get the quantity based on the hour for languages like Portuguese and Czech.
         SpannedString typeTemplate = (SpannedString) mResources.getQuantityText(
-                R.plurals.type_clock_header, hour);
+                R.plurals.type_clock_header_arrow, hour);
 
         // Find the "color" annotation and set the foreground color to the accent color.
         Annotation[] annotations = typeTemplate.getSpans(0, typeTemplate.length(),
