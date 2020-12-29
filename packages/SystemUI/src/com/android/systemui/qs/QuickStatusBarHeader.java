@@ -68,6 +68,7 @@ import com.android.systemui.Interpolators;
 import com.android.systemui.R;
 import com.android.systemui.arrow.ArrowSettingsService;
 import com.android.systemui.broadcast.BroadcastDispatcher;
+import com.android.systemui.dump.DumpManager;
 import com.android.systemui.plugins.ActivityStarter;
 import com.android.systemui.plugins.DarkIconDispatcher;
 import com.android.systemui.plugins.DarkIconDispatcher.DarkReceiver;
@@ -79,6 +80,7 @@ import com.android.systemui.privacy.PrivacyItemController;
 import com.android.systemui.qs.QSDetail.Callback;
 import com.android.systemui.qs.carrier.QSCarrierGroup;
 import com.android.systemui.settings.BrightnessController;
+import com.android.systemui.statusbar.BlurUtils;
 import com.android.systemui.statusbar.CommandQueue;
 import com.android.systemui.statusbar.phone.StatusBarIconController;
 import com.android.systemui.statusbar.phone.StatusBarIconController.TintedIconManager;
@@ -128,6 +130,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
     private final ZenModeController mZenController;
     private final StatusBarIconController mStatusBarIconController;
     private final ActivityStarter mActivityStarter;
+    private final BlurUtils mBlurUtils;
 
     private QSPanel mQsPanel;
 
@@ -240,6 +243,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mCommandQueue = commandQueue;
         mRingerModeTracker = ringerModeTracker;
         mUiEventLogger = uiEventLogger;
+        mBlurUtils = new BlurUtils(mContext.getResources(), new DumpManager());
     }
 
     @Override
@@ -530,6 +534,10 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         }
 
         if (forceExpanded) {
+            if (mBlurUtils.supportsBlursOnWindows()) {
+                mBlurUtils.applyBlur(getViewRootImpl(),
+                        mBlurUtils.blurRadiusOfRatio(expansionFraction));
+            }
             // If the keyguard is showing, we want to offset the text so that it comes in at the
             // same time as the panel as it slides down.
             mHeaderTextContainerView.setTranslationY(panelTranslationY);
