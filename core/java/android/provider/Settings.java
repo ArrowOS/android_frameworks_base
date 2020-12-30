@@ -4876,12 +4876,6 @@ public final class Settings {
          */
         public static final String LOCKSCREEN_BATTERY_INFO = "lockscreen_battery_info";
 
-         /**
-         * Screen off fod
-         * @hide
-         */
-        public static final String FOD_GESTURE = "fod_gesture";
-
         /**
          * Set edge gesture Y dead zone
          * 0 - disabled - stock behavior - default
