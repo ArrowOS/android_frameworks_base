@@ -20,24 +20,24 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Heads-Up Benachrichtigungen</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads-Up Benachrichtigungen deaktiviert</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads-Up Benachrichtigungen aktiviert</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads-Up Benachrichtigungen ausgeschaltet</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads-Up Benachrichtigungen sind eingeschaltet.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB Tethering</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">Neustarten</string>
     <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_progress">Neustarten\u2026</string>
     <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
+    <string name="global_action_reboot_recovery_progress">In Recovery neustarten\u2026</string>
     <string name="global_action_reboot_hot">Warmstart</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">In Bootloader neustarten\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">Neustart in Fastbootd\u2026</string>
     <string name="global_action_settings">Einstellungen</string>
     <string name="global_action_screenshot">Bildschirmfoto</string>
     <string name="global_action_screenrecord">Bildschirmaufnahme</string>
@@ -46,50 +46,50 @@
     <string name="global_action_current_user">Aktuell</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_region_screenshot_label">Teil-Screenshot</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Koffein</string>
+    <string name="accessibility_quick_settings_caffeine_off">Koffein aus</string>
+    <string name="accessibility_quick_settings_caffeine_on">Koffein an</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_label">Daten SIM-Karte wechseln</string>
+    <string name="qs_data_switch_toast_0">Derzeit ist keine SIM-Karte eingelegt</string>
     <string name="qs_data_switch_toast_1">Derzeit ist nur eine SIM Karte eingelegt</string>
     <string name="qs_data_switch_changed_1">SIM 1 wird für mobile Daten verwendet</string>
     <string name="qs_data_switch_changed_2">SIM 2 wird für mobile Daten verwendet</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Ton</string>
+    <string name="quick_settings_sound_ring">Klingeln</string>
+    <string name="quick_settings_sound_vibrate">Vibrieren</string>
+    <string name="quick_settings_sound_dnd">Bitte nicht stören</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Fehler</string>
     <string name="omnijaws_service_unkown">Keine Wetterdaten</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_service_error_long">Fehler beim Laden der Wetterdaten</string>
+    <string name="omnijaws_service_disabled">Dienst ist deaktiviert</string>
     <string name="omnijaws_detail_header">Wetter</string>
     <string name="omnijaws_label_default">Wetter</string>
     <string name="omnijaws_current_text">Jetzt</string>
     <string name="omnijaws_package_not_available">OmniJaws nicht verfügbar</string>
     <string name="omnijaws_service_last_update">Letzte Aktualisierung:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_label">Neustarten</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Zum Entfernen antippen oder ziehen um Kacheln neu anzuordnen</string>
+    <string name="drag_or_touch_to_add_tiles">Tippen oder ziehen, um Kacheln hinzuzufügen</string>
+    <string name="customize_settings_info_text"><b>Hinweis:</b> Spalten werden automatisch auf verfügbaren Platz begrenzt.</string>
     <string name="customize_show_labels">Labels</string>
     <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="customize_quickbar_label">Schnellleiste</string>
+    <string name="customize_columns_land_label">Querformat</string>
+    <string name="customize_columns_port_label">Hochformat</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <string name="screenrecord_stopdot_label">Stoppunkt\nanzeigen, langes Drücken, um es zu verschieben</string>
+    <string name="screenrecord_lowquality_label">Verringere die Qualität für eine kleinere Dateigröße</string>
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">Helligkeitsregler</string>
-    <string name="customize_brightness_icon">brightness icon</string>
+    <string name="customize_brightness_icon">Helligkeitssymbol</string>
     <string name="customize_brightness_slider_hide">ausblenden</string>
     <string name="customize_brightness_slider_expanded">erweitert</string>
     <string name="customize_brightness_slider_quick">schnell</string>

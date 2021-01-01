@@ -36,8 +36,8 @@
     <string name="global_action_reboot_hot">Hot</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_bootloader_progress">Redémarrage en mode bootloader\u2026</string>
-    <string name="global_action_reboot_fastboot">Fastboot</string>
-    <string name="global_action_reboot_fastboot_progress">Redémarrage en mode fastboot\u2026</string>
+    <string name="global_action_reboot_fastboot">Fastbootd</string>
+    <string name="global_action_reboot_fastboot_progress">Redémarrage en mode fastbootd\u2026</string>
     <string name="global_action_settings">Paramètres</string>
     <string name="global_action_screenshot">Capture d\'écran</string>
     <string name="global_action_screenrecord">Capture vidéo</string>
