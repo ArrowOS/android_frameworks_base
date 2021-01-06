@@ -21,10 +21,10 @@
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">浮動通知</string>
-    <string name="accessibility_quick_settings_heads_up_off">浮動通知關閉</string>
-    <string name="accessibility_quick_settings_heads_up_on">允許浮動通知</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">浮動通知已關閉</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">浮動通知已開啟</string>
+    <string name="accessibility_quick_settings_heads_up_off">浮動通知已停用。</string>
+    <string name="accessibility_quick_settings_heads_up_on">浮動通知已允許。</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">浮動通知已關閉。</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">浮動通知已開啟。</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB 網路共用</string>
     <!-- Advanced restart -->
@@ -45,8 +45,8 @@
     <!-- Label for current user in power menu options dialog -->
     <string name="global_action_current_user">當前</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">螢幕擷取</string>
-    <string name="quick_settings_region_screenshot_label">區域截圖</string>
+    <string name="quick_settings_screenshot_label">螢幕截圖</string>
+    <string name="quick_settings_region_screenshot_label">部分截圖</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">螢幕常亮</string>
     <string name="accessibility_quick_settings_caffeine_off">關閉螢幕常亮</string>
