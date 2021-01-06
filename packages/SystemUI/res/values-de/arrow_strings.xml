@@ -20,11 +20,11 @@
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads-Up Benachrichtigungen</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads-Up Benachrichtigungen deaktiviert</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads-Up Benachrichtigungen aktiviert</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads-Up Benachrichtigungen ausgeschaltet</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads-Up Benachrichtigungen sind eingeschaltet.</string>
+    <string name="quick_settings_heads_up_label">Heads-Up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads-Up Benachrichtigungen deaktiviert.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads-Up Benachrichtigungen erlaubt.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads-Up Benachrichtigungen ausgeschaltet.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads-Up Benachrichtigungen eingeschaltet.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB Tethering</string>
     <!-- Advanced restart -->
