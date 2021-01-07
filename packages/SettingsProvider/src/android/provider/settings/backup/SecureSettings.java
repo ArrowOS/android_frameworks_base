@@ -170,6 +170,10 @@ public class SecureSettings {
         Settings.Secure.VOLUME_LINK_NOTIFICATION,
         Settings.Secure.ADAPTIVE_CONNECTIVITY_ENABLED,
         Settings.Secure.ASSIST_HANDLES_LEARNING_TIME_ELAPSED_MILLIS,
-        Settings.Secure.ASSIST_HANDLES_LEARNING_EVENT_COUNT
+        Settings.Secure.ASSIST_HANDLES_LEARNING_EVENT_COUNT,
+        Settings.Secure.HARDWARE_KEYS_DISABLE,
+        Settings.Secure.QS_SHOW_AUTO_BRIGHTNESS,
+        Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER,
+        Settings.Secure.TORCH_POWER_BUTTON_GESTURE
     };
 }
