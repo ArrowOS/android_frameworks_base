@@ -41,6 +41,7 @@ import android.app.PendingIntent;
 import android.app.UserSwitchObserver;
 import android.app.admin.DevicePolicyManager;
 import android.app.trust.TrustManager;
+import android.app.admin.DevicePolicyManager;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -1061,9 +1062,13 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
     }
 
     public boolean isUnlockingWithBiometricAllowed(boolean isStrongBiometric) {
+        boolean mIsEncryptionEnabled =
+            mDevicePolicyManager.getStorageEncryptionStatus() == DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE
+            || mDevicePolicyManager.getStorageEncryptionStatus() == DevicePolicyManager.ENCRYPTION_STATUS_ACTIVE_PER_USER;
+
         return mStrongAuthTracker.isUnlockingWithBiometricAllowed(isStrongBiometric)
-                || (Settings.System.getInt(mContext.getContentResolver(),
-                   Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1);
+                || ((Settings.System.getInt(mContext.getContentResolver(),
+                   Settings.System.FP_UNLOCK_KEYSTORE, 0) == 1) && !mIsEncryptionEnabled);
     }
 
     public boolean isUserInLockdown(int userId) {
