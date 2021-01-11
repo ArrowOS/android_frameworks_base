@@ -16,6 +16,7 @@
 
 package android.provider.settings.validators;
 
+import static android.provider.settings.validators.SettingsValidators.ANY_STRING_VALIDATOR;
 import static android.provider.settings.validators.SettingsValidators.BOOLEAN_VALIDATOR;
 import static android.provider.settings.validators.SettingsValidators.COMPONENT_NAME_VALIDATOR;
 import static android.provider.settings.validators.SettingsValidators.DATE_FORMAT_VALIDATOR;
@@ -235,10 +236,10 @@ public class SystemSettingsValidators {
         VALIDATORS.put(System.BATTERY_LIGHT_ENABLED, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.BATTERY_LIGHT_ALLOW_ON_DND, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.BATTERY_LIGHT_LOW_BLINKING, BOOLEAN_VALIDATOR);
-        VALIDATORS.put(System.BATTERY_LIGHT_LOW_COLOR, BOOLEAN_VALIDATOR);
-        VALIDATORS.put(System.BATTERY_LIGHT_MEDIUM_COLOR, BOOLEAN_VALIDATOR);
-        VALIDATORS.put(System.BATTERY_LIGHT_FULL_COLOR, BOOLEAN_VALIDATOR);
-        VALIDATORS.put(System.BATTERY_LIGHT_REALLYFULL_COLOR, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.BATTERY_LIGHT_LOW_COLOR, ANY_STRING_VALIDATOR);
+        VALIDATORS.put(System.BATTERY_LIGHT_MEDIUM_COLOR, ANY_STRING_VALIDATOR);
+        VALIDATORS.put(System.BATTERY_LIGHT_FULL_COLOR, ANY_STRING_VALIDATOR);
+        VALIDATORS.put(System.BATTERY_LIGHT_REALLYFULL_COLOR, ANY_STRING_VALIDATOR);
         VALIDATORS.put(System.BUTTON_BRIGHTNESS, new InclusiveFloatRangeValidator(0, 255));
         VALIDATORS.put(System.BUTTON_BACKLIGHT_TIMEOUT, new InclusiveIntegerRangeValidator(0, 30));
         VALIDATORS.put(System.BUTTON_BACKLIGHT_ONLY_WHEN_PRESSED, BOOLEAN_VALIDATOR);
@@ -247,7 +248,7 @@ public class SystemSettingsValidators {
         VALIDATORS.put(System.VOLUME_PANEL_ON_LEFT, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.NETWORK_TRAFFIC_STATE, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD, new InclusiveIntegerRangeValidator(0, 10));
-        VALIDATORS.put(System.THREE_FINGER_GESTURE, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(System.THREE_FINGER_GESTURE, ANY_STRING_VALIDATOR);
         VALIDATORS.put(System.QS_LAYOUT_COLUMNS_LANDSCAPE, new InclusiveIntegerRangeValidator(3, 9));
         VALIDATORS.put(System.QS_LAYOUT_COLUMNS, new InclusiveIntegerRangeValidator(3, 8));
         VALIDATORS.put(System.QS_QUICKBAR_COLUMNS, new InclusiveIntegerRangeValidator(6, 9));
