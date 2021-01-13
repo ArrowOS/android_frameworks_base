@@ -19,6 +19,8 @@
     <string name="statusbar_items_title">Íconos de la barra de estado</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
     <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas</string>

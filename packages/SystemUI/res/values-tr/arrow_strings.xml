@@ -19,6 +19,8 @@
     <string name="statusbar_items_title">Durum çubuğu simgeleri</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Anlık bildirimler</string>
     <string name="accessibility_quick_settings_heads_up_off">Anlık bildirimlere izin verilmiyor.</string>
