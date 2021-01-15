@@ -108,7 +108,6 @@ public class SystemSettings {
         Settings.System.THREE_FINGER_GESTURE,
         Settings.System.QS_LAYOUT_COLUMNS_LANDSCAPE,
         Settings.System.QS_LAYOUT_COLUMNS,
-        Settings.System.QS_QUICKBAR_COLUMNS,
         Settings.System.QS_TILE_TITLE_VISIBILITY,
         Settings.System.VOLUME_ROCKER_WAKE,
         Settings.System.VOLUME_BUTTON_MUSIC_CONTROL,
