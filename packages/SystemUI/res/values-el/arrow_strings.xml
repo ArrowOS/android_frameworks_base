@@ -19,6 +19,8 @@
     <string name="statusbar_items_title">Εικονίδια γραμμής κατάστασης</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">Φωνητική Κλήση μέσω δεδομένων (VoLTE)</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Κοιτάξτε τις ειδοποιήσεις</string>
     <string name="accessibility_quick_settings_heads_up_off">Οι ειδοποιήσεις Peek είναι απενεργοποιημένες.</string>

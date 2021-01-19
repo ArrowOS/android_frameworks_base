@@ -19,6 +19,8 @@
     <string name="statusbar_items_title">状态栏图标</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">浮动通知</string>
     <string name="accessibility_quick_settings_heads_up_off">浮动通知已禁用。</string>

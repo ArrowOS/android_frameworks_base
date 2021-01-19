@@ -19,6 +19,8 @@
     <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Peek notifications</string>
     <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
