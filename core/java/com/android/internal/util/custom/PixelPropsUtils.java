@@ -31,11 +31,8 @@ public class PixelPropsUtils {
     private static final Map<String, Object> propsToChange;
 
     private static final String[] packagesToChange = {
-            "com.google.android.apps.safetyhub",
             "com.google.android.apps.turbo",
-            "com.google.android.apps.wallpaper",
-            "com.google.android.apps.maps",
-            "com.google.android.gms"
+            "com.google.android.apps.turboadapter"
     };
 
     static {
