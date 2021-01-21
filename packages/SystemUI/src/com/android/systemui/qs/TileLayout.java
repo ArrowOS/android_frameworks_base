@@ -39,7 +39,7 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
 
     // Prototyping with less rows
     private final boolean mLessRows;
-    private int mMinRows = 3;
+    private int mMinRows = 1;
     private int mMaxColumns = NO_MAX_COLUMNS;
     private int mResourceColumns;
     protected boolean mShowTitles = true;
@@ -77,7 +77,6 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
         if (mMinRows != minRows) {
             mMinRows = minRows;
             updateResources();
-            requestLayout();
             return true;
         }
         return false;
