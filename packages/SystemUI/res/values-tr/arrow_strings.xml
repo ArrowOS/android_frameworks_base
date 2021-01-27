@@ -23,10 +23,10 @@
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Anlık bildirimler</string>
-    <string name="accessibility_quick_settings_heads_up_off">Anlık bildirimlere izin verilmiyor.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Anlık bildirimlere izin veriliyor.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Anlık bildirimler kapalı.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Anlık bildirimler açık.</string>
+    <string name="accessibility_quick_settings_heads_up_off">Anlık bildirimler devre dışı bırakıldı.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Anlık bildirimlere izin verildi.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Anlık bildirimler kapalıtıldı.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Anlık bildirimler açıldı.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB internet paylaşımı</string>
     <!-- Advanced restart -->
@@ -67,8 +67,8 @@
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Hata</string>
     <string name="omnijaws_service_unkown">Hava durumu verisi yok</string>
-    <string name="omnijaws_service_error_long">Hava durumu verileri yüklenemedi</string>
-    <string name="omnijaws_service_disabled">Servis devre dışı</string>
+    <string name="omnijaws_service_error_long">Hava durumu verileri yüklenirken hata oluştu</string>
+    <string name="omnijaws_service_disabled">Servis devre dışı bırakıldı</string>
     <string name="omnijaws_detail_header">Hava durumu</string>
     <string name="omnijaws_label_default">Hava durumu</string>
     <string name="omnijaws_current_text">Şimdi</string>
@@ -80,10 +80,10 @@
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Kareleri sıralamak ve düzenlemek için dokunun veya sürükleyin</string>
     <string name="drag_or_touch_to_add_tiles">Kare eklemek için dokunun veya sürükleyin</string>
-    <string name="customize_settings_info_text"><b>Not:</b> Sütunlar otomatik olarak kalan boşluğa göre sınırlanacak.</string>
+    <string name="customize_settings_info_text"><b>Not:</b> sütunlar kullanılabilir alan için otomatik olarak sınırlandırılacaktır.</string>
     <string name="customize_show_labels">Etiketler</string>
-    <string name="customize_quickbar_sync">Senkronizasyon</string>
-    <string name="customize_quickbar_label">Hızlı Erişim Kutusu</string>
+    <string name="customize_quickbar_sync">Eşitleme</string>
+    <string name="customize_quickbar_label">Hızlı erişim çubuğu</string>
     <string name="customize_columns_land_label">Yatay</string>
     <string name="customize_columns_port_label">Dikey</string>
     <!-- Screenrecord QS tile -->

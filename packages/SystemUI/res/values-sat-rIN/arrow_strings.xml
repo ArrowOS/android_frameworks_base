@@ -42,13 +42,13 @@
     <string name="global_action_reboot_fastboot_progress">fastbootd ᱢᱳᱰ \u2026 ᱛᱮ ᱨᱤᱥᱴᱟᱴᱤᱝᱼᱚᱜ ᱠᱟᱱᱟ</string>
     <string name="global_action_settings">ᱥᱟᱡᱟᱣᱠᱚ</string>
     <string name="global_action_screenshot">ᱥᱠᱨᱤᱻᱱᱥᱷᱚᱴ!</string>
-    <string name="global_action_screenrecord">ᱥᱠᱨᱤᱻᱱᱨᱮᱠᱚᱰ</string>
+    <string name="global_action_screenrecord">ᱥᱠᱨᱤᱱᱨᱮᱠᱚᱰ</string>
     <string name="global_action_flashlight">ᱯᱷᱞᱟᱥᱞᱟᱭᱤᱴ</string>
     <!-- Label for current user in power menu options dialog -->
     <string name="global_action_current_user">ᱱᱤᱛᱚᱜᱽᱟᱜ</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">ᱥᱠᱨᱤᱻᱱᱥᱷᱚᱴ!</string>
-    <string name="quick_settings_region_screenshot_label">ᱚᱫᱷᱟ ᱥᱠᱨᱤᱻᱱᱥᱚᱨᱴ</string>
+    <string name="quick_settings_region_screenshot_label">ᱚᱫᱷᱟ ᱥᱠᱨᱤᱱᱥᱚᱨᱴ</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">ᱠᱟᱹᱯᱷᱮᱭᱱ</string>
     <string name="accessibility_quick_settings_caffeine_off">ᱠᱟᱹᱯᱷᱮᱭᱱ ᱵᱚᱸᱫ</string>
