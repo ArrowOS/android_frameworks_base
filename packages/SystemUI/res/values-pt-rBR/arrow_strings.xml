@@ -33,7 +33,7 @@
     <string name="global_action_reboot">Reiniciar</string>
     <string name="global_action_reboot_system">Sistema</string>
     <string name="global_action_reboot_progress">Reiniciando\u2026</string>
-    <string name="global_action_reboot_recovery">Reinicar em Recovery Mode</string>
+    <string name="global_action_reboot_recovery">Reinicar</string>
     <string name="global_action_reboot_recovery_progress">Reiniciando no modo de recuperação\u2026</string>
     <string name="global_action_reboot_hot">Quente</string>
     <string name="global_action_reboot_bootloader">Reiniciar em Bootloader</string>
