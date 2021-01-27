@@ -16,5 +16,5 @@
     <!-- Message for updating an existing app [CHAR LIMIT=NONE] -->
     <string name="old_version_number">Инсталирана версия: <xliff:g id="old_version">%1$s</xliff:g></string>
     <!-- Message for updating an existing system app [CHAR LIMIT=NONE] -->
-    <string name="new_version_number">To be installed: <xliff:g id="new_version">%1$s</xliff:g></string>
+    <string name="new_version_number">Да се инсталира ли: <xliff:g id="new_version">%1$s</xliff:g></string>
 </resources>

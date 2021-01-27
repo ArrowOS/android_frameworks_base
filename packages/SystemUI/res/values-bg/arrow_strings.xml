@@ -14,85 +14,85 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Бързо зареждане (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> до пълен заряд)</string>
+    <string name="keyguard_plugged_in_dash_charging">Бързо зареждане</string>
+    <string name="statusbar_items_title">Икони в статусбара</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Изскачащи известия</string>
+    <string name="accessibility_quick_settings_heads_up_off">Изскачащи известия са изключени.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Изскачащите известия са позволени.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Изскачащи известия са изключени.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Изскачащи известия са включени.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">USB тетъринг</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">Презареждане</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_system">Система</string>
+    <string name="global_action_reboot_progress">Рестартиране\u2026</string>
     <string name="global_action_reboot_recovery">Възстановяване</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_recovery_progress">Рестартиране в рекавъри\u2026</string>
+    <string name="global_action_reboot_hot">Горещо</string>
     <string name="global_action_reboot_bootloader">Зареждачка за операц. сист.</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
-    <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">Рестартиране в буутлоудър режим\u2026</string>
+    <string name="global_action_reboot_fastboot">Fastboot режим</string>
+    <string name="global_action_reboot_fastboot_progress">Рестартиране във fastboot режим\u2026</string>
     <string name="global_action_settings">Настройки</string>
     <string name="global_action_screenshot">Екранна снимка</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenrecord">Записване на екрана</string>
     <string name="global_action_flashlight">Фенерче</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">Текущ</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">Екранна снимка</string>
+    <string name="quick_settings_region_screenshot_label">Частична екранна снимка</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Кофеин</string>
+    <string name="accessibility_quick_settings_caffeine_off">Изключване на Кофеин</string>
+    <string name="accessibility_quick_settings_caffeine_on">Включване на Кофеин</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_label">Превключване на картата за мобилни данни</string>
+    <string name="qs_data_switch_toast_0">В момента няма поставена SIM карта</string>
+    <string name="qs_data_switch_toast_1">В момента е поставена само една SIM карта</string>
+    <string name="qs_data_switch_changed_1">Използване на SIM 1 за мобилни данни</string>
+    <string name="qs_data_switch_changed_2">Използване на SIM 2 за мобилни данни</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Звук</string>
+    <string name="quick_settings_sound_ring">Звънене</string>
+    <string name="quick_settings_sound_vibrate">Вибрация</string>
+    <string name="quick_settings_sound_dnd">Не безпокойте</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
-    <string name="omnijaws_detail_header">Weather</string>
-    <string name="omnijaws_label_default">Weather</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
-    <string name="omnijaws_service_last_update">Last update:</string>
+    <string name="omnijaws_service_error">Грешка</string>
+    <string name="omnijaws_service_unkown">Няма данни за времето</string>
+    <string name="omnijaws_service_error_long">Грешка при зареждане на данните за времето</string>
+    <string name="omnijaws_service_disabled">Услугата е изключена</string>
+    <string name="omnijaws_detail_header">Времето</string>
+    <string name="omnijaws_label_default">Времето</string>
+    <string name="omnijaws_current_text">Сега</string>
+    <string name="omnijaws_package_not_available">OmniJaws не е налично</string>
+    <string name="omnijaws_service_last_update">Последен ъпдейт:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Рестарт</string>
+    <string name="quick_settings_reboot_recovery_label">Режим на Възстановяване</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Докосни за да премахнеш или плъзни за да пренаредиш плочките</string>
+    <string name="drag_or_touch_to_add_tiles">Докосни или плъзни за да добавиш плочки</string>
+    <string name="customize_settings_info_text"><b>Забележка:</b> колоните ще бъдат автоматично ограничени за свободното място.</string>
+    <string name="customize_show_labels">Етикети</string>
+    <string name="customize_quickbar_sync">Синхронизация</string>
+    <string name="customize_quickbar_label">Лента за бърз достъп</string>
+    <string name="customize_columns_land_label">Пейзаж</string>
+    <string name="customize_columns_port_label">Портрет</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <string name="screenrecord_stopdot_label">Показване на бутон за спиране на записа\nЗадръжте за да го преместите</string>
+    <string name="screenrecord_lowquality_label">Намалете качеството за по-малък размер на файла</string>
     <!-- QS brightness customization -->
-    <string name="customize_brightness_slider">brightness slider</string>
-    <string name="customize_brightness_icon">brightness icon</string>
-    <string name="customize_brightness_slider_hide">hide</string>
-    <string name="customize_brightness_slider_expanded">expanded</string>
-    <string name="customize_brightness_slider_quick">quick</string>
+    <string name="customize_brightness_slider">Плъзгач за яркост</string>
+    <string name="customize_brightness_icon">Икона на яркостта</string>
+    <string name="customize_brightness_slider_hide">Скрий</string>
+    <string name="customize_brightness_slider_expanded">Разширен</string>
+    <string name="customize_brightness_slider_quick">Бърз</string>
 </resources>

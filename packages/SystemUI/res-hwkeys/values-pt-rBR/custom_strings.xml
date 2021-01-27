@@ -39,7 +39,7 @@
     <string name="label_action_home">Página inicial</string>
     <string name="label_action_ime_switcher">Alterar IME</string>
     <string name="label_action_stop_screenpinning">Parar fixação da tela</string>
-    <string name="label_action_ime_down">Cursor para baixo</string>
+    <string name="label_action_ime_down">Cursor do método de entrada para baixo</string>
     <string name="label_action_ime_left">Cursor para a esquerda</string>
     <string name="label_action_ime_right">Cursor para a direita</string>
     <string name="label_action_ime_up">Cursor para cima</string>

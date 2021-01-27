@@ -18,7 +18,7 @@
     <!-- Bindable action labels -->
     <string name="label_action_no_action">Няма действие</string>
     <string name="label_action_settings_panel">Панел за бързи настройки</string>
-    <string name="label_action_notification_panel">Панел за уведомления</string>
+    <string name="label_action_notification_panel">Панел с известия</string>
     <string name="label_action_screenshot">Екранна снимка</string>
     <string name="label_action_region_screenshot">Частична екранна снимка</string>
     <string name="label_action_screenrecord">Запис на екрана</string>
@@ -26,7 +26,7 @@
     <string name="label_action_screen_off">Изключване на екрана</string>
     <string name="label_action_force_close_app">Принудително спиране на приложение</string>
     <string name="label_action_google_assistant">Гугъл асистент</string>
-    <string name="label_action_in_app_search">Търсене в приложенията</string>
+    <string name="label_action_in_app_search">Търсене в приложението</string>
     <string name="label_action_flashlight">Фенерче</string>
     <string name="label_action_bluetooth">Bluetooth</string>
     <string name="label_action_wifi">WiFi</string>

@@ -21,7 +21,7 @@
     <string name="permlab_fakePackageSignature">Підміна підпису пакетів</string>
     <!-- Description of an application permission, listed so the user can choose whether
          they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Дозволити додатку видавати себе за інший додаток. Небезпечні додатки можуть отримати доступ до приватних даних. Законне використання включає в себе емулятор, який прикидається тим, що емулює. Будьте обережні під час надання цього дозволу!</string>
+    <string name="permdesc_fakePackageSignature">Дозволити додатку видавати себе за інший додаток. Шкідливі програми можуть використовувати це для доступу до приватних даних програми. Законне використання включає емулятор, яке видає себе за те що емулює. Дозволяйте це з обережністю!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permgrouplab_fake_package_signature">Підміна підпису пакетів</string>
     <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
