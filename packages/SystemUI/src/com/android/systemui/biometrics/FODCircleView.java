@@ -217,11 +217,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
         public void onStartedGoingToSleep(int why) {
             if (mDeviceFlickersGoingToSleep) {
                 mScreenTurnedOn = false;
-                if (!mFodGestureEnable) {
-                    hide();
-                } else {
-                    hideCircle();
-                }
+                hide();
             }
         }
 
