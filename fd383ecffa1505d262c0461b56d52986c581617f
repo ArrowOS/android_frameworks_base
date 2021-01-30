@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f539bf37_6e5b6635",
+        "filename": "services/core/java/com/android/server/display/ElectronBeam.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 775,
+      "author": {
+        "id": 4
+      },
+      "writtenOn": "2021-01-30T12:57:03Z",
+      "side": 1,
+      "message": "This still can be left wrapped around a try,catch block.",
+      "revId": "fd383ecffa1505d262c0461b56d52986c581617f",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
