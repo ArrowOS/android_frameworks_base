@@ -6885,6 +6885,12 @@ public final class Settings {
         @UnsupportedAppUsage
         public static final String LOCK_SCREEN_LOCK_AFTER_TIMEOUT = "lock_screen_lock_after_timeout";
 
+        /**
+         * Whether to use the custom quick unlock screen control
+         * @hide
+         */
+        public static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL =
+                "lockscreen_quick_unlock_control";
 
         /**
          * This preference contains the string that shows for owner info on LockScreen.
