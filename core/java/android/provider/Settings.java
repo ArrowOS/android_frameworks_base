@@ -5156,6 +5156,13 @@ public final class Settings {
         public static final String[] LEGACY_RESTORE_SETTINGS = {
         };
 
+        /**
+         * Whether to use the custom quick unlock screen control
+         * @hide
+         */
+        public static final String LOCKSCREEN_QUICK_UNLOCK_CONTROL =
+                "lockscreen_quick_unlock_control";
+
        /**
          * These are all public system settings
          *
@@ -6884,7 +6891,6 @@ public final class Settings {
          */
         @UnsupportedAppUsage
         public static final String LOCK_SCREEN_LOCK_AFTER_TIMEOUT = "lock_screen_lock_after_timeout";
-
 
         /**
          * This preference contains the string that shows for owner info on LockScreen.

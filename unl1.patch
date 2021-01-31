@@ -1,0 +1,30 @@
+From 654e65956169db84ad8e342a19b495b84226add1 Mon Sep 17 00:00:00 2001
+From: Veeti Paananen <veeti.paananen@rojekti.fi>
+Date: Tue, 9 Jun 2015 12:44:59 +0300
+Subject: [PATCH] Disable PIN entry after successful quick unlock
+
+Small polish: I still often press the enter button out of muscle memory
+when entering my PIN code, which leads to an "invalid PIN" message being
+shown for a tiny moment as the screen unlocks. Disable the entry view
+after a quick unlock to fix this.
+
+Change-Id: Icceb8311ed55564e9b1d92934cbca814a1cc4b29
+Signed-off-by: mydongistiny <jaysonedson@gmail.com>
+Signed-off-by: Arghya Chanda <arghyac35@gmail.com>
+Signed-off-by: SagarMakhar <sagarmakhar@gmail.com>
+---
+ packages/SystemUI/src/com/android/keyguard/KeyguardPINView.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/packages/SystemUI/src/com/android/keyguard/KeyguardPINView.java b/packages/SystemUI/src/com/android/keyguard/KeyguardPINView.java
+index 94e8f4eb0ed5..597346c2760e 100644
+--- a/packages/SystemUI/src/com/android/keyguard/KeyguardPINView.java
++++ b/packages/SystemUI/src/com/android/keyguard/KeyguardPINView.java
+@@ -242,6 +242,7 @@ private void validateQuickUnlock(String password) {
+         if (password != null) {
+             if (password.length() > MINIMUM_PASSWORD_LENGTH_BEFORE_REPORT
+                     && kpvCheckPassword(password)) {
++                mPasswordEntry.setEnabled(false);
+                 mCallback.reportUnlockAttempt(userId, true, 0);
+                 mCallback.dismiss(true, userId);
+                 resetPasswordText(true, true);
