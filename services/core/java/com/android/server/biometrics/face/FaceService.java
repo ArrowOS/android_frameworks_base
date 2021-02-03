@@ -56,6 +56,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.NativeHandle;
+import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.SELinux;
 import android.os.SystemProperties;
@@ -113,6 +114,8 @@ public class FaceService extends BiometricServiceBase {
     private static final String ACTION_LOCKOUT_RESET =
             "com.android.server.biometrics.face.ACTION_LOCKOUT_RESET";
     private static final int CHALLENGE_TIMEOUT_SEC = 600; // 10 minutes
+
+    private static final int MAX_SCREEN_OFF_LOCKOUTS = 5;
 
     private static final String NOTIFICATION_TAG = "FaceService";
     private static final int NOTIFICATION_ID = 1;
@@ -1139,6 +1142,7 @@ public class FaceService extends BiometricServiceBase {
     private boolean mRevokeChallengePending = false;
     // One of the AuthenticationClient constants
     private int mCurrentUserLockoutMode;
+    private int mCurrentScreenOffLockouts = 0;
 
     private NotificationManager mNotificationManager;
 
@@ -1254,7 +1258,8 @@ public class FaceService extends BiometricServiceBase {
         @Override
         public void onLockoutChanged(long duration) {
             Slog.d(TAG, "onLockoutChanged: " + duration);
-            if (duration == 0) {
+            if (duration == 0
+                || mCurrentScreenOffLockouts >= MAX_SCREEN_OFF_LOCKOUTS) {
                 mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_NONE;
             } else if (duration == Long.MAX_VALUE) {
                 mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_PERMANENT;
@@ -1262,8 +1267,19 @@ public class FaceService extends BiometricServiceBase {
                 mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_TIMED;
             }
 
+            if (!isScreenOn(getContext())) {
+                Slog.d(TAG, "Received lockout with screen off! Current count is {count}".replace("{count}", String.valueOf(mCurrentScreenOffLockouts))); // For debugging, to be removed
+                mCurrentScreenOffLockouts++;
+            } else {
+                Slog.d(TAG, "Received lockout with screen on!"); // For debugging, to be removed
+            }
+
             mHandler.post(() -> {
-                if (duration == 0) {
+                if (duration == 0
+                    || mCurrentScreenOffLockouts >= MAX_SCREEN_OFF_LOCKOUTS) {
+                    Slog.d(TAG, "Resetting lockouts!"); // For debugging, to be removed
+                    mCurrentScreenOffLockouts = 0;
+                    mCurrentUserLockoutMode = AuthenticationClient.LOCKOUT_NONE;
                     notifyLockoutResetMonitors();
                 }
             });
@@ -1846,5 +1862,10 @@ public class FaceService extends BiometricServiceBase {
                 }
             }
         }
+    }
+
+    private boolean isScreenOn(Context context) {
+        PowerManager powerManager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+        return powerManager.isInteractive();
     }
 }
