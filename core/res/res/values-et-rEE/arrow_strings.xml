@@ -17,10 +17,9 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MicroG -->
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Pettepaketi allkiri</string>
-    <!-- Description of an application permission, listed so the user can choose whether
-         they want to allow the application to do this. -->
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Lubab rakendusel teeselda teist rakendust. Pahatahtlikud rakendused võivad seda ära kasutada, et tungida rakenduse privaatsetesse andmetesse. Heatahtlike kasutuste seas on näiteks emulaator, mis teeskleb olevat see, mida see emuleerib. Anna see luba ainult siis, kui sa oled selles täiesti kindel!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permgrouplab_fake_package_signature">Võltspaketi allkiri</string>
