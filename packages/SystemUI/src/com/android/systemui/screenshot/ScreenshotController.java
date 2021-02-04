@@ -924,11 +924,8 @@ public class ScreenshotController {
      * failure).
      */
     private void saveScreenshotAndToast(Consumer<Uri> finisher) {
-        if (Settings.System.getIntForUser(mContext.getContentResolver(),
-            Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
-            // Play the shutter sound to notify that we've taken a screenshot
-            playCameraSound();
-        }
+        // Play the shutter sound to notify that we've taken a screenshot
+        playShutterSound();
 
         saveScreenshotInWorkerThread(
                 /* onComplete */ finisher,
@@ -961,11 +958,8 @@ public class ScreenshotController {
         mScreenshotAnimation =
                 mScreenshotView.createScreenshotDropInAnimation(screenRect, showFlash);
 
-        if (Settings.System.getIntForUser(mContext.getContentResolver(),
-            Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
-            // Play the shutter sound to notify that we've taken a screenshot
-            playCameraSound();
-        }
+        // Play the shutter sound to notify that we've taken a screenshot
+        playShutterSound();
 
         if (DEBUG_ANIM) {
             Log.d(TAG, "starting post-screenshot animation");
@@ -1202,6 +1196,14 @@ public class ScreenshotController {
                 public void onFinish() {
                 }
             };
+        }
+    }
+
+    private void playShutterSound() {
+        if (Settings.System.getIntForUser(mContext.getContentResolver(),
+            Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
+            // Play the shutter sound to notify that we've taken a screenshot
+            playCameraSound();
         }
     }
 }
