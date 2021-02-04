@@ -33,13 +33,13 @@
     <string name="global_action_reboot">Yeniden başlat</string>
     <string name="global_action_reboot_system">Sistem</string>
     <string name="global_action_reboot_progress">Yeniden başlatılıyor\u2026</string>
-    <string name="global_action_reboot_recovery">Kurtarma Modu</string>
-    <string name="global_action_reboot_recovery_progress">Kurtarma moduna başlatılıyor\u2026</string>
+    <string name="global_action_reboot_recovery">Kurtarma</string>
+    <string name="global_action_reboot_recovery_progress">Kurtarma modunda başlatılıyor\u2026</string>
     <string name="global_action_reboot_hot">Hızlı</string>
     <string name="global_action_reboot_bootloader">Ön yükleyici</string>
-    <string name="global_action_reboot_bootloader_progress">Önyükleme moduna başlatılıyor\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">Ön yükleyici modunda başlatılıyor\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Fastbootd moduna başlatılıyor\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">Fastbootd modunda başlatılıyor\u2026</string>
     <string name="global_action_settings">Ayarlar</string>
     <string name="global_action_screenshot">Ekran görüntüsü</string>
     <string name="global_action_screenrecord">Ekran kaydı</string>
@@ -76,7 +76,7 @@
     <string name="omnijaws_service_last_update">Son güncelleme:</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Yeniden başlat</string>
-    <string name="quick_settings_reboot_recovery_label">Kurtarma Modu</string>
+    <string name="quick_settings_reboot_recovery_label">Kurtarma</string>
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Kareleri sıralamak ve düzenlemek için dokunun veya sürükleyin</string>
     <string name="drag_or_touch_to_add_tiles">Kare eklemek için dokunun veya sürükleyin</string>
@@ -90,8 +90,8 @@
     <string name="screenrecord_stopdot_label">Durma noktasını göster\nTaşımak için uzun basın</string>
     <string name="screenrecord_lowquality_label">Daha küçük dosya boyutu için daha düşük kalite</string>
     <!-- QS brightness customization -->
-    <string name="customize_brightness_slider">parlaklık kaydırıcısı</string>
-    <string name="customize_brightness_icon">parlaklık simgesi</string>
+    <string name="customize_brightness_slider">Parlaklık kaydırıcısı</string>
+    <string name="customize_brightness_icon">Parlaklık simgesi</string>
     <string name="customize_brightness_slider_hide">gizle</string>
     <string name="customize_brightness_slider_expanded">genişletilmiş</string>
     <string name="customize_brightness_slider_quick">hızlı</string>

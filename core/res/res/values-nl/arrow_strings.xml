@@ -17,10 +17,9 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MicroG -->
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Spoofpakket handtekening</string>
-    <!-- Description of an application permission, listed so the user can choose whether
-         they want to allow the application to do this. -->
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Hiermee kan de app zich voordoen als een andere app. Schadelijke applicaties kunnen dit gebruiken om toegang te krijgen tot persoonlijke applicatiegegevens. Legitiem gebruik omvat een emulator die doet alsof hij is wat hij emuleert. Geef deze toestemming alleen met de nodige voorzichtigheid!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permgrouplab_fake_package_signature">Pakket handtekening nabootsen</string>

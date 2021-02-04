@@ -17,10 +17,9 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- MicroG -->
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Palsukan tanda tangan paket</string>
-    <!-- Description of an application permission, listed so the user can choose whether
-         they want to allow the application to do this. -->
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Mengizinkan aplikasi berpura-pura menjadi aplikasi lain. Aplikasi hasad mungkin dapat menggunakan ini untuk mengakses data aplikasi pribadi. Penggunaan yang sah termasuk emulator yang berpura-pura menjadi emulatornya. Berikan izin ini dengan hati-hati!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permgrouplab_fake_package_signature">Palsukan tanda tangan paket</string>
