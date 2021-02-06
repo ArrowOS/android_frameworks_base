@@ -49,6 +49,8 @@ import android.util.Size;
 import android.view.Surface;
 import android.view.WindowManager;
 
+import com.android.systemui.R;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -81,6 +83,7 @@ public class ScreenMediaRecorder {
     private ScreenRecordingMuxer mMuxer;
     private ScreenInternalAudioRecorder mAudio;
     private ScreenRecordingAudioSource mAudioSource;
+    private int mMaxRefreshRate;
 
     private boolean mLowQuality;
 
@@ -94,6 +97,8 @@ public class ScreenMediaRecorder {
         mUser = user;
         mListener = listener;
         mAudioSource = audioSource;
+        mMaxRefreshRate = mContext.getResources().getInteger(
+                R.integer.config_screenRecorderMaxFramerate);
     }
 
     public void setLowQuality(boolean low) {
@@ -135,6 +140,7 @@ public class ScreenMediaRecorder {
         int screenWidth = metrics.widthPixels;
         int screenHeight = metrics.heightPixels;
         int refereshRate = mLowQuality? VIDEO_FRAME_RATE : (int) wm.getDefaultDisplay().getRefreshRate();
+	if (mMaxRefreshRate != 0 && refereshRate > mMaxRefreshRate) refereshRate = mMaxRefreshRate;
         // TODO: make low quality bitrate scalable per device, like the default one
         int vidBitRate = mLowQuality ? LOW_VIDEO_BIT_RATE :
                 screenHeight * screenWidth * refereshRate / VIDEO_FRAME_RATE
