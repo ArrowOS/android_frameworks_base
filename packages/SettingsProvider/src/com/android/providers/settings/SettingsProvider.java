@@ -3719,12 +3719,18 @@ public class SettingsProvider extends ContentProvider {
 
                 // v120: Add double tap to wake setting.
                 if (currentVersion == 119) {
+                    boolean dt2wByDefault = getContext().getResources().getBoolean(
+                                    R.bool.def_double_tap_to_wake);
+
                     SettingsState secureSettings = getSecureSettingsLocked(userId);
                     secureSettings.insertSettingOverrideableByRestoreLocked(
-                            Settings.Secure.DOUBLE_TAP_TO_WAKE,
-                            getContext().getResources().getBoolean(
-                                    R.bool.def_double_tap_to_wake) ? "1" : "0", null, true,
-                            SettingsState.SYSTEM_PACKAGE_NAME);
+                            Settings.Secure.DOUBLE_TAP_TO_WAKE, dt2wByDefault ? "1" : "0",
+                            null, true, SettingsState.SYSTEM_PACKAGE_NAME);
+
+                    SettingsState systemSettings = getSystemSettingsLocked(userId);
+                    secureSettings.insertSettingOverrideableByRestoreLocked(
+                            Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN, dt2wByDefault ?
+                            "1" : "0", null, true, SettingsState.SYSTEM_PACKAGE_NAME);
 
                     currentVersion = 120;
                 }
