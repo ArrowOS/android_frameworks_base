@@ -45,7 +45,7 @@ public class NetworkTraffic extends TextView {
     private static final int KB = 1024;
     private static final int MB = KB * KB;
     private static final int GB = MB * KB;
-    private static final String symbol = "/s";
+    private static final String symbol = "/S";
 
     protected boolean mIsEnabled;
     private boolean mAttached;
@@ -243,11 +243,11 @@ public class NetworkTraffic extends TextView {
     }
 
     protected RelativeSizeSpan getSpeedRelativeSizeSpan() {
-        return new RelativeSizeSpan(0.80f);
+        return new RelativeSizeSpan(0.78f);
     }
 
     protected RelativeSizeSpan getUnitRelativeSizeSpan() {
-        return new RelativeSizeSpan(0.75f);
+        return new RelativeSizeSpan(0.70f);
     }
 
     private Runnable mRunnable = new Runnable() {
@@ -347,8 +347,8 @@ public class NetworkTraffic extends TextView {
     }
 
     protected void setSpacingAndFonts() {
-        setTypeface(Typeface.create("sans-serif-condensed", Typeface.BOLD));
-        setLineSpacing(0.80f, 0.80f);
+        setTypeface(Typeface.create(Typeface.DEFAULT, 600, false));
+        setLineSpacing(0.85f, 0.85f);
     }
 
     public void onDensityOrFontScaleChanged() {
