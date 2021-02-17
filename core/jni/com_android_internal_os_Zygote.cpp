@@ -122,12 +122,15 @@ static jclass gZygoteClass;
 static jmethodID gCallPostForkSystemServerHooks;
 static jmethodID gCallPostForkChildHooks;
 
+<<<<<<< HEAD   (4ba886 Screenshot: Add delete action chip intent)
 static constexpr const char* kZygoteInitClassName = "com/android/internal/os/ZygoteInit";
 static jclass gZygoteInitClass;
 static jmethodID gGetOrCreateSystemServerClassLoader;
 
 static bool gIsSecurityEnforced = true;
 
+=======
+>>>>>>> CHANGE (32cf8c Install seccomp filter even if selinux is permissive)
 /**
  * True if the app process is running in its mount namespace.
  */
@@ -630,11 +633,6 @@ static void PreApplicationInit() {
 }
 
 static void SetUpSeccompFilter(uid_t uid, bool is_child_zygote) {
-  if (!gIsSecurityEnforced) {
-    ALOGI("seccomp disabled by setenforce 0");
-    return;
-  }
-
   // Apply system or app filter based on uid.
   if (uid >= AID_APP_START) {
     if (is_child_zygote) {
@@ -2325,11 +2323,6 @@ static void com_android_internal_os_Zygote_nativeAllowFileAcrossFork(
 
 static void com_android_internal_os_Zygote_nativeInstallSeccompUidGidFilter(
         JNIEnv* env, jclass, jint uidGidMin, jint uidGidMax) {
-  if (!gIsSecurityEnforced) {
-    ALOGI("seccomp disabled by setenforce 0");
-    return;
-  }
-
   bool installed = install_setuidgid_seccomp_filter(uidGidMin, uidGidMax);
   if (!installed) {
       RuntimeAbort(env, __LINE__, "Could not install setuid/setgid seccomp filter.");
@@ -2405,10 +2398,6 @@ static void com_android_internal_os_Zygote_nativeInitNativeState(JNIEnv* env, jc
   /*
    * Security Initialization
    */
-
-  // security_getenforce is not allowed on app process. Initialize and cache
-  // the value before zygote forks.
-  gIsSecurityEnforced = security_getenforce();
 
   selinux_android_seapp_context_init();
 
