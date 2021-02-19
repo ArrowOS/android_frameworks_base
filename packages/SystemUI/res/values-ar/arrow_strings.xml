@@ -15,30 +15,30 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="keyguard_plugged_in_dash_charging">الشحن السريع</string>
     <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
-    <string name="status_bar_vpn">VPN</string>
+    <string name="status_bar_vpn">الشبكة الظاهرية VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">التنبيهات الخاطفة</string>
+    <string name="accessibility_quick_settings_heads_up_off">الإشارات الخاطفة معطلة.</string>
+    <string name="accessibility_quick_settings_heads_up_on">تم السماح للإشعارات الخاطفة.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">الإشعارات الخاطفة معطلة.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">الإشعارات الخاطفة مفعلة.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">المشاركة عبر USB</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">إعادة التشغيل</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_system">النظام</string>
+    <string name="global_action_reboot_progress">إعادة التشغيل</string>
     <string name="global_action_reboot_recovery">الإسترداد</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_recovery_progress">إعادة التشغيل إلى وضع الإستعادة</string>
+    <string name="global_action_reboot_hot">اعادة تشغيل سريع</string>
     <string name="global_action_reboot_bootloader">محمل الإقلاع</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
-    <string name="global_action_reboot_fastboot">Fastbootd</string>
+    <string name="global_action_reboot_bootloader_progress">إعادة التشغيل الى وضع التنزيل</string>
+    <string name="global_action_reboot_fastboot">وضع الـFastbootd</string>
     <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
     <string name="global_action_settings">الاعدادات</string>
     <string name="global_action_screenshot">لقطة الشاشة</string>
