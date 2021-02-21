@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4dabeab6_0c8c2397",
+        "filename": "core/java/android/provider/Settings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 4793,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-02-21T11:47:24Z",
+      "side": 1,
+      "message": "empty space",
+      "revId": "57d4e34c61337371cf9c588a445d65d80f858b31",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "caa7e3da_d439c94b",
+        "filename": "core/java/android/provider/Settings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 4798,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-02-21T11:47:24Z",
+      "side": 1,
+      "message": "empty space",
+      "revId": "57d4e34c61337371cf9c588a445d65d80f858b31",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0c7bb257_89738507",
+        "filename": "core/java/android/provider/Settings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 4805,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-02-21T11:47:24Z",
+      "side": 1,
+      "message": "empty space",
+      "revId": "57d4e34c61337371cf9c588a445d65d80f858b31",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10a300a9_d8ab45a0",
+        "filename": "core/java/android/provider/Settings.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 13364,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-02-21T11:47:24Z",
+      "side": 1,
+      "message": "empty space",
+      "revId": "57d4e34c61337371cf9c588a445d65d80f858b31",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "261000a6_395e09d3",
+        "filename": "core/res/res/values/arrow_symbols.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-02-21T11:47:24Z",
+      "side": 1,
+      "message": "empty space",
+      "revId": "57d4e34c61337371cf9c588a445d65d80f858b31",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
