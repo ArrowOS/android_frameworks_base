@@ -54,8 +54,8 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
         setFocusableInTouchMode(true);
         mLessRows = (Settings.System.getInt(context.getContentResolver(), "qs_less_rows", 0) != 0)
                 || useQsMediaPlayer(context);
+        mMinRows = context.getResources().getInteger(R.integer.quick_settings_min_rows);
         updateResources();
-
     }
 
     @Override
