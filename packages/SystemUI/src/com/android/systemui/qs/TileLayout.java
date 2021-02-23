@@ -54,8 +54,8 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
         setFocusableInTouchMode(true);
         mLessRows = (Settings.System.getInt(context.getContentResolver(), "qs_less_rows", 0) != 0)
                 || useQsMediaPlayer(context);
+        mMinRows = context.getResources().getInteger(R.integer.quick_settings_min_rows);
         updateResources();
-
     }
 
     @Override
@@ -123,7 +123,6 @@ public class TileLayout extends ViewGroup implements QSTileLayout {
         mCellMarginVertical= res.getDimensionPixelSize(R.dimen.qs_tile_margin_vertical);
         mCellMarginTop = res.getDimensionPixelSize(R.dimen.qs_tile_margin_top);
         mMaxAllowedRows = Math.max(1, getResources().getInteger(R.integer.quick_settings_max_rows));
-        mMinRows = res.getInteger(R.integer.quick_settings_min_rows);
         if (mLessRows) mMaxAllowedRows = Math.max(mMinRows, mMaxAllowedRows - 1);
         updateSettings();
         return true;
