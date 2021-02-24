@@ -294,6 +294,7 @@ public class QSFragment extends LifecycleFragment implements QS, CommandQueue.Ca
                 : View.INVISIBLE);
         mFooter.setExpanded((keyguardShowing && !mHeaderAnimating && !mShowCollapsedOnKeyguard)
                 || (mQsExpanded && !mStackScrollerOverscrolling));
+		mQSPanel.updatePageIndicator();
         mQSPanel.setVisibility(!mQsDisabled && expandVisually ? View.VISIBLE : View.INVISIBLE);
     }
 
