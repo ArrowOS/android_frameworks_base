@@ -351,7 +351,10 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
 
         boolean newIsInside = (x > 0 && x < mSize) && (y > 0 && y < mSize);
 
-        if (event.getAction() == MotionEvent.ACTION_DOWN && newIsInside) {
+        if (!mUpdateMonitor.isFingerprintDetectionRunning() && !mIsBouncer && !mIsKeyguard) {
+            hide();
+            return true;
+        } else if (event.getAction() == MotionEvent.ACTION_DOWN && newIsInside) {
             showCircle();
             return true;
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
