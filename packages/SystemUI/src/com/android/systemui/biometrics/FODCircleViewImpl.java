@@ -18,6 +18,8 @@ package com.android.systemui.biometrics;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Slog;
 import android.view.View;
 
@@ -36,11 +38,18 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
 
     private FODCircleView mFodCircleView;
     private final CommandQueue mCommandQueue;
+    private Handler mHandler;
+    private Runnable mHideFodViewRunnable;
 
     @Inject
     public FODCircleViewImpl(Context context, CommandQueue commandQueue) {
         super(context);
         mCommandQueue = commandQueue;
+        mHandler = new Handler(Looper.getMainLooper());
+
+        mHideFodViewRunnable = () -> {
+            mFodCircleView.hide();
+        };
     }
 
     @Override
@@ -61,6 +70,7 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
     @Override
     public void showInDisplayFingerprintView() {
         if (mFodCircleView != null) {
+            mHandler.removeCallbacks(mHideFodViewRunnable);
             mFodCircleView.show();
         }
     }
@@ -69,6 +79,7 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
     public void hideInDisplayFingerprintView() {
         if (mFodCircleView != null) {
             mFodCircleView.hide();
+            mHandler.postDelayed(mHideFodViewRunnable, 500);
         }
     }
 }
