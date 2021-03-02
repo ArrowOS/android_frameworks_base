@@ -591,8 +591,6 @@ public class KeyguardIndicationController implements StateListener,
             }
         }
 
-        String percentage = NumberFormat.getPercentInstance()
-                .format(mBatteryLevel / 100f);
         if (hasChargingTime) {
             // We now have battery percentage in these strings and it's expected that all
             // locales will also have it in the future. For now, we still have to support the old
