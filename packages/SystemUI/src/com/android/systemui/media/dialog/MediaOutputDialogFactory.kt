@@ -44,7 +44,7 @@ class MediaOutputDialogFactory @Inject constructor(
     }
 
     /** Creates a [MediaOutputDialog] for the given package. */
-    fun create(packageName: String, aboveStatusBar: Boolean) {
+    fun create(packageName: String?, aboveStatusBar: Boolean) {
         mediaOutputDialog?.dismiss()
         mediaOutputDialog = MediaOutputController(context, packageName, aboveStatusBar,
                 mediaSessionManager, lbm, shadeController, starter, notificationEntryManager,
