@@ -5199,6 +5199,21 @@ public final class Settings {
         public static final String NOTIFICATION_SOUND_VIB_SCREEN_ON = "notification_sound_vib_screen_on";
 
         /**
+         * @hide
+         */
+        public static final String SMART_CUTOFF = "smart_cutoff";
+
+        /**
+         * @hide
+         */
+        public static final String SMART_CUTOFF_TEMPERATURE = "smart_cutoff_temperature";
+
+        /**
+         * @hide
+         */
+        public static final String SMART_CUTOFF_RESUME_TEMPERATURE = "smart_cutoff_resume_temperature";
+
+        /**
          * Keys we no longer back up under the current schema, but want to continue to
          * process when restoring historical backup datasets.
          *
