@@ -22,18 +22,18 @@
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads-Up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads-Up Benachrichtigungen deaktiviert.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads-Up Benachrichtigungen erlaubt.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads-Up Benachrichtigungen ausgeschaltet.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads-Up Benachrichtigungen eingeschaltet.</string>
+    <string name="quick_settings_heads_up_label">Peek Benachrichtigung</string>
+    <string name="accessibility_quick_settings_heads_up_off">Peek Benachrichtigungen deaktiviert.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Peek Benachrichtigungen erlaubt.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Peek Benachrichtigungen ausgeschaltet.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Peek Benachrichtigungen eingeschaltet.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB Tethering</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">Neustarten</string>
     <string name="global_action_reboot_system">System</string>
     <string name="global_action_reboot_progress">Neustarten\u2026</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
+    <string name="global_action_reboot_recovery">Wiederherstellung</string>
     <string name="global_action_reboot_recovery_progress">In Recovery neustarten\u2026</string>
     <string name="global_action_reboot_hot">Warmstart</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
@@ -47,12 +47,12 @@
     <!-- Label for current user in power menu options dialog -->
     <string name="global_action_current_user">Aktuell</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Teil-Screenshot</string>
+    <string name="quick_settings_screenshot_label">Bildschirmfoto</string>
+    <string name="quick_settings_region_screenshot_label">Bildschirmfoto-Teilbereich</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Koffein</string>
-    <string name="accessibility_quick_settings_caffeine_off">Koffein aus</string>
-    <string name="accessibility_quick_settings_caffeine_on">Koffein an</string>
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine aus</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine an</string>
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Daten SIM-Karte wechseln</string>
     <string name="qs_data_switch_toast_0">Derzeit ist keine SIM-Karte eingelegt</string>
@@ -76,12 +76,12 @@
     <string name="omnijaws_service_last_update">Letzte Aktualisierung:</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Neustarten</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_recovery_label">Wiederherstellung</string>
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Zum Entfernen antippen oder ziehen um Kacheln neu anzuordnen</string>
     <string name="drag_or_touch_to_add_tiles">Tippen oder ziehen, um Kacheln hinzuzufügen</string>
     <string name="customize_settings_info_text"><b>Hinweis:</b> Spalten werden automatisch auf verfügbaren Platz begrenzt.</string>
-    <string name="customize_show_labels">Labels</string>
+    <string name="customize_show_labels">Beschriftungen</string>
     <string name="customize_quickbar_sync">Sync</string>
     <string name="customize_quickbar_label">Schnellleiste</string>
     <string name="customize_columns_land_label">Querformat</string>
@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">ausblenden</string>
     <string name="customize_brightness_slider_expanded">erweitert</string>
     <string name="customize_brightness_slider_quick">schnell</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

@@ -14,85 +14,87 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • டாஷ் மின்னேற்றம் (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> முழு வரை)</string>
+    <string name="keyguard_plugged_in_dash_charging">டாஷ் மின்னேற்றம்</string>
+    <string name="statusbar_items_title">நிலைப்பட்டி சின்னம்</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
-    <string name="status_bar_vpn">VPN</string>
+    <string name="status_bar_vpn">மெதபி</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">கண்ணோட்ட அறிவிப்புகள்</string>
+    <string name="accessibility_quick_settings_heads_up_off">கண்ணோட்ட அறிவிப்புகள் முடக்கப்பட்டது.</string>
+    <string name="accessibility_quick_settings_heads_up_on">கண்ணோட்ட அறிவிப்புகள் அனுமதிக்கப்பட்டது.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">கண்ணோட்ட அறிவிப்புகள் அணைக்கப்பட்டது.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">கண்ணோட்ட அறிவிப்புகள் இயக்கப்பட்டது.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">உ தொ பே இணைப்பு முறை</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">மறுதொடக்கம்</string>
-    <string name="global_action_reboot_system">System</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_system">முறைமை</string>
+    <string name="global_action_reboot_progress">மறுத்துவக்குகிரது\u2026</string>
     <string name="global_action_reboot_recovery">மீட்டல்</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_recovery_progress">மீட்டெடுப்பிற்கு மறுத்துவக்குகிரது\u2026</string>
+    <string name="global_action_reboot_hot">சுடச்சுட</string>
     <string name="global_action_reboot_bootloader">துவக்கேற்றி</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
-    <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">துவக்கயேற்றிக்கு மீண்டும் துவக்குகிறது\u2026</string>
+    <string name="global_action_reboot_fastboot">வேகத்துவக்கம்</string>
+    <string name="global_action_reboot_fastboot_progress">வேகத்துவக்கத்திற்கு மறுத்துவக்குகிரது\u2026</string>
     <string name="global_action_settings">அமைப்புகள்</string>
     <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenrecord">திரைபதிவு</string>
     <string name="global_action_flashlight">டார்ச் விளக்கு</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">தற்போதைய</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
+    <string name="quick_settings_region_screenshot_label">பகுதி திரைப்பிடிப்பு</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">குளம்பி</string>
+    <string name="accessibility_quick_settings_caffeine_off">குளம்பி அணை</string>
+    <string name="accessibility_quick_settings_caffeine_on">குளம்பி இயக்கு</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_label">தரவு அட்டையை மாற்று</string>
+    <string name="qs_data_switch_toast_0">தற்பொழுது எந்த செறிவட்டையும் செருகப்படவில்லை</string>
+    <string name="qs_data_switch_toast_1">தற்பொழுது ஒரு செறிவட்டை செருகப்பட்டுள்ளது</string>
+    <string name="qs_data_switch_changed_1">மொபைல் தரவுக்கு செறிவட்டை 1 ஐப் பயன்படுத்துதல்</string>
+    <string name="qs_data_switch_changed_2">மொபைல் தரவுக்கு செறிவட்டை 2 ஐப் பயன்படுத்துதல்</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">ஒலி</string>
+    <string name="quick_settings_sound_ring">மணி அடி</string>
+    <string name="quick_settings_sound_vibrate">அதிர்வு</string>
+    <string name="quick_settings_sound_dnd">தொந்தரவு செய்யாதீர்</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
-    <string name="omnijaws_detail_header">Weather</string>
-    <string name="omnijaws_label_default">Weather</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
-    <string name="omnijaws_service_last_update">Last update:</string>
+    <string name="omnijaws_service_error">பிழை</string>
+    <string name="omnijaws_service_unkown">வானிலை தகவல் இல்லை</string>
+    <string name="omnijaws_service_error_long">வானிலை புள்ளிவிபரங்கள் ஏற்றும் போது பிழை</string>
+    <string name="omnijaws_service_disabled">சேவை முடக்கப்பட்டுள்ளது</string>
+    <string name="omnijaws_detail_header">வானிலை</string>
+    <string name="omnijaws_label_default">வானிலை</string>
+    <string name="omnijaws_current_text">இப்போது</string>
+    <string name="omnijaws_package_not_available">Ommnijaws கிடைக்கவில்லை</string>
+    <string name="omnijaws_service_last_update">- கடந்த மேம்பாடு:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">மறுதுவக்கம்</string>
+    <string name="quick_settings_reboot_recovery_label">மீட்பு நிலை</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="drag_or_touch_to_rearrange_tiles">ஓடுகளை மறுசீரமைக்க தொடவும் அல்லது இழுக்கவும்</string>
+    <string name="drag_or_touch_to_add_tiles">ஓடுகளைச் சேர்க்க தொடவும் அல்லது இழுக்கவும்</string>
+    <string name="customize_settings_info_text"><b>குறிப்பு:</b> கிடைக்கும் இடத்திற்கு நெடுவரிசைகள் தானாகவே வரையறுக்கப்படும்.</string>
+    <string name="customize_show_labels">முத்திரை</string>
+    <string name="customize_quickbar_sync">ஒத்திசைவு</string>
+    <string name="customize_quickbar_label">விரைவு பட்டி</string>
+    <string name="customize_columns_land_label">அகலவாக்கு</string>
+    <string name="customize_columns_port_label">நீலவாக்கு</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <string name="screenrecord_stopdot_label">நிறுத்து புள்ளியை காட்டு\nநகர்த்த நீண்ட நேரம் அழுத்து</string>
+    <string name="screenrecord_lowquality_label">சிறிய கோப்பு அளவிற்கு தரத்தை குறை</string>
     <!-- QS brightness customization -->
-    <string name="customize_brightness_slider">brightness slider</string>
-    <string name="customize_brightness_icon">brightness icon</string>
-    <string name="customize_brightness_slider_hide">hide</string>
-    <string name="customize_brightness_slider_expanded">expanded</string>
-    <string name="customize_brightness_slider_quick">quick</string>
+    <string name="customize_brightness_slider">ஒளி சறுக்கி</string>
+    <string name="customize_brightness_icon">ஒளி படவுரு</string>
+    <string name="customize_brightness_slider_hide">மறை</string>
+    <string name="customize_brightness_slider_expanded">விரிந்த</string>
+    <string name="customize_brightness_slider_quick">விரைவு</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

@@ -15,12 +15,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="keyguard_plugged_in_dash_charging">ഡാഷ് ചാർജിങ്</string>
     <string name="statusbar_items_title">Statusbar icons</string>
     <!-- Name of the volte status bar icon. -->
-    <string name="status_bar_volte">VoLTE</string>
+    <string name="status_bar_volte">വോൾട്ടി</string>
     <!-- Name of the VPN status bar icon. -->
-    <string name="status_bar_vpn">VPN</string>
+    <string name="status_bar_vpn">വി പി എൻ</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">Peek notifications</string>
     <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
@@ -41,14 +41,14 @@
     <string name="global_action_reboot_fastboot">Fastbootd</string>
     <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
     <string name="global_action_settings">Settings</string>
-    <string name="global_action_screenshot">Skärmdump</string>
+    <string name="global_action_screenshot">Screenshot</string>
     <string name="global_action_screenrecord">Screenrecord</string>
     <string name="global_action_flashlight">Flashlight</string>
     <!-- Label for current user in power menu options dialog -->
     <string name="global_action_current_user">Current</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">സ്‌ക്രീൻഷോട്ട്</string>
+    <string name="quick_settings_region_screenshot_label">ഭാഗികമായ സ്ക്രീൻഷോട്ട്‌</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
     <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>

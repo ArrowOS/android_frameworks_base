@@ -14,7 +14,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Швидка зарядка (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> до повної зарядки)</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Швидка зарядка (<xliff:g id="charging_time_left" example="4 години і 2 хвилини">%s</xliff:g> до повної зарядки)</string>
     <string name="keyguard_plugged_in_dash_charging">Швидка зарядка</string>
     <string name="statusbar_items_title">Іконки панелі стану</string>
     <!-- Name of the volte status bar icon. -->
@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">сховати</string>
     <string name="customize_brightness_slider_expanded">розгорнутий</string>
     <string name="customize_brightness_slider_quick">швидкий</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

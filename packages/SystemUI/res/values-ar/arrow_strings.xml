@@ -14,7 +14,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • الشحن السريع (<xliff:g id="charging_time_left" example="٤ ساعات و ٢ دقيقة">%s</xliff:g> حتى الامتلاء)</string>
     <string name="keyguard_plugged_in_dash_charging">الشحن السريع</string>
     <string name="statusbar_items_title">عنـاصر شريط الحـالة</string>
     <!-- Name of the volte status bar icon. -->
@@ -39,60 +39,62 @@
     <string name="global_action_reboot_bootloader">محمل الإقلاع</string>
     <string name="global_action_reboot_bootloader_progress">إعادة التشغيل الى وضع التنزيل</string>
     <string name="global_action_reboot_fastboot">وضع الـFastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">إعادة التشغيل إلى وضع الإستعادة</string>
     <string name="global_action_settings">الاعدادات</string>
     <string name="global_action_screenshot">لقطة الشاشة</string>
-    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_screenrecord">تسجيل الشاشة</string>
     <string name="global_action_flashlight">ضوء الفلاش</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">الحالي</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Screenshot</string>
-    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <string name="quick_settings_screenshot_label">لقطة الشاشة</string>
+    <string name="quick_settings_region_screenshot_label">لقطه جزئية للشاشة</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">كافيين</string>
+    <string name="accessibility_quick_settings_caffeine_off">ايقاف وضع الكافيين</string>
+    <string name="accessibility_quick_settings_caffeine_on">تشغيل وضع الكافيين</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_label">تبديل بطاقة البيانات</string>
+    <string name="qs_data_switch_toast_0">لا توجد شريحة SIM حاليا</string>
+    <string name="qs_data_switch_toast_1">فقط شريحة SIM واحدة مُدخلة</string>
+    <string name="qs_data_switch_changed_1">استخدام شريحة 1 لبيانات الهاتف</string>
+    <string name="qs_data_switch_changed_2">استخدام شريحة 2 لبيانات الهاتف</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">الصوت</string>
+    <string name="quick_settings_sound_ring">نغمة الرنين</string>
+    <string name="quick_settings_sound_vibrate">إهتزاز</string>
+    <string name="quick_settings_sound_dnd">وضع عدم الإزعاج</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
-    <string name="omnijaws_detail_header">Weather</string>
-    <string name="omnijaws_label_default">Weather</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
-    <string name="omnijaws_service_last_update">Last update:</string>
+    <string name="omnijaws_service_error">خطأ</string>
+    <string name="omnijaws_service_unkown">لا بيانات طقس</string>
+    <string name="omnijaws_service_error_long">خطأ في تحميل بيانات الطقس</string>
+    <string name="omnijaws_service_disabled">الخدمة معطلة</string>
+    <string name="omnijaws_detail_header">الطقس</string>
+    <string name="omnijaws_label_default">الطقس</string>
+    <string name="omnijaws_current_text">الأن</string>
+    <string name="omnijaws_package_not_available">OmniJaws غير متاح</string>
+    <string name="omnijaws_service_last_update">آخر تحديث:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">اعادة تشغيل</string>
+    <string name="quick_settings_reboot_recovery_label">الإسترداد</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
-    <string name="customize_columns_port_label">Portrait</string>
+    <string name="drag_or_touch_to_rearrange_tiles">المس لإزالة أو سحب لإعادة ترتيب البلاطات</string>
+    <string name="drag_or_touch_to_add_tiles">المس أو اسحب لإضافة البلاطات</string>
+    <string name="customize_settings_info_text"><b>ملاحظة:</b> ستكون الأعمدة محدودة تلقائياً للمساحة المتاحة.</string>
+    <string name="customize_show_labels">المُسمّيات</string>
+    <string name="customize_quickbar_sync">مزامنة</string>
+    <string name="customize_quickbar_label">شريط سريع</string>
+    <string name="customize_columns_land_label">أفقي</string>
+    <string name="customize_columns_port_label">عمودي</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <string name="screenrecord_stopdot_label">إظهار نقطة التوقف\nالضغط المطول لتحريكها</string>
+    <string name="screenrecord_lowquality_label">جودة أقل لحجم الملف الأصغر</string>
     <!-- QS brightness customization -->
-    <string name="customize_brightness_slider">brightness slider</string>
-    <string name="customize_brightness_icon">brightness icon</string>
-    <string name="customize_brightness_slider_hide">hide</string>
-    <string name="customize_brightness_slider_expanded">expanded</string>
-    <string name="customize_brightness_slider_quick">quick</string>
+    <string name="customize_brightness_slider">شريط التحكم في السطوع السفلي</string>
+    <string name="customize_brightness_icon">أيقونة السطوع</string>
+    <string name="customize_brightness_slider_hide">إخفاء</string>
+    <string name="customize_brightness_slider_expanded">موسّع</string>
+    <string name="customize_brightness_slider_quick">سريع</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

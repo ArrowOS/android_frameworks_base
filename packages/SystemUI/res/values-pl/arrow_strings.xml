@@ -96,4 +96,6 @@
     <string name="customize_brightness_slider_hide">ukryj</string>
     <string name="customize_brightness_slider_expanded">rozwinięty</string>
     <string name="customize_brightness_slider_quick">szybki</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">Ẩn</string>
     <string name="customize_brightness_slider_expanded">Mở rộng</string>
     <string name="customize_brightness_slider_quick">Nhanh</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

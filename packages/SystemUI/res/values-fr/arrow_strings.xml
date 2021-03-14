@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">masquer</string>
     <string name="customize_brightness_slider_expanded">etendu</string>
     <string name="customize_brightness_slider_quick">rapide</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

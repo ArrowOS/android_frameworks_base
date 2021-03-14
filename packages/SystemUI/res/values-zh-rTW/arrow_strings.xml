@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">隱藏</string>
     <string name="customize_brightness_slider_expanded">已展開</string>
     <string name="customize_brightness_slider_quick">快速</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

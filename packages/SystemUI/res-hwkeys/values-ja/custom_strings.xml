@@ -20,7 +20,7 @@
     <string name="label_action_settings_panel">クイック設定パネル</string>
     <string name="label_action_notification_panel">通知パネル</string>
     <string name="label_action_screenshot">スクリーンショット</string>
-    <string name="label_action_region_screenshot">範囲選択</string>
+    <string name="label_action_region_screenshot">範囲を選択してスクリーンショット</string>
     <string name="label_action_screenrecord">画面録画</string>
     <string name="label_action_expanded_desktop">拡張デスクトップ</string>
     <string name="label_action_screen_off">画面を消灯</string>

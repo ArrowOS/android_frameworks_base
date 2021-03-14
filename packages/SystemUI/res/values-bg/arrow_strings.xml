@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">Скрий</string>
     <string name="customize_brightness_slider_expanded">Разширен</string>
     <string name="customize_brightness_slider_quick">Бърз</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

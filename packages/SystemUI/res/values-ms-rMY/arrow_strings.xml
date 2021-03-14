@@ -95,4 +95,6 @@
     <string name="customize_brightness_slider_hide">sembunyi</string>
     <string name="customize_brightness_slider_expanded">diperluaskan</string>
     <string name="customize_brightness_slider_quick">pantas</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>

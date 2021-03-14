@@ -87,12 +87,14 @@
     <string name="customize_columns_land_label">横向</string>
     <string name="customize_columns_port_label">纵向</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">显示停止点\n长按移动</string>
-    <string name="screenrecord_lowquality_label">较低画质以求更小的文件大小</string>
+    <string name="screenrecord_stopdot_label">显示停止圆点\n长按移动</string>
+    <string name="screenrecord_lowquality_label">较低画质从而文件更小</string>
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">亮度滑块</string>
     <string name="customize_brightness_icon">亮度图标</string>
     <string name="customize_brightness_slider_hide">隐藏</string>
     <string name="customize_brightness_slider_expanded">扩展</string>
     <string name="customize_brightness_slider_quick">快速</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
 </resources>
