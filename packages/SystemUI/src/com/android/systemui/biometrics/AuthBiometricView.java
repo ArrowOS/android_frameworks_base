@@ -636,12 +636,15 @@ public abstract class AuthBiometricView extends LinearLayout {
             Utils.notifyAccessibilityContentChanged(mAccessibilityManager, this);
         });
 
-        mUseFaceButton.setOnClickListener((view) -> {
-            mCallback.onAction(Callback.ACTION_USE_FACE);
-        });
+        if (mUseFaceButton != null) {
+            mUseFaceButton.setOnClickListener((view) -> {
+                mCallback.onAction(Callback.ACTION_USE_FACE);
+            });
+        }
 
         if (this instanceof AuthBiometricFingerprintView) {
-            if (!Utils.canAuthenticateWithFace(mContext, mUserId)){
+            if (!Utils.canAuthenticateWithFace(mContext, mUserId)
+                && mUseFaceButton != null){
                 mUseFaceButton.setVisibility(View.GONE);
             }
             if (mHasFod) {
@@ -668,7 +671,9 @@ public abstract class AuthBiometricView extends LinearLayout {
             }
         } else if (this instanceof AuthBiometricFaceView) {
             mIconView.setVisibility(View.VISIBLE);
-            mUseFaceButton.setVisibility(View.GONE);
+            if (mUseFaceButton != null) {
+                mUseFaceButton.setVisibility(View.GONE);
+            }
         }
     }
 
