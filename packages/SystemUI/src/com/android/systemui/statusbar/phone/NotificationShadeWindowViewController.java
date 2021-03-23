@@ -101,6 +101,8 @@ public class NotificationShadeWindowViewController {
     private final DockManager mDockManager;
     private final NotificationPanelViewController mNotificationPanelViewController;
     private final SuperStatusBarViewFactory mStatusBarViewFactory;
+  
+    private boolean mDoubleTapEnabledNative;
 
     // Used for determining view / touch intersection
     private int[] mTempLocation = new int[2];
@@ -164,6 +166,9 @@ public class NotificationShadeWindowViewController {
             AmbientDisplayConfiguration configuration =
                     new AmbientDisplayConfiguration(mView.getContext());
             switch (key) {
+                case Settings.Secure.DOUBLE_TAP_TO_WAKE:
+                    mDoubleTapEnabledNative = TunerService.parseIntegerSwitch(newValue, false);
+                    break;
                 case Settings.Secure.DOZE_DOUBLE_TAP_GESTURE:
                     mDoubleTapEnabled = configuration.doubleTapGestureEnabled(
                             UserHandle.USER_CURRENT);
@@ -190,7 +195,7 @@ public class NotificationShadeWindowViewController {
 
                     @Override
                     public boolean onDoubleTap(MotionEvent e) {
-                        if (mDoubleTapEnabled || mSingleTapEnabled) {
+                        if (mDoubleTapEnabled || mSingleTapEnabled || mDoubleTapEnabledNative) {
                             mService.wakeUpIfDozing(
                                     SystemClock.uptimeMillis(), mView, "DOUBLE_TAP");
                             return true;
