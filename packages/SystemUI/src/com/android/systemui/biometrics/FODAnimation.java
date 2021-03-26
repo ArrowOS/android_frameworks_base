@@ -120,16 +120,14 @@ public class FODAnimation extends ImageView {
     }
 
     public void hideFODanimation() {
-        if (mShowing) {
-            mShowing = false;
-            if (recognizingAnim != null) {
-                clearAnimation();
-                recognizingAnim.stop();
-                recognizingAnim.selectDrawable(0);
-            }
-            if (this.getWindowToken() != null) {
-                mWindowManager.removeView(this);
-            }
+        mShowing = false;
+        if (recognizingAnim != null) {
+            clearAnimation();
+            recognizingAnim.stop();
+            recognizingAnim.selectDrawable(0);
+        }
+        if (this.getWindowToken() != null) {
+            mWindowManager.removeView(this);
         }
     }
 }

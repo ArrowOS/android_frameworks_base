@@ -37,9 +37,12 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
     private static final String TAG = "FODCircleViewImpl";
 
     private FODCircleView mFodCircleView;
+    private FODAnimation mFodAnimation;
     private final CommandQueue mCommandQueue;
     private Handler mHandler;
     private Runnable mHideFodViewRunnable;
+
+    private final int HIDE_FOD_VIEW_DELAY = 500;
 
     @Inject
     public FODCircleViewImpl(Context context, CommandQueue commandQueue) {
@@ -49,6 +52,14 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
 
         mHideFodViewRunnable = () -> {
             mFodCircleView.hide();
+
+            mHandler.postDelayed(() -> {
+	            if (mFodAnimation == null) {
+	                mFodAnimation = mFodCircleView.getFODAnimation();
+	            } else {
+	                mFodAnimation.hideFODanimation();
+	            }
+            }, HIDE_FOD_VIEW_DELAY);
         };
     }
 
@@ -62,6 +73,7 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
         mCommandQueue.addCallback(this);
         try {
             mFodCircleView = new FODCircleView(mContext);
+            mFodAnimation = mFodCircleView.getFODAnimation();
         } catch (RuntimeException e) {
             Slog.e(TAG, "Failed to initialize FODCircleView", e);
         }
@@ -79,7 +91,7 @@ public class FODCircleViewImpl extends SystemUI implements CommandQueue.Callback
     public void hideInDisplayFingerprintView() {
         if (mFodCircleView != null) {
             mFodCircleView.hide();
-            mHandler.postDelayed(mHideFodViewRunnable, 500);
+            mHandler.postDelayed(mHideFodViewRunnable, HIDE_FOD_VIEW_DELAY);
         }
     }
 }
