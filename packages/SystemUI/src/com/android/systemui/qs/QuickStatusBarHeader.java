@@ -289,8 +289,8 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         float intensity = getColorIntensity(colorForeground);
         int fillColor = mDualToneHandler.getSingleColor(intensity);
 
-        // Set light text on the header icons because they will always be on a black background
-        applyDarkness(R.id.clock, tintArea, 0, DarkIconDispatcher.DEFAULT_ICON_TINT);
+        // We have nuked the black backgroud so update qs header clock text color accordingly
+        applyDarkness(R.id.clock, tintArea, intensity, fillColor);
 
         // Set the correct tint for the status icons so they contrast
         mIconManager.setTint(fillColor);
