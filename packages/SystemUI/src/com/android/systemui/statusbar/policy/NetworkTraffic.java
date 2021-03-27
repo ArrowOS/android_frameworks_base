@@ -31,6 +31,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
+import com.android.settingslib.Utils;
 import com.android.systemui.R;
 
 /*
@@ -209,7 +210,8 @@ public class NetworkTraffic extends TextView {
     public NetworkTraffic(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         final Resources resources = getResources();
-        mTintColor = resources.getColor(android.R.color.white);
+        mTintColor = Utils.getColorAttrDefaultColor(getContext(),
+                R.attr.wallpaperTextColor);
         setMode();
         Handler mHandler = new Handler();
         mConnectivityManager =
