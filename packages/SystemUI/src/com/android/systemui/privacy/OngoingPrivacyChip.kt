@@ -21,6 +21,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
+import com.android.settingslib.Utils
 import com.android.systemui.R
 
 class OngoingPrivacyChip @JvmOverloads constructor(
@@ -36,8 +37,8 @@ class OngoingPrivacyChip @JvmOverloads constructor(
                     R.dimen.ongoing_appops_chip_icon_margin_collapsed)
     private val iconSize =
             context.resources.getDimensionPixelSize(R.dimen.ongoing_appops_chip_icon_size)
-    private val iconColor = context.resources.getColor(
-            R.color.status_bar_clock_color, context.theme)
+    private val iconColor = Utils.getColorAttrDefaultColor(getContext(),
+                R.attr.wallpaperTextColor)
     private val sidePadding =
             context.resources.getDimensionPixelSize(R.dimen.ongoing_appops_chip_side_padding)
     private val backgroundDrawable = context.getDrawable(R.drawable.privacy_chip_bg)
