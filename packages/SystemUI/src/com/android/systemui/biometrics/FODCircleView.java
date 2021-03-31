@@ -192,13 +192,6 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
         }
 
         @Override
-        public void onFinishedGoingToSleep(int why) {
-            if (mUpdateMonitor.isFingerprintDetectionRunning()) {
-                mHandler.post(() -> show());
-            }
-        }
-
-        @Override
         public void onScreenTurnedOn() {
             if (mUpdateMonitor.isFingerprintDetectionRunning() && !mFodGestureEnable) {
                 show();
@@ -426,7 +419,6 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
 
     public void showCircle() {
         mIsCircleShowing = true;
-        updatePosition();
 
         setKeepScreenOn(true);
 
