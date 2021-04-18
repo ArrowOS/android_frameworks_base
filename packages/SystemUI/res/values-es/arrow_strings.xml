@@ -96,5 +96,12 @@
     <string name="customize_brightness_slider_expanded">expandido</string>
     <string name="customize_brightness_slider_quick">rápido</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <string name="biometric_dialog_button_use_face">Usar la cara</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160; está bloqueada</string>
+    <string name="applock_fingerprint_face">, huella dactilar o tu cara para desbloquear</string>
+    <string name="applock_face">&#160;o tu cara para desbloquear</string>
+    <string name="applock_fingerprint">&#160;o tu huella dactilar para desbloquear</string>
+    <string name="applock_credential">&#160;para desbloquear</string>
+    <string name="applock_unlock">Desbloquear</string>
 </resources>

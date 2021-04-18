@@ -96,5 +96,12 @@
     <string name="customize_brightness_slider_expanded">laiendatud</string>
     <string name="customize_brightness_slider_quick">kiire</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <string name="biometric_dialog_button_use_face">Kasuta näotuvastust</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;on lukus</string>
+    <string name="applock_fingerprint_face">, avamiseks sõrmejälg või sinu nägu</string>
+    <string name="applock_face">&#160;või sinu nägu avamiseks</string>
+    <string name="applock_fingerprint">&#160;või sinu sõrmejälg avamiseks</string>
+    <string name="applock_credential">&#160;avamiseks</string>
+    <string name="applock_unlock">Ava</string>
 </resources>

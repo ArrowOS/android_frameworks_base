@@ -16,7 +16,7 @@
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Carregamento rápido (<xliff:g id="charging_time_left" example="4 horas e 2 minutos">%s</xliff:g> até ficar cheio)</string>
     <string name="keyguard_plugged_in_dash_charging">Carregamento Rápido</string>
-    <string name="statusbar_items_title">Itens da barra de estado</string>
+    <string name="statusbar_items_title">Ícones na barra de estado</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
@@ -96,5 +96,12 @@
     <string name="customize_brightness_slider_expanded">Expandido</string>
     <string name="customize_brightness_slider_quick">rápido</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <string name="biometric_dialog_button_use_face">Usar Face</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;está bloqueado</string>
+    <string name="applock_fingerprint_face">, impressão digital ou seu rosto para desbloquear</string>
+    <string name="applock_face">&#160;ou seu rosto para desbloquear</string>
+    <string name="applock_fingerprint">&#160;ou a sua impressão digital para desbloquear</string>
+    <string name="applock_credential">&#160;para desbloquear</string>
+    <string name="applock_unlock">Desbloquear</string>
 </resources>

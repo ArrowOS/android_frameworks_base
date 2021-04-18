@@ -96,5 +96,12 @@
     <string name="customize_brightness_slider_expanded">επεκταμένη</string>
     <string name="customize_brightness_slider_quick">γρήγορα</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <string name="biometric_dialog_button_use_face">Χρήση Προσώπου</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;είναι κλειδωμένο</string>
+    <string name="applock_fingerprint_face">, δακτυλικό αποτύπωμα ή το πρόσωπό σας για ξεκλείδωμα</string>
+    <string name="applock_face">&#160;ή το πρόσωπό σας για ξεκλείδωμα</string>
+    <string name="applock_fingerprint">&#160;ή το δακτυλικό σας αποτύπωμα για ξεκλείδωμα</string>
+    <string name="applock_credential">&#160;για να ξεκλειδώσετε</string>
+    <string name="applock_unlock">Ξεκλείδωμα</string>
 </resources>

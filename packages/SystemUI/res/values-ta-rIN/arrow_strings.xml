@@ -30,7 +30,7 @@
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">உ தொ பே இணைப்பு முறை</string>
     <!-- Advanced restart -->
-    <string name="global_action_reboot">மறுதொடக்கம்</string>
+    <string name="global_action_reboot">மறுதுவக்கம்</string>
     <string name="global_action_reboot_system">முறைமை</string>
     <string name="global_action_reboot_progress">மறுத்துவக்குகிரது\u2026</string>
     <string name="global_action_reboot_recovery">மீட்டல்</string>
@@ -43,7 +43,7 @@
     <string name="global_action_settings">அமைப்புகள்</string>
     <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
     <string name="global_action_screenrecord">திரைபதிவு</string>
-    <string name="global_action_flashlight">டார்ச் விளக்கு</string>
+    <string name="global_action_flashlight">ஒளிவிளக்கு</string>
     <!-- Label for current user in power menu options dialog -->
     <string name="global_action_current_user">தற்போதைய</string>
     <!-- Screenshot QS tile -->
@@ -97,4 +97,11 @@
     <string name="customize_brightness_slider_quick">விரைவு</string>
     <!-- Biometric Dialog - Use Face -->
     <string name="biometric_dialog_button_use_face">முகத்தைப் பயன்படுத்து</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;is locked</string>
+    <string name="applock_fingerprint_face">, fingerprint or your face to unlock</string>
+    <string name="applock_face">&#160;or your face to unlock</string>
+    <string name="applock_fingerprint">&#160;or your fingerprint to unlock</string>
+    <string name="applock_credential">&#160;to unlock</string>
+    <string name="applock_unlock">Unlock</string>
 </resources>

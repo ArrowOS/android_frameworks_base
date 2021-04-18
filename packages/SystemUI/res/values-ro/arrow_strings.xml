@@ -15,86 +15,93 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="procentaj">%2$s</xliff:g> • Încărcare rapidă (<xliff:g id="Timp_de_încărcare_rămas" exemplu="4 ore și 2 minute">%s</xliff:g> până la finalizare)</string>
-    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="keyguard_plugged_in_dash_charging">Încărcare rapidă</string>
     <string name="statusbar_items_title">Pictograme bară de stare</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Peek notifications</string>
-    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <string name="quick_settings_heads_up_label">Afișare notificări</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notificãri dezactivate.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notificările Peek sunt permise.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notificări dezactivate.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notificările Peek sunt permise.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_usb_tether_label">Tethering prin USB</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">Repornire</string>
     <string name="global_action_reboot_system">Sistem</string>
-    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_progress">Se repornește</string>
     <string name="global_action_reboot_recovery">Mod Recuperare</string>
-    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
-    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_recovery_progress">Repornire în modul recuperare</string>
+    <string name="global_action_reboot_hot">Fierbinte</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">Repornire în modul bootloader</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">Repornire în modul fastboot</string>
     <string name="global_action_settings">Setări</string>
     <string name="global_action_screenshot">Captură de ecran</string>
     <string name="global_action_screenrecord">Înregistrare ecran</string>
     <string name="global_action_flashlight">Lanternă</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Current</string>
+    <string name="global_action_current_user">Curent</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Captură de ecran</string>
     <string name="quick_settings_region_screenshot_label">Captură de ecran parțială</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Caffeine</string>
-    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
-    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_caffeine_label">Cafeină</string>
+    <string name="accessibility_quick_settings_caffeine_off">Cafeină oprită</string>
+    <string name="accessibility_quick_settings_caffeine_on">Cafeină pornită</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_label">Comutați cartela de date mobile</string>
     <string name="qs_data_switch_toast_0">În prezent nu este introdusă nicio cartelă SIM</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
-    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <string name="qs_data_switch_toast_1">În prezent este introdusă o singură cartelă SIM</string>
+    <string name="qs_data_switch_changed_1">Utilizare SIM 1 pentru date mobile</string>
+    <string name="qs_data_switch_changed_2">Utilizare SIM 2 pentru date mobile</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
-    <string name="quick_settings_sound_vibrate">Vibrate</string>
-    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <string name="quick_settings_sound_label">Sunet</string>
+    <string name="quick_settings_sound_ring">Sonerie</string>
+    <string name="quick_settings_sound_vibrate">Vibrează</string>
+    <string name="quick_settings_sound_dnd">Nu deranja</string>
     <!-- Omni Weather -->
-    <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No weather data</string>
-    <string name="omnijaws_service_error_long">Error loading weather data</string>
-    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_service_error">Eroare</string>
+    <string name="omnijaws_service_unkown">Date meteo indisponibile</string>
+    <string name="omnijaws_service_error_long">Eroare la încărcarea datelor meteo</string>
+    <string name="omnijaws_service_disabled">Serviciul este dezactivat</string>
     <string name="omnijaws_detail_header">Vremea</string>
     <string name="omnijaws_label_default">Vremea</string>
-    <string name="omnijaws_current_text">Now</string>
-    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_current_text">Acum</string>
+    <string name="omnijaws_package_not_available">OmniJaws indisponibil</string>
     <string name="omnijaws_service_last_update">Ultima actualizare:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reboot</string>
-    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="quick_settings_reboot_label">Repornire</string>
+    <string name="quick_settings_reboot_recovery_label">Mod Recuperare</string>
     <!-- QS config customization -->
-    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
-    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
-    <string name="customize_show_labels">Labels</string>
-    <string name="customize_quickbar_sync">Sync</string>
-    <string name="customize_quickbar_label">Quickbar</string>
-    <string name="customize_columns_land_label">Landscape</string>
+    <string name="drag_or_touch_to_rearrange_tiles">Atingeți pentru a elimina sau trage pentru a rearanja dalele</string>
+    <string name="drag_or_touch_to_add_tiles">Atingeţi sau trageţi pentru a adăuga dale</string>
+    <string name="customize_settings_info_text"><b>Notă:</b> coloanele vor fi limitate automat pentru spațiul disponibil.</string>
+    <string name="customize_show_labels">Etichete</string>
+    <string name="customize_quickbar_sync">Sincronizare</string>
+    <string name="customize_quickbar_label">Bară de comenzi rapide</string>
+    <string name="customize_columns_land_label">Peisaj</string>
     <string name="customize_columns_port_label">Portret</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <string name="screenrecord_stopdot_label">Arată punctul de oprire\nApăsați lung pentru a-l muta</string>
+    <string name="screenrecord_lowquality_label">Calitate scăzută pentru dimensiune mai mică a fișierului</string>
     <!-- QS brightness customization -->
-    <string name="customize_brightness_slider">brightness slider</string>
-    <string name="customize_brightness_icon">brightness icon</string>
-    <string name="customize_brightness_slider_hide">hide</string>
-    <string name="customize_brightness_slider_expanded">expanded</string>
-    <string name="customize_brightness_slider_quick">quick</string>
+    <string name="customize_brightness_slider">cursor luminozitate</string>
+    <string name="customize_brightness_icon">pictogramă luminozitate</string>
+    <string name="customize_brightness_slider_hide">ascunde</string>
+    <string name="customize_brightness_slider_expanded">extins</string>
+    <string name="customize_brightness_slider_quick">rapid</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <string name="biometric_dialog_button_use_face">Utilizare Față</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;este blocat</string>
+    <string name="applock_fingerprint_face">, amprentă sau faţă pentru deblocare</string>
+    <string name="applock_face">&#160;sau fața pentru deblocare</string>
+    <string name="applock_fingerprint">&#160;sau amprenta pentru deblocare</string>
+    <string name="applock_credential">&#160;pentru deblocare</string>
+    <string name="applock_unlock">Deblocare</string>
 </resources>

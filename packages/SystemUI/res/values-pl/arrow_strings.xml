@@ -98,4 +98,11 @@
     <string name="customize_brightness_slider_quick">szybki</string>
     <!-- Biometric Dialog - Use Face -->
     <string name="biometric_dialog_button_use_face">Użyj twarzy</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;jest zablokowany</string>
+    <string name="applock_fingerprint_face">, odcisk palca lub twarz do odblokowania</string>
+    <string name="applock_face">&#160;lub Twoją twarz, by odblokować</string>
+    <string name="applock_fingerprint">&#160;lub odcisk palca by odblokować</string>
+    <string name="applock_credential">&#160;do odblokowania</string>
+    <string name="applock_unlock">Odblokuj</string>
 </resources>

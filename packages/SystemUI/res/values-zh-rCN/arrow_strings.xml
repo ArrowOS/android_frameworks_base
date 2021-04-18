@@ -97,4 +97,11 @@
     <string name="customize_brightness_slider_quick">快速</string>
     <!-- Biometric Dialog - Use Face -->
     <string name="biometric_dialog_button_use_face">使用面部</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;已锁定</string>
+    <string name="applock_fingerprint_face">，指纹或者您的面部来解锁</string>
+    <string name="applock_face">&#160;或您的面部来解锁</string>
+    <string name="applock_fingerprint">&#160;或您的指纹来解锁</string>
+    <string name="applock_credential">&#160;来解锁</string>
+    <string name="applock_unlock">解锁</string>
 </resources>
