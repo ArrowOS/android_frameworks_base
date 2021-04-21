@@ -2917,6 +2917,7 @@ public class KeyguardUpdateMonitor implements TrustManager.TrustListener, Dumpab
         synchronized (this) {
             mScreenOn = true;
         }
+        updateBiometricListeningState();
         mHandler.sendEmptyMessage(MSG_SCREEN_TURNED_ON);
     }
 
