@@ -17,8 +17,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Bindable action labels -->
     <string name="label_action_no_action">Geen actie</string>
-    <string name="label_action_settings_panel">QS paneel</string>
-    <string name="label_action_notification_panel">Notificatie paneel</string>
+    <string name="label_action_settings_panel">Snelle instellingenpaneel</string>
+    <string name="label_action_notification_panel">Notificatiepaneel</string>
     <string name="label_action_screenshot">Schermafdruk</string>
     <string name="label_action_region_screenshot">Gedeeltelijke schermafdruk</string>
     <string name="label_action_screenrecord">Scherm opnemen</string>
@@ -38,7 +38,7 @@
     <string name="label_action_back">Terug</string>
     <string name="label_action_home">Home</string>
     <string name="label_action_ime_switcher">IME-keuze</string>
-    <string name="label_action_stop_screenpinning">Stoppen met het scherm vastzetten</string>
+    <string name="label_action_stop_screenpinning">Stoppen met scherm vastzetten</string>
     <string name="label_action_ime_down">Invoermethode cursor omlaag</string>
     <string name="label_action_ime_left">Invoermethode cursor links</string>
     <string name="label_action_ime_right">Invoermethode cursor rechts</string>
@@ -49,7 +49,7 @@
     <string name="label_action_one_handed_mode_left">Éen hand modus (linkerkant)</string>
     <string name="label_action_one_handed_mode_right">Éen hand modus (rechterkant)</string>
     <string name="label_action_media_left">Vorig nummer</string>
-    <string name="label_action_media_right">Volgende nummer</string>
+    <string name="label_action_media_right">Volgend nummer</string>
     <string name="label_action_assistant_sound_search">Google muziek zoeken</string>
     <!-- App killed message -->
     <string name="app_killed_message">%Applicatie gestopt</string>

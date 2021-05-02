@@ -39,7 +39,7 @@
     <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_bootloader_progress">Repornire în modul bootloader</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Repornire în modul fastboot</string>
+    <string name="global_action_reboot_fastboot_progress">Repornire în modul fastbootd</string>
     <string name="global_action_settings">Setări</string>
     <string name="global_action_screenshot">Captură de ecran</string>
     <string name="global_action_screenrecord">Înregistrare ecran</string>

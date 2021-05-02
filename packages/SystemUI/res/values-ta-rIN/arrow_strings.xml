@@ -32,14 +32,14 @@
     <!-- Advanced restart -->
     <string name="global_action_reboot">மறுதுவக்கம்</string>
     <string name="global_action_reboot_system">முறைமை</string>
-    <string name="global_action_reboot_progress">மறுத்துவக்குகிரது\u2026</string>
+    <string name="global_action_reboot_progress">மறுத்துவக்குகிறது\u2026</string>
     <string name="global_action_reboot_recovery">மீட்டல்</string>
     <string name="global_action_reboot_recovery_progress">மீட்டெடுப்பிற்கு மறுத்துவக்குகிரது\u2026</string>
     <string name="global_action_reboot_hot">சுடச்சுட</string>
     <string name="global_action_reboot_bootloader">துவக்கேற்றி</string>
     <string name="global_action_reboot_bootloader_progress">துவக்கயேற்றிக்கு மீண்டும் துவக்குகிறது\u2026</string>
     <string name="global_action_reboot_fastboot">வேகத்துவக்கம்</string>
-    <string name="global_action_reboot_fastboot_progress">வேகத்துவக்கத்திற்கு மறுத்துவக்குகிரது\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">துவக்கயேற்றிக்கு மறுத்துவக்குகிறது\u2026</string>
     <string name="global_action_settings">அமைப்புகள்</string>
     <string name="global_action_screenshot">திரைப்பிடிப்பு</string>
     <string name="global_action_screenrecord">திரைபதிவு</string>
@@ -98,10 +98,10 @@
     <!-- Biometric Dialog - Use Face -->
     <string name="biometric_dialog_button_use_face">முகத்தைப் பயன்படுத்து</string>
     <!-- App Lock -->
-    <string name="applock_locked">&#160;is locked</string>
-    <string name="applock_fingerprint_face">, fingerprint or your face to unlock</string>
-    <string name="applock_face">&#160;or your face to unlock</string>
-    <string name="applock_fingerprint">&#160;or your fingerprint to unlock</string>
-    <string name="applock_credential">&#160;to unlock</string>
-    <string name="applock_unlock">Unlock</string>
+    <string name="applock_locked">&#160;பூட்டப்பட்டுள்ளது</string>
+    <string name="applock_fingerprint_face">, கைரேகை அ உங்கள் முகம் பூட்டவிற்க</string>
+    <string name="applock_face">&#160;அ உங்கள் முகம் பூட்டவிற்க</string>
+    <string name="applock_fingerprint">&#160;அ உங்கள் கைரேகை பூட்டவிற்க</string>
+    <string name="applock_credential">&#160;பூட்டவிற்க</string>
+    <string name="applock_unlock">பூட்டவிழ்</string>
 </resources>

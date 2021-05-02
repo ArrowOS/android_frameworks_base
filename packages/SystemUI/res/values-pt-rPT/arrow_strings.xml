@@ -14,7 +14,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Carregamento rápido (<xliff:g id="charging_time_left" example="4 horas e 2 minutos">%s</xliff:g> até ficar cheio)</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Carregamento rápido (<xliff:g id="charging_time_left" example="4 horas e 2 minutos">%s</xliff:g> até ficar completa)</string>
     <string name="keyguard_plugged_in_dash_charging">Carregamento Rápido</string>
     <string name="statusbar_items_title">Ícones na barra de estado</string>
     <!-- Name of the volte status bar icon. -->
@@ -33,11 +33,11 @@
     <string name="global_action_reboot">Reiniciar</string>
     <string name="global_action_reboot_system">Sistema</string>
     <string name="global_action_reboot_progress">Reiniciar\u2026</string>
-    <string name="global_action_reboot_recovery">Recovery</string>
-    <string name="global_action_reboot_recovery_progress">A reiniciar para o modo de recuperação\u2026</string>
+    <string name="global_action_reboot_recovery">Modo recuperação</string>
+    <string name="global_action_reboot_recovery_progress">A reiniciar no modo de recuperação\u2026</string>
     <string name="global_action_reboot_hot">Quente</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">A reiniciar para o modo de bootloader\u2026</string>
+    <string name="global_action_reboot_bootloader_progress">A reiniciar no modo de bootloader\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
     <string name="global_action_reboot_fastboot_progress">A reiniciar para no modo de fastbootd\u2026</string>
     <string name="global_action_settings">Definições</string>
@@ -57,8 +57,8 @@
     <string name="qs_data_switch_label">Trocar cartão de dados</string>
     <string name="qs_data_switch_toast_0">Actualmente sem cartão SIM inserido</string>
     <string name="qs_data_switch_toast_1">Actualmente apenas foi inserido um cartão SIM</string>
-    <string name="qs_data_switch_changed_1">A usar SIM 1 para dados móveis</string>
-    <string name="qs_data_switch_changed_2">A usar SIM 1 para dados móveis</string>
+    <string name="qs_data_switch_changed_1">A usar o SIM 1 para dados móveis</string>
+    <string name="qs_data_switch_changed_2">A usar o SIM 1 para dados móveis</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Som</string>
     <string name="quick_settings_sound_ring">Toque</string>
@@ -98,9 +98,9 @@
     <!-- Biometric Dialog - Use Face -->
     <string name="biometric_dialog_button_use_face">Usar Face</string>
     <!-- App Lock -->
-    <string name="applock_locked">&#160;está bloqueado</string>
-    <string name="applock_fingerprint_face">, impressão digital ou seu rosto para desbloquear</string>
-    <string name="applock_face">&#160;ou seu rosto para desbloquear</string>
+    <string name="applock_locked">&#160;está bloqueada</string>
+    <string name="applock_fingerprint_face">, impressão digital ou o seu rosto para desbloquear</string>
+    <string name="applock_face">&#160;ou o seu rosto para desbloquear</string>
     <string name="applock_fingerprint">&#160;ou a sua impressão digital para desbloquear</string>
     <string name="applock_credential">&#160;para desbloquear</string>
     <string name="applock_unlock">Desbloquear</string>
