@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a6de6f3_fc5860ea",
+        "filename": "packages/SystemUI/src/com/android/systemui/biometrics/FODCircleViewImpl.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 171
+      },
+      "writtenOn": "2021-05-05T13:22:17Z",
+      "side": 1,
+      "message": "This should go disabled by default in my opinion.",
+      "revId": "a7e980c278b51edac4822f0e7e8cccbc84f6ef72",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
