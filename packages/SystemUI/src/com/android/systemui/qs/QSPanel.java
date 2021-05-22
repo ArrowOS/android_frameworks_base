@@ -47,6 +47,7 @@ import com.android.internal.widget.RemeasuringLinearLayout;
 import com.android.systemui.Dependency;
 import com.android.systemui.Dumpable;
 import com.android.systemui.R;
+import com.android.systemui.arrow.ArrowSettingsService;
 import com.android.systemui.broadcast.BroadcastDispatcher;
 import com.android.systemui.dump.DumpManager;
 import com.android.systemui.media.MediaHierarchyManager;
@@ -78,7 +79,7 @@ import javax.inject.Named;
 
 /** View that represents the quick settings tile panel (when expanded/pulled down). **/
 public class QSPanel extends LinearLayout implements Tunable, Callback, BrightnessMirrorListener,
-        Dumpable {
+        Dumpable, ArrowSettingsService.ArrowSettingsObserver {
 
     private static final String QS_SHOW_AUTO_BRIGHTNESS =
                                 Settings.Secure.QS_SHOW_AUTO_BRIGHTNESS;
@@ -291,6 +292,11 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         parameters.setFadeStartPosition(0.95f);
         parameters.setDisappearStart(0.0f);
         mMediaHost.setDisappearParameters(parameters);
+    }
+
+    @Override
+    public void onIntSettingChanged(String key, Integer newValue) {
+        switchTileLayout(true);
     }
 
     @Override
@@ -539,6 +545,7 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         super.onFinishInflate();
         mFooter = findViewById(R.id.qs_footer);
         switchTileLayout(true /* force */);
+        Dependency.get(ArrowSettingsService.class).addIntObserver(this, "qs_less_rows");
     }
 
     boolean switchTileLayout() {
@@ -577,7 +584,8 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
             if (needsDynamicRowsAndColumns()) {
                 boolean isLandscape = getResources().getConfiguration().orientation
                             == Configuration.ORIENTATION_LANDSCAPE;
-                newLayout.setMinRows(horizontal ? 2 : (mMediaHost.getVisible() ? 2 : (isLandscape ? 1 : 3)));
+                boolean lessRows = (Settings.System.getInt(mContext.getContentResolver(), "qs_less_rows", 0) != 0);
+                newLayout.setMinRows(horizontal ? 2 : (mMediaHost.getVisible() || (lessRows && !isLandscape) ? 2 : (isLandscape ? 1 : 3)));
             }
             // request layout to calc num of columns
             newLayout.updateSettings();

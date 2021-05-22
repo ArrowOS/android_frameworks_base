@@ -282,4 +282,6 @@
 
         </LinearLayout>
     </LinearLayout>
+
+    <include layout="@layout/qs_less_rows" />
 </com.android.systemui.qs.customize.QSCustomizerSettings>
