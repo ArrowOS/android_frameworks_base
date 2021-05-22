@@ -99,6 +99,12 @@ public class QSCustomizerSettings extends LinearLayout {
             }
         });
 
+        Switch useLessRows = findViewById(R.id.qs_less_rows_switch);
+        useLessRows.setOnCheckedChangeListener((v, checked) -> {
+            Settings.System.putInt(mContext.getContentResolver(), "qs_less_rows", !checked ? 1 : 0);
+        });
+        useLessRows.setChecked((Settings.System.getInt(mContext.getContentResolver(), "qs_less_rows", 0)) != 1);
+
         int defaultMaxTiles = mContext.getResources().getInteger(R.integer.quick_qs_panel_max_columns);
         int quickColumns = Settings.System.getIntForUser(
                 mContext.getContentResolver(), Settings.System.QS_QUICKBAR_COLUMNS,
