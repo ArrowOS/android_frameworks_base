@@ -281,5 +281,7 @@
                 android:layout_marginStart="10dp" />
 
         </LinearLayout>
+
+        <include layout="@layout/qs_less_rows" />
     </LinearLayout>
 </com.android.systemui.qs.customize.QSCustomizerSettings>
