@@ -14,7 +14,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Пуњење цртицом (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> остало до краја)</string>
     <string name="keyguard_plugged_in_dash_charging">Брзо пуњење</string>
     <string name="statusbar_items_title">Иконе статусне траке</string>
     <!-- Name of the volte status bar icon. -->
@@ -80,14 +80,14 @@
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Задржите да уклоните или реаранжирате плочице</string>
     <string name="drag_or_touch_to_add_tiles">Задржите и превуците да бисте додали плочице</string>
-    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
+    <string name="customize_settings_info_text"><b>Note</b>колоне ће бити аутоматски ограничене за расположиви простор.</string>
     <string name="customize_show_labels">Ознаке</string>
     <string name="customize_quickbar_sync">Синхронизуј</string>
     <string name="customize_quickbar_label">Quickbar</string>
     <string name="customize_columns_land_label">Пејзаж</string>
     <string name="customize_columns_port_label">Портрет</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
+    <string name="screenrecord_stopdot_label">Покажи тачку заустављања \nДуго притисните да бисте је померили</string>
     <string name="screenrecord_lowquality_label">Лошији квалитет за мању величину фајла</string>
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">клизач за осветљеност</string>
@@ -96,12 +96,12 @@
     <string name="customize_brightness_slider_expanded">проширен</string>
     <string name="customize_brightness_slider_quick">брзо</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <string name="biometric_dialog_button_use_face">Користи лице</string>
     <!-- App Lock -->
-    <string name="applock_locked">&#160;is locked</string>
-    <string name="applock_fingerprint_face">, fingerprint or your face to unlock</string>
-    <string name="applock_face">&#160;or your face to unlock</string>
-    <string name="applock_fingerprint">&#160;or your fingerprint to unlock</string>
-    <string name="applock_credential">&#160;to unlock</string>
-    <string name="applock_unlock">Unlock</string>
+    <string name="applock_locked">&#160;је закључано</string>
+    <string name="applock_fingerprint_face">, отисак прста или ваше лице за откључавање</string>
+    <string name="applock_face">&#160;или ваше лице за откључавање</string>
+    <string name="applock_fingerprint">&#160;или ваш отисак прста за откључавање</string>
+    <string name="applock_credential">&#160;за откључавање</string>
+    <string name="applock_unlock">Откључајте</string>
 </resources>

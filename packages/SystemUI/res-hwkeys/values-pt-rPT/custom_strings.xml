@@ -16,7 +16,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Bindable action labels -->
-    <string name="label_action_no_action">Sem acção</string>
+    <string name="label_action_no_action">Nenhuma acção</string>
     <string name="label_action_settings_panel">Painel QS</string>
     <string name="label_action_notification_panel">Painel de notificações</string>
     <string name="label_action_screenshot">Captura de Ecrã</string>
@@ -39,10 +39,10 @@
     <string name="label_action_home">Início</string>
     <string name="label_action_ime_switcher">Alterar método de entrada</string>
     <string name="label_action_stop_screenpinning">Parar fixação de ecrã</string>
-    <string name="label_action_ime_down">Cursor para baixo</string>
-    <string name="label_action_ime_left">Cursor para a esquerda</string>
-    <string name="label_action_ime_right">Cursor para a direita</string>
-    <string name="label_action_ime_up">Cursor para cima</string>
+    <string name="label_action_ime_down">Cursor do método de entrada para baixo</string>
+    <string name="label_action_ime_left">Cursor do método de entrada para a esquerda</string>
+    <string name="label_action_ime_right">Cursor do método de entrada para a direita</string>
+    <string name="label_action_ime_up">Cursor do método de entrada para cima</string>
     <string name="label_action_volume_panel">Painel de volume</string>
     <string name="label_action_clear_notifications">Limpar notificações</string>
     <string name="label_action_split_screen">Dividir Ecrã</string>

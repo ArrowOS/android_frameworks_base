@@ -23,10 +23,10 @@
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
     <string name="quick_settings_heads_up_label">浮動通知</string>
-    <string name="accessibility_quick_settings_heads_up_off">浮動通知已停用。</string>
-    <string name="accessibility_quick_settings_heads_up_on">浮動通知已允許。</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">浮動通知已關閉。</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">浮動通知已開啟。</string>
+    <string name="accessibility_quick_settings_heads_up_off">浮動通知已停用</string>
+    <string name="accessibility_quick_settings_heads_up_on">浮動通知已允許</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">浮動通知已關閉</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">浮動通知已開啟</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">USB 網路共用</string>
     <!-- Advanced restart -->
@@ -35,7 +35,7 @@
     <string name="global_action_reboot_progress">重新啟動中\u2026</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_recovery_progress">正在重新啟動至 Recovery 模式\u2026</string>
-    <string name="global_action_reboot_hot">熱開機</string>
+    <string name="global_action_reboot_hot">暖開機</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_bootloader_progress">正在重新啟動至 Bootloader 模式\u2026</string>
     <string name="global_action_reboot_fastboot">Fastboot</string>
@@ -54,7 +54,7 @@
     <string name="accessibility_quick_settings_caffeine_off">關閉螢幕常亮</string>
     <string name="accessibility_quick_settings_caffeine_on">開啟螢幕常亮</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">切換上網卡</string>
+    <string name="qs_data_switch_label">切換數據網路SIM卡</string>
     <string name="qs_data_switch_toast_0">目前未插入 SIM 卡</string>
     <string name="qs_data_switch_toast_1">目前僅插入一張 SIM 卡</string>
     <string name="qs_data_switch_changed_1">使用 SIM 1 的行動數據</string>
@@ -98,10 +98,10 @@
     <!-- Biometric Dialog - Use Face -->
     <string name="biometric_dialog_button_use_face">使用臉部</string>
     <!-- App Lock -->
-    <string name="applock_locked">&#160;is locked</string>
-    <string name="applock_fingerprint_face">, fingerprint or your face to unlock</string>
-    <string name="applock_face">&#160;or your face to unlock</string>
-    <string name="applock_fingerprint">&#160;or your fingerprint to unlock</string>
-    <string name="applock_credential">&#160;to unlock</string>
-    <string name="applock_unlock">Unlock</string>
+    <string name="applock_locked">&#160;已鎖定</string>
+    <string name="applock_fingerprint_face">, 指紋 或 臉部辨識 來解鎖</string>
+    <string name="applock_face">&#160;或使用臉部來解鎖</string>
+    <string name="applock_fingerprint">&#160;或使用指紋來解鎖</string>
+    <string name="applock_credential">&#160;來解鎖</string>
+    <string name="applock_unlock">解鎖</string>
 </resources>
