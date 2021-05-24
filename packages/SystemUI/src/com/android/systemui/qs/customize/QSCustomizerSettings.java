@@ -77,14 +77,14 @@ public class QSCustomizerSettings extends LinearLayout {
 
         showBrightnessSlider = findViewById(R.id.qs_customize_settings_brightness_slider);
         int currentBrightnessSliderValue = Settings.Secure.getIntForUser(
-                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 0,
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1,
                 UserHandle.USER_CURRENT);
 
         setBrightnessSliderDrawable(currentBrightnessSliderValue);
 
         showBrightnessSlider.setOnClickListener(new View.OnClickListener() {
             int showBrightnessSliderValue = Settings.Secure.getIntForUser(
-                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 0,
+                mContext.getContentResolver(), Settings.Secure.QS_SHOW_BRIGHTNESS_SLIDER, 1,
                 UserHandle.USER_CURRENT);
 
             public void onClick(View v) {
