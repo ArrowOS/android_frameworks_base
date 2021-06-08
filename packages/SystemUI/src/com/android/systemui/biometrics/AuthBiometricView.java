@@ -171,8 +171,8 @@ public abstract class AuthBiometricView extends LinearLayout {
     private final Injector mInjector;
     private final Handler mHandler;
     private final AccessibilityManager mAccessibilityManager;
-    private final int mTextColorError;
-    private final int mTextColorHint;
+    protected final int mTextColorError;
+    protected final int mTextColorHint;
 
     private AuthPanelController mPanelController;
     private Bundle mBiometricPromptBundle;
@@ -187,6 +187,7 @@ public abstract class AuthBiometricView extends LinearLayout {
     protected ImageView mIconView;
     protected ImageView mAppIcon;
     @VisibleForTesting protected TextView mIndicatorView;
+
     @VisibleForTesting Button mNegativeButton;
     @VisibleForTesting Button mPositiveButton;
     @VisibleForTesting Button mTryAgainButton;
