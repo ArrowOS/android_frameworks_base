@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;или отпечаток пальца для разблокировки</string>
     <string name="applock_credential">&#160;для разблокировки</string>
     <string name="applock_unlock">Разблокировать</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Показывать больше строк плиток, когда медиаплеер скрыт</string>
 </resources>

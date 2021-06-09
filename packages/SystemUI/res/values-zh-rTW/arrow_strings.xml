@@ -16,7 +16,7 @@
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="Percentage">%2$s</xliff:g> • 快速充電中 (<xliff:g id="Charging_TIME_LEFT">%s</xliff:g>後充滿)</string>
     <string name="keyguard_plugged_in_dash_charging">快速充電中</string>
-    <string name="statusbar_items_title">狀態列圖示</string>
+    <string name="statusbar_items_title">狀態欄圖示</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
@@ -32,13 +32,13 @@
     <!-- Advanced restart -->
     <string name="global_action_reboot">重新啟動</string>
     <string name="global_action_reboot_system">系統</string>
-    <string name="global_action_reboot_progress">重新啟動中\u2026</string>
+    <string name="global_action_reboot_progress">正在重新啟動…</string>
     <string name="global_action_reboot_recovery">Recovery</string>
     <string name="global_action_reboot_recovery_progress">正在重新啟動至 Recovery 模式\u2026</string>
-    <string name="global_action_reboot_hot">暖開機</string>
+    <string name="global_action_reboot_hot">快速重啟</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
     <string name="global_action_reboot_bootloader_progress">正在重新啟動至 Bootloader 模式\u2026</string>
-    <string name="global_action_reboot_fastboot">Fastboot</string>
+    <string name="global_action_reboot_fastboot">重啟至Fastboot</string>
     <string name="global_action_reboot_fastboot_progress">正在重新啟動至 fastboot 模式\u2026</string>
     <string name="global_action_settings">設定</string>
     <string name="global_action_screenshot">螢幕截圖</string>
@@ -54,11 +54,11 @@
     <string name="accessibility_quick_settings_caffeine_off">關閉螢幕常亮</string>
     <string name="accessibility_quick_settings_caffeine_on">開啟螢幕常亮</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">切換數據網路SIM卡</string>
+    <string name="qs_data_switch_label">切換SIM卡</string>
     <string name="qs_data_switch_toast_0">目前未插入 SIM 卡</string>
     <string name="qs_data_switch_toast_1">目前僅插入一張 SIM 卡</string>
-    <string name="qs_data_switch_changed_1">使用 SIM 1 的行動數據</string>
-    <string name="qs_data_switch_changed_2">使用 SIM 2 的行動數據</string>
+    <string name="qs_data_switch_changed_1">使用 SIM 1 的行動網路</string>
+    <string name="qs_data_switch_changed_2">使用 SIM 2 的行動網路</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">聲音</string>
     <string name="quick_settings_sound_ring">響鈴</string>
@@ -75,7 +75,7 @@
     <string name="omnijaws_package_not_available">OmniJaws 不可用</string>
     <string name="omnijaws_service_last_update">最後更新：</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">重啟</string>
+    <string name="quick_settings_reboot_label">重新啟動</string>
     <string name="quick_settings_reboot_recovery_label">Recovery 模式</string>
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">觸摸即可刪除或拖動以重新排列圖塊</string>
@@ -85,10 +85,10 @@
     <string name="customize_quickbar_sync">同步</string>
     <string name="customize_quickbar_label">快捷工具列</string>
     <string name="customize_columns_land_label">橫向</string>
-    <string name="customize_columns_port_label">纵向</string>
+    <string name="customize_columns_port_label">縱向</string>
     <!-- Screenrecord QS tile -->
     <string name="screenrecord_stopdot_label">顯示停止點\n長按移動</string>
-    <string name="screenrecord_lowquality_label">較低畫質以求更小的檔案大小</string>
+    <string name="screenrecord_lowquality_label">較低畫質以要求更小的檔案大小</string>
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">亮度滑條</string>
     <string name="customize_brightness_icon">亮度圖示</string>
@@ -96,12 +96,14 @@
     <string name="customize_brightness_slider_expanded">已展開</string>
     <string name="customize_brightness_slider_quick">快速</string>
     <!-- Biometric Dialog - Use Face -->
-    <string name="biometric_dialog_button_use_face">使用臉部</string>
+    <string name="biometric_dialog_button_use_face">使用人臉解鎖</string>
     <!-- App Lock -->
     <string name="applock_locked">&#160;已鎖定</string>
-    <string name="applock_fingerprint_face">, 指紋 或 臉部辨識 來解鎖</string>
-    <string name="applock_face">&#160;或使用臉部來解鎖</string>
+    <string name="applock_fingerprint_face">，指紋 或 人臉辨識 來解鎖</string>
+    <string name="applock_face">&#160;或使用人臉來解鎖</string>
     <string name="applock_fingerprint">&#160;或使用指紋來解鎖</string>
     <string name="applock_credential">&#160;來解鎖</string>
     <string name="applock_unlock">解鎖</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

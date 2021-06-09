@@ -39,7 +39,7 @@
     <string name="global_action_reboot_bootloader">Завантажувач</string>
     <string name="global_action_reboot_bootloader_progress">Перехід в режим завантажувача\u2026</string>
     <string name="global_action_reboot_fastboot">Fastbootd</string>
-    <string name="global_action_reboot_fastboot_progress">Перезапуск в режим Fastbootd\u2026</string>
+    <string name="global_action_reboot_fastboot_progress">Режим Fastbootd\u2026</string>
     <string name="global_action_settings">Налаштування</string>
     <string name="global_action_screenshot">Знімок екрану</string>
     <string name="global_action_screenrecord">Запис екрану</string>
@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;або відбиток пальця для розблокування</string>
     <string name="applock_credential">&#160;для розблокування</string>
     <string name="applock_unlock">Розблокувати</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Показувати більше рядків плиток, коли медіаплеєр прихований</string>
 </resources>

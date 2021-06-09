@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;หรือลายนิ้วมือเพื่อปลดล็อค</string>
     <string name="applock_credential">&#160;เพื่อปลดล็อค</string>
     <string name="applock_unlock">ปลดล็อก</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

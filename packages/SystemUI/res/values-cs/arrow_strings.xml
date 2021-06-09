@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;nebo odemkněte otiskem prstu</string>
     <string name="applock_credential">&#160;odemknout</string>
     <string name="applock_unlock">Odemknout</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Použít více řádků, když je skryt přehrávač médií</string>
 </resources>

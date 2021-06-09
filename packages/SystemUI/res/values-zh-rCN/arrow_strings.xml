@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;或您的指纹来解锁</string>
     <string name="applock_credential">&#160;来解锁</string>
     <string name="applock_unlock">解锁</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">当媒体播放器被隐藏时使用更多行</string>
 </resources>

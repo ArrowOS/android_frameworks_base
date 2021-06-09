@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;o tu huella dactilar para desbloquear</string>
     <string name="applock_credential">&#160;para desbloquear</string>
     <string name="applock_unlock">Desbloquear</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

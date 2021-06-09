@@ -105,4 +105,6 @@
     <string name="applock_fingerprint">&#160;lub odcisk palca by odblokować</string>
     <string name="applock_credential">&#160;do odblokowania</string>
     <string name="applock_unlock">Odblokuj</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Użyj więcej wierszy, gdy odtwarzacz multimediów jest ukryty</string>
 </resources>

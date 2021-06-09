@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;அ உங்கள் கைரேகை பூட்டவிற்க</string>
     <string name="applock_credential">&#160;பூட்டவிற்க</string>
     <string name="applock_unlock">பூட்டவிழ்</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

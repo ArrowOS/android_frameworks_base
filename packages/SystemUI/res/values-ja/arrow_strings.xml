@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;または指紋でロック解除</string>
     <string name="applock_credential">&#160;でロック解除</string>
     <string name="applock_unlock">ロック解除</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">メディアプレーヤーが非表示な時は追加の行を使用する</string>
 </resources>

@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;ou votre empreinte digitale pour déverrouiller</string>
     <string name="applock_credential">&#160;pour déverrouiller</string>
     <string name="applock_unlock">Déverrouiller</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

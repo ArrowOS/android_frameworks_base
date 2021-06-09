@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;atau sidik jari Anda untuk membuka kunci</string>
     <string name="applock_credential">&#160;untuk membuka</string>
     <string name="applock_unlock">Membuka</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

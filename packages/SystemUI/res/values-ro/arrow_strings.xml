@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;sau amprenta pentru deblocare</string>
     <string name="applock_credential">&#160;pentru deblocare</string>
     <string name="applock_unlock">Deblocare</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

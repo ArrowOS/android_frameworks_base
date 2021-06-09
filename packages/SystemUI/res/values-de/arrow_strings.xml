@@ -99,9 +99,11 @@
     <string name="biometric_dialog_button_use_face">Gesicht nutzen</string>
     <!-- App Lock -->
     <string name="applock_locked">&#160;ist gesperrt</string>
-    <string name="applock_fingerprint_face">, fingerprint or your face to unlock</string>
-    <string name="applock_face">&#160;or your face to unlock</string>
-    <string name="applock_fingerprint">&#160;or your fingerprint to unlock</string>
-    <string name="applock_credential">&#160;to unlock</string>
+    <string name="applock_fingerprint_face">, Fingerabdruck oder Gesichtserkennung zum Entsperren verwenden</string>
+    <string name="applock_face">&#160; oder Gesichtserkennung zum Entsperren verwenden</string>
+    <string name="applock_fingerprint">&#160; oder Fingerabdruck zum Entsperren verwenden</string>
+    <string name="applock_credential">&#160; zum Entsperren verwenden</string>
     <string name="applock_unlock">Entsperren</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>

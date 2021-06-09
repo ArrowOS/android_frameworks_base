@@ -104,4 +104,6 @@
     <string name="applock_fingerprint">&#160;или ваш отисак прста за откључавање</string>
     <string name="applock_credential">&#160;за откључавање</string>
     <string name="applock_unlock">Откључајте</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
 </resources>
