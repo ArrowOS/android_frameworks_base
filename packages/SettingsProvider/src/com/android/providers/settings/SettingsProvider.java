@@ -3669,12 +3669,6 @@ public class SettingsProvider extends ContentProvider {
                     secureSettings.insertSettingOverrideableByRestoreLocked(
                             Settings.Secure.DOUBLE_TAP_TO_WAKE, dt2wByDefault ? "1" : "0",
                             null, true, SettingsState.SYSTEM_PACKAGE_NAME);
-
-                    SettingsState systemSettings = getSystemSettingsLocked(userId);
-                    secureSettings.insertSettingOverrideableByRestoreLocked(
-                            Settings.System.DOUBLE_TAP_SLEEP_LOCKSCREEN, dt2wByDefault ?
-                            "1" : "0", null, true, SettingsState.SYSTEM_PACKAGE_NAME);
-
                     currentVersion = 120;
                 }
 
