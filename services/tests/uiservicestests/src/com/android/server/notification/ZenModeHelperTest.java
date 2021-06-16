@@ -1629,6 +1629,7 @@ public class ZenModeHelperTest extends UiServiceTestCase {
                     new ZenPolicy.Builder().build(),
                     NotificationManager.INTERRUPTION_FILTER_PRIORITY, true);
             String id = mZenModeHelperSpy.addAutomaticZenRule("pkgname", zenRule, "test");
+            String id = mZenModeHelperSpy.addAutomaticZenRule("android", zenRule, "test");
             fail("allowed too many rules to be created");
         } catch (IllegalArgumentException e) {
             // yay
