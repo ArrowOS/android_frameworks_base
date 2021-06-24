@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;om te ontgrendelen</string>
     <string name="applock_unlock">Ontgrendelen</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">Gebruik meer rijen als mediaspeler verborgen is</string>
 </resources>

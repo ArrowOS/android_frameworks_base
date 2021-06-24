@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;để mở khóa</string>
     <string name="applock_unlock">Mở khóa</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">Sử dụng nhiều hàng hơn khi trình phát đa phương tiện bị ẩn</string>
 </resources>
