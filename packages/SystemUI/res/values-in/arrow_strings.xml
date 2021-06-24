@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;untuk membuka</string>
     <string name="applock_unlock">Membuka</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">Gunakan lebih banyak baris ketika pemutar media tersembunyi</string>
 </resources>

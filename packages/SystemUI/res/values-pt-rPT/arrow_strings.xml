@@ -73,7 +73,7 @@
     <string name="omnijaws_label_default">Tempo</string>
     <string name="omnijaws_current_text">Agora</string>
     <string name="omnijaws_package_not_available">OmniJaws não está disponível</string>
-    <string name="omnijaws_service_last_update">Última atualização:</string>
+    <string name="omnijaws_service_last_update">Última actualização:</string>
     <!-- Reboot/Recovery QS tile -->
     <string name="quick_settings_reboot_label">Reiniciar</string>
     <string name="quick_settings_reboot_recovery_label">Recuperação</string>

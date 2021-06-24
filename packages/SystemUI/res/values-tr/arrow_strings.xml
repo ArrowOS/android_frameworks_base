@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;kilidini aç</string>
     <string name="applock_unlock">Kilidi aç</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">Medya oynatıcı gizlendiğinde daha fazla satır kullanın</string>
 </resources>

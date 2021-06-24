@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;para desbloquear</string>
     <string name="applock_unlock">Desbloquear</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">usar más filas cuando el reproductor multimedia está oculto</string>
 </resources>

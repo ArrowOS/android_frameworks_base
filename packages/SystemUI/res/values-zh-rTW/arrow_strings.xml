@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;來解鎖</string>
     <string name="applock_unlock">解鎖</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">在媒體面板隱藏時顯示更多列</string>
 </resources>
