@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_00" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_01" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_02" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_03" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_04" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_05" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_06" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_07" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_08" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_09" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_10" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_11" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_12" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_13" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_14" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_15" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_16" />
+    <item android:duration="26" android:drawable="@drawable/asus_takeoff_fod_anim_4_17" />
+</animation-list>

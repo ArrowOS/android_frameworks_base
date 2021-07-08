@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_00" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_01" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_02" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_03" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_04" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_05" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_06" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_07" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_08" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_09" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_10" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_11" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_12" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_13" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_14" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_15" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_16" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_17" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_18" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_19" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_20" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_21" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_22" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_23" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_24" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_25" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_26" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_27" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_28" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_29" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_30" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_31" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_32" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_33" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_34" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_35" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_36" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_37" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_38" />
+    <item android:duration="16" android:drawable="@drawable/asus_colorcircle_fod_anim_6_39" />
+    <item android:duration="16" android:drawable="@android:color/transparent" />
+</animation-list>

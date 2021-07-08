@@ -59,6 +59,11 @@ public class FODAnimation extends ImageView {
         R.drawable.fod_pureview_halo_ring_recognizing_anim,
         R.drawable.fod_pureview_molecular_recognizing_anim,
         R.drawable.fod_created_lotr_recognizing_anim,
+        R.drawable.fod_asus_colorcircle_fod_anim,
+        R.drawable.fod_asus_default_fod_anim,
+        R.drawable.fod_asus_force_fod_anim,
+        R.drawable.fod_asus_lighting_fod_anim,
+        R.drawable.fod_asus_takeoff_fod_anim,
     };
 
     public FODAnimation(Context context, int mPositionX, int mPositionY) {
