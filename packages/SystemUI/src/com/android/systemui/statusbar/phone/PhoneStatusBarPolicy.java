@@ -462,9 +462,7 @@ public class PhoneStatusBarPolicy
                 mResources.getString(R.string.accessibility_quick_settings_bluetooth_on);
         boolean bluetoothVisible = false;
         if (mBluetooth != null) {
-            if (mBluetooth.isBluetoothConnected()
-                    && (mBluetooth.isBluetoothAudioActive()
-                    || !mBluetooth.isBluetoothAudioProfileOnly())) {
+            if (mBluetooth.isBluetoothConnected()) {
                 int batteryLevel = mBluetooth.getBatteryLevel();
                 if (batteryLevel == 100) {
                     iconId = R.drawable.stat_sys_data_bluetooth_connected_battery_9;
