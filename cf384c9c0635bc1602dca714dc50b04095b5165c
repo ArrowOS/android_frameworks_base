@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a7c0b36b_f289b7ed",
+        "filename": "packages/SystemUI/res-keyguard/layout/digital_clock_fluidv2.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-07-12T23:52:45Z",
+      "side": 1,
+      "message": "space",
+      "revId": "cf384c9c0635bc1602dca714dc50b04095b5165c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e87835a9_0e0c2fe6",
+        "filename": "packages/SystemUI/res-keyguard/layout/digital_fluidv2_preview.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-07-12T23:52:45Z",
+      "side": 1,
+      "message": "space",
+      "revId": "cf384c9c0635bc1602dca714dc50b04095b5165c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
