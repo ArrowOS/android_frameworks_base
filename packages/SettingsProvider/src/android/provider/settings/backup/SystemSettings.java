@@ -89,7 +89,6 @@ public class SystemSettings {
         Settings.System.COLOR_BUCKET_OVERLAY,
         Settings.System.PROXIMITY_ON_WAKE,
         Settings.System.LOCKSCREEN_MEDIA_METADATA,
-        Settings.System.LOCKSCREEN_BATTERY_INFO,
         Settings.System.BATTERY_LIGHT_ENABLED,
         Settings.System.BATTERY_LIGHT_ALLOW_ON_DND,
         Settings.System.BATTERY_LIGHT_LOW_BLINKING,
