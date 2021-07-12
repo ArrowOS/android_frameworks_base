@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b011f796_80890b11",
+        "filename": "packages/SystemUI/res-keyguard/layout/android_s_big_clock.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-07-12T23:54:23Z",
+      "side": 1,
+      "message": "space",
+      "revId": "e5d40adf688bdf9d025614daabeda8120e0437fa",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4f324a92_476ebac0",
+        "filename": "packages/SystemUI/res-keyguard/layout/android_s_clock.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-07-12T23:54:23Z",
+      "side": 1,
+      "message": "space",
+      "revId": "e5d40adf688bdf9d025614daabeda8120e0437fa",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cbd71c65_4b42dbac",
+        "filename": "packages/SystemUI/res-keyguard/layout/android_s_dp3_clock.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-07-12T23:54:23Z",
+      "side": 1,
+      "message": "space",
+      "revId": "e5d40adf688bdf9d025614daabeda8120e0437fa",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
