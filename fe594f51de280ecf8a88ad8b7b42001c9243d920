@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1e74fd7a_90998cef",
+        "filename": "core/java/android/hardware/display/IColorDisplayManager.aidl",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 171
+      },
+      "writtenOn": "2021-07-13T18:27:47Z",
+      "side": 1,
+      "message": "Can remove this newline",
+      "revId": "fe594f51de280ecf8a88ad8b7b42001c9243d920",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "86a4b600_09d93b56",
+        "filename": "services/core/java/com/android/server/display/color/ColorBalanceTintController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 171
+      },
+      "writtenOn": "2021-07-13T18:27:47Z",
+      "side": 1,
+      "message": "I\u0027d not initialize the variable and just inline it in the setMatrix call",
+      "revId": "fe594f51de280ecf8a88ad8b7b42001c9243d920",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
