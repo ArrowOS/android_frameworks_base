@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8d3de6d2_e2a6dddb",
+        "filename": "core/java/android/hardware/display/IColorDisplayManager.aidl",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-07-17T17:11:27Z",
+      "side": 1,
+      "message": "seems like that on git",
+      "parentUuid": "1e74fd7a_90998cef",
+      "revId": "fe594f51de280ecf8a88ad8b7b42001c9243d920",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "86a4b600_09d93b56",
         "filename": "services/core/java/com/android/server/display/color/ColorBalanceTintController.java",
         "patchSetId": 1
