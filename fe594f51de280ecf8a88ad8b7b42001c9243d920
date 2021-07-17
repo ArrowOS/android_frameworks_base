@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "7a3a0e2f_cf39ea24",
+        "filename": "core/java/android/hardware/display/IColorDisplayManager.aidl",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 171
+      },
+      "writtenOn": "2021-07-17T17:17:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e168b0a9_b0e16903",
+      "revId": "fe594f51de280ecf8a88ad8b7b42001c9243d920",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "86a4b600_09d93b56",
         "filename": "services/core/java/com/android/server/display/color/ColorBalanceTintController.java",
         "patchSetId": 1
@@ -84,6 +102,24 @@
       "side": 1,
       "message": "Done",
       "parentUuid": "86a4b600_09d93b56",
+      "revId": "fe594f51de280ecf8a88ad8b7b42001c9243d920",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a4cb224a_7e6630f6",
+        "filename": "services/core/java/com/android/server/display/color/ColorBalanceTintController.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 171
+      },
+      "writtenOn": "2021-07-17T17:17:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8f4502e8_2dbc1547",
       "revId": "fe594f51de280ecf8a88ad8b7b42001c9243d920",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
       "unresolved": false
