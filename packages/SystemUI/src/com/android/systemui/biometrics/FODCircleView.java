@@ -152,6 +152,13 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
                 mBurnInProtectionTimer.cancel();
                 updatePosition();
             }
+
+            mParams.dimAmount = dreaming ? 1.0f : 0.0f;
+            if (getParent() == null) {
+                mWindowManager.addView(this, mParams);
+            } else {
+                mWindowManager.updateViewLayout(this, mParams);
+            }
         }
 
         @Override
