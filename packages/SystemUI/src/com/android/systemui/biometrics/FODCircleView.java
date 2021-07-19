@@ -101,6 +101,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
 
     private Handler mHandler;
 
+    private final ImageView mBaseView;
     private final ImageView mPressedView;
 
     private LockPatternUtils mLockPatternUtils;
@@ -151,6 +152,13 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
             } else if (mBurnInProtectionTimer != null) {
                 mBurnInProtectionTimer.cancel();
                 updatePosition();
+            }
+
+            mParams.dimAmount = dreaming ? 1.0f : 0.0f;
+            if (mBaseView.getParent() == null) {
+                mWindowManager.addView(mBaseView, mParams);
+            } else {
+                mWindowManager.updateViewLayout(mBaseView, mParams);
             }
         }
 
@@ -279,6 +287,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
 
         mParams.dimAmount = 0.0f;
 
+        mBaseView = this;
         mPressedView = new ImageView(context)  {
             @Override
             protected void onDraw(Canvas canvas) {
