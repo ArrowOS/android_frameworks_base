@@ -41,6 +41,7 @@ class Dimmer {
     private static final String TAG = "WindowManager";
     // This is in milliseconds.
     private static final int DEFAULT_DIM_ANIM_DURATION = 200;
+    private static int mDimDuration = DEFAULT_DIM_ANIM_DURATION;
 
     private class DimAnimatable implements SurfaceAnimator.Animatable {
         private SurfaceControl mDimLayer;
@@ -272,6 +273,12 @@ class Dimmer {
      */
 
     void dimBelow(SurfaceControl.Transaction t, WindowContainer container, float alpha) {
+        mDimDuration = DEFAULT_DIM_ANIM_DURATION;
+        dim(t, container, -1, alpha);
+    }
+
+    void dimBelow(SurfaceControl.Transaction t, WindowContainer container, float alpha, int duration) {
+        mDimDuration = duration;
         dim(t, container, -1, alpha);
     }
 

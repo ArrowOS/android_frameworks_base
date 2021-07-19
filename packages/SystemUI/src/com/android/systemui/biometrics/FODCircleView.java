@@ -29,6 +29,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.hardware.biometrics.BiometricSourceType;
+import android.hardware.display.AmbientDisplayConfiguration;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.UserHandle;
@@ -50,6 +51,9 @@ import com.android.keyguard.KeyguardUpdateMonitor;
 import com.android.keyguard.KeyguardUpdateMonitorCallback;
 import com.android.systemui.Dependency;
 import com.android.systemui.R;
+import com.android.systemui.arrow.ArrowSettingsService;
+import com.android.systemui.tuner.TunerService;
+import com.android.systemui.tuner.TunerService.Tunable;
 
 import vendor.lineage.biometrics.fingerprint.inscreen.V1_0.IFingerprintInscreen;
 import vendor.lineage.biometrics.fingerprint.inscreen.V1_0.IFingerprintInscreenCallback;
@@ -58,7 +62,8 @@ import java.util.NoSuchElementException;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FODCircleView extends ImageView {
+public class FODCircleView extends ImageView
+        implements ArrowSettingsService.ArrowSettingsObserver, Tunable {
     private final int mPositionX;
     private final int mPositionY;
     private final int mSize;
@@ -88,8 +93,12 @@ public class FODCircleView extends ImageView {
     private boolean mDozeEnabled;
     private boolean mScreenTurnedOn;
 
+    private boolean mIsBaseViewWithDim;
+    private boolean mIsPressedViewDimmed;
+
     private Handler mHandler;
 
+    private final ImageView mBaseView;
     private final ImageView mPressedView;
 
     private LockPatternUtils mLockPatternUtils;
@@ -114,6 +123,8 @@ public class FODCircleView extends ImageView {
 
     private KeyguardUpdateMonitor mUpdateMonitor;
 
+    private AmbientDisplayConfiguration mAmbientConfig;
+
     private KeyguardUpdateMonitorCallback mMonitorCallback = new KeyguardUpdateMonitorCallback() {
         @Override
         public void onDreamingStateChanged(boolean dreaming) {
@@ -126,6 +137,11 @@ public class FODCircleView extends ImageView {
             } else if (mBurnInProtectionTimer != null) {
                 mBurnInProtectionTimer.cancel();
                 updatePosition();
+            }
+
+            if (isScreenOffFodEnabled()) {
+                setBaseViewDim(dreaming ? 1.0f : 0.0f);
+                setDim(mIsPressedViewDimmed);
             }
         }
 
@@ -239,7 +255,9 @@ public class FODCircleView extends ImageView {
         mPressedParams.setTitle("Fingerprint on display.touched");
 
         mParams.dimAmount = 0.0f;
+        mParams.flags |= WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH;
 
+        mBaseView = this;
         mPressedView = new ImageView(context)  {
             @Override
             protected void onDraw(Canvas canvas) {
@@ -264,6 +282,11 @@ public class FODCircleView extends ImageView {
         mUpdateMonitor.registerCallback(mMonitorCallback);
 
         mFODAnimation = new FODAnimation(context, mPositionX, mPositionY);
+
+        mAmbientConfig = new AmbientDisplayConfiguration(mContext);
+
+        Dependency.get(ArrowSettingsService.class).addIntObserver(this, "screen_off_fod");
+        Dependency.get(TunerService.class).addTunable(this, Settings.Secure.DOZE_ALWAYS_ON);
     }
 
     private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
@@ -316,6 +339,15 @@ public class FODCircleView extends ImageView {
             return true;
         } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
             return true;
+        } else if (event.getAction() == MotionEvent.ACTION_OUTSIDE) {
+            if (mIsDreaming && isScreenOffFodEnabled()) {
+                setBaseViewDim(0.0f);
+                mHandler.postDelayed(() -> {
+                    if (mIsDreaming) {
+                        setBaseViewDim(1.0f);
+                    }
+                }, 5000);
+            }
         }
 
         mHandler.post(() -> mFODAnimation.hideFODanimation());
@@ -326,6 +358,28 @@ public class FODCircleView extends ImageView {
     public void onConfigurationChanged(Configuration newConfig) {
         updateStyle();
         updatePosition();
+    }
+
+    @Override
+    public void onIntSettingChanged(String key, Integer newValue) {
+         switch(key) {
+             case Settings.Secure.DOZE_ALWAYS_ON:
+                 if (newValue == 0) {
+                     Settings.System.putInt(mContext.getContentResolver(), "screen_off_fod", 0);
+                 }
+                 break;
+             case "screen_off_fod":
+                 if ((newValue == 1) && !mAmbientConfig.alwaysOnEnabled(UserHandle.USER_CURRENT)) {
+                      Settings.Secure.putInt(mContext.getContentResolver(),
+                          Settings.Secure.DOZE_ALWAYS_ON, 1);
+                 }
+                 break;
+         }
+    }
+
+    @Override
+    public void onTuningChanged(String key, String newValue) {
+        onIntSettingChanged(key, Integer.parseInt(newValue));
     }
 
     public IFingerprintInscreen getFingerprintInScreenDaemon() {
@@ -497,6 +551,7 @@ public class FODCircleView extends ImageView {
     }
 
     private void setDim(boolean dim) {
+        mIsPressedViewDimmed = dim;
         if (dim) {
             int curBrightness = Settings.System.getInt(getContext().getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS, 100);
@@ -514,7 +569,7 @@ public class FODCircleView extends ImageView {
                 mPressedParams.screenBrightness = 1.0f;
             }
 
-            mPressedParams.dimAmount = dimAmount / 255.0f;
+            mPressedParams.dimAmount = (mIsDreaming && mIsBaseViewWithDim) ? 1.0f : (dimAmount / 255.0f);
             if (mPressedView.getParent() == null) {
                 mWindowManager.addView(mPressedView, mPressedParams);
             } else {
@@ -543,6 +598,20 @@ public class FODCircleView extends ImageView {
         }
 
         return false;
+    }
+
+    private void setBaseViewDim(float dimAmount) {
+        mIsBaseViewWithDim = (dimAmount != 0.0f);
+        mParams.dimAmount = dimAmount;
+        if (mBaseView.getParent() == null) {
+            mWindowManager.addView(mBaseView, mParams);
+        } else {
+            mWindowManager.updateViewLayout(mBaseView, mParams);
+        }
+    }
+
+    private boolean isScreenOffFodEnabled() {
+        return (Settings.System.getInt(mContext.getContentResolver(), "screen_off_fod", 0) == 1);
     }
 
     private class BurnInProtectionTask extends TimerTask {

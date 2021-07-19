@@ -5355,7 +5355,11 @@ class WindowState extends WindowContainer<WindowState> implements WindowManagerP
             // 3. The WS is considered visible according to the isVisible() method
             // 4. The WS is not hidden.
             mIsDimming = true;
-            getDimmer().dimBelow(getSyncTransaction(), this, mAttrs.dimAmount);
+            if (mAttrs.getTitle() != "Fingerprint on display") {
+                getDimmer().dimBelow(getSyncTransaction(), this, mAttrs.dimAmount);
+            } else {
+                getDimmer().dimBelow(getSyncTransaction(), this, mAttrs.dimAmount, 0);
+            }
         }
     }
 
