@@ -88,11 +88,15 @@ public class FODCircleView extends ImageView {
     private boolean mDozeEnabled;
     private boolean mScreenTurnedOn;
 
+    private boolean mIsBaseViewWithDim;
+    private boolean mIsPressedViewDimmed;
+
     private PowerManager mPowerManager;
     private PowerManager.WakeLock mWakeLock;
 
     private Handler mHandler;
 
+    private final ImageView mBaseView;
     private final ImageView mPressedView;
 
     private LockPatternUtils mLockPatternUtils;
@@ -130,6 +134,9 @@ public class FODCircleView extends ImageView {
                 mBurnInProtectionTimer.cancel();
                 updatePosition();
             }
+
+            setBaseViewDim(dreaming ? 1.0f : 0.0f);
+            setDim(mIsPressedViewDimmed);
         }
 
         @Override
@@ -246,7 +253,9 @@ public class FODCircleView extends ImageView {
         mPressedParams.setTitle("Fingerprint on display.touched");
 
         mParams.dimAmount = 0.0f;
+        mParams.flags |= WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH;
 
+        mBaseView = this;
         mPressedView = new ImageView(context)  {
             @Override
             protected void onDraw(Canvas canvas) {
@@ -323,6 +332,15 @@ public class FODCircleView extends ImageView {
             return true;
         } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
             return true;
+        } else if (event.getAction() == MotionEvent.ACTION_OUTSIDE) {
+            if (mIsDreaming) {
+                setBaseViewDim(0.0f);
+                mHandler.postDelayed(() -> {
+                    if (mIsDreaming) {
+                        setBaseViewDim(1.0f);
+                    }
+                }, 5000);
+            }
         }
 
         mHandler.post(() -> mFODAnimation.hideFODanimation());
@@ -504,6 +522,7 @@ public class FODCircleView extends ImageView {
     }
 
     private void setDim(boolean dim) {
+        mIsPressedViewDimmed = dim;
         if (dim) {
             int curBrightness = Settings.System.getInt(getContext().getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS, 100);
@@ -521,7 +540,7 @@ public class FODCircleView extends ImageView {
                 mPressedParams.screenBrightness = 1.0f;
             }
 
-            mPressedParams.dimAmount = dimAmount / 255.0f;
+            mPressedParams.dimAmount = (mIsDreaming && mIsBaseViewWithDim) ? 1.0f : (dimAmount / 255.0f);
             if (mPressedView.getParent() == null) {
                 mWindowManager.addView(mPressedView, mPressedParams);
             } else {
@@ -550,6 +569,16 @@ public class FODCircleView extends ImageView {
         }
 
         return false;
+    }
+
+    private void setBaseViewDim(float dimAmount) {
+        mIsBaseViewWithDim = (dimAmount != 0.0f);
+        mParams.dimAmount = dimAmount;
+        if (mBaseView.getParent() == null) {
+            mWindowManager.addView(mBaseView, mParams);
+        } else {
+            mWindowManager.updateViewLayout(mBaseView, mParams);
+        }
     }
 
     private class BurnInProtectionTask extends TimerTask {
