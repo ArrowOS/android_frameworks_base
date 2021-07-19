@@ -4875,12 +4875,6 @@ public final class Settings {
          * the setting value. See an example above.
          */
 
-         /**
-         * Screen off fod
-         * @hide
-         */
-        public static final String FOD_GESTURE = "fod_gesture";
-
         /**
          * Set edge gesture Y dead zone
          * 0 - disabled - stock behavior - default
