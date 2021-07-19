@@ -277,7 +277,7 @@ public class FODCircleView extends ImageView implements TunerService.Tunable {
         mParams.setTitle("Fingerprint on display");
         mPressedParams.setTitle("Fingerprint on display.touched");
 
-        mParams.dimAmount = 0.0f;
+        mParams.dimAmount = 1.0f;
 
         mPressedView = new ImageView(context)  {
             @Override
