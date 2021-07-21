@@ -80,12 +80,12 @@
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Toque para eliminar o arrastre para reorganizar los iconos</string>
     <string name="drag_or_touch_to_add_tiles">Toque o arrastre para añadir iconos</string>
-    <string name="customize_settings_info_text">el número de columnas se limitará al espacio disponible</string>
+    <string name="customize_settings_info_text"><b>Nota:</b> el número de columnas se limitará al espacio disponible.</string>
     <string name="customize_show_labels">Etiquetas</string>
     <string name="customize_quickbar_sync">Sincronizar</string>
     <string name="customize_quickbar_label">Acesso Rápido</string>
-    <string name="customize_columns_land_label">Modo horizontal</string>
-    <string name="customize_columns_port_label">Modo vertical</string>
+    <string name="customize_columns_land_label">Apaisada</string>
+    <string name="customize_columns_port_label">Retrato</string>
     <!-- Screenrecord QS tile -->
     <string name="screenrecord_stopdot_label">Mostrar punto para detener grabación.\nPulsación larga para moverlo</string>
     <string name="screenrecord_lowquality_label">Menor calidad para un tamaño de archivo más pequeño</string>

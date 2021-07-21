@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;잠금해제</string>
     <string name="applock_unlock">잠금해제</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">미디어 재생기가 숨겨졌을때 보다 많은 행 사용</string>
 </resources>

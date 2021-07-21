@@ -32,8 +32,8 @@
     <!-- Advanced restart -->
     <string name="global_action_reboot">மறுதுவக்கம்</string>
     <string name="global_action_reboot_system">முறைமை</string>
-    <string name="global_action_reboot_progress">மறுத்துவக்குகிறது\u2026</string>
-    <string name="global_action_reboot_recovery">மீட்டல்</string>
+    <string name="global_action_reboot_progress">மறுதுவக்குகிறது\u2026</string>
+    <string name="global_action_reboot_recovery">மீட்டெடுப்பு</string>
     <string name="global_action_reboot_recovery_progress">மீட்டெடுப்பிற்கு மறுத்துவக்குகிரது\u2026</string>
     <string name="global_action_reboot_hot">சுடச்சுட</string>
     <string name="global_action_reboot_bootloader">துவக்கேற்றி</string>
@@ -105,5 +105,5 @@
     <string name="applock_credential">&#160;பூட்டவிற்க</string>
     <string name="applock_unlock">பூட்டவிழ்</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <string name="qs_less_rows">ஊடக இயக்கி மறைந்தால் கூடுதல் வரிசைகளை பயன்படுத்து</string>
 </resources>
