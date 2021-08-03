@@ -538,11 +538,6 @@ public final class ColorDisplayService extends SystemService {
         if (mDisplayWhiteBalanceTintController.isAvailable(getContext())) {
             updateDisplayWhiteBalanceStatus();
         }
-
-        if (mColorBalanceTintController.isAvailable(getContext())) {
-            mColorBalanceTintController.setUp(getContext(),
-                    DisplayTransformManager.needsLinearColorMatrix(mode));
-        }
     }
 
     private void onAccessibilityActivated() {
