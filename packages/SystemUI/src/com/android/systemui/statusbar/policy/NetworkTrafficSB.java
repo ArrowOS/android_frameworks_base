@@ -180,7 +180,7 @@ public class NetworkTrafficSB extends NetworkTraffic implements DarkReceiver, St
         int cutoutResId = context.getResources().getIdentifier("config_mainBuiltInDisplayCutout",
                 "string", "android");
         if (cutoutResId > 0) {
-            return context.getResources().getString(cutoutResId).equals("");
+            return !context.getResources().getString(cutoutResId).equals("");
         }
 
         return true;
