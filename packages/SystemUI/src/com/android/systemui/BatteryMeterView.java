@@ -226,6 +226,7 @@ public class BatteryMeterView extends LinearLayout implements
     public void setPercentShowMode(@BatteryPercentMode int mode) {
         mShowPercentMode = mode;
         updateShowPercent();
+        updatePercentText();
     }
 
     /**

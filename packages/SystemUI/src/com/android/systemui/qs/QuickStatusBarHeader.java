@@ -16,6 +16,7 @@ package com.android.systemui.qs;
 
 import static android.app.StatusBarManager.DISABLE2_QUICK_SETTINGS;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+import static android.provider.Settings.System.QS_SHOW_BATTERY_PERCENT;
 
 import static com.android.systemui.util.InjectionInflationController.VIEW_CONTEXT;
 
@@ -32,6 +33,7 @@ import android.graphics.Rect;
 import android.media.AudioManager;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.UserHandle;
 import android.provider.AlarmClock;
 import android.provider.Settings;
 import android.service.notification.ZenModeConfig;
@@ -305,6 +307,7 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         // Tint for the battery icons are handled in setupHost()
         mBatteryRemainingIcon = findViewById(R.id.batteryRemainingIcon);
         mBatteryRemainingIcon.setIsQsHeader(true);
+        mBatteryRemainingIcon.setPercentShowMode(getBatteryPercentMode());
         mRingerModeTextView.setSelected(true);
         mNextAlarmTextView.setSelected(true);
         Dependency.get(TunerService.class).addTunable(this,
@@ -505,6 +508,18 @@ public class QuickStatusBarHeader extends RelativeLayout implements
         mPrivacyChipAlphaAnimator = new TouchAnimator.Builder()
                 .addFloat(mPrivacyChip, "alpha", 1, 0, 1)
                 .build();
+    }
+
+    private int getBatteryPercentMode() {
+        boolean showBatteryPercent = Settings.System
+                .getIntForUser(getContext().getContentResolver(),
+                QS_SHOW_BATTERY_PERCENT, 0, UserHandle.USER_CURRENT) == 1;
+        return showBatteryPercent ?
+               BatteryMeterView.MODE_ON : BatteryMeterView.MODE_ESTIMATE;
+    }
+
+    public void setBatteryPercentMode() {
+        mBatteryRemainingIcon.setPercentShowMode(getBatteryPercentMode());
     }
 
     public void setExpanded(boolean expanded) {
