@@ -5147,6 +5147,14 @@ public final class Settings {
          */
         public static final String QS_TILE_TITLE_VISIBILITY = "qs_tile_title_visibility";
 
+        /**
+         * Setting to determine whether or not to show the battery percentage in the qs status bar header.
+         *    0 - Show remaining time
+         *    1 - Show percentage
+         * @hide
+         */
+        public static final String QS_SHOW_BATTERY_PERCENT = "qs_header_show_battery_percent";
+
        /**
          * Should we listen for fingerprints when the screen is off?  Devices
          * with a rear-mounted sensor want this, but certain devices have
