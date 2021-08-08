@@ -216,6 +216,7 @@ public class BatteryMeterView extends LinearLayout implements
         if (mode == mShowPercentMode) return;
         mShowPercentMode = mode;
         updateShowPercent();
+        updatePercentText();
     }
 
     public void setColorsFromContext(Context context) {
