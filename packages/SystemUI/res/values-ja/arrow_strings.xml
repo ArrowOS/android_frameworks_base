@@ -38,8 +38,8 @@
     <string name="global_action_reboot_hot">ホット</string>
     <string name="global_action_reboot_bootloader">ブートローダー</string>
     <string name="global_action_reboot_bootloader_progress">ブートローダーへ再起動中\u2026</string>
-    <string name="global_action_reboot_fastboot">ファストブート</string>
-    <string name="global_action_reboot_fastboot_progress">ファストブートへ再起動中\u2026</string>
+    <string name="global_action_reboot_fastboot">Fastbootd</string>
+    <string name="global_action_reboot_fastboot_progress">Fastbootd へ再起動中\u2026</string>
     <string name="global_action_settings">設定</string>
     <string name="global_action_screenshot">スクリーンショット</string>
     <string name="global_action_screenrecord">画面録画</string>
@@ -106,4 +106,21 @@
     <string name="applock_unlock">ロック解除</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">メディアプレーヤーが非表示な時は追加の行を使用する</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">充電時の AOD</string>
+    <string name="quick_settings_aod_off_label">AOD OFF</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD OFF\nバッテリー節約</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">同期</string>
+    <string name="accessibility_quick_settings_sync_off">同期 OFF</string>
+    <string name="accessibility_quick_settings_sync_on">同期 ON</string>
+    <string name="accessibility_quick_settings_sync_changed_off">同期を OFF にしました</string>
+    <string name="accessibility_quick_settings_sync_changed_on">同期を ON にしました</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">アンビエント表示</string>
+    <string name="accessibility_quick_settings_ambient_display_off">アンビエント表示 OFF</string>
+    <string name="accessibility_quick_settings_ambient_display_on">アンビエント表示 ON</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">アンビエント表示を OFF にしました</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">アンビエント表示を ON にしました</string>
 </resources>

@@ -106,4 +106,21 @@
     <string name="applock_unlock">Разблокировать</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">Показывать больше строк плиток, когда медиаплеер скрыт</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">AOD при зарядке</string>
+    <string name="quick_settings_aod_off_label">AOD выкл</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD выкл\nЭкономия заряда</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Синхронизация</string>
+    <string name="accessibility_quick_settings_sync_off">Синхронизация выкл.</string>
+    <string name="accessibility_quick_settings_sync_on">Синхронизация вкл.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Синхронизация выключена.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Синхронизация включена.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Индикация событий</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Индикация событий выкл.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Индикация событий вкл.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Индикация событий выключена.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Индикация событий включена.</string>
 </resources>

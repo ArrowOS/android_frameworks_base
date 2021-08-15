@@ -27,4 +27,8 @@
     <string name="permgroupdesc_fake_package_signature">paket imzasını taklit etmeye izin ver</string>
     <!-- Message shown to the user when the apps requests permission from this group. If ever possible this should stay below 80 characters (assuming the parameters takes 20 characters). Don't abbreviate until the message reaches 120 characters though. [CHAR LIMIT=120] -->
     <string name="permgrouprequest_fake_package_signature">&lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; uygulamasının imza taklit etmesine izin verilsin mi?</string>
+    <!-- Button that copies the url to the log of a crashed application -->
+    <string name="aerr_copy">Çökme günlüğü URL\' sini kopyala</string>
+    <string name="url_copy_success">URL başarıyla kopyalandı</string>
+    <string name="url_copy_failed">Günlük katbin\'e yüklenirken bir hata oluştu</string>
 </resources>

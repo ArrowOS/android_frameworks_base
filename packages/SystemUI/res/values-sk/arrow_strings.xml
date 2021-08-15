@@ -106,4 +106,21 @@
     <string name="applock_unlock">Odomknúť</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">Použiť viac riadkov, keď je skrytý prehrávač médií</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">AOD pri nabíjaní</string>
+    <string name="quick_settings_aod_off_label">AOD vyp.</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD vyp.\nŠetrenie batérie</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Synchronizácia</string>
+    <string name="accessibility_quick_settings_sync_off">Synchronizácia vyp.</string>
+    <string name="accessibility_quick_settings_sync_on">Synchronizácia zap.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Synchronizácia bola vypnutá.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Synchronizácia bola zapnutá.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambientne zobrazenie</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambientne zobrazenie vypnuté.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambientné zobrazenie zapnuté.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambientne zobrazenie je vypnuté.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambientne zobrazenie je zapnuté.</string>
 </resources>

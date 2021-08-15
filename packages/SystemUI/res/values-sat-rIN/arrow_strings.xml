@@ -54,7 +54,7 @@
     <string name="accessibility_quick_settings_caffeine_off">ᱠᱟᱹᱯᱷᱮᱭᱱ ᱵᱚᱸᱫ</string>
     <string name="accessibility_quick_settings_caffeine_on">ᱠᱟᱹᱯᱷᱮᱭᱱ ᱮᱢ ᱪᱷᱚ</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">ᱰᱟᱴᱟ ᱠᱟᱰ ᱛᱮ ᱪᱟᱞᱟᱜ ᱢᱮᱸ</string>
+    <string name="qs_data_switch_label">ᱰᱟᱴᱟ ᱠᱟᱰ ᱛᱮ ᱪᱟᱞᱟᱜ ᱢᱮ</string>
     <string name="qs_data_switch_toast_0">ᱱᱤᱛᱚᱜ ᱚᱠᱟ SIM ᱠᱟᱰ ᱵᱟᱝ ᱠᱷᱟᱹᱲ ᱟᱠᱟᱱᱟ</string>
     <string name="qs_data_switch_toast_1">ᱱᱤᱛᱚᱜ ᱫᱚ ᱠᱷᱟᱹᱞᱤ ᱢᱤᱫᱴᱟᱹᱝ SIM ᱠᱟᱰ ᱜᱮ ᱠᱷᱟᱹᱲ ᱟᱠᱟᱱᱟ</string>
     <string name="qs_data_switch_changed_1">ᱢᱚᱵᱟᱭᱤᱞ ᱰᱟᱴᱟ ᱞᱲᱹᱜᱤᱫᱽ SIM ᱑ ᱵᱮᱵᱷᱟᱨᱚᱜ ᱠᱟᱱᱟ</string>
@@ -87,7 +87,7 @@
     <string name="customize_columns_land_label">ᱞᱮᱱᱰᱥᱠᱮᱯ</string>
     <string name="customize_columns_port_label">ᱯᱚᱴᱨᱮᱴ</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">ᱵᱚᱸᱫ ᱰᱚᱴ ᱫᱮᱠᱷᱟᱣ\nᱩᱪᱟᱹᱲ ᱞᱟᱹᱜᱤᱫ ᱡᱩᱨ ᱚᱛᱟᱭ ᱢᱮᱸ</string>
+    <string name="screenrecord_stopdot_label">ᱵᱚᱸᱫ ᱰᱚᱴ ᱫᱮᱠᱷᱟᱣ\nᱩᱪᱟᱹᱲ ᱞᱟᱹᱜᱤᱫ ᱡᱩᱨ ᱚᱛᱟᱭ ᱢᱮ</string>
     <string name="screenrecord_lowquality_label">ᱠᱟᱹᱴᱤᱡ ᱨᱮᱫ ᱢᱟᱯ ᱞᱟᱹᱜᱤᱫ ᱠᱚᱢ ᱠᱣᱟᱞᱤᱴᱭ</string>
     <!-- QS brightness customization -->
     <string name="customize_brightness_slider">ᱡᱷᱟᱞᱠᱟᱣ ᱥᱞᱟᱭᱰᱟᱹᱨ</string>
@@ -106,4 +106,21 @@
     <string name="applock_unlock">Unlock</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
+    <string name="quick_settings_aod_off_label">AOD off</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambient display</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
 </resources>

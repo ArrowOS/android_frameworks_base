@@ -106,4 +106,21 @@
     <string name="applock_unlock">Desbloquear</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">Use mais linhas quando o media player estiver oculto</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Sempre em exibição</string>
+    <string name="quick_settings_aod_on_charge_label">Sempre em exibição ao carregar</string>
+    <string name="quick_settings_aod_off_label">Sempre em exibição desativado</string>
+    <string name="quick_settings_aod_off_powersave_label">Sempre em exibição desativado\nEconomia de bateria</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Sincronização</string>
+    <string name="accessibility_quick_settings_sync_off">Sincronização desativada.</string>
+    <string name="accessibility_quick_settings_sync_on">Sincronização ativada.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">A sincronização foi desativada.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">A sincronização foi ativada.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Tela ambiente</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Tela ambiente desativada.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Tela ambiente ativada.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">A tela ambiente foi desativada.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">A tela ambiente foi ativada.</string>
 </resources>

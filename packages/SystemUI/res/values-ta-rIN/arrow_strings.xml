@@ -16,7 +16,7 @@
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
     <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • டாஷ் மின்னேற்றம் (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> முழு வரை)</string>
     <string name="keyguard_plugged_in_dash_charging">டாஷ் மின்னேற்றம்</string>
-    <string name="statusbar_items_title">நிலைப்பட்டி சின்னம்</string>
+    <string name="statusbar_items_title">நிலைப்பட்டி படவுருக்கள்</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
@@ -28,7 +28,7 @@
     <string name="accessibility_quick_settings_heads_up_changed_off">கண்ணோட்ட அறிவிப்புகள் அணைக்கப்பட்டது.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">கண்ணோட்ட அறிவிப்புகள் இயக்கப்பட்டது.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">உ தொ பே இணைப்பு முறை</string>
+    <string name="quick_settings_usb_tether_label">யுஎஸ்பி டெதெரிங்</string>
     <!-- Advanced restart -->
     <string name="global_action_reboot">மறுதுவக்கம்</string>
     <string name="global_action_reboot_system">முறைமை</string>
@@ -106,4 +106,21 @@
     <string name="applock_unlock">பூட்டவிழ்</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">ஊடக இயக்கி மறைந்தால் கூடுதல் வரிசைகளை பயன்படுத்து</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
+    <string name="quick_settings_aod_off_label">AOD off</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambient display</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
 </resources>

@@ -106,4 +106,21 @@
     <string name="applock_unlock">解锁</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">当媒体播放器被隐藏时使用更多行</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">息屏显示</string>
+    <string name="quick_settings_aod_on_charge_label">在充电时显示息屏显示</string>
+    <string name="quick_settings_aod_off_label">息屏显示已关闭</string>
+    <string name="quick_settings_aod_off_powersave_label">息屏显示已关闭\n省电模式</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">同步</string>
+    <string name="accessibility_quick_settings_sync_off">同步关闭</string>
+    <string name="accessibility_quick_settings_sync_on">同步开启</string>
+    <string name="accessibility_quick_settings_sync_changed_off">同步已关闭</string>
+    <string name="accessibility_quick_settings_sync_changed_on">同步已开启</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">主动显示</string>
+    <string name="accessibility_quick_settings_ambient_display_off">主动显示关闭</string>
+    <string name="accessibility_quick_settings_ambient_display_on">主动显示开启</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">主动显示已关闭</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">主动显示已开启</string>
 </resources>

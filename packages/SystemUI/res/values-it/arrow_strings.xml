@@ -106,4 +106,21 @@
     <string name="applock_unlock">Sblocca</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">Usa più righe quando il lettore multimediale è nascosto</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">Schermo sempre attivo</string>
+    <string name="quick_settings_aod_on_charge_label">Schermo sempre attivo durante la ricarica</string>
+    <string name="quick_settings_aod_off_label">Schermo sempre attivo disattivato</string>
+    <string name="quick_settings_aod_off_powersave_label">Schermo sempre attivo durante risparmio energia</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Sincronizzazione</string>
+    <string name="accessibility_quick_settings_sync_off">Sincronizzazione disattivata.</string>
+    <string name="accessibility_quick_settings_sync_on">Sincronizzazione attivata.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sincronizzazione disattivata.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sincronizzazione attivata.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambient Display</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambient display disattivato.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambient Display acceso.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display disattivato.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient Display attivato.</string>
 </resources>

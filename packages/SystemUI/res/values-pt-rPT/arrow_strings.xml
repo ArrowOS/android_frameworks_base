@@ -14,7 +14,7 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • A carregar rápido (<xliff:g id="charging_time_left" example="4 horas e 2 minutos">%s</xliff:g> até carga máx.)</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Carreg. rápido (<xliff:g id="charging_time_left" example="4 horas e 2 minutos">%s</xliff:g> até à carga máx.)</string>
     <string name="keyguard_plugged_in_dash_charging">Carregamento Rápido</string>
     <string name="statusbar_items_title">Ícones na barra de estado</string>
     <!-- Name of the volte status bar icon. -->
@@ -33,7 +33,7 @@
     <string name="global_action_reboot">Reiniciar</string>
     <string name="global_action_reboot_system">Sistema</string>
     <string name="global_action_reboot_progress">Reiniciar\u2026</string>
-    <string name="global_action_reboot_recovery">Modo recuperação</string>
+    <string name="global_action_reboot_recovery">Recuperação</string>
     <string name="global_action_reboot_recovery_progress">A reiniciar no modo de recuperação\u2026</string>
     <string name="global_action_reboot_hot">Quente</string>
     <string name="global_action_reboot_bootloader">Bootloader</string>
@@ -41,13 +41,13 @@
     <string name="global_action_reboot_fastboot">Fastbootd</string>
     <string name="global_action_reboot_fastboot_progress">A reiniciar para no modo de fastbootd\u2026</string>
     <string name="global_action_settings">Definições</string>
-    <string name="global_action_screenshot">Captura de Ecrã</string>
+    <string name="global_action_screenshot">Capt. de Ecrã</string>
     <string name="global_action_screenrecord">Gravador de ecrã</string>
     <string name="global_action_flashlight">Lanterna</string>
     <!-- Label for current user in power menu options dialog -->
     <string name="global_action_current_user">Actual</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Captura de Ecrã</string>
+    <string name="quick_settings_screenshot_label">Capt. de Ecrã</string>
     <string name="quick_settings_region_screenshot_label">Captura parcial de ecrã</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Cafeína</string>
@@ -106,4 +106,21 @@
     <string name="applock_unlock">Desbloquear</string>
     <!-- QS media player customization -->
     <string name="qs_less_rows">Use mais linhas quando o media player estiver oculto</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">AOD ao carregar</string>
+    <string name="quick_settings_aod_off_label">AOD desligado</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD desligado\nPoupança de bateria</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Sincronizar</string>
+    <string name="accessibility_quick_settings_sync_off">Sincronização desativada.</string>
+    <string name="accessibility_quick_settings_sync_on">Sincronização ativada.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">A sincronização foi desactivada.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">A sincronização foi ativada.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ecrã ambiente</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ecrã ambiente desligado.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ecrã ambiente ligado.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ecrã ambiente foi desligado.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ecrã ambiente foi ligado.</string>
 </resources>
