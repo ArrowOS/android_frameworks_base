@@ -107,20 +107,20 @@
     <!-- QS media player customization -->
     <string name="qs_less_rows">Χρήση περισσότερων γραμμών όταν το πρόγραμμα αναπαραγωγής πολυμέσων είναι κρυμμένο</string>
     <!-- AOD QS tile -->
-    <string name="quick_settings_aod_label">AOD</string>
-    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
-    <string name="quick_settings_aod_off_label">AOD off</string>
-    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <string name="quick_settings_aod_label">Οθόνη Πάντα Ενεργή</string>
+    <string name="quick_settings_aod_on_charge_label">AOD κατά την φόρτιση</string>
+    <string name="quick_settings_aod_off_label">AOD ανενεργή</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD ανενεργή\nΕξοικονόμηση μπαταρίας</string>
     <!-- Sync QS tile -->
-    <string name="quick_settings_sync_label">Sync</string>
-    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
-    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <string name="quick_settings_sync_label">Συγχρονισμός</string>
+    <string name="accessibility_quick_settings_sync_off">Συγχρονισμός ανενεργός.</string>
+    <string name="accessibility_quick_settings_sync_on">Συγχρονισμός ενεργός.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Ο συγχρονισμός απενεργοποιήθηκε.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Ο συγχρονισμός ενεργοποιήθηκε.</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <string name="quick_settings_ambient_display_label">Οθόνη περιβάλλοντος</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Οθόνη περιβάλλοντος ανενεργή.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Οθόνη περιβάλλοντος ενεργή.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Η οθόνη περιβάλλοντος απενεργοποιήθηκε.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">H oθόνη περιβάλλοντος ενεργοποιήθηκε.</string>
 </resources>

@@ -105,7 +105,7 @@
     <string name="applock_credential">&#160;でロック解除</string>
     <string name="applock_unlock">ロック解除</string>
     <!-- QS media player customization -->
-    <string name="qs_less_rows">メディアプレーヤーが非表示な時は追加の行を使用する</string>
+    <string name="qs_less_rows">メディアプレイヤーが非表示な時は追加の行を使用する</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">AOD</string>
     <string name="quick_settings_aod_on_charge_label">充電時の AOD</string>

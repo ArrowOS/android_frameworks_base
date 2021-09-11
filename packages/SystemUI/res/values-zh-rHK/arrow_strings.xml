@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2020 ArrowOS
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the volte status bar icon. -->
+    <string name="status_bar_volte">VoLTE</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Peek notifications</string>
+    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <!-- Advanced restart -->
+    <string name="global_action_reboot">Restart</string>
+    <string name="global_action_reboot_system">System</string>
+    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_recovery">Recovery</string>
+    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_fastboot">Fastbootd</string>
+    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_settings">Settings</string>
+    <string name="global_action_screenshot">Screenshot</string>
+    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_flashlight">Flashlight</string>
+    <!-- Label for current user in power menu options dialog -->
+    <string name="global_action_current_user">Current</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Screenshot</string>
+    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
+    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
+    <!-- Omni Weather -->
+    <string name="omnijaws_service_error">Error</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
+    <!-- Reboot/Recovery QS tile -->
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <!-- QS config customization -->
+    <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
+    <string name="drag_or_touch_to_add_tiles">Touch or drag to add tiles</string>
+    <string name="customize_settings_info_text"><b>Note:</b> columns will be limited automatically for available space.</string>
+    <string name="customize_show_labels">Labels</string>
+    <string name="customize_quickbar_sync">Sync</string>
+    <string name="customize_quickbar_label">Quickbar</string>
+    <string name="customize_columns_land_label">Landscape</string>
+    <string name="customize_columns_port_label">Portrait</string>
+    <!-- Screenrecord QS tile -->
+    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
+    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <!-- QS brightness customization -->
+    <string name="customize_brightness_slider">brightness slider</string>
+    <string name="customize_brightness_icon">brightness icon</string>
+    <string name="customize_brightness_slider_hide">hide</string>
+    <string name="customize_brightness_slider_expanded">expanded</string>
+    <string name="customize_brightness_slider_quick">quick</string>
+    <!-- Biometric Dialog - Use Face -->
+    <string name="biometric_dialog_button_use_face">Use Face</string>
+    <!-- App Lock -->
+    <string name="applock_locked">&#160;is locked</string>
+    <string name="applock_fingerprint_face">, fingerprint or your face to unlock</string>
+    <string name="applock_face">&#160;or your face to unlock</string>
+    <string name="applock_fingerprint">&#160;or your fingerprint to unlock</string>
+    <string name="applock_credential">&#160;to unlock</string>
+    <string name="applock_unlock">Unlock</string>
+    <!-- QS media player customization -->
+    <string name="qs_less_rows">Use more rows when media player is hidden</string>
+    <!-- AOD QS tile -->
+    <string name="quick_settings_aod_label">AOD</string>
+    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
+    <string name="quick_settings_aod_off_label">AOD off</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <!-- Sync QS tile -->
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambient display</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+</resources>

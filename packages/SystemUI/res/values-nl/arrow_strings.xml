@@ -108,19 +108,19 @@
     <string name="qs_less_rows">Gebruik meer rijen als mediaspeler verborgen is</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">AOD</string>
-    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
-    <string name="quick_settings_aod_off_label">AOD off</string>
-    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <string name="quick_settings_aod_on_charge_label">AOD bij opladen</string>
+    <string name="quick_settings_aod_off_label">AOD uit</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD uit\nBatterijbesparing</string>
     <!-- Sync QS tile -->
     <string name="quick_settings_sync_label">Sync</string>
-    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
-    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <string name="accessibility_quick_settings_sync_off">Synchr. uit.</string>
+    <string name="accessibility_quick_settings_sync_on">Sync aan.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Synchr. uitgeschakeld.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Synchr. ingeschakeld.</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <string name="quick_settings_ambient_display_label">Omgevingsscherm</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Omgevingsscherm uit.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Omgevingsscherm aan.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Omgevingsscherm uitgeschakeld.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Omgevingsscherm ingeschakeld.</string>
 </resources>

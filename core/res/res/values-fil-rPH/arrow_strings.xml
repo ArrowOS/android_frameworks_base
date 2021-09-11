@@ -18,18 +18,18 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permlab_fakePackageSignature">Gefälschte Paketsignatur</string>
+    <string name="permlab_fakePackageSignature">Spoof package signature</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Erlaubt einer App, sich als eine Andere auszugeben. Böswillige Anwendungen könnten dadurch Zugriff auf private Anwendungsdaten erhalten. Zu den legitimen Verwendungen gehört ein Emulator, der vorgibt, das zu sein, was es emuliert. Erteilen Sie diese Berechtigung nur mit Vorsicht!</string>
+    <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Legitimate uses include an emulator pretending to be what it emulates. Grant this permission with caution only!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permgrouplab_fake_package_signature">Paketsignatur imitieren</string>
+    <string name="permgrouplab_fake_package_signature">Spoof package signature</string>
     <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permgroupdesc_fake_package_signature">erlauben, die Paketsignatur vorzutäuschen</string>
+    <string name="permgroupdesc_fake_package_signature">allow to spoof package signature</string>
     <!-- Message shown to the user when the apps requests permission from this group. If ever possible this should stay below 80 characters (assuming the parameters takes 20 characters). Don't abbreviate until the message reaches 120 characters though. [CHAR LIMIT=120] -->
-    <string name="permgrouprequest_fake_package_signature">Erlaube
-        &lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; die Paketsignatur vorzutäuschen?</string>
+    <string name="permgrouprequest_fake_package_signature">Allow
+        &lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; to spoof package signature?</string>
     <!-- Button that copies the url to the log of a crashed application -->
-    <string name="aerr_copy">Absturz-Protokoll-URL kopieren</string>
-    <string name="url_copy_success">URL erfolgreich kopiert</string>
-    <string name="url_copy_failed">Beim Upload des Protokolls zu katbin ist ein Fehler aufgetreten</string>
+    <string name="aerr_copy">Copy crash log URL</string>
+    <string name="url_copy_success">URL copied successfully</string>
+    <string name="url_copy_failed">An error occured while uploading the log to katbin</string>
 </resources>

@@ -108,19 +108,19 @@
     <string name="qs_less_rows">Gunakan lebih banyak baris ketika pemutar media tersembunyi</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">AOD</string>
-    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
-    <string name="quick_settings_aod_off_label">AOD off</string>
-    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <string name="quick_settings_aod_on_charge_label">AOD sedang diisi</string>
+    <string name="quick_settings_aod_off_label">AOD mati</string>
+    <string name="quick_settings_aod_off_powersave_label">AOD nonaktif\nPenghemat baterai</string>
     <!-- Sync QS tile -->
-    <string name="quick_settings_sync_label">Sync</string>
-    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
-    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <string name="quick_settings_sync_label">Sinkron</string>
+    <string name="accessibility_quick_settings_sync_off">Sinkronisasi mati.</string>
+    <string name="accessibility_quick_settings_sync_on">Sinkronisasi aktif.</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sinkronisasi dimatikan.</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sinkronisasi diaktifkan.</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <string name="quick_settings_ambient_display_label">Tampilan Ambient</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Tampilan Ambient mati.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Tampilan Ambient aktif.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Tampilan Ambient dimatikan.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Tampilan Ambient diaktifkan.</string>
 </resources>

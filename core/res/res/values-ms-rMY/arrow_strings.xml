@@ -20,7 +20,7 @@
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Palsukan tandatangan pakej</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Membenarkan aplikasi berpura-pura menjadi aplikasi yang berbeza. Aplikasi berniat jahat mungkin dapat menggunakannya untuk mengakses data aplikasi peribadi. Kegunaan yang sah merangkumi emulator yang berpura-pura seperti yang ditiru. Berikan kebenaran ini dengan berhati-hati!</string>
+    <string name="permdesc_fakePackageSignature">Membenarkan aplikasi berpura-pura menjadi aplikasi yang berbeza. Aplikasi berniat jahat mungkin dapat menggunakannya untuk mengakses data peribadi aplikasi. Kegunaan yang sah merangkumi emulator yang berpura-pura seperti yang ditiru. Berikan kebenaran ini dengan berhati-hati!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permgrouplab_fake_package_signature">Palsukan tandatangan pakej</string>
     <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
@@ -28,7 +28,7 @@
     <!-- Message shown to the user when the apps requests permission from this group. If ever possible this should stay below 80 characters (assuming the parameters takes 20 characters). Don't abbreviate until the message reaches 120 characters though. [CHAR LIMIT=120] -->
     <string name="permgrouprequest_fake_package_signature">Benarkan        &lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; untuk memalsukan tandatangan pakej?</string>
     <!-- Button that copies the url to the log of a crashed application -->
-    <string name="aerr_copy">Copy crash log URL</string>
-    <string name="url_copy_success">URL copied successfully</string>
-    <string name="url_copy_failed">An error occured while uploading the log to katbin</string>
+    <string name="aerr_copy">Salin URL log kerosakan</string>
+    <string name="url_copy_success">URL berjaya disalin</string>
+    <string name="url_copy_failed">Ralat berlaku semasa memuat naik log ke dogbin</string>
 </resources>

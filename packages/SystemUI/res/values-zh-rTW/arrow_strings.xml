@@ -107,20 +107,20 @@
     <!-- QS media player customization -->
     <string name="qs_less_rows">在媒體面板隱藏時顯示更多列</string>
     <!-- AOD QS tile -->
-    <string name="quick_settings_aod_label">AOD</string>
-    <string name="quick_settings_aod_on_charge_label">AOD on charge</string>
-    <string name="quick_settings_aod_off_label">AOD off</string>
-    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <string name="quick_settings_aod_label">隨顯螢幕</string>
+    <string name="quick_settings_aod_on_charge_label">充電時顯示隨顯螢幕</string>
+    <string name="quick_settings_aod_off_label">關閉隨顯螢幕</string>
+    <string name="quick_settings_aod_off_powersave_label">關閉隨顯螢幕\n省電模式</string>
     <!-- Sync QS tile -->
-    <string name="quick_settings_sync_label">Sync</string>
-    <string name="accessibility_quick_settings_sync_off">Sync off.</string>
-    <string name="accessibility_quick_settings_sync_on">Sync on.</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off.</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on.</string>
+    <string name="quick_settings_sync_label">同步</string>
+    <string name="accessibility_quick_settings_sync_off">關閉同步處理</string>
+    <string name="accessibility_quick_settings_sync_on">開啟同步處理</string>
+    <string name="accessibility_quick_settings_sync_changed_off">同步處理已關閉</string>
+    <string name="accessibility_quick_settings_sync_changed_on">同步處理已開啟</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <string name="quick_settings_ambient_display_label">環境顯示</string>
+    <string name="accessibility_quick_settings_ambient_display_off">關閉環境顯示</string>
+    <string name="accessibility_quick_settings_ambient_display_on">開啟環境顯示</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">環境顯示已關閉</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">環境顯示已開啟</string>
 </resources>
