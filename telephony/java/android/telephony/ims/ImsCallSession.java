@@ -1224,9 +1224,7 @@ public class ImsCallSession {
             if (mListener != null) {
                 if (newSession != null) {
                     // New session created after conference
-                    ImsCallSession confSession = new ImsCallSession(newSession);
-                    confSession.mListener = mListener;
-                    mListener.callSessionMergeComplete(confSession);
+                    mListener.callSessionMergeComplete(new ImsCallSession(newSession));
                } else {
                    // Session already exists. Hence no need to pass
                    mListener.callSessionMergeComplete(null);
