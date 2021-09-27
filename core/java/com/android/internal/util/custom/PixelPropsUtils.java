@@ -48,7 +48,8 @@ public class PixelPropsUtils {
             "com.google.android.apps.wallpaper",
             "com.google.android.apps.maps",
             "com.google.android.gms",
-            "com.google.android.apps.nexuslauncher"
+            "com.google.android.apps.nexuslauncher",
+            "com.amazon.avod.thirdpartyclient"
     };
 
     private static final String[] packagesToChangePixelXL = {
