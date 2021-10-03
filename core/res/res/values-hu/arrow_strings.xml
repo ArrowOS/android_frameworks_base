@@ -28,7 +28,16 @@
     <!-- Message shown to the user when the apps requests permission from this group. If ever possible this should stay below 80 characters (assuming the parameters takes 20 characters). Don't abbreviate until the message reaches 120 characters though. [CHAR LIMIT=120] -->
     <string name="permgrouprequest_fake_package_signature">Engedélyezi a(z) &lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; számára a hamis csomagaláírást?</string>
     <!-- Button that copies the url to the log of a crashed application -->
-    <string name="aerr_copy">Copy crash log URL</string>
-    <string name="url_copy_success">URL copied successfully</string>
-    <string name="url_copy_failed">An error occured while uploading the log to katbin</string>
+    <string name="aerr_copy">Az összeomlási napló URL-jének másolása</string>
+    <string name="url_copy_success">Az URL sikeresen másolva</string>
+    <string name="url_copy_failed">Hiba történt a napló dogbin-re való feltöltése során</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">Szenzorok</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">elérheti az érzékelő adatait a tájékozódásról, a mozgásról stb.</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">hozzáférhető érzékelők (például az iránytű)    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">Lehetővé teszi az alkalmazás számára az érzékelők adatainak elérését
+     a tájolás, a mozgás, a rezgés (beleértve az alacsony frekvenciájú hangot) és a környezeti adatok figyelése</string>
 </resources>

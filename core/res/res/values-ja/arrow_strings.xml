@@ -31,4 +31,13 @@
     <string name="aerr_copy">クラッシュログ URL をコピー</string>
     <string name="url_copy_success">URL がコピーされました</string>
     <string name="url_copy_failed">katbin へのログのアップロード中にエラーが発生しました</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">センサー</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">回転や動きなどのセンサーのデータにアクセスする。</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">センサーにアクセス (コンパスなど)
+    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">アプリが回転、動き、振動 (低周波音を含む)、環境のデータを監視しているセンサーからのデータにアクセスすることを許可する。</string>
 </resources>

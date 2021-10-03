@@ -32,4 +32,12 @@
     <string name="aerr_copy">Sao chép URL nhật ký sự cố</string>
     <string name="url_copy_success">Đã sao chép URL thành công</string>
     <string name="url_copy_failed">Đã xảy ra lỗi trong khi tải lên nhật ký vào katbin</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">Cảm biến</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">truy cập dữ liệu cảm biến về định hướng, chuyển động,...</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">truy cập cảm biến (như là bàn)    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">Cho phép ứng dụng truy cập dữ liệu từ các cảm biến giám sát định hướng, chuyển động, rung động (bao gồm cả âm thanh tần số thấp) và dữ liệu môi trường</string>
 </resources>

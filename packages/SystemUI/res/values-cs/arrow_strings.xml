@@ -123,4 +123,8 @@
     <string name="accessibility_quick_settings_ambient_display_on">Ambientní displej zap.</string>
     <string name="accessibility_quick_settings_ambient_display_changed_off">Ambientní displej je vypnutý.</string>
     <string name="accessibility_quick_settings_ambient_display_changed_on">Ambientní displej je zapnutý.</string>
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Smazat</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Záznam obrazovky byl odstraněn</string>
 </resources>

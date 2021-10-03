@@ -32,4 +32,14 @@
     <string name="aerr_copy">Salin URL log kerusakan</string>
     <string name="url_copy_success">URL berhasil disalin</string>
     <string name="url_copy_failed">Terjadi kesalahan saat mengunggah log ke katbin</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">Sensor</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">mengakses data sensor tentang orientasi, gerakan, dll.</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">sensor akses (seperti kompas)
+    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">Mengizinkan aplikasi mengakses data dari sensor
+     orientasi pemantauan, gerakan, getaran (termasuk suara frekuensi rendah) dan data lingkungan</string>
 </resources>

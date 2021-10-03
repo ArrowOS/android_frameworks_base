@@ -31,4 +31,14 @@
     <string name="aerr_copy">Skopiuj adres URL dziennika awarii</string>
     <string name="url_copy_success">Adres URL został skopiowany</string>
     <string name="url_copy_failed">Wystąpił błąd podczas przesyłania dziennika do katbin</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">Czujniki</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">dostęp do danych czujnika o orientacji, ruchu itp.</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">czujniki dostępu (takie jak kompas)
+    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">Umożliwia aplikacji dostęp do danych z czujników
+    monitorowania orientacji, ruchu, wibracji (w tym dźwięku niskiej częstotliwości) i danych środowiskowych</string>
 </resources>

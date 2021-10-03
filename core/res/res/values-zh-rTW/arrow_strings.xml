@@ -32,4 +32,12 @@
     <string name="aerr_copy">複製崩潰紀錄檔連結</string>
     <string name="url_copy_success">已成功複製連結</string>
     <string name="url_copy_failed">上傳崩潰紀錄檔至 katbin 時發生錯誤</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">感測器</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">訪問有關方向、移動等的感測器數據</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">訪問感測器 (如指南針)    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">允許應用訪問來自感測器的監測方向、移動、振動 (包括低頻聲音) 和環境數據的數據</string>
 </resources>

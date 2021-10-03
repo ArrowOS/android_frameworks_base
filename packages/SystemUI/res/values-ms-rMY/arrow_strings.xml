@@ -123,4 +123,8 @@
     <string name="accessibility_quick_settings_ambient_display_on">Paparan ambien aktif.</string>
     <string name="accessibility_quick_settings_ambient_display_changed_off">Paparan ambien dimatikan.</string>
     <string name="accessibility_quick_settings_ambient_display_changed_on">Paparan ambien diaktifkan.</string>
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Delete</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Screen recording deleted</string>
 </resources>

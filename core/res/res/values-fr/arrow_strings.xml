@@ -32,4 +32,14 @@
     <string name="aerr_copy">Copier l\'URL du rapport de crash</string>
     <string name="url_copy_success">URL copiée avec succès</string>
     <string name="url_copy_failed">Une erreur est survenue pendant l\'envoi du rapport à katbin</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_otherSensors">Capteurs</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_otherSensors">accéder aux données du capteur sur l’orientation, le mouvement, etc.</string>
+    <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
+    <string name="permlab_otherSensors">accéder aux capteurs (comme la boussole)
+    </string>
+    <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
+    <string name="permdesc_otherSensors" product="default">Autorises l\'application à accéder aux données provenant des capteurs
+    de l\'orientation, du mouvement, des vibrations (y compris le son de basse fréquence) et des données environnementales</string>
 </resources>
