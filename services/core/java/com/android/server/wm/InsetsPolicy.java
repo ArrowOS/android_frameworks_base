@@ -378,10 +378,8 @@ class InsetsPolicy {
 
             // IME needs different frames for certain cases (e.g. navigation bar in gesture nav).
             if (type == ITYPE_IME) {
-                ArrayMap<Integer, WindowContainerInsetsSourceProvider> providers = mStateController
-                        .getSourceProviders();
-                for (int i = providers.size() - 1; i >= 0; i--) {
-                    WindowContainerInsetsSourceProvider otherProvider = providers.valueAt(i);
+                for (WindowContainerInsetsSourceProvider otherProvider
+                        : mStateController.getSourceProviders().values()) {
                     if (otherProvider.overridesImeFrame()) {
                         InsetsSource override =
                                 new InsetsSource(
