@@ -38,4 +38,6 @@
          AOSP default is 1533 -->
     <item name="auth_ripple_animation_duration" format="float" type="dimen">766.5</item>
     
+    <!-- Maximum vertical offset of statusbar for burn-in protection -->
+    <dimen name="status_bar_offset_max_y">4dp</dimen>
 </resources>
