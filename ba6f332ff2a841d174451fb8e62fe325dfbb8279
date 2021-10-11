@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "53be8a5b_c28fc7f2",
+        "filename": "services/core/java/com/android/server/StorageManagerService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 1584,
+      "author": {
+        "id": 351
+      },
+      "writtenOn": "2021-10-11T12:46:29Z",
+      "side": 1,
+      "message": "What\u0027s the use of this else if?",
+      "revId": "ba6f332ff2a841d174451fb8e62fe325dfbb8279",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
