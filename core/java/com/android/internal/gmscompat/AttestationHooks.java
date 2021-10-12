@@ -58,6 +58,9 @@ public final class AttestationHooks {
         if (PRODUCT_GMS_SPOOFING_FINGERPRINT.length() > 0) {
             setBuildField("FINGERPRINT", PRODUCT_GMS_SPOOFING_FINGERPRINT);
         }
+
+        // Alter model name to avoid hardware attestation enforcement
+        setBuildField("MODEL", Build.MODEL + " ");
     }
 
     public static void initApplicationBeforeOnCreate(Application app) {
