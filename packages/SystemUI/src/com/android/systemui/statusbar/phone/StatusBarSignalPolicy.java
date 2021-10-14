@@ -287,6 +287,7 @@ public class StatusBarSignalPolicy implements SignalCallback,
         state.roaming = indicators.roaming && !mHideRoaming;
         state.activityIn = indicators.activityIn && mActivityEnabled;
         state.activityOut = indicators.activityOut && mActivityEnabled;
+        state.volteId = indicators.volteId;
         state.typeSpacerVisible = mMobileStates.size() > 1
                && mMobileStates.get(1).subId == state.subId
                && state.typeId != 0;
@@ -623,6 +624,7 @@ public class StatusBarSignalPolicy implements SignalCallback,
         public boolean roaming;
         public boolean needsLeadingPadding;
         public CharSequence typeContentDescription;
+        public int volteId;
         public boolean typeSpacerVisible;
 
         private MobileIconState(int subId) {
@@ -645,6 +647,7 @@ public class StatusBarSignalPolicy implements SignalCallback,
                     && showTriangle == that.showTriangle
                     && roaming == that.roaming
                     && needsLeadingPadding == that.needsLeadingPadding
+                    && volteId == that.volteId
                     && Objects.equals(typeContentDescription, that.typeContentDescription)
                     && typeSpacerVisible == that.typeSpacerVisible;
         }
@@ -672,6 +675,7 @@ public class StatusBarSignalPolicy implements SignalCallback,
             other.roaming = roaming;
             other.needsLeadingPadding = needsLeadingPadding;
             other.typeContentDescription = typeContentDescription;
+            other.volteId = volteId;
             other.typeSpacerVisible = typeSpacerVisible;
         }
 
@@ -690,7 +694,7 @@ public class StatusBarSignalPolicy implements SignalCallback,
             return "MobileIconState(subId=" + subId + ", strengthId=" + strengthId
                     + ", showTriangle=" + showTriangle + ", roaming=" + roaming
                     + ", typeId=" + typeId + ", typeSpacerVisible=" + typeSpacerVisible
-                    + ", visible=" + visible + ")";
+                    + ", visible=" + visible + ", volteId=" + volteId + ")";
         }
     }
 }
