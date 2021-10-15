@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "458161e0_45948712",
+        "filename": "packages/SystemUI/src/com/android/systemui/biometrics/UdfpsController.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 88
+      },
+      "writtenOn": "2021-10-15T04:34:30Z",
+      "side": 1,
+      "message": "Need use overlay to change vendor code.",
+      "range": {
+        "startLine": 312,
+        "startChar": 47,
+        "endLine": 312,
+        "endChar": 51
+      },
+      "revId": "190ab815e1b05c67bd603b66aabc76baadfb7288",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
