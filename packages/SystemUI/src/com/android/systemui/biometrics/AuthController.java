@@ -614,7 +614,15 @@ public class AuthController extends CoreStartable implements CommandQueue.Callba
     }
 
     private void updateFingerprintLocation() {
-        int xLocation = getDisplayWidth() / 2;
+        boolean isPowerbuttonFps =
+                mFingerprintManager != null && mFingerprintManager.isPowerbuttonFps();
+
+        int xLocation;
+        if (isPowerbuttonFps) {
+            xLocation = getDisplayWidth();
+        } else {
+            xLocation = getDisplayWidth() / 2;
+        }
         try {
             xLocation = mContext.getResources().getDimensionPixelSize(
                     com.android.systemui.R.dimen
