@@ -69,6 +69,12 @@
     <string name="quick_settings_compass_W">W</string>
     <string name="quick_settings_compass_NW">NW</string>
 
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_silent">Silent</string>
+
     <!-- Advanced Reboot -->
     <string name="global_action_restart_advanced">Advanced</string>
     <string name="global_action_restart_recovery">Recovery</string>
