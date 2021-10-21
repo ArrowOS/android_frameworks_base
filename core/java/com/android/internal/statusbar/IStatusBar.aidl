@@ -322,4 +322,9 @@ oneway interface IStatusBar
 
     /** Unregisters a nearby media devices provider. */
     void unregisterNearbyMediaDevicesProvider(in INearbyMediaDevicesProvider provider);
+
+    /**
+     * Toggles flashlight of the device
+     */
+    void toggleCameraFlash();
 }
