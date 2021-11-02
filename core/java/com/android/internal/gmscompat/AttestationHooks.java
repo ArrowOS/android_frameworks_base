@@ -29,6 +29,8 @@ public final class AttestationHooks {
 
     private static final String PACKAGE_GMS = "com.google.android.gms";
 
+    private static final String PROCESS_UNSTABLE = "com.google.android.gms.unstable";
+
     private static final String PRODUCT_GMS_SPOOFING_FINGERPRINT =
             SystemProperties.get("ro.build.gms_fingerprint");
 
@@ -61,7 +63,8 @@ public final class AttestationHooks {
     }
 
     public static void initApplicationBeforeOnCreate(Application app) {
-        if (PACKAGE_GMS.equals(app.getPackageName())) {
+        if (PACKAGE_GMS.equals(app.getPackageName()) &&
+                PROCESS_UNSTABLE.equals(Application.getProcessName())) {
             spoofBuildGms();
         }
     }
