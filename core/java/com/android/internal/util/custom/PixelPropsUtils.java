@@ -15,6 +15,7 @@
  */
 package com.android.internal.util.custom;
 
+import android.app.Application;
 import android.os.Build;
 import android.util.Log;
 
@@ -85,11 +86,14 @@ public class PixelPropsUtils {
         propsToChangePixelXL.put("FINGERPRINT", "google/marlin/marlin:10/QP1A.191005.007.A3/5972272:user/release-keys");
     }
 
-    public static void setProps(String packageName) {
+    public static void setProps(Application app) {
+        final String packageName = app.getPackageName();
+        final String processName = app.getProcessName();
         if (packageName == null) {
             return;
         }
-        if (packageName.equals(PACKAGE_GMS)) {
+        if (packageName.equals(PACKAGE_GMS) &&
+                processName.equals(PACKAGE_GMS + ".unstable")) {
             sIsGms = true;
         }
         if (packageName.startsWith("com.google.") || Arrays.asList(extraPackagesToChange).contains(packageName)) {
