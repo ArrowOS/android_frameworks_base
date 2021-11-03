@@ -70,7 +70,7 @@ open class QSTileViewImpl @JvmOverloads constructor(
     override var heightOverride: Int = HeightOverrideable.NO_OVERRIDE
 
     private val colorActive = Utils.getColorAttrDefaultColor(context,
-            android.R.attr.colorAccent)
+            com.android.internal.R.attr.colorAccentPrimary)
     private val colorInactive = Utils.getColorAttrDefaultColor(context, R.attr.offStateColor)
     private val colorUnavailable = Utils.applyAlpha(UNAVAILABLE_ALPHA, colorInactive)
 
