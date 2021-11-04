@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "26c9fbae_36eb765a",
+        "filename": "data/etc/privapp-permissions-platform.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 192,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2021-11-04T17:08:21Z",
+      "side": 1,
+      "message": "Duplicate",
+      "revId": "8dd1c048e4c3db5b5eb339c8fedc4c32cd5cbf57",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
