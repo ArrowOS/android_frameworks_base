@@ -29,15 +29,15 @@
     <string name="permgrouprequest_fake_package_signature">அனுமதி
         &lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; தொகுப்பு கையொப்பத்தை ஏமாற்ற?</string>
     <!-- Button that copies the url to the log of a crashed application -->
-    <string name="aerr_copy">Copy crash log URL</string>
-    <string name="url_copy_success">URL copied successfully</string>
+    <string name="aerr_copy">செயலிழப்பு பதிவு உரலியை நகலெடு</string>
+    <string name="url_copy_success">உரலி வெற்றிகரமாக நகலெடுக்கப்பட்டது</string>
     <string name="url_copy_failed">An error occured while uploading the log to katbin</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permgrouplab_otherSensors">Sensors</string>
+    <string name="permgrouplab_otherSensors">உணரிகள்</string>
     <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permgroupdesc_otherSensors">access sensor data about orientation, movement, etc.</string>
+    <string name="permgroupdesc_otherSensors">நோக்குநிலை, நடமாட்டம் போன்றவை பற்றிய உணரி தகவலை அணுகு.</string>
     <!-- Title of the sensors permission, listed so the user can decide whether to allow the application to access sensor data. [CHAR LIMIT=80] -->
-    <string name="permlab_otherSensors">access sensors (like the compass)
+    <string name="permlab_otherSensors">உணர்விகளை அணுகு (திசைமானி போல்)
     </string>
     <!-- Description of the sensors permission, listed so the user can decide whether to allow the application to access data from sensors. [CHAR LIMIT=NONE] -->
     <string name="permdesc_otherSensors" product="default">Allows the app to access data from sensors

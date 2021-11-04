@@ -14,68 +14,68 @@
  -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Indication on the keyguard that is shown when the device is charging with a dash charger. Should match keyguard_plugged_in_dash_charging [CHAR LIMIT=40]-->
-    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Carga rápida (<xliff:g id="charging_time_left" example="4 horas y 2 minutos">%s</xliff:g> para completar la carga)</string>
-    <string name="keyguard_plugged_in_dash_charging">Carga Rápida</string>
-    <string name="statusbar_items_title">Iconos de la barra de estado</string>
+    <string name="keyguard_indication_dash_charging_time" formatted="false"><xliff:g id="percentage">%2$s</xliff:g> • Dash Charging (<xliff:g id="charging_time_left" example="4 hours and 2 minutes">%s</xliff:g> until full)</string>
+    <string name="keyguard_plugged_in_dash_charging">Dash Charging</string>
+    <string name="statusbar_items_title">Statusbar icons</string>
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
-    <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Notificaciones emergentes desactivadas.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Notificaciones emergentes activadas.</string>
+    <string name="quick_settings_heads_up_label">Peek notifications</string>
+    <string name="accessibility_quick_settings_heads_up_off">Peek notifications disabled.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Peek notifications allowed.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Peek notifications turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Peek notifications turned on.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">Anclaje a red USB</string>
+    <string name="quick_settings_usb_tether_label">USB tethering</string>
     <!-- Advanced restart -->
-    <string name="global_action_reboot">Reiniciar</string>
-    <string name="global_action_reboot_system">Sistema</string>
-    <string name="global_action_reboot_progress">Reiniciando\u2026</string>
-    <string name="global_action_reboot_recovery">Modo Recovery</string>
-    <string name="global_action_reboot_recovery_progress">Reiniciando en modo recovery\u2026</string>
-    <string name="global_action_reboot_hot">Reinicio rápido</string>
-    <string name="global_action_reboot_bootloader">Modo Bootloader</string>
-    <string name="global_action_reboot_bootloader_progress">Reiniciando en modo bootloader\u2026</string>
-    <string name="global_action_reboot_fastboot">Fastboot</string>
-    <string name="global_action_reboot_fastboot_progress">Reiniciando en modo fastboot\u2026</string>
-    <string name="global_action_settings">Ajustes</string>
-    <string name="global_action_screenshot">Captura de pantalla</string>
-    <string name="global_action_screenrecord">Grabación de pantalla</string>
-    <string name="global_action_flashlight">Linterna</string>
+    <string name="global_action_reboot">Restart</string>
+    <string name="global_action_reboot_system">System</string>
+    <string name="global_action_reboot_progress">Restarting\u2026</string>
+    <string name="global_action_reboot_recovery">Recovery</string>
+    <string name="global_action_reboot_recovery_progress">Restarting to recovery mode\u2026</string>
+    <string name="global_action_reboot_hot">Hot</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_reboot_bootloader_progress">Restarting to bootloader mode\u2026</string>
+    <string name="global_action_reboot_fastboot">Fastbootd</string>
+    <string name="global_action_reboot_fastboot_progress">Restarting to fastbootd mode\u2026</string>
+    <string name="global_action_settings">Settings</string>
+    <string name="global_action_screenshot">Screenshot</string>
+    <string name="global_action_screenrecord">Screenrecord</string>
+    <string name="global_action_flashlight">Flashlight</string>
     <!-- Label for current user in power menu options dialog -->
-    <string name="global_action_current_user">Este dispositivo</string>
+    <string name="global_action_current_user">Current</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_screenshot_label">Captura de pantalla</string>
-    <string name="quick_settings_region_screenshot_label">Captura de pantalla parcial</string>
+    <string name="quick_settings_screenshot_label">Screenshot</string>
+    <string name="quick_settings_region_screenshot_label">Partial screenshot</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Modo cafeína</string>
-    <string name="accessibility_quick_settings_caffeine_off">Modo cafeína desactivado</string>
-    <string name="accessibility_quick_settings_caffeine_on">Modo cafeína activado</string>
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Cambiar tarjeta de datos</string>
-    <string name="qs_data_switch_toast_0">No se ha insertado ninguna tarjeta SIM</string>
-    <string name="qs_data_switch_toast_1">Sólo se ha insertado una tarjeta SIM</string>
-    <string name="qs_data_switch_changed_1">Utilizando SIM 1 para datos móviles</string>
-    <string name="qs_data_switch_changed_2">Utilizando SIM 2 para datos móviles</string>
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Using SIM 1 for Mobile data</string>
+    <string name="qs_data_switch_changed_2">Using SIM 2 for Mobile data</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">Sonido</string>
-    <string name="quick_settings_sound_ring">Sonar</string>
-    <string name="quick_settings_sound_vibrate">Vibrar</string>
-    <string name="quick_settings_sound_dnd">No molestar</string>
+    <string name="quick_settings_sound_label">Sound</string>
+    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_vibrate">Vibrate</string>
+    <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Omni Weather -->
     <string name="omnijaws_service_error">Error</string>
-    <string name="omnijaws_service_unkown">No hay datos metereológicos</string>
-    <string name="omnijaws_service_error_long">Error al cargar datos meteorológicos</string>
-    <string name="omnijaws_service_disabled">Servicio deshabilitado</string>
-    <string name="omnijaws_detail_header">Información meteorológica</string>
-    <string name="omnijaws_label_default">Información meteorológica</string>
-    <string name="omnijaws_current_text">Ahora</string>
-    <string name="omnijaws_package_not_available">OmniJaws no está disponible</string>
-    <string name="omnijaws_service_last_update">Última actualización:</string>
+    <string name="omnijaws_service_unkown">No weather data</string>
+    <string name="omnijaws_service_error_long">Error loading weather data</string>
+    <string name="omnijaws_service_disabled">Service is disabled</string>
+    <string name="omnijaws_detail_header">Weather</string>
+    <string name="omnijaws_label_default">Weather</string>
+    <string name="omnijaws_current_text">Now</string>
+    <string name="omnijaws_package_not_available">OmniJaws not available</string>
+    <string name="omnijaws_service_last_update">Last update:</string>
     <!-- Reboot/Recovery QS tile -->
-    <string name="quick_settings_reboot_label">Reiniciar</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
     <string name="quick_settings_reboot_recovery_label">Recovery</string>
     <!-- QS config customization -->
     <string name="drag_or_touch_to_rearrange_tiles">Touch to remove or drag to rearrange tiles</string>
