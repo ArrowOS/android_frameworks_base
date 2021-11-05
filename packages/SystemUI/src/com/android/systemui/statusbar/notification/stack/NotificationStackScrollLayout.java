@@ -4231,7 +4231,7 @@ public class NotificationStackScrollLayout extends ViewGroup implements Dumpable
         final @ColorInt int textColor =
                 Utils.getColorAttrDefaultColor(mContext, android.R.attr.textColorPrimary);
         mSectionsManager.setHeaderForegroundColor(textColor);
-        mFooterView.updateColors();
+        mFooterView.setTextColor(textColor);
         mEmptyShadeView.setTextColor(textColor);
     }
 
