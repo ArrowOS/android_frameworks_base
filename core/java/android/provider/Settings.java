@@ -5222,6 +5222,12 @@ public final class Settings {
         public static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
         /**
+         * Whether to show battery estimates in QS
+         * @hide
+         */
+        public static final String QS_SHOW_BATTERY_ESTIMATE = "qs_show_battery_estimate";
+
+        /**
          * These are all public system settings
          *
          * @hide
