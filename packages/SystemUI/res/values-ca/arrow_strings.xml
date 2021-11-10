@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 ArrowOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Reinicia</string>
+    <string name="global_action_reboot_more">Restart\u2026</string>
+    <string name="global_action_reboot_sub">System</string>
+    <string name="global_action_reboot_recovery">Mode de Recuperació</string>
+    <string name="global_action_reboot_bootloader">Gestor d\'arrencada</string>
+    <string name="global_action_settings">Preferències</string>
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">Delete</string>
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">Delete screenshot</string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Mode Cafeïna</string>
+    <string name="accessibility_quick_settings_caffeine_off">Mode Cafeïna desactivat</string>
+    <string name="accessibility_quick_settings_caffeine_on">Mode Cafeïna activat</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambient display</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">Compartició de xarxa per USB</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">So</string>
+    <string name="quick_settings_sound_ring">Timbre</string>
+    <string name="quick_settings_sound_vibrate">Vibració</string>
+    <string name="quick_settings_sound_dnd">No molestar</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_screenshot_label">Captura de pantalla</string>
+    <string name="quick_settings_region_screenshot_label">Captura de pantalla parcial</string>
+</resources>
