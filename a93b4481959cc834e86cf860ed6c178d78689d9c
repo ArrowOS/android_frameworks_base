@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "02a23a68_95604c27",
+        "filename": "packages/SystemUI/src/com/android/keyguard/KeyguardUpdateMonitor.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 1920,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2021-11-23T13:06:01Z",
+      "side": 1,
+      "message": "Since `present` comes after `oemFastChargeStatus`, it should be `false, true`",
+      "revId": "a93b4481959cc834e86cf860ed6c178d78689d9c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a3361e1_ee51da76",
+        "filename": "packages/SystemUI/src/com/android/keyguard/KeyguardUpdateMonitor.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 3019,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2021-11-23T13:06:01Z",
+      "side": 1,
+      "message": "Maybe move this above line #3014, just a cosmetic change.",
+      "revId": "a93b4481959cc834e86cf860ed6c178d78689d9c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8586962b_9bf877ac",
+        "filename": "services/core/java/com/android/server/BatteryService.java",
+        "patchSetId": 5
+      },
+      "lineNbr": 800,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2021-11-23T13:06:01Z",
+      "side": 1,
+      "message": "Instead, set config_oemFastChargerStatusValue to 1 by default in arrow_config.xml",
+      "revId": "a93b4481959cc834e86cf860ed6c178d78689d9c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
