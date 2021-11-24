@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Ekran görüntüsü</string>
     <string name="quick_settings_region_screenshot_label">Kısmi ekran görüntüsü</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Durum çubuğu simgeleri</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

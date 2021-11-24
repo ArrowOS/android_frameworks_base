@@ -31,13 +31,13 @@
     <string name="accessibility_quick_settings_caffeine_off">Кофеин је искључен</string>
     <string name="accessibility_quick_settings_caffeine_on">Кофеин је укључен</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Индикација догађаја</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Индикација догађаја је искључена.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Индикација догађаја је укључена.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Индикација догађаја је искључена.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Индикација догађаја је укључена.</string>
+    <string name="quick_settings_ambient_display_label">Амбијентни приказ</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Амбијентни приказ је искључен.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Амбијентни приказ је укључен.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Амбијентни приказ је искључен.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Амбијентни приказ је укључен.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">USB Интернет повезивање</string>
+    <string name="quick_settings_usb_tether_label">USB повезивање</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Синхронизација</string>
     <string name="accessibility_quick_settings_sync_off">Синхронизација је онемогућена</string>
@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Снимак екрана</string>
     <string name="quick_settings_region_screenshot_label">Делимичан снимак екрана</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

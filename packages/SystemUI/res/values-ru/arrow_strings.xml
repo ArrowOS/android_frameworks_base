@@ -19,7 +19,7 @@
     <string name="global_action_reboot">Перезагрузить</string>
     <string name="global_action_reboot_more">Перезагрузка\u2026</string>
     <string name="global_action_reboot_sub">Система</string>
-    <string name="global_action_reboot_recovery">Режим восстановления</string>
+    <string name="global_action_reboot_recovery">Рекавери</string>
     <string name="global_action_reboot_bootloader">Загрузчик</string>
     <string name="global_action_settings">Настройки</string>
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Скриншот</string>
     <string name="quick_settings_region_screenshot_label">Скриншот выбранной области экрана</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Значки строки состояния</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

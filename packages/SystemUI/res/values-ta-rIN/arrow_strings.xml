@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
     <string name="quick_settings_region_screenshot_label">பகுதி திரைப்பிடிப்பு</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

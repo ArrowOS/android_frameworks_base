@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">屏幕截图</string>
     <string name="quick_settings_region_screenshot_label">局部截图</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">状态栏图标</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

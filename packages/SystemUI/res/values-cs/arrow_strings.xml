@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Snímek obrazovky</string>
     <string name="quick_settings_region_screenshot_label">Částečný snímek obrazovky</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Ikony na stavovém řádku</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

@@ -34,16 +34,16 @@
     <string name="quick_settings_ambient_display_label">Pantalla ambiental</string>
     <string name="accessibility_quick_settings_ambient_display_off">Pantalla ambiental desactivada.</string>
     <string name="accessibility_quick_settings_ambient_display_on">Pantalla ambiental activada.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Pantalla ambiente desactivada.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Pantalla ambiente activada.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">Anclaje a red USB</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Sincronización </string>
     <string name="accessibility_quick_settings_sync_off">Sincronización desactivada</string>
     <string name="accessibility_quick_settings_sync_on">Sincronización activada</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sincronización desactivada</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sincronización activada</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Sonido</string>
     <string name="quick_settings_sound_ring">Sonar</string>
@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Captura de pantalla</string>
     <string name="quick_settings_region_screenshot_label">Captura de pantalla parcial</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>

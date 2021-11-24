@@ -52,4 +52,8 @@
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Schermafbeelding</string>
     <string name="quick_settings_region_screenshot_label">Gedeeltelijke schermafbeelding</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbalk iconen</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
 </resources>
