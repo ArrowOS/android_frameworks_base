@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5dc99334_a130b9cc",
+        "filename": "packages/SystemUI/res/values/arrow_config.xml",
+        "patchSetId": 8
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-11-30T12:20:22Z",
+      "side": 1,
+      "message": "this is wrong, how did you test it even?",
+      "revId": "be944b8b6a734cfd44ad9ba6183a20bbde2b11a3",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": true
+    }
+  ]
+}
