@@ -16,6 +16,24 @@
       "revId": "253e672486a89e3f66ea2da1042c21b708d9fba9",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "dfa100a8_a2758f50",
+        "filename": "packages/SystemUI/src/com/android/systemui/navigationbar/NavigationBarView.java",
+        "patchSetId": 6
+      },
+      "lineNbr": 958,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2021-11-30T12:18:14Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f497249_9204e2ad",
+      "revId": "253e672486a89e3f66ea2da1042c21b708d9fba9",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196",
+      "unresolved": false
     }
   ]
 }
