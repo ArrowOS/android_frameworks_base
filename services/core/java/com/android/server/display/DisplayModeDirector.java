@@ -2434,10 +2434,6 @@ public class DisplayModeDirector {
                 }
 
             }
-            if (hbmMode == BrightnessInfo.HIGH_BRIGHTNESS_MODE_HDR
-                    && mRefreshRateInHbmHdr > 0) {
-                vote = Vote.forRefreshRates(mRefreshRateInHbmHdr, mRefreshRateInHbmHdr);
-            }
             mBallotBox.vote(displayId, Vote.PRIORITY_HIGH_BRIGHTNESS_MODE, vote);
         }
 
