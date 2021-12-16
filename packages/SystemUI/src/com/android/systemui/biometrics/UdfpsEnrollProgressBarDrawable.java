@@ -98,7 +98,6 @@ public class UdfpsEnrollProgressBarDrawable extends Drawable {
             Log.e(TAG, "updateState: UDFPS enroll helper was null");
             return;
         }
-    }
 
         int index = 0;
         int prevThreshold = 0;
