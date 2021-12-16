@@ -977,9 +977,10 @@ public class NotificationPanelViewController extends PanelViewController {
         mScreenCornerRadius = (int) ScreenDecorationsUtils.getWindowCornerRadius(mResources);
         mLockscreenNotificationQSPadding = mResources.getDimensionPixelSize(
                 R.dimen.notification_side_paddings);
-        mUdfpsMaxYBurnInOffset = mResources.getDimensionPixelSize(R.dimen.udfps_burn_in_offset_y);
         mStatusBarHeaderHeight = mResources.getDimensionPixelSize(
                 R.dimen.status_bar_height);
+
+        mUdfpsMaxYBurnInOffset = mResources.getDimensionPixelSize(R.dimen.udfps_burn_in_offset_y);
     }
 
     private void updateViewControllers(KeyguardStatusView keyguardStatusView,
