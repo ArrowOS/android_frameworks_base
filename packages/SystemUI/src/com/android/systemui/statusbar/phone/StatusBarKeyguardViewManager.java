@@ -196,7 +196,6 @@ public class StatusBarKeyguardViewManager implements RemoteInputController.Callb
     private boolean mLastGesturalNav;
     private boolean mLastIsDocked;
     private boolean mLastPulsing;
-    private boolean mLastAnimatedToSleep;
     private int mLastBiometricMode;
     private boolean mQsExpanded;
 
@@ -994,7 +993,6 @@ public class StatusBarKeyguardViewManager implements RemoteInputController.Callb
         mLastBiometricMode = mBiometricUnlockController.getMode();
         mLastGesturalNav = mGesturalNav;
         mLastIsDocked = mIsDocked;
-        mLastAnimatedToSleep = mAnimatedToSleep;
         mStatusBar.onKeyguardViewManagerStatesUpdated();
     }
 
@@ -1057,7 +1055,7 @@ public class StatusBarKeyguardViewManager implements RemoteInputController.Callb
         boolean hideWhileDozing = mLastDozing && mLastBiometricMode != MODE_WAKE_AND_UNLOCK_PULSING;
         boolean keyguardWithGestureNav = (keyguardShowing && !mLastDozing
                 || mLastPulsing && !mLastIsDocked) && mLastGesturalNav;
-        return (!mLastAnimatedToSleep && !keyguardShowing && !hideWhileDozing || mLastBouncerShowing
+        return (!keyguardShowing && !hideWhileDozing || mLastBouncerShowing
                 || mLastRemoteInputActive || keyguardWithGestureNav
                 || mLastGlobalActionsVisible);
     }

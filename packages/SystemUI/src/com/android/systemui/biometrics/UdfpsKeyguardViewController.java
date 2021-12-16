@@ -65,9 +65,6 @@ public class UdfpsKeyguardViewController extends UdfpsAnimationViewController<Ud
     private float mStatusBarExpansion;
     private boolean mLaunchTransitionFadingAway;
 
-    private float mStatusBarExpansion;
-    private boolean mLaunchTransitionFadingAway;
-
     /**
      * hidden amount of pin/pattern/password bouncer
      * {@link KeyguardBouncer#EXPANSION_VISIBLE} (0f) to

@@ -180,7 +180,6 @@ public final class SingleKeyGestureDetector {
     }
 
     public SingleKeyGestureDetector() {
-        mContext = context;
         mHandler = new KeyHandler();
     }
 
