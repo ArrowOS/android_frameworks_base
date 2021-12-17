@@ -7,6 +7,7 @@ import com.android.systemui.dagger.SystemUIBinder;
 import com.android.systemui.dagger.SysUIComponent;
 import com.android.systemui.dagger.SystemUIModule;
 
+import com.arrow.android.systemui.elmyra.ElmyraModule;
 import com.arrow.android.systemui.columbus.ColumbusModule;
 import com.arrow.android.systemui.gamedashboard.GameDashboardModule;
 import com.arrow.android.systemui.keyguard.KeyguardSliceProviderArrow;
@@ -20,6 +21,7 @@ import dagger.Subcomponent;
         DefaultComponentBinder.class,
         DependencyProvider.class,
         GameDashboardModule.class,
+        ElmyraModule.class,
         SystemUIModule.class,
         SystemUIArrowBinder.class,
         SystemUIArrowModule.class})
