@@ -300,6 +300,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
 
+    <uses-permission android:name="android.permission.ACCESS_CONTEXT_HUB"/>
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
     <permission android:name="com.android.systemui.permission.SEND_ALERT_BROADCASTS" android:protectionLevel="preinstalled|signature"/>
     <uses-permission android:name="com.google.android.deskclock.permission.RECEIVE_ALERT_BROADCASTS"/>
@@ -308,6 +309,10 @@
     <protected-broadcast android:name="com.google.android.systemui.smartspace.EXPIRE_EVENT"/>
 
     <uses-permission android:name="android.permission.MANAGE_GAME_MODE" android:protectionLevel="signature"/>
+
+    <permission android:name="com.google.android.columbus.permission.CONFIGURE_COLUMBUS_GESTURE" android:protectionLevel="signature|preinstalled"/>
+    <uses-permission android:name="com.google.android.columbus.permission.CONFIGURE_COLUMBUS_GESTURE"/>
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
 
     <application
         android:name=".SystemUIApplication"
@@ -924,6 +929,20 @@
             android:screenOrientation="behind"
             android:finishOnCloseSystemDialogs="true"
             android:showForAllUsers="true"/>
+
+        <!-- Columbus -->
+        <service
+            android:name="com.google.android.systemui.columbus.ColumbusServiceProxy"
+            android:permission="com.google.android.columbus.permission.CONFIGURE_COLUMBUS_GESTURE"
+            android:exported="true"/>
+
+        <service
+            android:name="com.google.android.systemui.columbus.ColumbusTargetRequestService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.systemui.QUICK_TAP_TARGET_REQUEST"/>
+            </intent-filter>
+        </service>
 
     </application>
 </manifest>
