@@ -6,6 +6,7 @@ import com.android.systemui.LatencyTester;
 import com.android.systemui.ScreenDecorations;
 import com.android.systemui.SliceBroadcastRelayHandler;
 import com.android.systemui.SystemUI;
+import com.android.systemui.dagger.SystemUIBinder;
 import com.android.systemui.accessibility.SystemActions;
 import com.android.systemui.accessibility.WindowMagnification;
 import com.android.systemui.biometrics.AuthController;
@@ -30,8 +31,10 @@ import com.android.systemui.volume.VolumeUI;
 import com.android.systemui.wmshell.WMShell;
 import com.android.systemui.dagger.SysUISingleton;
 
+import com.google.android.systemui.columbus.ColumbusTargetRequestService;
 import com.google.android.systemui.gamedashboard.GameMenuActivity;
 
+import com.arrow.android.systemui.ArrowServices;
 import com.arrow.android.systemui.theme.ThemeOverlayControllerArrow;
 
 import dagger.Binds;
@@ -48,6 +51,22 @@ public abstract class SystemUIArrowBinder {
     @IntoMap
     @ClassKey(AuthController.class)
     public abstract SystemUI bindAuthController(AuthController service);
+
+    /**
+     * Inject into ArrowServices.
+     */
+    @Binds
+    @IntoMap
+    @ClassKey(ArrowServices.class)
+    public abstract SystemUI bindArrowServices(ArrowServices sysui);
+
+    /**
+     * Inject into ColumbusTargetRequestService.
+     */
+    @Binds
+    @IntoMap
+    @ClassKey(ColumbusTargetRequestService.class)
+    public abstract Service bindColumbusTargetRequestService(ColumbusTargetRequestService activity);
 
     /**
      * Inject into GarbageMonitor.Service.
