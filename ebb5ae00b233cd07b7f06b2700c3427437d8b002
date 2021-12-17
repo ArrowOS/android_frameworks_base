@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d2d2bcea_ae601776",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 322
+      },
+      "writtenOn": "2021-12-17T08:27:59Z",
+      "side": 1,
+      "message": "works fine here. At least it can give our users a beautiful `unlimited` prompt ;)\n",
+      "revId": "ebb5ae00b233cd07b7f06b2700c3427437d8b002",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
