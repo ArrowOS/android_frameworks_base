@@ -53,7 +53,13 @@
     <string name="quick_settings_screenshot_label">Στιγμιότυπο οθόνης</string>
     <string name="quick_settings_region_screenshot_label">Μερικό στιγμιότυπο οθόνης</string>
     <!-- Statusbar tuner -->
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Εικονίδια γραμμής κατάστασης</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Αναδυόμενες ειδοποιήσεις</string>
+    <string name="accessibility_quick_settings_heads_up_off">Αναδυόμενες ειδοποιήσεις ανενεργές.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Αναδυόμενες ειδοποιήσεις ενεργές.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Οι Αναδυόμενες ειδοποιήσεις απενεργοποιήθηκαν.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Οι Αναδυόμενες ειδοποιήσεις ενεργοποιήθηκαν.</string>
 </resources>

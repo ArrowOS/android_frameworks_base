@@ -39,7 +39,7 @@
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">Penambatan USB</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Sinkron</string>
+    <string name="quick_settings_sync_label">Sinkronisasi</string>
     <string name="accessibility_quick_settings_sync_off">Sinkronisasi mati</string>
     <string name="accessibility_quick_settings_sync_on">Sinkronisasi aktif</string>
     <string name="accessibility_quick_settings_sync_changed_off">Sinkronisasi dimatikan</string>
@@ -56,4 +56,10 @@
     <string name="statusbar_items_title">Ikon bilah status</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Notifikasi mengambang</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notifikasi mengambang nonaktif.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notifikasi mengambang aktif.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi mengambang dinonaktifkan.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi mengambang diaktifkan.</string>
 </resources>
