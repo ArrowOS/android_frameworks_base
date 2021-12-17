@@ -46,7 +46,7 @@
     <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Sound</string>
-    <string name="quick_settings_sound_ring">Ring</string>
+    <string name="quick_settings_sound_ring">മണി നാഥ ക്രമീകരണങ്ങൾ വേഗത്തിൽ</string>
     <string name="quick_settings_sound_vibrate">Vibrate</string>
     <string name="quick_settings_sound_dnd">Do not disturb</string>
     <!-- Screenshot QS tile -->
@@ -56,4 +56,10 @@
     <string name="statusbar_items_title">Statusbar icons</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
 </resources>

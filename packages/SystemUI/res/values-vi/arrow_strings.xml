@@ -56,4 +56,10 @@
     <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Thông báo nổi</string>
+    <string name="accessibility_quick_settings_heads_up_off">Tắt thông báo nổi.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Bật thông báo nổi.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Thông báo nổi đã tắt.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Thông báo nổi đã bật.</string>
 </resources>

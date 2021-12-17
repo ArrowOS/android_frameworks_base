@@ -56,4 +56,10 @@
     <string name="statusbar_items_title">Durum çubuğu simgeleri</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Bildirim pencereleri</string>
+    <string name="accessibility_quick_settings_heads_up_off">Bildirim pencereleri kapalı.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Bildirim pencereleri açık.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Bildirim pencereleri kapatıldı.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Bildirim pencereleri açıldı.</string>
 </resources>

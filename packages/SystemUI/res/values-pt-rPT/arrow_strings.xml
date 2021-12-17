@@ -56,4 +56,10 @@
     <string name="statusbar_items_title">Ícones na barra de estado</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Notificações pop-up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notificações pop-up desativadas.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notificações pop-up ativadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">As notificações pop-up foram desativadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">As notificações pop-up foram ativadas.</string>
 </resources>

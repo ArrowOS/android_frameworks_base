@@ -56,4 +56,10 @@
     <string name="statusbar_items_title">Ikony na stavovém řádku</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Plovoucí oznámení</string>
+    <string name="accessibility_quick_settings_heads_up_off">Plovoucí oznámení vyp.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Plovoucí oznámení zap.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Plovoucí oznámení bylo vypnuto.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Plovoucí oznámení bylo zapnuto.</string>
 </resources>
