@@ -7,6 +7,7 @@ import com.android.systemui.dagger.SystemUIBinder;
 import com.android.systemui.dagger.SysUIComponent;
 import com.android.systemui.dagger.SystemUIModule;
 
+import com.arrow.android.systemui.gamedashboard.GameDashboardModule;
 import com.arrow.android.systemui.keyguard.KeyguardSliceProviderArrow;
 import com.arrow.android.systemui.smartspace.KeyguardSmartspaceController;
 
@@ -16,8 +17,9 @@ import dagger.Subcomponent;
 @Subcomponent(modules = {
         DefaultComponentBinder.class,
         DependencyProvider.class,
-        SystemUIBinder.class,
+        GameDashboardModule.class,
         SystemUIModule.class,
+        SystemUIArrowBinder.class,
         SystemUIArrowModule.class})
 public interface SysUIComponentArrow extends SysUIComponent {
     @SysUISingleton
