@@ -83,6 +83,10 @@
             android:persistent="false"
             android:title="@string/status_bar_nfc" />
 
+        <com.android.systemui.tuner.StatusBarSwitch
+            android:key="call_strength"
+            android:title="@string/status_bar_call_strength" />
+
         <com.android.systemui.tuner.BatteryPreference
             android:title="@string/battery"
             android:summary="%s"
