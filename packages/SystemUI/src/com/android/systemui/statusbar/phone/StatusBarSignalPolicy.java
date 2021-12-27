@@ -182,6 +182,7 @@ public class StatusBarSignalPolicy implements SignalCallback,
             // Re-register to get new callbacks.
             mNetworkController.removeCallback(this);
             mNetworkController.addCallback(this);
+            updateVpn();
         }
     }
 
