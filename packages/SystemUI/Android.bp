@@ -60,6 +60,7 @@ android_library {
     resource_dirs: [
         "res-product",
         "res-keyguard",
+        "res-smartspace",
         "res",
     ],
     static_libs: [
@@ -95,8 +96,11 @@ android_library {
         "dagger2",
         "jsr330",
         "lottie",
+        "tensorflowlite_java",
         "colorkt",
         "themelib",
+        "backgesture-google",
+        "smartspace-google",
     ],
     manifest: "AndroidManifest.xml",
 
@@ -203,6 +207,10 @@ android_app {
     static_libs: [
         "SystemUI-core",
     ],
+    jni_libs: [
+        "libtensorflowlite_jni",
+    ],
+    use_embedded_native_libs: true,
     resource_dirs: [],
 
     platform_apis: true,
