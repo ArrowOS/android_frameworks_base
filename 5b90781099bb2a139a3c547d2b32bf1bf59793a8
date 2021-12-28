@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7aa75043_62e07118",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2021-12-28T14:36:49Z",
+      "side": 1,
+      "message": "This patch is needed in my device for Brightness curve issues",
+      "revId": "5b90781099bb2a139a3c547d2b32bf1bf59793a8",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
