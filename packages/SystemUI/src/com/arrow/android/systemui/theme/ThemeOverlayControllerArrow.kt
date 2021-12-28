@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.protonaosp.systemui.theme
+package com.arrow.android.systemui.theme
 
 import android.annotation.ColorInt
 import android.app.WallpaperColors
@@ -53,7 +53,7 @@ import kotlin.math.log10
 import kotlin.math.pow
 
 @SysUISingleton
-class CustomThemeOverlayController @Inject constructor(
+class ThemeOverlayControllerArrow @Inject constructor(
     private val context: Context,
     broadcastDispatcher: BroadcastDispatcher,
     @Background bgHandler: Handler,
@@ -162,7 +162,7 @@ class CustomThemeOverlayController @Inject constructor(
     }
 
     companion object {
-        private const val TAG = "CustomThemeOverlayController"
+        private const val TAG = "ThemeOverlayControllerArrow"
 
         private const val PREF_PREFIX = "monet_engine"
         private const val PREF_COLOR_OVERRIDE = "${PREF_PREFIX}_color_override"
