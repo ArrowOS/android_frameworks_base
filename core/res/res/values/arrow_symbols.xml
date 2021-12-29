@@ -55,4 +55,7 @@
     <java-symbol type="bool" name="config_multiColorBatteryLed" />
     <java-symbol type="bool" name="config_ledCanPulse" />
 
+    <!-- Whether to cancel fingerprint operation if not idle -->
+    <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
+
 </resources>
