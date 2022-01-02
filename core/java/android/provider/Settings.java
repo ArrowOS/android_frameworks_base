@@ -5304,6 +5304,12 @@ public final class Settings {
           */
         public static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
 
+        /**
+         * Whether to force small clock on keyguard
+         * @hide
+         */
+        public static final String LOCKSCREEN_SMALL_CLOCK = "lockscreen_small_clock";
+
        /**
          * These are all public system settings
          *
