@@ -5280,6 +5280,7 @@ public final class Settings {
          /**
          * Whether the phone vibrates on call waiting
          * @hide
+
          */
         public static final String VIBRATE_ON_CALLWAITING = "vibrate_on_callwaiting";
 
@@ -10207,6 +10208,13 @@ public final class Settings {
          * @hide
          */
         public static final String VOLUME_LINK_NOTIFICATION = "volume_link_notification";
+
+        /**
+         * Whether to force small clock on keyguard
+         * @hide
+         */
+        @Readable
+        public static final String LOCKSCREEN_SMALL_CLOCK = "lockscreen_small_clock";
 
         /**
          * Keys we no longer back up under the current schema, but want to continue to
