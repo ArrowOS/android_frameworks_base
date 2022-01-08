@@ -19,35 +19,35 @@
     <string name="global_action_reboot">Reiniciar</string>
     <string name="global_action_reboot_more">Reiniciar\u2026</string>
     <string name="global_action_reboot_sub">Sistema</string>
-    <string name="global_action_reboot_recovery">Modo recuperación</string>
+    <string name="global_action_reboot_recovery">Modo de recuperación</string>
     <string name="global_action_reboot_bootloader">Gestor de arranque</string>
-    <string name="global_action_settings">Configuraciones</string>
+    <string name="global_action_settings">Ajustes</string>
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
     <string name="screenshot_delete_label">Eliminar</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
-    <string name="screenshot_delete_description">Borrar captura</string>
+    <string name="screenshot_delete_description">Eliminar captura de pantalla</string>
     <!-- Caffeine QS Tile -->
-    <string name="quick_settings_caffeine_label">Modo cafeína</string>
-    <string name="accessibility_quick_settings_caffeine_off">Modo cafeína desactivado</string>
-    <string name="accessibility_quick_settings_caffeine_on">Modo cafeína activado</string>
+    <string name="quick_settings_caffeine_label">Cafeína</string>
+    <string name="accessibility_quick_settings_caffeine_off">Cafeína desactivada</string>
+    <string name="accessibility_quick_settings_caffeine_on">Cafeína activada</string>
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Pantalla ambiente</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Desactivar pantalla ambiente.</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Pantalla ambiente desactivada.</string>
     <string name="accessibility_quick_settings_ambient_display_on">Pantalla ambiente activada.</string>
     <string name="accessibility_quick_settings_ambient_display_changed_off">Se ha desactivado la pantalla ambiente.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">La pantalla ambiente se ha activado.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Se ha activado la pantalla ambiente.</string>
     <!-- USB tethering QS tile -->
-    <string name="quick_settings_usb_tether_label">Conexión USB</string>
+    <string name="quick_settings_usb_tether_label">Compartir conexión por USB</string>
     <!-- Sync QS Tile -->
     <string name="quick_settings_sync_label">Sincronizar</string>
-    <string name="accessibility_quick_settings_sync_off">Sincronizar desactivado</string>
+    <string name="accessibility_quick_settings_sync_off">Sincronización desactivada</string>
     <string name="accessibility_quick_settings_sync_on">Sincronización activada</string>
-    <string name="accessibility_quick_settings_sync_changed_off">La sincronización ha sido desactivada</string>
-    <string name="accessibility_quick_settings_sync_changed_on">La sincronización ha sido habilitada</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Se ha desactivado la sincronización</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Se ha activado la sincronización</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">Sonido</string>
     <string name="quick_settings_sound_ring">Sonar</string>
-    <string name="quick_settings_sound_vibrate">Vibración</string>
+    <string name="quick_settings_sound_vibrate">Vibrar</string>
     <string name="quick_settings_sound_dnd">No molestar</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">Captura de pantalla</string>
@@ -57,9 +57,9 @@
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">Notificaciones emergentes</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notificaciones emergentes desactivadas.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notificaciones emergentes activadas.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Se han desactivado las notificaciones emergentes.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Se han activado las notificaciones emergentes.</string>
 </resources>

@@ -57,9 +57,9 @@
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">Plávajúce upozornenia</string>
+    <string name="accessibility_quick_settings_heads_up_off">Plávajúce upozornenia vyp.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Plávajúce upozornenia zap.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Plávajúce upozornenia boli vypnuté.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Plávajúce upozornenia boli zapnuté.</string>
 </resources>
