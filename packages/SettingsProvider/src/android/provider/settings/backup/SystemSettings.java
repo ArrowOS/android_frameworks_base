@@ -85,5 +85,6 @@ public class SystemSettings {
         Settings.System.ALARM_ALERT,
         Settings.System.NOTIFICATION_LIGHT_PULSE,
         Settings.System.LOCKSCREEN_SMALL_CLOCK,
+        Settings.System.ENABLE_RIPPLE_EFFECT,
     };
 }
