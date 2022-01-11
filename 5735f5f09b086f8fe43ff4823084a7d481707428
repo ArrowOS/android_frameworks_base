@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c220848_f518472b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-01-11T11:32:36Z",
+      "side": 1,
+      "message": "I don\u0027t really see much of diff. with it, better to just revert it than to have unneeded ricing",
+      "revId": "5735f5f09b086f8fe43ff4823084a7d481707428",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
