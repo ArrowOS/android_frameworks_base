@@ -319,5 +319,6 @@ public class SecureSettingsValidators {
         });
         VALIDATORS.put(Secure.VOLUME_LINK_NOTIFICATION, BOOLEAN_VALIDATOR);
         VALIDATORS.put(Secure.TETHERING_ALLOW_VPN_UPSTREAMS, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(Secure.SYSTEM_BLACK_THEME, BOOLEAN_VALIDATOR);
     }
 }
