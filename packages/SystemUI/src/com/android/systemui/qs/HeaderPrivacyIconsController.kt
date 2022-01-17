@@ -142,9 +142,9 @@ class HeaderPrivacyIconsController @Inject constructor(
                 privacyDialogController.showDialog(privacyChip.context)
             }
         }
-        setChipVisibility(privacyChip.visibility == View.VISIBLE)
         micCameraIndicatorsEnabled = privacyItemController.micCameraAvailable
         locationIndicatorsEnabled = privacyItemController.locationAvailable
+        setChipVisibility(privacyChip.visibility == View.VISIBLE)
 
         // Ignore privacy icons because they show in the space above QQS
         updatePrivacyIconSlots()
@@ -171,6 +171,7 @@ class HeaderPrivacyIconsController @Inject constructor(
     }
 
     fun onParentInvisible() {
+        setChipVisibility(false)
         chipVisibilityListener = null
         privacyChip.setOnClickListener(null)
     }
@@ -187,6 +188,7 @@ class HeaderPrivacyIconsController @Inject constructor(
         listening = false
         privacyItemController.removeCallback(picCallback)
         privacyChipLogged = false
+        setChipVisibility(false)
     }
 
     private fun setChipVisibility(visible: Boolean) {
