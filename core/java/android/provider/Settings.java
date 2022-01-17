@@ -5310,6 +5310,12 @@ public final class Settings {
          */
         public static final String LOCKSCREEN_SMALL_CLOCK = "lockscreen_small_clock";
 
+        /**
+         * Volume panel on left
+         * @hide
+         */
+        public static final String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+		
        /**
          * These are all public system settings
          *
