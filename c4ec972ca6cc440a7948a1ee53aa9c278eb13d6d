@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b70e0463_567e2409",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-01-19T20:19:04Z",
+      "side": 1,
+      "message": "Check commit description:\nhttps://review.arrowos.net/c/ArrowOS/android_frameworks_base/+/14032",
+      "revId": "c4ec972ca6cc440a7948a1ee53aa9c278eb13d6d",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
