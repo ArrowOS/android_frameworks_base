@@ -412,7 +412,7 @@
                   android:label="@string/statusbar_items_title"
                   android:theme="@style/Theme.SubSettingsBase"
                   android:process=":tuner"
-                  android:parentActivityName="com.android.settings.arrow.HardwareKeys"
+                  android:parentActivityName="com.android.settings.DisplaySettings"
                   android:exported="true">
         </activity>
 
