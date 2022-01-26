@@ -3269,6 +3269,7 @@ public final class BluetoothAdapter {
                 break;
             case BluetoothProfile.BROADCAST:
                 closeBroadcastProfile(proxy);
+                break;
             case BluetoothProfile.BC_PROFILE:
                 closeBCProfile(proxy);
                 break;
