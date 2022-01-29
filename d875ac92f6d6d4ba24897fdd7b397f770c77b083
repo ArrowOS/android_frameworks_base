@@ -34,6 +34,24 @@
       "parentUuid": "46c5440f_3b1679c6",
       "revId": "d875ac92f6d6d4ba24897fdd7b397f770c77b083",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "408b9b5e_e9919d09",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-01-29T05:43:06Z",
+      "side": 1,
+      "message": "If you want I can re-open it, but you can also use force repopicking the topic (-f) to pick abandoned commits",
+      "parentUuid": "2f5f4a67_24604d9b",
+      "revId": "d875ac92f6d6d4ba24897fdd7b397f770c77b083",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
