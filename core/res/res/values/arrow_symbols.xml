@@ -1,5 +1,5 @@
 <!--
-     Copyright (C) 2018-2021 ArrowOS
+     Copyright (C) 2018-2022 ArrowOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -58,4 +58,7 @@
     <!-- Whether to cancel fingerprint operation if not idle -->
     <java-symbol type="bool" name="config_fpCancelIfNotIdle" />
 
+    <!-- App lock -->
+    <java-symbol type="string" name="unlock_application" />
+    <java-symbol type="array" name="config_appLockAllowedSystemApps" />
 </resources>
