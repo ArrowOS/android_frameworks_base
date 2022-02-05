@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91d32ebb_7d594cae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-02-05T23:14:38Z",
+      "side": 1,
+      "message": "Work not correct.\nInternet permission critical, without apps crashing. Better dont allow user\u0027s disable it.\nOther Sensors don\u0027t work.",
+      "revId": "797df193337c0dd6e58f783f394aa4c388e5f35d",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
