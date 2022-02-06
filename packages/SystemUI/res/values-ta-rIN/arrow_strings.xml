@@ -45,21 +45,21 @@
     <string name="accessibility_quick_settings_sync_changed_off">ஒத்திசைவு அணைக்கப்பட்டது</string>
     <string name="accessibility_quick_settings_sync_changed_on">ஒத்திசைவு இயக்கப்பட்டது</string>
     <!-- Sound QS Tile -->
-    <string name="quick_settings_sound_label">ஒலி</string>
+    <string name="quick_settings_sound_label">ஓசை</string>
     <string name="quick_settings_sound_ring">மணி அடி</string>
-    <string name="quick_settings_sound_vibrate">அதிர்வு</string>
-    <string name="quick_settings_sound_dnd">தொந்தரவு செய்யாதீர்</string>
+    <string name="quick_settings_sound_vibrate">அதிர்</string>
+    <string name="quick_settings_sound_dnd">தொந்தரவு செய்யாதே</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
     <string name="quick_settings_region_screenshot_label">பகுதி திரைப்பிடிப்பு</string>
     <!-- Statusbar tuner -->
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">நிலைப்பட்டி படவுருக்கள்</string>
     <!-- Name of the VPN status bar icon. -->
-    <string name="status_bar_vpn">VPN</string>
+    <string name="status_bar_vpn">மெ.த.பி</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">தலையுயர்த்தி</string>
+    <string name="accessibility_quick_settings_heads_up_off">தலையுயர்த்தி அணைவில்.</string>
+    <string name="accessibility_quick_settings_heads_up_on">தலையுயர்த்தி எழிவில்.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">தலையுயர்த்தி அணைக்கப்பட்டது.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">தலையுயர்த்தி இயக்கப்பட்டது.</string>
 </resources>

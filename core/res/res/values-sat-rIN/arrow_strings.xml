@@ -16,8 +16,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Global actions -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
+    <string name="reboot_to_bootloader_title">ᱵᱩᱴᱞᱚᱰᱚᱨ ᱫᱩᱦᱲᱟᱹ ᱪᱟᱹᱞᱩᱭ ᱢᱮ</string>
+    <string name="reboot_to_bootloader_message">ᱵᱩᱴᱞᱚᱰᱚᱨ ᱫᱩᱦᱲᱟᱹ ᱪᱟᱹᱞᱩᱜ ᱠᱟᱱᱟ\u2026</string>
     <string name="reboot_to_recovery_title">Reboot recovery</string>
     <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
     <string name="reboot_system_title">Restart system</string>

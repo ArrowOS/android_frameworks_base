@@ -57,9 +57,9 @@
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">浮動通知</string>
+    <string name="accessibility_quick_settings_heads_up_off">浮動通知關。</string>
+    <string name="accessibility_quick_settings_heads_up_on">浮動通知開。</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">已關閉浮動通知。</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">已開啟浮動通知。</string>
 </resources>
