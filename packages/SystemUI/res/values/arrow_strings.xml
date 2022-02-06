@@ -134,4 +134,7 @@
     <string name="screenrecord_hevc_switch_label">Enable HEVC</string>
     <string name="screenrecord_hevc_switch_summary">Use more efficient HEVC video encoding</string>
 
+    <!-- Google Lens Screenshot string -->
+    <string name="lensss">Lens</string>
+
 </resources>
