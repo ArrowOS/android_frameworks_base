@@ -39,4 +39,7 @@
     <!-- Parallel space badge -->
     <string name="parallel_space_badge_label" translatable="false">%1$s</string>
 
+    <!-- Face unlock -->
+    <string name="face_unlock_disabled_idle">Face unlock disabled due to inactivity</string>
+
 </resources>
