@@ -47,4 +47,7 @@
     <!-- Icons that don't show in a collapsed statusbar on keyguard -->
     <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
     </string-array>
+
+    <!-- Face Unlock -->
+    <string name="face_unlock_recognizing">Recognizing face...</string>
 </resources>
