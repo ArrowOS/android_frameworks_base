@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "416b43e0_af4add14",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2022-02-17T15:01:14Z",
+      "side": 1,
+      "message": "So This patchset does similar work as the older one which I used for repo-pick. But it doesn\u0027t cause any issues to other devices. I would like if you guys can try it out on your devices before merging. ",
+      "revId": "c2c57902eabeee68144790fdab4c2512c19f7aea",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
