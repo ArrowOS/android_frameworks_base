@@ -650,10 +650,15 @@ class AppLockManagerService(private val context: Context) :
                 logD("Device is not secure, app does not require unlock")
                 return false
             }
-            // If device is locked then there is no point in proceeding.
-            if (!ignoreLockState && keyguardManager.isDeviceLocked()) {
-                logD("Device is locked, app does not require unlock")
-                return false
+            val ident = Binder.clearCallingIdentity()
+            try {
+                // If device is locked then there is no point in proceeding.
+                if (!ignoreLockState && keyguardManager.isDeviceLocked()) {
+                    logD("Device is locked, app does not require unlock")
+                    return false
+                }
+            } finally {
+                Binder.restoreCallingIdentity(ident)
             }
             logD("requireUnlock: packageName = $packageName")
             val actualUserId = getActualUserId(userId, "requireUnlock")
