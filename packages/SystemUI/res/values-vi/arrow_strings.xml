@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">Âm thanh</string>
     <string name="quick_settings_sound_ring">Chuông</string>
     <string name="quick_settings_sound_vibrate">Rung</string>
-    <string name="quick_settings_sound_dnd">Đừng làm phiền</string>
+    <string name="quick_settings_sound_mute">Tắt tiếng</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Đầy đủ</string>
     <string name="quick_settings_screenshot_label">Chụp màn hình</string>
-    <string name="quick_settings_region_screenshot_label">Chụp một phần màn hình</string>
+    <string name="quick_settings_region_screenshot_label">Một phần</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Biểu tượng thanh trạng thái</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">Bật thông báo nổi.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Thông báo nổi đã tắt.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Thông báo nổi đã bật.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Chuyển sim dữ liệu</string>
+    <string name="qs_data_switch_toast_0">Hiện tại không có thẻ SIM nào được lắp</string>
+    <string name="qs_data_switch_toast_1">Hiện tại chỉ có một thẻ SIM được lắp</string>
+    <string name="qs_data_switch_changed_1">Chuyển đổi thẻ dữ liệu sang SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Chuyển đổi thẻ dữ liệu sang SIM 2.</string>
 </resources>

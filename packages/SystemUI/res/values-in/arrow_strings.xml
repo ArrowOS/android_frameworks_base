@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">Suara</string>
     <string name="quick_settings_sound_ring">Dering</string>
     <string name="quick_settings_sound_vibrate">Getar</string>
-    <string name="quick_settings_sound_dnd">Jangan Ganggu</string>
+    <string name="quick_settings_sound_mute">Senyap</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Penuh</string>
     <string name="quick_settings_screenshot_label">Tangkapan Layar</string>
-    <string name="quick_settings_region_screenshot_label">Tangkapan Layar sebagian</string>
+    <string name="quick_settings_region_screenshot_label">Sebagian</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Ikon bilah status</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">Notifikasi mengambang aktif.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Notifikasi mengambang dinonaktifkan.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Notifikasi mengambang diaktifkan.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Ganti kartu data</string>
+    <string name="qs_data_switch_toast_0">Tidak ada kartu SIM yang terpasang saat ini</string>
+    <string name="qs_data_switch_toast_1">Hanya satu kartu SIM yang terpasang saat ini</string>
+    <string name="qs_data_switch_changed_1">Pindah kartu data ke SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Pindah kartu data ke SIM 2.</string>
 </resources>

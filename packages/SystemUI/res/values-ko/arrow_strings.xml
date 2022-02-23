@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">소리</string>
     <string name="quick_settings_sound_ring">벨소리</string>
     <string name="quick_settings_sound_vibrate">진동</string>
-    <string name="quick_settings_sound_dnd">방해 금지</string>
+    <string name="quick_settings_sound_mute">Mute</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Full</string>
     <string name="quick_settings_screenshot_label">스크린샷</string>
-    <string name="quick_settings_region_screenshot_label">부분 스크린샷</string>
+    <string name="quick_settings_region_screenshot_label">Partial</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">상태 표시줄 아이콘</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">헤드업 알림 켜짐</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">헤드업 알림이 꺼졌습니다.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">헤드업 알림이 켜졌습니다.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
 </resources>

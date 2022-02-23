@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">Zvuk</string>
     <string name="quick_settings_sound_ring">Vyzvánění</string>
     <string name="quick_settings_sound_vibrate">Vibrace</string>
-    <string name="quick_settings_sound_dnd">Nerušit</string>
+    <string name="quick_settings_sound_mute">Ztlumit</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Úplný</string>
     <string name="quick_settings_screenshot_label">Snímek obrazovky</string>
-    <string name="quick_settings_region_screenshot_label">Částečný snímek obrazovky</string>
+    <string name="quick_settings_region_screenshot_label">Částečný</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Ikony na stavovém řádku</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">Plovoucí oznámení zap.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Plovoucí oznámení bylo vypnuto.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Plovoucí oznámení bylo zapnuto.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Přepnout SIM pro data</string>
+    <string name="qs_data_switch_toast_0">Momentálně není vložena žádná SIM karta</string>
+    <string name="qs_data_switch_toast_1">Momentálně je vložena pouze jedna SIM karta</string>
+    <string name="qs_data_switch_changed_1">Přepnout datovou kartu na SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Přepnout datovou kartu na SIM 2.</string>
 </resources>
