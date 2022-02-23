@@ -18,7 +18,7 @@
     <!-- Global actions -->
     <string name="reboot_to_bootloader_title">Redémarrer dans le bootloader</string>
     <string name="reboot_to_bootloader_message">Redémarrage dans le bootloader</string>
-    <string name="reboot_to_recovery_title">Redémarrer en Recovery</string>
+    <string name="reboot_to_recovery_title">Redémarrer dans le recovery</string>
     <string name="reboot_to_recovery_message">Redémarrage vers le mode de récupération\u2026</string>
     <string name="reboot_system_title">Redémarrer le système</string>
     <string name="reboot_system_message">Redémarrage du système\u2026</string>

@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">聲音</string>
     <string name="quick_settings_sound_ring">響鈴</string>
     <string name="quick_settings_sound_vibrate">震動</string>
-    <string name="quick_settings_sound_dnd">勿擾</string>
+    <string name="quick_settings_sound_mute">靜音</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Full</string>
     <string name="quick_settings_screenshot_label">螢幕截圖</string>
-    <string name="quick_settings_region_screenshot_label">部分截圖</string>
+    <string name="quick_settings_region_screenshot_label">局部</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">狀態列圖示</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">浮動通知開。</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">已關閉浮動通知。</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">已開啟浮動通知。</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">切換SIM卡</string>
+    <string name="qs_data_switch_toast_0">目前未插入 SIM 卡</string>
+    <string name="qs_data_switch_toast_1">目前僅插入一張 SIM 卡</string>
+    <string name="qs_data_switch_changed_1">切換上網卡為SIM卡1。</string>
+    <string name="qs_data_switch_changed_2">切換上網卡為SIM卡2。</string>
 </resources>

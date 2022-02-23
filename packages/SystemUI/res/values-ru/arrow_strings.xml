@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">Звук</string>
     <string name="quick_settings_sound_ring">Рингтон</string>
     <string name="quick_settings_sound_vibrate">Только вибрация</string>
-    <string name="quick_settings_sound_dnd">Не беспокоить</string>
+    <string name="quick_settings_sound_mute">Без звука</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Весь экран</string>
     <string name="quick_settings_screenshot_label">Скриншот</string>
-    <string name="quick_settings_region_screenshot_label">Скриншот выбранной области экрана</string>
+    <string name="quick_settings_region_screenshot_label">Частичный</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Значки строки состояния</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">Всплывающие уведомления вкл.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Всплывающие уведомления выключены.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления включены.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Поменять SIM для передачи данных</string>
+    <string name="qs_data_switch_toast_0">В настоящее время SIM-карта не вставлена</string>
+    <string name="qs_data_switch_toast_1">В настоящее время вставлена только одна SIM-карта</string>
+    <string name="qs_data_switch_changed_1">Переключить передачу данных на SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Переключить передачу данных на SIM 2.</string>
 </resources>

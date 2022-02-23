@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">Son</string>
     <string name="quick_settings_sound_ring">Sonnerie</string>
     <string name="quick_settings_sound_vibrate">Vibreur</string>
-    <string name="quick_settings_sound_dnd">Ne pas déranger</string>
+    <string name="quick_settings_sound_mute">Muet</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Complet</string>
     <string name="quick_settings_screenshot_label">Capture d\'écran</string>
-    <string name="quick_settings_region_screenshot_label">Capture d’écran partielle</string>
+    <string name="quick_settings_region_screenshot_label">Partiel</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Icônes de la Barre d\'état</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">Activer les notifications flottantes.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Notifications flottantes désactivées.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Notifications flottantes activées.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Changer de carte</string>
+    <string name="qs_data_switch_toast_0">Actuellement, aucune carte SIM n\'est insérée</string>
+    <string name="qs_data_switch_toast_1">Actuellement, une seule carte SIM est insérée</string>
+    <string name="qs_data_switch_changed_1">Changer la carte mémoire sur SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Changer la carte mémoire sur SIM 2.</string>
 </resources>

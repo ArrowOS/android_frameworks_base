@@ -48,10 +48,11 @@
     <string name="quick_settings_sound_label">Ton</string>
     <string name="quick_settings_sound_ring">Klingeln</string>
     <string name="quick_settings_sound_vibrate">Vibrieren</string>
-    <string name="quick_settings_sound_dnd">Bitte nicht stören</string>
+    <string name="quick_settings_sound_mute">Stummschalten</string>
     <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Vollständig</string>
     <string name="quick_settings_screenshot_label">Bildschirmfoto</string>
-    <string name="quick_settings_region_screenshot_label">Bildschirmfoto-Teilbereich</string>
+    <string name="quick_settings_region_screenshot_label">Teilweise</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Symbole der Statusleiste</string>
     <!-- Name of the VPN status bar icon. -->
@@ -62,4 +63,10 @@
     <string name="accessibility_quick_settings_heads_up_on">Pop-Up-Benachrichtigungen ein.</string>
     <string name="accessibility_quick_settings_heads_up_changed_off">Pop-Up Benachrichtigungen ausgeschaltet.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">Pop-Up Benachrichtigungen eingeschaltet.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Daten-SIM wechseln</string>
+    <string name="qs_data_switch_toast_0">Derzeit ist keine SIM-Karte eingelegt</string>
+    <string name="qs_data_switch_toast_1">Derzeit ist nur eine SIM-Karte eingelegt</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
 </resources>
