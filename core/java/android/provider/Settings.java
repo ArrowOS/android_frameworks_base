@@ -5390,6 +5390,12 @@ public final class Settings {
          */
         public static final String ENABLE_RIPPLE_EFFECT = "enable_ripple_effect";
 
+	/**
+         * Whether to show data usage in qs footer
+         * @hide
+         */
+        public static final String QS_FOOTER_DATA_USAGE = "qs_footer_data_usage";
+
        /**
          * These are all public system settings
          *
