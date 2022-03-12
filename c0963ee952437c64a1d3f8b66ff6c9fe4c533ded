@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8fe6e6be_7e6e534d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-03-12T10:52:31Z",
+      "side": 1,
+      "message": "Duplicate: https://review.arrowos.net/q/topic:twelve-touch-hidl",
+      "revId": "c0963ee952437c64a1d3f8b66ff6c9fe4c533ded",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
