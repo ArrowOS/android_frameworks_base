@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "479b1a62_fd810bd7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-03-13T09:59:06Z",
+      "side": 1,
+      "message": "12L style will in 12L, not in 12.",
+      "revId": "306c702fa3c92d1ad252bcf8b4d97633fbd08f79",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
