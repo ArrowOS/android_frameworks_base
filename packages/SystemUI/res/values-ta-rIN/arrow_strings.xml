@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 ArrowOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Power Menu -->
+    <string name="global_action_reboot">மறுதுவக்கம்</string>
+    <string name="global_action_reboot_more">மறுதுவக்கு</string>
+    <string name="global_action_reboot_sub">முறைமை</string>
+    <string name="global_action_reboot_recovery">மீட்டெடுப்பு</string>
+    <string name="global_action_reboot_bootloader">துவக்கேற்றி</string>
+    <string name="global_action_settings">அமைப்புகள்</string>
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">அழி</string>
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">திரைப்பிடிப்பை அழி</string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">குளம்பி</string>
+    <string name="accessibility_quick_settings_caffeine_off">குளம்பி அணை</string>
+    <string name="accessibility_quick_settings_caffeine_on">குளம்பி இயக்கு</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">சூழல்சார் திரை</string>
+    <string name="accessibility_quick_settings_ambient_display_off">சூழல்சார் திரை அணைவு.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">சூழல்சார் திரை இயக்கம்.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">சூழல்சார் திரை அணைக்கப்பட்டது.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">சூழல்சார் திரை இயக்கப்பட்டது.</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">யுஎஸ்பி டெதெரிங்</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">ஒத்திசைவு</string>
+    <string name="accessibility_quick_settings_sync_off">ஒத்திசைவு அணைவு</string>
+    <string name="accessibility_quick_settings_sync_on">ஒத்திசைவு இயக்கம்</string>
+    <string name="accessibility_quick_settings_sync_changed_off">ஒத்திசைவு அணைக்கப்பட்டது</string>
+    <string name="accessibility_quick_settings_sync_changed_on">ஒத்திசைவு இயக்கப்பட்டது</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">ஓசை</string>
+    <string name="quick_settings_sound_ring">மணி அடி</string>
+    <string name="quick_settings_sound_vibrate">அதிர்</string>
+    <string name="quick_settings_sound_mute">Mute</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
+    <string name="quick_settings_region_screenshot_label">Partial</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">நிலைப்பட்டி படவுருக்கள்</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">மெ.த.பி</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">தலையுயர்த்தி</string>
+    <string name="accessibility_quick_settings_heads_up_off">தலையுயர்த்தி அணைவில்.</string>
+    <string name="accessibility_quick_settings_heads_up_on">தலையுயர்த்தி எழிவில்.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">தலையுயர்த்தி அணைக்கப்பட்டது.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">தலையுயர்த்தி இயக்கப்பட்டது.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+</resources>

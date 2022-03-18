@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 ArrowOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Power Menu -->
+    <string name="global_action_reboot">फेरी सुरु गर्नुहोस्</string>
+    <string name="global_action_reboot_more">फेरी सुरु गर्नुहोस्</string>
+    <string name="global_action_reboot_sub">सिस्टम</string>
+    <string name="global_action_reboot_recovery">रिकभरी</string>
+    <string name="global_action_reboot_bootloader">बुट लोडर</string>
+    <string name="global_action_settings">सेटिंग्सहरु</string>
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">हटाउनुहोस्</string>
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">स्क्रिनसट हटाउनुहोस्</string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">क्याफिन</string>
+    <string name="accessibility_quick_settings_caffeine_off">डिस्पेले बन्द नहुने: बन्द</string>
+    <string name="accessibility_quick_settings_caffeine_on">डिस्पेले बन्द नहुने: चालु</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">परिवेश प्रदर्शन</string>
+    <string name="accessibility_quick_settings_ambient_display_off">परिवेश प्रदर्शन: बन्द.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">परिवेश प्रदर्शन: चालु.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">परिवेश प्रदर्शन: बन्द गरियो.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">झुलुक्क देखिने: चालु भयो.</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB टेथर</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">सिङ्क गर्नुहोस्</string>
+    <string name="accessibility_quick_settings_sync_off">सिकं बन्द</string>
+    <string name="accessibility_quick_settings_sync_on">सिकं चालु</string>
+    <string name="accessibility_quick_settings_sync_changed_off">सिकं बन्द भयो</string>
+    <string name="accessibility_quick_settings_sync_changed_on">सिकं चालु भयो</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">आवाज</string>
+    <string name="quick_settings_sound_ring">घन्टी</string>
+    <string name="quick_settings_sound_vibrate">भाइब्रेट</string>
+    <string name="quick_settings_sound_mute">Mute</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_screenshot_label">स्क्रिनसट</string>
+    <string name="quick_settings_region_screenshot_label">Partial</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Statusbar icons</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Switch data card</string>
+    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
+    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
+    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+</resources>

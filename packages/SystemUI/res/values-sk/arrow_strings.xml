@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 ArrowOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Power Menu -->
+    <string name="global_action_reboot">Reštartovať</string>
+    <string name="global_action_reboot_more">Reštartovať\u2026</string>
+    <string name="global_action_reboot_sub">Systém</string>
+    <string name="global_action_reboot_recovery">Recovery</string>
+    <string name="global_action_reboot_bootloader">Bootloader</string>
+    <string name="global_action_settings">Nastavenia</string>
+    <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
+    <string name="screenshot_delete_label">Vymazať</string>
+    <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
+    <string name="screenshot_delete_description">Vymazať snímku obrazovky</string>
+    <!-- Caffeine QS Tile -->
+    <string name="quick_settings_caffeine_label">Kofeín</string>
+    <string name="accessibility_quick_settings_caffeine_off">Kofeín vyp.</string>
+    <string name="accessibility_quick_settings_caffeine_on">Kofeín zap.</string>
+    <!-- Ambient display QS tile -->
+    <string name="quick_settings_ambient_display_label">Ambientne zobrazenie</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Ambientne zobrazenie vypnuté.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Ambientné zobrazenie zapnuté.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambientne zobrazenie je vypnuté.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambientne zobrazenie je zapnuté.</string>
+    <!-- USB tethering QS tile -->
+    <string name="quick_settings_usb_tether_label">USB Tethering</string>
+    <!-- Sync QS Tile -->
+    <string name="quick_settings_sync_label">Synchronizácia</string>
+    <string name="accessibility_quick_settings_sync_off">Synchronizácia vyp</string>
+    <string name="accessibility_quick_settings_sync_on">Synchronizácia zap</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Synchronizácia vypnutá</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Synchronizácia zapnutá</string>
+    <!-- Sound QS Tile -->
+    <string name="quick_settings_sound_label">Zvuk</string>
+    <string name="quick_settings_sound_ring">Zvonenie</string>
+    <string name="quick_settings_sound_vibrate">Vibrovanie</string>
+    <string name="quick_settings_sound_mute">Stlmiť</string>
+    <!-- Screenshot QS tile -->
+    <string name="quick_settings_full_screenshot_label">Úplná</string>
+    <string name="quick_settings_screenshot_label">Snímka obrazovky</string>
+    <string name="quick_settings_region_screenshot_label">Čiastočná</string>
+    <!-- Statusbar tuner -->
+    <string name="statusbar_items_title">Ikony v stavovom riadku</string>
+    <!-- Name of the VPN status bar icon. -->
+    <string name="status_bar_vpn">VPN</string>
+    <!-- Heads Up QS Tile -->
+    <string name="quick_settings_heads_up_label">Plávajúce upozornenia</string>
+    <string name="accessibility_quick_settings_heads_up_off">Plávajúce upozornenia vyp.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Plávajúce upozornenia zap.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Plávajúce upozornenia boli vypnuté.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Plávajúce upozornenia boli zapnuté.</string>
+    <!-- DataSwitch Tile -->
+    <string name="qs_data_switch_label">Prepnúť SIM pre dáta</string>
+    <string name="qs_data_switch_toast_0">Momentálne nie je vložená žiadna SIM karta</string>
+    <string name="qs_data_switch_toast_1">Momentálne je vložená iba jedna SIM karta</string>
+    <string name="qs_data_switch_changed_1">Prepnúť dátovú kartu na SIM č. 1.</string>
+    <string name="qs_data_switch_changed_2">Prepnúť dátovú kartu na SIM č. 2.</string>
+</resources>

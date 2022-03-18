@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 ArrowOS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Global actions -->
+    <string name="reboot_to_bootloader_title">റീബൂട്ട് ബൂട്ട്ലോഡർ</string>
+    <string name="reboot_to_bootloader_message">ബൂട്ട്ലോഡറിലേക്ക് റീബൂട്ട് ചെയ്യുന്നു\u2026</string>
+    <string name="reboot_to_recovery_title">Recovery റീബൂട്ട് ചെയ്യുക</string>
+    <string name="reboot_to_recovery_message">\u2026 റിക്കവറി മോഡിലേക്ക് റീസ്റ്റാർട്ട് ചെയ്യുന്നു</string>
+    <string name="reboot_system_title">സിസ്റ്റം പുനരാരംഭിക്കുക</string>
+    <string name="reboot_system_message">സിസ്റ്റം പുനരാരംഭിക്കുന്നു\u2026</string>
+    <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permlab_fakePackageSignature">പെർമാലാബ്_വ്യാജ പാക്കേജ് സിഗ്നേച്ചർ
+ഒരു അപ്ലിക്കേഷൻ അനുമതിയുടെ ശീർഷകം ലിസ്റ്റുചെയ്‌തിരിക്കുന്നതിനാൽ ഇത് ചെയ്യാൻ അപ്ലിക്കേഷനെ അനുവദിക്കണോ എന്ന് ഉപയോക്താവിന് തിരഞ്ഞെടുക്കാനാകും.</string>
+    <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permdesc_fakePackageSignature">മറ്റൊരു അപ്ലിക്കേഷനായി നടിക്കാൻ അപ്ലിക്കേഷനെ അനുവദിക്കുന്നു.  സ്വകാര്യ അപ്ലിക്കേഷൻ ഡാറ്റ ആക്‌സസ് ചെയ്യുന്നതിന് ക്ഷുദ്ര അപ്ലിക്കേഷനുകൾക്ക് ഇത് ഉപയോഗിക്കാൻ കഴിഞ്ഞേക്കും.  നിയമാനുസൃതമായ ഉപയോഗങ്ങളിൽ ഒരു എമുലേറ്റർ ഉൾപ്പെടുന്നു, അത് അനുകരിക്കുന്നതായി നടിക്കുന്നു.  ജാഗ്രതയോടെ മാത്രം ഈ അനുമതി നൽകുക!</string>
+    <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgrouplab_fake_package_signature">അപ്ലിക്കേഷൻ അനുമതികളുടെ ഒരു വിഭാഗത്തിന്റെ ശീർഷകം ലിസ്റ്റുചെയ്‌തിരിക്കുന്നതിനാൽ ഇത് ചെയ്യാൻ അപ്ലിക്കേഷനെ അനുവദിക്കണോ എന്ന് ഉപയോക്താവിന് തിരഞ്ഞെടുക്കാനാകും</string>
+    <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
+    <string name="permgroupdesc_fake_package_signature">പാക്കേജ് സൈൻ ഫെയ്ക് ചെയ്യുവാൻ അനുവദിക്കുക</string>
+    <!-- Message shown to the user when the apps requests permission from this group. If ever possible this should stay below 80 characters (assuming the parameters takes 20 characters). Don't abbreviate until the message reaches 120 characters though. [CHAR LIMIT=120] -->
+    <string name="permgrouprequest_fake_package_signature">&lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; നെ പാക്കേജ് സൈൻ ഫെയ്ക്ക് ചെയ്യാൻ അനുവദിക്കണോ?</string>
+</resources>
