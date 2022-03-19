@@ -1164,8 +1164,6 @@ public class NavigationBarView extends FrameLayout {
 
         pw.println("    mScreenOn: " + mScreenOn);
 
-
-        dumpButton(pw, "back", getBackButton());
         dumpButton(pw, "home", getHomeButton());
         dumpButton(pw, "handle", getHomeHandle());
         dumpButton(pw, "rcnt", getRecentsButton());
