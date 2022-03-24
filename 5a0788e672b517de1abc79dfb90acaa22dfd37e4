@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "325e2522_2cb5686f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2022-03-24T15:07:19Z",
+      "side": 1,
+      "message": "Just for repo-pick\n",
+      "revId": "5a0788e672b517de1abc79dfb90acaa22dfd37e4",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
