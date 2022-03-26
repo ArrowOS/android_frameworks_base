@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "24e4c808_731d59fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 160
+      },
+      "writtenOn": "2022-03-26T02:32:50Z",
+      "side": 1,
+      "message": "May I ask what’s the purpose of it?",
+      "revId": "f672950c5e46c8e62ee35b7567a22de19390ae34",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
