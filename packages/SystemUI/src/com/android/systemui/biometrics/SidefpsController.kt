@@ -183,7 +183,7 @@ class SidefpsController @Inject constructor(
             if (location == null) {
                 Log.w(TAG, "No location specified for display: ${display.uniqueId}")
             }
-            location ?: sensorProps.location
+            location ?: sensorProps.getLocation()
         }
 
         // ignore sensorLocationX and sensorRadius since it's assumed to be on the side
