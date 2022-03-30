@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0b5b9582_c98ffabf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2022-03-30T20:17:23Z",
+      "side": 1,
+      "message": "Should it be in arrow_config/symbols?",
+      "revId": "8324805a4ad8d05b8f5ef02eda210afb69477a3c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
