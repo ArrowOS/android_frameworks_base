@@ -16,6 +16,24 @@
       "message": "Should it be in arrow_config/symbols?",
       "revId": "8324805a4ad8d05b8f5ef02eda210afb69477a3c",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1c419a2_8fa95fbe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-03-31T01:30:00Z",
+      "side": 1,
+      "message": "Comment removed by: Kuber Sharma; Reason: imtrippin",
+      "parentUuid": "0b5b9582_c98ffabf",
+      "revId": "8324805a4ad8d05b8f5ef02eda210afb69477a3c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
