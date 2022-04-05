@@ -5444,6 +5444,12 @@ public final class Settings {
          */
         public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
+        /**
+         * List of ; separated apps to be hidden from launcher.
+         * @hide
+         */
+        public static final String LAUNCHER_HIDDEN_APPS = "launcher_hidden_apps";
+        
        /**
          * These are all public system settings
          *
