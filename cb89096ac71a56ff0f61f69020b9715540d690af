@@ -16,6 +16,24 @@
       "message": "Duplicate",
       "revId": "cb89096ac71a56ff0f61f69020b9715540d690af",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8505fc9_fd112099",
+        "filename": "core/java/android/os/HwParcel.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2022-04-07T09:29:43Z",
+      "side": 0,
+      "message": "It\u0027s already merged in AOSP a long time ago. https://github.com/ArrowOS/android_frameworks_base/commit/c94b8c3dcc53d046fa2fbbfa1411941257058050",
+      "parentUuid": "ebf55c25_dec0eee6",
+      "revId": "cb89096ac71a56ff0f61f69020b9715540d690af",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
