@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ebf55c25_dec0eee6",
+        "filename": "core/java/android/os/HwParcel.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2022-04-07T09:28:45Z",
+      "side": 0,
+      "message": "Duplicate",
+      "revId": "cb89096ac71a56ff0f61f69020b9715540d690af",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
