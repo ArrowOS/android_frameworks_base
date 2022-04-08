@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2016edcf_3eae79bb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 279
+      },
+      "writtenOn": "2022-04-08T17:13:54Z",
+      "side": 1,
+      "message": "works fine on thyme with prebuilt kernel\n",
+      "revId": "a57a3113deb63967280959ed6b3e8d95472f10da",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
