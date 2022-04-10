@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b8c4871_59feb45c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 279
+      },
+      "writtenOn": "2022-04-10T12:48:12Z",
+      "side": 1,
+      "message": "Tested on thyme, when show FOD icon, the Night Display will disabled. when FOD icon gone, the Night Display will turn on again.",
+      "revId": "f53eb37a92f4ff11929e7e9676b837d5105ea00a",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
