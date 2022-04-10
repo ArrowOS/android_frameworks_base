@@ -35,6 +35,7 @@ import android.graphics.RectF;
 import android.hardware.biometrics.BiometricOverlayConstants;
 import android.hardware.biometrics.SensorLocationInternal;
 import android.hardware.display.DisplayManager;
+import android.hardware.display.ColorDisplayManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.hardware.fingerprint.FingerprintSensorPropertiesInternal;
 import android.hardware.fingerprint.IUdfpsOverlayController;
@@ -110,6 +111,9 @@ public class UdfpsController implements DozeReceiver {
     private static final long MIN_TOUCH_LOG_INTERVAL = 50;
 
     private final Context mContext;
+
+    private ColorDisplayManager mColorDisplayManager;
+
     private final Execution mExecution;
     private final FingerprintManager mFingerprintManager;
     @NonNull private final LayoutInflater mInflater;
@@ -167,6 +171,7 @@ public class UdfpsController implements DozeReceiver {
     private boolean mAttemptedToDismissKeyguard;
     private Set<Callback> mCallbacks = new HashSet<>();
 
+    private boolean nightDisplayEnabled;
     private boolean mFrameworkDimming;
     private int[][] mBrightnessAlphaArray;
 
@@ -781,6 +786,13 @@ public class UdfpsController implements DozeReceiver {
     }
 
     private void showUdfpsOverlay(@NonNull ServerRequest request) {
+        if (mFrameworkDimming) {
+            mColorDisplayManager = mContext.getSystemService(ColorDisplayManager.class);
+            nightDisplayEnabled = mColorDisplayManager.isNightDisplayActivated();
+            if (nightDisplayEnabled) {
+                mColorDisplayManager.setNightDisplayActivated(false);
+            }
+        }
         mExecution.assertIsMainThread();
 
         final int reason = request.mRequestReason;
@@ -886,6 +898,11 @@ public class UdfpsController implements DozeReceiver {
     }
 
     private void hideUdfpsOverlay() {
+        if (mFrameworkDimming) {
+            if (nightDisplayEnabled) {
+                mColorDisplayManager.setNightDisplayActivated(true);
+            }
+        }
         mExecution.assertIsMainThread();
 
         if (mView != null) {
