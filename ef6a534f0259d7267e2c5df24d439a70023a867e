@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb5fb792_899f58fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2022-04-13T17:16:43Z",
+      "side": 1,
+      "message": "Normal behavior restored, it works as intended. Two things that I found out:\n1) Wifi tile when disabled keeps wifi name and not shows \u0027off\u0027\n2) Mobile tile keeps the color and carrier text marked even when disabled\n\nScreenshots: https://imgur.com/a/bzccGQe\n\nAny thoughts on these?",
+      "revId": "ef6a534f0259d7267e2c5df24d439a70023a867e",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
