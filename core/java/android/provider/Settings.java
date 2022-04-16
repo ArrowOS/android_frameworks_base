@@ -11023,6 +11023,12 @@ public final class Settings {
                 "extra_automatic_power_save_mode";
 
         /**
+         * Volume panel on left
+         * @hide
+         */
+        public static final String VOLUME_PANEL_ON_LEFT = "volume_panel_on_left";
+
+        /**
          * These entries are considered common between the personal and the managed profile,
          * since the managed profile doesn't get to change them.
          */
