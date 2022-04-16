@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b1123d84_5a5d7133",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2022-04-16T19:04:18Z",
+      "side": 1,
+      "message": "Alarm icon doesn\u0027t show up, strange.",
+      "revId": "09941ec1496578cba977437f7011a9264785c5e7",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
