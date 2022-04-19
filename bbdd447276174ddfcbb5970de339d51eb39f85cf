@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a4c0331_0e0f7931",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-04-19T09:45:24Z",
+      "side": 1,
+      "message": "This now can be done via overlay. Dont see reasons for this patch.",
+      "revId": "bbdd447276174ddfcbb5970de339d51eb39f85cf",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
