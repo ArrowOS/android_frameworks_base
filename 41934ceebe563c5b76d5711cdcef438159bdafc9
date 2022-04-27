@@ -33,6 +33,23 @@
       "message": "Tested on 10or G too, works fine as expected",
       "revId": "41934ceebe563c5b76d5711cdcef438159bdafc9",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8a313de7_2edc804c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-04-27T11:20:23Z",
+      "side": 1,
+      "message": "Without on/off toggle, not.",
+      "revId": "41934ceebe563c5b76d5711cdcef438159bdafc9",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
