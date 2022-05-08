@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb8b4465_7736189f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-05-08T18:56:05Z",
+      "side": 1,
+      "message": "Sometimes if lock/unlock fast with press unlock option, will just unlock on touch.",
+      "revId": "70b43594a9c62841c2055035351ab0e445eb3e77",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
