@@ -16,12 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Global actions -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_to_bootloader_title">But semula ke Bootloader</string>
+    <string name="reboot_to_bootloader_message">Memula semula ke modbootloader\u2026</string>
+    <string name="reboot_to_recovery_title">But pemulihan</string>
+    <string name="reboot_to_recovery_message">Memula semula ke mod pemulihan\u2026</string>
+    <string name="reboot_system_title">Mulakan semula sistem</string>
+    <string name="reboot_system_message">Memulakan semula sistem</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">Palsukan tandatangan pakej</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

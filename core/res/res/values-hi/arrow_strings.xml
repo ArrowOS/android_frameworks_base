@@ -16,12 +16,12 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Global actions -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_to_bootloader_title">बूटलोडर रीबूट करें</string>
+    <string name="reboot_to_bootloader_message">बूटलोडर में रिबूट हो रहा है</string>
+    <string name="reboot_to_recovery_title">रिकवरी में रीबूट करे</string>
+    <string name="reboot_to_recovery_message">रिकवरी में रिबूट मैसेज</string>
+    <string name="reboot_system_title">सिस्टम को पुनरारंभ करें</string>
+    <string name="reboot_system_message">सिस्टम को पुनः शुरू किया जा रहा है</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">स्पूफ पैकेज हस्ताक्षर</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->

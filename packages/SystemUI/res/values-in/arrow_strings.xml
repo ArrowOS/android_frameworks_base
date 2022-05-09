@@ -31,11 +31,11 @@
     <string name="accessibility_quick_settings_caffeine_off">Kafein mati</string>
     <string name="accessibility_quick_settings_caffeine_on">Kafein hidup</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Tampilan Ambient</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Tampilan Ambient mati.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Tampilan Ambient aktif.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Tampilan Ambient dimatikan.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Tampilan Ambient diaktifkan.</string>
+    <string name="quick_settings_ambient_display_label">Tampilan ambien</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Tampilan ambien mati.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Tampilan ambien aktif.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Tampilan ambien dimatikan.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Tampilan ambien diaktifkan.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">Penambatan USB</string>
     <!-- Sync QS Tile -->
@@ -69,4 +69,12 @@
     <string name="qs_data_switch_toast_1">Hanya satu kartu SIM yang terpasang saat ini</string>
     <string name="qs_data_switch_changed_1">Pindah kartu data ke SIM 1.</string>
     <string name="qs_data_switch_changed_2">Pindah kartu data ke SIM 2.</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Roaming indicator</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">Call strength</string>
 </resources>

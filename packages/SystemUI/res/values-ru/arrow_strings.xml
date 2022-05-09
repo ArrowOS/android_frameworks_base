@@ -48,7 +48,7 @@
     <string name="quick_settings_sound_label">Звук</string>
     <string name="quick_settings_sound_ring">Рингтон</string>
     <string name="quick_settings_sound_vibrate">Только вибрация</string>
-    <string name="quick_settings_sound_mute">Без звука</string>
+    <string name="quick_settings_sound_mute">Заглушить</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_full_screenshot_label">Весь экран</string>
     <string name="quick_settings_screenshot_label">Скриншот</string>
@@ -69,4 +69,12 @@
     <string name="qs_data_switch_toast_1">В настоящее время вставлена только одна SIM-карта</string>
     <string name="qs_data_switch_changed_1">Переключить передачу данных на SIM 1.</string>
     <string name="qs_data_switch_changed_2">Переключить передачу данных на SIM 2.</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Roaming indicator</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">Call strength</string>
 </resources>
