@@ -594,22 +594,20 @@ public class NotificationManagerService extends SystemService {
                     currentUsers.add(user);
                 }
             });
-            synchronized (mBufferLock) {
-                if (count == 0) count = mBufferSize;
-                List<StatusBarNotification> a = new ArrayList();
-                Iterator<Pair<StatusBarNotification, Integer>> iter = descendingIterator();
-                int i = 0;
-                while (iter.hasNext() && i < count) {
-                    Pair<StatusBarNotification, Integer> pair = iter.next();
-                    if (pair.second != REASON_SNOOZED || includeSnoozed) {
-                        if (currentUsers.contains(pair.first.getUserId())) {
-                            i++;
-                            a.add(pair.first);
-                        }
+            if (count == 0) count = mBufferSize;
+            List<StatusBarNotification> a = new ArrayList();
+            Iterator<Pair<StatusBarNotification, Integer>> iter = descendingIterator();
+            int i = 0;
+            while (iter.hasNext() && i < count) {
+                Pair<StatusBarNotification, Integer> pair = iter.next();
+                if (pair.second != REASON_SNOOZED || includeSnoozed) {
+                    if (currentUsers.contains(pair.first.getUserId())) {
+                        i++;
+                        a.add(pair.first);
                     }
                 }
-                return a.toArray(new StatusBarNotification[a.size()]);
             }
+            return a.toArray(new StatusBarNotification[a.size()]);
         }
 
         public void updateHistoryEnabled(@UserIdInt int userId, boolean enabled) {
