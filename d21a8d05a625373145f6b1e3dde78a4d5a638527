@@ -16,6 +16,23 @@
       "message": "why should this to be even picked if there is no change in launcher side?\n\nplus last time I had tried it and bottom dock icon got clipped",
       "revId": "d21a8d05a625373145f6b1e3dde78a4d5a638527",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "981d89d6_c5a7ad63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-05-10T15:34:30Z",
+      "side": 1,
+      "message": "Same dont see reasons for this now.\nLauncher3 part had some glitches.",
+      "revId": "d21a8d05a625373145f6b1e3dde78a4d5a638527",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
