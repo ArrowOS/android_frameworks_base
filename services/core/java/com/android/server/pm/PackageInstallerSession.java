@@ -2224,7 +2224,6 @@ public class PackageInstallerSession extends IPackageInstallerSession.Stub {
                     resolveInheritedFile(baseDexMetadataFile);
                 }
                 baseApk = existingBase;
-                inheritFileLocked(mResolvedBaseFile);
             } else if ((params.installFlags & PackageManager.INSTALL_DONT_KILL_APP) != 0) {
                 EventLog.writeEvent(0x534e4554, "219044664");
 
