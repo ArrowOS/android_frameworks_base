@@ -16,21 +16,20 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Global actions -->
-    <string name="reboot_to_bootloader_title">Reboot bootloader</string>
-    <string name="reboot_to_bootloader_message">Rebooting to bootloader\u2026</string>
-    <string name="reboot_to_recovery_title">Reboot recovery</string>
-    <string name="reboot_to_recovery_message">Rebooting to recovery\u2026</string>
-    <string name="reboot_system_title">Restart system</string>
-    <string name="reboot_system_message">Restarting system\u2026</string>
+    <string name="reboot_to_bootloader_title">बूटलोडर रीबूट करें</string>
+    <string name="reboot_to_bootloader_message">बूटलोडर में रिबूट हो रहा है</string>
+    <string name="reboot_to_recovery_title">रिकवरी में रीबूट करे</string>
+    <string name="reboot_to_recovery_message">रिकवरी में रिबूट मैसेज</string>
+    <string name="reboot_system_title">सिस्टम को पुनरारंभ करें</string>
+    <string name="reboot_system_message">सिस्टम को पुनः शुरू किया जा रहा है</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permlab_fakePackageSignature">स्पूफ पैकेज हस्ताक्षर</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permdesc_fakePackageSignature">Allows the app to pretend to be a different app. Malicious applications might be able to use this to access private application data. Legitimate uses include an emulator pretending to be what it emulates. Grant this permission with caution only!</string>
+    <string name="permdesc_fakePackageSignature">इस अनुमति से एक ऐप दूसरे ऐप होने का नाटक कर सकता है। दुर्भावनापूर्ण ऐप इसका उपयोग निजी ऐप डेटा हासिल करने के लिए कर सकते हैं। सावधानी के साथ इस अनुमति को अनुदान दें!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permgrouplab_fake_package_signature">Spoof package signature</string>
+    <string name="permgrouplab_fake_package_signature">स्पूफ पैकेज हस्ताक्षर</string>
     <!-- Description of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permgroupdesc_fake_package_signature">allow to spoof package signature</string>
+    <string name="permgroupdesc_fake_package_signature">पैकेज हस्ताक्षर को धोखा देने की अनुमति दें</string>
     <!-- Message shown to the user when the apps requests permission from this group. If ever possible this should stay below 80 characters (assuming the parameters takes 20 characters). Don't abbreviate until the message reaches 120 characters though. [CHAR LIMIT=120] -->
-    <string name="permgrouprequest_fake_package_signature">Allow
-        &lt;b&gt;<xliff:g id="app_name" example="Gmail">%1$s</xliff:g>&lt;/b&gt; to spoof package signature?</string>
+    <string name="permgrouprequest_fake_package_signature">पैकेज हस्ताक्षर को धोखा देने की अनुमति दें?</string>
 </resources>

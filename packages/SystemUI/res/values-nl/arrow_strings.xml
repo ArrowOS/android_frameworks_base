@@ -48,25 +48,33 @@
     <string name="quick_settings_sound_label">Geluid</string>
     <string name="quick_settings_sound_ring">Beltoon</string>
     <string name="quick_settings_sound_vibrate">Trillen</string>
-    <string name="quick_settings_sound_mute">Mute</string>
+    <string name="quick_settings_sound_mute">Dempen</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_full_screenshot_label">Volledig</string>
     <string name="quick_settings_screenshot_label">Schermafbeelding</string>
-    <string name="quick_settings_region_screenshot_label">Partial</string>
+    <string name="quick_settings_region_screenshot_label">Gedeeltelijk</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Statusbalk iconen</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">Zwevende meldingen</string>
+    <string name="accessibility_quick_settings_heads_up_off">Zwevende meldingen uit.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Zwevende meldingen aan.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Zwevende meldingen uitgeschakeld.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Zwevende meldingen zijn ingeschakeld.</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_label">Gegevenskaart wijzigen</string>
+    <string name="qs_data_switch_toast_0">Momenteel is er geen SIM-kaart geplaatst</string>
+    <string name="qs_data_switch_toast_1">Momenteel is slechts één SIM-kaart geplaatst</string>
+    <string name="qs_data_switch_changed_1">Gegevenskaart omschakelen naar SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Gegevenskaart omschakelen naar SIM 2.</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Roaming indicator</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">Call strength</string>
 </resources>

@@ -48,25 +48,33 @@
     <string name="quick_settings_sound_label">Звук</string>
     <string name="quick_settings_sound_ring">Звоно</string>
     <string name="quick_settings_sound_vibrate">Вибрирај</string>
-    <string name="quick_settings_sound_mute">Mute</string>
+    <string name="quick_settings_sound_mute">Утишај</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_full_screenshot_label">Пун</string>
     <string name="quick_settings_screenshot_label">Снимак екрана</string>
-    <string name="quick_settings_region_screenshot_label">Partial</string>
+    <string name="quick_settings_region_screenshot_label">Дјелимичан</string>
     <!-- Statusbar tuner -->
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Иконе статусне траке</string>
     <!-- Name of the VPN status bar icon. -->
-    <string name="status_bar_vpn">VPN</string>
+    <string name="status_bar_vpn">ВПН </string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">Искачућа обавештења</string>
+    <string name="accessibility_quick_settings_heads_up_off">Искључи искачућа обавештења.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Укључи искачућа обавештења.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Искачућа обавештења су искључена.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Искачућа обавештења су укључена.</string>
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_toast_0">Тренутно није уметнута СИМ картица.</string>
+    <string name="qs_data_switch_toast_1">Тренутно је уметнута само једна СИМ картица</string>
+    <string name="qs_data_switch_changed_1">Промените податке картице на СИМ 1.</string>
+    <string name="qs_data_switch_changed_2">Промените податке картице на СИМ 2.</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Индикатор роминга</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">НФЦ</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">Нфц</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">Јачина позива</string>
 </resources>

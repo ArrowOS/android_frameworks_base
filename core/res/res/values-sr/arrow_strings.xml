@@ -17,13 +17,13 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Global actions -->
     <string name="reboot_to_bootloader_title">Поново покрени bootloader</string>
-    <string name="reboot_to_bootloader_message">Поново покретање у боотлоадер\u2026</string>
-    <string name="reboot_to_recovery_title">Поново покрените опоравак система</string>
-    <string name="reboot_to_recovery_message">Поново покрените опоравак система\u2026</string>
-    <string name="reboot_system_title">Рестартуј систем</string>
-    <string name="reboot_system_message">Рестартуј систем\u2026</string>
+    <string name="reboot_to_bootloader_message">Поново покретање у боотлоадер\у2026</string>
+    <string name="reboot_to_recovery_title">Поново покретање опоравка </string>
+    <string name="reboot_to_recovery_message">Поново покретање опоравка система\у2026</string>
+    <string name="reboot_system_title">Поново покрени систем</string>
+    <string name="reboot_system_message">Поново покрените систем\у2026</string>
     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
-    <string name="permlab_fakePackageSignature">Лажни потпис пакета</string>
+    <string name="permlab_fakePackageSignature">Потпис лажног пакета</string>
     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
     <string name="permdesc_fakePackageSignature">Дозвољава апликацији да се претвара као друга апликација. Злонамерне апликације ће можда моћи да користе ово да приступе приватним подацима апликација. Дозволите ово са опрезношћу!</string>
     <!-- Title of a category of application permissions, listed so the user can choose whether they want to allow the application to do this. -->

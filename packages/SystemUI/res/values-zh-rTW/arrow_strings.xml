@@ -50,7 +50,7 @@
     <string name="quick_settings_sound_vibrate">震動</string>
     <string name="quick_settings_sound_mute">靜音</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_full_screenshot_label">完整</string>
     <string name="quick_settings_screenshot_label">螢幕截圖</string>
     <string name="quick_settings_region_screenshot_label">局部</string>
     <!-- Statusbar tuner -->
@@ -69,4 +69,12 @@
     <string name="qs_data_switch_toast_1">目前僅插入一張 SIM 卡</string>
     <string name="qs_data_switch_changed_1">切換上網卡為SIM卡1。</string>
     <string name="qs_data_switch_changed_2">切換上網卡為SIM卡2。</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">漫遊指示器</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">訊號強度</string>
 </resources>

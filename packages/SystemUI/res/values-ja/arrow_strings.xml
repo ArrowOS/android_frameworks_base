@@ -69,4 +69,12 @@
     <string name="qs_data_switch_toast_1">現在1枚のみ SIM カードは挿入されています</string>
     <string name="qs_data_switch_changed_1">SIM 1 をデータ通信に使用します</string>
     <string name="qs_data_switch_changed_2">SIM 2 をデータ通信に使用します</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">ローミング表示</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">NFC</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">電波強度</string>
 </resources>

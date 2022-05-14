@@ -69,4 +69,12 @@
     <string name="qs_data_switch_toast_1">Wykryto tylko jedną kartę SIM</string>
     <string name="qs_data_switch_changed_1">Przełącz kartę danych na kartę SIM 1.</string>
     <string name="qs_data_switch_changed_2">Przełącz kartę danych na kartę SIM 2.</string>
+    <!-- Name of the roaming status bar icon. -->
+    <string name="status_bar_roaming">Wskaźnik roamingu</string>
+    <!-- Name of the nfc status bar icon. -->
+    <string name="status_bar_nfc">NFC</string>
+    <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
+    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <!-- Name of the call strength status bar icon. -->
+    <string name="status_bar_call_strength">Siła połączenia</string>
 </resources>
