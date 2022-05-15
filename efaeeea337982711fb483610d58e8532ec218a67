@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2b2df1e_c559f665",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 9
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 501
+      },
+      "writtenOn": "2022-05-15T05:50:15Z",
+      "side": 1,
+      "message": "Works fine on Mi A3",
+      "revId": "efaeeea337982711fb483610d58e8532ec218a67",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
