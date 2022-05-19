@@ -70,11 +70,11 @@
     <string name="qs_data_switch_changed_1">Prepnúť dátovú kartu na SIM č. 1.</string>
     <string name="qs_data_switch_changed_2">Prepnúť dátovú kartu na SIM č. 2.</string>
     <!-- Name of the roaming status bar icon. -->
-    <string name="status_bar_roaming">Roaming indicator</string>
+    <string name="status_bar_roaming">Indikátor roamingu</string>
     <!-- Name of the nfc status bar icon. -->
     <string name="status_bar_nfc">NFC</string>
     <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
-    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <string name="accessibility_status_bar_nfc">NFC</string>
     <!-- Name of the call strength status bar icon. -->
-    <string name="status_bar_call_strength">Call strength</string>
+    <string name="status_bar_call_strength">Sila hovorov</string>
 </resources>
