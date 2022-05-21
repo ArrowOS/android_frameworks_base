@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f2496e48_7599f2a3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-05-21T21:46:04Z",
+      "side": 1,
+      "message": "In general I don\u0027t like the idea of disabling for all qs tiles. This is useful and interesting, if it is possible to choose for which ones to specifically disable / enable the use on the lockscreen.",
+      "revId": "a2fa8a6a261800427e244fd26de7d70a594a7b99",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
