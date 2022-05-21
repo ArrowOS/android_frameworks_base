@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b837f657_0a5dfdea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-05-21T21:21:58Z",
+      "side": 1,
+      "message": "1. Wrong authorship.\n2. AOSP already have self burn-in-protection. Not need add more.",
+      "revId": "f4ae31e0264c857c5e44cf5b846452afc334720c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
