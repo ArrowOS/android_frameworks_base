@@ -16,6 +16,23 @@
       "message": "Tested and worked fine",
       "revId": "99d37b2e3158d127d670440592e08e707d8f1b2b",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1151e94_a2c77f4d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-05-21T21:26:24Z",
+      "side": 1,
+      "message": "It is useless to make all these tiles sensitive, only relevant for part tiles",
+      "revId": "99d37b2e3158d127d670440592e08e707d8f1b2b",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
