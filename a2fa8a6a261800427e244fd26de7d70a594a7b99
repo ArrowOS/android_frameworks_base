@@ -16,6 +16,24 @@
       "message": "In general I don\u0027t like the idea of disabling for all qs tiles. This is useful and interesting, if it is possible to choose for which ones to specifically disable / enable the use on the lockscreen.",
       "revId": "a2fa8a6a261800427e244fd26de7d70a594a7b99",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0662098c_033d011a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 231
+      },
+      "writtenOn": "2022-05-21T22:09:54Z",
+      "side": 1,
+      "message": "This follow stock OEM implantation which I think is better than not having anything protected. Also the ability to enable/disable this under the setting seem sufficient for now until custom code can be made per tile",
+      "parentUuid": "f2496e48_7599f2a3",
+      "revId": "a2fa8a6a261800427e244fd26de7d70a594a7b99",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
