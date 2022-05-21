@@ -16,6 +16,24 @@
       "message": "1. Wrong authorship.\n2. AOSP already have self burn-in-protection. Not need add more.",
       "revId": "f4ae31e0264c857c5e44cf5b846452afc334720c",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41432c37_9886cd07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 231
+      },
+      "writtenOn": "2022-05-21T22:09:36Z",
+      "side": 1,
+      "message": "1. authorship corrected.\n2. Aosp implementation afaik works only on AOD/ambient display. My device which run aosp for two years already suffer from bad burnin in status bar. I suggest looking into implanting some sort of additional protection.",
+      "parentUuid": "b837f657_0a5dfdea",
+      "revId": "f4ae31e0264c857c5e44cf5b846452afc334720c",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
