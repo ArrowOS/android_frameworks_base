@@ -976,14 +976,14 @@ class Task extends WindowContainer<WindowContainer> {
         if(info != null){
             mPackageName = info.packageName;
         }
-        final boolean isLeaf = isLeafTask();
+        if (!isLeafTask()) return;
         if (intent == null) {
             mNeverRelinquishIdentity = (info.flags & FLAG_RELINQUISH_TASK_IDENTITY) == 0;
-        } else if (mNeverRelinquishIdentity && isLeaf) {
+        } else if (mNeverRelinquishIdentity) {
             return;
         }
 
-        affinity = isLeaf ? info.taskAffinity : null;
+        affinity = info.taskAffinity;
         if (intent == null) {
             // If this task already has an intent associated with it, don't set the root
             // affinity -- we don't want it changing after initially set, but the initially
