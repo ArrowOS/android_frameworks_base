@@ -76,5 +76,14 @@
     <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
     <string name="accessibility_status_bar_nfc">Nfc</string>
     <!-- Name of the call strength status bar icon. -->
-    <string name="status_bar_call_strength">Call strength</string>
+    <string name="status_bar_call_strength">Intensità della chiamata</string>
+    <!-- Screen record delete action -->
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Elimina</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Registrazione schermo eliminata</string>
+    <!-- Screenrecord QS tile -->
+    <string name="screenrecord_stopdot_label">Mostra punto per terminare\nPremi a lungo per spostarlo</string>
+    <string name="screenrecord_lowquality_label">Qualità inferiore per un file più piccolo</string>
+    <string name="screenrecord_longer_timeout_switch_label">Limite di dimensione del file più grande\nLimita la dimensione della registrazione a 15GiB</string>
 </resources>

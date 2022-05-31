@@ -77,4 +77,13 @@
     <string name="accessibility_status_bar_nfc">Nfc</string>
     <!-- Name of the call strength status bar icon. -->
     <string name="status_bar_call_strength">Уровень сигнала</string>
+    <!-- Screen record delete action -->
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Удалить</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Запись видео с экрана удалена</string>
+    <!-- Screenrecord QS tile -->
+    <string name="screenrecord_stopdot_label">Показывать кнопку остановки\nУдерживайте для перемещения</string>
+    <string name="screenrecord_lowquality_label">Низкое качество для меньшего размера файла</string>
+    <string name="screenrecord_longer_timeout_switch_label">Больший размер файла\nОграничение размера записи до 15 Гб</string>
 </resources>

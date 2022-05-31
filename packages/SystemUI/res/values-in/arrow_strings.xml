@@ -77,4 +77,13 @@
     <string name="accessibility_status_bar_nfc">Nfc</string>
     <!-- Name of the call strength status bar icon. -->
     <string name="status_bar_call_strength">Kekuatan panggilan</string>
+    <!-- Screen record delete action -->
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Hapus</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Rekaman layar dihapus</string>
+    <!-- Screenrecord QS tile -->
+    <string name="screenrecord_stopdot_label">Tampilkan titik berhenti\nTekan lama untuk memindahkannya</string>
+    <string name="screenrecord_lowquality_label">Kualitas lebih rendah untuk ukuran file yang lebih kecil</string>
+    <string name="screenrecord_longer_timeout_switch_label">Batas ukuran file lebih besar\nBatasi ukuran perekaman hingga 15GB</string>
 </resources>

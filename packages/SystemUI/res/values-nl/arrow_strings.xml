@@ -70,11 +70,20 @@
     <string name="qs_data_switch_changed_1">Gegevenskaart omschakelen naar SIM 1.</string>
     <string name="qs_data_switch_changed_2">Gegevenskaart omschakelen naar SIM 2.</string>
     <!-- Name of the roaming status bar icon. -->
-    <string name="status_bar_roaming">Roaming indicator</string>
+    <string name="status_bar_roaming">Roaming Indicator</string>
     <!-- Name of the nfc status bar icon. -->
     <string name="status_bar_nfc">NFC</string>
     <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
     <string name="accessibility_status_bar_nfc">Nfc</string>
     <!-- Name of the call strength status bar icon. -->
-    <string name="status_bar_call_strength">Call strength</string>
+    <string name="status_bar_call_strength">Netwerk sterkte</string>
+    <!-- Screen record delete action -->
+    <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
+    <string name="screenrecord_delete_label">Verwijderen</string>
+    <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
+    <string name="screenrecord_delete_description">Schermopname verwijderd</string>
+    <!-- Screenrecord QS tile -->
+    <string name="screenrecord_stopdot_label">Toon stop punt\nLang indrukken om te verplaatsen</string>
+    <string name="screenrecord_lowquality_label">Lagere kwaliteit voor kleinere bestandsgrootte</string>
+    <string name="screenrecord_longer_timeout_switch_label">Grotere bestandsgrootte limiet\nLimiet opname grootte tot 15GiB</string>
 </resources>
