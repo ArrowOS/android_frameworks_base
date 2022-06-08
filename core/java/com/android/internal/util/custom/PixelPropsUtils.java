@@ -38,7 +38,6 @@ public class PixelPropsUtils {
     private static final String[] packagesToChangePixel5 = {
             "com.google.android.tts",
             "com.google.android.googlequicksearchbox",
-            "com.google.android.apps.recorder"
     };
 
     private static final Map<String, Object> propsToChangePixelXL;
@@ -53,6 +52,13 @@ public class PixelPropsUtils {
             "com.breel.wallpapers20"
     };
 
+    private static final String[] packagesToKeep = {
+        "com.google.android.GoogleCamera",
+	"com.google.android.dialer",
+        "com.google.ar.core",
+        "com.google.android.apps.recorder"
+    };
+
     private static ArrayList<String> allProps = new ArrayList<>(Arrays.asList("BRAND", "MANUFACTURER", "DEVICE", "PRODUCT", "MODEL", "FINGERPRINT"));
 
     private static volatile boolean sIsGms = false;
@@ -60,9 +66,6 @@ public class PixelPropsUtils {
     static {
         propsToKeep = new HashMap<>();
         propsToKeep.put("com.google.android.settings.intelligence", new ArrayList<>(Collections.singletonList("FINGERPRINT")));
-        propsToKeep.put("com.google.android.GoogleCamera", allProps);
-        propsToKeep.put("com.google.android.dialer", allProps);
-        propsToKeep.put("com.google.ar.core", allProps);
         propsToChangePixel6 = new HashMap<>();
         propsToChangePixel6.put("BRAND", "google");
         propsToChangePixel6.put("MANUFACTURER", "Google");
@@ -96,7 +99,8 @@ public class PixelPropsUtils {
                 processName.equals(PACKAGE_GMS + ".unstable")) {
             sIsGms = true;
         }
-        if (packageName.startsWith("com.google.") || Arrays.asList(extraPackagesToChange).contains(packageName)) {
+        if ((packageName.startsWith("com.google.") && !Arrays.asList(packagesToKeep).contains(packageName))
+                || Arrays.asList(extraPackagesToChange).contains(packageName)) {
             Map<String, Object> propsToChange = propsToChangePixel6;
 
             if (Arrays.asList(packagesToChangePixel5).contains(packageName)) {
