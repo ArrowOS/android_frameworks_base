@@ -63,6 +63,7 @@ public class PixelPropsUtils {
         propsToKeep.put("com.google.android.GoogleCamera", allProps);
         propsToKeep.put("com.google.android.dialer", allProps);
         propsToKeep.put("com.google.ar.core", allProps);
+        propsToKeep.put("com.google.android.apps.recorder", allProps);
         propsToChangePixel6 = new HashMap<>();
         propsToChangePixel6.put("BRAND", "google");
         propsToChangePixel6.put("MANUFACTURER", "Google");
