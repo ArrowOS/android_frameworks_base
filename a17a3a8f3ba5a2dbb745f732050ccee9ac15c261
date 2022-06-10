@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3ca43130_0ad89ced",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2022-06-10T17:39:12Z",
+      "side": 1,
+      "message": "Booted fine after picking this commit. Device: RMX2020",
+      "revId": "a17a3a8f3ba5a2dbb745f732050ccee9ac15c261",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
