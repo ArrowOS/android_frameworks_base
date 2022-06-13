@@ -17,4 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Qs visibility -->
     <dimen name="screenrecord_dot_size">48dp</dimen>
+
+    <!-- Network traffic -->
+    <dimen name="network_traffic_width">25sp</dimen>
 </resources>
