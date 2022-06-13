@@ -19,4 +19,7 @@
 
     <dimen name="volume_dialog_panel_transparent_padding_left">8dp</dimen>
 
+    <!-- Network traffic -->
+    <dimen name="network_traffic_width">25sp</dimen>
+
 </resources>
