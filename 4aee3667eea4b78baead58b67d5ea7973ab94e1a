@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "207270c3_3a02bb1e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 88
+      },
+      "writtenOn": "2022-06-15T03:10:14Z",
+      "side": 1,
+      "message": "Hold on Gerrit.\nI will continue to work on this after my final exams next week.",
+      "revId": "4aee3667eea4b78baead58b67d5ea7973ab94e1a",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
