@@ -31,11 +31,11 @@
     <string name="accessibility_quick_settings_caffeine_off">Mode caféine désactivé</string>
     <string name="accessibility_quick_settings_caffeine_on">Mode caféine activé</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Luminosité adaptative</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Désactiver la luminosité adaptative.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Activer la luminosité adaptative.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Luminosité adaptative désactivée.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Luminosité adaptative activée.</string>
+    <string name="quick_settings_ambient_display_label">Affichage en mode veille</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Désactiver l\'affichage en mode veille.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Activer l\'affichage en mode veille.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Affichage en mode veille désactivé.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Affichage en mode veille activé.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">Partage de connexion USB</string>
     <!-- Sync QS Tile -->
