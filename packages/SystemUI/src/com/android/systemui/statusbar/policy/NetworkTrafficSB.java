@@ -1,18 +1,9 @@
 package com.android.systemui.statusbar.policy;
 
-import static com.android.systemui.statusbar.StatusBarIconView.STATE_DOT;
-import static com.android.systemui.statusbar.StatusBarIconView.STATE_HIDDEN;
-import static com.android.systemui.statusbar.StatusBarIconView.STATE_ICON;
-
 import android.content.Context;
 import android.graphics.Rect;
-import android.graphics.Typeface;
-import android.text.style.RelativeSizeSpan;
 import android.util.AttributeSet;
-import android.view.View;
 
-import com.android.systemui.Dependency;
-import com.android.systemui.R;
 import com.android.systemui.plugins.DarkIconDispatcher;
 import com.android.systemui.plugins.DarkIconDispatcher.DarkReceiver;
 import com.android.systemui.statusbar.StatusIconDisplayable;
@@ -21,7 +12,6 @@ public class NetworkTrafficSB extends NetworkTraffic implements DarkReceiver, St
 
     public static final String SLOT = "networktraffic";
     private int mVisibleState = -1;
-    private boolean mSystemIconVisible = true;
 
     /*
      *  @hide
@@ -45,43 +35,10 @@ public class NetworkTrafficSB extends NetworkTraffic implements DarkReceiver, St
     }
 
     @Override
-    protected void onAttachedToWindow() {
-        super.onAttachedToWindow();
-    }
-
-    @Override
-    protected void onDetachedFromWindow() {
-        super.onDetachedFromWindow();
-    }
-
-    @Override
-    protected void setMode() {
-        super.setMode();
-        mIsEnabled = mIsEnabled;
-    }
-
-    @Override
-    protected void setSpacingAndFonts() {
-        setTextAppearance(R.style.TextAppearance_QS_Status);
-        setLineSpacing(0.75f, 0.75f);
-    }
-
-    @Override
-    protected RelativeSizeSpan getSpeedRelativeSizeSpan() {
-        return new RelativeSizeSpan(0.75f);
-    }
-
-    @Override
-    protected RelativeSizeSpan getUnitRelativeSizeSpan() {
-        return new RelativeSizeSpan(0.7f);
-    }
-
-    @Override
     public void onDarkChanged(Rect area, float darkIntensity, int tint) {
         if (!mIsEnabled) return;
         mTintColor = DarkIconDispatcher.getTint(area, this, tint);
         setTextColor(mTintColor);
-        updateTrafficDrawable();
     }
 
     @Override
@@ -100,38 +57,14 @@ public class NetworkTrafficSB extends NetworkTraffic implements DarkReceiver, St
     }
 
     @Override
-    public void setVisibleState(int state, boolean mIsEnabled) {
-        if (state == mVisibleState) {
-            return;
-        }
+    public void setVisibleState(int state, boolean animate) {
         mVisibleState = state;
-
-        switch (state) {
-            case STATE_ICON:
-                mSystemIconVisible = true;
-                break;
-            case STATE_DOT:
-            case STATE_HIDDEN:
-            default:
-                mSystemIconVisible = false;
-                break;
-        }
-        update();
-    }
-
-    @Override
-    protected void makeVisible() {
-        boolean show = mSystemIconVisible;
-        setVisibility(show ? View.VISIBLE
-                : View.GONE);
-        mVisible = show;
     }
 
     @Override
     public void setStaticDrawableColor(int color) {
         mTintColor = color;
         setTextColor(mTintColor);
-        updateTrafficDrawable();
     }
 
     @Override
@@ -139,18 +72,4 @@ public class NetworkTrafficSB extends NetworkTraffic implements DarkReceiver, St
         setTintColor(color);
     }
 
-    private void maybeRestoreVisibility() {
-        if (!mVisible && mIsEnabled && mSystemIconVisible
-           && restoreViewQuickly()) {
-          setVisibility(View.VISIBLE);
-          mVisible = true;
-          // then let the traffic handler do its checks
-          update();
-        }
-    }
-
-    public void setTintColor(int color) {
-        mTintColor = color;
-        updateTrafficDrawable();
-    }
 }
