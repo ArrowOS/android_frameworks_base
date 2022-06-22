@@ -269,13 +269,13 @@ public class AudioSystem
             case AUDIO_FORMAT_APTX_HD: return BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX_HD;
             case AUDIO_FORMAT_LDAC: return BluetoothCodecConfig.SOURCE_CODEC_TYPE_LDAC;
             case AUDIO_FORMAT_CELT:
-                     if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_CELT;
+                if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_CELT;
             case AUDIO_FORMAT_APTX_ADAPTIVE:
-                     if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX_ADAPTIVE;
+                if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX_ADAPTIVE;
             case AUDIO_FORMAT_APTX_TWSP:
-                     if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX_TWSP;
+                if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_APTX_TWSP;
             case VX_AUDIO_FORMAT_LC3:
-                     if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_LC3;
+                if (IS_QTI_BT) return BluetoothCodecConfig.SOURCE_CODEC_TYPE_LC3;
             default:
                 Log.e(TAG, "Unknown audio format 0x" + Integer.toHexString(audioFormat)
                         + " for conversion to BT codec");

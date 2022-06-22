@@ -164,14 +164,13 @@ public class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> 
         mTwspBatteryLevel = -1;
     }
 
-    CachedBluetoothDevice(CachedBluetoothDevice cachedDevice) {
+     CachedBluetoothDevice(CachedBluetoothDevice cachedDevice) {
         mContext = cachedDevice.mContext;
         mLocalAdapter = BluetoothAdapter.getDefaultAdapter();
         mProfileManager = cachedDevice.mProfileManager;
         mDevice = cachedDevice.mDevice;
         fillData();
         mHiSyncId = BluetoothHearingAid.HI_SYNC_ID_INVALID;
-        initDrawableCache();
         mTwspBatteryState = -1;
         mTwspBatteryLevel = -1;
     }
@@ -187,7 +186,6 @@ public class CachedBluetoothDevice implements Comparable<CachedBluetoothDevice> 
             }
         };
     }
-
 
     /* Gets Device for seondary TWS device
      * @param mDevice Primary TWS device  to get secondary

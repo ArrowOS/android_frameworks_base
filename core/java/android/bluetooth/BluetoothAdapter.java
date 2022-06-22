@@ -1057,10 +1057,7 @@ public final class BluetoothAdapter {
                 @SuppressLint("AndroidFrameworkRequiresPermission")
                 protected Integer recompute(Void query) {
                     try {
-                        if (mService != null) {
-                            return mService.getState();
-                        }
-                        return BluetoothAdapter.STATE_OFF;
+                        return mService.getState();
                     } catch (RemoteException e) {
                         throw e.rethrowFromSystemServer();
                     }
@@ -2025,6 +2022,7 @@ public final class BluetoothAdapter {
         }
         return false;
     }
+
     /**
      * Connects all enabled and supported bluetooth profiles between the local and remote device.
      * Connection is asynchronous and you should listen to each profile's broadcast intent
@@ -3269,6 +3267,7 @@ public final class BluetoothAdapter {
                 break;
             case BluetoothProfile.BROADCAST:
                 closeBroadcastProfile(proxy);
+                break;
             case BluetoothProfile.BC_PROFILE:
                 closeBCProfile(proxy);
                 break;
@@ -3324,6 +3323,7 @@ public final class BluetoothAdapter {
         }
         return true;
     }
+
     private void closeBroadcastProfile(BluetoothProfile proxy) {
         Class<?> broadcastClass = null;
         Method broadcastClose = null;
@@ -3347,6 +3347,7 @@ public final class BluetoothAdapter {
             }
         }
     }
+
     private static final IBluetoothManagerCallback sManagerCallback =
             new IBluetoothManagerCallback.Stub() {
                 public void onBluetoothServiceUp(IBluetooth bluetoothService) {

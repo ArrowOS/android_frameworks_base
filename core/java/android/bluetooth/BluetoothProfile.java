@@ -237,7 +237,6 @@ public interface BluetoothProfile {
     public static final int BC_PROFILE = 26;
 
     /**
-   /**
      * PC_PROFILE
      * @hide
      */

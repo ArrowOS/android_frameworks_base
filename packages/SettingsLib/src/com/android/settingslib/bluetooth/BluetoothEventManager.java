@@ -43,9 +43,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.UUID;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
+import java.util.UUID;
+
 /**
  * BluetoothEventManager receives broadcasts and callbacks from the Bluetooth
  * API and dispatches the event on the UI thread to the right class in the

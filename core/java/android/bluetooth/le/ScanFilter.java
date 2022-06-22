@@ -199,6 +199,7 @@ public final class ScanFilter implements Parcelable {
                 dest.writeByteArray(mIrk);
             }
         }
+
         dest.writeInt(mOrgId);
         dest.writeInt(mOrgId < 0 ? 0 : 1);
         if(mOrgId >= 0) {
@@ -301,6 +302,7 @@ public final class ScanFilter implements Parcelable {
                     builder.setDeviceAddress(address, addressType);
                 }
             }
+
             int orgId = in.readInt();
             if(in.readInt() == 1) {
                 int tdsFlags = in.readInt();
