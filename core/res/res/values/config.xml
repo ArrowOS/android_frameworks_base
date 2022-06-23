@@ -4354,6 +4354,7 @@
     <string name="config_headlineFontFamily" translatable="false">@string/config_bodyFontFamily</string>
     <!-- Allows setting custom fontFeatureSettings on specific text. -->
     <string name="config_headlineFontFeatureSettings" translatable="false"></string>
+    <string name="config_lightFontFamily" translatable="false">sans-serif</string>
 
     <!-- An array of packages that need to be treated as type system in battery settings -->
     <string-array translatable="false" name="config_batteryPackageTypeSystem">
