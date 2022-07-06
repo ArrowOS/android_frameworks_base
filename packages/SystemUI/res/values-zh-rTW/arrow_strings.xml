@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">顯示停止按鈕\n長按移動</string>
     <string name="screenrecord_lowquality_label">降低畫質以減少檔案大小</string>
     <string name="screenrecord_longer_timeout_switch_label">增加檔案大小限制\n將錄製大小限制為在 15 GB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">今日已用</string>
+    <string name="usage_data_default_suffix">資料</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Zobrazit tečku pro zastavení nahrávání\nDlouhým stiskem ji přesunete</string>
     <string name="screenrecord_lowquality_label">Nižší kvalita pro menší velikost souboru</string>
     <string name="screenrecord_longer_timeout_switch_label">Omezení větší velikosti souborů\nOmezení velikosti záznamu na 15\u00a0GiB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">využito dnes</string>
+    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

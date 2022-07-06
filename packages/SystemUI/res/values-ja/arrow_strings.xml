@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">停止ドットを表示\n長押しして移動</string>
     <string name="screenrecord_lowquality_label">低品質にしてファイルサイズ縮小</string>
     <string name="screenrecord_longer_timeout_switch_label">ファイルサイズ制限です\n録画サイズを15GBに制限します</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">本日の使用量</string>
+    <string name="usage_data_default_suffix">データ</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

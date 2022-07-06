@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">إظهار نقطة التوقف\nالضغط المطول لتحريكها</string>
     <string name="screenrecord_lowquality_label">جودة أقل لحجم الملف الأصغر</string>
     <string name="screenrecord_longer_timeout_switch_label">الحد الأقصى لحجم الملف\nحد حجم التسجيل إلى 15جيجابايت</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">المستخدم اليوم</string>
+    <string name="usage_data_default_suffix">بيانات</string>
+    <string name="usage_wifi_default_suffix">واي-فاي</string>
 </resources>

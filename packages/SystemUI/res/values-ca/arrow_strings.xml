@@ -17,73 +17,77 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Power Menu -->
     <string name="global_action_reboot">Reinicia</string>
-    <string name="global_action_reboot_more">Restart\u2026</string>
-    <string name="global_action_reboot_sub">System</string>
+    <string name="global_action_reboot_more">Reiniciar\u2026</string>
+    <string name="global_action_reboot_sub">Sistema</string>
     <string name="global_action_reboot_recovery">Mode de Recuperació</string>
     <string name="global_action_reboot_bootloader">Gestor d\'arrencada</string>
     <string name="global_action_settings">Preferències</string>
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
-    <string name="screenshot_delete_label">Delete</string>
+    <string name="screenshot_delete_label">Borrar</string>
     <!-- Content description indicating that tapping the element will allow deleting the screenshot [CHAR LIMIT=NONE] -->
-    <string name="screenshot_delete_description">Delete screenshot</string>
+    <string name="screenshot_delete_description">Borrar captura de pantalla</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Mode Cafeïna</string>
     <string name="accessibility_quick_settings_caffeine_off">Mode Cafeïna desactivat</string>
     <string name="accessibility_quick_settings_caffeine_on">Mode Cafeïna activat</string>
     <!-- Ambient display QS tile -->
-    <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off.</string>
-    <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on.</string>
+    <string name="quick_settings_ambient_display_label">Pantalla ambientada</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Pantalla ambientada desactivada.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Pantalla ambientada activada.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_off">Pantalla ambientada desactivada.</string>
+    <string name="accessibility_quick_settings_ambient_display_changed_on">Pantalla ambientada activada.</string>
     <!-- USB tethering QS tile -->
     <string name="quick_settings_usb_tether_label">Compartició de xarxa per USB</string>
     <!-- Sync QS Tile -->
-    <string name="quick_settings_sync_label">Sync</string>
-    <string name="accessibility_quick_settings_sync_off">Sync off</string>
-    <string name="accessibility_quick_settings_sync_on">Sync on</string>
-    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
-    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+    <string name="quick_settings_sync_label">Sincronització</string>
+    <string name="accessibility_quick_settings_sync_off">Sincronització desactivada</string>
+    <string name="accessibility_quick_settings_sync_on">Sincronització activada</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sincronització desactivada</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sincronització activada</string>
     <!-- Sound QS Tile -->
     <string name="quick_settings_sound_label">So</string>
     <string name="quick_settings_sound_ring">Timbre</string>
     <string name="quick_settings_sound_vibrate">Vibració</string>
-    <string name="quick_settings_sound_mute">Mute</string>
+    <string name="quick_settings_sound_mute">Silenciar</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_full_screenshot_label">Ple</string>
     <string name="quick_settings_screenshot_label">Captura de pantalla</string>
-    <string name="quick_settings_region_screenshot_label">Partial</string>
+    <string name="quick_settings_region_screenshot_label">Parcial</string>
     <!-- Statusbar tuner -->
-    <string name="statusbar_items_title">Statusbar icons</string>
+    <string name="statusbar_items_title">Icones de la barra d\'estat</string>
     <!-- Name of the VPN status bar icon. -->
     <string name="status_bar_vpn">VPN</string>
     <!-- Heads Up QS Tile -->
-    <string name="quick_settings_heads_up_label">Heads up</string>
-    <string name="accessibility_quick_settings_heads_up_off">Heads up off.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Heads up on.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off.</string>
-    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on.</string>
+    <string name="quick_settings_heads_up_label">Notificacions flotants</string>
+    <string name="accessibility_quick_settings_heads_up_off">Notificacions flotants desactivades.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Notificacions flotants activades.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Notificacions flotants desactivades.</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Notificacions flotants activades.</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_label">Canviar tarjeta de memoria</string>
+    <string name="qs_data_switch_toast_0">No hi ha cap tarjeta SIM instal•lada</string>
+    <string name="qs_data_switch_toast_1">Només hi ha una tarjeta SIM instal•lada</string>
+    <string name="qs_data_switch_changed_1">Canviar tarjeta de memoria a SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Canviar tarjeta de memoria a SIM 2.</string>
     <!-- Name of the roaming status bar icon. -->
-    <string name="status_bar_roaming">Roaming indicator</string>
+    <string name="status_bar_roaming">Indicador d\'itinerància</string>
     <!-- Name of the nfc status bar icon. -->
     <string name="status_bar_nfc">NFC</string>
     <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
     <string name="accessibility_status_bar_nfc">Nfc</string>
     <!-- Name of the call strength status bar icon. -->
-    <string name="status_bar_call_strength">Call strength</string>
+    <string name="status_bar_call_strength">Intensitat del senyal</string>
     <!-- Screen record delete action -->
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
-    <string name="screenrecord_delete_label">Delete</string>
+    <string name="screenrecord_delete_label">Borrar</string>
     <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
-    <string name="screenrecord_delete_description">Screen recording deleted</string>
+    <string name="screenrecord_delete_description">S\'ha eliminat la gravació de pantalla</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Show stop dot\nLongpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality for smaller file size</string>
+    <string name="screenrecord_stopdot_label">Mostrar punt d\'aturaada\nMantén polsat per a moure\'l</string>
+    <string name="screenrecord_lowquality_label">Menys qualitat per fitxer de menor mida</string>
     <string name="screenrecord_longer_timeout_switch_label">Bigger file size limit\nLimit recording size to 15GiB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">used today</string>
+    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

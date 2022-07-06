@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Mostrar ponto de paragem\nPremir e segurar para mover</string>
     <string name="screenrecord_lowquality_label">Qualidade inferior para ficheiros menores</string>
     <string name="screenrecord_longer_timeout_switch_label">Limite de tamanho de ficheiros grandes\nLimitar o tamanho a 15 Gb</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">utilizado hoje</string>
+    <string name="usage_data_default_suffix">Dados</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>
