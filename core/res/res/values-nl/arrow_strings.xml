@@ -18,7 +18,7 @@
     <!-- Global actions -->
     <string name="reboot_to_bootloader_title">Herstart bootloader</string>
     <string name="reboot_to_bootloader_message">Opnieuw opstarten naar bootloader\u2026</string>
-    <string name="reboot_to_recovery_title">Herstart recovery</string>
+    <string name="reboot_to_recovery_title">Herstart naar herstelmodus</string>
     <string name="reboot_to_recovery_message">Herstarten naar herstelmodus\u2026</string>
     <string name="reboot_system_title">Herstart systeem</string>
     <string name="reboot_system_message">Herstarten\2026</string>

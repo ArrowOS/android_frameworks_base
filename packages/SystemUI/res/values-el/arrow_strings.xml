@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Εμφάνιση κουκίδας παύσης\nΠατήστε παρατεταμένα για να τη μετακινήσετε</string>
     <string name="screenrecord_lowquality_label">Μείωση της ποιότητας για μικρότερο μέγεθος αρχείου</string>
     <string name="screenrecord_longer_timeout_switch_label">Μεγαλύτερο όριο μεγέθους αρχείου\nΠεριορίστε το μέγεθος εγγραφής στα 15 GiB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">χρησιμοποιήθηκαν σήμερα</string>
+    <string name="usage_data_default_suffix">Δεδομένα</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

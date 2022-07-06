@@ -70,20 +70,24 @@
     <string name="qs_data_switch_changed_1">Mude o cartão de dados para o SIM 1.</string>
     <string name="qs_data_switch_changed_2">Mude o cartão de dados para o SIM 2.</string>
     <!-- Name of the roaming status bar icon. -->
-    <string name="status_bar_roaming">Indicador de Roaming</string>
+    <string name="status_bar_roaming">Indicador de roaming</string>
     <!-- Name of the nfc status bar icon. -->
     <string name="status_bar_nfc">NFC</string>
     <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->
-    <string name="accessibility_status_bar_nfc">Nfc</string>
+    <string name="accessibility_status_bar_nfc">NFC</string>
     <!-- Name of the call strength status bar icon. -->
     <string name="status_bar_call_strength">Intensidade do sinal para chamadas</string>
     <!-- Screen record delete action -->
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
     <string name="screenrecord_delete_label">Excluir</string>
     <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
-    <string name="screenrecord_delete_description">Gravação de tela apagada</string>
+    <string name="screenrecord_delete_description">Gravação de tela excluída</string>
     <!-- Screenrecord QS tile -->
-    <string name="screenrecord_stopdot_label">Mostrar ponto de parada\nPressionamento longo para movê-lo</string>
-    <string name="screenrecord_lowquality_label">Baixa qualidade para tamanho de arquivo menor</string>
+    <string name="screenrecord_stopdot_label">Mostrar ponto de parada\nPressione e segure para movê-lo</string>
+    <string name="screenrecord_lowquality_label">Qualidade inferior para arquivo menor</string>
     <string name="screenrecord_longer_timeout_switch_label">Limite de tamanho de arquivo maior\nLimitar o tamanho de gravação a 15GB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">usados hoje</string>
+    <string name="usage_data_default_suffix">Dados</string>
+    <string name="usage_wifi_default_suffix">WiFi</string>
 </resources>

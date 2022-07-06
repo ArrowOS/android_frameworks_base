@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Afficher le point d\'arrêt\nAppui long pour le déplacer</string>
     <string name="screenrecord_lowquality_label">Qualité inférieure pour une taille de fichier plus petite</string>
     <string name="screenrecord_longer_timeout_switch_label">Limite de taille de fichier plus grande\nLimiter la taille d\'enregistrement à 15 Go</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">utilisé aujourd\'hui</string>
+    <string name="usage_data_default_suffix">Données</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

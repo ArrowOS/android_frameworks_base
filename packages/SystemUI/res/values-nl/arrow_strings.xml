@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Toon stop punt\nLang indrukken om te verplaatsen</string>
     <string name="screenrecord_lowquality_label">Lagere kwaliteit voor kleinere bestandsgrootte</string>
     <string name="screenrecord_longer_timeout_switch_label">Grotere bestandsgrootte limiet\nLimiet opname grootte tot 15GiB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">vandaag verbruikt</string>
+    <string name="usage_data_default_suffix">Gegevens</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

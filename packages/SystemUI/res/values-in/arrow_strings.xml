@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Tampilkan titik berhenti\nTekan lama untuk memindahkannya</string>
     <string name="screenrecord_lowquality_label">Kualitas lebih rendah untuk ukuran file yang lebih kecil</string>
     <string name="screenrecord_longer_timeout_switch_label">Batas ukuran file lebih besar\nBatasi ukuran perekaman hingga 15GB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">digunakan hari ini</string>
+    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

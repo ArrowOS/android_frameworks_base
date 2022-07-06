@@ -19,7 +19,7 @@
     <string name="global_action_reboot">Reiniciar</string>
     <string name="global_action_reboot_more">Reiniciar\u2026</string>
     <string name="global_action_reboot_sub">Sistema</string>
-    <string name="global_action_reboot_recovery">Modo recuperación</string>
+    <string name="global_action_reboot_recovery">Recuperación</string>
     <string name="global_action_reboot_bootloader">Modo Bootloader</string>
     <string name="global_action_settings">Ajustes</string>
     <!-- Label for UI element which allows deleting the screenshot [CHAR LIMIT=30] -->
@@ -86,4 +86,8 @@
     <string name="screenrecord_stopdot_label">Mostrar punto para detener grabación.\nPulsación larga para moverlo</string>
     <string name="screenrecord_lowquality_label">Menor calidad para un tamaño de archivo más pequeño</string>
     <string name="screenrecord_longer_timeout_switch_label">Límite de tamaño de archivo más grande\nLímite de tamaño de grabación a 15GiB</string>
+    <!-- Data usage info in QS footer -->
+    <string name="usage_data">usado hoy</string>
+    <string name="usage_data_default_suffix">Datos</string>
+    <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>
