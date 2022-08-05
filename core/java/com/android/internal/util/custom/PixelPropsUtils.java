@@ -84,6 +84,7 @@ public class PixelPropsUtils {
             "com.riotgames.league.wildrift",
             "com.riotgames.league.wildrifttw",
             "com.riotgames.league.wildriftvn",
+            "com.ea.gp.apexlegendsmobilefps",
             "com.netease.lztgglobal",
             "com.epicgames.portal"
     };
