@@ -67,8 +67,8 @@
     <string name="qs_data_switch_label">Switch data card</string>
     <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
     <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_changed_1">สลับข้อมูลมือถือไปซิม 1</string>
+    <string name="qs_data_switch_changed_2">สลับข้อมูลมือถือไปซิม 2</string>
     <!-- Name of the roaming status bar icon. -->
     <string name="status_bar_roaming">Roaming indicator</string>
     <!-- Name of the nfc status bar icon. -->

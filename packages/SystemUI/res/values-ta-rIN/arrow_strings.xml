@@ -48,11 +48,11 @@
     <string name="quick_settings_sound_label">ஓசை</string>
     <string name="quick_settings_sound_ring">மணி அடி</string>
     <string name="quick_settings_sound_vibrate">அதிர்</string>
-    <string name="quick_settings_sound_mute">Mute</string>
+    <string name="quick_settings_sound_mute">அமைதி</string>
     <!-- Screenshot QS tile -->
-    <string name="quick_settings_full_screenshot_label">Full</string>
+    <string name="quick_settings_full_screenshot_label">முழுதும்</string>
     <string name="quick_settings_screenshot_label">திரைப்பிடிப்பு</string>
-    <string name="quick_settings_region_screenshot_label">Partial</string>
+    <string name="quick_settings_region_screenshot_label">பகுதி</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">நிலைப்பட்டி படவுருக்கள்</string>
     <!-- Name of the VPN status bar icon. -->
@@ -64,13 +64,13 @@
     <string name="accessibility_quick_settings_heads_up_changed_off">தலையுயர்த்தி அணைக்கப்பட்டது.</string>
     <string name="accessibility_quick_settings_heads_up_changed_on">தலையுயர்த்தி இயக்கப்பட்டது.</string>
     <!-- DataSwitch Tile -->
-    <string name="qs_data_switch_label">Switch data card</string>
-    <string name="qs_data_switch_toast_0">Currently no SIM card is inserted</string>
-    <string name="qs_data_switch_toast_1">Currently only one SIM card is inserted</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_label">தரவு அட்டையை மாற்று</string>
+    <string name="qs_data_switch_toast_0">தற்பொழுது எந்த செறிவட்டையும் செருகப்படவில்லை</string>
+    <string name="qs_data_switch_toast_1">தற்பொழுது ஒரு செறிவட்டை செருகப்பட்டுள்ளது</string>
+    <string name="qs_data_switch_changed_1">தரவு அட்டையை SIM 1 இற்கு மாற்று.</string>
+    <string name="qs_data_switch_changed_2">தரவு அட்டையை SIM 2 இற்கு மாற்று.</string>
     <!-- Name of the roaming status bar icon. -->
-    <string name="status_bar_roaming">Roaming indicator</string>
+    <string name="status_bar_roaming">ரோமிங் காட்டி</string>
     <!-- Name of the nfc status bar icon. -->
     <string name="status_bar_nfc">NFC</string>
     <!-- Accessibility label for nfc icon (not shown on screen) [CHAR LIMIT=NONE] -->

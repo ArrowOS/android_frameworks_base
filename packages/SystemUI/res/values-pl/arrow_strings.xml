@@ -87,7 +87,7 @@
     <string name="screenrecord_lowquality_label">Niższa jakość dla mniejszego rozmiaru pliku</string>
     <string name="screenrecord_longer_timeout_switch_label">Większy limit rozmiaru pliku\nOgranicz rozmiar nagrywania do 15GiB</string>
     <!-- Data usage info in QS footer -->
-    <string name="usage_data">used today</string>
-    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_data">użyto dzisiaj</string>
+    <string name="usage_data_default_suffix">Dane</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>

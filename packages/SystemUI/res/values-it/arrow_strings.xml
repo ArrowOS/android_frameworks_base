@@ -85,9 +85,9 @@
     <!-- Screenrecord QS tile -->
     <string name="screenrecord_stopdot_label">Mostra punto per terminare\nPremi a lungo per spostarlo</string>
     <string name="screenrecord_lowquality_label">Qualità inferiore per un file più piccolo</string>
-    <string name="screenrecord_longer_timeout_switch_label">Limite di dimensione del file più grande\nLimita la dimensione della registrazione a 15GiB</string>
+    <string name="screenrecord_longer_timeout_switch_label">Limite di dimensione del file più grande \nLimita la dimensione della registrazione a 15GiB</string>
     <!-- Data usage info in QS footer -->
-    <string name="usage_data">used today</string>
-    <string name="usage_data_default_suffix">Data</string>
+    <string name="usage_data">utilizzo di oggi</string>
+    <string name="usage_data_default_suffix">Dati</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
 </resources>
