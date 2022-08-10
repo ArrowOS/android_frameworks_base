@@ -59,6 +59,11 @@
             android:title="@string/status_bar_volte"
             sysui:defValue="false" />
 
+        <com.android.systemui.tuner.TunerSwitch
+            android:key="vowifi"
+            android:title="@string/status_bar_vowifi"
+            sysui:defValue="false" />
+
         <com.android.systemui.tuner.StatusBarSwitch
             android:key="roaming"
             android:title="@string/status_bar_roaming" />
