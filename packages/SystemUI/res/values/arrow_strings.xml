@@ -112,4 +112,7 @@
 
     <!-- Name of the volte status bar icon. -->
     <string name="status_bar_volte">VoLTE</string>
+
+    <!-- Name of the vowifi status bar icon. -->
+    <string name="status_bar_vowifi">VoWIFI</string>
 </resources>
