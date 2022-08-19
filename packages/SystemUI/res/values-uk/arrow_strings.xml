@@ -28,8 +28,8 @@
     <string name="screenshot_delete_description">Видалити скріншот</string>
     <!-- Caffeine QS Tile -->
     <string name="quick_settings_caffeine_label">Заборона сну</string>
-    <string name="accessibility_quick_settings_caffeine_off">Заборону сну вимк.</string>
-    <string name="accessibility_quick_settings_caffeine_on">Заборону сну увімк.</string>
+    <string name="accessibility_quick_settings_caffeine_off">Режим \"Заборона сну\" вимкнено</string>
+    <string name="accessibility_quick_settings_caffeine_on">Режим \"Заборона сну\" увімкнено</string>
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Активація екрану</string>
     <string name="accessibility_quick_settings_ambient_display_off">Ambient Display вимкнено.</string>
@@ -51,7 +51,7 @@
     <string name="quick_settings_sound_mute">Без звуку</string>
     <!-- Screenshot QS tile -->
     <string name="quick_settings_full_screenshot_label">Весь екран</string>
-    <string name="quick_settings_screenshot_label">Знімок екрану</string>
+    <string name="quick_settings_screenshot_label">Скріншот</string>
     <string name="quick_settings_region_screenshot_label">Частковий</string>
     <!-- Statusbar tuner -->
     <string name="statusbar_items_title">Іконки панелі стану</string>
@@ -66,9 +66,9 @@
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Змінити SIM-карту для передачі даних</string>
     <string name="qs_data_switch_toast_0">Зараз не вставлено жодної SIM-картки</string>
-    <string name="qs_data_switch_toast_1">Зараз вставлена лише одна SIM картка</string>
-    <string name="qs_data_switch_changed_1">Зміна передачі даних на SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Зміна передачі даних на SIM 2.</string>
+    <string name="qs_data_switch_toast_1">Зараз вставлена лише одна SIM-картка</string>
+    <string name="qs_data_switch_changed_1">Використовувати SIM 1 для передавання даних</string>
+    <string name="qs_data_switch_changed_2">Використовувати SIM 2 для передавання даних</string>
     <!-- Name of the roaming status bar icon. -->
     <string name="status_bar_roaming">Індикатор роумінгу</string>
     <!-- Name of the nfc status bar icon. -->
