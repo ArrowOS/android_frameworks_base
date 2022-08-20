@@ -28,4 +28,9 @@
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">false</bool>
+
+    <!-- Parallel space max count. Should overlay according to device
+         performance. -->
+    <integer name="config_parallelSpaceMaxCount">9</integer>
+
 </resources>
