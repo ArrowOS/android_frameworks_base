@@ -19,4 +19,8 @@
     <style name="ExTunerSettings" parent="@android:style/Theme.DeviceDefault.Settings">
         <item name="preferenceTheme">@style/TunerPreferenceTheme</item>
     </style>
+
+    <!-- Udfps vendor code -->
+    <integer name="config_udfpsVendorCode">0</integer>
+
 </resources>
