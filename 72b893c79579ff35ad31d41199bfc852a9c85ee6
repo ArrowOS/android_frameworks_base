@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "edf27a66_2ed02d7c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2022-08-23T13:56:52Z",
+      "side": 1,
+      "message": "Fixes SD Card visibility in Third Party Apps",
+      "revId": "72b893c79579ff35ad31d41199bfc852a9c85ee6",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
