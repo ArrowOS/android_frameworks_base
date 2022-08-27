@@ -1981,8 +1981,12 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
                 }
             }
 
+<<<<<<< HEAD   (30fec1 base: Limit SafetyNet workarounds to unstable GMS process)
             mCacheDir = PackageManagerServiceUtils.preparePackageParserCache(
                     mIsEngBuild, mIsUserDebugBuild, mIncrementalVersion);
+=======
+            mCacheDir = preparePackageParserCache(mIsEngBuild, mIsUpgrade);
+>>>>>>> CHANGE (e3ac5d core: pm: Wipe package cache on upgrade)
 
             final int[] userIds = mUserManager.getUserIds();
             PackageParser2 packageParser = mInjector.getScanningCachingPackageParser();
@@ -2269,6 +2273,84 @@ public class PackageManagerService implements PackageSender, TestUtilityService 
         setUpInstantAppInstallerActivityLP(getInstantAppInstallerLPr());
     }
 
+<<<<<<< HEAD   (30fec1 base: Limit SafetyNet workarounds to unstable GMS process)
+=======
+    private @Nullable File preparePackageParserCache(boolean forEngBuild, boolean isUpgrade) {
+        if (!FORCE_PACKAGE_PARSED_CACHE_ENABLED) {
+            if (!DEFAULT_PACKAGE_PARSER_CACHE_ENABLED) {
+                return null;
+            }
+
+            // Disable package parsing on eng builds to allow for faster incremental development.
+            if (forEngBuild) {
+                return null;
+            }
+
+            if (SystemProperties.getBoolean("pm.boot.disable_package_cache", false)) {
+                Slog.i(TAG, "Disabling package parser cache due to system property.");
+                return null;
+            }
+        }
+
+        // The base directory for the package parser cache lives under /data/system/.
+        final File cacheBaseDir = Environment.getPackageCacheDirectory();
+        if (!FileUtils.createDir(cacheBaseDir)) {
+            return null;
+        }
+
+        // There are several items that need to be combined together to safely
+        // identify cached items. In particular, changing the value of certain
+        // feature flags should cause us to invalidate any caches.
+        final String cacheName = FORCE_PACKAGE_PARSED_CACHE_ENABLED ? "debug"
+                : SystemProperties.digestOf("ro.build.version.incremental");
+
+        // Reconcile cache directories, keeping only what we'd actually use.
+        for (File cacheDir : FileUtils.listFilesOrEmpty(cacheBaseDir)) {
+            if (!isUpgrade && Objects.equals(cacheName, cacheDir.getName())) {
+                Slog.d(TAG, "Keeping known cache " + cacheDir.getName());
+            } else {
+                Slog.d(TAG, "Destroying unknown cache " + cacheDir.getName());
+                FileUtils.deleteContentsAndDir(cacheDir);
+            }
+        }
+
+        // Return the versioned package cache directory.
+        File cacheDir = FileUtils.createDir(cacheBaseDir, cacheName);
+
+        if (cacheDir == null) {
+            // Something went wrong. Attempt to delete everything and return.
+            Slog.wtf(TAG, "Cache directory cannot be created - wiping base dir " + cacheBaseDir);
+            FileUtils.deleteContentsAndDir(cacheBaseDir);
+            return null;
+        }
+
+        // The following is a workaround to aid development on non-numbered userdebug
+        // builds or cases where "adb sync" is used on userdebug builds. If we detect that
+        // the system partition is newer.
+        //
+        // NOTE: When no BUILD_NUMBER is set by the build system, it defaults to a build
+        // that starts with "eng." to signify that this is an engineering build and not
+        // destined for release.
+        if (isUpgrade || mIncrementalVersion.startsWith("eng.")) {
+            Slog.w(TAG, "Wiping cache directory because the system partition changed.");
+
+            // Heuristic: If the /system directory has been modified recently due to an "adb sync"
+            // or a regular make, then blow away the cache. Note that mtimes are *NOT* reliable
+            // in general and should not be used for production changes. In this specific case,
+            // we know that they will work.
+            File frameworkDir =
+                    new File(Environment.getRootDirectory(), "framework");
+            if (cacheDir.lastModified() < frameworkDir.lastModified()) {
+                FileUtils.deleteContents(cacheBaseDir);
+                cacheDir = FileUtils.createDir(cacheBaseDir, cacheName);
+            }
+        }
+
+        return cacheDir;
+    }
+
+    @Override
+>>>>>>> CHANGE (e3ac5d core: pm: Wipe package cache on upgrade)
     public boolean isFirstBoot() {
         // allow instant applications
         return mFirstBoot;
