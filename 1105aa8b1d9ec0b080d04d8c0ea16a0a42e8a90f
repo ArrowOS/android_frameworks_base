@@ -16,6 +16,24 @@
       "message": "https://review.lineageos.org/c/LineageOS/android_vendor_lineage/+/326712",
       "revId": "1105aa8b1d9ec0b080d04d8c0ea16a0a42e8a90f",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ae987294_9577fa2e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2022-09-05T18:20:17Z",
+      "side": 1,
+      "message": "Just tested works fine. I don\u0027t think its necessary to move it into vendor.",
+      "parentUuid": "ac50fcc6_86bc704c",
+      "revId": "1105aa8b1d9ec0b080d04d8c0ea16a0a42e8a90f",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
