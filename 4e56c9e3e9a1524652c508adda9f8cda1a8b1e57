@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d24ef5fa_d289fb2f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2022-09-05T06:16:20Z",
+      "side": 1,
+      "message": "Don\u0027t think we should keep adding this feature",
+      "revId": "4e56c9e3e9a1524652c508adda9f8cda1a8b1e57",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
