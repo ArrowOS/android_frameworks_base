@@ -89,4 +89,7 @@
 
     <!-- Expected value from fast charging status file -->
     <java-symbol type="string" name="config_oemFastChargerStatusValue" />
+
+    <!-- Whether to spoof device as Pixel XL for Google Photos -->
+    <java-symbol type="bool" name="config_spoofGooglePhotos" />
 </resources>
