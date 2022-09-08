@@ -70,4 +70,7 @@
     <!-- Whether to cancel fingerprint operation if not idle -->
     <bool name="config_fpCancelIfNotIdle">false</bool>
 
+    <!-- Whether to spoof device as Pixel XL for Google Photos -->
+    <bool name="config_spoofGooglePhotos">true</bool>
+
 </resources>
