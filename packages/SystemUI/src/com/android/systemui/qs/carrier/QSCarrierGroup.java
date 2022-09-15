@@ -18,6 +18,7 @@ package com.android.systemui.qs.carrier;
 
 import android.annotation.StyleRes;
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -56,6 +57,19 @@ public class QSCarrierGroup extends LinearLayout {
 
     View getCarrierDivider2() {
         return findViewById(R.id.qs_carrier_divider2);
+    }
+
+    public void updateColors(int color, ColorStateList colorStateList) {
+        getNoSimTextView().setTextColor(color);
+        QSCarrier[] qsCarriers = { getCarrier1View(), getCarrier2View(), getCarrier3View() };
+        for (QSCarrier qsCarrier : qsCarriers) {
+            for (int i = 0; i < qsCarrier.getChildCount(); i++) {
+                qsCarrier.updateColors(colorStateList);
+                if (qsCarrier.getChildAt(i) instanceof TextView) {
+                    ((TextView) qsCarrier.getChildAt(i)).setTextColor(color);
+                }
+            }
+        }
     }
 
     public void updateTextAppearance(@StyleRes int resId) {
