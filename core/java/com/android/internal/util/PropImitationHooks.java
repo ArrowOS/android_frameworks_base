@@ -51,11 +51,15 @@ public class PropImitationHooks {
     private static final boolean sSpoofPhotos =
             Resources.getSystem().getBoolean(R.bool.config_spoofGooglePhotos);
 
+    private static final String sNetflixModel =
+            Resources.getSystem().getString(R.string.config_netflixSpoofModel);
+
     private static final String PACKAGE_ARCORE = "com.google.ar.core";
     private static final String PACKAGE_FINSKY = "com.android.vending";
     private static final String PACKAGE_GMS = "com.google.android.gms";
     private static final String PROCESS_GMS_UNSTABLE = PACKAGE_GMS + ".unstable";
     private static final String PACKAGE_GPHOTOS = "com.google.android.apps.photos";
+    private static final String PACKAGE_NETFLIX = "com.netflix.mediaclient";
 
     private static final ComponentName GMS_ADD_ACCOUNT_ACTIVITY = ComponentName.unflattenFromString(
             "com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity");
@@ -100,6 +104,7 @@ public class PropImitationHooks {
         /* Set certified properties for GMSCore
          * Set stock fingerprint for ARCore
          * Set Pixel XL for Google Photos and Snapchat
+         * Set custom model for Netflix
          */
         if (sIsGms) {
             setCertifiedPropsForGms();
@@ -109,6 +114,9 @@ public class PropImitationHooks {
         } else if (sIsPhotos) {
             dlog("Spoofing Pixel XL for: " + packageName);
             sPixelXLProps.forEach(PropImitationHooks::setPropValue);
+        } else if (!sNetflixModel.isEmpty() && packageName.equals(PACKAGE_NETFLIX)) {
+            dlog("Setting model to " + sNetflixModel + " for Netflix");
+            setPropValue("MODEL", sNetflixModel);
         }
     }
 
