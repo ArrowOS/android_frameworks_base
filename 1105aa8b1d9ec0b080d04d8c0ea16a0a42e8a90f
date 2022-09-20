@@ -51,6 +51,23 @@
       "message": "I already have these changes internally! but i\u0027ll merge the other two for you.\nabout vendor/arrow - its more practical approach when possible and will stay for all arrow versions too.",
       "revId": "1105aa8b1d9ec0b080d04d8c0ea16a0a42e8a90f",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eb1dff9f_8e5a5620",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2022-09-20T15:35:06Z",
+      "side": 1,
+      "message": "Works fine. Since the code is merged in AOSP better remove it from here rather than vendor because we want this behavior in all devices.",
+      "revId": "1105aa8b1d9ec0b080d04d8c0ea16a0a42e8a90f",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
