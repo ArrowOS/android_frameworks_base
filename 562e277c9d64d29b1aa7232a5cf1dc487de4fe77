@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f899701c_adf5137e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 88
+      },
+      "writtenOn": "2022-09-25T12:14:49Z",
+      "side": 1,
+      "message": "For some reason, Nothing is not very friendly to the OSS fingerprint HAL and requires prebuilt fingerprint HAL for now. For prebuilt fingerprint HAL, this UDFPS HBM provider is needed to provide the HBM control implementation for the UDFPS.",
+      "revId": "562e277c9d64d29b1aa7232a5cf1dc487de4fe77",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
