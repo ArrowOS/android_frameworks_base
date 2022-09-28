@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c6cc9144_f0a87bf8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 71
+      },
+      "writtenOn": "2022-09-28T20:04:26Z",
+      "side": 1,
+      "message": "https://github.com/aosp-gr/frameworks_base/commit/b43751f9d22fed67d686934cef1b78f42f7cce9c\n",
+      "revId": "076b7d6ed3709acf66c35e8efaf7ac2d76be8f3a",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
