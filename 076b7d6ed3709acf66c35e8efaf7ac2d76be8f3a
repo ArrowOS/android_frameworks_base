@@ -16,6 +16,24 @@
       "message": "https://github.com/aosp-gr/frameworks_base/commit/b43751f9d22fed67d686934cef1b78f42f7cce9c\n",
       "revId": "076b7d6ed3709acf66c35e8efaf7ac2d76be8f3a",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4fb4be87_092b5483",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 53
+      },
+      "writtenOn": "2022-09-29T09:25:58Z",
+      "side": 1,
+      "message": "Not trying to cause a drama. I just disliked this behaviour found the commit and reverted it.",
+      "parentUuid": "c6cc9144_f0a87bf8",
+      "revId": "076b7d6ed3709acf66c35e8efaf7ac2d76be8f3a",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
