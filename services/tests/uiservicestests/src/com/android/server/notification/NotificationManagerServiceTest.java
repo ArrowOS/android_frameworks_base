@@ -444,7 +444,6 @@ public class NotificationManagerServiceTest extends UiServiceTestCase {
 
         DeviceIdleInternal deviceIdleInternal = mock(DeviceIdleInternal.class);
         when(deviceIdleInternal.getNotificationWhitelistDuration()).thenReturn(3000L);
-        ActivityManagerInternal activityManagerInternal = mock(ActivityManagerInternal.class);
 
         LocalServices.removeServiceForTest(UriGrantsManagerInternal.class);
         LocalServices.addService(UriGrantsManagerInternal.class, mUgmInternal);
@@ -455,7 +454,7 @@ public class NotificationManagerServiceTest extends UiServiceTestCase {
         LocalServices.removeServiceForTest(DeviceIdleInternal.class);
         LocalServices.addService(DeviceIdleInternal.class, deviceIdleInternal);
         LocalServices.removeServiceForTest(ActivityManagerInternal.class);
-        LocalServices.addService(ActivityManagerInternal.class, activityManagerInternal);
+        LocalServices.addService(ActivityManagerInternal.class, mAmi);
         mContext.addMockSystemService(Context.ALARM_SERVICE, mAlarmManager);
 
 
@@ -533,7 +532,7 @@ public class NotificationManagerServiceTest extends UiServiceTestCase {
                 mock(DevicePolicyManagerInternal.class), mUgm, mUgmInternal,
                 mAppOpsManager, mUm, mHistoryManager, mStatsManager,
                 mock(TelephonyManager.class),
-                mock(ActivityManagerInternal.class));
+                mAmi);
         mService.onBootPhase(SystemService.PHASE_SYSTEM_SERVICES_READY);
 
         mService.setAudioManager(mAudioManager);
