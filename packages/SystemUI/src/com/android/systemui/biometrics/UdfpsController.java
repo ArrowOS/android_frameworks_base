@@ -198,8 +198,8 @@ public class UdfpsController implements DozeReceiver {
                     .build();
 
     // haptic to use for successful device entry
-    public static final VibrationEffect EFFECT_CLICK =
-            VibrationEffect.get(VibrationEffect.EFFECT_CLICK);
+    public static final VibrationEffect EFFECT_TICK =
+            VibrationEffect.get(VibrationEffect.EFFECT_TICK);
 
     private final ScreenLifecycle.Observer mScreenObserver = new ScreenLifecycle.Observer() {
         @Override
@@ -733,7 +733,7 @@ public class UdfpsController implements DozeReceiver {
             mVibrator.vibrate(
                     Process.myUid(),
                     mContext.getOpPackageName(),
-                    EFFECT_CLICK,
+                    EFFECT_TICK,
                     "udfps-onStart-click",
                     UDFPS_VIBRATION_ATTRIBUTES);
         }
@@ -824,7 +824,7 @@ public class UdfpsController implements DozeReceiver {
             mVibrator.vibrate(
                     Process.myUid(),
                     mContext.getOpPackageName(),
-                    UdfpsController.EFFECT_CLICK,
+                    UdfpsController.EFFECT_TICK,
                     "aod-lock-icon-longpress",
                     LOCK_ICON_VIBRATION_ATTRIBUTES);
             return;

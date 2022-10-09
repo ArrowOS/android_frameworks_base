@@ -88,7 +88,7 @@ public class BiometricUnlockController extends KeyguardUpdateMonitorCallback imp
     private static final UiEventLogger UI_EVENT_LOGGER = new UiEventLoggerImpl();
     private static final int FP_ATTEMPTS_BEFORE_SHOW_BOUNCER = 2;
     private static final VibrationEffect SUCCESS_VIBRATION_EFFECT =
-            VibrationEffect.get(VibrationEffect.EFFECT_CLICK);
+            VibrationEffect.get(VibrationEffect.EFFECT_TICK);
     private static final VibrationEffect ERROR_VIBRATION_EFFECT =
             VibrationEffect.get(VibrationEffect.EFFECT_DOUBLE_CLICK);
     private static final VibrationAttributes HARDWARE_FEEDBACK_VIBRATION_ATTRIBUTES =

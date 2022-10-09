@@ -59,7 +59,7 @@ public class UdfpsEnrollProgressBarDrawable extends Drawable {
             VibrationAttributes.createForUsage(VibrationAttributes.USAGE_HARDWARE_FEEDBACK);
 
     private static final VibrationEffect SUCCESS_VIBRATION_EFFECT =
-            VibrationEffect.get(VibrationEffect.EFFECT_CLICK);
+            VibrationEffect.get(VibrationEffect.EFFECT_TICK);
 
     private final float mStrokeWidthPx;
     @ColorInt private final int mProgressColor;

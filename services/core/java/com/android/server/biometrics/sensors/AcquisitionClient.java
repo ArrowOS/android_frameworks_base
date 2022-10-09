@@ -47,7 +47,7 @@ public abstract class AcquisitionClient<T> extends HalClientMonitor<T> implement
             VibrationAttributes.createForUsage(VibrationAttributes.USAGE_HARDWARE_FEEDBACK);
 
     private static final VibrationEffect SUCCESS_VIBRATION_EFFECT =
-            VibrationEffect.get(VibrationEffect.EFFECT_CLICK);
+            VibrationEffect.get(VibrationEffect.EFFECT_TICK);
     private static final VibrationEffect ERROR_VIBRATION_EFFECT =
             VibrationEffect.get(VibrationEffect.EFFECT_DOUBLE_CLICK);
 

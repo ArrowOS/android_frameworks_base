@@ -44,7 +44,7 @@ class VibratorHelperTest : SysuiTestCase() {
 
     @Test
     fun testVibrate() {
-        vibratorHelper.vibrate(VibrationEffect.EFFECT_CLICK)
+        vibratorHelper.vibrate(VibrationEffect.EFFECT_TICK)
         verifyAsync().vibrate(any(VibrationEffect::class.java),
                 any(VibrationAttributes::class.java))
     }

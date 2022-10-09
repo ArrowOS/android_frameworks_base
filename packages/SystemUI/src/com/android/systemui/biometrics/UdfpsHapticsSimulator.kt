@@ -57,7 +57,7 @@ class UdfpsHapticsSimulator @Inject constructor(
                 "success" -> {
                     // needs to be kept up to date with AcquisitionClient#SUCCESS_VIBRATION_EFFECT
                     vibrator.vibrate(
-                        VibrationEffect.get(VibrationEffect.EFFECT_CLICK),
+                        VibrationEffect.get(VibrationEffect.EFFECT_TICK),
                         sonificationEffects)
                 }
                 "error" -> {

@@ -664,7 +664,7 @@ public class NavigationBarEdgePanel extends View implements NavigationEdgeBackPl
         boolean isSlow = Math.abs(mVelocityTracker.getXVelocity()) < 500;
         if (isSlow
                 || SystemClock.uptimeMillis() - mVibrationTime >= GESTURE_DURATION_FOR_CLICK_MS) {
-            mVibratorHelper.vibrate(VibrationEffect.EFFECT_CLICK);
+            mVibratorHelper.vibrate(VibrationEffect.EFFECT_TICK);
         }
 
         // Let's also snap the angle a bit

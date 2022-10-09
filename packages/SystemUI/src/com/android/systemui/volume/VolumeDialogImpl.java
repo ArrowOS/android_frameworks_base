@@ -1283,7 +1283,7 @@ public class VolumeDialogImpl implements VolumeDialog,
                 mController.scheduleTouchFeedback();
                 break;
             case RINGER_MODE_SILENT:
-                effect = VibrationEffect.get(VibrationEffect.EFFECT_CLICK);
+                effect = VibrationEffect.get(VibrationEffect.EFFECT_TICK);
                 break;
             case RINGER_MODE_VIBRATE:
             default:
