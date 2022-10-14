@@ -61,8 +61,9 @@ public class PropImitationHooks {
          * Set stock fingerprint for ARCore
          */
         if (!sCertifiedFp.isEmpty() && sIsGms) {
-            dlog("Setting certified fingerprint for GMS");
+            dlog("Spoofing build for GMS");
             setPropValue("FINGERPRINT", sCertifiedFp);
+            setPropValue("MODEL", Build.MODEL + "\u200b");
         } else if (!sStockFp.isEmpty() && packageName.equals(PACKAGE_ARCORE)) {
             dlog("Setting stock fingerprint for: " + packageName);
             setPropValue("FINGERPRINT", sStockFp);
