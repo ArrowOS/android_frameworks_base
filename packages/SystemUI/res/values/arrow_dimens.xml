@@ -19,4 +19,7 @@
 
     <dimen name="volume_dialog_panel_transparent_padding_left">8dp</dimen>
 
+    <!-- Bluetooth dialog -->
+    <dimen name="bluetooth_dialog_active_device_bottom_margin">4dp</dimen>
+
 </resources>
