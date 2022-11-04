@@ -17,9 +17,11 @@
 package com.android.internal.gmscompat;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.SystemProperties;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.android.internal.R;
@@ -36,7 +38,7 @@ public final class AttestationHooks {
     private static final String PACKAGE_GMS = "com.google.android.gms";
     private static final String PACKAGE_GPHOTOS = "com.google.android.apps.photos";
 
-    private static final String PROCESS_UNSTABLE = "com.google.android.gms.unstable";
+    private static final String PROCESS_GMS_UNSTABLE = "com.google.android.gms.unstable";
 
     private static final String PRODUCT_GMS_SPOOFING_FINGERPRINT =
             SystemProperties.get("ro.build.gms_fingerprint");
@@ -99,12 +101,21 @@ public final class AttestationHooks {
         setBuildField("MODEL", Build.MODEL + " ");
     }
 
-    public static void initApplicationBeforeOnCreate(Application app) {
-        if (PACKAGE_GMS.equals(app.getPackageName()) &&
-                PROCESS_UNSTABLE.equals(Application.getProcessName())) {
+    public static void initApplicationBeforeOnCreate(Context context) {
+        final String packageName = context.getPackageName();
+        final String processName = Application.getProcessName();
+
+        if (TextUtils.isEmpty(packageName) || processName == null) {
+            return;
+        }
+
+        sIsGms = packageName.equals(PACKAGE_GMS) && processName.equals(PROCESS_GMS_UNSTABLE);
+        sIsPhotos = sSpoofPhotos && packageName.equals(PACKAGE_GPHOTOS);
+
+        if (sIsGms) {
             sIsGms = true;
             spoofBuildGms();
-        } else if (sSpoofPhotos && PACKAGE_GPHOTOS.equals(app.getPackageName())) {
+        } else if (sIsPhotos) {
             sIsPhotos = true;
             sP1Props.forEach((k, v) -> setBuildField(k, v));
         }
