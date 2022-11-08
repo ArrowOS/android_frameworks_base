@@ -209,7 +209,6 @@ import com.android.systemui.statusbar.notification.NotificationEntryManager;
 import com.android.systemui.statusbar.notification.NotificationLaunchAnimatorControllerProvider;
 import com.android.systemui.statusbar.notification.NotificationWakeUpCoordinator;
 import com.android.systemui.statusbar.notification.collection.legacy.VisualStabilityManager;
-import com.android.systemui.statusbar.notification.collection.render.NotifShadeEventSource;
 import com.android.systemui.statusbar.notification.init.NotificationsController;
 import com.android.systemui.statusbar.notification.interruption.NotificationInterruptStateProvider;
 import com.android.systemui.statusbar.notification.logging.NotificationLogger;
@@ -240,7 +239,6 @@ import com.android.systemui.util.WallpaperController;
 import com.android.systemui.util.concurrency.DelayableExecutor;
 import com.android.systemui.util.concurrency.MessageRouter;
 import com.android.systemui.volume.VolumeComponent;
-import com.android.systemui.wmshell.BubblesManager;
 import com.android.wm.shell.bubbles.Bubbles;
 import com.android.wm.shell.startingsurface.SplashscreenContentDrawer;
 import com.android.wm.shell.startingsurface.StartingSurface;
@@ -407,11 +405,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
     }
 
     @Override
-    public void setTopHidesStatusBar(boolean hides) {
-        mTopHidesStatusBar = hides;
-    }
-
-    @Override
     public QSPanelController getQSPanelController() {
         return mQSPanelController;
     }
@@ -460,7 +453,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
     private BiometricUnlockController mBiometricUnlockController;
     private final LightBarController mLightBarController;
     private final Lazy<LockscreenWallpaper> mLockscreenWallpaperLazy;
-    private final LockscreenGestureLogger mLockscreenGestureLogger;
     @Nullable
     protected LockscreenWallpaper mLockscreenWallpaper;
     private final AutoHideController mAutoHideController;
@@ -527,9 +519,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
 
     private boolean mExpandedVisible;
 
-    private final int[] mAbsPos = new int[2];
-
-    private final NotifShadeEventSource mNotifShadeEventSource;
     protected final NotificationEntryManager mEntryManager;
     private final NotificationGutsManager mGutsManager;
     private final NotificationLogger mNotificationLogger;
@@ -611,7 +600,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
         }
     }
 
-    private Handler mMainHandler;
     private final DelayableExecutor mMainExecutor;
 
     private int mInteractingWindows;
@@ -645,12 +633,9 @@ public class CentralSurfacesImpl extends CoreStartable implements
 
     // Fingerprint (as computed by getLoggingFingerprint() of the last logged state.
     private int mLastLoggedStateFingerprint;
-    private boolean mTopHidesStatusBar;
-    private boolean mStatusBarWindowHidden;
     private boolean mIsLaunchingActivityOverLockscreen;
 
     private final UserSwitcherController mUserSwitcherController;
-    private final NetworkController mNetworkController;
     private final LifecycleRegistry mLifecycle = new LifecycleRegistry(this);
     protected final BatteryController mBatteryController;
     protected boolean mPanelExpanded;
@@ -670,7 +655,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
     protected NotificationPresenter mPresenter;
     private NotificationActivityStarter mNotificationActivityStarter;
     private final Lazy<NotificationShadeDepthController> mNotificationShadeDepthControllerLazy;
-    private final Optional<BubblesManager> mBubblesManagerOptional;
     private final Optional<Bubbles> mBubblesOptional;
     private final Bubbles.BubbleExpandListener mBubbleExpandListener;
     private final Optional<StartingSurface> mStartingSurfaceOptional;
@@ -736,7 +720,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
             FalsingManager falsingManager,
             FalsingCollector falsingCollector,
             BroadcastDispatcher broadcastDispatcher,
-            NotifShadeEventSource notifShadeEventSource,
             NotificationEntryManager notificationEntryManager,
             NotificationGutsManager notificationGutsManager,
             NotificationLogger notificationLogger,
@@ -751,13 +734,11 @@ public class CentralSurfacesImpl extends CoreStartable implements
             NotificationLockscreenUserManager lockScreenUserManager,
             NotificationRemoteInputManager remoteInputManager,
             UserSwitcherController userSwitcherController,
-            NetworkController networkController,
             BatteryController batteryController,
             SysuiColorExtractor colorExtractor,
             ScreenLifecycle screenLifecycle,
             WakefulnessLifecycle wakefulnessLifecycle,
             SysuiStatusBarStateController statusBarStateController,
-            Optional<BubblesManager> bubblesManagerOptional,
             Optional<Bubbles> bubblesOptional,
             VisualStabilityManager visualStabilityManager,
             DeviceProvisionedController deviceProvisionedController,
@@ -769,7 +750,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
             DozeParameters dozeParameters,
             ScrimController scrimController,
             Lazy<LockscreenWallpaper> lockscreenWallpaperLazy,
-            LockscreenGestureLogger lockscreenGestureLogger,
             Lazy<BiometricUnlockController> biometricUnlockControllerLazy,
             DozeServiceHost dozeServiceHost,
             PowerManager powerManager,
@@ -802,7 +782,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
             LockscreenShadeTransitionController lockscreenShadeTransitionController,
             FeatureFlags featureFlags,
             KeyguardUnlockAnimationController keyguardUnlockAnimationController,
-            @Main Handler mainHandler,
             @Main DelayableExecutor delayableExecutor,
             @Main MessageRouter messageRouter,
             WallpaperManager wallpaperManager,
@@ -832,7 +811,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mFalsingCollector = falsingCollector;
         mFalsingManager = falsingManager;
         mBroadcastDispatcher = broadcastDispatcher;
-        mNotifShadeEventSource = notifShadeEventSource;
         mEntryManager = notificationEntryManager;
         mGutsManager = notificationGutsManager;
         mNotificationLogger = notificationLogger;
@@ -847,13 +825,11 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mLockscreenUserManager = lockScreenUserManager;
         mRemoteInputManager = remoteInputManager;
         mUserSwitcherController = userSwitcherController;
-        mNetworkController = networkController;
         mBatteryController = batteryController;
         mColorExtractor = colorExtractor;
         mScreenLifecycle = screenLifecycle;
         mWakefulnessLifecycle = wakefulnessLifecycle;
         mStatusBarStateController = statusBarStateController;
-        mBubblesManagerOptional = bubblesManagerOptional;
         mBubblesOptional = bubblesOptional;
         mVisualStabilityManager = visualStabilityManager;
         mDeviceProvisionedController = deviceProvisionedController;
@@ -867,7 +843,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mDozeParameters = dozeParameters;
         mScrimController = scrimController;
         mLockscreenWallpaperLazy = lockscreenWallpaperLazy;
-        mLockscreenGestureLogger = lockscreenGestureLogger;
         mScreenPinningRequest = screenPinningRequest;
         mDozeScrimController = dozeScrimController;
         mBiometricUnlockControllerLazy = biometricUnlockControllerLazy;
@@ -894,7 +869,6 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mStatusBarHideIconsForBouncerManager = statusBarHideIconsForBouncerManager;
         mFeatureFlags = featureFlags;
         mKeyguardUnlockAnimationController = keyguardUnlockAnimationController;
-        mMainHandler = mainHandler;
         mMainExecutor = delayableExecutor;
         mMessageRouter = messageRouter;
         mWallpaperManager = wallpaperManager;
@@ -1523,12 +1497,16 @@ public class CentralSurfacesImpl extends CoreStartable implements
             mPowerManager.wakeUp(
                     time, PowerManager.WAKE_REASON_GESTURE, "com.android.systemui:" + why);
             mWakeUpComingFromTouch = true;
-            where.getLocationInWindow(mTmpInt2);
 
             // NOTE, the incoming view can sometimes be the entire container... unsure if
             // this location is valuable enough
-            mWakeUpTouchLocation = new PointF(mTmpInt2[0] + where.getWidth() / 2,
-                    mTmpInt2[1] + where.getHeight() / 2);
+            if (where != null) {
+                where.getLocationInWindow(mTmpInt2);
+                mWakeUpTouchLocation = new PointF(mTmpInt2[0] + where.getWidth() / 2,
+                        mTmpInt2[1] + where.getHeight() / 2);
+            } else {
+                mWakeUpTouchLocation = new PointF(-1, -1);
+            }
             mFalsingCollector.onScreenOnFromTouch();
         }
     }
@@ -2312,8 +2290,7 @@ public class CentralSurfacesImpl extends CoreStartable implements
     public void updateBubblesVisibility() {
         mBubblesOptional.ifPresent(bubbles -> bubbles.onStatusBarVisibilityChanged(
                 mStatusBarMode != MODE_LIGHTS_OUT
-                        && mStatusBarMode != MODE_LIGHTS_OUT_TRANSPARENT
-                        && !mStatusBarWindowHidden));
+                        && mStatusBarMode != MODE_LIGHTS_OUT_TRANSPARENT));
     }
 
     void checkBarMode(@TransitionMode int mode, @WindowVisibleState int windowState,
@@ -2555,6 +2532,12 @@ public class CentralSurfacesImpl extends CoreStartable implements
                     animate, intent.getPackage(), (adapter) -> {
                         ActivityOptions options = new ActivityOptions(
                                 CentralSurfaces.getActivityOptions(mDisplayId, adapter));
+
+                        // We know that the intent of the caller is to dismiss the keyguard and
+                        // this runnable is called right after the keyguard is solved, so we tell
+                        // WM that we should dismiss it to avoid flickers when opening an activity
+                        // that can also be shown over the keyguard.
+                        options.setDismissKeyguard();
                         options.setDisallowEnterPictureInPictureWhileLaunching(
                                 disallowEnterPictureInPictureWhileLaunching);
                         if (CameraIntents.isInsecureCameraIntent(intent)) {
@@ -3232,14 +3215,12 @@ public class CentralSurfacesImpl extends CoreStartable implements
 
     /**
      * Notifies the status bar the Keyguard is fading away with the specified timings.
-     *  @param startTime the start time of the animations in uptime millis
+     * @param startTime the start time of the animations in uptime millis
      * @param delay the precalculated animation delay in milliseconds
      * @param fadeoutDuration the duration of the exit animation, in milliseconds
-     * @param isBypassFading is this a fading away animation while bypassing
      */
     @Override
-    public void setKeyguardFadingAway(long startTime, long delay, long fadeoutDuration,
-            boolean isBypassFading) {
+    public void setKeyguardFadingAway(long startTime, long delay, long fadeoutDuration) {
         mCommandQueue.appTransitionStarting(mDisplayId, startTime + fadeoutDuration
                         - LightBarTransitionsController.DEFAULT_TINT_ANIMATION_DURATION,
                 LightBarTransitionsController.DEFAULT_TINT_ANIMATION_DURATION, true);
@@ -3247,7 +3228,7 @@ public class CentralSurfacesImpl extends CoreStartable implements
         mCommandQueue.appTransitionStarting(mDisplayId,
                     startTime - LightBarTransitionsController.DEFAULT_TINT_ANIMATION_DURATION,
                     LightBarTransitionsController.DEFAULT_TINT_ANIMATION_DURATION, true);
-        mKeyguardStateController.notifyKeyguardFadingAway(delay, fadeoutDuration, isBypassFading);
+        mKeyguardStateController.notifyKeyguardFadingAway(delay, fadeoutDuration);
     }
 
     /**
@@ -3598,6 +3579,9 @@ public class CentralSurfacesImpl extends CoreStartable implements
         setBouncerShowingForStatusBarComponents(bouncerShowing);
         mStatusBarHideIconsForBouncerManager.setBouncerShowingAndTriggerUpdate(bouncerShowing);
         mCommandQueue.recomputeDisableFlags(mDisplayId, true /* animate */);
+        if (mBouncerShowing) {
+            wakeUpIfDozing(SystemClock.uptimeMillis(), null, "BOUNCER_VISIBLE");
+        }
         updateScrimController();
         if (!mBouncerShowing) {
             updatePanelExpansionForKeyguard();
@@ -3964,7 +3948,8 @@ public class CentralSurfacesImpl extends CoreStartable implements
             mScrimController.transitionTo(ScrimState.AOD);
         } else if (mKeyguardStateController.isShowing() && !isOccluded() && !unlocking) {
             mScrimController.transitionTo(ScrimState.KEYGUARD);
-        } else if (mKeyguardStateController.isShowing() && mKeyguardUpdateMonitor.isDreaming()) {
+        } else if (mKeyguardStateController.isShowing() && mKeyguardUpdateMonitor.isDreaming()
+                && !unlocking) {
             mScrimController.transitionTo(ScrimState.DREAMING);
         } else {
             mScrimController.transitionTo(ScrimState.UNLOCKED, mUnlockScrimCallback);
