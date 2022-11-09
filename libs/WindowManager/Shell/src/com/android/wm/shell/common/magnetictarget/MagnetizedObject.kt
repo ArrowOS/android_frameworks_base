@@ -389,7 +389,7 @@ abstract class MagnetizedObject<T : Any>(
             magnetListener.onStuckToTarget(targetObjectIsInMagneticFieldOf!!)
             animateStuckToTarget(targetObjectIsInMagneticFieldOf, velX, velY, false, null)
 
-            vibrateIfEnabled(VibrationEffect.EFFECT_HEAVY_CLICK)
+            vibrateIfEnabled(VibrationEffect.EFFECT_THUD)
         } else if (targetObjectIsInMagneticFieldOf == null && objectStuckToTarget) {
             velocityTracker.computeCurrentVelocity(1000)
 
@@ -425,7 +425,7 @@ abstract class MagnetizedObject<T : Any>(
                 } else {
                     // If the object is stuck and not flung away, it was released inside the target.
                     magnetListener.onReleasedInTarget(targetObjectIsStuckTo!!)
-                    vibrateIfEnabled(VibrationEffect.EFFECT_HEAVY_CLICK)
+                    vibrateIfEnabled(VibrationEffect.EFFECT_THUD)
                 }
 
                 // Either way, we're no longer stuck.
@@ -447,7 +447,7 @@ abstract class MagnetizedObject<T : Any>(
                 animateStuckToTarget(flungToTarget, velX, velY, true) {
                     magnetListener.onReleasedInTarget(flungToTarget)
                     targetObjectIsStuckTo = null
-                    vibrateIfEnabled(VibrationEffect.EFFECT_HEAVY_CLICK)
+                    vibrateIfEnabled(VibrationEffect.EFFECT_THUD)
                 }
 
                 return true

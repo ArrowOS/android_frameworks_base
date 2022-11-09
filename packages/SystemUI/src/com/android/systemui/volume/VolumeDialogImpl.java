@@ -1691,7 +1691,7 @@ public class VolumeDialogImpl implements VolumeDialog,
                 && mState.ringerModeInternal != -1
                 && mState.ringerModeInternal != state.ringerModeInternal
                 && state.ringerModeInternal == AudioManager.RINGER_MODE_VIBRATE) {
-            mController.vibrate(VibrationEffect.get(VibrationEffect.EFFECT_HEAVY_CLICK));
+            mController.vibrate(VibrationEffect.get(VibrationEffect.EFFECT_THUD));
         }
 
         mState = state;

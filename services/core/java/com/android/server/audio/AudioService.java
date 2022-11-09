@@ -4687,7 +4687,7 @@ public class AudioService extends IAudioService.Stub
                 toastText = com.android.internal.R.string.volume_dialog_ringer_guidance_silent;
                 break;
             case VOLUME_HUSH_VIBRATE:
-                effect = VibrationEffect.get(VibrationEffect.EFFECT_HEAVY_CLICK);
+                effect = VibrationEffect.get(VibrationEffect.EFFECT_THUD);
                 ringerMode = AudioManager.RINGER_MODE_VIBRATE;
                 toastText = com.android.internal.R.string.volume_dialog_ringer_guidance_vibrate;
                 break;
