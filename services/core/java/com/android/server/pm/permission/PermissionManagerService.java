@@ -2785,7 +2785,7 @@ public class PermissionManagerService extends IPermissionManager.Stub {
                                     getSplitPermissions();
                             int numSplitPerms = permissionList.size();
                             for (int splitPermNum = 0; splitPermNum < numSplitPerms;
-                                    splitPermNum++) {
+                                 splitPermNum++) {
                                 SplitPermissionInfoParcelable sp = permissionList.get(splitPermNum);
                                 String splitPermName = sp.getSplitPermission();
                                 if (sp.getNewPermissions().contains(permName)
@@ -2793,10 +2793,11 @@ public class PermissionManagerService extends IPermissionManager.Stub {
                                     upgradedActivityRecognitionPermission = splitPermName;
                                     newImplicitPermissions.add(permName);
 
-                                if (DEBUG_PERMISSIONS) {
-                                    Slog.i(TAG, permName + " is newly added for " + friendlyName);
+                                    if (DEBUG_PERMISSIONS) {
+                                        Slog.i(TAG, permName + " is newly added for " + friendlyName);
+                                    }
+                                    break;
                                 }
-                                break;
                             }
                         }
                     }
