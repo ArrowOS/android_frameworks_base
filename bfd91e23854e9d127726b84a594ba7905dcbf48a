@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "905bf10f_722b9d04",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 279
+      },
+      "writtenOn": "2022-11-24T06:35:53Z",
+      "side": 1,
+      "message": "https://review.arrowos.net/c/ArrowOS/android_frameworks_base/+/19054",
+      "revId": "bfd91e23854e9d127726b84a594ba7905dcbf48a",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
