@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2ea7407a_eb2f4efb",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2022-12-06T04:03:50Z",
+      "side": 1,
+      "message": "Fixes navbar orientation in landscape",
+      "revId": "1647fce70cc87d05efa8c21bd8cab866ddbed814",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
