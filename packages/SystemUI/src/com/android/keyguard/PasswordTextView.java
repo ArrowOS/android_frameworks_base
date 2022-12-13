@@ -102,23 +102,14 @@ public class PasswordTextView extends View {
     private Interpolator mFastOutSlowInInterpolator;
     private boolean mShowPassword;
     private UserActivityListener mUserActivityListener;
-    protected QuickUnlockListener mQuickUnlockListener;
+    private TextChangeListener mTextChangeListener;
 
     public interface UserActivityListener {
         void onUserActivity();
     }
 
-    /* Quick unlock management for PIN view. */
-    public interface QuickUnlockListener {
-        /**
-         * Validate current password and prepare callback if verified.
-         * @param password The password string to be verified.
-         */
-        void onValidateQuickUnlock(String password);
-    }
-
-    public void setQuickUnlockListener(QuickUnlockListener listener) {
-        mQuickUnlockListener = listener;
+    public interface TextChangeListener {
+        void onTextChanged(int textLength);
     }
 
     public PasswordTextView(Context context) {
@@ -280,13 +271,17 @@ public class PasswordTextView extends View {
         userActivity();
         sendAccessibilityEventTypeViewTextChanged(textbefore, textbefore.length(), 0, 1);
 
-        if (mQuickUnlockListener != null) {
-            mQuickUnlockListener.onValidateQuickUnlock(mText);
+        if (mTextChangeListener != null) {
+            mTextChangeListener.onTextChanged(newLength);
         }
     }
 
     public void setUserActivityListener(UserActivityListener userActivitiListener) {
         mUserActivityListener = userActivitiListener;
+    }
+
+    public void setTextChangeListener(TextChangeListener listener) {
+        mTextChangeListener = listener;
     }
 
     private void userActivity() {
@@ -304,11 +299,12 @@ public class PasswordTextView extends View {
             CharState charState = mTextChars.get(length - 1);
             charState.startRemoveAnimation(0, 0);
             sendAccessibilityEventTypeViewTextChanged(textbefore, textbefore.length() - 1, 1, 0);
+
+            if (mTextChangeListener != null) {
+                mTextChangeListener.onTextChanged(length - 1);
+            }
         }
         userActivity();
-        if (mQuickUnlockListener != null) {
-            mQuickUnlockListener.onValidateQuickUnlock(mText);
-        }
     }
 
     public String getText() {
@@ -374,8 +370,9 @@ public class PasswordTextView extends View {
         if (announce) {
             sendAccessibilityEventTypeViewTextChanged(textbefore, 0, textbefore.length(), 0);
         }
-        if (mQuickUnlockListener != null) {
-            mQuickUnlockListener.onValidateQuickUnlock(mText);
+
+        if (mTextChangeListener != null) {
+            mTextChangeListener.onTextChanged(0);
         }
     }
 

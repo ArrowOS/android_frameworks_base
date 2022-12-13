@@ -16,6 +16,7 @@
 
 package com.android.keyguard;
 
+import android.annotation.CallSuper;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -33,6 +34,7 @@ public abstract class KeyguardPinBasedInputViewController<T extends KeyguardPinB
 
     private final LiftToActivateListener mLiftToActivateListener;
     private final FalsingCollector mFalsingCollector;
+    private boolean mIsDeleteButtonVisible = false;
     protected PasswordTextView mPasswordEntry;
 
     private final OnKeyListener mOnKeyListener = (v, keyCode, event) -> {
@@ -81,6 +83,7 @@ public abstract class KeyguardPinBasedInputViewController<T extends KeyguardPinB
         }
         mPasswordEntry.setOnKeyListener(mOnKeyListener);
         mPasswordEntry.setUserActivityListener(this::onUserInput);
+        mPasswordEntry.setTextChangeListener(this::onTextChanged);
 
         View deleteButton = mView.findViewById(R.id.delete_button);
         deleteButton.setOnTouchListener(mActionButtonTouchListener);
@@ -120,6 +123,15 @@ public abstract class KeyguardPinBasedInputViewController<T extends KeyguardPinB
 
         for (NumPadKey button: mView.getButtons()) {
             button.setOnTouchListener(null);
+        }
+    }
+
+    @CallSuper
+    protected void onTextChanged(int textLength) {
+        final boolean shouldDeleteButtonBeVisible = textLength > 0;
+        if (shouldDeleteButtonBeVisible != mIsDeleteButtonVisible) {
+            mIsDeleteButtonVisible = shouldDeleteButtonBeVisible;
+            mView.showDeleteButton(shouldDeleteButtonBeVisible);
         }
     }
 
