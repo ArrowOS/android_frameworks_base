@@ -37,6 +37,6 @@
     <string name="reboot_message">Rebooting system</string>
 
     <!-- Parallel space badge -->
-    <string name="parallel_space_badge_label">%1$s</string>
+    <string name="parallel_space_badge_label" translatable="false">%1$s</string>
 
 </resources>
