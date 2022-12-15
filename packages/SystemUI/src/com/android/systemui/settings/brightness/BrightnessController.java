@@ -42,14 +42,11 @@ import android.service.vr.IVrManager;
 import android.service.vr.IVrStateCallbacks;
 import android.util.Log;
 import android.util.MathUtils;
-import android.view.View;
-import android.widget.ImageView;
 
 import com.android.internal.display.BrightnessSynchronizer;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settingslib.RestrictedLockUtilsInternal;
-import com.android.systemui.R;
 import com.android.systemui.dagger.qualifiers.Background;
 import com.android.systemui.dagger.qualifiers.Main;
 import com.android.systemui.settings.UserTracker;
@@ -63,7 +60,7 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
     private static final String TAG = "CentralSurfaces.BrightnessController";
     private static final int SLIDER_ANIMATION_DURATION = 3000;
 
-    private static final int MSG_UPDATE_ICON = 0;
+    private static final int MSG_UPDATE_TOGGLE = 0;
     private static final int MSG_UPDATE_SLIDER = 1;
     private static final int MSG_ATTACH_LISTENER = 2;
     private static final int MSG_DETACH_LISTENER = 3;
@@ -76,9 +73,6 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
 
     private final float mMinimumBacklightForVr;
     private final float mMaximumBacklightForVr;
-
-    private final ImageView mIcon;
-    private boolean mAutomaticAvailable;
 
     private final int mDisplayId;
     private final Context mContext;
@@ -227,7 +221,7 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
                     Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL,
                     UserHandle.USER_CURRENT);
             mAutomatic = automatic != Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL;
-            mHandler.obtainMessage(MSG_UPDATE_ICON, mAutomatic ? 1 : 0).sendToTarget();
+            mHandler.obtainMessage(MSG_UPDATE_TOGGLE, automatic).sendToTarget();
         }
     };
 
@@ -266,8 +260,9 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
             mExternalChange = true;
             try {
                 switch (msg.what) {
-                    case MSG_UPDATE_ICON:
-                        updateIcon(mAutomatic);
+                    case MSG_UPDATE_TOGGLE:
+                        mControl.setToggleValue(
+                                (int) msg.obj != Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
                         break;
                     case MSG_UPDATE_SLIDER:
                         updateSlider(Float.intBitsToFloat(msg.arg1), msg.arg2 != 0);
@@ -301,13 +296,11 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
 
     public BrightnessController(
             Context context,
-            ImageView icon,
             ToggleSlider control,
             UserTracker userTracker,
             @Main Executor mainExecutor,
             @Background Handler bgHandler) {
         mContext = context;
-        mIcon = icon;
         mControl = control;
         mControl.setMax(GAMMA_SPACE_MAX);
         mMainExecutor = mainExecutor;
@@ -325,26 +318,6 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
         mDisplayManager = context.getSystemService(DisplayManager.class);
         mVrManager = IVrManager.Stub.asInterface(ServiceManager.getService(
                 Context.VR_SERVICE));
-        mAutomaticAvailable = context.getResources().getBoolean(
-                com.android.internal.R.bool.config_automatic_brightness_available);
-
-        if (mIcon != null) {
-            if (mAutomaticAvailable) {
-                mIcon.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int newMode = mAutomatic ? Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL : Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
-                        setMode(newMode);
-                    }
-                });
-            }
-        }
-    }
-
-    private void setMode(int mode) {
-        Settings.System.putIntForUser(mContext.getContentResolver(),
-                Settings.System.SCREEN_BRIGHTNESS_MODE, mode,
-                mUserTracker.getUserId());
     }
 
     public void registerCallbacks() {
@@ -399,6 +372,15 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
         }
     }
 
+    @Override
+    public void onCheckedChanged(boolean isChecked) {
+        final int mode = mAutomatic ? Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL
+                : Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
+        Settings.System.putIntForUser(mContext.getContentResolver(),
+                Settings.System.SCREEN_BRIGHTNESS_MODE, mode,
+                mUserTracker.getUserId());
+    }
+
     public void checkRestrictionAndSetEnabled() {
         mBackgroundHandler.post(new Runnable() {
             @Override
@@ -421,17 +403,6 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
 
     private void setBrightness(float brightness) {
         mDisplayManager.setTemporaryBrightness(mDisplayId, brightness);
-    }
-
-    private void updateIcon(boolean automatic) {
-        if (mIcon != null) {
-            mIcon.setImageResource(automatic ?
-                    R.drawable.ic_qs_brightness_auto_on :
-                    R.drawable.ic_qs_brightness_auto_off);
-            mIcon.setBackgroundResource(automatic ?
-                    R.drawable.bg_qs_brightness_auto_on :
-                    R.drawable.bg_qs_brightness_auto_off);
-        }
     }
 
     private void updateVrMode(boolean isEnabled) {
@@ -510,10 +481,9 @@ public class BrightnessController implements ToggleSlider.Listener, MirroredBrig
         }
 
         /** Create a {@link BrightnessController} */
-        public BrightnessController create(ImageView icon, ToggleSlider toggleSlider) {
+        public BrightnessController create(ToggleSlider toggleSlider) {
             return new BrightnessController(
                     mContext,
-                    icon,
                     toggleSlider,
                     mUserTracker,
                     mMainExecutor,

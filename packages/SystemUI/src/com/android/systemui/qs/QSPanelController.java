@@ -93,8 +93,7 @@ public class QSPanelController extends QSPanelControllerBase<QSPanel> {
         mBrightnessSliderController = brightnessSliderFactory.create(getContext(), mView);
         mView.setBrightnessView(mBrightnessSliderController.getRootView());
 
-        mBrightnessController = brightnessControllerFactory.create(
-                mBrightnessSliderController.getIconView(), mBrightnessSliderController);
+        mBrightnessController = brightnessControllerFactory.create(mBrightnessSliderController);
         mBrightnessMirrorHandler = new BrightnessMirrorHandler(mBrightnessController);
         mStatusBarKeyguardViewManager = statusBarKeyguardViewManager;
         mView.setUsingCombinedHeaders(featureFlags.isEnabled(COMBINED_QS_HEADERS));
