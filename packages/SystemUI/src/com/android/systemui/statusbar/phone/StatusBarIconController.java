@@ -186,10 +186,8 @@ public interface StatusBarIconController {
 
         @Override
         public void onSetIcon(int viewIndex, StatusBarIcon icon) {
-            View view = mGroup.getChildAt(viewIndex);
-            if (view instanceof StatusBarIconView) {
-                ((StatusBarIconView) view).set(icon);
-            }
+            StatusBarIconView view = (StatusBarIconView) mGroup.getChildAt(viewIndex);
+            view.set(icon);
         }
 
         @Override
