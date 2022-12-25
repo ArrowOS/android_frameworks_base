@@ -34,4 +34,8 @@
     <!-- Bluetooth dialog -->
     <dimen name="bluetooth_dialog_active_device_bottom_margin">4dp</dimen>
 
+    <!-- Auth ripple animation duration
+         AOSP default is 1533 -->
+    <item name="auth_ripple_animation_duration" format="float" type="dimen">766.5</item>
+    
 </resources>
