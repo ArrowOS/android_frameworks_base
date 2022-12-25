@@ -132,7 +132,13 @@ class NotificationsQSContainerController @Inject constructor(
         topMargin = if (largeScreenShadeHeaderActive) {
             largeScreenShadeHeaderHeight
         } else {
-            resources.getDimensionPixelSize(R.dimen.notification_panel_margin_top)
+            resources.getDimensionPixelSize(
+                if (useCombinedQSHeaders) {
+                    R.dimen.notification_panel_margin_top_combined_headers
+                } else {
+                    R.dimen.notification_panel_margin_top
+                }
+            )
         }
         updateConstraints()
 

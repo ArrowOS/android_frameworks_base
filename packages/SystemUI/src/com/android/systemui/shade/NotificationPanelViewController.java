@@ -640,6 +640,7 @@ public final class NotificationPanelViewController extends PanelViewController {
     private int mScreenCornerRadius;
     private boolean mQSAnimatingHiddenFromCollapsed;
     private boolean mUseLargeScreenShadeHeader;
+    private boolean mUseCombinedQSHeaders;
 
     private int mQsClipTop;
     private int mQsClipBottom;
@@ -1150,13 +1151,16 @@ public final class NotificationPanelViewController extends PanelViewController {
 
         mUseLargeScreenShadeHeader =
                 LargeScreenUtils.shouldUseLargeScreenShadeHeader(mView.getResources());
+        mUseCombinedQSHeaders = mFeatureFlags.isEnabled(Flags.COMBINED_QS_HEADERS);
 
         mLargeScreenShadeHeaderHeight =
                 mResources.getDimensionPixelSize(R.dimen.large_screen_shade_header_height);
         mQuickQsHeaderHeight = mUseLargeScreenShadeHeader ? mLargeScreenShadeHeaderHeight :
                 SystemBarUtils.getQuickQsOffsetHeight(mView.getContext());
         int topMargin = mUseLargeScreenShadeHeader ? mLargeScreenShadeHeaderHeight :
-                mResources.getDimensionPixelSize(R.dimen.notification_panel_margin_top);
+                mResources.getDimensionPixelSize(mUseCombinedQSHeaders
+                        ? R.dimen.notification_panel_margin_top_combined_headers
+                        : R.dimen.notification_panel_margin_top);
         mLargeScreenShadeHeaderController.setLargeScreenActive(mUseLargeScreenShadeHeader);
         mAmbientState.setStackTopMargin(topMargin);
         mNotificationsQSContainerController.updateResources();
