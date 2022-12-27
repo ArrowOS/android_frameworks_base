@@ -257,13 +257,11 @@ public class EditUserPhotoController {
             if (startSystemActivityForResult(intent, REQUEST_CODE_CROP_PHOTO)) {
                 return;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         } finally {
             StrictMode.enableDeathOnFileUriExposure();
         }
 
-        onPhotoNotCropped(pictureUri);
+        onPhotoNotCropped(mTakePictureUri);
 
     }
 
