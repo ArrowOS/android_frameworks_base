@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "42e6a235_2612a192",
+        "filename": "core/java/android/hardware/camera2/impl/CaptureResultExtras.java",
+        "patchSetId": 3
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 258
+      },
+      "writtenOn": "2023-01-20T05:34:16Z",
+      "side": 0,
+      "message": "Need to revert cc0a382dc2189ff0580a70ae8669b365dca97157",
+      "revId": "044c5f2f4b17562c3a4a125bfed397cce21d89d3",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
