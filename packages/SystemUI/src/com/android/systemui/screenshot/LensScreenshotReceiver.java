@@ -30,7 +30,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.Toast;
 
-import com.android.internal.util.evolution.EvolutionUtils;
+import com.android.internal.util.arrow.ArrowUtils;
 
 import com.android.systemui.R;
 import com.android.systemui.dagger.qualifiers.Background;
@@ -57,7 +57,7 @@ public class LensScreenshotReceiver extends BroadcastReceiver {
     }
 
     private boolean doesGoogleEnabled(Context context) {
-        return EvolutionUtils.isPackageInstalled(context, GSA_PACKAGE, false /* ignoreState */);
+        return ArrowUtils.isPackageInstalled(context, GSA_PACKAGE, false /* ignoreState */);
     }
 
     @Override
