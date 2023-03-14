@@ -628,7 +628,7 @@ public class AuthService extends SystemService {
     public void onStart() {
         mBiometricService = mInjector.getBiometricService();
 
-        final SensorConfig[] hidlConfigs;
+        SensorConfig[] hidlConfigs;
         if (!mInjector.isHidlDisabled(getContext())) {
             final int firstApiLevel = SystemProperties.getInt(SYSPROP_FIRST_API_LEVEL, 0);
             final int apiLevel = SystemProperties.getInt(SYSPROP_API_LEVEL, firstApiLevel);
@@ -640,9 +640,28 @@ public class AuthService extends SystemService {
                 Slog.w(TAG, "Found R vendor partition without config_biometric_sensors");
                 configStrings = generateRSdkCompatibleConfiguration();
             }
+            final PackageManager pm = getContext().getPackageManager();
+            boolean hasFace = false;
             hidlConfigs = new SensorConfig[configStrings.length];
             for (int i = 0; i < configStrings.length; ++i) {
                 hidlConfigs[i] = new SensorConfig(configStrings[i]);
+            }
+            if (pm.hasSystemFeature(PackageManager.FEATURE_FACE)) {
+                for (SensorConfig sensor : hidlConfigs) {
+                    if (sensor.modality == TYPE_FACE)
+                        hasFace = true;
+                }
+                if (!hasFace) {
+                    final SensorConfig[] hidlConfigsOld = hidlConfigs;
+                    hidlConfigs = new SensorConfig[hidlConfigsOld.length + 1];
+                    for (int i = 0; i < configStrings.length; ++i) {
+                        hidlConfigs[i] = hidlConfigsOld[i];
+                    }
+                    hidlConfigs[hidlConfigsOld.length] = new SensorConfig(
+                        String.join(":", String.valueOf(hidlConfigsOld.length > 0 ?
+                        hidlConfigs[hidlConfigsOld.length - 1].id + 1 : 0),
+                        String.valueOf(TYPE_FACE), String.valueOf(Authenticators.BIOMETRIC_STRONG)));
+                }
             }
         } else {
             hidlConfigs = null;

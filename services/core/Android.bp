@@ -179,6 +179,7 @@ java_library_static {
         "kotlin-stdlib",
         "kotlinx_coroutines_android",
         "kotlinx_coroutines",
+        "LMOFaceServer",
     ],
     javac_shard_size: 50,
 }
