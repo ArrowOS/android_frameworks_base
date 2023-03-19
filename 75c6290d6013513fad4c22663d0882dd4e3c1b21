@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa448bc0_041881ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2023-03-19T14:30:20Z",
+      "side": 1,
+      "message": "Try to use libperfmgr from pixels instead.",
+      "revId": "75c6290d6013513fad4c22663d0882dd4e3c1b21",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
