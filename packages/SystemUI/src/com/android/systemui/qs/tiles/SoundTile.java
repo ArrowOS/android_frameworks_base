@@ -42,12 +42,15 @@ import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.qs.QSHost;
 import com.android.systemui.qs.logging.QSLogger;
 import com.android.systemui.qs.tileimpl.QSTileImpl;
+import com.android.systemui.volume.VolumePanelFactory;
 
 import javax.inject.Inject;
 
 public class SoundTile extends QSTileImpl<BooleanState> {
 
     private final AudioManager mAudioManager;
+    private final Handler mHandler;
+    private final VolumePanelFactory mVolumePanelFactory;
 
     private boolean mListening = false;
 
@@ -63,11 +66,14 @@ public class SoundTile extends QSTileImpl<BooleanState> {
             MetricsLogger metricsLogger,
             StatusBarStateController statusBarStateController,
             ActivityStarter activityStarter,
-            QSLogger qsLogger
+            QSLogger qsLogger,
+            VolumePanelFactory volumePanelFactory
     ) {
         super(host, backgroundLooper, mainHandler, falsingManager, metricsLogger,
                 statusBarStateController, activityStarter, qsLogger);
         mAudioManager = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        mHandler = mainHandler;
+        mVolumePanelFactory = volumePanelFactory;
         mReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -116,8 +122,13 @@ public class SoundTile extends QSTileImpl<BooleanState> {
     }
 
     @Override
+    protected void handleLongClick(@Nullable View view) {
+        mHandler.post(() -> mVolumePanelFactory.create(true, view));
+    }
+
+    @Override
     public Intent getLongClickIntent() {
-        return new Intent(Settings.ACTION_SOUND_SETTINGS);
+        return null;
     }
 
     @Override
