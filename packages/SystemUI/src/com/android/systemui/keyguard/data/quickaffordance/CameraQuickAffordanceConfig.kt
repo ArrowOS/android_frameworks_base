@@ -46,7 +46,7 @@ constructor(
         get() = context.getString(R.string.accessibility_camera_button)
 
     override val pickerIconResourceId: Int
-        get() = com.android.internal.R.drawable.perm_group_camera
+        get() = com.android.internal.R.drawable.ic_camera
 
     override val lockScreenState: Flow<KeyguardQuickAffordanceConfig.LockScreenState>
         get() =
