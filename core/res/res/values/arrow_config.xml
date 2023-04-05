@@ -112,4 +112,8 @@
          to disable DC dimming -->
     <string name="config_deviceDcDimmingDisableValue">0</string>
 
+    <!-- InputFilter Class-->
+    <string name="config_deviceInputFilterLibs" translatable="false"></string>
+    <string name="config_deviceInputFilterClasses" translatable="false"></string>
+
 </resources>
