@@ -33,6 +33,24 @@
       "message": "What\u0027s the point of this, wouldn\u0027t it just force every 4g network to show 4g+",
       "revId": "d593a0969251ec96d4c22f72d983db9b73fd9f9e",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "73cf85d0_c965c096",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2023-04-05T13:57:38Z",
+      "side": 1,
+      "message": "Nah, it just bypasses the radio interface checks for LTE_CA. Confirmed if LTE_CA actually works using Netmonster. (2CA works in Realme C3 which had 4G+ locked by OEM. 4CA works in Realme C11 which also had 4G+ locked by OEM. Also tested in 10.or G with msm8953 which had 4G+ locked in modem.)",
+      "parentUuid": "fc2433ef_91238a9e",
+      "revId": "d593a0969251ec96d4c22f72d983db9b73fd9f9e",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
