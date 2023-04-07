@@ -907,9 +907,9 @@ public class Resources {
     public Drawable getDrawable(@DrawableRes int id) throws NotFoundException {
         final Drawable d = getDrawable(id, null);
         if (d != null && d.canApplyTheme()) {
-            Log.w(TAG, "Drawable " + getResourceName(id) + " has unresolved theme "
-                    + "attributes! Consider using Resources.getDrawable(int, Theme) or "
-                    + "Context.getDrawable(int).", new RuntimeException());
+            //Log.w(TAG, "Drawable " + getResourceName(id) + " has unresolved theme "
+            //        + "attributes! Consider using Resources.getDrawable(int, Theme) or "
+            //        + "Context.getDrawable(int).", new RuntimeException());
         }
         return d;
     }
@@ -1105,10 +1105,10 @@ public class Resources {
     public ColorStateList getColorStateList(@ColorRes int id) throws NotFoundException {
         final ColorStateList csl = getColorStateList(id, null);
         if (csl != null && csl.canApplyTheme()) {
-            Log.w(TAG, "ColorStateList " + getResourceName(id) + " has "
-                    + "unresolved theme attributes! Consider using "
-                    + "Resources.getColorStateList(int, Theme) or "
-                    + "Context.getColorStateList(int).", new RuntimeException());
+            //Log.w(TAG, "ColorStateList " + getResourceName(id) + " has "
+            //        + "unresolved theme attributes! Consider using "
+            //        + "Resources.getColorStateList(int, Theme) or "
+            //        + "Context.getColorStateList(int).", new RuntimeException());
         }
         return csl;
     }
