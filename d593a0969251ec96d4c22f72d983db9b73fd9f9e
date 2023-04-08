@@ -69,6 +69,24 @@
       "parentUuid": "73cf85d0_c965c096",
       "revId": "d593a0969251ec96d4c22f72d983db9b73fd9f9e",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "79f927d7_3726c7f4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2023-04-08T13:18:07Z",
+      "side": 1,
+      "message": "Well, it comes with a unintended bug, if the network is not in CA, the LTE+/4G+ icon still shows up.. so guys who don\u0027t usually get LTE_CA can just disable it. We are just forcing to use LTE_CA using the toggle.",
+      "parentUuid": "4b227bd6_caa80fb7",
+      "revId": "d593a0969251ec96d4c22f72d983db9b73fd9f9e",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
