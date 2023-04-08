@@ -51,6 +51,24 @@
       "parentUuid": "fc2433ef_91238a9e",
       "revId": "d593a0969251ec96d4c22f72d983db9b73fd9f9e",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b227bd6_caa80fb7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2023-04-08T02:52:10Z",
+      "side": 1,
+      "message": "Alright then, but I don\u0027t see the need for a settings toggle here if it works as intended",
+      "parentUuid": "73cf85d0_c965c096",
+      "revId": "d593a0969251ec96d4c22f72d983db9b73fd9f9e",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
