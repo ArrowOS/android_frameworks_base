@@ -48,6 +48,7 @@ public class PropImitationHooks {
     private static final String PACKAGE_GMS = "com.google.android.gms";
     private static final String PROCESS_GMS_UNSTABLE = PACKAGE_GMS + ".unstable";
     private static final String PACKAGE_GPHOTOS = "com.google.android.apps.photos";
+    private static final String PACKAGE_SNAPCHAT = "com.snapchat.android";
 
     private static final Map<String, Object> sPixelXLProps = Map.of(
         "BRAND", "google",
@@ -86,8 +87,9 @@ public class PropImitationHooks {
         } else if (!sStockFp.isEmpty() && packageName.equals(PACKAGE_ARCORE)) {
             dlog("Setting stock fingerprint for: " + packageName);
             setPropValue("FINGERPRINT", sStockFp);
-        } else if (sSpoofPhotos && packageName.equals(PACKAGE_GPHOTOS)) {
-            dlog("Spoofing Pixel XL for Google Photos");
+        } else if ((sSpoofPhotos && packageName.equals(PACKAGE_GPHOTOS))
+                || packageName.equals(PACKAGE_SNAPCHAT)) {
+            dlog("Spoofing Pixel XL for: " + packageName);
             sPixelXLProps.forEach((PropImitationHooks::setPropValue));
         }
     }
