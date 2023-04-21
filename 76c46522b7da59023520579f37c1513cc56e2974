@@ -16,6 +16,23 @@
       "message": "penrose is BlackShark 4.",
       "revId": "76c46522b7da59023520579f37c1513cc56e2974",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71d4eace_579bf7e3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2023-04-21T18:20:08Z",
+      "side": 1,
+      "message": "move to arrow_config and arrow_symbol, similar to keyhandler lib",
+      "revId": "76c46522b7da59023520579f37c1513cc56e2974",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
