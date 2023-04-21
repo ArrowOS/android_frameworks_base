@@ -33,6 +33,24 @@
       "message": "move to arrow_config and arrow_symbol, similar to keyhandler lib",
       "revId": "76c46522b7da59023520579f37c1513cc56e2974",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6221f2fe_ec5cb554",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 408
+      },
+      "writtenOn": "2023-04-21T19:06:30Z",
+      "side": 1,
+      "message": "Done. Please review again.",
+      "parentUuid": "71d4eace_579bf7e3",
+      "revId": "76c46522b7da59023520579f37c1513cc56e2974",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
