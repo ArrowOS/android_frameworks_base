@@ -20,9 +20,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Background protection -->
+    <ImageView
+        android:id="@+id/udfps_keyguard_fp_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fingerprint_bg"/>
+
     <!-- Fingerprint -->
     <ImageView
         android:id="@+id/udfps_fpm_other_fp_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:tint="?android:attr/textColorPrimary"/>
 </com.android.systemui.biometrics.UdfpsFpmOtherView>

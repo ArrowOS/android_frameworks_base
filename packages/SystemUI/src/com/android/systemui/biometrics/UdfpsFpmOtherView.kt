@@ -16,8 +16,12 @@
 package com.android.systemui.biometrics
 
 import android.content.Context
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.util.AttributeSet
 import android.widget.ImageView
+
+import com.android.settingslib.Utils;
 import com.android.systemui.R
 
 /**
@@ -34,6 +38,8 @@ class UdfpsFpmOtherView(
     override fun onFinishInflate() {
         fingerprintView = findViewById(R.id.udfps_fpm_other_fp_view)!!
         fingerprintView.setImageDrawable(fingerprintDrawable)
+        fingerprintView.setColorFilter(PorterDuffColorFilter(Utils.getColorAttrDefaultColor(
+                mContext, android.R.attr.textColorPrimary), PorterDuff.Mode.SRC_ATOP))
     }
 
     override fun getDrawable(): UdfpsDrawable = fingerprintDrawable
