@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0658e78_924ed155",
+        "filename": "services/core/java/com/android/server/power/PowerOffAlarmService.java",
+        "patchSetId": 2
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-11T09:50:51Z",
+      "side": 0,
+      "message": "as you can clearly see here it checks for the app existence. Even tho it doesn\u0027t really have to - as nothing would receive the intent if the app isn\u0027t there....",
+      "revId": "4b6762fcb586397ffd2ff28892d44ef6c8c7f271",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
