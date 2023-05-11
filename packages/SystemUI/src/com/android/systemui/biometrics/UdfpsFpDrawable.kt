@@ -17,7 +17,6 @@ package com.android.systemui.biometrics
 
 import android.content.Context
 import android.graphics.Canvas
-import android.graphics.ColorFilter
 
 /**
  * Draws udfps fingerprint if sensor isn't illuminating.
@@ -28,9 +27,5 @@ class UdfpsFpDrawable(context: Context) : UdfpsDrawable(context) {
             return
         }
         fingerprintDrawable.draw(canvas)
-    }
-
-    override fun setColorFilter(colorFilter: ColorFilter?) {
-        fingerprintDrawable.colorFilter = colorFilter
     }
 }
