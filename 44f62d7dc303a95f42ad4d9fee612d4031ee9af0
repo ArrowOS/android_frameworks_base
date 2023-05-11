@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3acbe2a6_e5eb99b3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 667
+      },
+      "writtenOn": "2023-05-11T09:46:33Z",
+      "side": 1,
+      "message": "If PowerOffAlram is broken on your device - Why would you include the PowerOffAlarm qcom app?? The reboot is NOT caused by this service. It\u0027s caused by a firmware side bug on *your* device. No reason to revert for everyone - just stop including broken things.",
+      "revId": "44f62d7dc303a95f42ad4d9fee612d4031ee9af0",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
