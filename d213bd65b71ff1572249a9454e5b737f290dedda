@@ -34,6 +34,24 @@
       "parentUuid": "f6793e7a_b103501e",
       "revId": "d213bd65b71ff1572249a9454e5b737f290dedda",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5934d523_b8c1e6c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2023-05-21T15:37:34Z",
+      "side": 1,
+      "message": "since this is already somewhat widely used, lets not unnecessarily break devices",
+      "parentUuid": "3d9fe8e4_014179a0",
+      "revId": "d213bd65b71ff1572249a9454e5b737f290dedda",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
