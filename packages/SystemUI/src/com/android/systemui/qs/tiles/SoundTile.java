@@ -117,7 +117,7 @@ public class SoundTile extends QSTileImpl<BooleanState> {
 
     @Override
     public Intent getLongClickIntent() {
-        return new Intent(Settings.ACTION_SOUND_SETTINGS);
+        return new Intent(Settings.Panel.ACTION_VOLUME);
     }
 
     @Override
