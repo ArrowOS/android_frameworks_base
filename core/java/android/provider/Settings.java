@@ -5707,6 +5707,12 @@ public final class Settings {
          */
         public static final String WAKE_WHEN_PLUGGED_OR_UNPLUGGED = "wake_when_plugged_or_unplugged";
 
+        /**
+         * Whether to enable smart 5G mode
+         * @hide
+         */
+        public static final String SMART_5G = "smart_5g";
+
        /**
          * These are all public system settings
          *
