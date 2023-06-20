@@ -84,6 +84,16 @@
         android:icon="@drawable/ic_statusbar_roaming" />
 
     <com.android.systemui.tuner.StatusBarSwitch
+        android:key="hd_calling"
+        android:title="@string/status_bar_hd_calling"
+        android:icon="@drawable/ic_statusbar_hd_calling" />
+
+    <com.android.systemui.tuner.StatusBarSwitch
+        android:key="vowifi"
+        android:title="@string/status_bar_vowifi"
+        android:icon="@drawable/ic_statusbar_vowifi" />
+
+    <com.android.systemui.tuner.StatusBarSwitch
         android:key="vpn"
         android:title="@string/status_bar_vpn"
         android:icon="@drawable/ic_statusbar_vpn" />
