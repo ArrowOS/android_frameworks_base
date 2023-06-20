@@ -17,19 +17,13 @@
 package android.hardware;
 
 import static android.system.OsConstants.EACCES;
-import static android.system.OsConstants.EBUSY;
-import static android.system.OsConstants.EINVAL;
 import static android.system.OsConstants.ENODEV;
-import static android.system.OsConstants.ENOSYS;
-import static android.system.OsConstants.EOPNOTSUPP;
-import static android.system.OsConstants.EUSERS;
 
 import android.annotation.Nullable;
 import android.annotation.SdkConstant;
 import android.annotation.SdkConstant.SdkConstantType;
 import android.app.ActivityThread;
 import android.app.AppOpsManager;
-import android.app.compat.CompatChanges;
 import android.compat.annotation.UnsupportedAppUsage;
 import android.content.Context;
 import android.graphics.ImageFormat;
@@ -58,6 +52,7 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 
+import com.android.internal.R;
 import com.android.internal.annotations.GuardedBy;
 import com.android.internal.app.IAppOpsCallback;
 import com.android.internal.app.IAppOpsService;
@@ -331,14 +326,6 @@ public class Camera {
      */
     public native static int _getNumberOfCameras();
 
-    private static final boolean sLandscapeToPortrait =
-            SystemProperties.getBoolean(CameraManager.LANDSCAPE_TO_PORTRAIT_PROP, false);
-
-    private static boolean shouldOverrideToPortrait() {
-        return CompatChanges.isChangeEnabled(CameraManager.OVERRIDE_FRONT_CAMERA_APP_COMPAT)
-                && sLandscapeToPortrait;
-    }
-
     /**
      * Returns the information about a particular camera.
      * If {@link #getNumberOfCameras()} returns N, the valid id is 0 to N-1.
@@ -351,7 +338,10 @@ public class Camera {
         if (cameraId >= getNumberOfCameras()) {
             throw new RuntimeException("Unknown camera ID");
         }
-        boolean overrideToPortrait = shouldOverrideToPortrait();
+
+        boolean overrideToPortrait = CameraManager.shouldOverrideToPortrait(
+                ActivityThread.currentApplication().getApplicationContext());
+
         _getCameraInfo(cameraId, overrideToPortrait, cameraInfo);
         IBinder b = ServiceManager.getService(Context.AUDIO_SERVICE);
         IAudioService audioService = IAudioService.Stub.asInterface(b);
@@ -562,9 +552,24 @@ public class Camera {
             mEventHandler = null;
         }
 
-        boolean overrideToPortrait = shouldOverrideToPortrait();
+        boolean overrideToPortrait = CameraManager.shouldOverrideToPortrait(
+                ActivityThread.currentApplication().getApplicationContext());
+        boolean forceSlowJpegMode = shouldForceSlowJpegMode();
         return native_setup(new WeakReference<Camera>(this), cameraId,
-                ActivityThread.currentOpPackageName(), overrideToPortrait);
+                ActivityThread.currentOpPackageName(), overrideToPortrait, forceSlowJpegMode);
+    }
+
+    private boolean shouldForceSlowJpegMode() {
+        Context applicationContext = ActivityThread.currentApplication().getApplicationContext();
+        String[] slowJpegPackageNames = applicationContext.getResources().getStringArray(
+                R.array.config_forceSlowJpegModeList);
+        String callingPackageName = applicationContext.getPackageName();
+        for (String packageName : slowJpegPackageNames) {
+            if (TextUtils.equals(packageName, callingPackageName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /** used by Camera#open, Camera#open(int) */
@@ -638,7 +643,7 @@ public class Camera {
 
     @UnsupportedAppUsage
     private native int native_setup(Object cameraThis, int cameraId, String packageName,
-            boolean overrideToPortrait);
+            boolean overrideToPortrait, boolean forceSlowJpegMode);
 
     private native final void native_release();
 

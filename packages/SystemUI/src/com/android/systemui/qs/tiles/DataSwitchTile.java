@@ -42,6 +42,9 @@ import java.util.List;
 import javax.inject.Inject;
 
 public class DataSwitchTile extends QSTileImpl<BooleanState> {
+
+    public static final String TILE_SPEC = "dataswitch";
+
     private final SubscriptionManager mSubscriptionManager;
     private final TelephonyManager mTelephonyManager;
 

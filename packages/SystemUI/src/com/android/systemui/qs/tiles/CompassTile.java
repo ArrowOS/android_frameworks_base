@@ -51,6 +51,9 @@ import com.android.systemui.qs.logging.QSLogger;
 import javax.inject.Inject;
 
 public class CompassTile extends QSTileImpl<BooleanState> implements SensorEventListener {
+
+    public static final String TILE_SPEC = "compass";
+
     private final static float ALPHA = 0.97f;
 
     private boolean mActive = false;

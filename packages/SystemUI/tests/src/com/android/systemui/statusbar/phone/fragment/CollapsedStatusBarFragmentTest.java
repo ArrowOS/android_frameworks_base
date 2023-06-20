@@ -22,13 +22,16 @@ import static com.android.systemui.statusbar.events.SystemStatusAnimationSchedul
 import static com.android.systemui.statusbar.events.SystemStatusAnimationSchedulerKt.RUNNING_CHIP_ANIM;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import android.animation.Animator;
 import android.app.Fragment;
 import android.app.StatusBarManager;
 import android.content.Context;
@@ -40,8 +43,10 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.widget.FrameLayout;
 
+import androidx.core.animation.Animator;
 import androidx.test.filters.SmallTest;
 
+import com.android.keyguard.KeyguardUpdateMonitor;
 import com.android.systemui.R;
 import com.android.systemui.SysuiBaseFragmentTest;
 import com.android.systemui.dump.DumpManager;
@@ -55,7 +60,6 @@ import com.android.systemui.shade.ShadeExpansionStateManager;
 import com.android.systemui.statusbar.CommandQueue;
 import com.android.systemui.statusbar.DisableFlagsLogger;
 import com.android.systemui.statusbar.OperatorNameViewController;
-import com.android.systemui.statusbar.connectivity.NetworkController;
 import com.android.systemui.statusbar.events.SystemStatusAnimationScheduler;
 import com.android.systemui.statusbar.phone.HeadsUpAppearanceController;
 import com.android.systemui.statusbar.phone.NotificationIconAreaController;
@@ -65,6 +69,8 @@ import com.android.systemui.statusbar.phone.StatusBarLocationPublisher;
 import com.android.systemui.statusbar.phone.fragment.dagger.StatusBarFragmentComponent;
 import com.android.systemui.statusbar.phone.ongoingcall.OngoingCallController;
 import com.android.systemui.statusbar.policy.KeyguardStateController;
+import com.android.systemui.statusbar.window.StatusBarWindowStateController;
+import com.android.systemui.statusbar.window.StatusBarWindowStateListener;
 import com.android.systemui.util.CarrierConfigTracker;
 import com.android.systemui.util.time.FakeSystemClock;
 
@@ -74,6 +80,9 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RunWith(AndroidTestingRunner.class)
 @RunWithLooper(setAsMainLooper = true)
@@ -87,7 +96,6 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
     private StatusBarLocationPublisher mLocationPublisher;
     // Set in instantiate()
     private StatusBarIconController mStatusBarIconController;
-    private NetworkController mNetworkController;
     private KeyguardStateController mKeyguardStateController;
 
     private final CommandQueue mCommandQueue = mock(CommandQueue.class);
@@ -113,6 +121,12 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
     private StatusBarHideIconsForBouncerManager mStatusBarHideIconsForBouncerManager;
     @Mock
     private DumpManager mDumpManager;
+    @Mock
+    private StatusBarWindowStateController mStatusBarWindowStateController;
+    @Mock
+    private KeyguardUpdateMonitor mKeyguardUpdateMonitor;
+
+    private List<StatusBarWindowStateListener> mStatusBarWindowStateListeners = new ArrayList<>();
 
     public CollapsedStatusBarFragmentTest() {
         super(CollapsedStatusBarFragment.class);
@@ -122,6 +136,14 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
     public void setup() {
         injectLeakCheckedDependencies(ALL_SUPPORTED_CLASSES);
         mDependency.injectMockDependency(DarkIconDispatcher.class);
+
+        // Keep the window state listeners so we can dispatch to them to test the status bar
+        // fragment's response.
+        doAnswer(invocation -> {
+            mStatusBarWindowStateListeners.add(invocation.getArgument(0));
+            return null;
+        }).when(mStatusBarWindowStateController).addListener(
+                any(StatusBarWindowStateListener.class));
     }
 
     @Test
@@ -267,6 +289,13 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
     }
 
     @Test
+    public void userChip_defaultVisibilityIsGone() {
+        CollapsedStatusBarFragment fragment = resumeAndGetFragment();
+
+        assertEquals(View.GONE, getUserChipView().getVisibility());
+    }
+
+    @Test
     public void disable_noOngoingCall_chipHidden() {
         CollapsedStatusBarFragment fragment = resumeAndGetFragment();
 
@@ -300,6 +329,19 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
 
         fragment.disable(DEFAULT_DISPLAY,
                 StatusBarManager.DISABLE_NOTIFICATION_ICONS, 0, false);
+
+        assertEquals(View.GONE,
+                mFragment.getView().findViewById(R.id.ongoing_call_chip).getVisibility());
+    }
+
+    @Test
+    public void disable_hasOngoingCallButAlsoHun_chipHidden() {
+        CollapsedStatusBarFragment fragment = resumeAndGetFragment();
+
+        when(mOngoingCallController.hasOngoingCall()).thenReturn(true);
+        when(mHeadsUpAppearanceController.shouldBeVisible()).thenReturn(true);
+
+        fragment.disable(DEFAULT_DISPLAY, 0, 0, false);
 
         assertEquals(View.GONE,
                 mFragment.getView().findViewById(R.id.ongoing_call_chip).getVisibility());
@@ -374,6 +416,27 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
         assertEquals(mStatusBarFragmentComponent, fragment.getStatusBarFragmentComponent());
     }
 
+    @Test
+    public void testStatusBarIcons_hiddenThroughoutCameraLaunch() {
+        final CollapsedStatusBarFragment fragment = resumeAndGetFragment();
+
+        mockSecureCameraLaunch(fragment, true /* launched */);
+
+        // Status icons should be invisible or gone, but certainly not VISIBLE.
+        assertNotEquals(View.VISIBLE, getEndSideContentView().getVisibility());
+        assertNotEquals(View.VISIBLE, getClockView().getVisibility());
+
+        mockSecureCameraLaunchFinished();
+
+        assertNotEquals(View.VISIBLE, getEndSideContentView().getVisibility());
+        assertNotEquals(View.VISIBLE, getClockView().getVisibility());
+
+        mockSecureCameraLaunch(fragment, false /* launched */);
+
+        assertEquals(View.VISIBLE, getEndSideContentView().getVisibility());
+        assertEquals(View.VISIBLE, getClockView().getVisibility());
+    }
+
     @Override
     protected Fragment instantiate(Context context, String className, Bundle arguments) {
         MockitoAnnotations.initMocks(this);
@@ -382,7 +445,6 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
         mAnimationScheduler = mock(SystemStatusAnimationScheduler.class);
         mLocationPublisher = mock(StatusBarLocationPublisher.class);
         mStatusBarIconController = mock(StatusBarIconController.class);
-        mNetworkController = mock(NetworkController.class);
         mStatusBarStateController = mock(StatusBarStateController.class);
         mKeyguardStateController = mock(KeyguardStateController.class);
         mOperatorNameViewController = mock(OperatorNameViewController.class);
@@ -405,7 +467,6 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
                 mStatusBarHideIconsForBouncerManager,
                 mKeyguardStateController,
                 mNotificationPanelViewController,
-                mNetworkController,
                 mStatusBarStateController,
                 mCommandQueue,
                 mCarrierConfigTracker,
@@ -414,7 +475,9 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
                         new DisableFlagsLogger()
                         ),
                 mOperatorNameViewControllerFactory,
-                mDumpManager);
+                mDumpManager,
+                mStatusBarWindowStateController,
+                mKeyguardUpdateMonitor);
     }
 
     private void setUpDaggerComponent() {
@@ -437,10 +500,43 @@ public class CollapsedStatusBarFragmentTest extends SysuiBaseFragmentTest {
                 mNotificationAreaInner);
     }
 
+    /**
+     * Configure mocks to return values consistent with the secure camera animating itself launched
+     * over the keyguard.
+     */
+    private void mockSecureCameraLaunch(CollapsedStatusBarFragment fragment, boolean launched) {
+        when(mKeyguardUpdateMonitor.isSecureCameraLaunchedOverKeyguard()).thenReturn(launched);
+        when(mKeyguardStateController.isOccluded()).thenReturn(launched);
+
+        if (launched) {
+            fragment.onCameraLaunchGestureDetected(0 /* source */);
+        } else {
+            for (StatusBarWindowStateListener listener : mStatusBarWindowStateListeners) {
+                listener.onStatusBarWindowStateChanged(StatusBarManager.WINDOW_STATE_SHOWING);
+            }
+        }
+
+        fragment.disable(DEFAULT_DISPLAY, 0, 0, false);
+    }
+
+    /**
+     * Configure mocks to return values consistent with the secure camera showing over the keyguard
+     * with its launch animation finished.
+     */
+    private void mockSecureCameraLaunchFinished() {
+        for (StatusBarWindowStateListener listener : mStatusBarWindowStateListeners) {
+            listener.onStatusBarWindowStateChanged(StatusBarManager.WINDOW_STATE_HIDDEN);
+        }
+    }
+
     private CollapsedStatusBarFragment resumeAndGetFragment() {
         mFragments.dispatchResume();
         processAllMessages();
         return (CollapsedStatusBarFragment) mFragment;
+    }
+
+    private View getUserChipView() {
+        return mFragment.getView().findViewById(R.id.user_switcher_container);
     }
 
     private View getClockView() {

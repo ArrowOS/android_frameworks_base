@@ -52,6 +52,8 @@ import javax.inject.Inject;
 /** Quick settings tile: DC Dimming **/
 public class DcDimmingTile extends QSTileImpl<QSTile.BooleanState> {
 
+    public static final String TILE_SPEC = "dc_dimming";
+
     private DcDimmingManager mDcDimmingManager;
     private final Icon mIcon = ResourceIcon.get(R.drawable.ic_dc_dimming_tile);
 

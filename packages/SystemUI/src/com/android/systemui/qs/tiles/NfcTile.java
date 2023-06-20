@@ -52,7 +52,9 @@ import javax.inject.Inject;
 /** Quick settings tile: Enable/Disable NFC **/
 public class NfcTile extends SecureQSTile<BooleanState> {
 
-    private static final String NFC = "nfc";
+    public static final String TILE_SPEC = "nfc";
+
+    private static final String NFC = TILE_SPEC;
     private final Icon mIcon = ResourceIcon.get(R.drawable.ic_qs_nfc);
 
     @Nullable
