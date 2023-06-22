@@ -16,6 +16,23 @@
       "message": "Whole topic seems to work fine",
       "revId": "f090470ff80ab706a013c2aca56083b4dfa47988",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1e2dfc52_6b5fef9d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 353
+      },
+      "writtenOn": "2023-06-22T03:28:26Z",
+      "side": 1,
+      "message": "Great!",
+      "revId": "f090470ff80ab706a013c2aca56083b4dfa47988",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
