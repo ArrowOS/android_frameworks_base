@@ -3544,7 +3544,8 @@ public class CentralSurfacesImpl implements CoreStartable, CentralSurfaces {
                     final boolean touchToUnlockAnytime = Settings.Secure.getIntForUser(
                             mContext.getContentResolver(),
                             Settings.Secure.SFPS_PERFORMANT_AUTH_ENABLED,
-                            -1,
+                            mContext.getResources().getBoolean(
+                                    com.android.internal.R.bool.config_performantAuthDefault) ? 1 : 0,
                             mUserTracker.getUserId()) > 0;
 
                     // Delay if we're waking up, not mid-doze animation (which means we are
