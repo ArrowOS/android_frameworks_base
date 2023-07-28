@@ -157,9 +157,15 @@ public class DraggableConstraintLayout extends ConstraintLayout
      * Dismiss the view, with animation controlled by SwipeDismissHandler
      */
     public void dismiss() {
-        mSwipeDismissHandler.dismiss();
+        mSwipeDismissHandler.dismiss(false);
     }
 
+    /**
+     * Dismiss the view immediately, without animation
+     */
+    public void dismissImmediate() {
+        mSwipeDismissHandler.dismiss(true);
+    }
 
     @Override
     protected void onAttachedToWindow() {
@@ -301,11 +307,11 @@ public class DraggableConstraintLayout extends ConstraintLayout
             }
         }
 
-        void dismiss() {
-            dismiss(createSwipeDismissAnimation());
+        void dismiss(boolean immediate) {
+            dismiss(createSwipeDismissAnimation(), immediate);
         }
 
-        private void dismiss(ValueAnimator animator) {
+        private void dismiss(ValueAnimator animator, boolean immediate) {
             mDismissAnimation = animator;
             mDismissAnimation.addListener(new AnimatorListenerAdapter() {
                 private boolean mCancelled;
@@ -324,7 +330,15 @@ public class DraggableConstraintLayout extends ConstraintLayout
                     }
                 }
             });
-            mDismissAnimation.start();
+            if (immediate) {
+                mDismissAnimation.end();
+            } else {
+                mDismissAnimation.start();
+            }
+        }
+
+        private void dismiss(ValueAnimator animator) {
+            dismiss(animator, false);
         }
 
         private ValueAnimator createSwipeDismissAnimation() {

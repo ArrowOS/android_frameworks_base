@@ -596,7 +596,7 @@ public class ScreenshotController {
          * connection and break the next screenshot.
          */
         mCurrentRequestCallback = null;
-        dismissScreenshot(SCREENSHOT_DISMISSED_OTHER);
+        dismissScreenshot(SCREENSHOT_DISMISSED_OTHER, true);
         mFullScreenshotRunnable.setArgs(topComponent, finisher, requestCallback);
         // Wait 50ms to make sure we are on new frame.
         mScreenshotHandler.postDelayed(mFullScreenshotRunnable, 50);
@@ -636,12 +636,12 @@ public class ScreenshotController {
     /**
      * Clears current screenshot
      */
-    void dismissScreenshot(ScreenshotEvent event) {
+    void dismissScreenshot(ScreenshotEvent event, boolean immediate) {
         if (DEBUG_DISMISS) {
             Log.d(TAG, "dismissScreenshot");
         }
         // If we're already animating out, don't restart the animation
-        if (mScreenshotView.isDismissing()) {
+        if (mScreenshotView.isDismissing() && !immediate) {
             if (DEBUG_DISMISS) {
                 Log.v(TAG, "Already dismissing, ignoring duplicate command");
             }
@@ -649,7 +649,15 @@ public class ScreenshotController {
         }
         mUiEventLogger.log(event, 0, mPackageName);
         mScreenshotHandler.cancelTimeout();
-        mScreenshotView.animateDismissal();
+        if (immediate) {
+            mScreenshotView.dismiss();
+        } else {
+            mScreenshotView.animateDismissal();
+        }
+    }
+
+    void dismissScreenshot(ScreenshotEvent event) {
+        dismissScreenshot(event, false);
     }
 
     boolean isPendingSharedTransition() {
@@ -1227,6 +1235,9 @@ public class ScreenshotController {
         if (mCurrentRequestCallback != null) {
             mCurrentRequestCallback.onFinish();
             mCurrentRequestCallback = null;
+        }
+        if (mScreenshotAnimation != null && mScreenshotAnimation.isRunning()) {
+            mScreenshotAnimation.cancel();
         }
         mScreenshotView.reset();
         removeWindow();

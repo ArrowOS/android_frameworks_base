@@ -1090,6 +1090,10 @@ public class ScreenshotView extends FrameLayout implements
         mScreenshotStatic.dismiss();
     }
 
+    void dismiss() {
+        mScreenshotStatic.dismissImmediate();
+    }
+
     void reset() {
         if (DEBUG_UI) {
             Log.d(TAG, "reset screenshot view");
