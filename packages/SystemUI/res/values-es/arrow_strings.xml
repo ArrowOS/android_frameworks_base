@@ -61,7 +61,7 @@
     <string name="global_action_restart_bootloader">Gestor de arranque</string>
     <string name="global_action_restart_ui">Interfaz de sistema</string>
     <string name="usage_data">Usado hoy</string>
-    <string name="usage_data_default_suffix">Datos</string>
+    <string name="usage_data_default_suffix">Datos Móviles</string>
     <string name="usage_wifi_default_suffix">Wi-Fi</string>
     <string name="status_bar_icons">Iconos de la barra de estado</string>
     <string name="bluetooth_is_off">Bluetooth desactivado</string>
