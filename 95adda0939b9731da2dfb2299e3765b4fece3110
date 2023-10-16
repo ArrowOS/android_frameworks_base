@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "205bcfba_83db86c6",
+        "filename": "services/core/java/com/android/server/policy/PhoneWindowManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2219,
+      "author": {
+        "id": 384
+      },
+      "writtenOn": "2023-10-16T08:13:38Z",
+      "side": 1,
+      "message": "\u003eframeworks/base/services/core/java/com/android/server/policy/PhoneWindowManager.java:2219: error: cannot find symbol\n\u003e         mAssistUtils \u003d new AssistUtils(context);\n\u003e                                        ^\n\u003e   symbol:   variable context\n\u003e   location: class PhoneWindowManager\n\n\n-         mAssistUtils \u003d new AssistUtils(context);\n+         mAssistUtils \u003d new AssistUtils(mContext);\n\nFixes the build error",
+      "range": {
+        "startLine": 2219,
+        "startChar": 39,
+        "endLine": 2219,
+        "endChar": 46
+      },
+      "revId": "95adda0939b9731da2dfb2299e3765b4fece3110",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    }
+  ]
+}
