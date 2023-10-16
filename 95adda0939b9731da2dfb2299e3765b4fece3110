@@ -22,6 +22,30 @@
       },
       "revId": "95adda0939b9731da2dfb2299e3765b4fece3110",
       "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "836bb4c0_764f9db3",
+        "filename": "services/core/java/com/android/server/policy/PhoneWindowManager.java",
+        "patchSetId": 1
+      },
+      "lineNbr": 2219,
+      "author": {
+        "id": 384
+      },
+      "writtenOn": "2023-10-16T14:18:29Z",
+      "side": 1,
+      "message": "Sorry for comment paging, i wrote it all in text mode and did not expect it to be transformed :)\n\nI only meant changing\n         mAssistUtils \u003d new AssistUtils(context);\nto\n         mAssistUtils \u003d new AssistUtils(mContext);\n\nfixes the build error",
+      "parentUuid": "205bcfba_83db86c6",
+      "range": {
+        "startLine": 2219,
+        "startChar": 39,
+        "endLine": 2219,
+        "endChar": 46
+      },
+      "revId": "95adda0939b9731da2dfb2299e3765b4fece3110",
+      "serverId": "66da7299-18b4-411a-8fa2-12a880778196"
     }
   ]
 }
