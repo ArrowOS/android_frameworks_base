@@ -3817,6 +3817,11 @@ public class CentralSurfacesImpl implements CoreStartable, CentralSurfaces {
 
         mScrimController.setExpansionAffectsAlpha(!unlocking);
 
+        boolean authRippleEnabled = Settings.System.getIntForUser(mContext.getContentResolver(),
+                Settings.System.ENABLE_RIPPLE_EFFECT, 1, UserHandle.USER_CURRENT) == 1;
+        mScrimController.setLaunchingAffordanceWithPreview(!authRippleEnabled
+                && mBiometricUnlockController.isWakeAndUnlock());
+
         if (mAlternateBouncerInteractor.isVisibleState()) {
             if ((!isOccluded() || isPanelExpanded())
                     && (mState == StatusBarState.SHADE || mState == StatusBarState.SHADE_LOCKED
