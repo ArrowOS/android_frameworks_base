@@ -62,7 +62,8 @@ public class SignalDrawable extends DrawableWrapper {
     private static final int STATE_SHIFT = 16;
     private static final int STATE_MASK = 0xff << STATE_SHIFT;
     private static final int STATE_CUT = 2;
-    private static final int STATE_CUT_R = 3;
+    private static final int STATE_CUT_R = 5;
+    private static final int STATE_CUT_AND_R = 7;
     private static final int STATE_CARRIER_CHANGE = 4;
 
     private static final long DOT_DELAY = 1000;
@@ -226,6 +227,39 @@ public class SignalDrawable extends DrawableWrapper {
             drawDotAndPadding(x - dotSpacing * 2, y, dotPadding, dotSize, 0);
             canvas.drawPath(mCutoutPath, mTransparentPaint);
             canvas.drawPath(mForegroundPath, mForegroundPaint);
+        } else if (isInState(STATE_CUT_AND_R)) {
+            // Roaming
+            float cutWidth = mRCutoutWidthFraction;
+            float cutHeight = mRCutoutHeightFraction;
+            float cutX = (cutWidth * width / VIEWPORT);
+            float cutY = (cutHeight * height / VIEWPORT);
+            float rIconOffset = -0.8f * (mCutoutWidthFraction * width / VIEWPORT);
+            mCutoutPath.moveTo(width + rIconOffset, height);
+            mCutoutPath.rLineTo(-cutX, 0);
+            mCutoutPath.rLineTo(0, -cutY);
+            mCutoutPath.rLineTo(cutX, 0);
+            mCutoutPath.rLineTo(0, cutY);
+            canvas.drawPath(mCutoutPath, mTransparentPaint);
+            // Adjust mScaledRoamingPath
+            Path adjustedRoamingPath = new Path(mScaledRoamingPath);
+            Matrix matrix = new Matrix();
+            matrix.postTranslate(rIconOffset, 0);
+            adjustedRoamingPath.transform(matrix);
+            canvas.drawPath(adjustedRoamingPath, mForegroundPaint);
+            // Attribution
+            mCutoutPath.reset();
+            mCutoutPath.setFillType(FillType.WINDING);
+            cutWidth = mCutoutWidthFraction;
+            cutHeight = mCutoutHeightFraction;
+            cutX = (cutWidth * width / VIEWPORT);
+            cutY = (cutHeight * height / VIEWPORT);
+            mCutoutPath.moveTo(width, height);
+            mCutoutPath.rLineTo(-cutX, 0);
+            mCutoutPath.rLineTo(0, -cutY);
+            mCutoutPath.rLineTo(cutX, 0);
+            mCutoutPath.rLineTo(0, cutY);
+            canvas.drawPath(mCutoutPath, mTransparentPaint);
+            canvas.drawPath(mScaledAttributionPath, mForegroundPaint);
         } else if (isInState(STATE_CUT) || isInState(STATE_CUT_R)) {
             boolean isRoaming = isInState(STATE_CUT_R);
             float cutWidth = isRoaming ? mRCutoutWidthFraction : mCutoutWidthFraction;
@@ -302,9 +336,8 @@ public class SignalDrawable extends DrawableWrapper {
     }
 
     public static int getState(int level, int numLevels, boolean cutOut, boolean roaming) {
-        return ((cutOut ? STATE_CUT : roaming ? STATE_CUT_R : 0) << STATE_SHIFT)
-                | (numLevels << NUM_LEVEL_SHIFT)
-                | level;
+        int state = cutOut ? (roaming ? STATE_CUT_AND_R : STATE_CUT) : (roaming ? STATE_CUT_R : 0);
+        return (state << STATE_SHIFT) | (numLevels << NUM_LEVEL_SHIFT) | level;
     }
 
     public static int getState(int level, int numLevels, boolean cutOut) {
