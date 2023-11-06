@@ -67,6 +67,7 @@ import android.os.Process;
 import android.os.RemoteException;
 import android.os.UserHandle;
 import android.os.UserManager;
+import android.os.VibrationAttributes;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.provider.Settings;
@@ -264,6 +265,12 @@ public class ScreenshotController {
     private static final String SETTINGS_SECURE_USER_SETUP_COMPLETE = "user_setup_complete";
 
     private static final int SCREENSHOT_CORNER_DEFAULT_TIMEOUT_MILLIS = 3000;
+
+    private static final VibrationEffect VIBRATION_EFFECT =
+            VibrationEffect.createPredefined(VibrationEffect.EFFECT_HEAVY_CLICK);
+
+    private static final VibrationAttributes VIBRATION_ATTRS =
+            VibrationAttributes.createForUsage(VibrationAttributes.USAGE_TOUCH);
 
     private final WindowContext mContext;
     private final FeatureFlags mFlags;
@@ -1122,22 +1129,20 @@ public class ScreenshotController {
     }
 
     private void playCameraSound() {
-       if (Settings.System.getIntForUser(mContext.getContentResolver(),
-                Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 0) {
-           return;
-       }
         mCameraSound.addListener(() -> {
             switch (mAudioManager.getRingerMode()) {
                 case AudioManager.RINGER_MODE_SILENT:
-                    // do nothing
-                    break;
                 case AudioManager.RINGER_MODE_VIBRATE:
                     if (mVibrator != null && mVibrator.hasVibrator()) {
-                        mVibrator.vibrate(VibrationEffect.createOneShot(50,
-                                VibrationEffect.DEFAULT_AMPLITUDE));
+                        mVibrator.vibrate(VIBRATION_EFFECT, VIBRATION_ATTRS);
                     }
                     break;
                 case AudioManager.RINGER_MODE_NORMAL:
+                    if (Settings.System.getIntForUser(mContext.getContentResolver(),
+                            Settings.System.SCREENSHOT_SHUTTER_SOUND, 1,
+                            UserHandle.USER_CURRENT) == 0) {
+                        break;
+                    }
                     // Play the shutter sound to notify that we've taken a screenshot
                     try {
                         MediaPlayer player = mCameraSound.get();
