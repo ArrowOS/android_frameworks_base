@@ -50,6 +50,9 @@ public class PropImitationHooks {
     private static final String PACKAGE_GPHOTOS = "com.google.android.apps.photos";
     private static final String PACKAGE_NETFLIX = "com.netflix.mediaclient";
 
+    private static final String PROP_SECURITY_PATCH = "persist.sys.pihooks.security_patch";
+    private static final String PROP_FIRST_API_LEVEL = "persist.sys.pihooks.first_api_level";
+
     private static final ComponentName GMS_ADD_ACCOUNT_ACTIVITY = ComponentName.unflattenFromString(
             "com.google.android.gms/.auth.uiflows.minutemaid.MinuteMaidActivity");
 
@@ -181,6 +184,18 @@ public class PropImitationHooks {
                 continue;
             }
             setPropValue(fieldAndProp[0], fieldAndProp[1]);
+        }
+        setSystemProperty(PROP_SECURITY_PATCH, Build.VERSION.SECURITY_PATCH);
+        setSystemProperty(PROP_FIRST_API_LEVEL,
+                Integer.toString(Build.VERSION.DEVICE_INITIAL_SDK_INT));
+    }
+
+    private static void setSystemProperty(String name, String value) {
+        try {
+            SystemProperties.set(name, value);
+            dlog("Set system prop " + name + "=" + value);
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to set system prop " + name + "=" + value, e);
         }
     }
 
