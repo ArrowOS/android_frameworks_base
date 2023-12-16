@@ -4877,7 +4877,7 @@ public final class NotificationPanelViewController implements Dumpable {
             }
 
             // Double tap to sleep on lockscreen
-            if ((mDoubleTapToWakeEnabled && isOnKeyguard())
+            if ((mDoubleTapToWakeEnabled && isOnKeyguard() && !mPulsing && !mDozing)
                     // Double tap to sleep on statusbar
                     || (mDoubleTapToSleepEnabled && !mQsController.getExpanded()
                     && event.getY() < mStatusBarMinHeight)) {
