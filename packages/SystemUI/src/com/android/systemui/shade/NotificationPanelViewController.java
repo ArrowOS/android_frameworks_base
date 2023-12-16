@@ -18,6 +18,7 @@ package com.android.systemui.shade;
 
 import static android.app.StatusBarManager.WINDOW_STATE_SHOWING;
 import static android.provider.Settings.Secure.DOUBLE_TAP_TO_WAKE;
+import static android.provider.Settings.Secure.DOZE_DOUBLE_TAP_GESTURE;
 import static android.provider.Settings.Secure.STATUS_BAR_QUICK_QS_PULLDOWN;
 import static android.provider.Settings.System.DOUBLE_TAP_SLEEP_GESTURE;
 import static android.view.View.INVISIBLE;
@@ -66,6 +67,7 @@ import android.graphics.Insets;
 import android.graphics.Rect;
 import android.graphics.Region;
 import android.hardware.biometrics.SensorLocationInternal;
+import android.hardware.display.AmbientDisplayConfiguration;
 import android.hardware.fingerprint.FingerprintSensorPropertiesInternal;
 import android.net.Uri;
 import android.os.Bundle;
@@ -172,6 +174,7 @@ import com.android.systemui.plugins.FalsingManager.FalsingTapListener;
 import com.android.systemui.plugins.qs.QS;
 import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.plugins.statusbar.StatusBarStateController.StateListener;
+import com.android.systemui.settings.UserTracker;
 import com.android.systemui.shade.transition.ShadeTransitionController;
 import com.android.systemui.shared.system.QuickStepContract;
 import com.android.systemui.statusbar.CommandQueue;
@@ -516,6 +519,8 @@ public final class NotificationPanelViewController implements Dumpable {
     private Runnable mHideExpandedRunnable;
 
     private GestureDetector mDoubleTapGestureListener;
+    private final AmbientDisplayConfiguration mAmbientDisplayConfiguration;
+    private final UserTracker mUserTracker;
 
     /** The maximum overshoot allowed for the top padding for the full shade transition. */
     private int mMaxOverscrollAmountForPulse;
@@ -762,7 +767,9 @@ public final class NotificationPanelViewController implements Dumpable {
             TunerService tunerService,
             DumpManager dumpManager,
             KeyguardLongPressViewModel keyguardLongPressViewModel,
-            KeyguardInteractor keyguardInteractor) {
+            KeyguardInteractor keyguardInteractor,
+            UserTracker userTracker
+            ) {
         mInteractionJankMonitor = interactionJankMonitor;
         keyguardStateController.addCallback(new KeyguardStateController.Callback() {
             @Override
@@ -794,6 +801,8 @@ public final class NotificationPanelViewController implements Dumpable {
             @Override
             public void onViewDetachedFromWindow(View v) {}
         });
+        mAmbientDisplayConfiguration = new AmbientDisplayConfiguration(mView.getContext());
+        mUserTracker = userTracker;
 
         mView.addOnLayoutChangeListener(new ShadeLayoutChangeListener());
         mView.setOnTouchListener(getTouchHandler());
@@ -3458,6 +3467,11 @@ public final class NotificationPanelViewController implements Dumpable {
                 mSettingsChangeObserver
         );
         mContentResolver.registerContentObserver(
+                Settings.Secure.getUriFor(DOZE_DOUBLE_TAP_GESTURE),
+                /* notifyForDescendants */ false,
+                mSettingsChangeObserver
+        );
+        mContentResolver.registerContentObserver(
                 Settings.System.getUriFor(DOUBLE_TAP_SLEEP_GESTURE),
                 /* notifyForDescendants */ false,
                 mSettingsChangeObserver
@@ -4349,7 +4363,9 @@ public final class NotificationPanelViewController implements Dumpable {
             mDoubleTapToSleepEnabled = Settings.System.getIntForUser(mContentResolver,
                     DOUBLE_TAP_SLEEP_GESTURE, 0, UserHandle.USER_CURRENT) == 1;
             mDoubleTapToWakeEnabled = Settings.Secure.getIntForUser(mContentResolver,
-                    DOUBLE_TAP_TO_WAKE, 0, UserHandle.USER_CURRENT) == 1;
+                    DOUBLE_TAP_TO_WAKE, 0, UserHandle.USER_CURRENT) == 1
+                    || mAmbientDisplayConfiguration.doubleTapGestureEnabled(
+                            mUserTracker.getUserId());
         }
     }
 
